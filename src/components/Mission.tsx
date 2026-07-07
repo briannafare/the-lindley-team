@@ -12,41 +12,31 @@ export default function Mission() {
 
   useGSAP(
     () => {
-      gsap.from(".mission-text", {
-        y: 40,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        gsap.from(".mission-text", {
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        });
       });
-
-      gsap.from(".mission-script", {
-        scale: 0.92,
-        duration: 0.6,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-      });
+      return () => mm.revert();
     },
     { scope: sectionRef }
   );
 
   return (
-    <section ref={sectionRef} className="py-32 text-center border-b border-border">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <p className="mission-text font-display text-[clamp(1.5rem,2.5vw,2.2rem)] font-medium leading-[1.45] text-ink max-w-[850px] mx-auto">
-          The Lindley Team connects you with{" "}
-          <span className="mission-script font-script font-normal text-orange text-[1.35em] inline-block">
-            the right financing
-          </span>{" "}
-          for your life — not just the lowest rate on a spreadsheet. Access to
-          a wide range of mortgage products — funded in-house or brokered when it benefits you — across Oregon and Washington.
+    <section ref={sectionRef} className="py-24 lg:py-32 border-y border-paper-200">
+      <div className="max-w-container mx-auto px-6 lg:px-10">
+        <p className="mission-text font-display font-normal text-display-md leading-[1.3] text-paper-900 max-w-[30ch]">
+          Most lenders open with a rate sheet. We open with the neighborhood —
+          because a good loan on the wrong block is still the wrong house.
         </p>
       </div>
     </section>

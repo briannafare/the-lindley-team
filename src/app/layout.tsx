@@ -1,19 +1,25 @@
 import type { Metadata } from "next";
-import { DM_Sans, Pinyon_Script } from "next/font/google";
+import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-dm-sans",
+  axes: ["opsz"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const pinyonScript = Pinyon_Script({
+const inter = Inter({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-pinyon",
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-plex-mono",
   display: "swap",
 });
 
@@ -31,9 +37,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${pinyonScript.variable}`}
+      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}
     >
-      <body className="bg-bg text-ink font-body antialiased overflow-x-hidden">
+      <body className="bg-paper text-paper-900 font-body antialiased overflow-x-hidden">
         {children}
 
         {/* GHL chat widget page-context injector — must run BEFORE the widget script */}

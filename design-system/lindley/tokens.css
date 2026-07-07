@@ -1,0 +1,157 @@
+/* ============================================================
+   THE LINDLEY TEAM — FIELD GUIDE DESIGN TOKENS  (v1)
+   Concept: "Portland's field guide that happens to do mortgages."
+   Light, airy paper. Warm near-black ink. ONE accent — vermilion,
+   the cartographer's ink — used like a pin dropped on a map.
+   ============================================================ */
+
+:root {
+  /* ---------------------------------------------------------
+     COLOR · PRIMARY — "Vermilion" (the cartographer's mark)
+     Bright, warm orange-red. Warmer and more human than
+     Movement's fire-engine red. Use sparingly: map pins,
+     the single accent moment per view, focus rings.
+     --------------------------------------------------------- */
+  --vermilion-50:  #FEF3F0;
+  --vermilion-100: #FCE5DF;
+  --vermilion-200: #F9C8BC;
+  --vermilion-300: #F5A18C;
+  --vermilion-400: #F0704F;
+  --vermilion-500: #EC4A26; /* THE mark */
+  --vermilion-600: #D23A18;
+  --vermilion-700: #AC2F14;
+  --vermilion-800: #832511;
+  --vermilion-900: #571A0D;
+
+  /* ---------------------------------------------------------
+     COLOR · NEUTRAL — warm paper → warm ink (stone, not gray)
+     --------------------------------------------------------- */
+  --paper-0:   #FFFFFF;
+  --paper-50:  #FBF8F3; /* page background — warm off-white paper */
+  --paper-100: #F4EFE7;
+  --paper-200: #E8E1D5;
+  --paper-300: #D3C9B9;
+  --paper-400: #A89D8C;
+  --paper-500: #7E7466;
+  --paper-600: #5D554A;
+  --paper-700: #453F36;
+  --paper-800: #2E2922;
+  --paper-900: #211C16; /* ink — warm near-black */
+
+  /* ---------------------------------------------------------
+     COLOR · SEMANTIC
+     --------------------------------------------------------- */
+  --color-bg:             var(--paper-50);
+  --color-surface:        var(--paper-0);
+  --color-surface-sunken: var(--paper-100);
+  --color-border:         var(--paper-200);
+  --color-border-strong:  var(--paper-300);
+  --color-text-primary:   var(--paper-900);
+  --color-text-secondary: var(--paper-600);
+  --color-text-tertiary:  var(--paper-500);
+  --color-text-inverse:   var(--paper-50);
+  --color-accent:         var(--vermilion-500);
+  --color-accent-hover:   var(--vermilion-600);
+  --color-accent-pressed: var(--vermilion-700);
+  --color-accent-tint:    var(--vermilion-50);
+
+  /* Status */
+  --color-success: #3D7A4E; /* fir */
+  --color-warning: #B97A1F; /* larch */
+  --color-error:   #9E2B12; /* dried vermilion — darker than accent */
+
+  /* CTA states (primary CTA is INK — the accent stays reserved) */
+  --cta-bg:            var(--paper-900);
+  --cta-bg-hover:      var(--paper-800);
+  --cta-bg-pressed:    var(--paper-700);
+  --cta-text:          var(--paper-50);
+  --cta-accent-bg:     var(--vermilion-500);
+  --cta-accent-hover:  var(--vermilion-600);
+  --cta-accent-pressed:var(--vermilion-700);
+  --cta-accent-text:   #FFFFFF;
+
+  /* ---------------------------------------------------------
+     TYPE · FAMILIES
+     display  — Fraunces: warm editorial serif, the masthead voice
+     body/ui  — Inter: precise, quiet
+     mono     — IBM Plex Mono: the instrument panel
+     --------------------------------------------------------- */
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-body:    var(--font-inter), -apple-system, "Helvetica Neue", sans-serif;
+  --font-mono:    var(--font-plex-mono), "SF Mono", Menlo, monospace;
+
+  /* TYPE · SCALE */
+  --text-display-xl: clamp(3rem, 7.5vw, 6.75rem);   /* hero masthead */
+  --text-display-lg: clamp(2.5rem, 5.5vw, 4.5rem);  /* page titles   */
+  --text-display-md: clamp(1.75rem, 3.5vw, 2.75rem);/* section heads */
+  --text-display-sm: 1.5rem;                        /* entry titles  */
+  --text-body-xl: 1.375rem;  /* editorial deck  */
+  --text-body-lg: 1.125rem;  /* editorial prose */
+  --text-body:    1rem;
+  --text-body-sm: 0.875rem;
+  --text-mono:    0.8125rem; /* instrument data */
+  --text-mono-sm: 0.6875rem; /* folio, captions */
+
+  /* TYPE · WEIGHTS */
+  --weight-display-regular: 400;
+  --weight-display-medium:  500;
+  --weight-display-semibold: 600;
+  --weight-body-regular: 400;
+  --weight-body-medium:  500;
+  --weight-mono: 400;
+  --weight-mono-medium: 500;
+
+  /* TYPE · LINE HEIGHTS */
+  --leading-display: 0.98;
+  --leading-display-loose: 1.12;
+  --leading-body: 1.6;
+  --leading-prose: 1.8;
+  --leading-mono: 1.5;
+
+  /* TYPE · LETTER SPACING */
+  --tracking-display: -0.02em;
+  --tracking-body: 0;
+  --tracking-mono: 0.04em;
+  --tracking-mono-wide: 0.08em;
+
+  /* ---------------------------------------------------------
+     SPACING (4px base)
+     --------------------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --section-y: clamp(4.5rem, 9vw, 8rem);
+  --container-max: 82.5rem; /* 1320px */
+  --container-x: clamp(1.25rem, 4vw, 2.5rem);
+
+  /* ---------------------------------------------------------
+     RADII — mostly square: field guides are set, not bubbled
+     --------------------------------------------------------- */
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+  --radius-full: 999px;
+
+  /* ---------------------------------------------------------
+     SHADOWS — warm ink, very quiet
+     --------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(33, 28, 22, 0.06);
+  --shadow-md: 0 2px 8px rgba(33, 28, 22, 0.07), 0 1px 2px rgba(33, 28, 22, 0.05);
+  --shadow-lg: 0 12px 32px rgba(33, 28, 22, 0.10), 0 2px 8px rgba(33, 28, 22, 0.06);
+
+  /* ---------------------------------------------------------
+     MOTION — confident / smooth (no bounce, no linear)
+     --------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration-fast: 200ms;
+  --duration-base: 450ms;
+  --duration-slow: 800ms;
+}
