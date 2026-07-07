@@ -4,197 +4,102 @@ import Link from "next/link";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import PortlandMap from "@/components/PortlandMap";
 
+/**
+ * Editorial masthead. Copy carries the design.
+ * The only color in view is the vermilion pin on the map.
+ */
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({ delay: 0.3 });
-
-      tl.from(".hero-label", {
-        y: 20,
-        duration: 0.5,
-        ease: "power3.out",
-      })
-        .from(
-          ".hero-title-line",
-          {
-            y: 60,
-            duration: 0.7,
-            ease: "power3.out",
-            stagger: 0.12,
-          },
-          "-=0.2"
-        )
-        .from(
-          ".hero-script",
-          {
-            scale: 0.9,
-            duration: 0.6,
-            ease: "power3.out",
-          },
-          "-=0.3"
-        )
-        .from(
-          ".hero-sub",
-          {
-            y: 30,
-            duration: 0.5,
-            ease: "power3.out",
-          },
-          "-=0.2"
-        )
-        .from(
-          ".hero-btn",
-          {
-            y: 20,
-            duration: 0.4,
-            ease: "power3.out",
-            stagger: 0.1,
-          },
-          "-=0.2"
-        );
-
-      // SVG decorations
-      gsap.from(".hero-circle", {
-        strokeDashoffset: 1760,
-        duration: 2,
-        ease: "power2.inOut",
-        delay: 0.6,
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        const tl = gsap.timeline({ delay: 0.15 });
+        tl.from(".hero-folio", { opacity: 0, duration: 0.6, ease: "power2.out" })
+          .from(
+            ".hero-line",
+            {
+              y: 70,
+              opacity: 0,
+              duration: 0.8,
+              ease: "power3.out",
+              stagger: 0.11,
+            },
+            "-=0.3"
+          )
+          .from(
+            ".hero-sub, .hero-actions, .hero-proof",
+            {
+              y: 24,
+              opacity: 0,
+              duration: 0.6,
+              ease: "power3.out",
+              stagger: 0.1,
+            },
+            "-=0.35"
+          );
       });
-
-      gsap.to(".hero-circle-group", {
-        rotation: 360,
-        duration: 120,
-        repeat: -1,
-        ease: "none",
-        transformOrigin: "center center",
-      });
+      return () => mm.revert();
     },
     { scope: sectionRef }
   );
 
   return (
-    <section
-      ref={sectionRef}
-      className="min-h-screen flex items-end relative overflow-hidden pb-16 lg:pb-20 bg-ink text-white"
-    >
-      {/* Decorative SVG elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Large rotating circle */}
-        <svg
-          className="absolute -top-[15%] -right-[10%] w-[700px] h-[700px] hero-circle-group"
-          viewBox="0 0 700 700"
-        >
-          <circle
-            className="hero-circle"
-            cx="350"
-            cy="350"
-            r="280"
-            stroke="#E26125"
-            strokeWidth="0.75"
-            fill="none"
-            opacity="0.15"
-            strokeDasharray="1760"
-            strokeDashoffset="0"
-          />
-          <circle
-            cx="350"
-            cy="350"
-            r="200"
-            stroke="#3554D9"
-            strokeWidth="0.5"
-            fill="none"
-            opacity="0.08"
-            strokeDasharray="8 8"
-          />
-        </svg>
-
-        {/* Portland bridge silhouette — abstract St. Johns arches */}
-        <svg
-          className="absolute bottom-[5%] right-[5%] w-[500px] h-[200px] opacity-[0.06]"
-          viewBox="0 0 500 200"
-          fill="none"
-        >
-          <path
-            d="M0 180 Q60 40 120 180 Q180 40 240 180 Q300 40 360 180 Q420 40 500 180"
-            stroke="white"
-            strokeWidth="1"
-          />
-          <line x1="60" y1="180" x2="60" y2="200" stroke="white" strokeWidth="0.5" />
-          <line x1="180" y1="180" x2="180" y2="200" stroke="white" strokeWidth="0.5" />
-          <line x1="300" y1="180" x2="300" y2="200" stroke="white" strokeWidth="0.5" />
-          <line x1="420" y1="180" x2="420" y2="200" stroke="white" strokeWidth="0.5" />
-        </svg>
-
-        {/* Mt. Hood outline */}
-        <svg
-          className="absolute bottom-[8%] right-[25%] w-[300px] h-[150px] opacity-[0.04]"
-          viewBox="0 0 300 150"
-          fill="none"
-        >
-          <path
-            d="M0 150 L120 30 L150 50 L170 20 L200 60 L300 150"
-            stroke="white"
-            strokeWidth="1"
-          />
-        </svg>
-
-        {/* Dot grid — architectural motif */}
-        <svg className="absolute top-[10%] left-[5%] w-[200px] h-[200px] opacity-[0.05]" viewBox="0 0 200 200">
-          <pattern id="hero-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1.5" fill="white" />
-          </pattern>
-          <rect width="200" height="200" fill="url(#hero-dots)" />
-        </svg>
-
-        {/* Blue accent arc */}
-        <svg
-          className="absolute top-[30%] right-[20%] w-[120px] h-[120px] opacity-[0.12]"
-          viewBox="0 0 120 120"
-          fill="none"
-        >
-          <path
-            d="M10 110 A90 90 0 0 1 110 10"
-            stroke="#3554D9"
-            strokeWidth="1"
-          />
-        </svg>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-10">
-        <p className="hero-label text-[0.72rem] font-medium tracking-[0.2em] uppercase text-white/50 mb-8">
-          Portland, Oregon · Mortgage Strategy
-        </p>
-
-        <h1 className="font-display text-[clamp(4.5rem,10vw,10rem)] font-light leading-[0.92] tracking-tight max-w-[800px] mb-10">
-          <span className="hero-title-line block">The Lindley</span>
-          <span className="hero-script font-script font-normal text-orange leading-none text-[1.15em] inline-block">
-            Team
+    <section ref={sectionRef} className="relative pt-24 lg:pt-28 pb-16 lg:pb-24">
+      <div className="max-w-container mx-auto px-6 lg:px-10">
+        {/* masthead folio — set like a journal's front matter */}
+        <div className="hero-folio border-y border-paper-200 py-2.5 flex items-baseline justify-between gap-4 mb-12 lg:mb-16">
+          <span className="instrument-label !text-paper-600">
+            a field guide to portland, oregon
           </span>
-        </h1>
+          <span className="instrument-label hidden md:inline">
+            vol. 01 · 71 neighborhoods · updated weekly
+          </span>
+          <span className="instrument-label">est. portland</span>
+        </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8">
-          <p className="hero-sub text-[0.95rem] leading-relaxed text-white/50 font-normal max-w-[400px]">
-            Three decades helping Portland families build wealth through real
-            estate — not just buy houses.
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+          {/* language-led column */}
+          <div className="lg:col-span-7">
+            <h1 className="font-display font-normal text-display-xl text-paper-900 mb-8 lg:mb-10 max-w-[13ch]">
+              <span className="hero-line block">We know which</span>
+              <span className="hero-line block">blocks flood</span>
+              <span className="hero-line block">in November.</span>
+            </h1>
 
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href="/apply"
-              className="hero-btn px-8 py-4 bg-white text-ink rounded-full text-[0.78rem] font-medium tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2"
-            >
-              Get Pre-Approved <span>→</span>
-            </Link>
-            <Link
-              href="/neighborhoods"
-              className="hero-btn px-8 py-4 border-[1.5px] border-white/30 text-white rounded-full text-[0.78rem] font-medium tracking-[0.04em] uppercase hover:border-white transition-all inline-flex items-center gap-2"
-            >
-              Explore Portland <span>→</span>
-            </Link>
+            <p className="hero-sub text-body-xl font-body text-paper-600 leading-normal max-w-[46ch] mb-10">
+              David &amp; Bri Lindley have learned Portland the slow way — which
+              streets back up at 5pm, which schools fill first, where the herons
+              are on a Tuesday. The mortgage part? After a decade here, that&apos;s
+              the easy part.
+            </p>
+
+            <div className="hero-actions flex flex-col sm:flex-row sm:items-center gap-5 mb-10">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-paper-900 text-paper-50 rounded-sm text-[0.95rem] font-medium hover:bg-paper-800 transition-colors duration-200"
+              >
+                Start the conversation
+              </Link>
+              <Link
+                href="/neighborhoods"
+                className="inline-flex items-center gap-2 text-[0.95rem] font-medium text-paper-900 underline underline-offset-4 decoration-paper-300 hover:decoration-paper-900 transition-colors duration-200"
+              >
+                Read the field notes <span aria-hidden>→</span>
+              </Link>
+            </div>
+
+            <p className="hero-proof instrument !text-paper-500">
+              4.85★ across 210 google reviews · nmls #1367416 · licensed or + wa
+            </p>
+          </div>
+
+          {/* the map moment */}
+          <div className="lg:col-span-5">
+            <PortlandMap />
           </div>
         </div>
       </div>

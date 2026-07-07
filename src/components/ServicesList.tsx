@@ -8,59 +8,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+/**
+ * The index — ten ways to finance a Portland address,
+ * set like a field guide's table of contents.
+ */
 const services = [
-  {
-    num: "01", name: "Purchase", href: "/services/purchase",
-    desc: "First home, forever home, or investment. Financing structured around your goals.",
-    tag: "Most Popular",
-    shape: <circle cx="24" cy="24" r="22" stroke="#E26125" strokeWidth="1.5" fill="none" />,
-  },
-  {
-    num: "02", name: "Refinance", href: "/services/refinance",
-    desc: "Lower your rate, shorten your term, or access built equity.",
-    shape: <rect x="4" y="4" width="40" height="40" rx="4" stroke="#3554D9" strokeWidth="1.5" fill="none" />,
-  },
-  {
-    num: "03", name: "Divorce Lending", href: "/services/divorce-lending",
-    desc: "CDLP-certified. Equity buyouts and mortgage planning through separation.",
-    tag: "Specialist",
-    shape: <polygon points="24,2 46,38 2,38" stroke="#E26125" strokeWidth="1.5" fill="none" />,
-  },
-  {
-    num: "04", name: "FHA Loans", href: "/services/fha",
-    desc: "Lower down payments. Flexible credit. Built for first-time buyers.",
-    shape: <path d="M24 2 L30 18 L46 18 L33 28 L38 46 L24 35 L10 46 L15 28 L2 18 L18 18 Z" stroke="#3554D9" strokeWidth="1.5" fill="none" />,
-  },
-  {
-    num: "05", name: "VA Loans", href: "/services/va",
-    desc: "Zero down, no PMI. The benefit you earned — used right.",
-    shape: <><circle cx="24" cy="24" r="10" stroke="#E26125" strokeWidth="1.5" fill="none" /><circle cx="24" cy="24" r="22" stroke="#E26125" strokeWidth="1.5" fill="none" strokeDasharray="4 4" /></>,
-  },
-  {
-    num: "06", name: "Jumbo Loans", href: "/services/jumbo",
-    desc: "Above conforming limits for Portland's premium properties.",
-    shape: <rect x="2" y="2" width="44" height="44" rx="22" stroke="#3554D9" strokeWidth="1.5" fill="none" />,
-  },
-  {
-    num: "07", name: "Cash-Out Refinance", href: "/services/cash-out",
-    desc: "Turn home equity into capital. Consolidate, renovate, or invest.",
-    shape: <polygon points="24,2 44,14 44,34 24,46 4,34 4,14" stroke="#E26125" strokeWidth="1.5" fill="none" />,
-  },
-  {
-    num: "08", name: "HELOC", href: "/services/heloc",
-    desc: "Flexible credit line. Draw what you need, when you need it.",
-    shape: <ellipse cx="24" cy="24" rx="22" ry="14" stroke="#3554D9" strokeWidth="1.5" fill="none" />,
-  },
-  {
-    num: "09", name: "Investment Property", href: "/services/investment",
-    desc: "Build wealth through Portland real estate.",
-    shape: <rect x="8" y="8" width="32" height="32" stroke="#E26125" strokeWidth="1.5" fill="none" transform="rotate(45 24 24)" />,
-  },
-  {
-    num: "10", name: "Reverse Mortgage", href: "/services/reverse-mortgage",
-    desc: "Access your home's equity without monthly payments. 62+.",
-    shape: <><circle cx="24" cy="24" r="22" stroke="#3554D9" strokeWidth="1.5" fill="none" /><line x1="2" y1="24" x2="46" y2="24" stroke="#3554D9" strokeWidth="1.5" /></>,
-  },
+  { num: "01", name: "Purchase", href: "/services/purchase", desc: "First home, forever home, or the next one. Structured around your goals." },
+  { num: "02", name: "Refinance", href: "/services/refinance", desc: "Lower the rate, shorten the term — only when the math actually works." },
+  { num: "03", name: "Divorce Lending", href: "/services/divorce-lending", desc: "CDLP-certified. Equity buyouts and mortgage planning through separation." },
+  { num: "04", name: "FHA Loans", href: "/services/fha", desc: "Lower down payments, flexible credit. Built for first-time buyers." },
+  { num: "05", name: "VA Loans", href: "/services/va", desc: "Zero down, no PMI. The benefit you earned — used right." },
+  { num: "06", name: "Jumbo Loans", href: "/services/jumbo", desc: "Above conforming limits, for Portland's premium properties." },
+  { num: "07", name: "Cash-Out Refinance", href: "/services/cash-out", desc: "Turn equity into capital. Consolidate, renovate, or invest." },
+  { num: "08", name: "HELOC", href: "/services/heloc", desc: "A flexible line on your equity. Draw what you need, when you need it." },
+  { num: "09", name: "Investment Property", href: "/services/investment", desc: "Build wealth through Portland real estate." },
+  { num: "10", name: "Reverse Mortgage", href: "/services/reverse-mortgage", desc: "Access equity without monthly payments. For homeowners 62+." },
 ];
 
 export default function ServicesList() {
@@ -68,75 +30,56 @@ export default function ServicesList() {
 
   useGSAP(
     () => {
-      gsap.from(".svc-row", {
-        y: 30,
-        duration: 0.5,
-        ease: "power3.out",
-        stagger: 0.05,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-          toggleActions: "play none none none",
-        },
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        gsap.from(".svc-row", {
+          y: 24,
+          opacity: 0,
+          duration: 0.5,
+          ease: "power3.out",
+          stagger: 0.04,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 70%",
+            toggleActions: "play none none none",
+          },
+        });
       });
+      return () => mm.revert();
     },
     { scope: sectionRef }
   );
 
   return (
-    <section ref={sectionRef} className="py-32 border-b border-border">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="flex flex-wrap justify-between items-end mb-14 gap-6">
-          <div>
-            <p className="text-[0.68rem] font-medium tracking-[0.2em] uppercase text-ink-light mb-2">
-              Services
-            </p>
-            <h2 className="font-display text-[clamp(2.2rem,4.5vw,3.5rem)] font-light leading-tight tracking-tight">
-              What We{" "}
-              <span className="font-script font-normal text-orange text-[1.15em]">
-                Do
-              </span>
-            </h2>
-          </div>
-          <Link
-            href="/services"
-            className="px-6 py-3 border-[1.5px] border-ink text-ink rounded-full text-[0.78rem] font-medium tracking-[0.04em] uppercase hover:bg-ink hover:text-white transition-all inline-flex items-center gap-2"
-          >
-            View All <span>→</span>
-          </Link>
+    <section ref={sectionRef} className="py-24 lg:py-32">
+      <div className="max-w-container mx-auto px-6 lg:px-10">
+        <div className="flex flex-wrap items-baseline justify-between gap-6 mb-14">
+          <h2 className="font-display font-normal text-display-lg text-paper-900">
+            The index
+          </h2>
+          <span className="instrument-label">ten ways to finance an address</span>
         </div>
 
-        <div className="flex flex-col">
+        <div className="border-t border-paper-200">
           {services.map((svc) => (
             <Link
               key={svc.num}
               href={svc.href}
-              className="svc-row group grid grid-cols-[60px_1fr_auto] lg:grid-cols-[60px_1fr_50px] gap-4 items-center py-7 border-b border-border hover:pl-3 transition-all"
+              className="svc-row group grid grid-cols-[3rem_1fr] sm:grid-cols-[3.5rem_minmax(0,18rem)_1fr_auto] gap-x-4 items-baseline py-6 border-b border-paper-200 hover:bg-surface transition-colors duration-200"
             >
-              <span className="font-display text-sm font-medium text-silver hidden sm:block">
-                {svc.num}
+              <span className="instrument !text-paper-400">{svc.num}</span>
+              <span className="font-display text-[1.35rem] leading-snug text-paper-900 group-hover:underline underline-offset-4 decoration-paper-300">
+                {svc.name}
               </span>
-              <div className="flex items-baseline gap-4 flex-wrap">
-                <span className="font-display text-[clamp(1.4rem,2.5vw,2rem)] font-normal group-hover:text-orange transition-colors">
-                  {svc.name}
-                </span>
-                <span className="text-[0.82rem] text-ink-light font-normal max-w-[320px] leading-snug hidden md:inline">
-                  {svc.desc}
-                </span>
-                {svc.tag && (
-                  <span className="text-[0.6rem] font-medium tracking-[0.1em] uppercase text-orange border border-orange rounded-full px-2.5 py-0.5">
-                    {svc.tag}
-                  </span>
-                )}
-              </div>
-              <div className="hidden lg:flex w-[50px] h-[50px] items-center justify-center">
-                <svg
-                  viewBox="0 0 48 48"
-                  className="w-10 h-10 transition-transform duration-500 group-hover:rotate-[20deg] group-hover:scale-110"
-                >
-                  {svc.shape}
-                </svg>
-              </div>
+              <span className="hidden sm:block text-[0.95rem] text-paper-600 leading-relaxed col-span-1 pr-6">
+                {svc.desc}
+              </span>
+              <span
+                className="hidden sm:block text-paper-400 group-hover:text-paper-900 group-hover:translate-x-1 transition-all duration-200"
+                aria-hidden
+              >
+                →
+              </span>
             </Link>
           ))}
         </div>

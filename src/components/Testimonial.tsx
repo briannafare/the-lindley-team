@@ -7,71 +7,65 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+/** Real client words, set editorially. No stars, no cards. */
+const QUOTES = [
+  {
+    quote:
+      "We looked at 22 houses over 14 months. The day we saw the one on SE 14th, we wrote the offer that night. Bri called me the next morning to walk through the numbers before I second-guessed myself.",
+    author: "Marcus T.",
+    context: "Bought in Sellwood-Moreland, 2023",
+  },
+  {
+    quote:
+      "I really appreciated how honest and upfront they were with me being a first time home buyer. Even conversations of ‘if you were my daughter this is what I would suggest’ — it put my mind at ease.",
+    author: "Tiffany Z.",
+    context: "First-time buyer, Portland",
+  },
+];
+
 export default function Testimonial() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useGSAP(
     () => {
-      gsap.from(".testimonial-quote", {
-        y: 40,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        gsap.from(".quote-block", {
+          y: 36,
+          opacity: 0,
+          duration: 0.7,
+          ease: "power3.out",
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 75%",
+            toggleActions: "play none none none",
+          },
+        });
       });
-
-      gsap.from(".testimonial-attr", {
-        y: 20,
-        duration: 0.5,
-        ease: "power3.out",
-        delay: 0.3,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-      });
+      return () => mm.revert();
     },
     { scope: sectionRef }
   );
 
   return (
-    <section ref={sectionRef} className="py-32 bg-bg-alt text-center">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <p className="text-[0.68rem] font-medium tracking-[0.2em] uppercase text-ink-light mb-10">
-          What Clients Say
-        </p>
-        <div className="max-w-[720px] mx-auto relative">
-          {/* Decorative quotation mark */}
-          <svg
-            className="absolute -top-8 left-1/2 -translate-x-1/2 w-16 h-16 opacity-[0.06]"
-            viewBox="0 0 64 64"
-            fill="none"
-          >
-            <path
-              d="M14 40 C14 32 18 24 28 20 L26 16 C14 20 6 30 6 42 C6 50 12 54 18 54 C24 54 28 50 28 44 C28 38 24 40 14 40 Z M42 40 C42 32 46 24 56 20 L54 16 C42 20 34 30 34 42 C34 50 40 54 46 54 C52 54 56 50 56 44 C56 38 52 40 42 40 Z"
-              fill="#E26125"
-            />
-          </svg>
-
-          <div className="w-10 h-0.5 bg-yellow mx-auto mb-8" />
-          <blockquote className="testimonial-quote font-display text-[clamp(1.3rem,2.2vw,1.8rem)] font-light leading-relaxed text-ink mb-6">
-            This team is amazing. We went through the entire process of buying
-            our home with ease. I really appreciated how honest and upfront they
-            were with me being a first time home buyer. Even conversations of
-            &lsquo;if you were my daughter this is what I would suggest&rsquo; — it put my
-            mind at ease. The Lindley Team is a must.
-          </blockquote>
-          <div className="testimonial-attr">
-            <p className="text-sm font-medium text-ink">Tiffany Z.</p>
-            <p className="text-[0.72rem] text-ink-light font-medium mt-0.5">
-              First-Time Home Buyer · Portland
-            </p>
-          </div>
+    <section ref={sectionRef} className="py-24 lg:py-32 border-t border-paper-200">
+      <div className="max-w-container mx-auto px-6 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-16">
+          {QUOTES.map((q) => (
+            <figure key={q.author} className="quote-block">
+              <blockquote className="font-display font-normal text-[clamp(1.35rem,2.2vw,1.75rem)] leading-[1.45] text-paper-900 mb-6">
+                &ldquo;{q.quote}&rdquo;
+              </blockquote>
+              <figcaption className="instrument !text-paper-500">
+                — {q.author.toLowerCase()} · {q.context.toLowerCase()}
+              </figcaption>
+            </figure>
+          ))}
         </div>
+        <p className="instrument-label mt-14 pt-5 border-t border-paper-200">
+          from 210 google reviews · 4.85 average
+        </p>
       </div>
     </section>
   );

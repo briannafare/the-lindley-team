@@ -1,65 +1,109 @@
+@import "../../design-system/lindley/tokens.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Noise overlay */
+/* Paper grain — barely there */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.018;
+  opacity: 0.015;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Selection color */
 ::selection {
-  background: #F2FF91;
-  color: #222;
+  background: var(--vermilion-100);
+  color: var(--paper-900);
 }
 
-/* Image treatments */
+/* ── Editorial prose (field-guide entries) ─────────────────── */
+.prose-field p {
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-prose);
+  color: var(--color-text-secondary);
+}
+.prose-field p + p {
+  margin-top: 1.5em;
+}
+.prose-field p:first-of-type {
+  color: var(--color-text-primary);
+}
+
+/* ── Instrument panel (monospace data) ─────────────────────── */
+.instrument {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono);
+  letter-spacing: var(--tracking-mono);
+  color: var(--color-text-primary);
+}
+.instrument-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-sm);
+  letter-spacing: var(--tracking-mono-wide);
+  color: var(--color-text-tertiary);
+}
+
+/* ── Image treatments ──────────────────────────────────────── */
 .img-bw {
-  filter: grayscale(100%) contrast(1.1);
+  filter: grayscale(100%) contrast(1.08);
 }
-
 .group:hover .img-bw {
   filter: grayscale(0%) contrast(1);
 }
+.img-bw-locked {
+  filter: grayscale(100%) contrast(1.08);
+}
+.map-bw {
+  filter: grayscale(100%) contrast(1.02) sepia(0.06);
+}
 
-/* GSAP animation preparation */
+/* ── Motion prep (GSAP sets final state) ───────────────────── */
 .gsap-reveal {
   opacity: 0;
   transform: translateY(40px);
 }
 
-/* SVG stroke-draw animation */
-@keyframes draw-stroke {
-  from { stroke-dashoffset: 1000; }
-  to { stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .gsap-reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-@keyframes rotate-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Marquee animation */
-@keyframes scroll-marquee {
+/* Pin pulse — the cartographer's mark breathing, once per 4s */
+@keyframes pin-pulse {
   0% {
-    transform: translateX(0);
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  70% {
+    transform: scale(2.4);
+    opacity: 0;
   }
   100% {
-    transform: translateX(-50%);
+    transform: scale(2.4);
+    opacity: 0;
   }
 }
-
-.animate-marquee {
-  animation: scroll-marquee 50s linear infinite;
+.pin-pulse {
+  animation: pin-pulse 4s var(--ease-out) infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pin-pulse {
+    animation: none;
+    opacity: 0;
+  }
 }

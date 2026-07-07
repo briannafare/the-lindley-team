@@ -1,10 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { NeighborhoodData } from "@/lib/neighborhoods";
 import { neighborhoods } from "@/lib/neighborhoods";
+
+/**
+ * A field-guide entry: warm editorial prose colliding with a
+ * precise monospace instrument panel. One vermilion mark per page.
+ */
 
 // ---------- helpers ----------
 
@@ -16,7 +22,7 @@ function formatSlug(slug: string): string {
 }
 
 function formatPrice(n: number): string {
-  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(2)}M`;
+  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(2)}m`;
   return `$${(n / 1_000).toFixed(0)}k`;
 }
 
@@ -31,14 +37,6 @@ const SERVICE_NAMES: Record<string, string> = {
   investment: "Investment Property",
   "reverse-mortgage": "Reverse Mortgage",
   "divorce-lending": "Divorce Lending",
-};
-
-const SCHOOL_TYPE_COLORS: Record<string, string> = {
-  elementary: "bg-blue/10 text-blue",
-  middle: "bg-orange/10 text-orange",
-  high: "bg-ink/10 text-ink",
-  private: "bg-yellow text-ink",
-  charter: "bg-green-100 text-green-700",
 };
 
 // ---------- JSON-LD ----------
@@ -97,51 +95,33 @@ function FAQSchema({ faqs }: { faqs: NeighborhoodData["faqs"] }) {
   );
 }
 
-// ---------- Score Bar ----------
+// ---------- instrument pieces ----------
 
-function ScoreBar({
-  label,
-  score,
-  color,
-}: {
-  label: string;
-  score: number;
-  color: string;
-}) {
+function GaugeRow({ label, score }: { label: string; score: number }) {
   return (
-    <div className="flex items-center gap-4">
-      <div className={`font-display text-3xl font-extrabold ${color} w-14 shrink-0`}>
-        {score}
+    <div className="py-2.5 border-b border-paper-200">
+      <div className="flex justify-between gap-4 mb-1.5">
+        <span className="instrument !text-paper-500">{label}</span>
+        <span className="instrument">{score}/100</span>
       </div>
-      <div className="flex-1">
-        <div className="text-[0.72rem] font-bold tracking-[0.1em] uppercase text-ink-light mb-1.5">
-          {label}
-        </div>
-        <div className="h-1.5 bg-border rounded-full overflow-hidden">
-          <div
-            className={`h-full rounded-full transition-all ${color === "text-orange" ? "bg-orange" : color === "text-blue" ? "bg-blue" : "bg-green-500"}`}
-            style={{ width: `${score}%` }}
-          />
-        </div>
+      <div className="h-[2px] bg-paper-200">
+        <div className="h-full bg-paper-900" style={{ width: `${score}%` }} />
       </div>
     </div>
   );
 }
 
-// ---------- Rating Dots ----------
-
-function RatingDots({ rating }: { rating: number }) {
+function DataRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex items-center gap-1">
-      {Array.from({ length: 10 }).map((_, i) => (
-        <span
-          key={i}
-          className={`w-2 h-2 rounded-full ${i < rating ? "bg-orange" : "bg-border"}`}
-        />
-      ))}
-      <span className="ml-1.5 text-[0.72rem] text-ink-light font-normal">{rating}/10</span>
+    <div className="flex justify-between gap-4 py-2.5 border-b border-paper-200">
+      <span className="instrument !text-paper-500 shrink-0">{label}</span>
+      <span className="instrument text-right">{value}</span>
     </div>
   );
+}
+
+function SectionIndex({ children }: { children: React.ReactNode }) {
+  return <h2 className="instrument !text-paper-500 mb-6">{children}</h2>;
 }
 
 // ---------- Main Component ----------
@@ -151,9 +131,9 @@ export default function NeighborhoodPageLayout({
 }: {
   neighborhood: NeighborhoodData;
 }) {
-  const words = neighborhood.name.split(" ");
-  const lastWord = words[words.length - 1];
-  const leadWords = words.slice(0, words.length - 1).join(" ");
+  const entryIndex = neighborhoods.findIndex((n) => n.slug === neighborhood.slug);
+  const entryNo = String(entryIndex + 1).padStart(2, "0");
+  const total = neighborhoods.length;
 
   return (
     <>
@@ -161,402 +141,322 @@ export default function NeighborhoodPageLayout({
       <FAQSchema faqs={neighborhood.faqs} />
       <Nav />
 
-      {/* ── 1. Hero ─────────────────────────────────────────────── */}
-      <section className="pt-40 pb-20 relative overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 items-end">
-            <div>
-              <Link
-                href="/neighborhoods"
-                className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4 inline-flex items-center gap-2 hover:text-ink transition-colors"
-              >
-                ← Neighborhoods
-              </Link>
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mt-4 mb-3">
-                {neighborhood.city}, {neighborhood.state}
-              </p>
-              <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight mb-4">
-                {leadWords && <span>{leadWords} </span>}
-                <span className="font-script font-normal text-orange text-[0.85em]">
-                  {lastWord}
-                </span>
-              </h1>
-              <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[560px] mb-8">
-                {neighborhood.personality}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
-                  className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2 justify-center"
-                >
-                  Get Pre-Approved <span>→</span>
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 border-[1.5px] border-ink text-ink rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:bg-ink hover:text-white transition-all inline-flex items-center gap-2 justify-center"
-                >
-                  Schedule a Call <span>→</span>
-                </Link>
-              </div>
-            </div>
-            {/* Map */}
-            <div className="rounded-[2rem] overflow-hidden hidden lg:block" style={{ aspectRatio: "4/3" }}>
-              <iframe
-                src={neighborhood.mapEmbedSrc}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={`Map of ${neighborhood.name}`}
-              />
-            </div>
+      {/* ── Entry masthead ─────────────────────────────────────── */}
+      <header className="pt-28 lg:pt-32 pb-12 lg:pb-16">
+        <div className="max-w-container mx-auto px-6 lg:px-10">
+          <div className="border-y border-paper-200 py-2.5 flex items-baseline justify-between gap-4 mb-10 lg:mb-14">
+            <Link
+              href="/neighborhoods"
+              className="instrument-label !text-paper-600 hover:!text-paper-900 transition-colors duration-200"
+            >
+              ← field notes
+            </Link>
+            <span className="instrument-label hidden sm:inline">
+              {neighborhood.city.toLowerCase()}, {neighborhood.state.toLowerCase()}
+            </span>
+            <span className="instrument-label">
+              entry no. {entryNo} of {total}
+            </span>
           </div>
-        </div>
-      </section>
 
-      {/* ── 2. Overview ─────────────────────────────────────────── */}
-      <section className="py-16 border-t border-border">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-              Overview
-            </p>
-            <div className="max-w-[720px]">
-              <div className="space-y-4 mb-10">
+          <h1 className="font-display font-normal text-display-xl text-paper-900 mb-6 max-w-[14ch]">
+            {neighborhood.name}
+          </h1>
+          <p className="text-body-xl font-body text-paper-600 leading-normal max-w-[44ch]">
+            {neighborhood.personality}
+          </p>
+        </div>
+      </header>
+
+      {/* ── Entry body: prose vs. instrument panel ─────────────── */}
+      <div className="max-w-container mx-auto px-6 lg:px-10 pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_21rem] gap-x-16 gap-y-14 items-start">
+          {/* editorial column */}
+          <div className="max-w-prose">
+            <section className="mb-16">
+              <SectionIndex>01 — the neighborhood</SectionIndex>
+              <div className="prose-field">
                 {neighborhood.description.map((para, i) => (
-                  <p key={i} className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                    {para}
-                  </p>
+                  <p key={i}>{para}</p>
                 ))}
               </div>
-              <div className="space-y-5">
-                <ScoreBar label="Walk Score" score={neighborhood.walkScore} color="text-orange" />
-                <ScoreBar label="Bike Score" score={neighborhood.bikeScore} color="text-blue" />
-                <ScoreBar label="Transit Score" score={neighborhood.transitScore} color="text-green-500" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ── 3. Commute ─────────────────────────────────────────── */}
-      <section className="py-16 border-t border-border bg-bg-alt">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-              Getting Around
-            </p>
-            <div className="max-w-[720px]">
-              <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-6">
-                {neighborhood.commuteToDowntown}
-              </p>
-              <div className="rounded-[1.25rem] overflow-hidden">
-                <iframe
-                  src={neighborhood.directionsSrc}
-                  width="100%"
-                  height="400"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title={`Directions from ${neighborhood.name} to The Lindley Team`}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+              <figure className="mt-10">
+                <div className="relative aspect-[3/2] overflow-hidden rounded-sm border border-paper-200">
+                  <Image
+                    src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1600&q=80"
+                    alt={`Residential street scene — placeholder image for ${neighborhood.name}`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 42rem"
+                    className="object-cover img-bw-locked"
+                  />
+                </div>
+                <figcaption className="instrument-label mt-3">
+                  placeholder — b&amp;w lindley team photography to come
+                </figcaption>
+              </figure>
+            </section>
 
-      {/* ── 4. Local Life ──────────────────────────────────────── */}
-      <section className="py-16 border-t border-border">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-              Local Life
-            </p>
-            <div className="max-w-[720px] space-y-10">
-              {/* Restaurants */}
-              {neighborhood.restaurants.length > 0 && (
-                <div>
-                  <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
-                    Restaurants
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {neighborhood.restaurants.map((r, i) => (
-                      <div key={i} className="py-3 border-b border-border">
-                        <div className="font-display text-[0.95rem] font-semibold text-ink">
-                          {r.name}
-                        </div>
-                        {r.cuisine && (
-                          <div className="text-[0.75rem] text-ink-light uppercase tracking-[0.08em] mt-0.5">
-                            {r.cuisine}
+            <section className="mb-16">
+              <SectionIndex>02 — getting around</SectionIndex>
+              <div className="prose-field mb-8">
+                <p>{neighborhood.commuteToDowntown}</p>
+              </div>
+              <figure>
+                <div className="overflow-hidden rounded-sm border border-paper-200 map-bw">
+                  <iframe
+                    src={neighborhood.directionsSrc}
+                    width="100%"
+                    height="360"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Directions from ${neighborhood.name} to The Lindley Team`}
+                  />
+                </div>
+                <figcaption className="instrument-label mt-3">
+                  fig. — route from {neighborhood.name.toLowerCase()} to our office
+                </figcaption>
+              </figure>
+            </section>
+
+            <section className="mb-16">
+              <SectionIndex>03 — local life</SectionIndex>
+              <div className="space-y-10">
+                {neighborhood.restaurants.length > 0 && (
+                  <div>
+                    <h3 className="font-display font-normal text-[1.25rem] text-paper-900 mb-4">
+                      Where to eat
+                    </h3>
+                    <div className="border-t border-paper-200">
+                      {neighborhood.restaurants.map((r, i) => (
+                        <div key={i} className="py-4 border-b border-paper-200">
+                          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                            <span className="font-medium text-paper-900">{r.name}</span>
+                            {r.cuisine && (
+                              <span className="instrument-label">
+                                {r.cuisine.toLowerCase()}
+                              </span>
+                            )}
                           </div>
-                        )}
-                        <div className="text-[0.85rem] text-ink-mid font-normal mt-1">
-                          {r.vibe}
+                          <p className="text-[0.92rem] text-paper-600 leading-relaxed mt-1">
+                            {r.vibe}
+                          </p>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-              {/* Coffee */}
-              {neighborhood.coffee.length > 0 && (
-                <div>
-                  <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
-                    Coffee
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {neighborhood.coffee.map((c, i) => (
-                      <div key={i} className="py-3 border-b border-border">
-                        <div className="font-display text-[0.95rem] font-semibold text-ink">
-                          {c.name}
+                )}
+                {neighborhood.coffee.length > 0 && (
+                  <div>
+                    <h3 className="font-display font-normal text-[1.25rem] text-paper-900 mb-4">
+                      Coffee
+                    </h3>
+                    <div className="border-t border-paper-200">
+                      {neighborhood.coffee.map((c, i) => (
+                        <div key={i} className="py-4 border-b border-paper-200">
+                          <span className="font-medium text-paper-900">{c.name}</span>
+                          <p className="text-[0.92rem] text-paper-600 leading-relaxed mt-1">
+                            {c.vibe}
+                          </p>
                         </div>
-                        <div className="text-[0.85rem] text-ink-mid font-normal mt-1">
-                          {c.vibe}
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-              {/* Bars */}
-              {neighborhood.bars.length > 0 && (
-                <div>
-                  <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
-                    Bars &amp; Nightlife
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {neighborhood.bars.map((b, i) => (
-                      <div key={i} className="py-3 border-b border-border">
-                        <div className="font-display text-[0.95rem] font-semibold text-ink">
-                          {b.name}
+                )}
+                {neighborhood.bars.length > 0 && (
+                  <div>
+                    <h3 className="font-display font-normal text-[1.25rem] text-paper-900 mb-4">
+                      After dark
+                    </h3>
+                    <div className="border-t border-paper-200">
+                      {neighborhood.bars.map((b, i) => (
+                        <div key={i} className="py-4 border-b border-paper-200">
+                          <span className="font-medium text-paper-900">{b.name}</span>
+                          <p className="text-[0.92rem] text-paper-600 leading-relaxed mt-1">
+                            {b.vibe}
+                          </p>
                         </div>
-                        <div className="text-[0.85rem] text-ink-mid font-normal mt-1">
-                          {b.vibe}
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
+                )}
+              </div>
+            </section>
 
-      {/* ── 5. Schools ─────────────────────────────────────────── */}
-      <section className="py-16 border-t border-border bg-bg-alt">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-              Schools
-            </p>
-            <div className="max-w-[720px]">
-              <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">
+            <section className="mb-16">
+              <SectionIndex>04 — schools</SectionIndex>
+              <p className="font-display font-normal text-[1.25rem] text-paper-900 mb-5">
                 {neighborhood.schoolDistrict}
               </p>
-              <div className="space-y-5">
+              <div className="border-t border-paper-200">
                 {neighborhood.schools.map((school, i) => (
-                  <div key={i} className="flex flex-col sm:flex-row sm:items-start gap-3 py-4 border-b border-border">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 flex-wrap mb-1">
-                        <span className="font-display text-[0.95rem] font-semibold text-ink">
-                          {school.name}
-                        </span>
-                        <span
-                          className={`px-2 py-0.5 rounded-full text-[0.65rem] font-bold uppercase tracking-[0.06em] ${SCHOOL_TYPE_COLORS[school.type] ?? "bg-border text-ink"}`}
-                        >
-                          {school.type}
-                        </span>
-                      </div>
-                      <div className="text-[0.78rem] text-ink-light mb-2">
-                        Grades {school.grades}
-                      </div>
-                      <RatingDots rating={school.rating} />
+                  <div key={i} className="py-4 border-b border-paper-200">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 mb-2">
+                      <span className="font-medium text-paper-900">{school.name}</span>
+                      <span className="instrument-label">
+                        {school.type} · grades {school.grades.toLowerCase()} ·{" "}
+                        {school.rating}/10
+                      </span>
+                    </div>
+                    <div className="h-[2px] bg-paper-200 max-w-[240px]">
+                      <div
+                        className="h-full bg-paper-900"
+                        style={{ width: `${school.rating * 10}%` }}
+                      />
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
 
-      {/* ── 6. Parks ───────────────────────────────────────────── */}
-      <section className="py-16 border-t border-border">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-              Parks &amp; Green Space
-            </p>
-            <div className="max-w-[720px] space-y-6">
-              {neighborhood.parks.map((park, i) => (
-                <div key={i}>
-                  <h3 className="font-display text-[1rem] font-semibold text-ink mb-2">
-                    {park.name}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {park.amenities.map((amenity, j) => (
-                      <span
-                        key={j}
-                        className="px-3 py-1 border border-border rounded-full text-[0.72rem] font-medium text-ink-mid"
-                      >
-                        {amenity}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 7. Home Prices ─────────────────────────────────────── */}
-      <section className="py-16 border-t border-border bg-bg-alt">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-              The Market
-            </p>
-            <div className="max-w-[720px]">
-              <div className="font-display text-4xl font-extrabold text-ink mb-2">
-                {formatPrice(neighborhood.medianHomePrice)}
-              </div>
-              <div className="text-[0.78rem] text-ink-light uppercase tracking-[0.08em] mb-1">
-                Median Home Price
-              </div>
-              <div className="text-[0.88rem] text-ink-mid mt-3 mb-6">
-                Typical range:{" "}
-                <span className="font-semibold text-ink">
-                  {formatPrice(neighborhood.priceRange.low)} – {formatPrice(neighborhood.priceRange.high)}
-                </span>
-              </div>
-              <p className="text-[0.82rem] text-ink-light font-normal leading-relaxed border-l-2 border-border pl-4">
-                Prices shown are estimates based on recent sales. Contact Bri for current market data.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 8. Related Services ────────────────────────────────── */}
-      <section className="py-16 border-t border-border">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-              Relevant Loans
-            </p>
-            <div className="max-w-[720px] grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {neighborhood.relatedServices.map((slug) => (
-                <Link
-                  key={slug}
-                  href={`/services/${slug}`}
-                  className="flex items-center justify-between py-4 px-5 border border-border rounded-xl hover:border-ink transition-colors group"
-                >
-                  <span className="font-display text-[0.9rem] font-semibold text-ink">
-                    {SERVICE_NAMES[slug] ?? formatSlug(slug)}
-                  </span>
-                  <span className="text-ink-light group-hover:text-ink transition-colors">→</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 9. CTA ─────────────────────────────────────────────── */}
-      <section className="py-20 bg-yellow text-center">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-tight text-ink mb-4">
-            Buying in{" "}
-            <span className="font-script font-normal text-[0.9em]">
-              {neighborhood.name}
-            </span>
-            ?
-          </h2>
-          <p className="text-base text-ink-mid font-normal max-w-[480px] mx-auto mb-8">
-            Get expert guidance from a Portland-based lender who knows this market. Bri Lindley, NMLS #1367416.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
-              className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] transition-all inline-flex items-center gap-2 justify-center"
-            >
-              Get Pre-Approved <span>→</span>
-            </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-4 border-[1.5px] border-ink text-ink rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:bg-ink hover:text-white transition-all inline-flex items-center gap-2 justify-center"
-            >
-              Schedule a Call <span>→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 10. Testimonials ───────────────────────────────────── */}
-      {neighborhood.testimonials.length > 0 && (
-        <section className="py-16 border-t border-border">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-            <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-                What Clients Say
-              </p>
-              <div className="max-w-[720px] space-y-8">
-                {neighborhood.testimonials.map((t, i) => (
-                  <blockquote key={i} className="py-6 border-b border-border">
-                    <p className="text-[1.05rem] leading-[1.75] text-ink font-normal mb-4">
-                      &ldquo;{t.quote}&rdquo;
+            <section className="mb-16">
+              <SectionIndex>05 — parks &amp; green space</SectionIndex>
+              <div className="border-t border-paper-200">
+                {neighborhood.parks.map((park, i) => (
+                  <div key={i} className="py-4 border-b border-paper-200">
+                    <span className="font-medium text-paper-900">{park.name}</span>
+                    <p className="instrument !text-paper-500 mt-1.5">
+                      {park.amenities.join(" · ")}
                     </p>
-                    <footer>
-                      <span className="font-display text-[0.88rem] font-semibold text-ink">
-                        {t.author}
-                      </span>
-                      <span className="text-[0.82rem] text-ink-light font-normal italic ml-2">
-                        {t.context}
-                      </span>
-                    </footer>
-                  </blockquote>
+                  </div>
                 ))}
               </div>
+            </section>
+
+            <section className="mb-16">
+              <SectionIndex>06 — the market</SectionIndex>
+              <div className="font-display font-normal text-display-md text-paper-900 mb-1">
+                {formatPrice(neighborhood.medianHomePrice)}
+              </div>
+              <p className="instrument !text-paper-500 mb-5">
+                median · typical range {formatPrice(neighborhood.priceRange.low)}–
+                {formatPrice(neighborhood.priceRange.high)}
+              </p>
+              <p className="text-[0.9rem] text-paper-500 leading-relaxed border-l border-paper-300 pl-4 max-w-[52ch]">
+                Prices are estimates based on recent sales. Contact Bri for
+                current market data.
+              </p>
+            </section>
+
+            <section className="mb-4">
+              <SectionIndex>07 — relevant loans</SectionIndex>
+              <div className="border-t border-paper-200">
+                {neighborhood.relatedServices.map((slug) => (
+                  <Link
+                    key={slug}
+                    href={`/services/${slug}`}
+                    className="group flex items-baseline justify-between gap-6 py-4 border-b border-paper-200 hover:bg-surface transition-colors duration-200"
+                  >
+                    <span className="font-medium text-paper-900 group-hover:underline underline-offset-4 decoration-paper-300">
+                      {SERVICE_NAMES[slug] ?? formatSlug(slug)}
+                    </span>
+                    <span
+                      className="text-paper-400 group-hover:text-paper-900 transition-colors duration-200"
+                      aria-hidden
+                    >
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </div>
+
+          {/* instrument panel — the precise counterweight */}
+          <aside className="lg:sticky lg:top-28 order-first lg:order-none">
+            <div className="border border-paper-300 rounded-sm bg-surface shadow-sm p-6">
+              <div className="flex items-center gap-2.5 pb-4 border-b-2 border-paper-900 mb-2">
+                {/* the one vermilion mark on this page */}
+                <span
+                  className="w-2.5 h-2.5 rounded-full bg-vermilion-500 shrink-0"
+                  aria-hidden
+                />
+                <span className="instrument">
+                  {neighborhood.slug.replace(/-/g, " ")}
+                </span>
+              </div>
+              <GaugeRow label="walk score" score={neighborhood.walkScore} />
+              <GaugeRow label="bike score" score={neighborhood.bikeScore} />
+              <GaugeRow label="transit score" score={neighborhood.transitScore} />
+              <DataRow label="median" value={formatPrice(neighborhood.medianHomePrice)} />
+              <DataRow
+                label="range"
+                value={`${formatPrice(neighborhood.priceRange.low)}–${formatPrice(neighborhood.priceRange.high)}`}
+              />
+              <DataRow label="district" value={neighborhood.schoolDistrict.replace(" Schools", "").toLowerCase()} />
+              <p className="instrument-label pt-4">
+                surveyed by the lindley team · updated {new Date().getFullYear()}
+              </p>
+            </div>
+
+            <figure className="mt-6 hidden lg:block">
+              <div className="overflow-hidden rounded-sm border border-paper-200 map-bw">
+                <iframe
+                  src={neighborhood.mapEmbedSrc}
+                  width="100%"
+                  height="260"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Map of ${neighborhood.name}`}
+                />
+              </div>
+              <figcaption className="instrument-label mt-3">
+                fig. — survey area
+              </figcaption>
+            </figure>
+          </aside>
+        </div>
+      </div>
+
+      {/* ── What clients say ───────────────────────────────────── */}
+      {neighborhood.testimonials.length > 0 && (
+        <section className="py-20 border-t border-paper-200 bg-surface">
+          <div className="max-w-container mx-auto px-6 lg:px-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-14">
+              {neighborhood.testimonials.map((t, i) => (
+                <figure key={i}>
+                  <blockquote className="font-display font-normal text-[clamp(1.25rem,2vw,1.6rem)] leading-[1.45] text-paper-900 mb-5">
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                  <figcaption className="instrument !text-paper-500">
+                    — {t.author.toLowerCase()} · {t.context.toLowerCase()}
+                  </figcaption>
+                </figure>
+              ))}
             </div>
           </div>
         </section>
       )}
 
-      {/* ── 11. FAQ ────────────────────────────────────────────── */}
+      {/* ── FAQ ────────────────────────────────────────────────── */}
       {neighborhood.faqs.length > 0 && (
-        <section className="py-16 border-t border-border bg-bg-alt">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-            <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <div>
-                <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-1">
-                  FAQ
-                </p>
-                <p className="text-[0.78rem] text-ink-light">
-                  {neighborhood.faqs.length} questions
-                </p>
-              </div>
-              <div className="max-w-[720px]">
+        <section className="py-20 border-t border-paper-200">
+          <div className="max-w-container mx-auto px-6 lg:px-10">
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,20rem)_1fr] gap-x-16 gap-y-8">
+              <h2 className="font-display font-normal text-display-md text-paper-900">
+                Field questions
+              </h2>
+              <div className="border-t border-paper-200">
                 {neighborhood.faqs.map((faq, i) => (
-                  <details key={i} className="group border-b border-border">
-                    <summary className="flex justify-between items-center py-5 cursor-pointer list-none">
-                      <h3 className="font-display text-[1rem] font-semibold text-ink pr-8 leading-snug">
+                  <details key={i} className="group border-b border-paper-200">
+                    <summary className="flex items-baseline justify-between gap-8 py-5 cursor-pointer list-none">
+                      <h3 className="font-display font-normal text-[1.1rem] leading-snug text-paper-900">
                         {faq.q}
                       </h3>
-                      <span className="text-ink-light text-xl shrink-0 group-open:rotate-45 transition-transform duration-300">
+                      <span
+                        className="instrument !text-paper-400 shrink-0 group-open:rotate-45 transition-transform duration-200 origin-center"
+                        aria-hidden
+                      >
                         +
                       </span>
                     </summary>
-                    <div className="pb-5 pr-12">
-                      <p className="text-[0.9rem] text-ink-mid font-normal leading-relaxed">
-                        {faq.a}
-                      </p>
-                    </div>
+                    <p className="pb-6 pr-10 text-[0.95rem] leading-[1.75] text-paper-600 max-w-prose">
+                      {faq.a}
+                    </p>
                   </details>
                 ))}
               </div>
@@ -565,35 +465,56 @@ export default function NeighborhoodPageLayout({
         </section>
       )}
 
-      {/* ── 12. Adjacent Neighborhoods ─────────────────────────── */}
+      {/* ── Nearby entries ─────────────────────────────────────── */}
       {neighborhood.adjacentNeighborhoods.length > 0 && (
-        <section className="py-16 border-t border-border">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-            <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-                Nearby
-              </p>
-              <div className="max-w-[720px] grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {neighborhood.adjacentNeighborhoods.map((adjSlug) => {
-                  const found = neighborhoods.find((n) => n.slug === adjSlug);
-                  const displayName = found ? found.name : formatSlug(adjSlug);
-                  return (
-                    <Link
-                      key={adjSlug}
-                      href={`/neighborhoods/${adjSlug}`}
-                      className="py-4 px-5 border border-border rounded-xl hover:border-orange hover:text-orange transition-colors text-center"
-                    >
-                      <span className="font-display text-[0.88rem] font-semibold">
-                        {displayName}
-                      </span>
-                    </Link>
-                  );
-                })}
-              </div>
+        <section className="py-14 border-t border-paper-200">
+          <div className="max-w-container mx-auto px-6 lg:px-10">
+            <div className="flex flex-wrap items-baseline gap-x-10 gap-y-3">
+              <span className="instrument-label">adjacent entries</span>
+              {neighborhood.adjacentNeighborhoods.map((adjSlug) => {
+                const found = neighborhoods.find((n) => n.slug === adjSlug);
+                const displayName = found ? found.name : formatSlug(adjSlug);
+                return (
+                  <Link
+                    key={adjSlug}
+                    href={`/neighborhoods/${adjSlug}`}
+                    className="font-display text-[1.1rem] text-paper-900 underline underline-offset-4 decoration-paper-300 hover:decoration-paper-900 transition-colors duration-200"
+                  >
+                    {displayName}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
       )}
+
+      {/* ── CTA ────────────────────────────────────────────────── */}
+      <section className="py-24 lg:py-28 border-t border-paper-200 bg-surface">
+        <div className="max-w-container mx-auto px-6 lg:px-10">
+          <h2 className="font-display font-normal text-display-lg text-paper-900 mb-5 max-w-[20ch]">
+            Buying in {neighborhood.name}?
+          </h2>
+          <p className="text-body-lg text-paper-600 max-w-[44ch] mb-9">
+            Talk to a lender who has actually walked it. Bri Lindley, NMLS
+            #1367416 — pre-approval in 24–48 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+            <Link
+              href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
+              className="inline-flex items-center justify-center px-8 py-4 bg-paper-900 text-paper-50 rounded-sm text-[0.95rem] font-medium hover:bg-paper-800 transition-colors duration-200"
+            >
+              Get pre-approved
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-[0.95rem] font-medium text-paper-900 underline underline-offset-4 decoration-paper-300 hover:decoration-paper-900 transition-colors duration-200"
+            >
+              Schedule a call <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>
