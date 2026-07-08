@@ -65,7 +65,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Sellwood+Moreland+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Sellwood+Moreland+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Sellwood+Moreland+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 71,
     bikeScore: 92,
     transitScore: 51,
@@ -158,7 +158,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Buckman+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Buckman+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Buckman+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 88,
     bikeScore: 94,
     transitScore: 72,
@@ -246,7 +246,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Alberta+Arts+District+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Alberta+Arts+District+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Alberta+Arts+District+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 75,
     bikeScore: 88,
     transitScore: 55,
@@ -336,7 +336,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Pearl+District+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Pearl+District+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Pearl+District+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 97,
     bikeScore: 96,
     transitScore: 92,
@@ -425,7 +425,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Irvington+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Irvington+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Irvington+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 83,
     bikeScore: 88,
     transitScore: 60,
@@ -514,7 +514,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Eastmoreland+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Eastmoreland+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Eastmoreland+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 58,
     bikeScore: 80,
     transitScore: 38,
@@ -604,7 +604,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Laurelhurst+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Laurelhurst+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Laurelhurst+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 76,
     bikeScore: 88,
     transitScore: 55,
@@ -689,7 +689,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Woodstock+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Woodstock+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Woodstock+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 73,
     bikeScore: 88,
     transitScore: 45,
@@ -778,7 +778,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=St+Johns+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=St+Johns+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=St+Johns+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 82,
     bikeScore: 78,
     transitScore: 50,
@@ -868,7 +868,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Kenton+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Kenton+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Kenton+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 75,
     bikeScore: 72,
     transitScore: 68,

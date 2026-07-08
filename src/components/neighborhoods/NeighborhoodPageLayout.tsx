@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { NeighborhoodData } from "@/lib/neighborhoods";
 import { neighborhoods } from "@/lib/neighborhoods";
 
@@ -199,20 +200,27 @@ export default function NeighborhoodPageLayout({
                 </Link>
               </div>
             </div>
-            {/* Map */}
-            <div className="rounded-[2rem] overflow-hidden hidden lg:block" style={{ aspectRatio: "4/3" }}>
-              <iframe
-                src={neighborhood.mapEmbedSrc}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={`Map of ${neighborhood.name}`}
-              />
-            </div>
+            {/* Emotional hero image — leads with feeling, not a map */}
+            <ImagePlaceholder
+              seed={`hero-${neighborhood.slug}`}
+              tone="color"
+              className="rounded-[1.5rem] hidden lg:block aspect-[4/3]"
+              label={`Editorial hero — ${neighborhood.name}: a real street, home, or moment that sells the feeling of living here.`}
+            />
           </div>
+        </div>
+      </section>
+
+      {/* ── 1.5 Feeling band — emotion first, full-bleed ───────── */}
+      <section className="px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto">
+          <ImagePlaceholder
+            seed={`feel-${neighborhood.slug}`}
+            tone="bw"
+            className="rounded-[1.5rem] aspect-[21/9]"
+            overlayTitle={`“${neighborhood.personality}”`}
+            label={`Wide editorial photo — the mood of ${neighborhood.name}, warm and lived-in.`}
+          />
         </div>
       </section>
 
@@ -254,14 +262,14 @@ export default function NeighborhoodPageLayout({
               </p>
               <div className="rounded-[1.25rem] overflow-hidden">
                 <iframe
-                  src={neighborhood.directionsSrc}
+                  src={neighborhood.mapEmbedSrc}
                   width="100%"
                   height="400"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title={`Directions from ${neighborhood.name} to The Lindley Team`}
+                  title={`Map of ${neighborhood.name}`}
                 />
               </div>
             </div>
@@ -464,6 +472,29 @@ export default function NeighborhoodPageLayout({
                 </Link>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8.5 Personal moment — David & Bri (emotional/human) ── */}
+      <section className="py-16 border-t border-border">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-center">
+          <ImagePlaceholder
+            seed="david-bri-portrait"
+            tone="bw"
+            className="rounded-[1.5rem] aspect-[4/5]"
+            label="Personal portrait — David & Bri (studio-editorial, neutral backdrop, some B&W). Real photoshoot — cannot be AI-generated."
+          />
+          <div className="max-w-[520px]">
+            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
+              Your team
+            </p>
+            <p className="font-serif text-[clamp(1.6rem,3vw,2.4rem)] leading-[1.15] text-ink mb-5">
+              We actually know {neighborhood.name}&nbsp;&mdash; and we&rsquo;ll tell you the truth about buying here.
+            </p>
+            <p className="text-[1rem] text-ink-mid leading-relaxed">
+              David &amp; Bri, Movement Mortgage. Portland born, Portland based &mdash; the local read no rate sheet gives you.
+            </p>
           </div>
         </div>
       </section>
