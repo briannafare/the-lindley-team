@@ -1,26 +1,29 @@
 import type { Metadata } from "next";
-import { DM_Sans, Pinyon_Script } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+// Serif display + italic swash accent (the "Museum of Art" move)
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-dm-sans",
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const pinyonScript = Pinyon_Script({
+// Body / UI neo-grotesque (stands in for Aileron; pairs under Cabinet Grotesk)
+const inter = Inter({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-pinyon",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "The Lindley Team — Portland Mortgage Strategy",
+  title: "The Lindley Team — David & Bri · Portland Mortgage",
   description:
-    "Three decades helping Portland families build wealth through real estate. Correspondent lender funding loans in-house across Oregon and Washington. NMLS #1367416.",
+    "David & Bri read Portland by the neighborhood, then handle the loan that lands you there. Movement Mortgage. Licensed in OR & WA.",
 };
 
 export default function RootLayout({
@@ -29,10 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${dmSans.variable} ${pinyonScript.variable}`}
-    >
+    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+      <head>
+        {/* Cabinet Grotesk — headers/UI (free, Fontshare) */}
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap"
+        />
+      </head>
       <body className="bg-bg text-ink font-body antialiased overflow-x-hidden">
         {children}
 
@@ -79,7 +86,6 @@ export default function RootLayout({
         />
 
         {/* GHL chat widget embed — paste the <script> tag from GHL here */}
-        {/* Example: <Script src="https://..." strategy="afterInteractive" /> */}
       </body>
     </html>
   );

@@ -9,23 +9,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#FFFFFF",
-        "bg-alt": "#F5F5F0",
-        ink: "#222222",
-        "ink-mid": "#555555",
-        "ink-light": "#888888",
-        yellow: "#F2FF91",
-        orange: "#E26125",
-        blue: "#3554D9",
+        // ── Met direction palette (Afterglow) ──
+        paper: "#F5F6F1",
+        bg: "#F5F6F1",
+        "bg-alt": "#ECEEE7",
+        cream: "#F5F6F1",
+        ink: "#0D0D0D",
+        "ink-mid": "#55554E",
+        "ink-light": "#8A8A80",
+        orange: "#DF6E56", // coral — hero accent
+        coral: "#DF6E56",
+        blue: "#3554D9", // cobalt
+        cobalt: "#3554D9",
+        lime: "#DDE84B", // acid punch
+        yellow: "#DDE84B", // alias (legacy usages)
+        border: "#DCDCD4",
         silver: "#BDBCBD",
         grey: "#818081",
-        border: "#E2E2E2",
-        cream: "#F5F1EC",
       },
       fontFamily: {
-        display: ["var(--font-dm-sans)", "sans-serif"],
-        script: ["var(--font-pinyon)", "cursive"],
-        body: ["var(--font-dm-sans)", "sans-serif"],
+        serif: ["var(--font-fraunces)", "Georgia", "serif"],
+        grotesk: ['"Cabinet Grotesk"', "var(--font-inter)", "sans-serif"],
+        display: ['"Cabinet Grotesk"', "var(--font-inter)", "sans-serif"],
+        body: ["var(--font-inter)", "system-ui", "sans-serif"],
+        script: ["var(--font-fraunces)", "Georgia", "serif"],
       },
     },
   },
