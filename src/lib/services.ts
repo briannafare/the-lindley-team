@@ -134,7 +134,7 @@ export const services: ServiceData[] = [
     ],
     process: [
       { step: "01", title: "Break-Even Analysis", desc: "Before anything else, we calculate exactly how long it will take for your monthly savings to cover the closing costs. If the math doesn't work, we tell you." },
-      { step: "02", title: "Rate Lock & Application", desc: "Once we confirm it makes sense, we lock your rate and start the application. We compare in-house products with brokered options to find the best terms." },
+      { step: "02", title: "Rate Lock & Application", desc: "Once we confirm it makes sense, we lock your rate and start the application. We compare programs through Movement Mortgage to find the best terms for your situation." },
       { step: "03", title: "Appraisal & Underwriting", desc: "Your home gets appraised to confirm current value. Underwriting reviews your financial profile. We manage both processes." },
       { step: "04", title: "Close & Savings Begin", desc: "You sign the new loan docs, and your new (lower) payment starts the following month. Total timeline: 3-5 weeks." },
     ],
