@@ -1,22 +1,19 @@
 import Link from "next/link";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 const PEOPLE = [
   {
-    seed: "david-chandler",
+    src: "/team/david.jpg",
     name: "David Chandler",
     role: "Loan Officer · Movement Mortgage",
     meta: "NMLS 265974 · AZ · CA · GA · OR · WA",
-    line: "4.85★ across 210 reviews. Makes the whole thing feel straightforward — which, in a mortgage, is the rarest thing there is.",
-    tone: "bw" as const,
+    line: "4.85★ across 210 reviews — makes the whole thing feel straightforward, which in a mortgage is the rarest thing there is.",
   },
   {
-    seed: "bri-lindley",
+    src: "/team/bri.jpg",
     name: "Bri Lindley",
     role: "Senior Loan Officer · Movement Mortgage",
     meta: "NMLS 1367416 · CDLP · OR · WA",
-    line: "Portland born, six generations deep. Certified Divorce Lending Professional for the situations that need a steadier hand.",
-    tone: "color" as const,
+    line: "Portland born, six generations deep. Certified Divorce Lending Professional for the moments that need a steadier hand.",
   },
 ];
 
@@ -38,55 +35,51 @@ export default function MeetTheTeam() {
         </Link>
       </div>
 
-      {/* lead: statement + big duo portrait */}
-      <div className="grid lg:grid-cols-[1fr_minmax(360px,42%)] gap-[clamp(24px,4vw,64px)] mt-10 items-center">
-        <div>
-          <p className="font-serif text-[clamp(28px,4.4vw,64px)] leading-[1.02] tracking-[-0.02em]">
-            You&rsquo;re not working with a call center. You&rsquo;re working with{" "}
-            <em className="italic text-orange">us.</em>
-          </p>
-          <p className="text-[clamp(15px,1.2vw,18px)] text-ink-mid leading-relaxed max-w-[46ch] mt-6">
-            Two lenders, one team, under Movement Mortgage. We read Portland by the
-            neighborhood, tell you the truth about buying here, and stay in it with
-            you from the first call to the keys.
-          </p>
-          <Link
-            href="/about"
-            className="inline-block mt-8 font-grotesk font-bold text-[15px] border border-ink px-6 py-3.5 rounded-[2px] hover:bg-ink hover:text-paper transition-colors"
-          >
-            Meet the team
-          </Link>
-        </div>
-        <ImagePlaceholder
-          seed="david-bri-duo"
-          tone="bw"
-          className="rounded-[1.5rem] aspect-[4/5]"
-          label="Duo portrait — David & Bri, studio-editorial, neutral backdrop. Real photoshoot."
-        />
+      {/* lead statement */}
+      <div className="grid lg:grid-cols-[1.1fr_.9fr] gap-8 items-end mt-10">
+        <p className="font-serif text-[clamp(28px,4.2vw,60px)] leading-[1.02] tracking-[-0.02em]">
+          You&rsquo;re not working with a call center. You&rsquo;re working with{" "}
+          <em className="italic text-orange">us.</em>
+        </p>
+        <p className="text-[clamp(15px,1.2vw,18px)] text-ink-mid leading-relaxed max-w-[46ch]">
+          Two lenders, one team, under Movement Mortgage. We read Portland by the
+          neighborhood, tell you the truth about buying here, and stay in it with
+          you from the first call to the keys.
+        </p>
       </div>
 
-      {/* individual, credited */}
-      <div className="grid md:grid-cols-2 gap-[clamp(14px,1.6vw,28px)] mt-[clamp(24px,3vw,44px)]">
+      {/* the faces — big, real, B&W → color on hover */}
+      <div className="grid md:grid-cols-2 gap-[clamp(16px,2vw,32px)] mt-[clamp(28px,3.5vw,56px)]">
         {PEOPLE.map((p) => (
-          <div key={p.seed} className="grid grid-cols-[clamp(120px,32%,200px)_1fr] gap-5 items-end">
-            <ImagePlaceholder
-              seed={p.seed}
-              tone={p.tone}
-              className="rounded-[1rem] aspect-[4/5]"
-              label={`Portrait — ${p.name}. Real photoshoot.`}
-            />
-            <div className="pb-1">
-              <h3 className="font-serif text-[clamp(22px,2.4vw,34px)] leading-none tracking-[-0.01em]">
+          <div key={p.name} className="group">
+            <div className="aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-ink/5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={p.src}
+                alt={p.name}
+                className="w-full h-full object-cover object-top img-bw transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+            </div>
+            <div className="mt-5 flex items-baseline justify-between gap-3">
+              <h3 className="font-serif text-[clamp(26px,3vw,42px)] leading-none tracking-[-0.01em]">
                 {p.name}
               </h3>
-              <p className="font-body text-[0.72rem] tracking-[0.12em] uppercase text-ink-light mt-2">
-                {p.role}
-              </p>
-              <p className="font-body text-[0.72rem] tracking-[0.06em] uppercase text-orange mt-1">
-                {p.meta}
-              </p>
-              <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-3">{p.line}</p>
+              <Link
+                href="/apply"
+                className="font-body text-[11px] tracking-[0.12em] uppercase font-semibold shrink-0 border-b border-ink pb-0.5 hover:text-orange hover:border-orange transition-colors"
+              >
+                Apply →
+              </Link>
             </div>
+            <p className="font-body text-[0.72rem] tracking-[0.12em] uppercase text-ink-light mt-2.5">
+              {p.role}
+            </p>
+            <p className="font-body text-[0.72rem] tracking-[0.06em] uppercase text-orange mt-1">
+              {p.meta}
+            </p>
+            <p className="text-[0.97rem] text-ink-mid leading-relaxed mt-3 max-w-[46ch]">
+              {p.line}
+            </p>
           </div>
         ))}
       </div>
