@@ -19,7 +19,7 @@ export default function Hero() {
       const mm = gsap.matchMedia();
       mm.add("(prefers-reduced-motion: no-preference)", () => {
         const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.15 });
-        tl.from(".hero-line", { yPercent: 115, duration: 0.9, stagger: 0.1 })
+        tl.from(".hero-line", { y: 46, opacity: 0, duration: 0.85, stagger: 0.1 })
           .from(".hero-underline", { scaleX: 0, transformOrigin: "left center", duration: 0.6 }, "-=0.4")
           .from(".hero-meta", { y: 24, opacity: 0, duration: 0.6 }, "-=0.4")
           .from(".hero-card", { y: 40, opacity: 0, duration: 0.6, stagger: 0.1 }, "-=0.3");
@@ -32,18 +32,16 @@ export default function Hero() {
     <section ref={scope} className="bg-paper pt-[clamp(120px,15vh,180px)] pb-[clamp(28px,3vw,44px)]">
       <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px]">
         {/* HERO HEADLINE — serif + italic swash accent */}
-        <h1 className="font-serif font-semibold text-ink text-[clamp(52px,10.5vw,168px)] leading-[0.9] tracking-[-0.03em]">
-          <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]"><span className="hero-line block">Find your place</span></span>
-          <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
-            <span className="hero-line block">
-              <em className="not-italic relative inline-block">
-                <span className="font-medium italic text-orange">in</span>
-                <svg className="hero-underline absolute -bottom-2 left-0 w-full" height="14" viewBox="0 0 120 14" preserveAspectRatio="none" aria-hidden>
-                  <path d="M2 9 C30 2, 90 2, 118 8" stroke="#DF6E56" strokeWidth="3" fill="none" strokeLinecap="round" />
-                </svg>
-              </em>{" "}
-              Portland.
-            </span>
+        <h1 className="font-serif font-semibold text-ink text-[clamp(52px,10.5vw,168px)] leading-[0.95] tracking-[-0.03em] pb-[0.06em]">
+          <span className="hero-line block">Find your place</span>
+          <span className="hero-line block">
+            <em className="not-italic relative inline-block">
+              <span className="font-medium italic text-orange">in</span>
+              <svg className="hero-underline absolute -bottom-1 left-0 w-full" height="14" viewBox="0 0 120 14" preserveAspectRatio="none" aria-hidden>
+                <path d="M2 9 C30 2, 90 2, 118 8" stroke="#DF6E56" strokeWidth="3" fill="none" strokeLinecap="round" />
+              </svg>
+            </em>{" "}
+            Portland.
           </span>
         </h1>
 
