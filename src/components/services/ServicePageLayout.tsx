@@ -73,13 +73,11 @@ export default function ServicePageLayout({
               >
                 ← Services
               </Link>
-              <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight mt-4 mb-6">
+              <h1 className="font-serif font-semibold text-[clamp(3rem,7.5vw,6rem)] leading-[0.92] tracking-[-0.02em] mt-4 mb-6">
                 {service.name.split(" ").map((word, i, arr) =>
                   i === arr.length - 1 ? (
-                    <span key={i}>
-                      <span className="font-script font-normal text-orange text-[0.85em]">
-                        {word}
-                      </span>
+                    <span key={i} className="italic font-medium text-orange">
+                      {word}
                     </span>
                   ) : (
                     <span key={i}>{word} </span>
@@ -205,9 +203,9 @@ export default function ServicePageLayout({
                 </div>
               ))}
               <p className="text-[0.78rem] text-ink-light font-normal leading-relaxed mt-5 border-l-2 border-border pl-4">
-                These are general guidelines. As a correspondent lender with an extensive wholesale network, we have access to additional programs with different requirements.{" "}
+                These are general guidelines. Through Movement Mortgage we have access to additional programs with different requirements.{" "}
                 <a href="/contact" className="underline hover:text-ink transition-colors">
-                  Contact Bri
+                  Contact David &amp; Bri
                 </a>{" "}
                 for options specific to your situation.
               </p>
@@ -312,7 +310,7 @@ export default function ServicePageLayout({
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-tight text-ink mb-4">
             Ready to explore{" "}
-            <span className="font-script font-normal text-[0.9em]">
+            <span className="font-serif italic font-medium text-orange text-[0.95em]">
               {service.shortName.toLowerCase()}
             </span>
             ?

@@ -18,15 +18,15 @@ export default function ServicesPage() {
           <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
             Our Services
           </p>
-          <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight mb-6">
+          <h1 className="font-serif font-semibold text-[clamp(3rem,7.5vw,6rem)] leading-[0.92] tracking-[-0.02em] mb-6">
             Every mortgage product.{" "}
-            <span className="font-script font-normal text-orange text-[0.85em]">
+            <span className="italic font-medium text-orange">
               One team.
             </span>
           </h1>
           <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[600px]">
-            We fund most loans in-house through our own bank. When another product fits better, we broker it. Either way, you get the best option.
-            We find the one that fits your life — not the other way around.
+            A full range of loan programs through Movement Mortgage — we find the
+            one that fits your life, not the other way around.
           </p>
         </div>
       </section>
