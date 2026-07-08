@@ -33,8 +33,8 @@ export default function Hero() {
       <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px]">
         {/* HERO HEADLINE — serif + italic swash accent */}
         <h1 className="font-serif font-semibold text-ink text-[clamp(52px,10.5vw,168px)] leading-[0.9] tracking-[-0.03em]">
-          <span className="block overflow-hidden"><span className="hero-line block">Find your place</span></span>
-          <span className="block overflow-hidden">
+          <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]"><span className="hero-line block">Find your place</span></span>
+          <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
             <span className="hero-line block">
               <em className="not-italic relative inline-block">
                 <span className="font-medium italic text-orange">in</span>
