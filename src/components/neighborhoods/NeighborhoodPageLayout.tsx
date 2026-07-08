@@ -175,9 +175,9 @@ export default function NeighborhoodPageLayout({
               <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mt-4 mb-3">
                 {neighborhood.city}, {neighborhood.state}
               </p>
-              <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight mb-4">
+              <h1 className="font-serif font-semibold text-[clamp(3rem,7.5vw,6rem)] leading-[0.92] tracking-[-0.02em] mb-4">
                 {leadWords && <span>{leadWords} </span>}
-                <span className="font-script font-normal text-orange text-[0.85em]">
+                <span className="italic font-medium text-orange">
                   {lastWord}
                 </span>
               </h1>
@@ -186,7 +186,7 @@ export default function NeighborhoodPageLayout({
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
+                  href="/apply"
                   className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2 justify-center"
                 >
                   Get Pre-Approved <span>→</span>
@@ -436,7 +436,7 @@ export default function NeighborhoodPageLayout({
                 </span>
               </div>
               <p className="text-[0.82rem] text-ink-light font-normal leading-relaxed border-l-2 border-border pl-4">
-                Prices shown are estimates based on recent sales. Contact Bri for current market data.
+                Prices shown are estimates based on recent sales. Contact David &amp; Bri for current market data.
               </p>
             </div>
           </div>
@@ -473,13 +473,13 @@ export default function NeighborhoodPageLayout({
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-tight text-ink mb-4">
             Buying in{" "}
-            <span className="font-script font-normal text-[0.9em]">
+            <span className="font-serif italic font-medium text-orange text-[0.95em]">
               {neighborhood.name}
             </span>
             ?
           </h2>
           <p className="text-base text-ink-mid font-normal max-w-[480px] mx-auto mb-8">
-            Get expert guidance from a Portland-based lender who knows this market. Bri Lindley, NMLS #1367416.
+            Get expert guidance from a Portland team that knows this market — David &amp; Bri, Movement Mortgage. NMLS #1367416 / #265974.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
