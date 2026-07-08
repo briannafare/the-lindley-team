@@ -17,8 +17,8 @@ const config: Config = {
         ink: "#0D0D0D",
         "ink-mid": "#55554E",
         "ink-light": "#8A8A80",
-        orange: "#DF6E56", // coral — hero accent
-        coral: "#DF6E56",
+        orange: "#EE3B24", // bright red-orange — Movement-adjacent accent
+        coral: "#EE3B24",
         blue: "#3554D9", // cobalt
         cobalt: "#3554D9",
         lime: "#DDE84B", // acid punch
