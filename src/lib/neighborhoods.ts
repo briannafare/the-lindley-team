@@ -4946,7 +4946,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Sherwood, OR | The Lindley Team",
       description:
-        "Sherwood, Oregon home prices, school district ratings, commute times, and what buyers need to know. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Sherwood, Oregon home prices, school district ratings, commute times, and what buyers need to know. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -5181,7 +5181,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Forest Grove, OR | The Lindley Team",
       description:
-        "Forest Grove, Oregon home prices, school district info, commute realities, and what buyers need to know. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Forest Grove, Oregon home prices, school district info, commute realities, and what buyers need to know. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -5297,7 +5297,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Cornelius, OR | The Lindley Team",
       description:
-        "Cornelius, Oregon home prices, Hillsboro school district, commute times, and what buyers need to know. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Cornelius, Oregon home prices, Hillsboro school district, commute times, and what buyers need to know. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -5406,9 +5406,9 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "jumbo", "refinance", "heloc", "cash-out"],
     adjacentNeighborhoods: ["west-linn", "milwaukie", "sellwood-moreland", "tualatin", "wilsonville"],
     seo: {
-      title: "Lake Oswego OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Lake Oswego OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
-        "Buying a home in Lake Oswego? Understand the lake access realities, school district, and price range before you shop. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Buying a home in Lake Oswego? Understand the lake access realities, school district, and price range before you shop. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -5512,7 +5512,7 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "refinance", "jumbo", "fha", "heloc", "cash-out"],
     adjacentNeighborhoods: ["lake-oswego", "oregon-city", "tualatin", "wilsonville"],
     seo: {
-      title: "West Linn OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "West Linn OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
         "West Linn offers top-rated schools at a lower price point than Lake Oswego. Learn what buyers need to know about the neighborhoods, commute, and housing market. Bri Lindley, NMLS #1367416.",
     },
@@ -5614,7 +5614,7 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "fha", "va", "refinance", "cash-out", "investment"],
     adjacentNeighborhoods: ["west-linn", "milwaukie", "happy-valley", "canby", "wilsonville"],
     seo: {
-      title: "Oregon City OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Oregon City OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
         "Oregon City offers real affordability in Clackamas County — historic neighborhoods, Willamette Falls, and a price point that opens doors for buyers priced out of Lake Oswego or West Linn. Bri Lindley, NMLS #1367416.",
     },
@@ -5717,7 +5717,7 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "fha", "refinance", "cash-out", "investment", "heloc"],
     adjacentNeighborhoods: ["sellwood-moreland", "eastmoreland", "woodstock", "oregon-city", "happy-valley", "lake-oswego"],
     seo: {
-      title: "Milwaukie OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Milwaukie OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
         "Milwaukie has MAX light rail, the Springwater Corridor, and North Clackamas schools at a price point well below inner SE Portland. Learn what buyers need to know. Bri Lindley, NMLS #1367416.",
     },
@@ -5820,7 +5820,7 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "fha", "refinance", "heloc", "cash-out", "investment"],
     adjacentNeighborhoods: ["milwaukie", "oregon-city", "west-linn", "canby"],
     seo: {
-      title: "Happy Valley OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Happy Valley OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
         "Happy Valley is one of Oregon's fastest-growing cities — newer construction, North Clackamas schools, and Mt. Hood views. Learn what buyers need to know before they shop. Bri Lindley, NMLS #1367416.",
     },
@@ -5929,9 +5929,9 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "fha", "va", "refinance", "cash-out", "investment", "reverse-mortgage"],
     adjacentNeighborhoods: ["oregon-city", "happy-valley", "wilsonville", "west-linn"],
     seo: {
-      title: "Canby OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Canby OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
-        "Canby is a small city at the southern edge of the Portland metro — the Canby Ferry, working farms, and the lowest price point in Clackamas County. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Canby is a small city at the southern edge of the Portland metro — the Canby Ferry, working farms, and the lowest price point in Clackamas County. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -6055,7 +6055,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Newberg, OR | Mortgage Lender | The Lindley Team",
       description:
-        "Newberg real estate and home loans with Bri Lindley at Mortgage Express. Median $450k, wine country access, George Fox University, honest 99W commute guidance. NMLS #1367416.",
+        "Newberg real estate and home loans with Bri Lindley at Movement Mortgage. Median $450k, wine country access, George Fox University, honest 99W commute guidance. NMLS #1367416.",
     },
   },
 
@@ -6179,7 +6179,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in McMinnville, OR | Mortgage Lender | The Lindley Team",
       description:
-        "McMinnville home loans with Bri Lindley at Mortgage Express. Yamhill County seat, Third Street dining, Evergreen Museum, median $430k. Honest mortgage guidance for wine country buyers. NMLS #1367416.",
+        "McMinnville home loans with Bri Lindley at Movement Mortgage. Yamhill County seat, Third Street dining, Evergreen Museum, median $430k. Honest mortgage guidance for wine country buyers. NMLS #1367416.",
     },
   },
 
@@ -6263,7 +6263,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Can I get a jumbo loan for a vineyard property in Dundee?",
-        a: "It depends on the property structure. Agricultural land with a residential component often requires specialized financing — not all lenders can handle it. Bri Lindley at Mortgage Express has worked with vineyard-adjacent purchases in Yamhill County and can assess what financing structure fits the specific property. The answer varies considerably by acreage, existing improvements, and how the land is classified.",
+        a: "It depends on the property structure. Agricultural land with a residential component often requires specialized financing — not all lenders can handle it. Bri Lindley at Movement Mortgage has worked with vineyard-adjacent purchases in Yamhill County and can assess what financing structure fits the specific property. The answer varies considerably by acreage, existing improvements, and how the land is classified.",
       },
     ],
     testimonials: [
@@ -6300,7 +6300,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Dundee, OR | Mortgage Lender | The Lindley Team",
       description:
-        "Dundee Hills real estate and home loans with Bri Lindley at Mortgage Express. Yamhill County wine country, Domaine Drouhin, Sokol Blosser, median $560k, vineyard financing specialists. NMLS #1367416.",
+        "Dundee Hills real estate and home loans with Bri Lindley at Movement Mortgage. Yamhill County wine country, Domaine Drouhin, Sokol Blosser, median $560k, vineyard financing specialists. NMLS #1367416.",
     },
   },
 
@@ -6423,7 +6423,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Carlton, OR | Mortgage Lender | The Lindley Team",
       description:
-        "Carlton, Oregon home loans with Bri Lindley at Mortgage Express. Yamhill County wine country, Carlton Winemakers Studio, median $420k, rural acreage financing. NMLS #1367416.",
+        "Carlton, Oregon home loans with Bri Lindley at Movement Mortgage. Yamhill County wine country, Carlton Winemakers Studio, median $420k, rural acreage financing. NMLS #1367416.",
     },
   },
 

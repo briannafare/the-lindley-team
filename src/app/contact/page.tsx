@@ -50,8 +50,8 @@ export default function ContactPage() {
                   },
                   {
                     label: "Email",
-                    display: "LindleyTeam@mtgxps.com",
-                    href: "mailto:LindleyTeam@mtgxps.com",
+                    display: "brianna.lindley@movement.com",
+                    href: "mailto:brianna.lindley@movement.com",
                     isLink: true,
                   },
                   {
@@ -176,7 +176,7 @@ export default function ContactPage() {
                   Ready to move forward? Start your application online — it takes about 15 minutes and you can save your progress.
                 </p>
                 <a
-                  href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
+                  href="/apply"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2"
