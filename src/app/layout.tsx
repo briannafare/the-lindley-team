@@ -40,8 +40,32 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap"
         />
       </head>
-      <body className="bg-bg text-ink font-body antialiased overflow-x-hidden">
-        {children}
+      <body className="bg-shell text-ink font-body antialiased overflow-x-hidden p-2 sm:p-3 lg:p-4">
+        {/* Card frame (House of Van Schneider): the whole site lives in one rounded
+            card on a neutral shell — width-capped so it never floats on huge screens. */}
+        <div className="relative mx-auto w-full max-w-[1728px] min-h-[calc(100vh-2rem)] bg-paper rounded-[18px] sm:rounded-[26px] overflow-clip">
+          {/* Red brand spine — left edge of the card, carries the Movement lockup on every page */}
+          <div
+            aria-hidden
+            className="hidden xl:flex absolute left-0 top-0 bottom-0 w-[44px] bg-orange text-paper z-[60] flex-col items-center justify-between py-7 select-none rounded-l-[18px] sm:rounded-l-[26px]"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand/logo-icon.png"
+              alt=""
+              className="w-[30px] h-[30px] rounded-full object-cover bg-paper"
+            />
+            <span
+              style={{ writingMode: "vertical-rl" }}
+              className="rotate-180 font-body text-[10px] tracking-[0.32em] uppercase whitespace-nowrap"
+            >
+              The Lindley Team&nbsp;&nbsp;·&nbsp;&nbsp;at Movement Mortgage
+            </span>
+            <span className="font-body text-[10px] tracking-[0.2em]">PDX</span>
+          </div>
+
+          <div className="xl:pl-[44px]">{children}</div>
+        </div>
 
         {/* GHL chat widget page-context injector — must run BEFORE the widget script */}
         <Script

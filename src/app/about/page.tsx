@@ -4,9 +4,9 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "About The Lindley Team | Portland Mortgage Lender | NMLS #1367416",
+  title: "About The Lindley Team at Movement Mortgage | Portland | NMLS #1367416 / #265974",
   description:
-    "Meet Bri Lindley — Senior Loan Officer, CDLP certified, and Portland-based mortgage professional with over 20 years helping Oregon families buy and refinance homes. NMLS #1367416.",
+    "Meet David Chandler & Bri Lindley — The Lindley Team at Movement Mortgage. Portland loan officers helping Oregon & Washington families buy and refinance homes. NMLS #1367416 / #265974.",
 };
 
 export default function AboutPage() {
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <main>
 
         {/* Hero */}
-        <section className="pt-40 pb-20 relative overflow-hidden">
+        <section className="pt-[clamp(24px,5vh,56px)] pb-20 relative overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <h1 className="font-display text-[clamp(3rem,8vw,6rem)] font-extrabold leading-[0.95] tracking-tight mb-6">
               About the<br />
@@ -46,7 +46,7 @@ export default function AboutPage() {
                   Bri holds the Certified Divorce Lending Professional (CDLP) designation — one of only a small number of lenders in Oregon to earn it. It means she&apos;s specifically trained to help divorcing couples untangle the mortgage from the divorce process: buyouts, refinances, understanding what each spouse actually qualifies for on their own. She works closely with family law attorneys and mediators and knows how to operate inside that process without making things harder than they already are.
                 </p>
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Bri works at Mortgage Express, a local Portland lender — not a big bank call center. She has access to a wide range of loan programs, can advocate directly for her clients, and makes decisions locally. She cares about Portland&apos;s housing landscape because she&apos;s watched it change over two decades. She wants the people who love this city to be able to stay in it.
+                  Bri is a Senior Loan Officer with Movement Mortgage — not a big-bank call center. She has access to a wide range of loan programs, advocates directly for her clients, and works with a local team. She cares about Portland&apos;s housing landscape because she&apos;s watched it change over two decades. She wants the people who love this city to be able to stay in it.
                 </p>
               </div>
             </div>
@@ -63,7 +63,7 @@ export default function AboutPage() {
               <div className="max-w-[720px]">
                 <div className="border-b border-border">
                   {[
-                    { label: "Title", value: "Senior Loan Officer — Mortgage Express" },
+                    { label: "Title", value: "Senior Loan Officer — Movement Mortgage" },
                     { label: "NMLS", value: "#1367416" },
                     { label: "Licensed", value: "Oregon & Washington" },
                     { label: "Designation", value: "CDLP — Certified Divorce Lending Professional" },
@@ -112,7 +112,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Why Mortgage Express */}
+        {/* Why Movement Mortgage */}
         <section className="py-16 border-t border-border bg-bg-alt">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
@@ -121,13 +121,13 @@ export default function AboutPage() {
               </p>
               <div className="max-w-[720px] space-y-5">
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Bri works at Mortgage Express because it&apos;s a correspondent lender — meaning they fund loans in-house, with their own capital, rather than brokering your file to a third party. That distinction matters more than most borrowers realize. When a lender funds their own loans, they control the process. Underwriting decisions happen locally, conditions get cleared faster, and Bri can actually advocate for your file rather than waiting on a faceless institution to move.
+                  David and Bri originate through Movement Mortgage, a direct lender and servicer — meaning loans are underwritten, funded, and often serviced in-house rather than handed off to a faceless third party. That matters more than most borrowers realize: when the lender controls the process, conditions get cleared faster and your loan officer can actually advocate for your file.
                 </p>
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Mortgage Express offers a full range of loan programs — conventional, FHA, VA, jumbo, USDA, and more. And when a borrower&apos;s situation calls for it, they can broker to outside investors as well. That flexibility means Bri isn&apos;t locked into one product shelf. She finds the right fit for your situation, not the one that&apos;s easiest to push through.
+                  Movement offers a full range of loan programs — conventional, FHA, VA, USDA, jumbo, and more — so the team isn&apos;t locked into one product shelf. They find the right fit for your situation, not the one that&apos;s easiest to push through.
                 </p>
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  The relationship doesn&apos;t end at closing. Clients who bought their first home with Bri years ago come back when they refinance, when they upgrade, when life changes and they need to think through their options again. That&apos;s not a sales pitch — it&apos;s just how a local lender operates when they actually care about the community they&apos;re in.
+                  The relationship doesn&apos;t end at closing. Clients come back when they refinance, when they upgrade, when life changes and they need to think through their options again. That&apos;s not a sales pitch — it&apos;s just how David and Bri work.
                 </p>
               </div>
             </div>

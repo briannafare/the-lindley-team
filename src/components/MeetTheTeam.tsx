@@ -1,8 +1,17 @@
 import Link from "next/link";
 
-const PEOPLE = [
-  { src: "/team/david.jpg", name: "David Chandler", role: "Loan Officer", meta: "NMLS 265974 · Movement" },
-  { src: "/team/bri.jpg", name: "Bri Lindley", role: "Senior Loan Officer · CDLP", meta: "NMLS 1367416 · Movement" },
+const PEOPLE: {
+  src: string;
+  hover: string | null;
+  bw: boolean;
+  name: string;
+  role: string;
+  meta: string;
+}[] = [
+  // David: single photo for now (Bri wants to preview the swap with just hers first).
+  { src: "/team/david.jpg", hover: null, bw: true, name: "David Chandler", role: "Loan Officer", meta: "NMLS 265974 · Movement" },
+  // Bri: serious shows first → fun/messy on hover.
+  { src: "/team/bri-serious.png", hover: "/team/bri-fun.png", bw: false, name: "Bri Lindley", role: "Senior Loan Officer · CDLP", meta: "NMLS 1367416 · Movement" },
 ];
 
 export default function MeetTheTeam() {
@@ -33,13 +42,22 @@ export default function MeetTheTeam() {
       <div className="grid md:grid-cols-2 gap-[clamp(16px,2vw,32px)] mt-[clamp(28px,3.5vw,52px)]">
         {PEOPLE.map((p) => (
           <div key={p.name} className="group">
-            <div className="aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-ink/5">
+            <div className="aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-ink/5 relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={p.src}
                 alt={p.name}
-                className="w-full h-full object-cover object-top img-bw transition-transform duration-700 group-hover:scale-[1.03]"
+                className={`w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03] ${p.bw ? "img-bw" : ""}`}
               />
+              {p.hover && (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  src={p.hover}
+                  alt=""
+                  aria-hidden
+                  className="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:scale-[1.03]"
+                />
+              )}
             </div>
             <div className="mt-5 flex items-baseline justify-between gap-3">
               <h3 className="font-serif text-[clamp(26px,3vw,42px)] leading-none tracking-[-0.01em]">

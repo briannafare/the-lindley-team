@@ -15,7 +15,7 @@ export default function ContactPage() {
       <main>
 
         {/* Hero */}
-        <section className="pt-40 pb-20 relative overflow-hidden">
+        <section className="pt-[clamp(24px,5vh,56px)] pb-20 relative overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-border">
               <span className="w-1.5 h-1.5 rounded-full bg-orange" />
@@ -56,7 +56,7 @@ export default function ContactPage() {
                   },
                   {
                     label: "Office",
-                    display: "15115 SW Sequoia Pkwy, Suite 100, Portland OR 97224",
+                    display: "10135 SE Sunnyside Rd, Ste 125, Clackamas OR 97015",
                     href: null,
                     isLink: false,
                   },
@@ -100,7 +100,7 @@ export default function ContactPage() {
         </section>
 
         {/* Schedule a Call — GHL Widget Placeholder */}
-        <section className="py-16 border-t border-border bg-bg-alt">
+        <section id="schedule" className="py-16 border-t border-border bg-bg-alt scroll-mt-24">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
               <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
@@ -197,14 +197,14 @@ export default function ContactPage() {
                   Our Office
                 </p>
                 <p className="text-[0.88rem] text-ink-mid font-normal leading-relaxed">
-                  15115 SW Sequoia Pkwy<br />
-                  Suite 100<br />
-                  Portland OR 97224
+                  10135 SE Sunnyside Rd<br />
+                  Ste 125<br />
+                  Clackamas OR 97015
                 </p>
               </div>
               <div className="rounded-2xl overflow-hidden" style={{ height: "400px" }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed"
+                  src="https://maps.google.com/maps?q=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

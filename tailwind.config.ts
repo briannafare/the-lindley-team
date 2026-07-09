@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         // ── Met direction palette (Afterglow) ──
         paper: "#F5F6F1",
+        shell: "#E3E3DA", // neutral behind the card frame
         bg: "#F5F6F1",
         "bg-alt": "#ECEEE7",
         cream: "#F5F6F1",

@@ -3,6 +3,15 @@ import { neighborhoods } from "@/lib/neighborhoods";
 
 const FEATURED = ["sellwood-moreland", "alberta-arts", "pearl-district", "irvington", "st-johns"];
 
+// Curated editorial imagery (Ideogram) — rest fall back to placeholder until generated.
+const CURATED: Record<string, string> = {
+  "sellwood-moreland": "/img/hood-sellwood.webp",
+  "alberta-arts": "/img/hood-alberta.webp",
+  "pearl-district": "/img/hood-pearl.webp",
+  "irvington": "/img/hood-irvington.webp",
+  "st-johns": "/img/hood-stjohns.webp",
+};
+
 export default function ExploreNeighborhoods() {
   const tiles = FEATURED
     .map((slug, i) => {
@@ -41,9 +50,9 @@ export default function ExploreNeighborhoods() {
               </span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`https://picsum.photos/seed/lt-${t.slug}/460/620`}
+                src={CURATED[t.slug] || `https://picsum.photos/seed/lt-${t.slug}/460/620`}
                 alt={t.name}
-                className={`w-full h-full object-cover brightness-90 transition-transform duration-500 group-hover:scale-[1.05] ${t.bw ? "img-bw" : ""}`}
+                className={`w-full h-full object-cover brightness-90 transition-transform duration-500 group-hover:scale-[1.05] ${!CURATED[t.slug] && t.bw ? "img-bw" : ""}`}
               />
             </div>
             <div className="flex justify-between mt-2.5 font-body text-[0.7rem] tracking-[0.12em] uppercase text-ink-light">

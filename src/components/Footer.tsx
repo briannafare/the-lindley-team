@@ -42,10 +42,13 @@ export default function Footer() {
         </div>
 
         <div className="mt-11 pt-5 border-t border-white/10 flex flex-wrap items-end justify-between gap-4">
-          <p className="text-[0.7rem] text-white/40 leading-[1.7] max-w-[72ch]">
-            Movement Mortgage, LLC. NMLS #39179. David Chandler NMLS #265974 · Brianna Lindley NMLS #1367416.
-            Equal Housing Lender. Not a commitment to lock or lend; terms and restrictions apply; not all applicants
-            will qualify. Licensed in OR &amp; WA. © {new Date().getFullYear()} The Lindley Team.
+          <p className="text-[0.7rem] text-white/40 leading-[1.7] max-w-[82ch]">
+            The Lindley Team at Movement Mortgage, LLC. Movement Mortgage, LLC is an Equal Housing Lender.
+            NMLS ID #39179 (<a href="https://www.nmlsconsumeraccess.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-white/70">www.nmlsconsumeraccess.org</a>).
+            David Chandler NMLS #265974 · Brianna Lindley NMLS #1367416. Interest rates and products are subject to
+            change without notice and may not be available at the time of loan commitment or rate lock. This is not a
+            commitment to lend; terms and conditions apply; not all applicants will qualify. Licensed in OR &amp; WA.
+            © {new Date().getFullYear()} The Lindley Team.
           </p>
           <span className="font-serif italic text-[1.4rem] text-paper">David &amp; Bri</span>
         </div>
