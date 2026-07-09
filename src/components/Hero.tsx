@@ -62,9 +62,11 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="block text-ink hover:text-orange transition-colors"
             >
-              5.0 &#9733; across 156 Google reviews
+              5.0 &#9733; · 156 Google reviews
+              <span className="block text-ink-light">for The Lindley Team</span>
             </a>
-            <span className="block">Movement Mortgage · NMLS 1367416 / 265974</span>
+            <span className="block mt-1.5">The Lindley Team at Movement Mortgage</span>
+            <span className="block">NMLS 1367416 / 265974</span>
             <span className="block">Portland, Oregon — &copy;2026</span>
           </div>
         </div>
