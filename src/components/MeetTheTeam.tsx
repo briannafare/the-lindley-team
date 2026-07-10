@@ -8,8 +8,8 @@ const PEOPLE: {
   role: string;
   meta: string;
 }[] = [
-  // David: single photo for now (Bri wants to preview the swap with just hers first).
-  { src: "/team/david.jpg", hover: null, bw: true, name: "David Chandler", role: "Loan Officer", meta: "NMLS 265974 · Movement" },
+  // David: composed shows first → fun on hover (mirrors Bri).
+  { src: "/team/david-serious.png", hover: "/team/david-fun.png", bw: false, name: "David Chandler", role: "Loan Officer", meta: "NMLS 265974 · Movement" },
   // Bri: serious shows first → fun/messy on hover.
   { src: "/team/bri-serious.png", hover: "/team/bri-fun.png", bw: false, name: "Bri Lindley", role: "Senior Loan Officer · CDLP", meta: "NMLS 1367416 · Movement" },
 ];
