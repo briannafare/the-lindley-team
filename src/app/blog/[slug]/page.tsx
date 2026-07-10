@@ -26,9 +26,19 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
   if (!post) return {};
+  const canonical = `/blog/${post.slug}`;
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical },
+    openGraph: {
+      type: "article",
+      url: canonical,
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      authors: ["Bri Lindley", "David Chandler"],
+    },
   };
 }
 

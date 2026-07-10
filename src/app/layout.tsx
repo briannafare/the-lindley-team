@@ -20,10 +20,77 @@ const inter = Inter({
   display: "swap",
 });
 
+const SITE_URL = "https://thelindleyteam.com";
+const SITE_TITLE = "The Lindley Team at Movement Mortgage — David & Bri · Portland";
+const SITE_DESC =
+  "David Chandler & Bri Lindley read Portland by the neighborhood, then handle the loan that lands you there. The Lindley Team at Movement Mortgage. Licensed in OR & WA.";
+
 export const metadata: Metadata = {
-  title: "The Lindley Team — David & Bri · Portland Mortgage",
-  description:
-    "David & Bri read Portland by the neighborhood, then handle the loan that lands you there. Movement Mortgage. Licensed in OR & WA.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: "%s | The Lindley Team",
+  },
+  description: SITE_DESC,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: "The Lindley Team at Movement Mortgage",
+    title: SITE_TITLE,
+    description: SITE_DESC,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESC,
+  },
+};
+
+// Site-wide business + people structured data (LocalBusiness/MortgageBroker + Persons)
+const ORG_LD = {
+  "@context": "https://schema.org",
+  "@type": ["FinancialService", "MortgageBroker"],
+  "@id": `${SITE_URL}/#lindleyteam`,
+  name: "The Lindley Team at Movement Mortgage",
+  url: SITE_URL,
+  telephone: "+1-971-754-1771",
+  email: "brianna.lindley@movement.com",
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Movement Mortgage, LLC",
+    identifier: "NMLS #39179",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "10135 SE Sunnyside Rd, Ste 125",
+    addressLocality: "Clackamas",
+    addressRegion: "OR",
+    postalCode: "97015",
+    addressCountry: "US",
+  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Portland Metro, Oregon" },
+    { "@type": "State", name: "Oregon" },
+    { "@type": "State", name: "Washington" },
+  ],
+  sameAs: [
+    "https://www.google.com/maps/place/The+Lindley+Team,+Mortgage+Lenders/@45.4103477,-122.7485929,17z",
+  ],
+  employee: [
+    {
+      "@type": "Person",
+      name: "Bri Lindley",
+      jobTitle: "Senior Loan Officer, CDLP",
+      identifier: "NMLS #1367416",
+    },
+    {
+      "@type": "Person",
+      name: "David Chandler",
+      jobTitle: "Loan Officer",
+      identifier: "NMLS #265974",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -41,6 +108,10 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-shell text-ink font-body antialiased overflow-x-hidden p-2 sm:p-3 lg:p-4">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_LD) }}
+        />
         {/* Card frame (House of Van Schneider): the whole site lives in one rounded
             card on a neutral shell — width-capped so it never floats on huge screens. */}
         <div className="relative mx-auto w-full max-w-[1728px] min-h-[calc(100vh-2rem)] bg-paper rounded-[18px] sm:rounded-[26px] overflow-clip">
