@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact The Lindley Team | Portland Mortgage | NMLS #1367416",
@@ -104,17 +105,13 @@ export default function ContactPage() {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
               <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-                Book Time
+                Send a Message
               </p>
               <div className="max-w-[720px]">
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-6">
-                  Pick a time that works for you. These calls are low-key — no pitch, no pressure. Just an honest look at your situation.
+                  Tell us where you are — buying, refinancing, divorce lending, or just exploring. No pitch, no pressure. We&apos;ll reach out with an honest look at your situation.
                 </p>
-                {/* GHL Scheduling Widget — integrate here */}
-                <div className="border-2 border-dashed border-border rounded-2xl p-12 text-center">
-                  <p className="text-ink-light text-sm">Scheduling widget coming soon</p>
-                  <p className="text-ink-light text-xs mt-2">In the meantime, call (971) 754-1771</p>
-                </div>
+                <ContactForm />
               </div>
             </div>
           </div>

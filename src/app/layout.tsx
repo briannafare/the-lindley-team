@@ -3,6 +3,17 @@ import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
+// GHL LeadConnector chat widget is a custom element
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      "chat-widget": any;
+    }
+  }
+}
+
 // Serif display + italic swash accent (the "Museum of Art" move)
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -180,7 +191,13 @@ export default function RootLayout({
           }}
         />
 
-        {/* GHL chat widget embed — paste the <script> tag from GHL here */}
+        {/* GHL LeadConnector chat widget — location-scoped; injector above tags page context */}
+        <chat-widget location-id="pe2yBdfaVo406b3BaavZ"></chat-widget>
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
