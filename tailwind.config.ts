@@ -10,16 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         // ── Met direction palette (Afterglow) ──
-        paper: "#F5F6F1",
+        paper: "#FCFCFA",
         shell: "#E3E3DA", // neutral behind the card frame
-        bg: "#F5F6F1",
+        bg: "#FCFCFA",
         "bg-alt": "#ECEEE7",
-        cream: "#F5F6F1",
+        cream: "#FCFCFA",
         ink: "#0D0D0D",
         "ink-mid": "#55554E",
         "ink-light": "#8A8A80",
-        orange: "#FF5500", // Sanity-inspired vivid red-orange accent (was #EE3B24 — read too muddy/generic)
-        coral: "#FF5500",
+        orange: "#FF560A", // Sanity-inspired vivid red-orange accent (was #EE3B24 — read too muddy/generic)
+        coral: "#FF560A",
         blue: "#3554D9", // cobalt
         cobalt: "#3554D9",
         lime: "#DDE84B", // acid punch
