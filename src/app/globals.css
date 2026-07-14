@@ -4,11 +4,11 @@
 
 /* Accent — Sanity's vivid wide-gamut orange. sRGB fallback first, P3 where supported. */
 :root {
-  --accent: #ff2f00;
+  --accent: #f53b0c;
 }
 @supports (color: color(display-p3 1 0.333 0)) {
   :root {
-    --accent: color(display-p3 1 0.1843 0);
+    --accent: color(display-p3 0.9608 0.2314 0.0471);
   }
 }
 

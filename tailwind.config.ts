@@ -10,11 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         // ── Met direction palette (Afterglow) ──
-        paper: "#F7F7F4",
-        shell: "#EBEBE6", // neutral behind the card frame
-        bg: "#F7F7F4",
-        "bg-alt": "#EFEFEA",
-        cream: "#F7F7F4",
+        paper: "#FBFAF5",
+        shell: "#F0EFE9", // neutral behind the card frame
+        bg: "#FBFAF5",
+        "bg-alt": "#F4F3ED",
+        cream: "#FBFAF5",
         ink: "#0D0D0D",
         "ink-mid": "#55554E",
         "ink-light": "#8A8A80",

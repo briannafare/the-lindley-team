@@ -112,7 +112,7 @@ export default function ServicePageLayout({
                 sizes="400px"
                 priority
               />
-              <div className="absolute inset-0 bg-[#ff2f000d] mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[#f53b0c0d] mix-blend-multiply" />
             </div>
           </div>
         </div>
