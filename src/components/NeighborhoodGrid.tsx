@@ -13,7 +13,7 @@ const neighborhoods = [
     name: "Sellwood-Moreland",
     slug: "sellwood-moreland",
     tags: "Antique Row · Oaks Park · River views",
-    gradient: "from-[#f53b0c33] via-[#F5F1EC] to-[#FAF8F5]",
+    gradient: "from-[#ff550033] via-[#F5F1EC] to-[#FAF8F5]",
     svg: (
       <>
         {/* Bridge arches */}

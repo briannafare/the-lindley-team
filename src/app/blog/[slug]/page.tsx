@@ -61,7 +61,7 @@ const categoryLabels: Record<string, string> = {
 };
 
 const categoryColors: Record<string, string> = {
-  "divorce-lending": "bg-[#f53b0c1a] text-orange",
+  "divorce-lending": "bg-[#ff55001a] text-orange",
   "first-time-buyers": "bg-blue/10 text-blue",
   refinance: "bg-yellow text-ink",
   traditional: "bg-bg-alt text-ink-mid",
