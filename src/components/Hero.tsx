@@ -42,7 +42,7 @@ export default function Hero() {
             <em className="not-italic relative inline-block">
               <span className="font-medium italic text-orange">in</span>
               <svg className="hero-underline absolute -bottom-1 left-0 w-full" height="14" viewBox="0 0 120 14" preserveAspectRatio="none" aria-hidden>
-                <path d="M2 9 C30 2, 90 2, 118 8" stroke="#FF560A" strokeWidth="3" fill="none" strokeLinecap="round" />
+                <path d="M2 9 C30 2, 90 2, 118 8" stroke="var(--accent)" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </em>{" "}
             Portland.

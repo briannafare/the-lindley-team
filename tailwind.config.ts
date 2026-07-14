@@ -18,8 +18,8 @@ const config: Config = {
         ink: "#0D0D0D",
         "ink-mid": "#55554E",
         "ink-light": "#8A8A80",
-        orange: "#FF560A", // Sanity-inspired vivid red-orange accent (was #EE3B24 — read too muddy/generic)
-        coral: "#FF560A",
+        orange: "var(--accent)", // Sanity's vivid P3 orange (with sRGB fallback in globals.css)
+        coral: "var(--accent)",
         blue: "#3554D9", // cobalt
         cobalt: "#3554D9",
         lime: "#DDE84B", // acid punch

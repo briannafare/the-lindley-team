@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Accent — Sanity's vivid wide-gamut orange. sRGB fallback first, P3 where supported. */
+:root {
+  --accent: #ff5500;
+}
+@supports (color: color(display-p3 1 0.333 0)) {
+  :root {
+    --accent: color(display-p3 1 0.3333 0);
+  }
+}
+
 /* Noise overlay */
 body::after {
   content: "";
