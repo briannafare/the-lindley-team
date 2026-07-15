@@ -58,18 +58,17 @@ sitting directly above their own visible title text.
 **5. Orange brand accent fails AA at small sizes on light backgrounds.**
 `#ef4434` on the paper background is 3.62:1 — passes for large text (24px+,
 or 18.66px+ bold) but fails the 4.5:1 small-text minimum. Most orange usage
-is fine (large headline accents inherit big font sizes). Three spots don't:
+is fine (large headline accents inherit big font sizes). Three spots flagged:
 - `ServicesList.tsx` — the "Most Popular" / "Specialist" tag badges, 9.6px.
-  Worst offender.
-- `MeetTheTeam.tsx` — the NMLS meta line under each headshot, 11.5px.
-- `Nav.tsx` — the active-section label, 11.5px.
+  **Fixed this pass**: switched from orange-text-on-white to filled pills —
+  black text on solid orange (5.55:1) for "Most Popular", black text on
+  solid lime (15.72:1) for "Specialist". Also doubles as the color-balance
+  fix (yellow was underrepresented site-wide next to red/cobalt).
+- `MeetTheTeam.tsx` — the NMLS meta line under each headshot, 11.5px. Still open.
+- `Nav.tsx` — the active-section label, 11.5px. Still open.
 
-Fixing this properly means either (a) darkening orange specifically for
-small text — which touches your brand accent color and needs your sign-off,
-not mine — or (b) bumping those three instances to bold + larger so they
-clear the "large text" 3:1 threshold instead. I'd lean toward (b): it's a
-smaller, more contained change and doesn't touch the accent color anywhere
-else on the site. Let me know which way you want it and I'll make the edit.
+The remaining two are the same shape of fix (bold + larger, or a filled
+chip) — flag if you want them closed out in the same pass.
 
 **6. `ContactForm.tsx` uses placeholder text as the only label** (via
 `aria-label`, no visible `<label>`). This technically satisfies WCAG 4.1.2

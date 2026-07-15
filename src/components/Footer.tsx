@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Btn from "@/components/Btn";
 
 const loanLinks = [
   { name: "Buy a home", href: "/services/purchase" },
@@ -35,9 +36,25 @@ export default function Footer() {
   return (
     <footer className="mt-[clamp(56px,7vw,110px)] bg-ink text-paper rounded-t-[3px]">
       <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px] pt-[clamp(40px,5vw,80px)] pb-10">
-        <h2 className="font-grotesk font-extrabold text-[clamp(40px,7vw,104px)] leading-[0.9] tracking-[-0.03em]">
-          Let&rsquo;s talk.
-        </h2>
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <Link
+            href="/contact#schedule"
+            className="group/talk font-grotesk font-extrabold text-[clamp(40px,7vw,104px)] leading-[0.9] tracking-[-0.03em] inline-flex items-baseline gap-3 hover:text-lime transition-colors"
+          >
+            Let&rsquo;s talk.
+            <span className="text-[0.28em] text-lime opacity-0 -translate-x-2 group-hover/talk:opacity-100 group-hover/talk:translate-x-0 transition-all" aria-hidden>
+              →
+            </span>
+          </Link>
+          <div className="flex flex-wrap items-center gap-4 pb-1.5">
+            <Btn href="/contact#schedule" variant="paper" size="lg">
+              Schedule 15 minutes
+            </Btn>
+            <a href="tel:9717541771" className="font-body text-[0.8rem] tracking-[0.05em] text-paper/70 underline decoration-paper/30 underline-offset-4 hover:text-lime hover:decoration-lime transition-colors">
+              or call 971-754-1771
+            </a>
+          </div>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 text-[0.85rem] leading-[2]">
           <FooterCol title="The team" links={teamLinks} />

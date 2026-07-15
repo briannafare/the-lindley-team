@@ -124,7 +124,13 @@ export default function ServicesList() {
                   {svc.desc}
                 </span>
                 {svc.tag && (
-                  <span className="text-[0.6rem] font-medium tracking-[0.1em] uppercase text-orange border border-orange rounded-full px-2.5 py-0.5">
+                  <span
+                    className={
+                      svc.tag === "Specialist"
+                        ? "text-[0.65rem] font-semibold tracking-[0.1em] uppercase text-ink bg-lime rounded-full px-2.5 py-0.5"
+                        : "text-[0.65rem] font-semibold tracking-[0.1em] uppercase text-ink bg-orange rounded-full px-2.5 py-0.5"
+                    }
+                  >
                     {svc.tag}
                   </span>
                 )}
