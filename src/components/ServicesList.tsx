@@ -13,7 +13,7 @@ const services = [
     num: "01", name: "Purchase", href: "/services/purchase",
     desc: "First home, forever home, or investment. Financing structured around your goals.",
     tag: "Most Popular",
-    shape: <circle cx="24" cy="24" r="22" stroke="#E26125" strokeWidth="1.5" fill="none" />,
+    shape: <circle cx="24" cy="24" r="22" stroke="#EF4434" strokeWidth="1.5" fill="none" />,
   },
   {
     num: "02", name: "Refinance", href: "/services/refinance",
@@ -24,7 +24,7 @@ const services = [
     num: "03", name: "Divorce Lending", href: "/services/divorce-lending",
     desc: "CDLP®-certified. Equity buyouts and mortgage planning through separation.",
     tag: "Specialist",
-    shape: <polygon points="24,2 46,38 2,38" stroke="#E26125" strokeWidth="1.5" fill="none" />,
+    shape: <polygon points="24,2 46,38 2,38" stroke="#EF4434" strokeWidth="1.5" fill="none" />,
   },
   {
     num: "04", name: "FHA Loans", href: "/services/fha",
@@ -34,7 +34,7 @@ const services = [
   {
     num: "05", name: "VA Loans", href: "/services/va",
     desc: "Zero down, no PMI. The benefit you earned — used right.",
-    shape: <><circle cx="24" cy="24" r="10" stroke="#E26125" strokeWidth="1.5" fill="none" /><circle cx="24" cy="24" r="22" stroke="#E26125" strokeWidth="1.5" fill="none" strokeDasharray="4 4" /></>,
+    shape: <><circle cx="24" cy="24" r="10" stroke="#EF4434" strokeWidth="1.5" fill="none" /><circle cx="24" cy="24" r="22" stroke="#EF4434" strokeWidth="1.5" fill="none" strokeDasharray="4 4" /></>,
   },
   {
     num: "06", name: "Jumbo Loans", href: "/services/jumbo",
@@ -44,7 +44,7 @@ const services = [
   {
     num: "07", name: "Cash-Out Refinance", href: "/services/cash-out",
     desc: "Turn home equity into capital. Consolidate, renovate, or invest.",
-    shape: <polygon points="24,2 44,14 44,34 24,46 4,34 4,14" stroke="#E26125" strokeWidth="1.5" fill="none" />,
+    shape: <polygon points="24,2 44,14 44,34 24,46 4,34 4,14" stroke="#EF4434" strokeWidth="1.5" fill="none" />,
   },
   {
     num: "08", name: "HELOC", href: "/services/heloc",
@@ -54,7 +54,7 @@ const services = [
   {
     num: "09", name: "Investment Property", href: "/services/investment",
     desc: "Build wealth through Portland real estate.",
-    shape: <rect x="8" y="8" width="32" height="32" stroke="#E26125" strokeWidth="1.5" fill="none" transform="rotate(45 24 24)" />,
+    shape: <rect x="8" y="8" width="32" height="32" stroke="#EF4434" strokeWidth="1.5" fill="none" transform="rotate(45 24 24)" />,
   },
   {
     num: "10", name: "Reverse Mortgage", href: "/services/reverse-mortgage",

@@ -14,7 +14,7 @@ export default function ColorBlockCTA() {
         >
           <circle cx="100" cy="100" r="96" stroke="#3554D9" strokeWidth="1" />
           <circle cx="100" cy="100" r="64" stroke="#3554D9" strokeWidth="0.75" strokeDasharray="3 5" />
-          <path d="M40 130 L100 60 L160 130" stroke="#E26125" strokeWidth="1.25" />
+          <path d="M40 130 L100 60 L160 130" stroke="#EF4434" strokeWidth="1.25" />
         </svg>
 
         <h2 className="relative font-serif font-semibold text-[clamp(38px,6vw,92px)] leading-[0.92] tracking-[-0.03em]">

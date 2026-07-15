@@ -35,9 +35,10 @@ darkens on focus, matching the pattern already used correctly in
 **3. Color contrast — two real AA failures fixed at the token level.**
 - `ink-light` (`#8A8A80`), used everywhere for captions and eyebrow labels
   at 11–14px, was 3.33:1 on the paper background — fails the 4.5:1 AA
-  minimum for small text. Darkened to `#6E6E64` (4.9:1 on paper, 4.6:1 on
-  the alt background) in `tailwind.config.ts`. Checked every usage first —
-  it's only ever used on light backgrounds, no dark-section conflicts.
+  minimum for small text. Darkened in `tailwind.config.ts`; after the
+  Met-palette cool-down it's `#6B6D62` (4.85:1 on paper, 4.51:1 on the alt
+  background). Checked every usage first — it's only ever used on light
+  backgrounds, no dark-section conflicts.
 - `silver` (`#BDBCBD`) is correctly tuned for its dark-background usages
   (10.3:1 on the ink section in `FeatureDivorce.tsx`) but was also used for
   the row numbers on the services list, which sits on a light background —

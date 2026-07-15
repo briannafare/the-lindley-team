@@ -59,7 +59,7 @@ export default function CTA() {
         <circle cx="100" cy="100" r="60" stroke="#222" strokeWidth="0.5" />
       </svg>
       <svg className="absolute bottom-[15%] left-[8%] w-[150px] h-[150px] opacity-[0.05]" viewBox="0 0 150 150" fill="none">
-        <circle cx="75" cy="75" r="65" stroke="#E26125" strokeWidth="0.75" />
+        <circle cx="75" cy="75" r="65" stroke="#EF4434" strokeWidth="0.75" />
       </svg>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10">

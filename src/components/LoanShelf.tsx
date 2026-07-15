@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 // Modular loan-type grid — Met-style poster tiles: geometric line
-// illustrations (orange ⇄ cobalt), hairline grid, one-line pitches.
+// illustrations (red ⇄ cobalt), hairline grid, one-line pitches.
 const LOANS: {
   name: string;
   desc: string;
@@ -12,7 +12,7 @@ const LOANS: {
     name: "Conventional",
     desc: "The workhorse. As little as 3% down.",
     href: "/services/conventional",
-    shape: <circle cx="24" cy="24" r="20" stroke="#E26125" strokeWidth="1.5" fill="none" />,
+    shape: <circle cx="24" cy="24" r="20" stroke="#EF4434" strokeWidth="1.5" fill="none" />,
   },
   {
     name: "FHA",
@@ -29,7 +29,7 @@ const LOANS: {
     name: "VA",
     desc: "Zero down. You earned it.",
     href: "/services/va",
-    shape: <path d="M24 4 L29 18 L44 18 L32 27 L36 42 L24 33 L12 42 L16 27 L4 18 L19 18 Z" stroke="#E26125" strokeWidth="1.5" fill="none" strokeLinejoin="round" />,
+    shape: <path d="M24 4 L29 18 L44 18 L32 27 L36 42 L24 33 L12 42 L16 27 L4 18 L19 18 Z" stroke="#EF4434" strokeWidth="1.5" fill="none" strokeLinejoin="round" />,
   },
   {
     name: "Jumbo",
@@ -46,7 +46,7 @@ const LOANS: {
     name: "New construction",
     desc: "Financing that keeps up with the build.",
     href: "/services/new-construction",
-    shape: <polygon points="24,4 44,40 4,40" stroke="#E26125" strokeWidth="1.5" fill="none" strokeLinejoin="round" />,
+    shape: <polygon points="24,4 44,40 4,40" stroke="#EF4434" strokeWidth="1.5" fill="none" strokeLinejoin="round" />,
   },
   {
     name: "Bank statement",
@@ -63,7 +63,7 @@ const LOANS: {
     name: "Investment & DSCR",
     desc: "The property qualifies — not your W-2.",
     href: "/services/dscr",
-    shape: <rect x="9" y="9" width="30" height="30" stroke="#E26125" strokeWidth="1.5" fill="none" transform="rotate(45 24 24)" />,
+    shape: <rect x="9" y="9" width="30" height="30" stroke="#EF4434" strokeWidth="1.5" fill="none" transform="rotate(45 24 24)" />,
   },
   {
     name: "HELOC & cash-out",
@@ -72,7 +72,7 @@ const LOANS: {
     shape: (
       <>
         <ellipse cx="24" cy="24" rx="20" ry="12" stroke="#3554D9" strokeWidth="1.5" fill="none" />
-        <line x1="24" y1="12" x2="24" y2="36" stroke="#E26125" strokeWidth="1.5" />
+        <line x1="24" y1="12" x2="24" y2="36" stroke="#EF4434" strokeWidth="1.5" />
       </>
     ),
   },

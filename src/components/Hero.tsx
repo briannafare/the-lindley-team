@@ -7,11 +7,13 @@ import gsap from "gsap";
 import Btn from "@/components/Btn";
 import { GOOGLE_REVIEWS } from "@/lib/links";
 
-// Editorial B&W ⇄ color on hover (Met treatment) — accents alternate orange/cobalt.
+// Met treatment: mixed photo styles — one B&W (⇄ color on hover) among color,
+// not a blanket filter. Accents alternate red/cobalt. Staggered like the Met's
+// numbered artifact row.
 const CARDS = [
-  { no: "01", accent: "text-orange", title: "Buy a home", desc: "First one, next one, or the one you'll actually stay in.", href: "/services/purchase", img: "/img/home-buy.webp" },
-  { no: "02", accent: "text-cobalt", title: "Refinance", desc: "Lower the payment, pull cash out, drop the PMI.", href: "/services/refinance", img: "/img/home-refinance.webp" },
-  { no: "03", accent: "text-orange", title: "Divorce lending", desc: "Untangle the house from the divorce — cleanly.", href: "/services/divorce-lending", img: "/img/home-divorce.webp" },
+  { no: "01", accent: "text-orange", bw: false, offset: "", title: "Buy a home", desc: "First one, next one, or the one you'll actually stay in.", href: "/services/purchase", img: "/img/home-buy.webp" },
+  { no: "02", accent: "text-cobalt", bw: true, offset: "md:mt-10", title: "Refinance", desc: "Lower the payment, pull cash out, drop the PMI.", href: "/services/refinance", img: "/img/home-refinance.webp" },
+  { no: "03", accent: "text-orange", bw: false, offset: "md:mt-4", title: "Divorce lending", desc: "Untangle the house from the divorce — cleanly.", href: "/services/divorce-lending", img: "/img/home-divorce.webp" },
 ];
 
 export default function Hero() {
@@ -45,26 +47,37 @@ export default function Hero() {
           Est. by Tammi Lindley
         </p>
 
-        {/* HERO HEADLINE — serif + italic swash accent */}
-        <h1 className="font-serif font-semibold text-ink text-[clamp(52px,10.5vw,168px)] leading-[0.95] tracking-[-0.03em] pb-[0.06em]">
-          <span className="hero-line block">
-            Nobody{" "}
-            <em className="not-italic relative inline-block">
-              <span className="font-medium italic text-orange">dreams</span>
-              <svg className="hero-underline absolute -bottom-1 left-0 w-full" height="14" viewBox="0 0 120 14" preserveAspectRatio="none" aria-hidden>
-                <path d="M2 9 C30 2, 90 2, 118 8" stroke="var(--accent)" strokeWidth="3" fill="none" strokeLinecap="round" />
-              </svg>
-            </em>
-          </span>
-          <span className="hero-line block">about a mortgage.</span>
-        </h1>
+        {/* HERO HEADLINE — serif + italic swash accent. The linocut print breaks
+            into the headline's whitespace on lg+, Met-style (art object over type). */}
+        <div className="relative">
+          <h1 className="font-serif font-semibold text-ink text-[clamp(52px,10.5vw,168px)] leading-[0.95] tracking-[-0.03em] pb-[0.06em]">
+            <span className="hero-line block">
+              Nobody{" "}
+              <em className="not-italic relative inline-block">
+                <span className="font-medium italic text-orange">dreams</span>
+                <svg className="hero-underline absolute -bottom-1 left-0 w-full" height="14" viewBox="0 0 120 14" preserveAspectRatio="none" aria-hidden>
+                  <path d="M2 9 C30 2, 90 2, 118 8" stroke="var(--accent)" strokeWidth="3" fill="none" strokeLinecap="round" />
+                </svg>
+              </em>
+            </span>
+            <span className="hero-line block">about a mortgage.</span>
+          </h1>
+          {/* Portland linocut — block print, black + red sun. Classic, doesn't compete. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/img/illustration-portland.webp"
+            alt=""
+            className="hero-meta hidden lg:block absolute right-0 bottom-[8%] w-[clamp(150px,14vw,225px)] rotate-[2.5deg] border border-border shadow-[0_18px_44px_rgba(0,0,0,0.12)]"
+          />
+        </div>
 
         {/* META ROW */}
         <div className="hero-meta grid md:grid-cols-2 gap-8 md:gap-10 mt-[clamp(30px,4vw,58px)] items-start">
           <p className="max-w-[48ch] text-[clamp(15px,1.15vw,17px)] text-ink-mid leading-relaxed">
-            So we made ours the easy part. We&rsquo;ve spent 35 years on Portland mortgages, so almost
-            nothing surprises us anymore. Show us what you&rsquo;re working with and you&rsquo;ll know exactly
-            where you stand — usually the same day you ask.
+            So we made ours the easy part. We&rsquo;ve spent{" "}
+            <strong className="font-semibold text-orange">35 years</strong> on Portland mortgages,
+            so almost nothing surprises us anymore. Show us what you&rsquo;re working with and
+            you&rsquo;ll know exactly where you stand — usually the same day you ask.
           </p>
           <div className="md:justify-self-end md:text-right font-body text-[0.7rem] tracking-[0.14em] uppercase text-ink-light leading-[2]">
             <a
@@ -92,17 +105,17 @@ export default function Hero() {
           </Btn>
         </div>
 
-        {/* NUMBERED LOAN CARDS — B&W ⇄ color on hover */}
+        {/* NUMBERED LOAN CARDS — staggered rhythm, one B&W (⇄ color) in the mix */}
         <div className="grid md:grid-cols-3 gap-[clamp(14px,1.6vw,24px)] mt-[clamp(30px,4vw,56px)]">
           {CARDS.map((c) => (
-            <Link key={c.no} href={c.href} className="hero-card group block">
+            <Link key={c.no} href={c.href} className={`hero-card group block ${c.offset}`}>
               <div className={`font-grotesk font-extrabold text-[13px] ${c.accent}`}>{c.no}</div>
-              <div className="aspect-[4/3] my-2.5 overflow-hidden bg-[#e6e6df]">
+              <div className="aspect-[4/3] my-2.5 overflow-hidden bg-[#E8E9E3]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={c.img}
                   alt=""
-                  className="img-bw w-full h-full object-cover transition-all duration-500 group-hover:scale-[1.04]"
+                  className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-[1.04] ${c.bw ? "img-bw" : ""}`}
                 />
               </div>
               <h3 className="font-grotesk font-bold text-[clamp(17px,1.5vw,21px)] tracking-[-0.01em] group-hover:text-orange transition-colors">

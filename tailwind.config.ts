@@ -9,26 +9,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // ── Met direction palette (Afterglow) ──
-        paper: "#FBFAF5",
-        shell: "#F0EFE9", // neutral behind the card frame
-        bg: "#FBFAF5",
-        "bg-alt": "#F4F3ED",
-        cream: "#FBFAF5",
-        ink: "#0D0D0D",
-        "ink-mid": "#55554E",
-        // Darkened from #8A8A80 for WCAG AA contrast (4.5:1) on paper/bg-alt at small
-        // caption sizes — see docs/accessibility-review.md.
-        "ink-light": "#6E6E64",
-        orange: "var(--accent)", // Sanity's vivid P3 orange (with sRGB fallback in globals.css)
+        // ── Met direction palette (Afterglow Studio case study, verified) ──
+        // Base neutrals match the source exactly: cool gallery off-white #F5F6F1
+        // + true black — NOT warm cream. See behance.net/gallery/238108979.
+        paper: "#F5F6F1",
+        shell: "#E9EAE5", // neutral behind the card frame
+        bg: "#F5F6F1",
+        "bg-alt": "#EDEEE8",
+        cream: "#F5F6F1",
+        ink: "#000000",
+        "ink-mid": "#53554E",
+        // Meets WCAG AA (4.5:1) on paper/bg-alt at caption sizes —
+        // see docs/accessibility-review.md.
+        "ink-light": "#6B6D62",
+        orange: "var(--accent)", // THE RED — #EF4434 (P3-boosted). Never use literal orange.
         coral: "var(--accent)",
-        blue: "#3554D9", // cobalt
+        blue: "#3554D9", // cobalt (source-exact)
         cobalt: "#3554D9",
-        lime: "#DDE84B", // acid punch
+        lime: "#DDE84B", // acid punch — small marks/dividers
+        limewash: "#F0F4A6", // pale lime surface for panels (Met type-specimen bg)
         yellow: "#DDE84B", // alias (legacy usages)
-        border: "#DCDCD4",
+        border: "#D9DBD3",
         silver: "#BDBCBD",
-        grey: "#818081",
+        grey: "#7F817B",
       },
       fontFamily: {
         serif: ["var(--font-fraunces)", "Georgia", "serif"],

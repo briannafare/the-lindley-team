@@ -62,13 +62,15 @@ export default function FeatureDivorce() {
               How divorce lending works
             </Btn>
             <div className="flex flex-wrap gap-x-10 gap-y-5 mt-10 pt-6 border-t border-paper/10">
+              {/* Met membership-band glyphs: ★ ◆ ✣ index marks */}
               {[
-                { val: "CDLP®", label: "One of few in Oregon" },
-                { val: "Buyout · Refi · Next", label: "The whole knot, handled" },
-                { val: "OR / WA", label: "Licensed" },
+                { glyph: "★", val: "CDLP®", label: "One of few in Oregon" },
+                { glyph: "◆", val: "Buyout · Refi · Next", label: "The whole knot, handled" },
+                { glyph: "✣", val: "OR / WA", label: "Licensed" },
               ].map((s, i) => (
                 <div key={i}>
                   <div className="font-grotesk font-bold text-[clamp(17px,1.5vw,22px)] text-lime">
+                    <span className="text-[0.6em] align-middle mr-1.5" aria-hidden>{s.glyph}</span>
                     {s.val}
                   </div>
                   <div className="text-[0.68rem] uppercase tracking-[0.1em] text-paper/60 mt-1">
@@ -87,14 +89,14 @@ export default function FeatureDivorce() {
               fill="none"
             >
               {/* Concentric circles */}
-              <circle cx="210" cy="160" r="140" stroke="#E26125" strokeWidth="0.75" opacity="0.15" strokeDasharray="880" />
+              <circle cx="210" cy="160" r="140" stroke="#EF4434" strokeWidth="0.75" opacity="0.15" strokeDasharray="880" />
               <circle cx="210" cy="160" r="100" stroke="#3554D9" strokeWidth="0.5" opacity="0.1" strokeDasharray="630" />
-              <circle cx="210" cy="160" r="60" stroke="#E26125" strokeWidth="0.5" opacity="0.08" strokeDasharray="377" />
+              <circle cx="210" cy="160" r="60" stroke="#EF4434" strokeWidth="0.5" opacity="0.08" strokeDasharray="377" />
 
               {/* Abstract house/roof */}
               <path
                 d="M130 200 L210 100 L290 200"
-                stroke="#E26125"
+                stroke="#EF4434"
                 strokeWidth="1.5"
                 strokeDasharray="300"
               />

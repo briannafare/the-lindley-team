@@ -40,7 +40,7 @@ export default function Testimonial() {
   );
 
   return (
-    <section ref={sectionRef} className="mt-[clamp(56px,8vw,120px)] py-[clamp(48px,6vw,96px)] bg-bg-alt text-center">
+    <section ref={sectionRef} className="mt-[clamp(56px,8vw,120px)] py-[clamp(48px,6vw,96px)] bg-limewash text-center">
       <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px]">
         <p className="text-[0.7rem] font-semibold tracking-[0.2em] uppercase text-ink-mid mb-10 flex items-center justify-center gap-2">
           <span className="text-orange" aria-hidden>★★★★★</span> From the 156
@@ -59,7 +59,7 @@ export default function Testimonial() {
             />
           </svg>
 
-          <div className="w-10 h-1 bg-lime mx-auto mb-8" />
+          <div className="w-10 h-1 bg-cobalt mx-auto mb-8" />
           <blockquote className="testimonial-quote font-serif text-[clamp(1.35rem,2.4vw,2rem)] leading-[1.45] tracking-[-0.01em] text-ink mb-7">
             &ldquo;This team is amazing. We went through the entire process of buying
             our home with ease. I really appreciated how honest and upfront they
