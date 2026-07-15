@@ -77,22 +77,32 @@ export default function Hero() {
               </Btn>
             </div>
 
-            <div className="hero-proof flex flex-wrap items-center gap-x-6 gap-y-2 mt-6 pt-5 border-t border-border">
-              <p className="font-body text-[13px] text-ink-light">
-                Fifteen minutes. No credit pull to start. Just clarity.
+            <div className="hero-proof mt-6 pt-5 border-t border-border">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+                <p className="font-body text-[13px] text-ink-light">
+                  Fifteen minutes. No credit pull to start. Just clarity.
+                </p>
+                <a
+                  href={GOOGLE_REVIEWS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/rev flex items-center gap-2 font-body text-[13px] text-ink-light hover:text-orange transition-colors"
+                >
+                  <span className="text-orange" aria-hidden>★★★★★</span>
+                  <span className="font-semibold text-ink group-hover/rev:text-orange transition-colors">156</span>
+                  <span className="underline decoration-ink/20 underline-offset-4 group-hover/rev:decoration-orange transition-colors">
+                    five-star reviews
+                  </span>
+                </a>
+              </div>
+              {/* NMLS licensing — required visible above the fold. */}
+              <p className="font-body text-[11px] tracking-[0.03em] text-ink-light mt-3 leading-relaxed">
+                Movement Mortgage NMLS <span className="text-ink-mid font-medium">#39179</span>
+                <span className="mx-1.5 text-border" aria-hidden>·</span>
+                David Chandler NMLS <span className="text-ink-mid font-medium">#265974</span>
+                <span className="mx-1.5 text-border" aria-hidden>·</span>
+                Brianna Lindley NMLS <span className="text-ink-mid font-medium">#1367416</span>
               </p>
-              <a
-                href={GOOGLE_REVIEWS}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/rev flex items-center gap-2 font-body text-[13px] text-ink-light hover:text-orange transition-colors"
-              >
-                <span className="text-orange" aria-hidden>★★★★★</span>
-                <span className="font-semibold text-ink group-hover/rev:text-orange transition-colors">156</span>
-                <span className="underline decoration-ink/20 underline-offset-4 group-hover/rev:decoration-orange transition-colors">
-                  five-star reviews
-                </span>
-              </a>
             </div>
           </div>
 
