@@ -97,18 +97,22 @@ export default function Hero() {
           </div>
 
           {/* IMAGE COLUMN — contained card, flat lime panel offset behind it
-              (Met poster-collage move), no overlaid text or gradient. */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-lime translate-x-3 translate-y-3 lg:translate-x-4 lg:translate-y-4" aria-hidden />
-            <div className="hero-visual relative overflow-hidden aspect-[16/11]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/img/hero-moving-day.webp"
-                alt="Overhead shot of someone lying arms-out on the bare floor of their new living room on move-in day, boxes and a pizza box beside them"
-                className="w-full h-full object-cover object-[58%_40%] saturate-[0.96] contrast-[1.02]"
-              />
+              (Met poster-collage move), no overlaid text or gradient. The
+              lime frame is scoped to its own wrapper so it sits behind just
+              the photo, not the caption below it. */}
+          <div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-lime translate-x-3 translate-y-3 lg:translate-x-4 lg:translate-y-4" aria-hidden />
+              <div className="hero-visual relative overflow-hidden aspect-[16/11]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/img/hero-moving-day.webp"
+                  alt="Overhead shot of someone lying arms-out on the bare floor of their new living room on move-in day, boxes and a pizza box beside them"
+                  className="w-full h-full object-cover object-[58%_40%] saturate-[0.96] contrast-[1.02]"
+                />
+              </div>
             </div>
-            <p className="hero-caption relative font-serif italic text-ink text-[clamp(14px,1.3vw,17px)] leading-snug mt-4">
+            <p className="hero-caption font-serif italic text-ink text-[clamp(14px,1.3vw,17px)] leading-snug mt-4">
               &ldquo;This is the part you dream about.&rdquo;
               <span className="block not-italic font-body text-[11px] font-semibold tracking-[0.14em] uppercase text-ink-light mt-1.5">
                 We handle the other part. — David &amp; Bri

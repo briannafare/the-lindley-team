@@ -32,7 +32,9 @@ const VARIANTS = {
 
 const SIZES = {
   sm: { pill: "text-[0.6rem] tracking-[0.1em] gap-2 pl-3.5 pr-1 py-1", chip: "w-6 h-6" },
-  md: { pill: "text-[0.72rem] tracking-[0.1em] gap-2.5 pl-5 pr-1.5 py-1.5", chip: "w-8 h-8" },
+  // md grows again at lg+ — used for the nav's primary CTA so it reads
+  // bigger on desktop without crowding the mobile nav row.
+  md: { pill: "text-[0.72rem] tracking-[0.1em] gap-2.5 pl-5 pr-1.5 py-1.5 lg:text-[0.8rem] lg:gap-3 lg:pl-6 lg:pr-2 lg:py-2", chip: "w-8 h-8 lg:w-9 lg:h-9" },
   lg: { pill: "text-[0.8rem] tracking-[0.1em] gap-3 pl-6 pr-2 py-2", chip: "w-9 h-9" },
 } as const;
 

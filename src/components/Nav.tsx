@@ -103,13 +103,13 @@ export default function Nav() {
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="z-50 shrink-0 flex items-center gap-2.5 sm:gap-3 group/brand"
+          className="z-50 shrink-0 flex items-center gap-2.5 sm:gap-3 lg:gap-3.5 group/brand"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/brand/logo-icon.png"
             alt=""
-            className="w-9 h-9 sm:w-11 sm:h-11 rounded-full mix-blend-multiply transition-transform duration-500 group-hover/brand:rotate-[12deg]"
+            className="w-9 h-9 sm:w-11 sm:h-11 lg:w-14 lg:h-14 rounded-full mix-blend-multiply transition-transform duration-500 group-hover/brand:rotate-[12deg]"
           />
           <span className="flex flex-col leading-none">
             <span className="font-serif font-semibold text-[clamp(18px,1.8vw,25px)] tracking-[-0.02em] text-ink whitespace-nowrap">
@@ -152,8 +152,10 @@ export default function Nav() {
             Contact
           </Link>
 
-          {/* Apply now — primary money CTA. */}
-          <Btn href="/apply" onClick={() => setOpen(false)} variant="primary" size="sm">
+          {/* Apply now — primary money CTA. Bigger pill at lg+, and the
+              md base bump also lifts the mobile tap target closer to the
+              44px touch guideline. */}
+          <Btn href="/apply" onClick={() => setOpen(false)} variant="primary" size="md">
             Apply now
           </Btn>
         </div>
