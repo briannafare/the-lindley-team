@@ -10,13 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         // ── Met direction palette (Afterglow Studio case study, verified) ──
-        // Base neutrals match the source exactly: cool gallery off-white #F5F6F1
-        // + true black — NOT warm cream. See behance.net/gallery/238108979.
-        paper: "#F5F6F1",
-        shell: "#E9EAE5", // neutral behind the card frame
-        bg: "#F5F6F1",
-        "bg-alt": "#EDEEE8",
-        cream: "#F5F6F1",
+        // White-first: the Met concept floats white panels over #F5F6F1. Paper is
+        // near-white for real breathing room; the cool off-white becomes the alt
+        // surface. True black ink. See behance.net/gallery/238108979.
+        paper: "#FEFEFD",
+        shell: "#EDEEE9", // neutral behind the card frame
+        bg: "#FEFEFD",
+        "bg-alt": "#F5F6F1",
+        cream: "#FEFEFD",
         ink: "#000000",
         "ink-mid": "#53554E",
         // Meets WCAG AA (4.5:1) on paper/bg-alt at caption sizes —
@@ -29,7 +30,7 @@ const config: Config = {
         lime: "#DDE84B", // acid punch — small marks/dividers
         limewash: "#F0F4A6", // pale lime surface for panels (Met type-specimen bg)
         yellow: "#DDE84B", // alias (legacy usages)
-        border: "#D9DBD3",
+        border: "#E0E2DB",
         silver: "#BDBCBD",
         grey: "#7F817B",
       },
