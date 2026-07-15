@@ -12,6 +12,8 @@ const GROUPS = [
       { name: "Buy a home", href: "/services/purchase" },
       { name: "Refinance", href: "/services/refinance" },
       { name: "Divorce lending", href: "/services/divorce-lending" },
+      { name: "First-time buyers", href: "/first-time-buyer" },
+      { name: "All loan types", href: "/services" },
     ],
   },
   {

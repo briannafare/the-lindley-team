@@ -1,14 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import type { LeadFormType } from "@/lib/ghl";
 
-// Posts leads to a GHL inbound webhook (set NEXT_PUBLIC_GHL_CONTACT_WEBHOOK in Vercel env).
-// Mirrors the calculator's webhook pattern. Falls back to phone if delivery fails.
-const WEBHOOK = process.env.NEXT_PUBLIC_GHL_CONTACT_WEBHOOK || "";
+// Posts leads through the /api/lead route, which fans out to the correct GHL
+// workflow webhook based on formType (see src/app/api/lead/route.ts and
+// .env.local.example). Falls back to phone if delivery fails.
 
 type State = "idle" | "sending" | "sent" | "error";
 
-export default function ContactForm() {
+export default function ContactForm({
+  source = "thelindleyteam.com/contact",
+  formType = "contact",
+}: {
+  source?: string;
+  formType?: LeadFormType;
+}) {
   const [state, setState] = useState<State>("idle");
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
 
@@ -20,11 +27,10 @@ export default function ContactForm() {
     if (!form.name || (!form.email && !form.phone)) return;
     setState("sending");
     try {
-      if (!WEBHOOK) throw new Error("no webhook configured");
-      const res = await fetch(WEBHOOK, {
+      const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, source: "thelindleyteam.com/contact" }),
+        body: JSON.stringify({ ...form, formType, source }),
       });
       if (!res.ok) throw new Error(String(res.status));
       setState("sent");

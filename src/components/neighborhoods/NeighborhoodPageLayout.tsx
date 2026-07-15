@@ -36,7 +36,7 @@ const SERVICE_NAMES: Record<string, string> = {
 
 const SCHOOL_TYPE_COLORS: Record<string, string> = {
   elementary: "bg-blue/10 text-blue",
-  middle: "bg-[#ff55001a] text-orange",
+  middle: "bg-[#ef44341a] text-orange",
   high: "bg-ink/10 text-ink",
   private: "bg-yellow text-ink",
   charter: "bg-green-100 text-green-700",

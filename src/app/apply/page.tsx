@@ -61,7 +61,7 @@ export default function ApplyPage() {
                 Movement Mortgage · NMLS #265974
               </p>
               <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-4 flex-1">
-                Licensed in AZ, CA, GA, OR &amp; WA. Purchases, refinances, and everything in between.
+                Licensed in AZ, GA, OR &amp; WA. Purchases, refinances, and everything in between.
               </p>
               <a
                 href={DAVID_APPLY}

@@ -10,9 +10,9 @@ const GOOGLE_REVIEWS =
   "https://www.google.com/maps/place/The+Lindley+Team,+Mortgage+Lenders/@45.4103477,-122.7485929,17z/data=!3m1!5s0x549572d77efb8a81:0x63fc125e4a98e43b!4m8!3m7!1s0x54950af83cdf8bdd:0x40316c8aabaf0907!8m2!3d45.4103477!4d-122.7485929!9m1!1b1!16s%2Fg%2F1tj45m7v";
 
 const CARDS = [
-  { no: "01", title: "Buy a home", desc: "First place, forever place, or the next one.", href: "/services/purchase", img: "/img/home-buy.webp", bw: false },
-  { no: "02", title: "Refinance", desc: "Lower the rate, pull equity, restructure.", href: "/services/refinance", img: "/img/home-refinance.webp", bw: false },
-  { no: "03", title: "Divorce lending", desc: "Certified planning through a hard transition.", href: "/services/divorce-lending", img: "/img/home-divorce.webp", bw: false },
+  { no: "01", title: "Buy a home", desc: "First one, next one, or the one you'll actually stay in.", href: "/services/purchase", img: "/img/home-buy.webp", bw: false },
+  { no: "02", title: "Refinance", desc: "Lower the payment, pull cash out, drop the PMI.", href: "/services/refinance", img: "/img/home-refinance.webp", bw: false },
+  { no: "03", title: "Divorce lending", desc: "Untangle the house from the divorce — cleanly.", href: "/services/divorce-lending", img: "/img/home-divorce.webp", bw: false },
 ];
 
 export default function Hero() {
@@ -37,23 +37,24 @@ export default function Hero() {
       <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px]">
         {/* HERO HEADLINE — serif + italic swash accent */}
         <h1 className="font-serif font-semibold text-ink text-[clamp(52px,10.5vw,168px)] leading-[0.95] tracking-[-0.03em] pb-[0.06em]">
-          <span className="hero-line block">Find your place</span>
           <span className="hero-line block">
+            Nobody{" "}
             <em className="not-italic relative inline-block">
-              <span className="font-medium italic text-orange">in</span>
+              <span className="font-medium italic text-orange">dreams</span>
               <svg className="hero-underline absolute -bottom-1 left-0 w-full" height="14" viewBox="0 0 120 14" preserveAspectRatio="none" aria-hidden>
                 <path d="M2 9 C30 2, 90 2, 118 8" stroke="var(--accent)" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
-            </em>{" "}
-            Portland.
+            </em>
           </span>
+          <span className="hero-line block">about a mortgage.</span>
         </h1>
 
         {/* META ROW */}
         <div className="hero-meta grid md:grid-cols-2 gap-8 md:gap-10 mt-[clamp(30px,4vw,58px)] items-start">
-          <p className="max-w-[44ch] text-[clamp(15px,1.15vw,17px)] text-ink-mid leading-relaxed">
-            David &amp; Bri read Portland by the neighborhood — the flood years, the school lines,
-            the streets that hold their value — then handle the loan that lands you there.
+          <p className="max-w-[48ch] text-[clamp(15px,1.15vw,17px)] text-ink-mid leading-relaxed">
+            So we made ours the easy part. We&rsquo;ve spent 35 years on Portland mortgages, so almost
+            nothing surprises us anymore. Show us what you&rsquo;re working with and you&rsquo;ll know exactly
+            where you stand — usually the same day you ask.
           </p>
           <div className="md:justify-self-end md:text-right font-body text-[0.7rem] tracking-[0.14em] uppercase text-ink-light leading-[2]">
             <a
@@ -62,8 +63,8 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="block text-ink hover:text-orange transition-colors"
             >
-              5.0 &#9733; · 156 Google reviews
-              <span className="block text-ink-light">for The Lindley Team</span>
+              156 five-star reviews
+              <span className="block text-ink-light">Go read them.</span>
             </a>
             <span className="block mt-1.5">The Lindley Team at Movement Mortgage</span>
             <span className="block">NMLS 1367416 / 265974</span>
@@ -77,13 +78,13 @@ export default function Hero() {
             href="/apply"
             className="inline-flex items-center font-body text-[0.8rem] font-bold tracking-[0.08em] uppercase bg-orange text-paper px-6 py-3.5 rounded-[2px] hover:brightness-110 transition"
           >
-            Apply now
+            See what you qualify for
           </Link>
           <Link
             href="/contact#schedule"
             className="inline-flex items-center gap-2 font-body text-[0.8rem] font-semibold tracking-[0.08em] uppercase border border-ink text-ink px-6 py-3.5 rounded-[2px] hover:bg-ink hover:text-paper transition-colors"
           >
-            Schedule a call <span className="text-orange">→</span>
+            Ask us anything <span className="text-orange">→</span>
           </Link>
         </div>
 

@@ -3,18 +3,18 @@ import Link from "next/link";
 const STEPS = [
   {
     no: "01",
-    title: "Talk",
-    body: "A real conversation about where you are, where you want to go, and the numbers behind it. No pressure, no jargon.",
+    title: "We talk numbers",
+    body: "Yours, real ones — before you fall for a house you can't swing. No credit pull to start, and no pitch.",
   },
   {
     no: "02",
-    title: "Get pre-approved",
-    body: "We pull it together fast so you can shop your neighborhood with an offer sellers take seriously.",
+    title: "You get pre-approved",
+    body: "The kind of letter a Portland seller doesn't squint at. Usually inside 24–48 hours.",
   },
   {
     no: "03",
-    title: "Get the keys",
-    body: "We handle the paperwork, coordinate the moving parts, and stay in it with you all the way to the closing table.",
+    title: "We close on time",
+    body: "When we said we would. We handle the paperwork and the moving parts; you handle picking a couch.",
   },
 ];
 
@@ -24,7 +24,7 @@ export default function HowItWorks() {
       {/* section header */}
       <div className="flex items-baseline gap-3.5 border-t border-ink pt-4">
         <h2 className="font-grotesk font-extrabold text-[clamp(26px,3.4vw,46px)] leading-none tracking-[-0.02em]">
-          How it works
+          How it actually goes
         </h2>
         <sup className="font-body text-[12px] text-ink-light font-medium">(03)</sup>
         <span className="flex-1" />

@@ -4,9 +4,9 @@ import ServicesList from "@/components/ServicesList";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Mortgage Services Portland | The Lindley Team",
+  title: "Mortgage Loan Types Portland | Conventional, FHA, VA, Jumbo & More | The Lindley Team",
   description:
-    "Full range of mortgage services in Portland, Oregon. Purchase, refinance, FHA, VA, jumbo, HELOC, cash-out, investment, divorce lending, and reverse mortgages. NMLS #1367416.",
+    "Every mortgage type in Portland, Oregon: conventional, FHA, VA, USDA, jumbo, new construction, bank statement (self-employed), DSCR investor, HELOC, cash-out, reverse, divorce lending, and down payment assistance. NMLS #1367416 / #265974.",
 };
 
 export default function ServicesPage() {
@@ -24,9 +24,10 @@ export default function ServicesPage() {
               One team.
             </span>
           </h1>
-          <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[600px]">
-            A full range of loan programs through Movement Mortgage — we find the
-            one that fits your life, not the other way around.
+          <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[640px]">
+            Conventional, FHA, VA, USDA, jumbo, new construction, self-employed, investor —
+            if it finances a home, it&apos;s on this shelf. Tell us your situation and we&apos;ll point
+            you to the loan that fits. Usually it&apos;s the simplest one that does the job.
           </p>
         </div>
       </section>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import BookingCalendar from "@/components/BookingCalendar";
 
 export const metadata: Metadata = {
   title: "Contact The Lindley Team | Portland Mortgage | NMLS #1367416",
@@ -29,7 +30,7 @@ export default function ContactPage() {
               <span className="font-script font-normal text-orange text-[0.9em]">Talk</span>
             </h1>
             <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[540px]">
-              No sales pressure. Tell us where you are and we&apos;ll tell you honestly what makes sense.
+              Tell us what&apos;s going on. You&apos;ll get a straight answer about what makes sense — even when the answer is &ldquo;not yet.&rdquo;
             </p>
           </div>
         </section>
@@ -105,13 +106,19 @@ export default function ContactPage() {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
               <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-                Send a Message
+                Grab a Time
               </p>
               <div className="max-w-[720px]">
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-6">
-                  Tell us where you are — buying, refinancing, divorce lending, or just exploring. No pitch, no pressure. We&apos;ll reach out with an honest look at your situation.
+                  Tell us where you are — buying, refinancing, divorce lending, or just exploring. No pitch, no pressure. Book a time below, or send a message and we&apos;ll reach out with an honest look at your situation.
                 </p>
-                <ContactForm />
+                {/* Self-serve booking — pulls the right GHL calendar per request type.
+                    Set NEXT_PUBLIC_GHL_CAL_SCHEDULE (see .env.local.example). */}
+                <BookingCalendar type="schedule" />
+                <p className="text-[0.72rem] font-bold tracking-[0.16em] uppercase text-ink-light mt-10 mb-4">
+                  Or send a message
+                </p>
+                <ContactForm formType="schedule" />
               </div>
             </div>
           </div>
@@ -134,7 +141,7 @@ export default function ContactPage() {
                   {
                     step: "02",
                     title: "We review your options",
-                    desc: "Bri will run your numbers and show you the full picture — including options you might not have known existed.",
+                    desc: "David or Bri runs your numbers and shows you the full picture — including options you might not have known existed.",
                   },
                   {
                     step: "03",

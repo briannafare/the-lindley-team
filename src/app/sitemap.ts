@@ -4,7 +4,7 @@ import { blogPosts } from "@/lib/blog-posts";
 
 const BASE = "https://thelindleyteam.com";
 
-// 10 mortgage service pages (individual static routes under /services/*)
+// Mortgage service pages (individual static routes under /services/*)
 const SERVICE_SLUGS = [
   "purchase",
   "refinance",
@@ -16,6 +16,12 @@ const SERVICE_SLUGS = [
   "cash-out",
   "investment",
   "reverse-mortgage",
+  "conventional",
+  "usda",
+  "new-construction",
+  "bank-statement",
+  "dscr",
+  "down-payment-assistance",
 ];
 
 const STATIC = [
@@ -27,6 +33,7 @@ const STATIC = [
   { path: "/calculator", priority: 0.6, freq: "monthly" as const },
   { path: "/contact", priority: 0.8, freq: "monthly" as const },
   { path: "/apply", priority: 0.8, freq: "monthly" as const },
+  { path: "/first-time-buyer", priority: 0.9, freq: "monthly" as const },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

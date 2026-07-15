@@ -3,8 +3,20 @@ import Link from "next/link";
 const loanLinks = [
   { name: "Buy a home", href: "/services/purchase" },
   { name: "Refinance", href: "/services/refinance" },
+  { name: "Conventional", href: "/services/conventional" },
+  { name: "FHA", href: "/services/fha" },
+  { name: "VA", href: "/services/va" },
+  { name: "USDA", href: "/services/usda" },
+  { name: "Jumbo", href: "/services/jumbo" },
+  { name: "New construction", href: "/services/new-construction" },
+  { name: "Self-employed", href: "/services/bank-statement" },
+  { name: "DSCR / investor", href: "/services/dscr" },
+  { name: "HELOC", href: "/services/heloc" },
+  { name: "Cash-out refi", href: "/services/cash-out" },
+  { name: "Reverse mortgage", href: "/services/reverse-mortgage" },
   { name: "Divorce lending", href: "/services/divorce-lending" },
-  { name: "Calculator", href: "/calculator" },
+  { name: "Down payment help", href: "/services/down-payment-assistance" },
+  { name: "All loan types", href: "/services" },
 ];
 
 const exploreLinks = [

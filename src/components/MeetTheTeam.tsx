@@ -33,9 +33,9 @@ export default function MeetTheTeam() {
       </div>
 
       {/* statement */}
-      <p className="font-serif text-[clamp(30px,5vw,72px)] leading-[1.0] tracking-[-0.02em] max-w-[18ch] mt-10">
-        You&rsquo;re not buying a rate. You&rsquo;re choosing{" "}
-        <em className="italic text-orange">who&rsquo;s in it with you.</em>
+      <p className="font-serif text-[clamp(30px,5vw,72px)] leading-[1.0] tracking-[-0.02em] max-w-[20ch] mt-10">
+        You get David or Bri. That&rsquo;s the{" "}
+        <em className="italic text-orange">whole org chart.</em>
       </p>
 
       {/* two real faces, clean */}
@@ -80,10 +80,12 @@ export default function MeetTheTeam() {
         ))}
       </div>
 
-      <p className="text-[clamp(15px,1.2vw,18px)] text-ink-mid leading-relaxed max-w-[52ch] mt-10">
-        Two lenders, one team at Movement Mortgage. We read Portland by the neighborhood,
-        tell you the truth about buying here, and stay in it with you from the first call
-        to the keys.
+      <p className="text-[clamp(15px,1.2vw,18px)] text-ink-mid leading-relaxed max-w-[56ch] mt-10">
+        David brings 20-plus years and can handle the tricky stuff when it comes up — jumbo, new
+        construction, the self-employed borrower whose tax returns need a bank statement to tell the
+        real story. Bri grew up in these neighborhoods and carries the CDLP, which earns its keep when
+        a mortgage is caught in the middle of a divorce. Between them: 35 years, and a client list
+        that&rsquo;s mostly referrals.
       </p>
     </section>
   );
