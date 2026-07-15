@@ -201,9 +201,9 @@ export default async function BlogPostPage({
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
 
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Article
-              </p>
+              </h2>
 
               <div
                 className="max-w-[720px] [&>p]:mb-6 [&>p]:text-ink-mid [&>p]:leading-[1.8] [&>p]:text-[1.05rem] [&>h2]:font-display [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-10 [&>h2]:mb-4 [&>ul]:mb-6 [&>ul>li]:mb-2 [&>ul>li]:text-ink-mid [&>ul>li]:leading-relaxed [&>ol]:mb-6 [&>ol>li]:mb-2"
@@ -251,9 +251,9 @@ export default async function BlogPostPage({
             <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
               <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
 
-                <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+                <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                   Related
-                </p>
+                </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {related.map((relPost) => {

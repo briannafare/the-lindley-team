@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Btn from "@/components/Btn";
 
 export const metadata: Metadata = {
   title: "Apply — David & Bri · The Lindley Team",
@@ -34,28 +35,9 @@ export default function ApplyPage() {
           </p>
 
           <div className="grid md:grid-cols-2 gap-[clamp(14px,1.6vw,24px)] mt-12">
-            {/* Bri (primary / default) */}
-            <div className="border border-border rounded-[3px] p-8 flex flex-col">
-              <div className="font-grotesk font-extrabold text-[13px] text-orange">01</div>
-              <h2 className="font-grotesk font-bold text-[clamp(22px,2.4vw,30px)] mt-2">Bri Lindley</h2>
-              <p className="font-body text-[0.72rem] tracking-[0.1em] uppercase text-ink-light mt-1">
-                Movement Mortgage · NMLS #1367416
-              </p>
-              <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-4 flex-1">
-                Senior Loan Officer &amp; Certified Divorce Lending Professional. Licensed in OR &amp; WA.
-              </p>
-              <a
-                href={BRI_APPLY || "/contact"}
-                {...(BRI_APPLY ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="mt-6 inline-block bg-ink text-paper font-grotesk font-bold text-[15px] px-6 py-3.5 rounded-[2px] text-center hover:bg-orange transition-colors"
-              >
-                {BRI_APPLY ? "Apply with Bri" : "Start with Bri"}
-              </a>
-            </div>
-
             {/* David */}
             <div className="border border-border rounded-[3px] p-8 flex flex-col">
-              <div className="font-grotesk font-extrabold text-[13px] text-orange">02</div>
+              <div className="font-grotesk font-extrabold text-[13px] text-orange">01</div>
               <h2 className="font-grotesk font-bold text-[clamp(22px,2.4vw,30px)] mt-2">David Chandler</h2>
               <p className="font-body text-[0.72rem] tracking-[0.1em] uppercase text-ink-light mt-1">
                 Movement Mortgage · NMLS #265974
@@ -63,14 +45,28 @@ export default function ApplyPage() {
               <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-4 flex-1">
                 Licensed in AZ, GA, OR &amp; WA. Purchases, refinances, and everything in between.
               </p>
-              <a
-                href={DAVID_APPLY}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-block border border-ink text-ink font-grotesk font-bold text-[15px] px-6 py-3.5 rounded-[2px] text-center hover:bg-ink hover:text-paper transition-colors"
-              >
-                Apply with David
-              </a>
+              <div className="mt-6">
+                <Btn href={DAVID_APPLY} external variant="primary" size="lg">
+                  Apply with David
+                </Btn>
+              </div>
+            </div>
+
+            {/* Bri */}
+            <div className="border border-border rounded-[3px] p-8 flex flex-col">
+              <div className="font-grotesk font-extrabold text-[13px] text-orange">02</div>
+              <h2 className="font-grotesk font-bold text-[clamp(22px,2.4vw,30px)] mt-2">Bri Lindley</h2>
+              <p className="font-body text-[0.72rem] tracking-[0.1em] uppercase text-ink-light mt-1">
+                Movement Mortgage · NMLS #1367416
+              </p>
+              <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-4 flex-1">
+                Senior Loan Officer &amp; Certified Divorce Lending Professional. Licensed in OR &amp; WA.
+              </p>
+              <div className="mt-6">
+                <Btn href={BRI_APPLY || "/contact"} external={Boolean(BRI_APPLY)} variant="outline" size="lg">
+                  {BRI_APPLY ? "Apply with Bri" : "Start with Bri"}
+                </Btn>
+              </div>
             </div>
           </div>
 

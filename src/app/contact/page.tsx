@@ -39,9 +39,9 @@ export default function ContactPage() {
         <section className="py-16 border-t border-border">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Reach Us
-              </p>
+              </h2>
               <div className="max-w-[720px]">
                 {[
                   {
@@ -105,9 +105,9 @@ export default function ContactPage() {
         <section id="schedule" className="py-16 border-t border-border bg-bg-alt scroll-mt-24">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Grab a Time
-              </p>
+              </h2>
               <div className="max-w-[720px]">
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-6">
                   Tell us where you are — buying, refinancing, divorce lending, or just exploring. No pitch, no pressure. Book a time below, or send a message and we&apos;ll reach out with an honest look at your situation.
@@ -128,9 +128,9 @@ export default function ContactPage() {
         <section className="py-16 border-t border-border">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 The Process
-              </p>
+              </h2>
               <div className="max-w-[720px] grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
@@ -172,9 +172,9 @@ export default function ContactPage() {
         <section className="py-16 border-t border-border bg-bg-alt">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Apply Now
-              </p>
+              </h2>
               <div className="max-w-[720px]">
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-6">
                   Ready to move forward? Start your application online — it takes about 15 minutes and you can save your progress.
@@ -197,9 +197,9 @@ export default function ContactPage() {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
               <div>
-                <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-3">
+                <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-3">
                   Our Office
-                </p>
+                </h2>
                 <p className="text-[0.88rem] text-ink-mid font-normal leading-relaxed">
                   10135 SE Sunnyside Rd<br />
                   Ste 125<br />

@@ -34,6 +34,7 @@ const STATIC = [
   { path: "/contact", priority: 0.8, freq: "monthly" as const },
   { path: "/apply", priority: 0.8, freq: "monthly" as const },
   { path: "/first-time-buyer", priority: 0.9, freq: "monthly" as const },
+  { path: "/privacy", priority: 0.3, freq: "yearly" as const },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

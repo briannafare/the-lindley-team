@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Btn from "@/components/Btn";
 
 // Clustered nav (House of Van Schneider pattern): grouped columns, small
 // uppercase labels, ✣-marked items. Every SEO page stays reachable.
@@ -61,7 +62,7 @@ function Cluster({
               onClick={onNavigate}
               className={`block ${item} text-ink hover:text-orange transition-colors`}
             >
-              <span className="text-orange text-[0.72em] mr-1.5 align-middle">✣</span>
+              <span className="text-cobalt text-[0.72em] mr-1.5 align-middle">✣</span>
               {l.name}
             </Link>
           ))}
@@ -97,17 +98,26 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px] flex items-start justify-between gap-3 sm:gap-6">
-        {/* Brand — full logo (desktop) / icon (mobile); multiply drops the white bg on paper.
-            "at Movement Mortgage" line keeps the compliant lockup in the header. */}
-        <Link href="/" onClick={() => setOpen(false)} className="z-50 shrink-0 leading-none flex flex-col">
+        {/* Brand lockup — The Lindley Team leads (it carries the SEO + reviews);
+            David & Bri + Movement ride underneath as the support line. */}
+        <Link
+          href="/"
+          onClick={() => setOpen(false)}
+          className="z-50 shrink-0 flex items-center gap-2.5 sm:gap-3 group/brand"
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/brand/logo-full.png"
-            alt="David & Bri — The Lindley Team"
-            className="h-11 sm:h-16 lg:h-[72px] w-auto object-contain mix-blend-multiply -ml-1"
+            src="/brand/logo-icon.png"
+            alt=""
+            className="w-9 h-9 sm:w-11 sm:h-11 rounded-full mix-blend-multiply transition-transform duration-500 group-hover/brand:rotate-[12deg]"
           />
-          <span className="mt-0.5 sm:mt-1 block font-body text-[0.5rem] sm:text-[0.56rem] tracking-[0.14em] sm:tracking-[0.2em] uppercase text-ink-light">
-            at Movement Mortgage
+          <span className="flex flex-col leading-none">
+            <span className="font-serif font-semibold text-[clamp(18px,1.8vw,25px)] tracking-[-0.02em] text-ink whitespace-nowrap">
+              The Lindley Team
+            </span>
+            <span className="mt-[5px] font-body text-[0.5rem] sm:text-[0.58rem] font-semibold tracking-[0.16em] sm:tracking-[0.2em] uppercase text-ink-mid whitespace-nowrap">
+              David &amp; Bri <span className="text-cobalt">·</span> Movement Mortgage
+            </span>
           </span>
         </Link>
 
@@ -133,23 +143,19 @@ export default function Nav() {
             </span>
           </button>
 
-          {/* Contact — outline button (secondary). Visible at every breakpoint. */}
+          {/* Contact — quiet text link (secondary). */}
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="inline-flex items-center font-body text-[0.6rem] sm:text-[0.7rem] font-bold tracking-[0.06em] sm:tracking-[0.1em] uppercase border border-ink text-ink px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-[2px] hover:bg-ink hover:text-paper transition-colors"
+            className="hidden sm:inline-flex items-center font-body text-[0.68rem] font-semibold tracking-[0.1em] uppercase text-ink border-b border-ink/30 pb-0.5 hover:text-orange hover:border-orange transition-colors"
           >
             Contact
           </Link>
 
-          {/* Apply now — primary money CTA, filled. */}
-          <Link
-            href="/apply"
-            onClick={() => setOpen(false)}
-            className="inline-flex items-center font-body text-[0.64rem] sm:text-[0.7rem] font-bold tracking-[0.08em] sm:tracking-[0.1em] uppercase bg-orange text-paper px-3 py-2 sm:px-4 sm:py-2.5 rounded-[2px] hover:brightness-110 transition"
-          >
+          {/* Apply now — primary money CTA. */}
+          <Btn href="/apply" onClick={() => setOpen(false)} variant="primary" size="sm">
             Apply now
-          </Link>
+          </Btn>
         </div>
       </div>
 
@@ -158,28 +164,16 @@ export default function Nav() {
         <div className="fixed inset-0 top-0 bg-paper pt-28 px-6 lg:px-[54px] z-40 overflow-y-auto">
           <div className="max-w-[1440px] mx-auto">
             <Cluster size="lg" onNavigate={() => setOpen(false)} />
-            <div className="mt-12 flex flex-wrap gap-3">
-              <Link
-                href="/apply"
-                onClick={() => setOpen(false)}
-                className="inline-flex items-center font-body text-[15px] font-bold tracking-[0.08em] uppercase bg-orange text-paper px-6 py-4 rounded-[2px]"
-              >
+            <div className="mt-12 flex flex-wrap items-center gap-3">
+              <Btn href="/apply" onClick={() => setOpen(false)} variant="accent" size="lg">
                 Apply now
-              </Link>
-              <Link
-                href="/contact#schedule"
-                onClick={() => setOpen(false)}
-                className="inline-flex items-center font-body text-[15px] font-semibold tracking-[0.08em] uppercase border border-ink text-ink px-6 py-4 rounded-[2px] hover:bg-ink hover:text-paper transition-colors"
-              >
+              </Btn>
+              <Btn href="/contact#schedule" onClick={() => setOpen(false)} variant="outline" size="lg">
                 Schedule a call
-              </Link>
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="inline-flex items-center font-body text-[15px] font-semibold tracking-[0.08em] uppercase border border-ink text-ink px-6 py-4 rounded-[2px] hover:bg-ink hover:text-paper transition-colors"
-              >
+              </Btn>
+              <Btn href="/contact" onClick={() => setOpen(false)} variant="outline" size="lg">
                 Contact
-              </Link>
+              </Btn>
             </div>
           </div>
         </div>

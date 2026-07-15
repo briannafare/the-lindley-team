@@ -18,6 +18,7 @@ export default function ContactForm({
 }) {
   const [state, setState] = useState<State>("idle");
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [smsConsent, setSmsConsent] = useState(false);
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
@@ -30,7 +31,7 @@ export default function ContactForm({
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, formType, source }),
+        body: JSON.stringify({ ...form, formType, source, smsConsent, consentTimestamp: new Date().toISOString() }),
       });
       if (!res.ok) throw new Error(String(res.status));
       setState("sent");
@@ -68,13 +69,47 @@ export default function ContactForm({
         onChange={set("message")}
         aria-label="Message"
       />
+      <label className="flex items-start gap-2.5 text-[0.78rem] text-ink-mid leading-snug cursor-pointer">
+        <input
+          type="checkbox"
+          checked={smsConsent}
+          onChange={(e) => setSmsConsent(e.target.checked)}
+          className="mt-0.5 shrink-0"
+        />
+        <span>
+          I agree to receive calls and texts from The Lindley Team at Movement Mortgage about my
+          inquiry, including by autodialer or prerecorded message. Message/data rates may apply,
+          message frequency varies, reply STOP to opt out. This isn&apos;t a condition of getting a
+          quote — you can also reach us by phone or email. See our{" "}
+          <a href="/privacy" className="underline hover:text-ink transition-colors">
+            Privacy Policy
+          </a>
+          .
+        </span>
+      </label>
       <div className="flex flex-wrap items-center gap-4">
         <button
           type="submit"
           disabled={state === "sending"}
-          className="inline-flex items-center bg-ink text-paper font-body text-[0.78rem] font-bold tracking-[0.06em] uppercase px-7 py-3.5 rounded-[2px] hover:bg-orange transition-colors disabled:opacity-60"
+          className="group/btn inline-flex items-center gap-2.5 bg-ink text-paper font-body text-[0.72rem] font-bold tracking-[0.1em] uppercase pl-6 pr-1.5 py-1.5 rounded-full hover:bg-orange transition-colors duration-300 disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
         >
           {state === "sending" ? "Sending…" : "Send message"}
+          <span
+            className="flex items-center justify-center w-8 h-8 rounded-full bg-orange text-paper group-hover/btn:bg-paper group-hover/btn:text-ink transition-colors duration-300"
+            aria-hidden
+          >
+            <svg
+              viewBox="0 0 16 16"
+              className="w-[38%] h-[38%] transition-transform duration-300 group-hover/btn:-rotate-45"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M2 8 H14 M9 3 L14 8 L9 13" />
+            </svg>
+          </span>
         </button>
         {state === "error" && (
           <span className="text-[0.85rem] text-ink-mid">

@@ -28,7 +28,7 @@ export default function ExploreNeighborhoods() {
         <h2 className="font-grotesk font-extrabold text-[clamp(26px,3.4vw,46px)] leading-none tracking-[-0.02em]">
           Explore neighborhoods
         </h2>
-        <sup className="font-body text-[12px] text-ink-light font-medium">(02)</sup>
+        <sup className="font-body text-[12px] text-cobalt font-semibold">(03)</sup>
         <span className="flex-1" />
         <Link
           href="/neighborhoods"
@@ -52,7 +52,7 @@ export default function ExploreNeighborhoods() {
               <img
                 src={CURATED[t.slug] || `https://picsum.photos/seed/lt-${t.slug}/460/620`}
                 alt={t.name}
-                className={`w-full h-full object-cover brightness-90 transition-transform duration-500 group-hover:scale-[1.05] ${!CURATED[t.slug] && t.bw ? "img-bw" : ""}`}
+                className="img-bw w-full h-full object-cover brightness-90 transition-all duration-500 group-hover:scale-[1.05]"
               />
             </div>
             <div className="flex justify-between mt-2.5 font-body text-[0.7rem] tracking-[0.12em] uppercase text-ink-light">

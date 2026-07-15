@@ -22,7 +22,7 @@ const services = [
   },
   {
     num: "03", name: "Divorce Lending", href: "/services/divorce-lending",
-    desc: "CDLP-certified. Equity buyouts and mortgage planning through separation.",
+    desc: "CDLP®-certified. Equity buyouts and mortgage planning through separation.",
     tag: "Specialist",
     shape: <polygon points="24,2 46,38 2,38" stroke="#E26125" strokeWidth="1.5" fill="none" />,
   },
@@ -113,7 +113,7 @@ export default function ServicesList() {
               href={svc.href}
               className="svc-row group grid grid-cols-[60px_1fr_auto] lg:grid-cols-[60px_1fr_50px] gap-4 items-center py-7 border-b border-border hover:pl-3 transition-all"
             >
-              <span className="font-display text-sm font-medium text-silver hidden sm:block">
+              <span className="font-display text-sm font-medium text-ink-light hidden sm:block">
                 {svc.num}
               </span>
               <div className="flex items-baseline gap-4 flex-wrap">

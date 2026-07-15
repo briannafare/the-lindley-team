@@ -1,10 +1,8 @@
 # Handoff → Claude Code (terminal): build the GHL backend + wire it to the site
-*Rev 2 — July 14, 2026. Updated for the expanded site: 16 loan-type pages, first-time-buyer landing page, current form wiring.*
+*Rev 4 — July 14, 2026. GHL sub-account is already connected in this terminal — go straight to building, no access verification needed.*
 
 Copy everything in the fenced block below into Claude Code running in the
-`~/Desktop/the-lindley-team` project. It assumes you have the GoHighLevel MCP
-(or a sub-account API key) available in that terminal. If you don't, connect it
-first — Claude Code will verify access before touching anything.
+`~/Desktop/the-lindley-team` project.
 
 ---
 
@@ -12,18 +10,15 @@ first — Claude Code will verify access before touching anything.
 You're working in the Next.js repo at ~/Desktop/the-lindley-team (The Lindley Team at
 Movement Mortgage). The WEBSITE side of GHL integration is already built and type-checks
 clean. Your job is to build the GHL (LeadConnector) backend in the Lindley Team
-sub-account and wire the real URLs back into this repo. Do NOT rewrite the website
-integration code — it already exists and defines the contract you must match.
+sub-account (location id: pe2yBdfaVo406b3BaavZ) and wire the real URLs back into this repo.
+The GHL connection is already available in this terminal — don't stop to verify it, just
+use it. Do NOT rewrite the website integration code — it already exists and defines the
+contract you must match.
 
-═══════════════════════════════════════════════════════════════════════
-0) VERIFY ACCESS FIRST — do not guess
-═══════════════════════════════════════════════════════════════════════
-- Confirm you can reach the GHL sub-account (GHL MCP tools OR REST API with the
-  sub-account/private-integration token). Sub-account (location) id: pe2yBdfaVo406b3BaavZ.
-- List existing calendars, workflows, pipelines, and tags so you don't duplicate.
-- If you can't reach GHL, STOP and tell me exactly what to connect. Don't fabricate URLs.
-- Use a TEST contact for all end-to-end tests. Never blast real email/SMS while testing.
-  Confirm with me before deleting anything.
+Before creating anything, list existing calendars, workflows, pipelines, and tags in the
+sub-account so you don't duplicate what's already there. Use a TEST contact for all
+end-to-end tests — never send real email/SMS while testing — and confirm with me before
+deleting anything.
 
 ═══════════════════════════════════════════════════════════════════════
 1) THE CONTRACT (already implemented in this repo — match it exactly)
@@ -119,7 +114,39 @@ you can map fields visually.
   read these vars. If you change one, keep the env-var names identical.
 
 ═══════════════════════════════════════════════════════════════════════
-6) TEST + REPORT
+6) COMPLIANCE — MAP Rule 24-month recordkeeping (build this, don't skip it)
+═══════════════════════════════════════════════════════════════════════
+The FTC/CFPB Mortgage Acts and Practices Advertising Rule (Reg N, 12 CFR 1014)
+requires anyone advertising mortgage credit terms to keep a copy of every commercial
+communication — website copy, emails, SMS, chat scripts, nurture sequences, any ad
+creative — for 24 months from the LAST date it was used, along with enough
+information to show who received it and when it ran. This isn't optional and it
+isn't satisfied by "the workflow still exists in GHL" — GHL templates get edited
+in place, which destroys the historical record the rule requires. Build an actual
+archive, not a note:
+  a. Create a GHL folder/tag system (e.g. a dedicated "Compliance Archive" saved-
+     replies or documents folder, whatever your plan supports) and export a dated
+     snapshot (PDF or saved copy) of every live email/SMS template and workflow
+     message body at the moment you finish this build. File name pattern:
+     `YYYY-MM-DD_workflow-name_template-name.pdf`.
+  b. Any time a template, nurture email, SMS body, or the chat widget's scripted
+     responses is edited going forward, export a new dated snapshot BEFORE saving
+     the change, so the prior version is preserved — don't overwrite history.
+  c. Do the same for the live website copy: keep a dated export (screenshot or
+     saved HTML) of each page whenever its marketing/rate/offer language changes
+     materially. A monthly full-site snapshot is a reasonable default if per-edit
+     tracking isn't practical.
+  d. Store snapshots somewhere durable outside GHL itself if possible (Google
+     Drive folder, S3 bucket, whatever Bri already uses) — GHL account changes or
+     template deletions shouldn't be able to erase the record.
+  e. Set a recurring reminder (calendar or GHL task) to check at least once a year
+     that nothing required is missing from the archive. You do NOT need to purge
+     anything past 24 months — over-retention isn't a violation, under-retention is.
+Report back where you set this up and how it's triggered (manual export step vs.
+automated), so Bri knows the actual process going forward.
+
+═══════════════════════════════════════════════════════════════════════
+7) TEST + REPORT
 ═══════════════════════════════════════════════════════════════════════
 - `npm run dev` (this project serves on port 3001), submit the /contact form and the
   /first-time-buyer form with a TEST contact; confirm each lands in GHL with the right
@@ -133,8 +160,9 @@ you can map fields visually.
   guide, divorce, apply-click) so every workflow has a captured sample payload.
 - Delete/archive the TEST contacts when done.
 - Report back: every calendarId + webhook URL created, the env keys set (local + Vercel),
-  and anything I still need to click in GHL (calendar owner connections, notification
-  recipients, nurture copy).
+  where the compliance archive from step 6 lives and how it's triggered, and anything
+  I still need to click in GHL (calendar owner connections, notification recipients,
+  nurture copy).
 ```
 
 ---

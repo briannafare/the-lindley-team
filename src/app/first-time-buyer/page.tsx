@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import Btn from "@/components/Btn";
 
 export const metadata: Metadata = {
   title: "First-Time Home Buyer in Portland | The Lindley Team at Movement Mortgage",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const REASSURANCE = [
   { stat: "3%", label: "Down payment on many conventional loans — less on FHA/VA" },
   { stat: "OHCS", label: "Oregon down-payment assistance we help you tap" },
-  { stat: "24–48h", label: "From application to a pre-approval letter" },
+  { stat: "24–48h", label: "To a real answer on where you stand" },
 ];
 
 const STEPS = [
@@ -25,8 +25,8 @@ const STEPS = [
   },
   {
     no: "02",
-    title: "Get pre-approved",
-    body: "We pull it together fast and hand you a pre-approval letter sellers take seriously — plus a clear monthly number so you're shopping in your real range, not guessing.",
+    title: "Get a real answer",
+    body: "We turn it around fast, and if you qualify, you get a pre-approval letter sellers take seriously — plus a clear monthly number so you're shopping in your real range, not guessing.",
   },
   {
     no: "03",
@@ -76,18 +76,12 @@ export default function FirstTimeBuyerPage() {
                 out more often than the doom content admits. Let&rsquo;s run yours. That part&rsquo;s free.
               </p>
               <div className="flex flex-wrap items-center gap-3 md:justify-end">
-                <Link
-                  href="#start"
-                  className="inline-flex items-center font-body text-[0.8rem] font-bold tracking-[0.08em] uppercase bg-orange text-paper px-6 py-3.5 rounded-[2px] hover:brightness-110 transition"
-                >
+                <Btn href="#start" variant="accent" size="lg">
                   Start with a free call
-                </Link>
-                <Link
-                  href="/apply"
-                  className="inline-flex items-center gap-2 font-body text-[0.8rem] font-semibold tracking-[0.08em] uppercase border border-ink text-ink px-6 py-3.5 rounded-[2px] hover:bg-ink hover:text-paper transition-colors"
-                >
-                  Apply now <span className="text-orange">→</span>
-                </Link>
+                </Btn>
+                <Btn href="/apply" variant="outline" size="lg">
+                  Apply now
+                </Btn>
               </div>
             </div>
           </div>
@@ -181,14 +175,11 @@ export default function FirstTimeBuyerPage() {
               Find out what you can <em className="italic text-orange">actually afford.</em>
             </h2>
             <div className="md:justify-self-end md:text-right">
-              <Link
-                href="#start"
-                className="inline-block bg-orange text-paper font-grotesk font-bold text-[16px] px-7 py-4 rounded-[2px] hover:brightness-110 transition"
-              >
+              <Btn href="#start" variant="paper" size="lg">
                 Start with a free call
-              </Link>
+              </Btn>
               <span className="block mt-4 font-body text-[13px] tracking-[0.06em] uppercase text-paper/60">
-                David &amp; Bri · Movement Mortgage · OR &amp; WA
+                The Lindley Team · David &amp; Bri · OR &amp; WA
               </span>
             </div>
           </div>

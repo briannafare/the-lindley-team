@@ -17,7 +17,9 @@ const config: Config = {
         cream: "#FBFAF5",
         ink: "#0D0D0D",
         "ink-mid": "#55554E",
-        "ink-light": "#8A8A80",
+        // Darkened from #8A8A80 for WCAG AA contrast (4.5:1) on paper/bg-alt at small
+        // caption sizes — see docs/accessibility-review.md.
+        "ink-light": "#6E6E64",
         orange: "var(--accent)", // Sanity's vivid P3 orange (with sRGB fallback in globals.css)
         coral: "var(--accent)",
         blue: "#3554D9", // cobalt

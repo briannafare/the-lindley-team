@@ -8,8 +8,8 @@ const STEPS = [
   },
   {
     no: "02",
-    title: "You get pre-approved",
-    body: "The kind of letter a Portland seller doesn't squint at. Usually inside 24–48 hours.",
+    title: "You get a real answer",
+    body: "Usually inside 24–48 hours. If you qualify, it's the kind of pre-approval letter a Portland seller doesn't squint at.",
   },
   {
     no: "03",
@@ -26,7 +26,7 @@ export default function HowItWorks() {
         <h2 className="font-grotesk font-extrabold text-[clamp(26px,3.4vw,46px)] leading-none tracking-[-0.02em]">
           How it actually goes
         </h2>
-        <sup className="font-body text-[12px] text-ink-light font-medium">(03)</sup>
+        <sup className="font-body text-[12px] text-cobalt font-semibold">(04)</sup>
         <span className="flex-1" />
         <Link
           href="/apply"
@@ -39,7 +39,7 @@ export default function HowItWorks() {
       <div className="grid md:grid-cols-3 gap-[clamp(20px,3vw,48px)] mt-12">
         {STEPS.map((s, i) => (
           <div key={s.no} className={i > 0 ? "md:pl-[clamp(20px,3vw,48px)] md:border-l border-border" : ""}>
-            <div className="font-grotesk font-extrabold text-[clamp(40px,5vw,72px)] leading-none text-orange">
+            <div className={`font-grotesk font-extrabold text-[clamp(40px,5vw,72px)] leading-none ${i === 1 ? "text-cobalt" : "text-orange"}`}>
               {s.no}
             </div>
             <h3 className="font-serif text-[clamp(24px,2.6vw,38px)] leading-none tracking-[-0.01em] mt-5">

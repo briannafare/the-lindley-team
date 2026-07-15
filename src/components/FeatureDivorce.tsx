@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Btn from "@/components/Btn";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,41 +41,37 @@ export default function FeatureDivorce() {
   );
 
   return (
-    <section ref={sectionRef} className="py-32 bg-ink text-white overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <section ref={sectionRef} className="mt-[clamp(56px,8vw,120px)] py-[clamp(56px,7vw,110px)] bg-ink text-paper overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="divorce-text">
-            <p className="text-[0.68rem] font-medium tracking-[0.2em] uppercase text-silver mb-2">
-              Specialty
+            <p className="text-[0.7rem] font-semibold tracking-[0.2em] uppercase text-paper/60 mb-4 flex items-center gap-2">
+              <span className="text-lime" aria-hidden>✣</span> The specialty · CDLP&reg;
             </p>
-            <h2 className="font-display text-[clamp(2.2rem,4vw,3.2rem)] font-light leading-tight mb-5">
-              Divorce doesn&apos;t have to mean losing{" "}
-              <span className="font-script font-normal text-orange text-[1.15em]">
-                your home
-              </span>
+            <h2 className="font-serif font-semibold text-[clamp(32px,4.6vw,64px)] leading-[0.98] tracking-[-0.02em] mb-6">
+              The house doesn&rsquo;t have to be a{" "}
+              <em className="italic font-medium text-orange">casualty.</em>
             </h2>
-            <p className="text-[0.95rem] leading-relaxed text-silver font-light mb-8">
-              As a Certified Divorce Lending Professional, Bri works with
-              divorcing spouses, attorneys, and mediators to structure mortgage
-              solutions that protect both parties.
+            <p className="text-[clamp(15px,1.15vw,17px)] leading-relaxed text-paper/75 mb-9 max-w-[46ch]">
+              When a divorce has a mortgage caught in the middle, Bri is the one attorneys
+              call. She&rsquo;s a Certified Divorce Lending Professional (CDLP&reg;) — one of the few
+              in Oregon — and she works the whole knot: the buyout, the refinance, and a
+              clear read on what each of you can afford next.
             </p>
-            <Link
-              href="/services/divorce-lending"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-ink rounded-full text-[0.78rem] font-medium tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all"
-            >
-              Learn More <span>→</span>
-            </Link>
-            <div className="flex gap-10 mt-10 pt-6 border-t border-white/10">
+            <Btn href="/services/divorce-lending" variant="paper" size="lg">
+              How divorce lending works
+            </Btn>
+            <div className="flex flex-wrap gap-x-10 gap-y-5 mt-10 pt-6 border-t border-paper/10">
               {[
-                { val: "CDLP", label: "Certified" },
-                { val: "100+", label: "Divorce Cases" },
+                { val: "CDLP®", label: "One of few in Oregon" },
+                { val: "Buyout · Refi · Next", label: "The whole knot, handled" },
                 { val: "OR / WA", label: "Licensed" },
               ].map((s, i) => (
                 <div key={i}>
-                  <div className="font-display text-2xl font-light text-yellow">
+                  <div className="font-grotesk font-bold text-[clamp(17px,1.5vw,22px)] text-lime">
                     {s.val}
                   </div>
-                  <div className="text-[0.65rem] uppercase tracking-[0.1em] text-silver mt-0.5">
+                  <div className="text-[0.68rem] uppercase tracking-[0.1em] text-paper/60 mt-1">
                     {s.label}
                   </div>
                 </div>

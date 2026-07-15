@@ -17,7 +17,7 @@ const WEBHOOKS: Record<LeadFormType, string | undefined> = {
   neighborhood: process.env.GHL_WEBHOOK_NEIGHBORHOOD,
   guide: process.env.GHL_WEBHOOK_GUIDE,
   divorce: process.env.GHL_WEBHOOK_DIVORCE,
-  "first-time-buyer": process.env.GHL_WEBHOOK_SCHEDULE,
+  "first-time-buyer": process.env.GHL_WEBHOOK_FIRST_TIME ?? process.env.GHL_WEBHOOK_SCHEDULE,
   "apply-click": process.env.GHL_WEBHOOK_APPLY_CLICK,
 };
 

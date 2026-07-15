@@ -8,10 +8,9 @@ const PEOPLE: {
   role: string;
   meta: string;
 }[] = [
-  // David: composed shows first → fun on hover (mirrors Bri).
-  { src: "/team/david-serious.png", hover: "/team/david-fun.png", bw: false, name: "David Chandler", role: "Loan Officer", meta: "NMLS 265974 · Movement" },
-  // Bri: serious shows first → fun/messy on hover.
-  { src: "/team/bri-serious.png", hover: "/team/bri-fun.png", bw: false, name: "Bri Lindley", role: "Senior Loan Officer · CDLP", meta: "NMLS 1367416 · Movement" },
+  // Met treatment: composed B&W first → warm/fun color on hover.
+  { src: "/team/david-serious.png", hover: "/team/david-fun.png", bw: true, name: "David Chandler", role: "Loan Officer", meta: "NMLS 265974 · Movement" },
+  { src: "/team/bri-serious.png", hover: "/team/bri-fun.png", bw: true, name: "Bri Lindley", role: "Senior Loan Officer · CDLP®", meta: "NMLS 1367416 · Movement" },
 ];
 
 export default function MeetTheTeam() {
@@ -22,7 +21,7 @@ export default function MeetTheTeam() {
         <h2 className="font-grotesk font-extrabold text-[clamp(26px,3.4vw,46px)] leading-none tracking-[-0.02em]">
           Meet David &amp; Bri
         </h2>
-        <sup className="font-body text-[12px] text-ink-light font-medium">(01)</sup>
+        <sup className="font-body text-[12px] text-cobalt font-semibold">(01)</sup>
         <span className="flex-1" />
         <Link
           href="/about"
@@ -83,9 +82,9 @@ export default function MeetTheTeam() {
       <p className="text-[clamp(15px,1.2vw,18px)] text-ink-mid leading-relaxed max-w-[56ch] mt-10">
         David brings 20-plus years and can handle the tricky stuff when it comes up — jumbo, new
         construction, the self-employed borrower whose tax returns need a bank statement to tell the
-        real story. Bri grew up in these neighborhoods and carries the CDLP, which earns its keep when
-        a mortgage is caught in the middle of a divorce. Between them: 35 years, and a client list
-        that&rsquo;s mostly referrals.
+        real story. Bri was raised in this business — her mom built The Lindley Team — and she&rsquo;s one
+        of the few CDLP&reg;-certified lenders in Oregon, the person attorneys call when a mortgage is caught in the middle
+        of a divorce. Between them: 35 years, and a client list that&rsquo;s mostly referrals.
       </p>
     </section>
   );
