@@ -40,7 +40,7 @@ export default function Testimonial() {
   );
 
   return (
-    <section ref={sectionRef} className="mt-[clamp(56px,8vw,120px)] py-[clamp(48px,6vw,96px)] bg-limewash text-center">
+    <section ref={sectionRef} className="mt-[clamp(56px,8vw,120px)] py-[clamp(48px,6vw,96px)] bg-bg-alt text-center">
       <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px]">
         <p className="text-[0.7rem] font-semibold tracking-[0.2em] uppercase text-ink-mid mb-10 flex items-center justify-center gap-2">
           <span className="text-orange" aria-hidden>★★★★★</span> From the 156

@@ -51,14 +51,15 @@ export default function Hero() {
           <span className="hero-line block">about a mortgage.</span>
         </h1>
 
-        {/* CINEMA BAND — the dream itself. Cool dusk water, pines, the red vest
-            carrying the accent. Wide, quiet, editorial. One caption, no chrome. */}
+        {/* CINEMA BAND — the dream itself. Top-down shot, first night in the
+            empty house, boxes and pizza still out, one red-sock accent.
+            Wide, quiet, editorial. One caption, no chrome. */}
         <div className="hero-cinema relative mt-[clamp(24px,3.5vw,52px)] overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/team/vision-place.jpg"
-            alt="Paddling a canoe across still water at dusk, evergreens on the far shore"
-            className="w-full h-[clamp(300px,52vw,620px)] object-cover object-[50%_42%] saturate-[0.94] contrast-[1.03]"
+            src="/img/hero-moving-day.webp"
+            alt="Overhead shot of someone lying arms-out on the bare floor of their new living room on move-in day, boxes and a pizza box beside them"
+            className="w-full h-[clamp(300px,52vw,620px)] object-cover object-[62%_45%] saturate-[0.96] contrast-[1.02]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent" aria-hidden />
           <p className="hero-caption absolute left-[clamp(16px,2.5vw,36px)] bottom-[clamp(14px,2vw,28px)] font-serif italic text-paper text-[clamp(17px,1.9vw,27px)] leading-snug max-w-[26ch] [text-shadow:0_1px_18px_rgba(0,0,0,0.35)]">
