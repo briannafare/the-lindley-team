@@ -103,20 +103,37 @@ export default function Nav() {
         <Link
           href="/"
           onClick={() => setOpen(false)}
-          className="z-50 shrink-0 flex items-center gap-2.5 sm:gap-3 lg:gap-3.5 group/brand"
+          className="z-50 shrink-0 flex items-center gap-2.5 sm:gap-3.5 lg:gap-4 group/brand"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/brand/logo-icon.png"
             alt=""
-            className="w-9 h-9 sm:w-11 sm:h-11 lg:w-14 lg:h-14 rounded-full mix-blend-multiply transition-transform duration-500 group-hover/brand:rotate-[12deg]"
+            className="w-10 h-10 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full mix-blend-multiply transition-transform duration-500 group-hover/brand:rotate-[12deg]"
           />
           <span className="flex flex-col leading-none">
-            <span className="font-serif font-semibold text-[clamp(18px,1.8vw,25px)] tracking-[-0.02em] text-ink whitespace-nowrap">
+            <span className="font-serif font-semibold text-[clamp(19px,2vw,28px)] tracking-[-0.02em] text-ink whitespace-nowrap">
               The Lindley Team
             </span>
-            <span className="mt-[5px] font-body text-[0.5rem] sm:text-[0.58rem] font-semibold tracking-[0.16em] sm:tracking-[0.2em] uppercase text-ink-mid whitespace-nowrap">
-              David &amp; Bri <span className="text-cobalt">·</span> Movement Mortgage
+            {/* "David & Bri" mini-lockup — script ampersand + lime highlight
+                chip, recreating the reference logo's signature as crisp
+                live type instead of the noisy source raster. */}
+            <span className="mt-[6px] flex items-baseline flex-wrap gap-x-1.5 gap-y-0.5">
+              <span className="flex items-baseline whitespace-nowrap">
+                <span className="font-serif font-bold text-ink text-[clamp(12px,1.1vw,15px)] tracking-[-0.01em]">
+                  David
+                </span>
+                <span className="font-serif italic text-orange text-[clamp(16px,1.5vw,20px)] leading-[0] mx-[1px]" aria-hidden>
+                  &amp;
+                </span>
+                <span className="relative font-serif font-bold text-ink text-[clamp(12px,1.1vw,15px)] tracking-[-0.01em] px-[3px]">
+                  <span className="absolute inset-0 bg-lime -z-10" aria-hidden />
+                  Bri
+                </span>
+              </span>
+              <span className="font-body text-[0.5rem] sm:text-[0.58rem] font-semibold tracking-[0.16em] sm:tracking-[0.2em] uppercase text-ink-mid whitespace-nowrap">
+                <span className="text-cobalt">·</span> Movement Mortgage
+              </span>
             </span>
           </span>
         </Link>

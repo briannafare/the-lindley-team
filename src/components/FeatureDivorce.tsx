@@ -88,7 +88,7 @@ export default function FeatureDivorce() {
             <div className="relative overflow-hidden bg-ink/40">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/team/bri-serious.png"
+                src="/team/bri-editorial.webp"
                 alt="Bri Lindley, Certified Divorce Lending Professional"
                 className="img-bw w-full aspect-[4/5] object-cover object-top"
               />
