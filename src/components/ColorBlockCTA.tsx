@@ -3,7 +3,7 @@ import Btn from "@/components/Btn";
 
 export default function ColorBlockCTA() {
   return (
-    <section className="max-w-[1440px] mx-auto px-5 lg:px-[54px] mt-[clamp(64px,9vw,130px)]">
+    <section className="max-w-[1440px] mx-auto px-5 lg:px-[54px] mt-[clamp(84px,10vw,158px)]">
       <div className="relative bg-ink text-paper rounded-[3px] px-[clamp(28px,5vw,80px)] py-[clamp(40px,6vw,96px)] grid md:grid-cols-[1.3fr_1fr] gap-8 md:gap-10 md:items-end overflow-hidden">
         {/* Cobalt line-art echo of the Afterglow illustration language */}
         <svg
@@ -22,17 +22,14 @@ export default function ColorBlockCTA() {
         </h2>
         <div className="relative md:justify-self-end md:text-right">
           <Btn href="/contact#schedule" variant="paper" size="lg">
-            Book 15 minutes
+            Talk through your options
           </Btn>
           <Link
             href="/apply"
-            className="block mt-4 font-body text-[13px] tracking-[0.06em] uppercase text-paper/60 hover:text-orange transition-colors"
+            className="block mt-6 font-body text-[15px] text-paper/70 hover:text-orange transition-colors"
           >
-            or — see what you qualify for →
+            Already know what you want? Apply now →
           </Link>
-          <span className="block mt-6 font-body text-[11px] tracking-[0.14em] uppercase text-paper/40">
-            The Lindley Team · thelindleyteam.com
-          </span>
         </div>
       </div>
     </section>

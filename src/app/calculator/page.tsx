@@ -58,17 +58,17 @@ export default function CalculatorPage() {
     <>
       <Nav />
 
+      <main>
+
       {/* Hero */}
-      <section className="pt-40 pb-16">
+      <section className="pt-[clamp(40px,6vw,80px)] pb-[clamp(72px,9vw,128px)]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
             Tools
           </p>
-          <h1 className="font-display text-[clamp(3rem,7vw,5rem)] font-extrabold leading-[0.95] tracking-tight mb-6">
+          <h1 className="font-serif text-[clamp(3rem,7vw,5rem)] font-semibold leading-[0.92] tracking-[-0.03em] mb-6">
             Portland Mortgage{" "}
-            <span className="font-script font-normal text-orange text-[0.85em]">
-              Calculator
-            </span>
+            <em className="italic font-medium text-orange">Calculator</em>
           </h1>
           <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[600px]">
             Estimate your monthly mortgage payment for a home in Portland, Oregon.
@@ -80,7 +80,7 @@ export default function CalculatorPage() {
       {/* Calculator */}
       <section className="pb-16">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="max-w-[700px]">
+          <div className="max-w-[1120px]">
             <MortgageCalculator variant="full" />
           </div>
         </div>
@@ -238,6 +238,8 @@ export default function CalculatorPage() {
           }),
         }}
       />
+
+      </main>
 
       <Footer />
     </>

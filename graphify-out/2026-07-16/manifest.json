@@ -1,0 +1,1062 @@
+{
+  ".claude/launch.json": {
+    "mtime": 1784142295.8071532,
+    "ast_hash": "a490f40a10f11bcfd76d8bdf81238649",
+    "semantic_hash": ""
+  },
+  ".eslintrc.json": {
+    "mtime": 1783403392.1441834,
+    "ast_hash": "5cc89077d438e3d0d0a8308ab7e06a5a",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/affordability/page.tsx": {
+    "mtime": 1773989927.0,
+    "ast_hash": "9f5f4c181af38c93cda2285fe5405a71",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/buy-now-vs-wait/page.tsx": {
+    "mtime": 1773982549.0,
+    "ast_hash": "9ee55c5f3645c83ba23e5d3898cfbcd2",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/cash-to-close/page.tsx": {
+    "mtime": 1773979249.0,
+    "ast_hash": "21c740485445e07c54ed391394203cbc",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/cltv/page.tsx": {
+    "mtime": 1773978733.0,
+    "ast_hash": "8df82624bf3ddb0a37d3df50edcd7936",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/conventional/page.tsx": {
+    "mtime": 1773966521.0,
+    "ast_hash": "3f987c25a1d17c06bf610af62024a616",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/debt-consolidation/page.tsx": {
+    "mtime": 1773989418.0,
+    "ast_hash": "9a661c40b86be5433a2a0c405dcda240",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/dscr/page.tsx": {
+    "mtime": 1773984127.0,
+    "ast_hash": "0de97b50a53e8fa965a1c2fcacf19675",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/fha/page.tsx": {
+    "mtime": 1773966886.0,
+    "ast_hash": "6ad4d0ff104f7697657822acdb61e1c6",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/house-hacking/page.tsx": {
+    "mtime": 1773987031.0,
+    "ast_hash": "41a12be80a1c3f1aaec47854910be6dc",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/investment/page.tsx": {
+    "mtime": 1773983417.0,
+    "ast_hash": "bc53cda556bd8c010d8d6318ce7311d0",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/layout.tsx": {
+    "mtime": 1784181859.254114,
+    "ast_hash": "3215f28727833ec6f9837b64ddb42038",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/move-up/page.tsx": {
+    "mtime": 1773982932.0,
+    "ast_hash": "31e4dddc8ef59e1f50cb5a1a7491dc34",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/page.tsx": {
+    "mtime": 1773903398.0,
+    "ast_hash": "d7153baf1b61ff675b351a3d72dc8c33",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/payment-strategy/page.tsx": {
+    "mtime": 1773987797.0,
+    "ast_hash": "4f0f03a27176cab12a9a848460b3224d",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/refinance/page.tsx": {
+    "mtime": 1773971702.0,
+    "ast_hash": "b2a3f368407167c39dafcc5098405d91",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/rent-vs-buy/page.tsx": {
+    "mtime": 1773981278.0,
+    "ast_hash": "42d1a02ee183a5f2f7a9f6ccef66e053",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/tax-deduction/page.tsx": {
+    "mtime": 1773979722.0,
+    "ast_hash": "4a016db188aaf174a164c62c22cc3159",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/usda/page.tsx": {
+    "mtime": 1773970537.0,
+    "ast_hash": "d4c3a187d38c05f14f7a321c07e38ac5",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/app/va/page.tsx": {
+    "mtime": 1773966523.0,
+    "ast_hash": "76ade3bd4d1e5224fbe9acdc418d8982",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/components/AmortizationChart.tsx": {
+    "mtime": 1784089898.0,
+    "ast_hash": "524cc5ecd825a1d18697e19e4dc20857",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/affordability.ts": {
+    "mtime": 1773989831.0,
+    "ast_hash": "33bed79f2a7954008a5b8bd2b2ab3d6a",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/amortization.ts": {
+    "mtime": 1773898003.0,
+    "ast_hash": "5a72e2d42a85e8f39188f148079b562a",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/buy-now-vs-wait.ts": {
+    "mtime": 1773982443.0,
+    "ast_hash": "045305ae714b17433bfd0063511502a1",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/cash-to-close.ts": {
+    "mtime": 1773979157.0,
+    "ast_hash": "9fdeda30f1f649cf3bb45ddd006881f1",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/cltv.ts": {
+    "mtime": 1773978646.0,
+    "ast_hash": "cf6a55bd7accc01d650d4a01a82f9af5",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/conventional.ts": {
+    "mtime": 1773898051.0,
+    "ast_hash": "d2a627246bf5dc3f59480129bb646200",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/debt-consolidation.ts": {
+    "mtime": 1773989323.0,
+    "ast_hash": "2164a08a77695bac988bd9e9cc4baf65",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/dscr.ts": {
+    "mtime": 1773984023.0,
+    "ast_hash": "ebe0f679bd8f01a510df9c31f7257337",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/fha.ts": {
+    "mtime": 1773966790.0,
+    "ast_hash": "fb9671f9d72ffc9ec2388b749c04faeb",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/funding-fee-va.ts": {
+    "mtime": 1773965198.0,
+    "ast_hash": "8c90dbee5c47b51491aa69479a0fbb20",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/guarantee-fee-usda.ts": {
+    "mtime": 1773968950.0,
+    "ast_hash": "0561113a2129caffb9e06851f71f3a7d",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/house-hacking.ts": {
+    "mtime": 1773987038.0,
+    "ast_hash": "9a2635e45754377228ea0bb8d89c38a4",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/index.ts": {
+    "mtime": 1773989840.0,
+    "ast_hash": "2d9643336682df1e8684870b9cde8b36",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/investment-property.ts": {
+    "mtime": 1773983319.0,
+    "ast_hash": "fb0062a4a5ca1f123586ba6e2b222f63",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/mi-arch.ts": {
+    "mtime": 1773898039.0,
+    "ast_hash": "fcecdaeafd1f506ee6f7985f863a742b",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/mi-fha.ts": {
+    "mtime": 1773968201.0,
+    "ast_hash": "385550927ef2ac9933c27daff9c506d8",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/move-up.ts": {
+    "mtime": 1773982838.0,
+    "ast_hash": "1b4038c24a1c285e08ae42162e0ab469",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/payment-strategy.ts": {
+    "mtime": 1773987265.0,
+    "ast_hash": "316e2bb0f44d89f45433511cd1a60cda",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/refinance.ts": {
+    "mtime": 1773971549.0,
+    "ast_hash": "a777791d94dea40765eff5c6270812fa",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/rent-vs-buy.ts": {
+    "mtime": 1773981182.0,
+    "ast_hash": "0ecca3fa2c63032833346c61ec88f6fd",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/tax-deduction.ts": {
+    "mtime": 1773979639.0,
+    "ast_hash": "33b05de15d6c0c06d2d1b827c0b96d82",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/types.ts": {
+    "mtime": 1773897993.0,
+    "ast_hash": "ba60fa4d352e5fd66498b263bbcfaabc",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/usda.ts": {
+    "mtime": 1773968969.0,
+    "ast_hash": "40242a941115a98bc6cbd621ed491503",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/calculators/va.ts": {
+    "mtime": 1773965219.0,
+    "ast_hash": "fba79f994f9823b6b73b10ca02fed6ad",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/lib/format.ts": {
+    "mtime": 1773898061.0,
+    "ast_hash": "d587d403636d33d99c0a8ada14305081",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/next.config.mjs": {
+    "mtime": 1784090141.0,
+    "ast_hash": "21958f5752add43cc47ab0ff5172cd46",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/package.json": {
+    "mtime": 1784090015.0,
+    "ast_hash": "3baccb4541b2744b1caf4505e0f8ad93",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/postcss.config.mjs": {
+    "mtime": 1784090141.0,
+    "ast_hash": "c56b5f3c12f777a86e2513f45daab56a",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/tailwind.config.ts": {
+    "mtime": 1784181859.2288837,
+    "ast_hash": "309697f4c5d1c57c34260cdf56d0af90",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/tsconfig.json": {
+    "mtime": 1784090141.0,
+    "ast_hash": "1b472675188d3d4392b147db24ce9467",
+    "semantic_hash": ""
+  },
+  "next.config.mjs": {
+    "mtime": 1784151060.0536044,
+    "ast_hash": "c1f80386a1138d5efee22227fdf7ce52",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1784225713.7944176,
+    "ast_hash": "8c51211d2f4d85f21e184a7013b8ccbc",
+    "semantic_hash": ""
+  },
+  "postcss.config.mjs": {
+    "mtime": 1783403392.147846,
+    "ast_hash": "b7941c02b947e17ae32f67ae7e664ec8",
+    "semantic_hash": ""
+  },
+  "scripts/compliance-export.py": {
+    "mtime": 1784095624.6289241,
+    "ast_hash": "5a89b50b8275c2560c891aab5ae5e8ac",
+    "semantic_hash": ""
+  },
+  "src/app/about/page.tsx": {
+    "mtime": 1784232811.8284788,
+    "ast_hash": "a67e7486ef2ab5efe88af802494cf730",
+    "semantic_hash": ""
+  },
+  "src/app/api/lead/route.ts": {
+    "mtime": 1784097585.829043,
+    "ast_hash": "df4e9cbaf06e374afc0df6490fab0146",
+    "semantic_hash": ""
+  },
+  "src/app/apply/page.tsx": {
+    "mtime": 1784150857.4725564,
+    "ast_hash": "fe3bb09dcca0b6a334c6d58f1bfa0c60",
+    "semantic_hash": ""
+  },
+  "src/app/blog/[slug]/page.tsx": {
+    "mtime": 1784232820.228351,
+    "ast_hash": "cbe4143ede1d52497eb68317dcff28ea",
+    "semantic_hash": ""
+  },
+  "src/app/blog/page.tsx": {
+    "mtime": 1784232817.258417,
+    "ast_hash": "e1bc85a78be596d316430d6bcb337d07",
+    "semantic_hash": ""
+  },
+  "src/app/calculator/page.tsx": {
+    "mtime": 1784232800.6842136,
+    "ast_hash": "ec74fd0e12590d2e0413b5a960174ff8",
+    "semantic_hash": ""
+  },
+  "src/app/contact/page.tsx": {
+    "mtime": 1784232814.7576694,
+    "ast_hash": "83853479b7f5e3db7310868fb7362405",
+    "semantic_hash": ""
+  },
+  "src/app/first-time-buyer/page.tsx": {
+    "mtime": 1784149683.2791135,
+    "ast_hash": "02d12bfbb8ac400dbf0bfa0fd1237826",
+    "semantic_hash": ""
+  },
+  "src/app/layout.tsx": {
+    "mtime": 1784146731.9584801,
+    "ast_hash": "0a09a4350c3e208c1bc30c241b744529",
+    "semantic_hash": ""
+  },
+  "src/app/neighborhoods/[slug]/page.tsx": {
+    "mtime": 1783654696.3432121,
+    "ast_hash": "f99b38b7bbb967b57e4eda93bd5a8586",
+    "semantic_hash": ""
+  },
+  "src/app/neighborhoods/page.tsx": {
+    "mtime": 1784232822.9618685,
+    "ast_hash": "ecb45e3c07e6592021b98cb347d520c9",
+    "semantic_hash": ""
+  },
+  "src/app/page.tsx": {
+    "mtime": 1784104463.3516715,
+    "ast_hash": "13d3e9ade50f1a7620f84e90f6a51dc8",
+    "semantic_hash": ""
+  },
+  "src/app/privacy/page.tsx": {
+    "mtime": 1784088627.2276933,
+    "ast_hash": "a2b6a10ea2759cf44773459206e01f98",
+    "semantic_hash": ""
+  },
+  "src/app/robots.ts": {
+    "mtime": 1783650284.9100533,
+    "ast_hash": "eea074c3ed1ded01107acd62233ebbc1",
+    "semantic_hash": ""
+  },
+  "src/app/services/bank-statement/page.tsx": {
+    "mtime": 1784082281.1762214,
+    "ast_hash": "f65a5f7c50ec262fd83902fb26cda63c",
+    "semantic_hash": ""
+  },
+  "src/app/services/cash-out/page.tsx": {
+    "mtime": 1783403392.1514792,
+    "ast_hash": "eea38909b482df243cba6aaf1b890713",
+    "semantic_hash": ""
+  },
+  "src/app/services/conventional/page.tsx": {
+    "mtime": 1784082281.1454487,
+    "ast_hash": "96d3551fcf02bc1351ca2deca6b83f6d",
+    "semantic_hash": ""
+  },
+  "src/app/services/divorce-lending/page.tsx": {
+    "mtime": 1783403392.1516829,
+    "ast_hash": "d4e7038fa59ad0cee2f6298b0d0fa9aa",
+    "semantic_hash": ""
+  },
+  "src/app/services/down-payment-assistance/page.tsx": {
+    "mtime": 1784082281.201996,
+    "ast_hash": "1f4e94ae8557185e143abc0409f6fad5",
+    "semantic_hash": ""
+  },
+  "src/app/services/dscr/page.tsx": {
+    "mtime": 1784082281.1909337,
+    "ast_hash": "8e83bb0df776c84f9318dcd34ebc8cc2",
+    "semantic_hash": ""
+  },
+  "src/app/services/fha/page.tsx": {
+    "mtime": 1783403392.1518772,
+    "ast_hash": "c5d9ac41a69256009128b5593f2cf9df",
+    "semantic_hash": ""
+  },
+  "src/app/services/heloc/page.tsx": {
+    "mtime": 1783403392.152084,
+    "ast_hash": "6accb3ccb134f5c5b0054eb48d5954cd",
+    "semantic_hash": ""
+  },
+  "src/app/services/investment/page.tsx": {
+    "mtime": 1783403392.1522954,
+    "ast_hash": "7fe38704d19cdfb22efb5dc14875961a",
+    "semantic_hash": ""
+  },
+  "src/app/services/jumbo/page.tsx": {
+    "mtime": 1783403392.1526766,
+    "ast_hash": "009ac2eda10f36f56fa4fa56598e7f4e",
+    "semantic_hash": ""
+  },
+  "src/app/services/new-construction/page.tsx": {
+    "mtime": 1784082281.1656742,
+    "ast_hash": "d55fde83fed9f7deb0b8348903605605",
+    "semantic_hash": ""
+  },
+  "src/app/services/page.tsx": {
+    "mtime": 1784082314.840896,
+    "ast_hash": "f809fb6b3a7a39749f4544f0e603362a",
+    "semantic_hash": ""
+  },
+  "src/app/services/purchase/page.tsx": {
+    "mtime": 1784224951.7751791,
+    "ast_hash": "34c6a94dee1d3bd0c59bac43335efbc7",
+    "semantic_hash": ""
+  },
+  "src/app/services/refinance/page.tsx": {
+    "mtime": 1783403392.153246,
+    "ast_hash": "1334b129a643a934b1a3bcb0d9aca2e2",
+    "semantic_hash": ""
+  },
+  "src/app/services/reverse-mortgage/page.tsx": {
+    "mtime": 1783403392.1534858,
+    "ast_hash": "2e8d7d83c0676efaa5217c37769460aa",
+    "semantic_hash": ""
+  },
+  "src/app/services/usda/page.tsx": {
+    "mtime": 1784082281.1552877,
+    "ast_hash": "0f7cc1ed8ad72616e36c99f8f188439e",
+    "semantic_hash": ""
+  },
+  "src/app/services/va/page.tsx": {
+    "mtime": 1783403392.153694,
+    "ast_hash": "f380993da0b2079651cdac9b89f26ffc",
+    "semantic_hash": ""
+  },
+  "src/app/sitemap.ts": {
+    "mtime": 1784088646.1083102,
+    "ast_hash": "a4f70c3b32958fe90e11721709e2ad7f",
+    "semantic_hash": ""
+  },
+  "src/components/BookingCalendar.tsx": {
+    "mtime": 1784150859.3323822,
+    "ast_hash": "e3b41007a2e73f1e34b51cc62b65c692",
+    "semantic_hash": ""
+  },
+  "src/components/Btn.tsx": {
+    "mtime": 1784139380.6008954,
+    "ast_hash": "a54a79ba1518e1eb09c42115d61c69f8",
+    "semantic_hash": ""
+  },
+  "src/components/CTA.tsx": {
+    "mtime": 1784107037.8395357,
+    "ast_hash": "df1f8bbe0596e0d5fcd5d5201ebcf94f",
+    "semantic_hash": ""
+  },
+  "src/components/ColorBlockCTA.tsx": {
+    "mtime": 1784152218.2593987,
+    "ast_hash": "46fa809f02cb5ddecd902e95dd126538",
+    "semantic_hash": ""
+  },
+  "src/components/ContactForm.tsx": {
+    "mtime": 1784150858.6998818,
+    "ast_hash": "65a3396a3174008cfb9035e2781c78c4",
+    "semantic_hash": ""
+  },
+  "src/components/ExploreNeighborhoods.tsx": {
+    "mtime": 1784151493.0457823,
+    "ast_hash": "797aa157c95cd7a84609b774c616d4b3",
+    "semantic_hash": ""
+  },
+  "src/components/FeatureDivorce.tsx": {
+    "mtime": 1784151494.1551194,
+    "ast_hash": "a4cd438e75b6fa69bc0ca413172cd734",
+    "semantic_hash": ""
+  },
+  "src/components/FeatureNeighborhoods.tsx": {
+    "mtime": 1783475909.7442122,
+    "ast_hash": "de68053fb95a27039762b4ef87be3c98",
+    "semantic_hash": ""
+  },
+  "src/components/Footer.tsx": {
+    "mtime": 1784152218.785487,
+    "ast_hash": "37c25e6bc737d1be5de558861892039f",
+    "semantic_hash": ""
+  },
+  "src/components/Hero.tsx": {
+    "mtime": 1784232793.3588665,
+    "ast_hash": "1cb85707402c6e87d8d3d1b051e0eab8",
+    "semantic_hash": ""
+  },
+  "src/components/HowItWorks.tsx": {
+    "mtime": 1784151361.3016455,
+    "ast_hash": "eb262d4934adedf664787485d55eee14",
+    "semantic_hash": ""
+  },
+  "src/components/ImagePlaceholder.tsx": {
+    "mtime": 1783479183.5119202,
+    "ast_hash": "7dff0e3a8d22ff4dc839344f9cfd480c",
+    "semantic_hash": ""
+  },
+  "src/components/LoanShelf.tsx": {
+    "mtime": 1784151492.5046718,
+    "ast_hash": "108c85ecb1a177a2731ca292317e33c7",
+    "semantic_hash": ""
+  },
+  "src/components/Marquee.tsx": {
+    "mtime": 1783475909.745348,
+    "ast_hash": "076651cc42d541778f7a7d0fc42251f6",
+    "semantic_hash": ""
+  },
+  "src/components/MeetTheTeam.tsx": {
+    "mtime": 1784151491.976135,
+    "ast_hash": "d61cffea2735d78207f73454a786ee9e",
+    "semantic_hash": ""
+  },
+  "src/components/Mission.tsx": {
+    "mtime": 1783475909.7457979,
+    "ast_hash": "d3b8dac9febb0e477265413c86a91694",
+    "semantic_hash": ""
+  },
+  "src/components/Nav.tsx": {
+    "mtime": 1784148032.2648096,
+    "ast_hash": "5e34d5ee6ede677ad497cf270c4afdb1",
+    "semantic_hash": ""
+  },
+  "src/components/NeighborhoodGrid.tsx": {
+    "mtime": 1784146647.004181,
+    "ast_hash": "a24c39003cfd7b53337a280c8575b641",
+    "semantic_hash": ""
+  },
+  "src/components/Reveal.tsx": {
+    "mtime": 1783554102.916303,
+    "ast_hash": "790c4e4a45d9ff30d62f5f5e239905d5",
+    "semantic_hash": ""
+  },
+  "src/components/ReviewsMarquee.tsx": {
+    "mtime": 1784104260.2403884,
+    "ast_hash": "cbf3ec2bf67533dc04eef57a8ecdac46",
+    "semantic_hash": ""
+  },
+  "src/components/ServicesList.tsx": {
+    "mtime": 1784146646.365115,
+    "ast_hash": "4265622ebf9d22da6e27b14fc7c5f140",
+    "semantic_hash": ""
+  },
+  "src/components/Stats.tsx": {
+    "mtime": 1783475909.7474227,
+    "ast_hash": "067d695b34efac80514ff038a1f0417f",
+    "semantic_hash": ""
+  },
+  "src/components/Testimonial.tsx": {
+    "mtime": 1784151493.6074352,
+    "ast_hash": "e983014a563c25144bb7d207e4bb6981",
+    "semantic_hash": ""
+  },
+  "src/components/blog/CategoryFilter.tsx": {
+    "mtime": 1784146644.9815972,
+    "ast_hash": "dd6fe189a76a60e3d1372bc7179668de",
+    "semantic_hash": ""
+  },
+  "src/components/calculators/AmortizationChart.tsx": {
+    "mtime": 1784225645.4676955,
+    "ast_hash": "18d909f8b4484a09c892951a0a11658e",
+    "semantic_hash": ""
+  },
+  "src/components/calculators/MortgageCalculator.tsx": {
+    "mtime": 1784225858.2866244,
+    "ast_hash": "0b0ef33a3f5a93fea90ec3abc11510c8",
+    "semantic_hash": ""
+  },
+  "src/components/neighborhoods/NeighborhoodPageLayout.tsx": {
+    "mtime": 1784090874.862922,
+    "ast_hash": "e56d519bf26282f83804b176878b3f37",
+    "semantic_hash": ""
+  },
+  "src/components/services/ServicePageLayout.tsx": {
+    "mtime": 1784090726.9323587,
+    "ast_hash": "842e567e5d8a5304c31f62f80505633a",
+    "semantic_hash": ""
+  },
+  "src/lib/animations.ts": {
+    "mtime": 1783403392.158187,
+    "ast_hash": "25d4f5d65a4416e22080c8d156dd4e03",
+    "semantic_hash": ""
+  },
+  "src/lib/blog-posts.ts": {
+    "mtime": 1783403392.158413,
+    "ast_hash": "63c07ff46068985bfa3795c19ed96df5",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/affordability.ts": {
+    "mtime": 1784224867.741607,
+    "ast_hash": "33bed79f2a7954008a5b8bd2b2ab3d6a",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/amortization.ts": {
+    "mtime": 1784224867.7444715,
+    "ast_hash": "5a72e2d42a85e8f39188f148079b562a",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/buy-now-vs-wait.ts": {
+    "mtime": 1784224867.7365942,
+    "ast_hash": "045305ae714b17433bfd0063511502a1",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/cash-to-close.ts": {
+    "mtime": 1784224867.7439618,
+    "ast_hash": "9fdeda30f1f649cf3bb45ddd006881f1",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/cltv.ts": {
+    "mtime": 1784224867.7335281,
+    "ast_hash": "cf6a55bd7accc01d650d4a01a82f9af5",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/conventional.ts": {
+    "mtime": 1784224867.7378461,
+    "ast_hash": "d2a627246bf5dc3f59480129bb646200",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/debt-consolidation.ts": {
+    "mtime": 1784224867.7348266,
+    "ast_hash": "2164a08a77695bac988bd9e9cc4baf65",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/dscr.ts": {
+    "mtime": 1784224867.7301466,
+    "ast_hash": "ebe0f679bd8f01a510df9c31f7257337",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/fha.ts": {
+    "mtime": 1784224867.7354383,
+    "ast_hash": "fb9671f9d72ffc9ec2388b749c04faeb",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/funding-fee-va.ts": {
+    "mtime": 1784224867.7403238,
+    "ast_hash": "8c90dbee5c47b51491aa69479a0fbb20",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/guarantee-fee-usda.ts": {
+    "mtime": 1784224867.742193,
+    "ast_hash": "0561113a2129caffb9e06851f71f3a7d",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/house-hacking.ts": {
+    "mtime": 1784224867.742794,
+    "ast_hash": "9a2635e45754377228ea0bb8d89c38a4",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/index.ts": {
+    "mtime": 1784224867.7409785,
+    "ast_hash": "2d9643336682df1e8684870b9cde8b36",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/investment-property.ts": {
+    "mtime": 1784224867.7387667,
+    "ast_hash": "fb0062a4a5ca1f123586ba6e2b222f63",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/mi-arch.ts": {
+    "mtime": 1784224867.731385,
+    "ast_hash": "fcecdaeafd1f506ee6f7985f863a742b",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/mi-fha.ts": {
+    "mtime": 1784224867.73925,
+    "ast_hash": "385550927ef2ac9933c27daff9c506d8",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/move-up.ts": {
+    "mtime": 1784224867.7398682,
+    "ast_hash": "1b4038c24a1c285e08ae42162e0ab469",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/payment-strategy.ts": {
+    "mtime": 1784225804.1937566,
+    "ast_hash": "8cd45fad78b47209dacef04e9851b42e",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/refinance.ts": {
+    "mtime": 1784224867.7433717,
+    "ast_hash": "a777791d94dea40765eff5c6270812fa",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/rent-vs-buy.ts": {
+    "mtime": 1784225806.9377544,
+    "ast_hash": "ade7f040a30eeb6f81fda613e20b5900",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/tax-deduction.ts": {
+    "mtime": 1784224867.7360308,
+    "ast_hash": "33b05de15d6c0c06d2d1b827c0b96d82",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/types.ts": {
+    "mtime": 1784224867.7373767,
+    "ast_hash": "ba60fa4d352e5fd66498b263bbcfaabc",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/usda.ts": {
+    "mtime": 1784224867.7382963,
+    "ast_hash": "40242a941115a98bc6cbd621ed491503",
+    "semantic_hash": ""
+  },
+  "src/lib/calculators/va.ts": {
+    "mtime": 1784224867.73282,
+    "ast_hash": "fba79f994f9823b6b73b10ca02fed6ad",
+    "semantic_hash": ""
+  },
+  "src/lib/format.ts": {
+    "mtime": 1784224867.7509737,
+    "ast_hash": "d587d403636d33d99c0a8ada14305081",
+    "semantic_hash": ""
+  },
+  "src/lib/ghl.ts": {
+    "mtime": 1784076288.1258426,
+    "ast_hash": "1c7deb0910e486f2a9878c62b3e192bc",
+    "semantic_hash": ""
+  },
+  "src/lib/links.ts": {
+    "mtime": 1784104215.0932343,
+    "ast_hash": "f80cac6aa12d7044a9ba696a4143a862",
+    "semantic_hash": ""
+  },
+  "src/lib/neighborhoods.ts": {
+    "mtime": 1783997983.4943707,
+    "ast_hash": "3205667658227d56dccb87ed5b1bff2c",
+    "semantic_hash": ""
+  },
+  "src/lib/services.ts": {
+    "mtime": 1784151059.336016,
+    "ast_hash": "31ffe480c5adf544d34a0b87fcffd9a5",
+    "semantic_hash": ""
+  },
+  "tailwind.config.ts": {
+    "mtime": 1784224892.6918352,
+    "ast_hash": "d372c28516523618f07b00b9fe1807e2",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1784225646.4957616,
+    "ast_hash": "a4b76133deaa75107da866af44fe3c5b",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1783403392.14449,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": ""
+  },
+  "docs/accessibility-review.md": {
+    "mtime": 1784135432.3815036,
+    "ast_hash": "7479a7a254d6c269787301e7f931ae7f",
+    "semantic_hash": ""
+  },
+  "docs/claude-code-ghl-handoff.md": {
+    "mtime": 1784091001.6818967,
+    "ast_hash": "6adcdb85a0c487bb09e29f317f708509",
+    "semantic_hash": ""
+  },
+  "docs/compliance-review.md": {
+    "mtime": 1784088755.8211672,
+    "ast_hash": "a52719eeecb4d6244a0a838ee9754610",
+    "semantic_hash": ""
+  },
+  "docs/compliance/README.md": {
+    "mtime": 1784095679.0748942,
+    "ast_hash": "83fcd5b80bd2c8b28c782e83398147a7",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_1--New-Lead-Nurture--Fast-5----Claim-Offer.md": {
+    "mtime": 1784097870.2410681,
+    "ast_hash": "665f48c43edeec569fa826b19b10ec6b",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_2--Appointment-Confirmation---Reminders.md": {
+    "mtime": 1784097870.6589408,
+    "ast_hash": "8a5fd4228d761b5b0e4533976f7e081b",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_3--Appt-No-Show.md": {
+    "mtime": 1784097871.1592772,
+    "ast_hash": "48007363b4376ec560c703caf3cecd17",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_4--New-Sale---Send-Review-Request.md": {
+    "mtime": 1784097871.785163,
+    "ast_hash": "767b6aec22868c5390ce058f6d178f88",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_5--Long-Term-Nurture.md": {
+    "mtime": 1784097872.33796,
+    "ast_hash": "213e8fecc37c072fc05e5082a0154d37",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_wh-apply-click.md": {
+    "mtime": 1784097873.3890207,
+    "ast_hash": "ddc872e8a5e3133c9bff08aec8b9ad5e",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_wh-appointment-booked.md": {
+    "mtime": 1784097873.9837637,
+    "ast_hash": "a840f74dff057df94b31e1cb4448f4ae",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_wh-calculator.md": {
+    "mtime": 1784097874.4331477,
+    "ast_hash": "043998c4e5fbe924477ec53acaf9dd7d",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_wh-divorce-consult.md": {
+    "mtime": 1784097874.902021,
+    "ast_hash": "3ed58109c4c40d3864d951047acf9590",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_wh-first-time-buyer.md": {
+    "mtime": 1784097875.3794563,
+    "ast_hash": "d876071270abda4e6757fa70519bfea7",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_wh-guide-download.md": {
+    "mtime": 1784097875.8482492,
+    "ast_hash": "1952d002b0758d9fc789f324792e55d9",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_wh-neighborhood.md": {
+    "mtime": 1784097876.2932458,
+    "ast_hash": "2335e2c89c73c98b489642c5920efb3e",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_wh-rate-quote.md": {
+    "mtime": 1784097876.7866836,
+    "ast_hash": "710692d12a0cc16886ae4499d96a70a6",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/2026-07-14_wh-schedule-call.md": {
+    "mtime": 1784097877.2086895,
+    "ast_hash": "a068902866cd2a1b2cb25754858a4c7f",
+    "semantic_hash": ""
+  },
+  "docs/compliance/exports/2026-07-14/INDEX.md": {
+    "mtime": 1784097877.2089944,
+    "ast_hash": "860b283b0aeaa94c623d3f573b725528",
+    "semantic_hash": ""
+  },
+  "docs/ghl-automation-architecture.md": {
+    "mtime": 1784099132.4495447,
+    "ast_hash": "24df876f752995afb4d98925b6afedff",
+    "semantic_hash": ""
+  },
+  "docs/ghl-content/chat-voice-agents.md": {
+    "mtime": 1784225725.244574,
+    "ast_hash": "eecb5792049e100cf493f5d8b14a4b12",
+    "semantic_hash": ""
+  },
+  "docs/ghl-content/first-touch-sequences.md": {
+    "mtime": 1784225725.243381,
+    "ast_hash": "4fe95980bb3c069de117acf4b0618267",
+    "semantic_hash": ""
+  },
+  "docs/ghl-content/knowledge-base-pack.md": {
+    "mtime": 1784224818.7089322,
+    "ast_hash": "766b222d31f1bfdafde91f1edc051e0d",
+    "semantic_hash": ""
+  },
+  "docs/ghl-implementation-playbook.md": {
+    "mtime": 1784099216.27932,
+    "ast_hash": "3d00b0539e68392e544af4c908fcce58",
+    "semantic_hash": ""
+  },
+  "docs/lindley-ai-agents-setup.md": {
+    "mtime": 1784099125.4267814,
+    "ast_hash": "70cad152541ea03f493e62bdbec852c5",
+    "semantic_hash": ""
+  },
+  "docs/lindley-conversation-ai-prompt.md": {
+    "mtime": 1784099031.9827354,
+    "ast_hash": "c5c5919db0e346ac7cb7807ebbe314f3",
+    "semantic_hash": ""
+  },
+  "docs/lindley-ghl-knowledge-base-strategy.md": {
+    "mtime": 1784099209.5979567,
+    "ast_hash": "52d2f138ca382fb07482ec8a1ea7ba14",
+    "semantic_hash": ""
+  },
+  "docs/lindley-new-copy-deck.md": {
+    "mtime": 1784081753.3799725,
+    "ast_hash": "da15790094d4c5b2fcff49da28dc0300",
+    "semantic_hash": ""
+  },
+  "docs/rebrand-copy-spec-and-changelog.md": {
+    "mtime": 1784076410.065517,
+    "ast_hash": "c11a4b742b527a0c437ad735e93db0ad",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/BRAND-RESKIN-GUIDE.md": {
+    "mtime": 1784090003.0,
+    "ast_hash": "3cbd79e427fcfa6d4884120ae75782f0",
+    "semantic_hash": ""
+  },
+  "mortgage-calculator-suite 2/README.md": {
+    "mtime": 1784089898.0,
+    "ast_hash": "abc823220c4dd982c71f211e89b63ec6",
+    "semantic_hash": ""
+  },
+  "public/brand/logo-full.png": {
+    "mtime": 1783626830.9094367,
+    "ast_hash": "382ceb9c10a6f7d33bce4700ab62a969",
+    "semantic_hash": ""
+  },
+  "public/brand/logo-icon.png": {
+    "mtime": 1783625878.7126667,
+    "ast_hash": "d14b87673428411c12f2b3ac07afe189",
+    "semantic_hash": ""
+  },
+  "public/brand/logo-lockup.png": {
+    "mtime": 1784141608.8636518,
+    "ast_hash": "9a5154434d1f804bf28641ed5437cad6",
+    "semantic_hash": ""
+  },
+  "public/brand/logo-lockup.webp": {
+    "mtime": 1784141614.7141132,
+    "ast_hash": "8540842f18b134bf3626fee22a449d53",
+    "semantic_hash": ""
+  },
+  "public/img/hero-moving-day.webp": {
+    "mtime": 1784133605.123193,
+    "ast_hash": "1b147ab210fdef9d40b401031e697360",
+    "semantic_hash": ""
+  },
+  "public/img/home-buy.webp": {
+    "mtime": 1783627608.2361488,
+    "ast_hash": "c4343c9ca7f8c0cb0031cae9bb018135",
+    "semantic_hash": ""
+  },
+  "public/img/home-divorce.webp": {
+    "mtime": 1783629138.7690709,
+    "ast_hash": "f8e9bd8b3178a9edaff41eecdbbeb233",
+    "semantic_hash": ""
+  },
+  "public/img/home-refinance.webp": {
+    "mtime": 1783629158.3421776,
+    "ast_hash": "a43beac542a1dd8aedc5728bbd05853c",
+    "semantic_hash": ""
+  },
+  "public/img/hood-alberta.webp": {
+    "mtime": 1783629138.7486115,
+    "ast_hash": "bf5845aaf697f57ddb824ee5e7e1f3f2",
+    "semantic_hash": ""
+  },
+  "public/img/hood-irvington.webp": {
+    "mtime": 1783630295.948739,
+    "ast_hash": "b3299442584f178b6a19ec03866a1b6b",
+    "semantic_hash": ""
+  },
+  "public/img/hood-pearl.webp": {
+    "mtime": 1783629138.753618,
+    "ast_hash": "944e49ea4c8c2f4b42225a6039e31800",
+    "semantic_hash": ""
+  },
+  "public/img/hood-sellwood.webp": {
+    "mtime": 1783630295.9534273,
+    "ast_hash": "479999d019e9b539399266f1dc3b722f",
+    "semantic_hash": ""
+  },
+  "public/img/hood-stjohns.webp": {
+    "mtime": 1783629138.763981,
+    "ast_hash": "159b1c5bb169fb0272e562ea3b58d0d3",
+    "semantic_hash": ""
+  },
+  "public/img/illustration-portland.webp": {
+    "mtime": 1783627346.6414764,
+    "ast_hash": "7b322bce78cfea357ab578f9deb76966",
+    "semantic_hash": ""
+  },
+  "public/team/bri-editorial.webp": {
+    "mtime": 1784140772.790651,
+    "ast_hash": "dacdd897580868d219d734c74cb682dd",
+    "semantic_hash": ""
+  },
+  "public/team/bri-fun.png": {
+    "mtime": 1783626079.7231023,
+    "ast_hash": "c4c2351255c0088a0190c9c0ca3d3946",
+    "semantic_hash": ""
+  },
+  "public/team/bri-fun.webp": {
+    "mtime": 1784146661.972738,
+    "ast_hash": "254bdb48a01d52751cff46427c5c7478",
+    "semantic_hash": ""
+  },
+  "public/team/bri-serious.png": {
+    "mtime": 1783626079.7177806,
+    "ast_hash": "51927697072061f93d342069e70f84db",
+    "semantic_hash": ""
+  },
+  "public/team/bri-serious.webp": {
+    "mtime": 1784146662.3614783,
+    "ast_hash": "04bdda1c94734c33e672a712836e6b0c",
+    "semantic_hash": ""
+  },
+  "public/team/bri.jpg": {
+    "mtime": 1783488176.27632,
+    "ast_hash": "142014d014196f17e846ebdcb3f141a7",
+    "semantic_hash": ""
+  },
+  "public/team/david-fun.png": {
+    "mtime": 1783650389.673638,
+    "ast_hash": "5b7ff5ca9f34c270d4f089af0e928b35",
+    "semantic_hash": ""
+  },
+  "public/team/david-fun.webp": {
+    "mtime": 1784146661.816372,
+    "ast_hash": "f9bb3b1f0e7f0b342aa6d7380acc5126",
+    "semantic_hash": ""
+  },
+  "public/team/david-serious.png": {
+    "mtime": 1783650389.6688123,
+    "ast_hash": "b88e3ecaacb47482884fb919704f7d91",
+    "semantic_hash": ""
+  },
+  "public/team/david-serious.webp": {
+    "mtime": 1784146662.2173278,
+    "ast_hash": "2261ae14d90a5746bdd8188fcaa98a29",
+    "semantic_hash": ""
+  },
+  "public/team/david.jpg": {
+    "mtime": 1783488176.2723525,
+    "ast_hash": "2319e468eedb0eaac69be0136357bce0",
+    "semantic_hash": ""
+  },
+  "public/team/team-duo.jpg": {
+    "mtime": 1784086932.5063233,
+    "ast_hash": "cd0e4cfa396b8c9273983f72bfaac353",
+    "semantic_hash": ""
+  },
+  "public/team/team-duo.webp": {
+    "mtime": 1784146661.6583467,
+    "ast_hash": "1d49dd9d47efb391c7968b7dc8626b20",
+    "semantic_hash": ""
+  },
+  "public/team/vision-hands.jpg": {
+    "mtime": 1783488887.0820098,
+    "ast_hash": "09db16aa136edf85f7cb01521a553350",
+    "semantic_hash": ""
+  },
+  "public/team/vision-place.jpg": {
+    "mtime": 1783488887.085575,
+    "ast_hash": "b9d18475782659d8c2b0255ff373d1ec",
+    "semantic_hash": ""
+  },
+  "public/team/vision-portrait.jpg": {
+    "mtime": 1783488887.078351,
+    "ast_hash": "57c3a04eb191404a24d85cca0db2b099",
+    "semantic_hash": ""
+  },
+  "src/app/icon.png": {
+    "mtime": 1783626079.7314615,
+    "ast_hash": "d14b87673428411c12f2b3ac07afe189",
+    "semantic_hash": ""
+  }
+}

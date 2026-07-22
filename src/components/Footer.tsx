@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Btn from "@/components/Btn";
 
 const loanLinks = [
   { name: "Buy a home", href: "/services/purchase" },
@@ -29,44 +28,41 @@ const exploreLinks = [
 const teamLinks = [
   { name: "Meet David & Bri", href: "/about" },
   { name: "Our story", href: "/about" },
-  { name: "Calculator", href: "/calculator" },
+  { name: "Mortgage Calculator", href: "/calculator" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="mt-[clamp(56px,7vw,110px)] bg-ink text-paper rounded-t-[3px]">
+    <footer className="mt-[clamp(76px,9vw,140px)] bg-ink text-paper rounded-t-[3px]">
       <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px] pt-[clamp(40px,5vw,80px)] pb-10">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <Link
-            href="/contact#schedule"
-            className="group/talk font-grotesk font-extrabold text-[clamp(40px,7vw,104px)] leading-[0.9] tracking-[-0.03em] inline-flex items-baseline gap-3 hover:text-lime transition-colors"
-          >
+        <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-8">
+          <h2 className="font-serif font-semibold text-[clamp(44px,7vw,104px)] leading-[0.88] tracking-[-0.035em]">
             Let&rsquo;s talk.
-            <span className="text-[0.28em] text-lime opacity-0 -translate-x-2 group-hover/talk:opacity-100 group-hover/talk:translate-x-0 transition-all" aria-hidden>
-              →
-            </span>
-          </Link>
-          <div className="flex flex-wrap items-center gap-4 pb-1.5">
-            <Btn href="/contact#schedule" variant="paper" size="lg">
-              Schedule 15 minutes
-            </Btn>
-            <a href="tel:9717541771" className="font-body text-[0.8rem] tracking-[0.05em] text-paper/70 underline decoration-paper/30 underline-offset-4 hover:text-lime hover:decoration-lime transition-colors">
-              or call 971-754-1771
+          </h2>
+          <div className="flex flex-col items-start gap-3 pb-1.5 sm:items-end">
+            <Link
+              href="/contact#schedule"
+              className="font-body text-[16px] font-medium text-paper underline decoration-paper/30 underline-offset-[6px] transition-colors hover:text-orange hover:decoration-orange"
+            >
+              Choose a time →
+            </Link>
+            <a href="tel:9717541771" className="font-body text-[14px] text-paper/65 transition-colors hover:text-orange">
+              Call 971-754-1771
             </a>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 text-[0.85rem] leading-[2]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-12 text-[0.85rem] leading-[2]">
           <FooterCol title="The team" links={teamLinks} />
           <FooterCol title="Loans" links={loanLinks} />
           <FooterCol title="Explore" links={exploreLinks} />
-          <div>
+          <div className="min-w-0">
             <span className="block font-body text-[0.7rem] tracking-[0.14em] uppercase text-white/40 mb-2.5">
               Contact
             </span>
             <a href="tel:9717541771" className="block hover:text-orange transition-colors">971-754-1771</a>
-            <a href="mailto:david.chandler@movement.com" className="block hover:text-orange transition-colors">david.chandler@movement.com</a>
-            <a href="mailto:brianna.lindley@movement.com" className="block hover:text-orange transition-colors">brianna.lindley@movement.com</a>
+            <a href="mailto:david.chandler@movement.com" className="block break-words hover:text-orange transition-colors">david.chandler@movement.com</a>
+            <a href="mailto:brianna.lindley@movement.com" className="block break-words hover:text-orange transition-colors">brianna.lindley@movement.com</a>
           </div>
         </div>
 

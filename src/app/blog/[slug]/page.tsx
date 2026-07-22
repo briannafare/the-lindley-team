@@ -179,7 +179,7 @@ export default async function BlogPostPage({
             </div>
 
             {/* Title */}
-            <h1 className="font-display text-[clamp(2.5rem,5vw,5rem)] font-extrabold leading-[0.95] tracking-tight max-w-[860px] mb-6">
+            <h1 className="font-serif text-[clamp(2.5rem,5vw,5rem)] font-semibold leading-[0.92] tracking-[-0.03em] max-w-[860px] mb-6">
               {post.title}
             </h1>
 

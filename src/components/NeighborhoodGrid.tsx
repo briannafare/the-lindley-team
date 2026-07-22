@@ -83,14 +83,14 @@ export default function NeighborhoodGrid() {
   );
 
   return (
-    <section ref={sectionRef} className="py-32 border-b border-border">
+    <section ref={sectionRef} className="py-20 lg:py-28 border-b border-border">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mobile-rail -mx-5 grid grid-flow-col auto-cols-[84%] overflow-x-auto snap-x snap-mandatory px-5 pb-2 md:mx-0 md:grid-flow-row md:auto-cols-auto md:grid-cols-2 md:overflow-visible md:px-0 md:pb-0 lg:grid-cols-3 gap-5">
           {neighborhoods.map((hood) => (
             <Link
               key={hood.slug}
               href={`/neighborhoods/${hood.slug}`}
-              className="hood-card group relative overflow-hidden rounded-[2rem] aspect-[3/4] block"
+              className="hood-card group relative overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] aspect-[3/4] block snap-start"
             >
               {/* Gradient background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${hood.gradient} transition-all duration-700`} />
