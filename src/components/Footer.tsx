@@ -73,6 +73,7 @@ export default function Footer() {
             David Chandler NMLS #265974 · Brianna Lindley NMLS #1367416. Interest rates and products are subject to
             change without notice and may not be available at the time of loan commitment or rate lock. This is not a
             commitment to lend; terms and conditions apply; not all applicants will qualify. Licensed in OR &amp; WA.
+            Movement Mortgage, LLC, 10135 SE Sunnyside Rd, Suite 125, Clackamas, OR 97015.
             © {new Date().getFullYear()} The Lindley Team. <a href="/privacy" className="underline hover:text-white/70">Privacy Policy</a>
           </p>
           <span className="font-serif italic text-[1.4rem] text-paper">David &amp; Bri</span>
