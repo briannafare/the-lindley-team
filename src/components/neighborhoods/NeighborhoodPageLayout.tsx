@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import EditorialImage from "@/components/neighborhoods/EditorialImage";
 import { NeighborhoodData } from "@/lib/neighborhoods";
 import { neighborhoods } from "@/lib/neighborhoods";
 
@@ -201,11 +201,10 @@ export default function NeighborhoodPageLayout({
               </div>
             </div>
             {/* Emotional hero image — leads with feeling, not a map */}
-            <ImagePlaceholder
-              seed={`hero-${neighborhood.slug}`}
-              tone="color"
+            <EditorialImage
+              neighborhood={neighborhood}
+              variant="hero"
               className="rounded-[1.5rem] hidden lg:block aspect-[4/3]"
-              label={`Editorial hero — ${neighborhood.name}: a real street, home, or moment that sells the feeling of living here.`}
             />
           </div>
         </div>
@@ -214,12 +213,11 @@ export default function NeighborhoodPageLayout({
       {/* ── 1.5 Feeling band — emotion first, full-bleed ───────── */}
       <section className="px-6 lg:px-10">
         <div className="max-w-[1400px] mx-auto">
-          <ImagePlaceholder
-            seed={`feel-${neighborhood.slug}`}
-            tone="bw"
+          <EditorialImage
+            neighborhood={neighborhood}
+            variant="band"
             className="rounded-[1.5rem] aspect-[21/9]"
             overlayTitle={`“${neighborhood.personality}”`}
-            label={`Wide editorial photo — the mood of ${neighborhood.name}, warm and lived-in.`}
           />
         </div>
       </section>
@@ -479,12 +477,14 @@ export default function NeighborhoodPageLayout({
       {/* ── 8.5 Personal moment — David & Bri (emotional/human) ── */}
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-center">
-          <ImagePlaceholder
-            seed="david-bri-portrait"
-            tone="bw"
-            className="rounded-[1.5rem] aspect-[4/5]"
-            label="Personal portrait — David & Bri (studio-editorial, neutral backdrop, some B&W). Real photoshoot — cannot be AI-generated."
-          />
+          <div className="rounded-[1.5rem] aspect-[4/5] overflow-hidden bg-ink/5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/team/team-duo.webp"
+              alt="David Chandler & Brianna Lindley, Movement Mortgage"
+              className="w-full h-full object-cover img-bw"
+            />
+          </div>
           <div className="max-w-[520px]">
             <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
               Your team
