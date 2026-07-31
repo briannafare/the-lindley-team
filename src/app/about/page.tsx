@@ -18,9 +18,9 @@ export default function AboutPage() {
         {/* Hero */}
         <section className="pt-[clamp(24px,5vh,56px)] pb-20 relative overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-            <h1 className="font-display text-[clamp(3rem,8vw,6rem)] font-extrabold leading-[0.95] tracking-tight mb-6">
+            <h1 className="font-serif text-[clamp(3rem,8vw,6rem)] font-semibold leading-[0.92] tracking-[-0.03em] mb-6">
               About the<br />
-              <span className="font-script font-normal text-orange text-[0.9em]">Team</span>
+              <em className="italic font-medium text-orange">Team</em>
             </h1>
             <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[620px]">
               Two loan officers who answer their own emails, one Portland team, and 35 years of deals between them. Here&apos;s the honest version of who you&apos;d be working with.
@@ -34,8 +34,12 @@ export default function AboutPage() {
             <div className="overflow-hidden rounded-[1.25rem] bg-ink/5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/team/team-duo.jpg"
+                src="/team/team-duo.webp"
                 alt="David Chandler and Bri Lindley — The Lindley Team"
+                width="1520"
+                height="1024"
+                loading="eager"
+                decoding="async"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -153,13 +157,34 @@ export default function AboutPage() {
               <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Our Story
               </h2>
-              <div className="max-w-[720px] space-y-5">
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  The Lindley Team started with Tammi Lindley. She built the name the slow way — one straight conversation at a time, until half of Portland seemed to know someone she&apos;d taken care of. She&apos;s the founder, and the standard is still hers.
-                </p>
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  The two people you&apos;ll actually work with now are David and Bri. Same standard. More horsepower behind it.
-                </p>
+              <div className="max-w-[820px]">
+                <div className="grid gap-6 sm:grid-cols-[210px_1fr] sm:gap-9 items-start">
+                  <figure className="shrink-0">
+                    <div className="overflow-hidden rounded-[1.25rem] bg-ink/5">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/team/tammi.jpg"
+                        alt="Tammi Lindley, founder of The Lindley Team"
+                        width={288}
+                        height={325}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <figcaption className="font-body text-[0.68rem] tracking-[0.14em] uppercase text-ink-light mt-3">
+                      Tammi Lindley · Founder
+                    </figcaption>
+                  </figure>
+                  <div className="space-y-5">
+                    <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
+                      The Lindley Team started with Tammi Lindley. She built the name the slow way — one straight conversation at a time, until half of Portland seemed to know someone she&apos;d taken care of. She&apos;s recently retired, but she&apos;s the founder, and the standard is still hers.
+                    </p>
+                    <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
+                      The two people you&apos;ll actually work with now are David and Bri — Bri came up under Tammi more than a decade ago. Same standard, more horsepower behind it.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

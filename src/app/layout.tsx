@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
-
-// GHL LeadConnector chat widget is a custom element
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace JSX {
-    interface IntrinsicElements {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      "chat-widget": any;
-    }
-  }
-}
+import JuneWidget from "@/components/JuneWidget";
+import ScrollActiveController from "@/components/ScrollActiveController";
 
 // Serif display + italic swash accent (the "Museum of Art" move)
 const fraunces = Fraunces({
@@ -124,17 +114,23 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_LD) }}
         />
         {/* Card frame (House of Van Schneider): the whole site lives in one rounded
-            card on a neutral shell — width-capped so it never floats on huge screens. */}
-        <div className="relative mx-auto w-full max-w-[1728px] min-h-[calc(100vh-2rem)] bg-paper rounded-[18px] sm:rounded-[26px] overflow-clip">
-          {/* Red brand spine — left edge of the card, carries the Movement lockup on every page */}
+            card on a neutral shell — width-capped so it never floats on huge screens.
+            Capped close to the 1440px content max-width (not 1728) so the card
+            doesn't balloon into a huge empty-feeling frame on large monitors. */}
+        <div className="relative mx-auto w-full max-w-[1600px] min-h-[calc(100vh-2rem)] bg-paper rounded-[18px] sm:rounded-[26px] overflow-clip">
+          {/* Red brand spine — left edge of the card, carries the Movement lockup on every page.
+              Shows from lg (1024px) instead of xl (1280px) — xl was hiding it on a lot of
+              ordinary laptop-width windows. */}
           <div
             aria-hidden
-            className="hidden xl:flex absolute left-0 top-0 bottom-0 w-[44px] bg-orange text-paper z-[60] flex-col items-center justify-between py-7 select-none rounded-l-[18px] sm:rounded-l-[26px]"
+            className="hidden lg:flex absolute left-0 top-0 bottom-0 w-[44px] bg-orange text-paper z-[60] flex-col items-center justify-between py-7 select-none rounded-l-[18px] sm:rounded-l-[26px]"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/brand/logo-icon.png"
               alt=""
+              width="1024"
+              height="1024"
               className="w-[30px] h-[30px] rounded-full object-cover bg-paper"
             />
             <span
@@ -146,58 +142,16 @@ export default function RootLayout({
             <span className="font-body text-[10px] tracking-[0.2em]">PDX</span>
           </div>
 
-          <div className="xl:pl-[44px]">{children}</div>
+          <div className="lg:pl-[44px]">{children}</div>
         </div>
 
-        {/* GHL chat widget page-context injector — must run BEFORE the widget script */}
-        <Script
-          id="ghl-page-context"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `(function(){
-  'use strict';
-  var PAGE_RULES=[
-    {pattern:/divorce|cdlp|separation/i,type:'DIVORCE'},
-    {pattern:/calculator/i,type:'CALCULATOR'},
-    {pattern:/blog|post|article|news/i,type:'BLOG'},
-    {pattern:/contact|reach-us|get-in-touch/i,type:'CONTACT'},
-    {pattern:/neighborhood|area|community|portland/i,type:'NEIGHBORHOOD'},
-    {pattern:/refinanc|purchase|va-loan|fha|jumbo|down-payment|pre-approv|heloc|service|loan/i,type:'SERVICE'},
-    {pattern:/^\\/?(index\\.html?)?$/i,useFullPath:true,type:'HOMEPAGE'}
-  ];
-  function detectPageType(){
-    var path=window.location.pathname;
-    for(var i=0;i<PAGE_RULES.length;i++){
-      var rule=PAGE_RULES[i];
-      var subject=rule.useFullPath?path:window.location.href;
-      if(rule.pattern.test(subject))return rule.type;
-    }
-    return 'GENERAL';
-  }
-  function injectPageContext(){
-    var widget=document.querySelector('chat-widget');
-    if(!widget)return;
-    var pageType=detectPageType();
-    var contextTag='[PAGE_CONTEXT:'+pageType+'] url:'+window.location.href;
-    widget.setAttribute('prompt',contextTag);
-    widget.setAttribute('data-page-type',pageType);
-  }
-  injectPageContext();
-  window.addEventListener('chatWidgetLoaded',injectPageContext);
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',injectPageContext);
-  }
-})();`,
-          }}
-        />
-
-        {/* GHL LeadConnector chat widget — location-scoped; injector above tags page context */}
-        <chat-widget location-id="pe2yBdfaVo406b3BaavZ"></chat-widget>
-        <Script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          strategy="afterInteractive"
-        />
+        {/* June — custom-branded voice + chat widget. "Talk to June" is the live GHL
+            Voice AI agent ("Voice Assistant-1") over LiveKit; call/text/message capture
+            through /api/lead. Replaces the stock GHL chat bubble. */}
+        <JuneWidget />
+        {/* On touch devices, plays hover-driven motion (e.g. B&W→color) as
+            elements scroll through center — see components marked data-scroll-active. */}
+        <ScrollActiveController />
       </body>
     </html>
   );

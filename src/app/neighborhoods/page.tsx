@@ -26,11 +26,9 @@ export default function NeighborhoodsPage() {
           <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-6">
             Portland, OR &amp; Southwest Washington
           </p>
-          <h1 className="font-display text-[clamp(2.8rem,7vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight mb-6 max-w-[800px]">
+          <h1 className="font-serif text-[clamp(2.8rem,7vw,5.5rem)] font-semibold leading-[0.92] tracking-[-0.03em] mb-6 max-w-[800px]">
             71 Portland neighborhoods. One&apos;s{" "}
-            <span className="font-script font-normal text-orange text-[0.85em]">
-              yours.
-            </span>
+            <em className="italic font-medium text-orange">yours.</em>
           </h1>
           <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[580px] mb-8">
             Your mortgage lender should know these streets as well as you do.

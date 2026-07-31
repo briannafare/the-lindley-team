@@ -22,7 +22,7 @@ const GROUPS = [
     items: [
       { name: "Neighborhoods", href: "/neighborhoods" },
       { name: "Journal", href: "/blog" },
-      { name: "Calculator", href: "/calculator" },
+      { name: "Mortgage Calculator", href: "/calculator" },
     ],
   },
   {
@@ -44,7 +44,7 @@ function Cluster({
 }) {
   const label =
     size === "lg"
-      ? "font-body text-[0.72rem] tracking-[0.18em] uppercase text-orange mb-3"
+      ? "font-body text-[0.72rem] font-semibold tracking-[0.18em] uppercase text-ink-mid mb-3"
       : "font-body text-[0.62rem] tracking-[0.16em] uppercase text-ink-light mb-1.5";
   const item =
     size === "lg"
@@ -84,83 +84,97 @@ export default function Nav() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
     };
   }, [open]);
 
   return (
-    <nav
-      className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || open
-          ? "bg-paper backdrop-blur-md border-b border-border py-3"
-          : "border-b border-transparent py-4"
-      }`}
-    >
-      <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px] flex items-start justify-between gap-3 sm:gap-6">
-        {/* Brand lockup — the David & Bri / The Lindley Team logo, with
-            "at Movement Mortgage" underneath. sr-only keeps the full name
-            in the DOM for SEO/screen readers. */}
-        <Link
-          href="/"
-          onClick={() => setOpen(false)}
-          className="z-50 shrink-0 flex flex-col gap-1 group/brand"
-        >
-          <span className="sr-only">The Lindley Team at Movement Mortgage — David &amp; Bri</span>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/brand/logo-lockup.webp"
-            alt=""
-            className="h-11 sm:h-14 lg:h-[68px] w-auto transition-transform duration-500 group-hover/brand:scale-[1.02] origin-left"
-          />
-          <span className="pl-0.5 font-body text-[0.5rem] sm:text-[0.6rem] font-semibold tracking-[0.18em] sm:tracking-[0.22em] uppercase text-ink-mid whitespace-nowrap" aria-hidden>
-            at Movement Mortgage
-          </span>
-        </Link>
-
-        {/* Clustered nav — visible at top on xl, collapses to Menu on scroll */}
-        <div className={`hidden ${scrolled ? "xl:hidden" : "xl:block"} pt-1`}>
-          <Cluster />
-        </div>
-
-        {/* Right controls */}
-        <div className="flex items-center gap-2 sm:gap-3 shrink-0 pt-0.5">
-          {/* Menu toggle — shown on scroll (xl) and always below xl */}
-          <button
-            onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            className={`${scrolled ? "xl:inline-flex" : "xl:hidden"} inline-flex items-center gap-2 font-body text-[0.72rem] font-semibold tracking-[0.14em] uppercase text-ink hover:text-orange transition-colors`}
-          >
-            <span className="hidden sm:inline">{open ? "Close" : "Menu"}</span>
-            <span className="relative w-6 h-[14px] flex flex-col justify-between">
-              <span className={`w-6 h-[2px] bg-current transition-transform ${open ? "translate-y-[6px] rotate-45" : ""}`} />
-              <span className={`w-6 h-[2px] bg-current transition-opacity ${open ? "opacity-0" : ""}`} />
-              <span className={`w-6 h-[2px] bg-current transition-transform ${open ? "-translate-y-[6px] -rotate-45" : ""}`} />
-            </span>
-          </button>
-
-          {/* Contact — quiet text link (secondary). */}
+    <nav className="sticky top-0 left-0 right-0 z-50">
+      {/* Header row's bg/blur live on this inner wrapper, not <nav> itself —
+          backdrop-filter on a positioned ancestor creates a new containing
+          block for `fixed` descendants, which was squashing the full-screen
+          menu overlay below into the nav bar's own height on open. */}
+      <div
+        className={`relative z-50 transition-all duration-300 ${
+          open
+            ? "bg-paper/95 backdrop-blur-xl border-b border-border py-3 shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+            : scrolled
+              ? "bg-paper/[0.78] backdrop-blur-xl border-b border-border/70 py-3 shadow-[0_10px_34px_rgba(0,0,0,0.05)]"
+              : "border-b border-transparent py-4"
+        }`}
+      >
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-5 lg:px-[54px] flex items-center justify-between gap-2.5 sm:gap-6">
+          {/* Brand lockup — the David & Bri / The Lindley Team logo, with
+              "@ Movement Mortgage" underneath. sr-only keeps the full name
+              in the DOM for SEO/screen readers. */}
           <Link
-            href="/contact"
+            href="/"
             onClick={() => setOpen(false)}
-            className="hidden sm:inline-flex items-center font-body text-[0.68rem] font-semibold tracking-[0.1em] uppercase text-ink border-b border-ink/30 pb-0.5 hover:text-orange hover:border-orange transition-colors"
+            className="z-50 shrink-0 flex flex-col gap-1 sm:gap-1.5 group/brand lg:mr-8 xl:mr-12"
           >
-            Contact
+            <span className="sr-only">The Lindley Team at Movement Mortgage — David &amp; Bri</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/brand/logo-lockup.webp"
+              alt=""
+              width="900"
+              height="310"
+              className="h-10 sm:h-14 lg:h-16 w-auto transition-transform duration-500 group-hover/brand:scale-[1.02] origin-left"
+            />
+            <span className="pl-0.5 font-body text-[0.56rem] sm:text-[0.66rem] font-semibold tracking-[0.16em] sm:tracking-[0.2em] uppercase text-ink-mid whitespace-nowrap" aria-hidden>
+              <span className="font-serif italic text-orange normal-case tracking-normal text-[1.35em] align-middle mr-0.5">@</span>
+              Movement Mortgage
+            </span>
           </Link>
 
-          {/* Apply now — primary money CTA. Bigger pill at lg+, and the
-              md base bump also lifts the mobile tap target closer to the
-              44px touch guideline. */}
-          <Btn href="/apply" onClick={() => setOpen(false)} variant="primary" size="md">
-            Apply now
-          </Btn>
+          {/* Clustered nav — visible at top on xl, collapses to Menu on scroll */}
+          <div className={`hidden ${scrolled ? "xl:hidden" : "xl:block"} pt-1`}>
+            <Cluster />
+          </div>
+
+          {/* Right controls */}
+          <div className="relative z-50 flex items-center gap-2 sm:gap-3 shrink-0 pt-0.5">
+            {/* Menu toggle — shown on scroll (xl) and always below xl */}
+            <button
+              onClick={() => setOpen((v) => !v)}
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              aria-controls="site-menu"
+              className={`${scrolled ? "xl:inline-flex" : "xl:hidden"} inline-flex min-h-11 min-w-11 items-center justify-center gap-2 font-body text-[0.72rem] font-semibold tracking-[0.14em] uppercase text-ink hover:text-orange transition-colors`}
+            >
+              <span className="hidden sm:inline">{open ? "Close" : "Menu"}</span>
+              <span className="relative w-6 h-[14px] flex flex-col justify-between">
+                <span className={`w-6 h-[2px] bg-current transition-transform ${open ? "translate-y-[6px] rotate-45" : ""}`} />
+                <span className={`w-6 h-[2px] bg-current transition-opacity ${open ? "opacity-0" : ""}`} />
+                <span className={`w-6 h-[2px] bg-current transition-transform ${open ? "-translate-y-[6px] -rotate-45" : ""}`} />
+              </span>
+            </button>
+
+            {/* Apply now — primary money CTA. Bigger pill at lg+, and the
+                md base bump also lifts the mobile tap target closer to the
+                44px touch guideline. */}
+            <Btn
+              href="/apply"
+              onClick={() => setOpen(false)}
+              variant="primary"
+              size="md"
+              className="max-sm:min-h-11 max-sm:pl-4 max-sm:pr-4 max-sm:py-2.5 max-sm:[&>span:last-child]:hidden"
+            >
+              Apply now
+            </Btn>
+          </div>
         </div>
       </div>
 
       {/* Full menu overlay — mobile + scrolled-desktop */}
       {open && (
-        <div className="fixed inset-0 top-0 bg-paper pt-28 px-6 lg:px-[54px] z-40 overflow-y-auto">
+        <div id="site-menu" className="fixed inset-0 top-0 bg-paper/95 backdrop-blur-xl pt-24 sm:pt-28 px-5 lg:px-[54px] z-40 overflow-y-auto overscroll-contain">
           <div className="max-w-[1440px] mx-auto">
             <Cluster size="lg" onNavigate={() => setOpen(false)} />
             <div className="mt-12 flex flex-wrap items-center gap-3">
@@ -169,9 +183,6 @@ export default function Nav() {
               </Btn>
               <Btn href="/contact#schedule" onClick={() => setOpen(false)} variant="outline" size="lg">
                 Schedule a call
-              </Btn>
-              <Btn href="/contact" onClick={() => setOpen(false)} variant="outline" size="lg">
-                Contact
               </Btn>
             </div>
           </div>

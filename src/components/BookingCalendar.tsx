@@ -26,8 +26,9 @@ export default function BookingCalendar({
 
   if (!url) {
     return (
-      <div className="border border-border rounded-2xl p-8 bg-paper">
-        <p className="font-display text-lg font-bold text-ink">Online booking is coming online.</p>
+      <div className="border border-border rounded-[1.5rem] p-6 sm:p-8 bg-paper shadow-[0_24px_70px_rgba(0,0,0,0.06)]">
+        <span className="mb-5 flex h-11 w-11 items-center justify-center rounded-full bg-bg-alt text-ink" aria-hidden>↗</span>
+        <p className="font-serif text-[clamp(23px,3vw,32px)] leading-tight text-ink">Online booking is coming online.</p>
         <p className="text-ink-mid text-sm mt-2 leading-relaxed">
           In the meantime, call{" "}
           <a href="tel:9717541771" className="text-orange font-semibold">(971) 754-1771</a>{" "}
@@ -42,7 +43,7 @@ export default function BookingCalendar({
       src={url}
       title="Book a time with The Lindley Team"
       scrolling="no"
-      className="w-full rounded-2xl border border-border bg-paper"
+      className="booking-calendar w-full rounded-[1.5rem] border border-border bg-paper shadow-[0_24px_70px_rgba(0,0,0,0.06)]"
       style={{ minHeight: 680, border: 0 }}
     />
   );

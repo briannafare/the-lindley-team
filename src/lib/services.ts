@@ -46,7 +46,7 @@ export const services: ServiceData[] = [
       keywords: ["Portland mortgage", "Oregon home loan", "Portland home purchase", "first time home buyer Portland", "mortgage lender Portland OR"],
       aeoQuestion: "How do I get a mortgage to buy a home in Portland Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&q=80",
+    heroImage: "/img/home-buy.webp",
     whoFor: [
       "First-time home buyers entering the Portland market",
       "Move-up buyers upgrading to a larger home",
@@ -104,7 +104,7 @@ export const services: ServiceData[] = [
       keywords: ["Portland refinance", "Oregon mortgage refinance", "refinance rates Portland", "should I refinance my mortgage", "Portland refi"],
       aeoQuestion: "When should I refinance my mortgage in Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    heroImage: "/img/home-refinance.webp",
     whoFor: [
       "Homeowners with rates above current market rates",
       "Borrowers looking to drop PMI after gaining equity",
@@ -163,7 +163,7 @@ export const services: ServiceData[] = [
       keywords: ["divorce mortgage Portland", "CDLP Portland Oregon", "divorce lending specialist", "equity buyout mortgage", "divorce refinance Oregon"],
       aeoQuestion: "How does a divorce affect my mortgage in Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    heroImage: "/img/home-divorce.webp",
     whoFor: [
       "Spouses going through divorce who want to keep the marital home",
       "Divorcing couples who need to understand equity buyout options",
@@ -221,7 +221,7 @@ export const services: ServiceData[] = [
       keywords: ["FHA loan Portland", "FHA mortgage Oregon", "first time buyer FHA Portland", "FHA requirements Oregon", "low down payment mortgage Portland"],
       aeoQuestion: "What are the FHA loan requirements in Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    heroImage: "/img/illustration-portland.webp",
     whoFor: [
       "First-time home buyers with limited savings",
       "Buyers with credit scores in the 580-680 range",
@@ -265,7 +265,7 @@ export const services: ServiceData[] = [
       keywords: ["VA loan Portland", "VA mortgage Oregon", "veteran home loan Portland", "zero down mortgage Oregon", "VA loan requirements"],
       aeoQuestion: "How do VA loans work in Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    heroImage: "/img/illustration-portland.webp",
     whoFor: ["Active-duty military", "Veterans with eligible discharge", "National Guard and Reserve members", "Eligible surviving spouses"],
     requirements: [
       { label: "Eligibility", value: "Certificate of Eligibility (COE) from VA" },
@@ -302,7 +302,7 @@ export const services: ServiceData[] = [
       keywords: ["jumbo loan Portland", "jumbo mortgage Oregon", "high value mortgage Portland", "Portland luxury home loan"],
       aeoQuestion: "What is a jumbo loan and do I need one in Portland?",
     },
-    heroImage: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80",
+    heroImage: "/img/home-buy.webp",
     whoFor: ["Buyers purchasing above conforming loan limits", "High-net-worth individuals", "Buyers in Portland's premium neighborhoods", "Self-employed professionals with strong financials"],
     requirements: [
       { label: "Credit Score", value: "700+ typically required" },
@@ -338,7 +338,7 @@ export const services: ServiceData[] = [
       keywords: ["cash out refinance Portland", "home equity cash out Oregon", "cash out refi Portland", "tap home equity Oregon"],
       aeoQuestion: "How much equity can I cash out of my home?",
     },
-    heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    heroImage: "/img/home-refinance.webp",
     whoFor: ["Homeowners with significant equity built up", "Those consolidating high-interest debt", "Homeowners funding major renovations", "Real estate investors leveraging equity for new purchases"],
     requirements: [
       { label: "Equity", value: "Must retain 20% equity after cash-out (conventional)" },
@@ -374,7 +374,7 @@ export const services: ServiceData[] = [
       keywords: ["HELOC Portland", "home equity line of credit Oregon", "HELOC rates Portland", "HELOC vs cash out refinance"],
       aeoQuestion: "How does a HELOC work and should I get one?",
     },
-    heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    heroImage: "/img/home-refinance.webp",
     whoFor: ["Homeowners funding phased renovations", "Those wanting a financial safety net", "Homeowners with ongoing large expenses", "Those who prefer flexible borrowing over lump sum"],
     requirements: [
       { label: "Equity", value: "15-20%+ equity in your home" },
@@ -410,7 +410,7 @@ export const services: ServiceData[] = [
       keywords: ["investment property loan Portland", "rental property mortgage Oregon", "DSCR loan Portland", "Portland real estate investor financing"],
       aeoQuestion: "How do I finance an investment property in Portland?",
     },
-    heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    heroImage: "/img/illustration-portland.webp",
     whoFor: ["First-time rental property buyers", "Experienced investors scaling their portfolio", "House flippers needing purchase + rehab financing", "Buyers of multi-unit properties (2-4 units)"],
     requirements: [
       { label: "Down Payment", value: "15-25% depending on property type" },
@@ -446,7 +446,7 @@ export const services: ServiceData[] = [
       keywords: ["reverse mortgage Portland", "HECM Oregon", "reverse mortgage 62+", "Portland reverse mortgage lender"],
       aeoQuestion: "How does a reverse mortgage work in Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    heroImage: "/img/illustration-portland.webp",
     whoFor: ["Homeowners 62+ with significant home equity", "Retirees who want to eliminate monthly mortgage payments", "Seniors needing funds for healthcare or aging-in-place modifications", "Homeowners who want to supplement retirement income"],
     requirements: [
       { label: "Age", value: "62+ (youngest borrower)" },
@@ -485,7 +485,7 @@ export const services: ServiceData[] = [
       keywords: ["conventional loan Portland", "conventional mortgage Oregon", "3 percent down conventional", "conventional vs FHA Oregon", "Fannie Mae loan Portland"],
       aeoQuestion: "What is a conventional loan and how much do I need down in Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+    heroImage: "/img/home-buy.webp",
     whoFor: [
       "Buyers with a 620+ credit score and steady income",
       "First-time buyers who qualify for 3% down conventional programs",
@@ -540,7 +540,7 @@ export const services: ServiceData[] = [
       keywords: ["USDA loan Oregon", "zero down home loan Oregon", "USDA eligible areas Portland", "USDA loan Newberg", "rural development loan Washington state"],
       aeoQuestion: "Can I get a zero-down USDA loan near Portland Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80",
+    heroImage: "/img/illustration-portland.webp",
     whoFor: [
       "Buyers open to living outside the Portland city core",
       "Households with little or no down payment saved",
@@ -595,7 +595,7 @@ export const services: ServiceData[] = [
       keywords: ["construction loan Portland", "new construction financing Oregon", "construction to permanent loan", "new build mortgage Portland", "builder financing Oregon"],
       aeoQuestion: "How do construction loans work in Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    heroImage: "/img/illustration-portland.webp",
     whoFor: [
       "Buyers purchasing a to-be-built home from a builder",
       "Homeowners building on their own lot",
@@ -651,7 +651,7 @@ export const services: ServiceData[] = [
       keywords: ["bank statement loan Oregon", "self employed mortgage Portland", "1099 home loan Oregon", "no tax return mortgage", "business owner mortgage Portland"],
       aeoQuestion: "How can I get a mortgage if I'm self-employed and write off most of my income?",
     },
-    heroImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+    heroImage: "/img/home-refinance.webp",
     whoFor: [
       "Self-employed borrowers whose tax returns undersell their real income",
       "1099 contractors, freelancers, and gig-economy earners",
@@ -707,7 +707,7 @@ export const services: ServiceData[] = [
       keywords: ["DSCR loan Oregon", "DSCR loan Portland", "investment property loan no tax returns", "rental property financing Oregon", "portfolio investor loan Portland"],
       aeoQuestion: "What is a DSCR loan and how do I qualify for one in Oregon?",
     },
-    heroImage: "https://images.unsplash.com/photo-1460317442991-0ec209397118?w=800&q=80",
+    heroImage: "/img/illustration-portland.webp",
     whoFor: [
       "Investors buying rental property without wanting personal income scrutiny",
       "Portfolio builders hitting conventional's property-count friction",
@@ -762,7 +762,7 @@ export const services: ServiceData[] = [
       keywords: ["down payment assistance Oregon", "OHCS down payment assistance", "first time buyer grants Portland", "Washington down payment assistance", "Oregon Bond loan program"],
       aeoQuestion: "What down payment assistance programs are available in Oregon and Washington?",
     },
-    heroImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80",
+    heroImage: "/img/home-buy.webp",
     whoFor: [
       "First-time buyers short on down payment, solid on income",
       "Buyers who assumed they need 20% down (almost nobody does)",

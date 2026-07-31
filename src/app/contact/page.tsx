@@ -17,17 +17,11 @@ export default function ContactPage() {
       <main>
 
         {/* Hero */}
-        <section className="pt-[clamp(24px,5vh,56px)] pb-20 relative overflow-hidden">
+        <section className="pt-[clamp(36px,6vh,72px)] pb-[clamp(80px,10vw,144px)] relative overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-border">
-              <span className="w-1.5 h-1.5 rounded-full bg-orange" />
-              <span className="text-[0.72rem] font-medium text-ink-mid tracking-[0.04em]">
-                Usually responds within 2 hours during business hours
-              </span>
-            </div>
-            <h1 className="font-display text-[clamp(3rem,8vw,6rem)] font-extrabold leading-[0.95] tracking-tight mb-6">
+            <h1 className="font-serif text-[clamp(3rem,8vw,6rem)] font-semibold leading-[0.92] tracking-[-0.03em] mb-6">
               Let&apos;s<br />
-              <span className="font-script font-normal text-orange text-[0.9em]">Talk</span>
+              <em className="italic font-medium text-orange">Talk</em>
             </h1>
             <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[540px]">
               Tell us what&apos;s going on. You&apos;ll get a straight answer about what makes sense — even when the answer is &ldquo;not yet.&rdquo;
@@ -42,7 +36,7 @@ export default function ContactPage() {
               <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Reach Us
               </h2>
-              <div className="max-w-[720px]">
+              <div className="max-w-[820px] rounded-[1.5rem] border border-border bg-paper px-5 sm:px-7">
                 {[
                   {
                     label: "Phone",
@@ -64,7 +58,7 @@ export default function ContactPage() {
                   },
                   {
                     label: "Hours",
-                    display: "Monday–Friday 8am–6pm · Saturday by appointment",
+                    display: "24/7 — answered by a real person, no voicemail",
                     href: null,
                     isLink: false,
                   },
@@ -77,7 +71,7 @@ export default function ContactPage() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex justify-between items-baseline py-4 border-b border-border first:border-t"
+                    className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-baseline py-4 border-b border-border first:border-t"
                   >
                     <span className="text-[0.88rem] font-semibold text-ink shrink-0 mr-8">
                       {item.label}
@@ -85,12 +79,12 @@ export default function ContactPage() {
                     {item.isLink && item.href ? (
                       <a
                         href={item.href}
-                        className="text-[0.88rem] text-ink-mid font-normal text-right hover:text-ink transition-colors"
+                        className="text-[0.88rem] text-ink-mid font-normal sm:text-right hover:text-ink transition-colors"
                       >
                         {item.display}
                       </a>
                     ) : (
-                      <span className="text-[0.88rem] text-ink-mid font-normal text-right">
+                      <span className="text-[0.88rem] text-ink-mid font-normal sm:text-right">
                         {item.display}
                       </span>
                     )}
@@ -108,17 +102,26 @@ export default function ContactPage() {
               <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Grab a Time
               </h2>
-              <div className="max-w-[720px]">
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-6">
+              <div className="max-w-[1120px]">
+                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-10 max-w-[760px]">
                   Tell us where you are — buying, refinancing, divorce lending, or just exploring. No pitch, no pressure. Book a time below, or send a message and we&apos;ll reach out with an honest look at your situation.
                 </p>
-                {/* Self-serve booking — pulls the right GHL calendar per request type.
-                    Set NEXT_PUBLIC_GHL_CAL_SCHEDULE (see .env.local.example). */}
-                <BookingCalendar type="schedule" />
-                <p className="text-[0.72rem] font-bold tracking-[0.16em] uppercase text-ink-light mt-10 mb-4">
-                  Or send a message
-                </p>
-                <ContactForm formType="schedule" />
+                <div className="grid items-start gap-8 xl:grid-cols-[1.05fr_0.95fr]">
+                  <div>
+                    <p className="text-[0.68rem] font-bold tracking-[0.16em] uppercase text-ink-light mb-4">
+                      Choose a time
+                    </p>
+                    {/* Self-serve booking — pulls the right GHL calendar per request type.
+                        Set NEXT_PUBLIC_GHL_CAL_SCHEDULE (see .env.local.example). */}
+                    <BookingCalendar type="schedule" />
+                  </div>
+                  <div>
+                    <p className="text-[0.68rem] font-bold tracking-[0.16em] uppercase text-ink-light mb-4">
+                      Or send a message
+                    </p>
+                    <ContactForm formType="schedule" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -181,8 +184,6 @@ export default function ContactPage() {
                 </p>
                 <a
                   href="/apply"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2"
                 >
                   Start Application <span>→</span>
@@ -206,7 +207,7 @@ export default function ContactPage() {
                   Clackamas OR 97015
                 </p>
               </div>
-              <div className="rounded-2xl overflow-hidden" style={{ height: "400px" }}>
+              <div className="rounded-[1.5rem] overflow-hidden border border-border" style={{ height: "400px" }}>
                 <iframe
                   src="https://maps.google.com/maps?q=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed"
                   width="100%"

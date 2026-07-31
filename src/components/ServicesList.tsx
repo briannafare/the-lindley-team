@@ -84,9 +84,9 @@ export default function ServicesList() {
   );
 
   return (
-    <section ref={sectionRef} className="py-32 border-b border-border">
+    <section ref={sectionRef} className="py-20 lg:py-28 border-b border-border">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="flex flex-wrap justify-between items-end mb-14 gap-6">
+        <div className="flex flex-wrap justify-between items-end mb-9 sm:mb-12 gap-6">
           <div>
             <p className="text-[0.68rem] font-medium tracking-[0.2em] uppercase text-ink-light mb-2">
               Services
@@ -111,7 +111,7 @@ export default function ServicesList() {
             <Link
               key={svc.num}
               href={svc.href}
-              className="svc-row group grid grid-cols-[60px_1fr_auto] lg:grid-cols-[60px_1fr_50px] gap-4 items-center py-7 border-b border-border hover:pl-3 transition-all"
+              className="svc-row group grid grid-cols-[1fr_auto] sm:grid-cols-[44px_1fr_auto] lg:grid-cols-[60px_1fr_50px] gap-3 sm:gap-4 items-center py-5 sm:py-6 border-b border-border hover:translate-x-1 transition-transform"
             >
               <span className="font-display text-sm font-medium text-ink-light hidden sm:block">
                 {svc.num}

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const REASSURANCE = [
   { stat: "3%", label: "Down payment on many conventional loans — less on FHA/VA" },
   { stat: "OHCS", label: "Oregon down-payment assistance we help you tap" },
-  { stat: "24–48h", label: "To a real answer on where you stand" },
+  { stat: "24/7", label: "A real person answers — no voicemail" },
 ];
 
 const STEPS = [
@@ -138,7 +138,7 @@ export default function FirstTimeBuyerPage() {
               <p className="text-[1.05rem] text-ink-mid leading-relaxed mt-5 max-w-[46ch]">
                 Renting, browsing Zillow at midnight, or actually ready — doesn&rsquo;t matter.
                 Send this over and David or Bri will come back with an honest read on your
-                numbers, usually within two business hours. Then you&rsquo;ll know.
+                numbers. Then you&rsquo;ll know.
               </p>
               <p className="text-[0.85rem] text-ink-mid leading-relaxed mt-6">
                 Prefer to talk now? Call{" "}

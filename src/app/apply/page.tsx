@@ -22,7 +22,7 @@ export default function ApplyPage() {
     <>
       <Nav />
       <main className="bg-paper pt-[clamp(24px,5vh,56px)] pb-[clamp(56px,8vw,120px)]">
-        <div className="max-w-[1100px] mx-auto px-5 lg:px-[54px]">
+        <div className="max-w-[1180px] mx-auto px-5 lg:px-[54px]">
           <p className="font-body text-[0.7rem] tracking-[0.14em] uppercase text-ink-light mb-5">
             Start your application
           </p>
@@ -34,38 +34,62 @@ export default function ApplyPage() {
             through Movement Mortgage, secure and about 15 minutes.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-[clamp(14px,1.6vw,24px)] mt-12">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mt-[clamp(64px,8vw,112px)]">
             {/* David */}
-            <div className="border border-border rounded-[3px] p-8 flex flex-col">
-              <div className="font-grotesk font-extrabold text-[13px] text-orange">01</div>
-              <h2 className="font-grotesk font-bold text-[clamp(22px,2.4vw,30px)] mt-2">David Chandler</h2>
-              <p className="font-body text-[0.72rem] tracking-[0.1em] uppercase text-ink-light mt-1">
-                Movement Mortgage · NMLS #265974
-              </p>
-              <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-4 flex-1">
-                Licensed in AZ, GA, OR &amp; WA. Purchases, refinances, and everything in between.
-              </p>
-              <div className="mt-6">
-                <Btn href={DAVID_APPLY} external variant="primary" size="lg">
-                  Apply with David
-                </Btn>
+            <div className="group overflow-hidden rounded-[1.5rem] border border-border bg-paper shadow-[0_24px_70px_rgba(0,0,0,0.05)]">
+              <div className="relative aspect-[16/10] overflow-hidden bg-bg-alt">
+                <div className="absolute inset-x-0 bottom-0 z-10 h-px bg-ink" aria-hidden />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/team/david-serious.webp"
+                  alt="David Chandler"
+                  width="1024"
+                  height="1024"
+                  className="h-full w-full object-cover object-[center_22%] grayscale transition-all duration-700 group-hover:scale-[1.025] group-hover:grayscale-0"
+                />
+              </div>
+              <div className="p-6 sm:p-8 flex flex-col">
+                <h2 className="font-serif text-[clamp(28px,3vw,40px)] leading-none">David Chandler</h2>
+                <p className="font-body text-[0.72rem] tracking-[0.1em] uppercase text-ink-light mt-2">
+                  Movement Mortgage · NMLS #265974
+                </p>
+                <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-5 flex-1">
+                  Licensed in AZ, GA, OR &amp; WA. Purchases, refinances, and everything in between.
+                </p>
+                <div className="mt-7">
+                  <Btn href={DAVID_APPLY} external variant="primary" size="lg" className="w-full justify-between sm:w-auto">
+                    Apply with David
+                  </Btn>
+                </div>
               </div>
             </div>
 
             {/* Bri */}
-            <div className="border border-border rounded-[3px] p-8 flex flex-col">
-              <div className="font-grotesk font-extrabold text-[13px] text-orange">02</div>
-              <h2 className="font-grotesk font-bold text-[clamp(22px,2.4vw,30px)] mt-2">Bri Lindley</h2>
-              <p className="font-body text-[0.72rem] tracking-[0.1em] uppercase text-ink-light mt-1">
-                Movement Mortgage · NMLS #1367416
-              </p>
-              <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-4 flex-1">
-                Senior Loan Officer &amp; Certified Divorce Lending Professional. Licensed in OR &amp; WA.
-              </p>
-              <div className="mt-6">
-                <Btn href={BRI_APPLY || "/contact"} external={Boolean(BRI_APPLY)} variant="outline" size="lg">
-                  {BRI_APPLY ? "Apply with Bri" : "Start with Bri"}
-                </Btn>
+            <div className="group overflow-hidden rounded-[1.5rem] border border-border bg-paper shadow-[0_24px_70px_rgba(0,0,0,0.05)]">
+              <div className="relative aspect-[16/10] overflow-hidden bg-bg-alt">
+                <div className="absolute inset-x-0 bottom-0 z-10 h-px bg-ink" aria-hidden />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/team/bri-serious.webp"
+                  alt="Bri Lindley"
+                  width="800"
+                  height="1280"
+                  className="h-full w-full object-cover object-[center_18%] grayscale transition-all duration-700 group-hover:scale-[1.025] group-hover:grayscale-0"
+                />
+              </div>
+              <div className="p-6 sm:p-8 flex flex-col">
+                <h2 className="font-serif text-[clamp(28px,3vw,40px)] leading-none">Bri Lindley</h2>
+                <p className="font-body text-[0.72rem] tracking-[0.1em] uppercase text-ink-light mt-2">
+                  Movement Mortgage · NMLS #1367416
+                </p>
+                <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-5 flex-1">
+                  Senior Loan Officer &amp; Certified Divorce Lending Professional. Licensed in OR &amp; WA.
+                </p>
+                <div className="mt-7">
+                  <Btn href={BRI_APPLY || "/contact"} external={Boolean(BRI_APPLY)} variant="outline" size="lg" className="w-full justify-between sm:w-auto">
+                    {BRI_APPLY ? "Apply with Bri" : "Start with Bri"}
+                  </Btn>
+                </div>
               </div>
             </div>
           </div>
