@@ -28,7 +28,6 @@ const exploreLinks = [
 
 const teamLinks = [
   { name: "Meet David & Bri", href: "/about" },
-  { name: "Our story", href: "/about" },
   { name: "Calculator", href: "/calculator" },
 ];
 
