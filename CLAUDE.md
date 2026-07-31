@@ -15,6 +15,23 @@ accepted it and aliased it to `thelindleyteam.com`, so production ran commit
 lines lived only on one laptop and in Vercel's file storage until they were
 recovered through the deployment files API.
 
+### Why it went unnoticed for so long
+
+The CLI deploy was the symptom. The cause was that the Vercel project's Production
+environment tracked a branch named **`master`**, which has never existed in this
+repository — the default has always been `main`. So *no* git push, on any branch,
+could ever produce a production deployment. Every push built a preview and stopped
+there, which is why deploying from a laptop looked like the only thing that worked.
+
+Fixed on 2026-07-31: Production now tracks `main` (Vercel → Settings →
+Environments → Production). If pushes to `main` ever stop publishing, check that
+setting first — it is the single point of failure for this whole workflow.
+
+Note that the public Vercel REST API cannot change this value; it is a dashboard
+or CLI operation. The API *can* create a production deployment directly
+(`POST /v13/deployments` with `target: "production"` and a `gitSource` ref), which
+is how the 2026-07-31 release was published before the setting was corrected.
+
 What follows from that:
 
 - `main` is the source of truth and must always match what is live.
