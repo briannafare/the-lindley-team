@@ -426,7 +426,7 @@ export default function PaymentStrategyCalculator() {
                         key={key}
                         className={`py-2.5 px-3 text-right tabular-nums ${
                           isBaseline ? "text-gray-400" : "text-gray-800"
-                        } ${isBest ? "font-bold text-emerald-600" : ""}`}
+                        } ${isBest ? "font-bold text-emerald-600" : ""} whitespace-nowrap`}
                       >
                         {val}
                       </td>

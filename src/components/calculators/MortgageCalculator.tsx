@@ -173,7 +173,7 @@ function BreakdownRow({
         />
         <span className="text-sm text-ink-700">{label}</span>
       </div>
-      <span className="text-sm font-semibold text-ink-900 tabular-nums">
+      <span className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">
         {formatCurrencyPrecise(amount)}
       </span>
     </div>
@@ -230,7 +230,7 @@ function PaymentDonut({
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className="text-xs text-ink-500">Monthly</span>
-        <span className="font-display text-lg font-bold text-ink-900 tabular-nums">
+        <span className="font-display text-lg font-bold text-ink-900 tabular-nums whitespace-nowrap">
           {formatCurrency(total)}
         </span>
       </div>
@@ -257,10 +257,10 @@ function DonutLegendRow({
         style={{ backgroundColor: color }}
       />
       <span className="flex-1 text-sm text-ink-700">{label}</span>
-      <span className="w-12 text-right text-sm text-ink-500 tabular-nums">
+      <span className="w-12 text-right text-sm text-ink-500 tabular-nums whitespace-nowrap">
         {pct.toFixed(0)}%
       </span>
-      <span className="w-20 text-right text-sm font-medium text-ink-900 tabular-nums">
+      <span className="w-20 text-right text-sm font-medium text-ink-900 tabular-nums whitespace-nowrap">
         {formatCurrencyPrecise(amount)}
       </span>
     </div>
@@ -721,19 +721,19 @@ function FullCalculator(c: ReturnType<typeof useCalculator>) {
             )}
             <div className="mt-1 flex items-center justify-between border-t border-surface-200 pt-3">
               <span className="text-sm font-semibold text-ink-900">Total</span>
-              <span className="text-base font-bold text-ink-900 tabular-nums">
+              <span className="text-base font-bold text-ink-900 tabular-nums whitespace-nowrap">
                 {formatCurrencyPrecise(results.totalMonthlyPayment)}
               </span>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="result-card text-center">
             <p className="mb-1 text-xs uppercase tracking-wider text-ink-500">
               LTV
             </p>
-            <p className="font-display text-2xl font-bold text-ink-900 tabular-nums">
+            <p className="font-display text-2xl font-bold text-ink-900 tabular-nums whitespace-nowrap">
               {formatPercent(results.ltv, 0)}
             </p>
             {results.ltv > 0.8 && (
@@ -744,7 +744,7 @@ function FullCalculator(c: ReturnType<typeof useCalculator>) {
             <p className="mb-1 text-xs uppercase tracking-wider text-ink-500">
               Total interest
             </p>
-            <p className="font-display text-2xl font-bold text-ink-900 tabular-nums">
+            <p className="font-display text-2xl font-bold text-ink-900 tabular-nums whitespace-nowrap">
               {formatCurrency(results.totalInterestPaid)}
             </p>
             <p className="mt-1 text-xs text-ink-400">over {c.loanTerm} years</p>

@@ -270,7 +270,7 @@ export default function HouseHackingCalculator() {
             {/* Monthly Costs */}
             <div className="section-card space-y-4">
               <h2 className="font-semibold text-gray-800">Monthly Costs</h2>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
                   <label className="input-label">Property Tax</label>
                   <div className="relative">
@@ -377,7 +377,7 @@ export default function HouseHackingCalculator() {
             <div className="section-card text-center py-8">
               <p className="text-sm text-gray-500 mb-1">Your Effective Monthly Housing Cost</p>
               <div
-                className="text-5xl font-bold tabular-nums mb-2"
+                className="text-5xl font-bold tabular-nums mb-2 whitespace-nowrap"
                 style={{ color: effectiveColor }}
               >
                 {effectiveIsNegative ? "+" : ""}{fmt(Math.abs(r.effectiveMonthlyCost))}

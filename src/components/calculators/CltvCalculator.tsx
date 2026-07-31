@@ -234,7 +234,7 @@ export default function CltvCalculator() {
             <div className="result-card border border-surface-200 bg-gradient-to-br from-white to-surface-50">
               <p className="text-xs font-medium uppercase tracking-widest text-ink-500 mb-1">Blended Interest Rate</p>
               <div className="flex items-end gap-3 mb-1">
-                <p className="font-display text-5xl sm:text-6xl font-bold text-ink-900 tabular-nums leading-none">
+                <p className="font-display text-5xl sm:text-6xl font-bold text-ink-900 tabular-nums leading-none whitespace-nowrap">
                   {results.blendedRate.toFixed(3)}
                 </p>
                 <span className="text-2xl font-semibold text-ink-400 mb-1">%</span>
@@ -259,21 +259,21 @@ export default function CltvCalculator() {
             </div>
 
             {/* Metric Cards */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Total Balances</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-ink-900">{formatCurrency(results.totalBalance)}</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{formatCurrency(results.totalBalance)}</p>
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Available Equity</p>
-                <p className={`text-2xl font-bold font-display tabular-nums ${results.availableEquity >= 0 ? "text-emerald-700" : "text-red-600"}`}>
+                <p className={`text-2xl font-bold font-display tabular-nums ${results.availableEquity >= 0 ? "text-emerald-700" : "text-red-600"} whitespace-nowrap`}>
                   {results.availableEquity >= 0 ? formatCurrency(results.availableEquity) : `-${formatCurrency(Math.abs(results.availableEquity))}`}
                 </p>
                 <p className="text-xs text-ink-400 mt-0.5">{results.equityPercent.toFixed(1)}% of value</p>
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Combined Payment</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-ink-900">{formatCurrency(results.totalMonthlyPayments)}</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{formatCurrency(results.totalMonthlyPayments)}</p>
                 <p className="text-xs text-ink-400 mt-0.5">per month</p>
               </div>
             </div>
@@ -296,10 +296,10 @@ export default function CltvCalculator() {
                       <p className="text-sm font-medium text-ink-900">{lien.label}</p>
                       <p className="text-xs text-ink-400">{formatCurrencyPrecise(lien.payment)}/mo</p>
                     </div>
-                    <p className="text-sm font-semibold text-ink-900 text-right tabular-nums">{formatCurrency(lien.balance)}</p>
-                    <p className="text-sm font-semibold text-ink-900 text-right tabular-nums">{lien.rate.toFixed(3)}%</p>
+                    <p className="text-sm font-semibold text-ink-900 text-right tabular-nums whitespace-nowrap">{formatCurrency(lien.balance)}</p>
+                    <p className="text-sm font-semibold text-ink-900 text-right tabular-nums whitespace-nowrap">{lien.rate.toFixed(3)}%</p>
                     <div className="text-right">
-                      <p className="text-sm font-semibold text-ink-900 tabular-nums">{lien.weightPct.toFixed(1)}%</p>
+                      <p className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">{lien.weightPct.toFixed(1)}%</p>
                       <p className="text-xs text-ink-400">+{lien.rateContribution.toFixed(3)}%</p>
                     </div>
                   </div>
@@ -308,9 +308,9 @@ export default function CltvCalculator() {
                 {/* Total row */}
                 <div className="grid grid-cols-4 gap-2 pt-3 items-center">
                   <p className="text-sm font-bold text-ink-900">Total</p>
-                  <p className="text-sm font-bold text-ink-900 text-right tabular-nums">{formatCurrency(results.totalBalance)}</p>
-                  <p className="text-sm font-bold text-ink-900 text-right tabular-nums">{results.blendedRate.toFixed(3)}%</p>
-                  <p className="text-sm font-bold text-ink-900 text-right tabular-nums">100%</p>
+                  <p className="text-sm font-bold text-ink-900 text-right tabular-nums whitespace-nowrap">{formatCurrency(results.totalBalance)}</p>
+                  <p className="text-sm font-bold text-ink-900 text-right tabular-nums whitespace-nowrap">{results.blendedRate.toFixed(3)}%</p>
+                  <p className="text-sm font-bold text-ink-900 text-right tabular-nums whitespace-nowrap">100%</p>
                 </div>
               </div>
 
@@ -340,7 +340,7 @@ export default function CltvCalculator() {
                           <p className="text-xs text-ink-400">Max total liens: {formatCurrency(maxTotal)}</p>
                         </div>
                         <div className="text-right">
-                          <span className={`text-sm font-bold tabular-nums ${available > 0 ? "text-emerald-700" : "text-ink-400"}`}>
+                          <span className={`text-sm font-bold tabular-nums ${available > 0 ? "text-emerald-700" : "text-ink-400"} whitespace-nowrap`}>
                             {available > 0 ? `${formatCurrency(available)} available` : "—"}
                           </span>
                         </div>

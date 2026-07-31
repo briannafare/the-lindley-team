@@ -81,7 +81,7 @@ function PanelRow({ label, value, accent, muted }: { label: string; value: strin
   return (
     <div className="flex justify-between items-center py-1.5">
       <span className={`text-sm ${muted ? "text-ink-400" : "text-ink-500"}`}>{label}</span>
-      <span className={`text-sm font-semibold tabular-nums ${accent ? "text-emerald-700" : muted ? "text-ink-400" : "text-ink-900"}`}>{value}</span>
+      <span className={`text-sm font-semibold tabular-nums ${accent ? "text-emerald-700" : muted ? "text-ink-400" : "text-ink-900"} whitespace-nowrap`}>{value}</span>
     </div>
   );
 }
@@ -216,7 +216,7 @@ export default function MoveUpCalculator() {
             {r.isUnderwater ? (
               <div className="result-card border border-red-200 bg-red-50">
                 <p className="text-xs font-medium uppercase tracking-widest text-red-600 mb-1">Warning — Underwater</p>
-                <p className="font-display text-4xl font-bold text-red-700 tabular-nums leading-none mb-2">
+                <p className="font-display text-4xl font-bold text-red-700 tabular-nums leading-none mb-2 whitespace-nowrap">
                   {formatCurrency(r.netProceedsFromSale)}
                 </p>
                 <p className="text-sm text-red-700">
@@ -226,7 +226,7 @@ export default function MoveUpCalculator() {
             ) : (
               <div className="result-card border border-emerald-200 bg-gradient-to-br from-white to-emerald-50">
                 <p className="text-xs font-medium uppercase tracking-widest text-ink-500 mb-1">Net Proceeds from Sale</p>
-                <p className="font-display text-5xl sm:text-6xl font-bold text-emerald-700 tabular-nums leading-none mb-2">
+                <p className="font-display text-5xl sm:text-6xl font-bold text-emerald-700 tabular-nums leading-none mb-2 whitespace-nowrap">
                   {formatCurrency(r.netProceedsFromSale)}
                 </p>
                 <div className="flex flex-wrap gap-4 mt-1 text-sm text-ink-500">
@@ -240,9 +240,9 @@ export default function MoveUpCalculator() {
             {/* Today → After You Move */}
             <div className="result-card">
               <h3 className="section-title">Today → After You Move</h3>
-              <div className="flex items-stretch gap-3">
+              <div className="flex flex-col sm:flex-row items-stretch gap-3">
                 <TransitionPanel label="Today">
-                  <p className="font-display text-3xl font-bold text-ink-900 tabular-nums mb-1">
+                  <p className="font-display text-3xl font-bold text-ink-900 tabular-nums mb-1 whitespace-nowrap">
                     {formatCurrency(currentMonthlyPayment)}
                     <span className="text-sm font-normal text-ink-400 ml-1">/mo</span>
                   </p>
@@ -268,7 +268,7 @@ export default function MoveUpCalculator() {
                 </div>
 
                 <TransitionPanel label="After You Move" accent>
-                  <p className="font-display text-3xl font-bold text-emerald-900 tabular-nums mb-1">
+                  <p className="font-display text-3xl font-bold text-emerald-900 tabular-nums mb-1 whitespace-nowrap">
                     {formatCurrency(r.newTotalMonthlyPayment)}
                     <span className="text-sm font-normal text-emerald-600 ml-1">/mo</span>
                   </p>
@@ -298,12 +298,12 @@ export default function MoveUpCalculator() {
                       <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: row.dot }} />
                       <span className="text-sm text-ink-700">{row.label}</span>
                     </div>
-                    <span className="text-sm font-semibold tabular-nums text-ink-900">{formatCurrencyPrecise(row.value)}</span>
+                    <span className="text-sm font-semibold tabular-nums text-ink-900 whitespace-nowrap">{formatCurrencyPrecise(row.value)}</span>
                   </div>
                 ))}
                 <div className="flex items-center justify-between py-3">
                   <span className="text-sm font-bold text-ink-900">Total Monthly Payment</span>
-                  <span className="text-lg font-bold tabular-nums text-ink-900">{formatCurrencyPrecise(r.newTotalMonthlyPayment)}</span>
+                  <span className="text-lg font-bold tabular-nums text-ink-900 whitespace-nowrap">{formatCurrencyPrecise(r.newTotalMonthlyPayment)}</span>
                 </div>
               </div>
 
@@ -317,10 +317,10 @@ export default function MoveUpCalculator() {
             </div>
 
             {/* Key metrics */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Payment Change</p>
-                <p className={`text-2xl font-bold font-display tabular-nums ${paymentUp ? "text-red-600" : "text-emerald-700"}`}>
+                <p className={`text-2xl font-bold font-display tabular-nums ${paymentUp ? "text-red-600" : "text-emerald-700"} whitespace-nowrap`}>
                   {paymentUp ? "+" : "−"}{formatCurrency(Math.abs(r.paymentDifference))}
                 </p>
                 <p className="text-xs text-ink-400 mt-0.5">
@@ -329,14 +329,14 @@ export default function MoveUpCalculator() {
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">New LTV</p>
-                <p className={`text-2xl font-bold font-display tabular-nums ${ltvHigh ? "text-amber-700" : "text-emerald-700"}`}>
+                <p className={`text-2xl font-bold font-display tabular-nums ${ltvHigh ? "text-amber-700" : "text-emerald-700"} whitespace-nowrap`}>
                   {r.newLtv.toFixed(1)}%
                 </p>
                 {ltvHigh && <p className="text-xs text-amber-600 mt-0.5">PMI may apply</p>}
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Down Payment</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-ink-900">{formatCurrency(r.downPayment)}</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{formatCurrency(r.downPayment)}</p>
                 <p className="text-xs text-ink-400 mt-0.5">{r.downPaymentPct.toFixed(1)}% of price</p>
               </div>
             </div>
@@ -355,7 +355,7 @@ export default function MoveUpCalculator() {
                 ].map((row) => (
                   <div key={row.label} className="flex justify-between items-center py-3">
                     <span className={`text-sm ${row.bold ? "font-bold text-ink-900" : "text-ink-600"}`}>{row.label}</span>
-                    <span className={`text-sm tabular-nums ${row.bold ? "font-bold text-lg" : "font-medium"} ${row.accent ? "text-emerald-700" : r.isUnderwater && row.bold ? "text-red-600" : "text-ink-900"}`}>
+                    <span className={`text-sm tabular-nums ${row.bold ? "font-bold text-lg" : "font-medium"} ${row.accent ? "text-emerald-700" : r.isUnderwater && row.bold ? "text-red-600" : "text-ink-900"} whitespace-nowrap`}>
                       {row.value}
                     </span>
                   </div>

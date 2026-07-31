@@ -57,10 +57,10 @@ export default function Btn({
 }) {
   const v = VARIANTS[variant];
   const s = SIZES[size];
-  const cls = `group/btn inline-flex items-center rounded-full font-body font-bold uppercase transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${s.pill} ${v.pill} ${className}`;
+  const cls = `group/btn inline-flex items-center max-w-full rounded-full font-body font-bold uppercase transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${s.pill} ${v.pill} ${className}`;
   const inner = (
     <>
-      <span className="whitespace-nowrap">{children}</span>
+      <span className="whitespace-normal sm:whitespace-nowrap">{children}</span>
       <span
         className={`flex items-center justify-center rounded-full shrink-0 transition-colors duration-300 ${s.chip} ${v.chip}`}
         aria-hidden

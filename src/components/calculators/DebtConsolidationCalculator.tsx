@@ -277,7 +277,7 @@ export default function DebtConsolidationCalculator() {
             {/* New Loan */}
             <div className="section-card space-y-4">
               <h2 className="font-semibold text-gray-800">New Mortgage Loan</h2>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
                   <label className="input-label">New Rate</label>
                   <div className="relative">
@@ -337,7 +337,7 @@ export default function DebtConsolidationCalculator() {
             <div className="section-card space-y-4">
               <h2 className="font-semibold text-gray-800">Current Blended Rate</h2>
               <div className="text-center py-4">
-                <p className="text-5xl font-bold text-gray-900 tabular-nums">
+                <p className="text-5xl font-bold text-gray-900 tabular-nums whitespace-nowrap">
                   {fmtPct(r.blendedRate)}
                 </p>
                 <p className="text-gray-400 text-sm mt-1">weighted average across all debts</p>
@@ -382,7 +382,7 @@ export default function DebtConsolidationCalculator() {
                 >
                   <p className="text-xs text-gray-500 mb-1">New consolidated</p>
                   <p
-                    className="text-2xl font-bold tabular-nums"
+                    className="text-2xl font-bold tabular-nums whitespace-nowrap"
                     style={{ color: savingsPositive ? "#059669" : "#d97706" }}
                   >
                     {fmtFull(r.newMonthlyPayment)}
@@ -529,18 +529,18 @@ export default function DebtConsolidationCalculator() {
                           <span className="text-gray-700">{item.label}</span>
                         </div>
                       </td>
-                      <td className="py-2 pr-3 tabular-nums text-gray-700">{fmt(item.balance)}</td>
-                      <td className="py-2 pr-3 tabular-nums text-gray-700">{fmtPct(item.annualRate)}</td>
-                      <td className="py-2 pr-3 tabular-nums text-gray-700">{fmtFull(item.monthlyPayment)}</td>
-                      <td className="py-2 tabular-nums text-gray-700">{fmt(item.totalInterestRemaining)}</td>
+                      <td className="py-2 pr-3 tabular-nums text-gray-700 whitespace-nowrap">{fmt(item.balance)}</td>
+                      <td className="py-2 pr-3 tabular-nums text-gray-700 whitespace-nowrap">{fmtPct(item.annualRate)}</td>
+                      <td className="py-2 pr-3 tabular-nums text-gray-700 whitespace-nowrap">{fmtFull(item.monthlyPayment)}</td>
+                      <td className="py-2 tabular-nums text-gray-700 whitespace-nowrap">{fmt(item.totalInterestRemaining)}</td>
                     </tr>
                   ))}
                   <tr className="bg-gray-50 font-semibold">
                     <td className="py-2 pr-3 text-gray-800">Total</td>
-                    <td className="py-2 pr-3 tabular-nums text-gray-800">{fmt(r.totalCurrentBalance)}</td>
-                    <td className="py-2 pr-3 tabular-nums text-gray-800">{fmtPct(r.blendedRate)}</td>
-                    <td className="py-2 pr-3 tabular-nums text-gray-800">{fmtFull(r.totalCurrentMonthlyPayments)}</td>
-                    <td className="py-2 tabular-nums text-gray-800">{fmt(r.totalCurrentInterestRemaining)}</td>
+                    <td className="py-2 pr-3 tabular-nums text-gray-800 whitespace-nowrap">{fmt(r.totalCurrentBalance)}</td>
+                    <td className="py-2 pr-3 tabular-nums text-gray-800 whitespace-nowrap">{fmtPct(r.blendedRate)}</td>
+                    <td className="py-2 pr-3 tabular-nums text-gray-800 whitespace-nowrap">{fmtFull(r.totalCurrentMonthlyPayments)}</td>
+                    <td className="py-2 tabular-nums text-gray-800 whitespace-nowrap">{fmt(r.totalCurrentInterestRemaining)}</td>
                   </tr>
                 </tbody>
               </table>

@@ -40,7 +40,7 @@ export default function MeetTheTeam() {
   return (
     <section className="max-w-[1440px] mx-auto px-5 lg:px-[54px] mt-[clamp(76px,9vw,148px)]">
       {/* header */}
-      <div className="flex items-baseline justify-between gap-5 border-t border-ink pt-5">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-5 gap-y-2 border-t border-ink pt-5">
         <h2 className="font-serif font-semibold text-[clamp(30px,3.8vw,52px)] leading-none tracking-[-0.025em]">
           Meet David &amp; Bri
         </h2>

@@ -133,7 +133,7 @@ function BreakdownRow({
         />
         <span className="text-sm text-ink-700">{label}</span>
       </div>
-      <span className="text-sm font-semibold text-ink-900 tabular-nums">
+      <span className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">
         {formatCurrencyPrecise(amount)}
       </span>
     </div>
@@ -190,7 +190,7 @@ function PaymentDonut({
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className="text-xs text-ink-500">Monthly</span>
-        <span className="text-lg font-bold text-ink-900 font-display tabular-nums">
+        <span className="text-lg font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">
           {formatCurrency(total)}
         </span>
       </div>
@@ -208,10 +208,10 @@ function DonutLegendRow({
     <div className="flex items-center gap-3">
       <span className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: color }} />
       <span className="text-sm text-ink-700 flex-1">{label}</span>
-      <span className="text-sm text-ink-500 tabular-nums w-12 text-right">
+      <span className="text-sm text-ink-500 tabular-nums w-12 text-right whitespace-nowrap">
         {pct.toFixed(0)}%
       </span>
-      <span className="text-sm font-medium text-ink-900 tabular-nums w-20 text-right">
+      <span className="text-sm font-medium text-ink-900 tabular-nums w-20 text-right whitespace-nowrap">
         {formatCurrencyPrecise(amount)}
       </span>
     </div>
@@ -501,7 +501,7 @@ export default function UsdaCalculator() {
                 )}
                 <div className="flex items-center justify-between pt-3 mt-1 border-t border-surface-200">
                   <span className="text-sm font-semibold text-ink-900">Total</span>
-                  <span className="text-base font-bold text-ink-900 tabular-nums">
+                  <span className="text-base font-bold text-ink-900 tabular-nums whitespace-nowrap">
                     {formatCurrencyPrecise(results.totalMonthlyPayment)}
                   </span>
                 </div>
@@ -545,7 +545,7 @@ export default function UsdaCalculator() {
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-semibold text-ink-900 tabular-nums">
+                    <p className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">
                       {formatCurrency(results.guaranteeFeeAmount)}
                     </p>
                     {financeGuaranteeFee && (
@@ -565,7 +565,7 @@ export default function UsdaCalculator() {
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-semibold text-ink-900 tabular-nums">
+                    <p className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">
                       {formatCurrency(results.monthlyAnnualFee)}/mo
                     </p>
                     <p className="text-xs text-ink-400 mt-0.5">
@@ -583,10 +583,10 @@ export default function UsdaCalculator() {
             </div>
 
             {/* Summary Metrics */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Down Payment</p>
-                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums">
+                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">
                   {results.downPaymentPercent > 0
                     ? `${results.downPaymentPercent.toFixed(1)}%`
                     : "$0"}
@@ -600,7 +600,7 @@ export default function UsdaCalculator() {
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Total Interest</p>
-                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums">
+                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">
                   {formatCurrency(results.totalInterestPaid)}
                 </p>
                 <p className="text-xs text-ink-400 mt-1">over {loanTerm} years</p>

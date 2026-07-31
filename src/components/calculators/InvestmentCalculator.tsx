@@ -77,8 +77,8 @@ function ProFormaRow({
   return (
     <div className={`grid grid-cols-3 gap-4 py-2.5 ${bold ? "border-t border-surface-200" : ""}`}>
       <span className={`text-sm col-span-1 ${labelClass}`}>{label}</span>
-      <span className={`text-sm tabular-nums text-right ${valueClass}`}>{display(annual)}</span>
-      <span className={`text-sm tabular-nums text-right ${valueClass}`}>
+      <span className={`text-sm tabular-nums text-right ${valueClass} whitespace-nowrap`}>{display(annual)}</span>
+      <span className={`text-sm tabular-nums text-right ${valueClass} whitespace-nowrap`}>
         {monthly !== undefined ? display(monthly) : ""}
       </span>
     </div>
@@ -102,7 +102,7 @@ function MetricCard({
   return (
     <div className="result-card text-center">
       <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">{label}</p>
-      <p className={`font-bold font-display tabular-nums ${color} ${size === "large" ? "text-3xl" : "text-2xl"}`}>{value}</p>
+      <p className={`font-bold font-display tabular-nums ${color} ${size === "large" ? "text-3xl" : "text-2xl"} whitespace-nowrap`}>{value}</p>
       {sub && <p className="text-xs text-ink-400 mt-0.5">{sub}</p>}
     </div>
   );
@@ -233,7 +233,7 @@ export default function InvestmentCalculator() {
             {/* Monthly cash flow hero */}
             <div className={`result-card border ${cashFlowGood ? "border-emerald-200 bg-gradient-to-br from-white to-emerald-50" : "border-red-200 bg-gradient-to-br from-white to-red-50"}`}>
               <p className="text-xs font-medium uppercase tracking-widest text-ink-500 mb-1">Monthly Cash Flow</p>
-              <p className={`font-display text-5xl sm:text-6xl font-bold tabular-nums leading-none mb-2 ${cashFlowGood ? "text-emerald-700" : "text-red-600"}`}>
+              <p className={`font-display text-5xl sm:text-6xl font-bold tabular-nums leading-none mb-2 ${cashFlowGood ? "text-emerald-700" : "text-red-600"} whitespace-nowrap`}>
                 {r.monthlyCashFlow >= 0 ? "+" : ""}{formatCurrency(r.monthlyCashFlow)}
               </p>
               <p className="text-sm text-ink-500">
@@ -284,14 +284,14 @@ export default function InvestmentCalculator() {
               <div className="mt-4 grid grid-cols-2 gap-4">
                 <div className="rounded-xl bg-surface-50 border border-surface-200 px-4 py-3">
                   <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Cash-on-Cash Return</p>
-                  <p className={`text-2xl font-bold font-display tabular-nums ${r.cashOnCashReturn > 0 ? "text-emerald-700" : "text-red-600"}`}>
+                  <p className={`text-2xl font-bold font-display tabular-nums ${r.cashOnCashReturn > 0 ? "text-emerald-700" : "text-red-600"} whitespace-nowrap`}>
                     {r.cashOnCashReturn}%
                   </p>
                   <p className="text-xs text-ink-400 mt-0.5">{formatCurrency(r.annualCashFlow)} / {formatCurrency(r.totalCashInvested)}</p>
                 </div>
                 <div className="rounded-xl bg-surface-50 border border-surface-200 px-4 py-3">
                   <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">DSCR</p>
-                  <p className={`text-2xl font-bold font-display tabular-nums ${dscrGood ? "text-emerald-700" : r.dscr >= 1.0 ? "text-amber-700" : "text-red-600"}`}>
+                  <p className={`text-2xl font-bold font-display tabular-nums ${dscrGood ? "text-emerald-700" : r.dscr >= 1.0 ? "text-amber-700" : "text-red-600"} whitespace-nowrap`}>
                     {r.dscr}×
                   </p>
                   <p className="text-xs text-ink-400 mt-0.5">{dscrGood ? "Lender minimum met" : r.dscr >= 1.0 ? "Below 1.25 lender min" : "Below break-even"}</p>
@@ -302,17 +302,17 @@ export default function InvestmentCalculator() {
                 <div className="mt-4 grid grid-cols-3 gap-4">
                   <div className="rounded-xl bg-surface-50 border border-surface-200 px-4 py-3 text-center">
                     <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">GRM</p>
-                    <p className="text-xl font-bold font-display tabular-nums text-ink-900">{r.grm}×</p>
+                    <p className="text-xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{r.grm}×</p>
                     <p className="text-xs text-ink-400 mt-0.5">Price / Gross Rent</p>
                   </div>
                   <div className="rounded-xl bg-surface-50 border border-surface-200 px-4 py-3 text-center">
                     <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Expense Ratio</p>
-                    <p className="text-xl font-bold font-display tabular-nums text-ink-900">{r.operatingExpenseRatio}%</p>
+                    <p className="text-xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{r.operatingExpenseRatio}%</p>
                     <p className="text-xs text-ink-400 mt-0.5">OpEx / EGI</p>
                   </div>
                   <div className="rounded-xl bg-surface-50 border border-surface-200 px-4 py-3 text-center">
                     <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Cash Invested</p>
-                    <p className="text-xl font-bold font-display tabular-nums text-ink-900">{formatCurrency(r.totalCashInvested)}</p>
+                    <p className="text-xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{formatCurrency(r.totalCashInvested)}</p>
                     <p className="text-xs text-ink-400 mt-0.5">Down + closing</p>
                   </div>
                 </div>
@@ -370,7 +370,7 @@ export default function InvestmentCalculator() {
                 <p className={`text-xs font-semibold uppercase tracking-wider mb-2 ${dscrGood ? "text-emerald-700" : "text-amber-700"}`}>
                   DSCR — Debt Service Coverage Ratio
                 </p>
-                <p className={`font-display text-4xl font-bold tabular-nums mb-2 ${dscrGood ? "text-emerald-900" : r.dscr >= 1.0 ? "text-amber-800" : "text-red-700"}`}>
+                <p className={`font-display text-4xl font-bold tabular-nums mb-2 ${dscrGood ? "text-emerald-900" : r.dscr >= 1.0 ? "text-amber-800" : "text-red-700"} whitespace-nowrap`}>
                   {r.dscr}×
                 </p>
                 <p className={`text-sm leading-relaxed ${dscrGood ? "text-emerald-800" : "text-amber-800"}`}>

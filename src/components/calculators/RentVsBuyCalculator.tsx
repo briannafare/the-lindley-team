@@ -136,7 +136,7 @@ function DetailRow({ label, value, bold, accent, indent }: { label: string; valu
   return (
     <div className="flex justify-between text-sm py-0.5">
       <span className={`${indent ? "pl-3 text-ink-400" : bold ? "text-ink-700 font-medium" : "text-ink-500"}`}>{label}</span>
-      <span className={`font-medium tabular-nums ${accent ? "text-emerald-700 font-bold" : bold ? "text-ink-900 font-bold" : "text-ink-900"}`}>{value}</span>
+      <span className={`font-medium tabular-nums ${accent ? "text-emerald-700 font-bold" : bold ? "text-ink-900 font-bold" : "text-ink-900"} whitespace-nowrap`}>{value}</span>
     </div>
   );
 }
@@ -357,7 +357,7 @@ export default function RentVsBuyCalculator() {
                 <div className="flex-1">
                   <p className="text-xs font-semibold uppercase tracking-wider text-indigo-700 mb-1">Estimated Tax Benefit of Ownership</p>
                   <div className="flex items-baseline gap-3 flex-wrap">
-                    <span className="font-display text-3xl font-bold text-indigo-900 tabular-nums">
+                    <span className="font-display text-3xl font-bold text-indigo-900 tabular-nums whitespace-nowrap">
                       {formatCurrency(r.totalTaxSavings)}
                     </span>
                     <span className="text-sm text-indigo-700">over {holdingLabel}</span>
@@ -365,11 +365,11 @@ export default function RentVsBuyCalculator() {
                   <div className="mt-3 grid grid-cols-3 gap-3">
                     <div>
                       <p className="text-xs text-indigo-600">Year 1</p>
-                      <p className="text-sm font-bold text-indigo-900 tabular-nums">{formatCurrency(r.firstYearTaxSavings)}</p>
+                      <p className="text-sm font-bold text-indigo-900 tabular-nums whitespace-nowrap">{formatCurrency(r.firstYearTaxSavings)}</p>
                     </div>
                     <div>
                       <p className="text-xs text-indigo-600">Annual avg</p>
-                      <p className="text-sm font-bold text-indigo-900 tabular-nums">{formatCurrency(r.averageAnnualTaxSavings)}</p>
+                      <p className="text-sm font-bold text-indigo-900 tabular-nums whitespace-nowrap">{formatCurrency(r.averageAnnualTaxSavings)}</p>
                     </div>
                     <div>
                       <p className="text-xs text-indigo-600">Marginal rate</p>
@@ -395,7 +395,7 @@ export default function RentVsBuyCalculator() {
             {/* Side-by-side scenario */}
             <div className="result-card">
               <h3 className="section-title">After {holdingLabel} — Net Wealth Comparison</h3>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <ScenarioCard label="Buying" accent={r.buyingWins}>
                   <div className="space-y-1.5">
                     <DetailRow label="Home value" value={formatCurrency(r.homeValueAtEnd)} />
@@ -435,19 +435,19 @@ export default function RentVsBuyCalculator() {
             </div>
 
             {/* Metric cards */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Total Rent Paid</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-ink-900">{formatCurrency(r.totalRentPaid)}</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{formatCurrency(r.totalRentPaid)}</p>
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Home Equity</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-emerald-700">{formatCurrency(r.homeEquityAtEnd)}</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-emerald-700 whitespace-nowrap">{formatCurrency(r.homeEquityAtEnd)}</p>
                 <p className="text-xs text-ink-400 mt-0.5">after selling costs</p>
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">PITI vs Rent</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-ink-900">{formatCurrency(monthlyPiti)}</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{formatCurrency(monthlyPiti)}</p>
                 <p className="text-xs text-ink-400 mt-0.5">vs {formatCurrency(monthlyRent)} rent/mo</p>
               </div>
             </div>

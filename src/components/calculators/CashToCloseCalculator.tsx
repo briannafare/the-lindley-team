@@ -74,15 +74,15 @@ function FeeRows({
   return (
     <div className="space-y-2">
       {items.map((item, idx) => (
-        <div key={idx} className="flex gap-2 items-start">
+        <div key={idx} className="flex flex-wrap gap-2 items-start">
           <input
             type="text"
-            className="input-field flex-1 text-sm"
+            className="input-field w-full sm:w-auto sm:flex-1 text-sm"
             value={item.label}
             placeholder="Description"
             onChange={(e) => update(idx, "label", e.target.value)}
           />
-          <div className="relative w-36 flex-shrink-0">
+          <div className="relative flex-1 sm:flex-none sm:w-36">
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-ink-400 text-sm pointer-events-none">$</span>
             <input
               type="number" min={0} step={1} className="input-field pl-7 text-sm"
@@ -127,7 +127,7 @@ function WaterfallRow({
 
   return (
     <div className={`flex items-center justify-between py-3 ${accent ? "border-t-2 border-ink-900 mt-1" : ""}`}>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 min-w-0">
         {operator && (
           <span className={`text-base font-bold w-4 text-center ${opColor}`}>{operator}</span>
         )}
@@ -137,7 +137,7 @@ function WaterfallRow({
           {sub && <p className="text-xs text-ink-400">{sub}</p>}
         </div>
       </div>
-      <span className={`tabular-nums ${amtColor}`}>
+      <span className={`tabular-nums ${amtColor} whitespace-nowrap`}>
         {operator === "−" ? `-${formatCurrencyPrecise(amount)}` : formatCurrencyPrecise(amount)}
       </span>
     </div>
@@ -161,7 +161,7 @@ function ScenarioCard({
   return (
     <div className={`flex-1 rounded-2xl p-5 border ${accent ? "bg-emerald-50 border-emerald-200" : "bg-surface-50 border-surface-200"}`}>
       <p className={`text-xs font-semibold uppercase tracking-wider mb-3 ${accent ? "text-emerald-700" : "text-ink-500"}`}>{label}</p>
-      <p className={`font-display text-3xl font-bold tabular-nums ${accent ? "text-emerald-800" : "text-ink-900"}`}>
+      <p className={`font-display text-3xl font-bold tabular-nums ${accent ? "text-emerald-800" : "text-ink-900"} whitespace-nowrap`}>
         {downPct}% down
       </p>
       <div className="mt-3 space-y-1.5">
@@ -312,7 +312,7 @@ export default function CashToCloseCalculator() {
                         />
                         <span className="absolute right-2.5 top-1/2 -translate-y-1/2 text-ink-400 text-xs pointer-events-none">%</span>
                       </div>
-                      <span className="text-sm text-ink-500 tabular-nums w-24 text-right">{formatCurrency(dpDollar)}</span>
+                      <span className="text-sm text-ink-500 tabular-nums w-24 text-right whitespace-nowrap">{formatCurrency(dpDollar)}</span>
                     </div>
                   </div>
                   <input
@@ -403,7 +403,7 @@ export default function CashToCloseCalculator() {
             {/* Hero */}
             <div className="result-card border border-surface-200 bg-gradient-to-br from-white to-surface-50">
               <p className="text-xs font-medium uppercase tracking-widest text-ink-500 mb-1">Estimated Cash to Close</p>
-              <p className="font-display text-5xl sm:text-6xl font-bold text-ink-900 tabular-nums leading-none mb-2">
+              <p className="font-display text-5xl sm:text-6xl font-bold text-ink-900 tabular-nums leading-none mb-2 whitespace-nowrap">
                 {formatCurrency(results.totalCashToClose)}
               </p>
               <p className="text-sm text-ink-500">
@@ -460,21 +460,21 @@ export default function CashToCloseCalculator() {
             </div>
 
             {/* Metric cards */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Loan Amount</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-ink-900">{formatCurrency(results.loanAmount)}</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{formatCurrency(results.loanAmount)}</p>
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">LTV</p>
-                <p className={`text-2xl font-bold font-display tabular-nums ${results.effectiveLtv > 80 ? "text-amber-700" : "text-emerald-700"}`}>
+                <p className={`text-2xl font-bold font-display tabular-nums ${results.effectiveLtv > 80 ? "text-amber-700" : "text-emerald-700"} whitespace-nowrap`}>
                   {results.effectiveLtv.toFixed(1)}%
                 </p>
                 {results.effectiveLtv > 80 && <p className="text-xs text-ink-400 mt-0.5">PMI may apply</p>}
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Down Payment</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-ink-900">{formatCurrency(dpDollar)}</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{formatCurrency(dpDollar)}</p>
                 <p className="text-xs text-ink-400 mt-0.5">{downPaymentPct}% of price</p>
               </div>
             </div>
@@ -483,7 +483,7 @@ export default function CashToCloseCalculator() {
             {homePrice > 0 && comparisonOptions.length > 0 && (
               <div className="result-card">
                 <h3 className="section-title">Down Payment Comparison</h3>
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <ScenarioCard
                     label="Your scenario"
                     downPct={downPaymentPct}
@@ -511,12 +511,12 @@ export default function CashToCloseCalculator() {
                   {prepaidItems.map((item, idx) => (
                     <div key={idx} className="flex items-center justify-between py-2.5">
                       <span className="text-sm text-ink-600">{item.label}</span>
-                      <span className="text-sm font-semibold text-ink-900 tabular-nums">{formatCurrencyPrecise(item.amount)}</span>
+                      <span className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">{formatCurrencyPrecise(item.amount)}</span>
                     </div>
                   ))}
                   <div className="flex items-center justify-between py-2.5">
                     <span className="text-sm font-bold text-ink-900">Total Prepaids</span>
-                    <span className="text-sm font-bold text-ink-900 tabular-nums">{formatCurrencyPrecise(results.prepaidsTotal)}</span>
+                    <span className="text-sm font-bold text-ink-900 tabular-nums whitespace-nowrap">{formatCurrencyPrecise(results.prepaidsTotal)}</span>
                   </div>
                 </div>
               </div>

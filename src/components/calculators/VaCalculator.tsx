@@ -100,7 +100,7 @@ function BreakdownRow({ label, amount, color }: { label: string; amount: number;
         <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
         <span className="text-sm text-ink-700">{label}</span>
       </div>
-      <span className="text-sm font-semibold text-ink-900 tabular-nums">{formatCurrencyPrecise(amount)}</span>
+      <span className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">{formatCurrencyPrecise(amount)}</span>
     </div>
   );
 }
@@ -140,7 +140,7 @@ function PaymentDonut({ results, colors }: { results: VaOutputs; colors: Record<
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className="text-xs text-ink-500">Monthly</span>
-        <span className="text-lg font-bold text-ink-900 font-display tabular-nums">{formatCurrency(total)}</span>
+        <span className="text-lg font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(total)}</span>
       </div>
     </div>
   );
@@ -152,8 +152,8 @@ function DonutLegendRow({ label, amount, total, color }: { label: string; amount
     <div className="flex items-center gap-3">
       <span className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: color }} />
       <span className="text-sm text-ink-700 flex-1">{label}</span>
-      <span className="text-sm text-ink-500 tabular-nums w-12 text-right">{pct.toFixed(0)}%</span>
-      <span className="text-sm font-medium text-ink-900 tabular-nums w-20 text-right">{formatCurrencyPrecise(amount)}</span>
+      <span className="text-sm text-ink-500 tabular-nums w-12 text-right whitespace-nowrap">{pct.toFixed(0)}%</span>
+      <span className="text-sm font-medium text-ink-900 tabular-nums w-20 text-right whitespace-nowrap">{formatCurrencyPrecise(amount)}</span>
     </div>
   );
 }
@@ -364,7 +364,7 @@ export default function VaCalculator() {
                 {results.monthlyHoa > 0 && <BreakdownRow label="HOA Dues" amount={results.monthlyHoa} color={breakdownColors.hoa} />}
                 <div className="flex items-center justify-between pt-3 mt-1 border-t border-surface-200">
                   <span className="text-sm font-semibold text-ink-900">Total</span>
-                  <span className="text-base font-bold text-ink-900 tabular-nums">{formatCurrencyPrecise(results.totalMonthlyPayment)}</span>
+                  <span className="text-base font-bold text-ink-900 tabular-nums whitespace-nowrap">{formatCurrencyPrecise(results.totalMonthlyPayment)}</span>
                 </div>
               </div>
 
@@ -385,15 +385,15 @@ export default function VaCalculator() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   <div className="bg-surface-50 rounded-xl p-3 text-center">
                     <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Fee %</p>
-                    <p className="text-xl font-bold text-ink-900 font-display tabular-nums">{results.fundingFeePercent.toFixed(2)}%</p>
+                    <p className="text-xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{results.fundingFeePercent.toFixed(2)}%</p>
                   </div>
                   <div className="bg-surface-50 rounded-xl p-3 text-center">
                     <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Fee Amount</p>
-                    <p className="text-xl font-bold text-ink-900 font-display tabular-nums">{formatCurrency(results.fundingFeeDollars)}</p>
+                    <p className="text-xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(results.fundingFeeDollars)}</p>
                   </div>
                   <div className="bg-surface-50 rounded-xl p-3 text-center col-span-2 sm:col-span-1">
                     <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Total Loan</p>
-                    <p className="text-xl font-bold text-ink-900 font-display tabular-nums">{formatCurrency(results.financedLoanAmount)}</p>
+                    <p className="text-xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(results.financedLoanAmount)}</p>
                     <p className="text-xs text-ink-400 mt-0.5">{financeFundingFee ? "fee financed" : "fee at closing"}</p>
                   </div>
                 </div>
@@ -401,17 +401,17 @@ export default function VaCalculator() {
             )}
 
             {/* Summary Metrics */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Down Payment</p>
-                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums">
+                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">
                   {results.downPaymentPercent.toFixed(1)}%
                 </p>
                 <p className="text-xs text-ink-400 mt-1">{formatCurrency(downPaymentDollars)}</p>
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Total Interest</p>
-                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums">{formatCurrency(results.totalInterestPaid)}</p>
+                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(results.totalInterestPaid)}</p>
                 <p className="text-xs text-ink-400 mt-1">over {loanTerm} years</p>
               </div>
               <div className="result-card text-center">

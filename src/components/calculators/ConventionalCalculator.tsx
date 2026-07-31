@@ -96,7 +96,7 @@ function BreakdownRow({ label, amount, color }: { label: string; amount: number;
         <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
         <span className="text-sm text-ink-700">{label}</span>
       </div>
-      <span className="text-sm font-semibold text-ink-900 tabular-nums">{formatCurrencyPrecise(amount)}</span>
+      <span className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">{formatCurrencyPrecise(amount)}</span>
     </div>
   );
 }
@@ -137,7 +137,7 @@ function PaymentDonut({ results, colors }: { results: ConventionalOutputs; color
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className="text-xs text-ink-500">Monthly</span>
-        <span className="text-lg font-bold text-ink-900 font-display tabular-nums">{formatCurrency(total)}</span>
+        <span className="text-lg font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(total)}</span>
       </div>
     </div>
   );
@@ -149,8 +149,8 @@ function DonutLegendRow({ label, amount, total, color }: { label: string; amount
     <div className="flex items-center gap-3">
       <span className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: color }} />
       <span className="text-sm text-ink-700 flex-1">{label}</span>
-      <span className="text-sm text-ink-500 tabular-nums w-12 text-right">{pct.toFixed(0)}%</span>
-      <span className="text-sm font-medium text-ink-900 tabular-nums w-20 text-right">{formatCurrencyPrecise(amount)}</span>
+      <span className="text-sm text-ink-500 tabular-nums w-12 text-right whitespace-nowrap">{pct.toFixed(0)}%</span>
+      <span className="text-sm font-medium text-ink-900 tabular-nums w-20 text-right whitespace-nowrap">{formatCurrencyPrecise(amount)}</span>
     </div>
   );
 }
@@ -324,21 +324,21 @@ export default function ConventionalCalculator() {
                 {results.monthlyHoa > 0 && <BreakdownRow label="HOA Dues" amount={results.monthlyHoa} color={breakdownColors.hoa} />}
                 <div className="flex items-center justify-between pt-3 mt-1 border-t border-surface-200">
                   <span className="text-sm font-semibold text-ink-900">Total</span>
-                  <span className="text-base font-bold text-ink-900 tabular-nums">{formatCurrencyPrecise(results.totalMonthlyPayment)}</span>
+                  <span className="text-base font-bold text-ink-900 tabular-nums whitespace-nowrap">{formatCurrencyPrecise(results.totalMonthlyPayment)}</span>
                 </div>
               </div>
             </div>
 
             {/* Summary Metrics */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">LTV</p>
-                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums">{formatPercent(results.ltv)}</p>
+                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatPercent(results.ltv)}</p>
                 {results.ltv > 0.8 && <p className="text-xs text-warning mt-1">MI required</p>}
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Total Interest</p>
-                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums">{formatCurrency(results.totalInterestPaid)}</p>
+                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(results.totalInterestPaid)}</p>
                 <p className="text-xs text-ink-400 mt-1">over {loanTerm} years</p>
               </div>
               <div className="result-card text-center">

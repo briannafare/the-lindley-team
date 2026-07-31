@@ -83,7 +83,7 @@ function ScenarioCard({
       </div>
 
       {/* Monthly payment hero */}
-      <p className={`font-display text-4xl font-bold tabular-nums mt-2 ${accent ? "text-emerald-900" : "text-ink-900"}`}>
+      <p className={`font-display text-4xl font-bold tabular-nums mt-2 ${accent ? "text-emerald-900" : "text-ink-900"} whitespace-nowrap`}>
         {formatCurrency(scenario.monthlyPi)}
         <span className={`text-base font-normal ml-1 ${accent ? "text-emerald-600" : "text-ink-400"}`}>/mo</span>
       </p>
@@ -100,7 +100,7 @@ function ScenarioCard({
         ].map((row) => (
           <div key={row.label} className="flex justify-between text-sm">
             <span className={accent ? "text-emerald-600" : "text-ink-500"}>{row.label}</span>
-            <span className={`font-medium tabular-nums ${accent ? "text-emerald-900" : "text-ink-900"}`}>{row.value}</span>
+            <span className={`font-medium tabular-nums ${accent ? "text-emerald-900" : "text-ink-900"} whitespace-nowrap`}>{row.value}</span>
           </div>
         ))}
       </div>
@@ -110,12 +110,12 @@ function ScenarioCard({
         {scenario.equityBuilt > 0 ? (
           <div className="flex justify-between text-sm">
             <span className={accent ? "text-emerald-700" : "text-ink-500"}>Equity built by then</span>
-            <span className={`font-bold tabular-nums ${accent ? "text-emerald-900" : "text-ink-900"}`}>+{formatCurrency(scenario.equityBuilt)}</span>
+            <span className={`font-bold tabular-nums ${accent ? "text-emerald-900" : "text-ink-900"} whitespace-nowrap`}>+{formatCurrency(scenario.equityBuilt)}</span>
           </div>
         ) : scenario.totalRentPaid > 0 ? (
           <div className="flex justify-between text-sm">
             <span className={accent ? "text-emerald-700" : "text-ink-500"}>Rent paid while waiting</span>
-            <span className={`font-bold tabular-nums text-red-600`}>{formatCurrency(scenario.totalRentPaid)}</span>
+            <span className={`font-bold tabular-nums text-red-600 whitespace-nowrap`}>{formatCurrency(scenario.totalRentPaid)}</span>
           </div>
         ) : null}
       </div>
@@ -137,7 +137,7 @@ function MetricCard({
   return (
     <div className="result-card text-center">
       <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">{label}</p>
-      <p className={`text-2xl font-bold font-display tabular-nums ${color}`}>{value}</p>
+      <p className={`text-2xl font-bold font-display tabular-nums ${color} whitespace-nowrap`}>{value}</p>
       {sub && <p className="text-xs text-ink-400 mt-0.5">{sub}</p>}
     </div>
   );
@@ -288,7 +288,7 @@ export default function BuyNowVsWaitCalculator() {
             </div>
 
             {/* Side-by-side scenario cards */}
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <ScenarioCard
                 scenario={r.buyNow}
                 label="Buy Now"
@@ -382,17 +382,17 @@ export default function BuyNowVsWaitCalculator() {
                 ].map((row) => (
                   <div key={row.label} className="grid grid-cols-3 gap-4 py-3 items-center">
                     <span className="text-sm text-ink-500">{row.label}</span>
-                    <span className={`text-sm font-semibold tabular-nums ${row.nowAccent === "green" ? "text-emerald-700" : "text-ink-900"}`}>
+                    <span className={`text-sm font-semibold tabular-nums ${row.nowAccent === "green" ? "text-emerald-700" : "text-ink-900"} whitespace-nowrap`}>
                       {row.now}
                     </span>
-                    <span className={`text-sm font-semibold tabular-nums ${row.laterAccent === "green" ? "text-emerald-700" : row.laterAccent === "red" ? "text-red-600" : "text-ink-900"}`}>
+                    <span className={`text-sm font-semibold tabular-nums ${row.laterAccent === "green" ? "text-emerald-700" : row.laterAccent === "red" ? "text-red-600" : "text-ink-900"} whitespace-nowrap`}>
                       {row.later}
                     </span>
                   </div>
                 ))}
                 {/* Header labels */}
               </div>
-              <div className="grid grid-cols-3 gap-4 pt-2 border-t border-surface-200 mt-1">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 border-t border-surface-200 mt-1">
                 <span className="text-xs text-ink-400"></span>
                 <span className="text-xs font-semibold text-ink-600 uppercase tracking-wide">Buy Now</span>
                 <span className="text-xs font-semibold text-ink-600 uppercase tracking-wide">Wait {waitLabel}</span>
@@ -405,7 +405,7 @@ export default function BuyNowVsWaitCalculator() {
                 Net Cash Cost of Waiting {waitLabel}
               </p>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className={`font-display text-4xl font-bold tabular-nums ${r.netCashCostOfWaiting > 0 ? "text-orange-700" : "text-emerald-700"}`}>
+                <span className={`font-display text-4xl font-bold tabular-nums ${r.netCashCostOfWaiting > 0 ? "text-orange-700" : "text-emerald-700"} whitespace-nowrap`}>
                   {r.netCashCostOfWaiting >= 0 ? formatCurrency(r.netCashCostOfWaiting) : `−${formatCurrency(Math.abs(r.netCashCostOfWaiting))}`}
                 </span>
               </div>

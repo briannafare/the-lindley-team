@@ -124,7 +124,7 @@ function ComparisonCard({
   return (
     <div className={`flex-1 rounded-2xl p-5 border ${accent ? "bg-emerald-50 border-emerald-200" : "bg-surface-50 border-surface-200"}`}>
       <p className={`text-xs font-semibold uppercase tracking-wider mb-3 ${accent ? "text-emerald-700" : "text-ink-500"}`}>{label}</p>
-      <p className={`font-display text-3xl font-bold tabular-nums ${accent ? "text-emerald-800" : "text-ink-900"}`}>
+      <p className={`font-display text-3xl font-bold tabular-nums ${accent ? "text-emerald-800" : "text-ink-900"} whitespace-nowrap`}>
         {formatCurrency(payment)}<span className="text-base font-normal">/mo</span>
       </p>
       <div className="mt-3 space-y-1.5">
@@ -148,7 +148,7 @@ function MetricCard({ label, value, sub, accent }: { label: string; value: strin
   return (
     <div className="result-card text-center">
       <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">{label}</p>
-      <p className={`text-2xl font-bold font-display tabular-nums ${valueColor}`}>{value}</p>
+      <p className={`text-2xl font-bold font-display tabular-nums ${valueColor} whitespace-nowrap`}>{value}</p>
       {sub && <p className="text-xs text-ink-400 mt-1">{sub}</p>}
     </div>
   );
@@ -387,7 +387,7 @@ export default function RefinanceCalculator() {
             {/* Before / After Comparison */}
             <div className="result-card">
               <h3 className="section-title">Current vs. New Loan</h3>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <ComparisonCard
                   label="Current Loan"
                   payment={results.currentPayment}
@@ -402,7 +402,7 @@ export default function RefinanceCalculator() {
                     </svg>
                   </div>
                   {saving && (
-                    <span className="text-xs font-semibold text-emerald-600 tabular-nums">
+                    <span className="text-xs font-semibold text-emerald-600 tabular-nums whitespace-nowrap">
                       -{formatCurrency(results.monthlySavings)}/mo
                     </span>
                   )}

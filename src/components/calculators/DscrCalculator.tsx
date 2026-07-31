@@ -241,7 +241,7 @@ export default function DscrCalculator() {
                 This Scenario&apos;s DSCR
               </p>
               <div className="flex items-end gap-3 mb-2">
-                <p className={`font-display text-6xl font-bold tabular-nums leading-none ${passes ? "text-emerald-700" : r.dscr >= 1.0 ? "text-amber-700" : "text-red-600"}`}>
+                <p className={`font-display text-6xl font-bold tabular-nums leading-none ${passes ? "text-emerald-700" : r.dscr >= 1.0 ? "text-amber-700" : "text-red-600"} whitespace-nowrap`}>
                   {r.dscr.toFixed(2)}
                 </p>
                 <span className="text-2xl font-semibold text-ink-400 mb-1">×</span>
@@ -292,7 +292,7 @@ export default function DscrCalculator() {
                 ].map((row) => (
                   <div key={row.label} className="flex justify-between items-center py-2.5">
                     <span className={`text-sm ${row.bold ? "font-semibold text-ink-900" : "text-ink-600"}`}>{row.label}</span>
-                    <span className={`text-sm tabular-nums ${row.bold ? "font-bold text-emerald-700" : "text-ink-900 font-medium"}`}>{row.value}</span>
+                    <span className={`text-sm tabular-nums ${row.bold ? "font-bold text-emerald-700" : "text-ink-900 font-medium"} whitespace-nowrap`}>{row.value}</span>
                   </div>
                 ))}
               </div>
@@ -313,7 +313,7 @@ export default function DscrCalculator() {
                 ].map((row) => (
                   <div key={row.label} className="flex justify-between items-center py-2.5">
                     <span className={`text-sm ${row.bold ? "font-semibold text-ink-900" : "text-ink-600"}`}>{row.label}</span>
-                    <span className={`text-sm tabular-nums ${row.bold ? "font-bold text-ink-900" : "text-ink-900 font-medium"}`}>{row.value}</span>
+                    <span className={`text-sm tabular-nums ${row.bold ? "font-bold text-ink-900" : "text-ink-900 font-medium"} whitespace-nowrap`}>{row.value}</span>
                   </div>
                 ))}
               </div>
@@ -322,7 +322,7 @@ export default function DscrCalculator() {
                 <span className="text-sm font-semibold text-ink-700">
                   {formatCurrencyPrecise(r.grossMonthlyIncome)} ÷ {formatCurrencyPrecise(r.monthlyPitia)}
                 </span>
-                <span className={`text-xl font-bold tabular-nums ${passes ? "text-emerald-700" : r.dscr >= 1 ? "text-amber-700" : "text-red-600"}`}>
+                <span className={`text-xl font-bold tabular-nums ${passes ? "text-emerald-700" : r.dscr >= 1 ? "text-amber-700" : "text-red-600"} whitespace-nowrap`}>
                   = {r.dscr.toFixed(2)}×
                 </span>
               </div>
@@ -334,7 +334,7 @@ export default function DscrCalculator() {
                 <p className={`text-xs font-semibold uppercase tracking-wider mb-1 ${incomeShort ? "text-red-600" : "text-emerald-700"}`}>
                   {incomeShort ? "Monthly Income Shortfall" : "Monthly Income Surplus"}
                 </p>
-                <p className={`font-display text-3xl font-bold tabular-nums ${incomeShort ? "text-red-700" : "text-emerald-700"}`}>
+                <p className={`font-display text-3xl font-bold tabular-nums ${incomeShort ? "text-red-700" : "text-emerald-700"} whitespace-nowrap`}>
                   {incomeShort ? "-" : "+"}{formatCurrency(Math.abs(r.monthlyIncomeGap))}
                 </p>
                 <p className={`text-xs mt-1 ${incomeShort ? "text-red-600" : "text-emerald-600"}`}>
@@ -346,7 +346,7 @@ export default function DscrCalculator() {
 
               <div className="result-card border border-surface-200 bg-surface-50">
                 <p className="text-xs font-semibold uppercase tracking-wider mb-1 text-ink-500">Required Gross Income</p>
-                <p className="font-display text-3xl font-bold tabular-nums text-ink-900">
+                <p className="font-display text-3xl font-bold tabular-nums text-ink-900 whitespace-nowrap">
                   {formatCurrency(r.requiredGrossIncome)}
                 </p>
                 <p className="text-xs text-ink-400 mt-1">
@@ -358,7 +358,7 @@ export default function DscrCalculator() {
             {/* Max loan */}
             <div className="result-card border border-indigo-200 bg-indigo-50">
               <p className="text-xs font-semibold uppercase tracking-wider text-indigo-700 mb-1">Max Loan at {targetDscr}× DSCR</p>
-              <p className="font-display text-4xl font-bold tabular-nums text-indigo-900 mb-2">
+              <p className="font-display text-4xl font-bold tabular-nums text-indigo-900 mb-2 whitespace-nowrap">
                 {r.maxLoanAmount > 0 ? formatCurrency(r.maxLoanAmount) : "—"}
               </p>
               {r.maxLoanAmount > 0 ? (

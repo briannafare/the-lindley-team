@@ -117,7 +117,7 @@ function BreakdownRow({ label, amount, color, badge }: {
         <span className="text-sm text-ink-700">{label}</span>
         {badge}
       </div>
-      <span className="text-sm font-semibold text-ink-900 tabular-nums ml-4">{formatCurrencyPrecise(amount)}</span>
+      <span className="text-sm font-semibold text-ink-900 tabular-nums ml-4 whitespace-nowrap">{formatCurrencyPrecise(amount)}</span>
     </div>
   );
 }
@@ -170,7 +170,7 @@ function PaymentDonut({ results, colors }: { results: FhaOutputs; colors: Record
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className="text-xs text-ink-500">Monthly</span>
-        <span className="text-lg font-bold text-ink-900 font-display tabular-nums">{formatCurrency(total)}</span>
+        <span className="text-lg font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(total)}</span>
       </div>
     </div>
   );
@@ -184,8 +184,8 @@ function DonutLegendRow({ label, amount, total, color }: {
     <div className="flex items-center gap-3">
       <span className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: color }} />
       <span className="text-sm text-ink-700 flex-1">{label}</span>
-      <span className="text-sm text-ink-500 tabular-nums w-12 text-right">{pct.toFixed(0)}%</span>
-      <span className="text-sm font-medium text-ink-900 tabular-nums w-20 text-right">{formatCurrencyPrecise(amount)}</span>
+      <span className="text-sm text-ink-500 tabular-nums w-12 text-right whitespace-nowrap">{pct.toFixed(0)}%</span>
+      <span className="text-sm font-medium text-ink-900 tabular-nums w-20 text-right whitespace-nowrap">{formatCurrencyPrecise(amount)}</span>
     </div>
   );
 }
@@ -399,7 +399,7 @@ export default function FhaCalculator() {
                 )}
                 <div className="flex items-center justify-between pt-3 mt-1 border-t border-surface-200">
                   <span className="text-sm font-semibold text-ink-900">Total</span>
-                  <span className="text-base font-bold text-ink-900 tabular-nums">{formatCurrencyPrecise(results.totalMonthlyPayment)}</span>
+                  <span className="text-base font-bold text-ink-900 tabular-nums whitespace-nowrap">{formatCurrencyPrecise(results.totalMonthlyPayment)}</span>
                 </div>
               </div>
             </div>
@@ -417,7 +417,7 @@ export default function FhaCalculator() {
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-semibold text-ink-900 tabular-nums">{formatCurrency(results.upfrontMipAmount)}</p>
+                    <p className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">{formatCurrency(results.upfrontMipAmount)}</p>
                     {financeUpfrontMip && (
                       <p className="text-xs text-ink-400 mt-0.5">Loan: {formatCurrency(results.effectiveLoanAmount)}</p>
                     )}
@@ -433,7 +433,7 @@ export default function FhaCalculator() {
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-semibold text-ink-900 tabular-nums">{formatCurrency(results.monthlyMip)}/mo</p>
+                    <p className="text-sm font-semibold text-ink-900 tabular-nums whitespace-nowrap">{formatCurrency(results.monthlyMip)}/mo</p>
                     <p className="text-xs mt-0.5">
                       <MipDurationBadge duration={results.mipDuration} />
                     </p>
@@ -454,17 +454,17 @@ export default function FhaCalculator() {
             </div>
 
             {/* Summary Metrics */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">LTV</p>
-                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums">
+                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">
                   {(results.ltv * 100).toFixed(1)}%
                 </p>
                 <p className="text-xs text-ink-400 mt-1">{formatCurrency(results.baseLoanAmount)}</p>
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Total Interest</p>
-                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums">{formatCurrency(results.totalInterestPaid)}</p>
+                <p className="text-2xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(results.totalInterestPaid)}</p>
                 <p className="text-xs text-ink-400 mt-1">over {loanTerm} years</p>
               </div>
               <div className="result-card text-center">
@@ -481,15 +481,15 @@ export default function FhaCalculator() {
               <div className="grid grid-cols-3 gap-3">
                 <div className="bg-surface-50 rounded-xl p-3 text-center">
                   <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">5 Years</p>
-                  <p className="text-xl font-bold text-ink-900 font-display tabular-nums">{formatCurrency(results.totalCost5yr)}</p>
+                  <p className="text-xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(results.totalCost5yr)}</p>
                 </div>
                 <div className="bg-surface-50 rounded-xl p-3 text-center">
                   <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">10 Years</p>
-                  <p className="text-xl font-bold text-ink-900 font-display tabular-nums">{formatCurrency(results.totalCost10yr)}</p>
+                  <p className="text-xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(results.totalCost10yr)}</p>
                 </div>
                 <div className="bg-surface-50 rounded-xl p-3 text-center">
                   <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">{loanTerm} Years</p>
-                  <p className="text-xl font-bold text-ink-900 font-display tabular-nums">{formatCurrency(results.totalCostFullTerm)}</p>
+                  <p className="text-xl font-bold text-ink-900 font-display tabular-nums whitespace-nowrap">{formatCurrency(results.totalCostFullTerm)}</p>
                 </div>
               </div>
             </div>

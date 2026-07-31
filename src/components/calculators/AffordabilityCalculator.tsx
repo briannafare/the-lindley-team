@@ -57,7 +57,7 @@ function ScenarioCard({
           <p className="text-xs text-gray-500 mt-0.5 ml-5">{meta.sub} back-end DTI</p>
         </div>
         <div className="text-right">
-          <p className="text-2xl font-bold tabular-nums" style={{ color: meta.color }}>
+          <p className="text-2xl font-bold tabular-nums whitespace-nowrap" style={{ color: meta.color }}>
             {fmt(displayPrice)}
           </p>
           {isCashCapped && isRecommended && (
@@ -276,7 +276,7 @@ export default function AffordabilityCalculator() {
             {/* Recommended Hero */}
             <div className="section-card text-center py-8 space-y-2">
               <p className="text-sm text-gray-500">Recommended Purchase Price</p>
-              <p className="text-5xl font-bold text-blue-600 tabular-nums">
+              <p className="text-5xl font-bold text-blue-600 tabular-nums whitespace-nowrap">
                 {fmt(r.recommendedPrice)}
               </p>
               <p className="text-gray-400 text-sm">
@@ -418,7 +418,8 @@ export default function AffordabilityCalculator() {
             <div className="section-card space-y-2">
               <h2 className="font-semibold text-gray-800">Down Payment Breakdown</h2>
               <p className="text-xs text-gray-400">At recommended price — different down payment options</p>
-              <table className="w-full text-sm">
+              <div className="overflow-x-auto">
+              <table className="w-full text-sm min-w-[420px]">
                 <thead>
                   <tr className="border-b">
                     {["Down %", "Down Amt", "Loan", "Monthly P&I"].map((h) => (
@@ -439,14 +440,15 @@ export default function AffordabilityCalculator() {
                     return (
                       <tr key={pct} className={`border-b last:border-0 ${isCurrent ? "bg-blue-50" : "hover:bg-gray-50"}`}>
                         <td className={`py-2 pr-2 font-medium ${isCurrent ? "text-blue-700" : "text-gray-700"}`}>{pct}%</td>
-                        <td className="py-2 pr-2 tabular-nums text-gray-700">{fmt(down)}</td>
-                        <td className="py-2 pr-2 tabular-nums text-gray-700">{fmt(loan)}</td>
-                        <td className="py-2 tabular-nums text-gray-700">{fmtFull(pi)}</td>
+                        <td className="py-2 pr-2 tabular-nums text-gray-700 whitespace-nowrap">{fmt(down)}</td>
+                        <td className="py-2 pr-2 tabular-nums text-gray-700 whitespace-nowrap">{fmt(loan)}</td>
+                        <td className="py-2 tabular-nums text-gray-700 whitespace-nowrap">{fmtFull(pi)}</td>
                       </tr>
                     );
                   })}
                 </tbody>
               </table>
+              </div>
             </div>
 
             {/* Tips */}

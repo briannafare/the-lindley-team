@@ -117,7 +117,7 @@ function DetailRow({
         <p className={`text-sm ${dimmed ? "text-ink-400" : "text-ink-700"}`}>{label}</p>
         {sub && <p className="text-xs text-ink-400 mt-0.5">{sub}</p>}
       </div>
-      <span className={`text-sm tabular-nums ${highlight ? "font-bold text-emerald-700 text-base" : dimmed ? "font-medium text-ink-400" : "font-semibold text-ink-900"}`}>
+      <span className={`text-sm tabular-nums ${highlight ? "font-bold text-emerald-700 text-base" : dimmed ? "font-medium text-ink-400" : "font-semibold text-ink-900"} whitespace-nowrap`}>
         {value}
       </span>
     </div>
@@ -243,7 +243,7 @@ export default function TaxDeductionCalculator() {
               <p className="text-xs font-medium uppercase tracking-widest text-ink-500 mb-1">Estimated Annual Tax Savings</p>
               {expectsToItemize ? (
                 <>
-                  <p className="font-display text-5xl sm:text-6xl font-bold text-emerald-700 tabular-nums leading-none mb-2">
+                  <p className="font-display text-5xl sm:text-6xl font-bold text-emerald-700 tabular-nums leading-none mb-2 whitespace-nowrap">
                     {formatCurrency(r.estimatedAnnualTaxSavings)}
                   </p>
                   <p className="text-sm text-ink-500">
@@ -252,7 +252,7 @@ export default function TaxDeductionCalculator() {
                 </>
               ) : (
                 <>
-                  <p className="font-display text-5xl sm:text-6xl font-bold text-ink-400 tabular-nums leading-none mb-2">$0</p>
+                  <p className="font-display text-5xl sm:text-6xl font-bold text-ink-400 tabular-nums leading-none mb-2 whitespace-nowrap">$0</p>
                   <p className="text-sm text-ink-500">
                     No additional tax savings when taking the standard deduction ({formatCurrency(r.standardDeduction)}).
                   </p>
@@ -261,20 +261,20 @@ export default function TaxDeductionCalculator() {
             </div>
 
             {/* Metric cards */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Marginal Tax Rate</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-ink-900">{r.marginalTaxRatePct}%</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{r.marginalTaxRatePct}%</p>
                 <p className="text-xs text-ink-400 mt-0.5">2024 federal bracket</p>
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Deductible Interest</p>
-                <p className="text-2xl font-bold font-display tabular-nums text-ink-900">{formatCurrency(r.deductibleMortgageInterest)}</p>
+                <p className="text-2xl font-bold font-display tabular-nums text-ink-900 whitespace-nowrap">{formatCurrency(r.deductibleMortgageInterest)}</p>
                 <p className="text-xs text-ink-400 mt-0.5">per year (est.)</p>
               </div>
               <div className="result-card text-center">
                 <p className="text-xs text-ink-500 uppercase tracking-wider mb-1">Monthly Discount</p>
-                <p className={`text-2xl font-bold font-display tabular-nums ${expectsToItemize && r.estimatedMonthlyTaxSavings > 0 ? "text-emerald-700" : "text-ink-400"}`}>
+                <p className={`text-2xl font-bold font-display tabular-nums ${expectsToItemize && r.estimatedMonthlyTaxSavings > 0 ? "text-emerald-700" : "text-ink-400"} whitespace-nowrap`}>
                   {formatCurrency(r.effectiveMonthlyDiscount)}
                 </p>
                 <p className="text-xs text-ink-400 mt-0.5">effective savings</p>
@@ -354,11 +354,11 @@ export default function TaxDeductionCalculator() {
                 <div className="mt-4 grid grid-cols-2 gap-3">
                   <div className="bg-white/70 rounded-xl p-4 border border-emerald-100">
                     <p className="text-xs text-emerald-700 uppercase tracking-wider mb-1">Est. annual interest paid</p>
-                    <p className="text-xl font-bold tabular-nums text-emerald-900">{formatCurrency(annualInterestApprox)}</p>
+                    <p className="text-xl font-bold tabular-nums text-emerald-900 whitespace-nowrap">{formatCurrency(annualInterestApprox)}</p>
                   </div>
                   <div className="bg-white/70 rounded-xl p-4 border border-emerald-100">
                     <p className="text-xs text-emerald-700 uppercase tracking-wider mb-1">After-tax interest cost</p>
-                    <p className="text-xl font-bold tabular-nums text-emerald-900">
+                    <p className="text-xl font-bold tabular-nums text-emerald-900 whitespace-nowrap">
                       {formatCurrency(Math.max(0, annualInterestApprox - r.estimatedAnnualTaxSavings))}
                     </p>
                   </div>
