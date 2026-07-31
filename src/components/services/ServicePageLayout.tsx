@@ -36,7 +36,7 @@ function ServiceSchema({ service }: { service: ServiceData }) {
       name: "The Lindley Team at Movement Mortgage",
       employee: [
         { "@type": "Person", name: "David Chandler", jobTitle: "Mortgage Loan Officer", identifier: "NMLS #265974" },
-        { "@type": "Person", name: "Bri Lindley", jobTitle: "Senior Loan Officer", identifier: "NMLS #1367416" },
+        { "@type": "Person", name: "Bri Lindley", jobTitle: "Mortgage Loan Officer", identifier: "NMLS #1367416" },
       ],
     },
     areaServed: [

@@ -9,7 +9,7 @@ import { blogPosts } from "@/lib/blog-posts";
 export const metadata: Metadata = {
   title: "The Journal | Portland Mortgage Insights | The Lindley Team",
   description:
-    "Mortgage education, Portland market insights, and neighborhood deep-dives. Written by Bri Lindley — Senior Loan Officer, NMLS #1367416. Real information for Portland buyers.",
+    "Mortgage education, Portland market insights, and neighborhood deep-dives. Written by Bri Lindley — Mortgage Loan Officer, NMLS #1367416. Real information for Portland buyers.",
 };
 
 const categories = [

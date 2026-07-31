@@ -83,7 +83,7 @@ export default function ApplyPage() {
                   Movement Mortgage · NMLS #1367416
                 </p>
                 <p className="text-[0.95rem] text-ink-mid leading-relaxed mt-5 flex-1">
-                  Senior Loan Officer &amp; Certified Divorce Lending Professional. Licensed in OR &amp; WA.
+                  Mortgage Loan Officer &amp; Certified Divorce Lending Professional. Licensed in OR &amp; WA.
                 </p>
                 <div className="mt-7">
                   <Btn href={BRI_APPLY || "/contact"} external={Boolean(BRI_APPLY)} variant="outline" size="lg" className="w-full justify-between sm:w-auto">

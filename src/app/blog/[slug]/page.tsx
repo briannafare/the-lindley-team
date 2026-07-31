@@ -185,7 +185,7 @@ export default async function BlogPostPage({
 
             {/* Author + date */}
             <p className="text-[0.78rem] font-medium text-ink-light uppercase tracking-[0.06em] mb-5">
-              Bri Lindley&nbsp;&nbsp;·&nbsp;&nbsp;Senior Loan Officer, NMLS #1367416&nbsp;&nbsp;·&nbsp;&nbsp;{formatDate(post.date)}
+              Bri Lindley&nbsp;&nbsp;·&nbsp;&nbsp;Mortgage Loan Officer, NMLS #1367416&nbsp;&nbsp;·&nbsp;&nbsp;{formatDate(post.date)}
             </p>
 
             {/* Excerpt as subtitle */}
