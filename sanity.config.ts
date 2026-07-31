@@ -3,9 +3,9 @@ import { structureTool } from 'sanity/structure'
 import { presentationTool } from 'sanity/presentation'
 import { visionTool } from '@sanity/vision'
 
-import { apiVersion, dataset, projectId, studioUrl } from '@/sanity/env'
-import { schemaTypes } from '@/sanity/schemas'
-import { structure } from '@/sanity/structure'
+import { apiVersion, dataset, projectId, studioUrl } from './src/sanity/env'
+import { schemaTypes } from './src/sanity/schemas'
+import { structure } from './src/sanity/structure'
 
 export default defineConfig({
   name: 'lindley',
