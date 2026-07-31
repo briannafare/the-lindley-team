@@ -1,3 +1,6 @@
+// Ported from the nested mortgage-calculator-suite project. Logic is unchanged;
+// only the standalone page chrome (full-screen shell + sticky header) was removed
+// so this can embed inside ServicePageLayout's calculator slot.
 "use client";
 
 import { useState, useMemo } from "react";
@@ -113,7 +116,7 @@ const TERM_OPTIONS = [15, 20, 25, 30];
 
 /* ── Main Page ── */
 
-export default function DscrPage() {
+export default function DscrCalculator() {
   // Income
   const [monthlyRent, setMonthlyRent] = useState(2800);
   const [otherIncome, setOtherIncome] = useState(0);
@@ -149,22 +152,7 @@ export default function DscrPage() {
   const incomeShort = r.monthlyIncomeGap < 0;
 
   return (
-    <div className="min-h-screen bg-surface-50">
-      {/* Header */}
-      <header className="border-b border-surface-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-ink-900 flex items-center justify-center">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M2 14V6L8 2L14 6V14H10V10H6V14H2Z" fill="white" />
-              </svg>
-            </div>
-            <span className="font-display font-semibold text-ink-900 tracking-tight">DSCR Loan Calculator</span>
-          </div>
-        </div>
-      </header>
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div className="not-prose">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
 
           {/* LEFT — Inputs */}
@@ -424,7 +412,6 @@ export default function DscrPage() {
             </p>
           </div>
         </div>
-      </main>
     </div>
   );
 }

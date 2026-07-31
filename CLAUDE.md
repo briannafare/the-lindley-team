@@ -79,8 +79,40 @@ See `.env.local.example` for the full list. Never commit a real `.env.local`.
 
 ## Repo layout notes
 
-- `mortgage-calculator-suite 2/` is a **separate Next.js project** that ended up
-  nested here via a macOS duplicate-on-copy. It is not referenced by the site and
-  is not built. It should move to its own repository; it is kept for now only so
-  the work is not lost.
+## Calculators
+
+The calculation engine lives in `src/lib/calculators/` (24 modules: DSCR, FHA, VA,
+USDA, affordability, rent-vs-buy, house-hacking, cash-to-close, CLTV,
+debt-consolidation, tax-deduction, move-up, payment-strategy, and the MI/funding-fee
+helpers). It is shared by every calculator UI. Add new math there, not in a
+component.
+
+Calculator UIs live in `src/components/calculators/`. `MortgageCalculator` is the
+generic one used on `/calculator` and on most service pages; `DscrCalculator`,
+`ConventionalCalculator`, and `UsdaCalculator` are purpose-built and are passed
+into `ServicePageLayout`'s `calculator` slot on their matching service pages.
+
+A service page opts into a calculator by passing the `calculator` prop — see
+`src/app/services/dscr/page.tsx`.
+
+### The rest of the suite
+
+A nested `mortgage-calculator-suite 2/` project used to sit in this repo — a macOS
+duplicate-on-copy holding 17 calculator UIs plus a stale copy of the engine (22 of
+its 24 lib files were byte-identical to `src/lib/`). It was never referenced or
+built by the site. Three of its UIs were ported into `src/components/calculators/`
+and wired to the service pages that had no calculator; the folder was then removed.
+
+The other 14 UIs are still worth shipping and remain in git history — the folder is
+present in every commit up to and including `d6e22a4`. Ten of them have no matching
+service page yet and would need one: affordability, rent-vs-buy, house-hacking,
+cash-to-close, CLTV, debt-consolidation, tax-deduction, move-up, buy-now-vs-wait,
+payment-strategy.
+
+To port one: copy its `app/<slug>/page.tsx`, strip the standalone page chrome (the
+`min-h-screen` shell and sticky header), rename the export, and repoint
+`@/components/AmortizationChart` to `@/components/calculators/AmortizationChart`.
+The Tailwind config already carries the suite's `ink-*` scale and `surface-*` and
+`shadow-card` tokens, and `globals.css` already defines `.input-field`,
+`.input-label`, `.input-helper`, and `.result-card`.
 - `out/` and `graphify-out/` are generated. Do not commit them.
