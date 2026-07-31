@@ -29,7 +29,6 @@ const GROUPS = [
     label: "The team",
     items: [
       { name: "Meet David & Bri", href: "/about" },
-      { name: "Our story", href: "/about" },
       { name: "Schedule a call", href: "/contact#schedule" },
     ],
   },
