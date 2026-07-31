@@ -4,130 +4,255 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "About The Lindley Team | Portland Mortgage Lender | NMLS #1367416",
+  title: "About The Lindley Team at Movement Mortgage | Portland | NMLS #1367416 / #265974",
   description:
-    "Meet Bri Lindley — Senior Loan Officer, CDLP certified, and Portland-based mortgage professional with over 20 years helping Oregon families buy and refinance homes. NMLS #1367416.",
+    "Two decades in the making: meet David Chandler & Bri Lindley, The Lindley Team at Movement Mortgage. Portland loan officers helping Oregon, Washington & Arizona families buy and refinance homes.",
 };
+
+const FAQS = [
+  {
+    q: "What areas does The Chandler/Lindley Lending Team serve?",
+    a: "Our roots are in the Portland area, and we personally handle loans across Oregon, Washington, and Arizona. But if you're looking to buy outside of those states, you are still in excellent hands. We have a dedicated, in-house team at Movement Mortgage that handles our out-of-state clients. They work closely with us behind the scenes to guarantee you receive the exact same level of service and exactness you expect from our team.",
+  },
+  {
+    q: "What is a Certified Divorce Lending Professional (CDLP®)?",
+    a: "A CDLP® is specifically trained to help divorcing homeowners navigate property buyouts, refinances, and new-purchase financing. Bri Lindley uses this specialized training to work directly with clients and their attorneys to untangle complex shared real estate assets during life's most stressful transitions.",
+  },
+  {
+    q: "What types of complex loans do you specialize in?",
+    a: "David Chandler specializes in complex financial profiles, including Jumbo loans, construction loans, self-employed income verification, and investment properties. If your financial situation doesn't fit in a standard box, we have the experience to find the right lever to pull.",
+  },
+  {
+    q: "Why MOVEMENT MORTGAGE?",
+    a: "Most lenders scramble just to hit a deadline. Movement does the exact opposite. By underwriting your loan at the very beginning of the process, we eliminate the last-minute chaos typical of the mortgage industry. We aim to assess and clear your loan from underwriting within six hours,* process over 75% of our loans in seven business days or less — allowing us to send closing documents out weeks in advance — and coordinate the final paperwork and funds with the closing attorney early, so closing day is just the moment you get your keys. This commitment to a best-in-class experience with the resources of a major national lender, combined with our boutique, highly communicative team approach, is what sets us apart.",
+  },
+];
+
+function FAQSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
 
 export default function AboutPage() {
   return (
     <>
+      <FAQSchema />
       <Nav />
       <main>
 
         {/* Hero */}
-        <section className="pt-40 pb-20 relative overflow-hidden">
+        <section className="pt-[clamp(24px,5vh,56px)] pb-20 relative overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <h1 className="font-display text-[clamp(3rem,8vw,6rem)] font-extrabold leading-[0.95] tracking-tight mb-6">
-              About the<br />
-              <span className="font-script font-normal text-orange text-[0.9em]">Team</span>
+              Two Decades<br />
+              <span className="font-script font-normal text-orange text-[0.9em]">in the Making</span>
             </h1>
             <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[620px]">
-              Two decades. Two generations. One mission: get Portland families into their homes without drama.
+              More than 20 years ago, David Chandler hired Tammi Lindley as a new loan officer with zero industry experience. It turned out to be one of the best decisions he ever made.
             </p>
           </div>
         </section>
 
-        {/* Bri's Story */}
+        {/* Team image band */}
+        <section className="pb-4">
+          <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+            <div className="overflow-hidden rounded-[1.25rem] bg-ink/5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/team/team-duo.jpg"
+                alt="David Chandler and Bri Lindley — The Lindley Team"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <p className="font-body text-[0.68rem] tracking-[0.14em] uppercase text-ink-light mt-3">
+              David Chandler &amp; Bri Lindley · The Lindley Team
+            </p>
+          </div>
+        </section>
+
+        {/* Our Story */}
         <section className="py-16 border-t border-border">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-                Bri Lindley
-              </p>
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+                Our Story
+              </h2>
               <div className="max-w-[720px] space-y-5">
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Bri grew up in the Portland area. She knows the difference between a Sellwood bungalow and a Beaumont-Wilshire Tudor not from a listing sheet but from having driven those streets her entire life. That local knowledge isn&apos;t a selling point — it&apos;s just how she thinks about this work.
+                  It turned out to be a lifelong friendship and what has become a defining partnership. Over the next two decades, Tammi — alongside her daughter, Bri — built one of the most trusted and premier mortgage lending teams in the Portland area. Tammi built her mortgage practice the right way: one straight conversation at a time, until half of Portland seemed to know someone she&apos;d taken care of.
                 </p>
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  She&apos;s been in the mortgage industry for over 20 years. In that time she&apos;s worked with first-time buyers who were terrified they&apos;d never qualify, with longtime homeowners trying to make smart equity decisions, and with people going through divorce who needed someone who genuinely understood both the financial and emotional weight of what they were navigating. She doesn&apos;t turn borrowers away for being complicated. She tends to find the complicated ones most interesting.
-                </p>
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Bri holds the Certified Divorce Lending Professional (CDLP) designation — one of only a small number of lenders in Oregon to earn it. It means she&apos;s specifically trained to help divorcing couples untangle the mortgage from the divorce process: buyouts, refinances, understanding what each spouse actually qualifies for on their own. She works closely with family law attorneys and mediators and knows how to operate inside that process without making things harder than they already are.
-                </p>
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Bri works at Mortgage Express, a local Portland lender — not a big bank call center. She has access to a wide range of loan programs, can advocate directly for her clients, and makes decisions locally. She cares about Portland&apos;s housing landscape because she&apos;s watched it change over two decades. She wants the people who love this city to be able to stay in it.
+                  Today, Tammi is enjoying a well-deserved retirement, but the standard that she set remains our baseline. David and Bri now lead the team together — bringing decades of combined lending expertise and meticulous operational systems to every client.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Certifications & Credentials */}
+        {/* Meet Your Guides */}
         <section className="py-16 border-t border-border bg-bg-alt">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-                Credentials
-              </p>
-              <div className="max-w-[720px]">
-                <div className="border-b border-border">
-                  {[
-                    { label: "Title", value: "Senior Loan Officer — Mortgage Express" },
-                    { label: "NMLS", value: "#1367416" },
-                    { label: "Licensed", value: "Oregon & Washington" },
-                    { label: "Designation", value: "CDLP — Certified Divorce Lending Professional" },
-                    { label: "Member", value: "Mortgage Bankers Association" },
-                  ].map((row) => (
-                    <div
-                      key={row.label}
-                      className="flex justify-between items-baseline py-4 border-t border-border"
-                    >
-                      <span className="text-[0.88rem] font-semibold text-ink">
-                        {row.label}
-                      </span>
-                      <span className="text-[0.88rem] text-ink-mid font-normal text-right max-w-[440px]">
-                        {row.value}
-                      </span>
-                    </div>
-                  ))}
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+                Meet Your Guides
+              </h2>
+              <div className="max-w-[720px] space-y-14">
+
+                <div>
+                  <h3 className="font-display text-[1.3rem] font-bold text-ink mb-4">
+                    David Chandler <span className="text-ink-light font-normal">| Mortgage Loan Officer</span>
+                  </h3>
+                  <div className="space-y-5">
+                    <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
+                      David has done this for more than 20 years, and he explains it like someone with nothing to hide. Whether it&apos;s your first home, and the process feels overwhelming or when your loan isn&apos;t simple — you&apos;re self-employed, you&apos;re building a home, or the price tag requires a jumbo loan — he&apos;s closed a few hundred just like it and knows exactly which lever to pull.
+                    </p>
+                    <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
+                      As an active investor himself, with his own money on the line, he approaches your financing with the exactness of analyzing your options like a fellow buyer focused on real-world numbers, rather than a sales person selling a rate. Hundreds of five-star reviews suggest the approach works.
+                    </p>
+                  </div>
+                  <div className="mt-5 space-y-1">
+                    <p className="text-[0.82rem] text-ink-mid font-normal">
+                      <span className="font-semibold text-ink">Focus:</span> Construction · Self-employed · Investment Property
+                    </p>
+                    <p className="text-[0.82rem] text-ink-mid font-normal">
+                      <span className="font-semibold text-ink">Credentials:</span> NMLS #265974 | Licensed in OR, WA &amp; AZ
+                    </p>
+                  </div>
                 </div>
-                <p className="text-[0.88rem] text-ink-mid font-normal leading-relaxed mt-6">
-                  The CDLP designation means Bri is specifically trained to help divorcing homeowners navigate property buyouts, refinances, and new purchase financing during one of life&apos;s most stressful transitions.
+
+                <div className="border-t border-border pt-14">
+                  <h3 className="font-display text-[1.3rem] font-bold text-ink mb-4">
+                    Bri Lindley <span className="text-ink-light font-normal">| Mortgage Loan Officer &amp; CDLP&reg;</span>
+                  </h3>
+                  <div className="space-y-5">
+                    <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
+                      Bri didn&apos;t find the mortgage business — she was raised in it. Keeping the team&apos;s standard of care isn&apos;t just a value statement for her; it&apos;s a family matter. Bri built the team&apos;s systems herself — the updates, the follow-ups, and the &ldquo;here&apos;s exactly where things stand&rdquo; messages — so clients never have to wonder what&apos;s happening with their file.
+                    </p>
+                    <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
+                      She is also a Certified Divorce Lending Professional (CDLP&reg;), a designation only a handful of Oregon lenders hold. When a &lsquo;house&rsquo; is caught in the middle of a divorce, Bri works alongside attorneys to untangle the buyout, the refinance, and provide a clear read on what each person can afford next. It&apos;s exacting work with a simple goal: ensuring that at the end of the process, someone keeps their footing with a next chapter that actually pencils.
+                    </p>
+                  </div>
+                  <div className="mt-5 space-y-1">
+                    <p className="text-[0.82rem] text-ink-mid font-normal">
+                      <span className="font-semibold text-ink">Focus:</span> Divorce Lending · First Time Homebuyers
+                    </p>
+                    <p className="text-[0.82rem] text-ink-mid font-normal">
+                      <span className="font-semibold text-ink">Credentials:</span> NMLS #1367416 | Licensed in OR &amp; WA | CDLP&reg; (Certified Divorce Lending Professional)
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-[0.7rem] text-ink-light leading-relaxed">
+                  Both work through Movement Mortgage, NMLS ID&nbsp;#39179.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* The Mother-Daughter Story */}
+        {/* How We Work */}
         <section className="py-16 border-t border-border">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-                The Team
-              </p>
-              <div className="max-w-[720px] space-y-5">
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Tammi Lindley came into the mortgage industry first. She built a reputation in Portland the old-fashioned way — one client at a time, with enough local knowledge and honesty that people kept referring their friends. When her daughter Bri followed her into the business, it wasn&apos;t a grand plan. It was just what made sense.
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+                How We Work
+              </h2>
+              <div className="max-w-[720px]">
+                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-10">
+                  We believe securing a mortgage should be simple and predictable. Here is how we ensure you have an experience you&apos;ll rave about to your friends and family:
                 </p>
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  They built something together. Tammi brought the foundation — years of relationships, a clear-eyed view of the Portland market through multiple cycles, and a way of talking to clients that put people at ease. Bri brought fresh energy, an appetite for continuing education, and eventually a specialization in divorce lending that opened up a whole category of clients who had nowhere else to turn.
-                </p>
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Tammi is largely retired now. Bri carries the work forward. But Tammi still picks up the occasional call, still shows up when it matters, and still has opinions about Portland real estate that are worth hearing. Some teams you inherit. Some you build. The Lindley Team is a little of both.
-                </p>
+                <ol className="space-y-8">
+                  {[
+                    {
+                      title: "Have a Straight Conversation",
+                      body: "Schedule a call with us so we can understand your exact financial picture and goals without the jargon.",
+                    },
+                    {
+                      title: "Get a Clear, Custom Read",
+                      body: "We map out the numbers — down to the decimal — so you know exactly what you can afford, which levers to pull, and what to expect.",
+                    },
+                    {
+                      title: "Close With Confidence",
+                      body: "Rely on our best in class Underwriting, Processing and Funding teams as well as our proactive communication to cross the finish line smoothly and step into your new home.",
+                    },
+                  ].map((step, i) => (
+                    <li key={step.title} className="flex gap-5">
+                      <span className="font-display text-[1.5rem] font-extrabold text-orange shrink-0 leading-none">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h3 className="text-[1rem] font-bold text-ink mb-1">
+                          {step.title}
+                        </h3>
+                        <p className="text-[0.95rem] leading-[1.7] text-ink-mid font-normal">
+                          {step.body}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+                <a
+                  href="/contact"
+                  className="mt-10 px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2 justify-center"
+                >
+                  Schedule Your Consultation Today <span>→</span>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Why Mortgage Express */}
+        {/* FAQ */}
         <section className="py-16 border-t border-border bg-bg-alt">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-                Our Lender
-              </p>
-              <div className="max-w-[720px] space-y-5">
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Bri works at Mortgage Express because it&apos;s a correspondent lender — meaning they fund loans in-house, with their own capital, rather than brokering your file to a third party. That distinction matters more than most borrowers realize. When a lender funds their own loans, they control the process. Underwriting decisions happen locally, conditions get cleared faster, and Bri can actually advocate for your file rather than waiting on a faceless institution to move.
+              <div>
+                <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-1">
+                  FAQ
+                </h2>
+                <p className="text-[0.78rem] text-ink-light">
+                  {FAQS.length} questions
                 </p>
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  Mortgage Express offers a full range of loan programs — conventional, FHA, VA, jumbo, USDA, and more. And when a borrower&apos;s situation calls for it, they can broker to outside investors as well. That flexibility means Bri isn&apos;t locked into one product shelf. She finds the right fit for your situation, not the one that&apos;s easiest to push through.
+              </div>
+              <div className="max-w-[720px]">
+                {FAQS.map((faq, i) => (
+                  <details key={i} className="group border-b border-border">
+                    <summary className="flex justify-between items-center gap-4 py-5 cursor-pointer list-none">
+                      <h3 className="font-display text-[1rem] font-semibold text-ink pr-8 leading-snug">
+                        {faq.q}
+                      </h3>
+                      <span className="text-ink-light text-xl shrink-0 group-open:rotate-45 transition-transform duration-300">
+                        +
+                      </span>
+                    </summary>
+                    <div className="pb-5 pr-12">
+                      <p className="text-[0.9rem] text-ink-mid font-normal leading-relaxed">
+                        {faq.a}
+                      </p>
+                    </div>
+                  </details>
+                ))}
+                <p className="text-[0.7rem] text-ink-light leading-relaxed mt-6">
+                  *While it is Movement Mortgage&apos;s goal to provide underwriting results within six hours of receiving an application, process loans in seven days, and close in one day, extenuating circumstances may cause delays outside of this window.
                 </p>
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                  The relationship doesn&apos;t end at closing. Clients who bought their first home with Bri years ago come back when they refinance, when they upgrade, when life changes and they need to think through their options again. That&apos;s not a sales pitch — it&apos;s just how a local lender operates when they actually care about the community they&apos;re in.
+                <p className="text-[0.7rem] text-ink-light leading-relaxed mt-2">
+                  CDLP&reg; is a registered certification mark of the Divorce Lending Association.
                 </p>
               </div>
             </div>
@@ -139,12 +264,12 @@ export default function AboutPage() {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 text-center">
               {[
-                { stat: "20+", label: "Years in Portland mortgage" },
-                { stat: "OR + WA", label: "Licensed states" },
-                { stat: "Hundreds", label: "of Portland families helped" },
+                { stat: "35+", label: "Combined years lending" },
+                { stat: "OR · WA · AZ", label: "Where the team is licensed" },
+                { stat: "Hundreds", label: "of five-star client reviews" },
               ].map((item) => (
                 <div key={item.label}>
-                  <div className="font-display text-[clamp(2.5rem,6vw,4rem)] font-extrabold leading-none mb-3">
+                  <div className="font-display text-[clamp(2rem,4vw,3rem)] font-extrabold leading-none mb-3">
                     {item.stat}
                   </div>
                   <p className="text-[0.72rem] font-bold tracking-[0.18em] uppercase text-white/50">
@@ -170,7 +295,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
+                href="/apply"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2 justify-center"

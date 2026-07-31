@@ -13,14 +13,14 @@ const neighborhoods = [
     name: "Sellwood-Moreland",
     slug: "sellwood-moreland",
     tags: "Antique Row · Oaks Park · River views",
-    gradient: "from-orange/20 via-[#F5F1EC] to-[#FAF8F5]",
+    gradient: "from-[#ef443433] via-[#F5F1EC] to-[#FAF8F5]",
     svg: (
       <>
         {/* Bridge arches */}
-        <path d="M0 180 Q50 80 100 180 Q150 80 200 180 Q250 80 300 180" stroke="#E26125" strokeWidth="1" fill="none" opacity="0.2" />
-        <line x1="50" y1="180" x2="50" y2="220" stroke="#E26125" strokeWidth="0.5" opacity="0.15" />
-        <line x1="150" y1="180" x2="150" y2="220" stroke="#E26125" strokeWidth="0.5" opacity="0.15" />
-        <line x1="250" y1="180" x2="250" y2="220" stroke="#E26125" strokeWidth="0.5" opacity="0.15" />
+        <path d="M0 180 Q50 80 100 180 Q150 80 200 180 Q250 80 300 180" stroke="#EF4434" strokeWidth="1" fill="none" opacity="0.2" />
+        <line x1="50" y1="180" x2="50" y2="220" stroke="#EF4434" strokeWidth="0.5" opacity="0.15" />
+        <line x1="150" y1="180" x2="150" y2="220" stroke="#EF4434" strokeWidth="0.5" opacity="0.15" />
+        <line x1="250" y1="180" x2="250" y2="220" stroke="#EF4434" strokeWidth="0.5" opacity="0.15" />
       </>
     ),
   },
@@ -34,7 +34,7 @@ const neighborhoods = [
         {/* Gallery frames */}
         <rect x="30" y="60" width="80" height="60" rx="2" stroke="#3554D9" strokeWidth="1" fill="none" opacity="0.2" />
         <rect x="140" y="40" width="60" height="80" rx="2" stroke="#3554D9" strokeWidth="1" fill="none" opacity="0.15" />
-        <rect x="80" y="150" width="100" height="50" rx="2" stroke="#E26125" strokeWidth="0.75" fill="none" opacity="0.12" />
+        <rect x="80" y="150" width="100" height="50" rx="2" stroke="#EF4434" strokeWidth="0.75" fill="none" opacity="0.12" />
         <rect x="220" y="80" width="50" height="50" rx="2" stroke="#3554D9" strokeWidth="0.75" fill="none" opacity="0.1" />
       </>
     ),
@@ -54,7 +54,7 @@ const neighborhoods = [
         <line x1="150" y1="0" x2="150" y2="240" stroke="#222" strokeWidth="0.5" opacity="0.08" />
         <line x1="225" y1="0" x2="225" y2="240" stroke="#222" strokeWidth="0.5" opacity="0.08" />
         {/* Book spines */}
-        <rect x="60" y="130" width="8" height="40" rx="1" fill="#E26125" opacity="0.12" />
+        <rect x="60" y="130" width="8" height="40" rx="1" fill="#EF4434" opacity="0.12" />
         <rect x="72" y="125" width="6" height="45" rx="1" fill="#3554D9" opacity="0.1" />
         <rect x="82" y="132" width="7" height="38" rx="1" fill="#222" opacity="0.06" />
       </>

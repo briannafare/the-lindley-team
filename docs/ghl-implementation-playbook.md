@@ -25,7 +25,7 @@ This is the "brain" that powers ALL your AI agents. Without it, your chatbot and
 ### Go to: AI Agents → Knowledge Base → Create New
 
 **Name:** "The Lindley Team — Mortgage Knowledge"
-**Description:** "Complete service information, FAQ library, neighborhood data, and compliance requirements for The Lindley Team correspondent mortgage lender in Portland, Oregon."
+**Description:** "Complete service information, FAQ library, neighborhood data, and compliance requirements for The Lindley Team, two loan officers at Movement Mortgage in Portland, Oregon."
 
 ### Sources to add:
 
@@ -33,7 +33,7 @@ This is the "brain" that powers ALL your AI agents. Without it, your chatbot and
 
 Upload the file `lindley-team-knowledge-base.docx` (already created — check your downloads).
 This document contains: About Us, team bios, all 10 services with requirements, FAQ library, contact info, booking info, and compliance language. All verified and corrected for:
-- Correspondent lender language (not broker)
+- Movement Mortgage loan-officer language (not broker, not bank)
 - Updated address (Sequoia Parkway)
 - Tammi as co-founder (retired, no NMLS)
 - No "free" — uses "complimentary"
@@ -145,7 +145,7 @@ Default new contacts to stage 1. When a calendar event is created, automatically
 **System Prompt / Instructions:**
 
 ```
-You are a helpful assistant for The Lindley Team, a correspondent mortgage lender in Portland, Oregon run by Bri Lindley (Senior Loan Officer, NMLS #1367416, CDLP certified).
+You are a helpful assistant for The Lindley Team, the Movement Mortgage loan-officer team in Portland, Oregon run by David Chandler (NMLS #265974) and Bri Lindley (Senior Loan Officer, NMLS #1367416, CDLP certified).
 
 Your job:
 1. Answer mortgage and Portland neighborhood questions using the Knowledge Base
@@ -168,7 +168,7 @@ When someone asks about divorce and mortgage:
 
 Compliance: End any discussion of specific loan terms with "Not a commitment to lock or lend. Terms and restrictions apply."
 
-Licensed in Oregon and Washington only. We are NOT licensed in California.
+The team is licensed in Oregon and Washington. David Chandler is also individually licensed in Arizona, California, and Georgia.
 ```
 
 **Attach Knowledge Base:** Select "The Lindley Team — Mortgage Knowledge"
@@ -224,7 +224,7 @@ This is the killer feature. When someone submits a rate quote form on your websi
 **System Prompt:**
 
 ```
-You are an AI assistant calling on behalf of Bri Lindley from The Lindley Team, a correspondent mortgage lender in Portland, Oregon.
+You are an AI assistant calling on behalf of The Lindley Team (David Chandler and Bri Lindley), loan officers at Movement Mortgage in Portland, Oregon.
 
 You are calling because they just submitted a request on our website. Your job:
 
@@ -251,7 +251,7 @@ Rules:
 - For divorce-related inquiries, be extra sensitive and don't push for details — just offer to schedule a confidential call
 - Never say you are AI unless directly asked. If asked, say "I'm an AI assistant for The Lindley Team"
 
-Compliance: We are licensed in Oregon and Washington only.
+Compliance: The team is licensed in Oregon and Washington (David Chandler also AZ, CA, GA).
 ```
 
 **Knowledge Base:** Connect "The Lindley Team — Mortgage Knowledge"

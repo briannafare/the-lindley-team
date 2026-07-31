@@ -1,82 +1,84 @@
 import Link from "next/link";
+import Btn from "@/components/Btn";
 
-const serviceLinks = [
-  { name: "Purchase", href: "/services/purchase" },
+const loanLinks = [
+  { name: "Buy a home", href: "/services/purchase" },
   { name: "Refinance", href: "/services/refinance" },
-  { name: "Divorce Lending", href: "/services/divorce-lending" },
-  { name: "FHA Loans", href: "/services/fha" },
-  { name: "VA Loans", href: "/services/va" },
+  { name: "Conventional", href: "/services/conventional" },
+  { name: "FHA", href: "/services/fha" },
+  { name: "VA", href: "/services/va" },
+  { name: "USDA", href: "/services/usda" },
   { name: "Jumbo", href: "/services/jumbo" },
-  { name: "Cash-Out Refi", href: "/services/cash-out" },
+  { name: "New construction", href: "/services/new-construction" },
+  { name: "Self-employed", href: "/services/bank-statement" },
+  { name: "DSCR / investor", href: "/services/dscr" },
   { name: "HELOC", href: "/services/heloc" },
-  { name: "Investment", href: "/services/investment" },
-  { name: "Reverse Mortgage", href: "/services/reverse-mortgage" },
+  { name: "Cash-out refi", href: "/services/cash-out" },
+  { name: "Reverse mortgage", href: "/services/reverse-mortgage" },
+  { name: "Divorce lending", href: "/services/divorce-lending" },
+  { name: "Down payment help", href: "/services/down-payment-assistance" },
+  { name: "All loan types", href: "/services" },
 ];
 
 const exploreLinks = [
   { name: "Neighborhoods", href: "/neighborhoods" },
-  { name: "Calculator", href: "/calculator" },
   { name: "Journal", href: "/blog" },
-  { name: "Reviews", href: "/reviews" },
-  { name: "Resources", href: "/resources" },
+  { name: "Portland guide", href: "/neighborhoods" },
 ];
 
-const connectLinks = [
-  { name: "Contact Us", href: "/contact" },
-  { name: "971.754.1771", href: "tel:9717541771" },
-  { name: "Email Us", href: "mailto:LindleyTeam@mtgxps.com" },
-  { name: "Apply Now", href: "/apply" },
+const teamLinks = [
+  { name: "Meet David & Bri", href: "/about" },
+  { name: "Calculator", href: "/calculator" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="pt-14 pb-6 bg-ink text-white">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 mb-10">
-          <div>
-            <div className="font-display text-lg font-medium mb-3">
-              The Lindley Team
-            </div>
-            <p className="text-sm text-white/40 leading-relaxed max-w-[300px] font-normal">
-              Portland mortgage strategy for people who want to build wealth
-              through real estate. Licensed in Oregon, Washington.
-            </p>
+    <footer className="mt-[clamp(56px,7vw,110px)] bg-ink text-paper rounded-t-[3px]">
+      <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px] pt-[clamp(40px,5vw,80px)] pb-10">
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <Link
+            href="/contact#schedule"
+            className="group/talk font-grotesk font-extrabold text-[clamp(40px,7vw,104px)] leading-[0.9] tracking-[-0.03em] inline-flex items-baseline gap-3 hover:text-lime transition-colors"
+          >
+            Let&rsquo;s talk.
+            <span className="text-[0.28em] text-lime opacity-0 -translate-x-2 group-hover/talk:opacity-100 group-hover/talk:translate-x-0 transition-all" aria-hidden>
+              →
+            </span>
+          </Link>
+          <div className="flex flex-wrap items-center gap-4 pb-1.5">
+            <Btn href="/contact#schedule" variant="paper" size="lg">
+              Schedule 15 minutes
+            </Btn>
+            <a href="tel:9717541771" className="font-body text-[0.8rem] tracking-[0.05em] text-paper/70 underline decoration-paper/30 underline-offset-4 hover:text-lime hover:decoration-lime transition-colors">
+              or call 971-754-1771
+            </a>
           </div>
-          <FooterCol title="Services" links={serviceLinks} />
-          <FooterCol title="Explore" links={exploreLinks} />
-          <FooterCol title="Connect" links={connectLinks} />
         </div>
 
-        <div className="pt-5 border-t border-white/10">
-          <p className="text-[0.65rem] text-white/25 leading-relaxed max-w-[860px]">
-            Not a commitment to lock or lend. Terms and restrictions apply. Not
-            all applicants will qualify. Mortgage Express, LLC. NMLS Company ID:
-            40831 | mtgxps.com | Licensed in OR/WA. Mortgage Express is
-            an Equal Housing Lender. 15115 SW Sequoia Parkway, Suite 100,
-            Portland, OR 97224.
-          </p>
-          <div className="flex flex-wrap justify-between items-center mt-5 gap-4">
-            <span className="text-[0.72rem] text-white/30">
-              © {new Date().getFullYear()} The Lindley Team
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 text-[0.85rem] leading-[2]">
+          <FooterCol title="The team" links={teamLinks} />
+          <FooterCol title="Loans" links={loanLinks} />
+          <FooterCol title="Explore" links={exploreLinks} />
+          <div>
+            <span className="block font-body text-[0.7rem] tracking-[0.14em] uppercase text-white/40 mb-2.5">
+              Contact
             </span>
-            <div className="flex gap-2">
-              {[
-                { label: "Fb", href: "https://www.facebook.com/TammiLindleyTeam/" },
-                { label: "Ig", href: "https://www.instagram.com/thelindleyteam" },
-                { label: "Li", href: "https://www.linkedin.com/in/brianna-lindley-80673015/" },
-              ].map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[0.65rem] font-medium text-white/50 hover:bg-white hover:text-ink hover:border-white hover:-translate-y-0.5 transition-all"
-                >
-                  {s.label}
-                </a>
-              ))}
-            </div>
+            <a href="tel:9717541771" className="block hover:text-orange transition-colors">971-754-1771</a>
+            <a href="mailto:david.chandler@movement.com" className="block hover:text-orange transition-colors">david.chandler@movement.com</a>
+            <a href="mailto:brianna.lindley@movement.com" className="block hover:text-orange transition-colors">brianna.lindley@movement.com</a>
           </div>
+        </div>
+
+        <div className="mt-11 pt-5 border-t border-white/10 flex flex-wrap items-end justify-between gap-4">
+          <p className="text-[0.7rem] text-white/40 leading-[1.7] max-w-[82ch]">
+            The Lindley Team at Movement Mortgage, LLC. Movement Mortgage, LLC is an Equal Housing Lender.
+            NMLS ID #39179 (<a href="https://www.nmlsconsumeraccess.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-white/70">www.nmlsconsumeraccess.org</a>).
+            David Chandler NMLS #265974 · Brianna Lindley NMLS #1367416. Interest rates and products are subject to
+            change without notice and may not be available at the time of loan commitment or rate lock. This is not a
+            commitment to lend; terms and conditions apply; not all applicants will qualify. Licensed in OR &amp; WA.
+            © {new Date().getFullYear()} The Lindley Team. <a href="/privacy" className="underline hover:text-white/70">Privacy Policy</a>
+          </p>
+          <span className="font-serif italic text-[1.4rem] text-paper">David &amp; Bri</span>
         </div>
       </div>
     </footer>
@@ -92,16 +94,12 @@ function FooterCol({
 }) {
   return (
     <div>
-      <h4 className="text-[0.65rem] font-medium tracking-[0.15em] uppercase text-white/60 mb-4">
+      <span className="block font-body text-[0.7rem] tracking-[0.14em] uppercase text-white/40 mb-2.5">
         {title}
-      </h4>
-      {links.map((link) => (
-        <Link
-          key={link.name}
-          href={link.href}
-          className="block text-sm text-white/40 font-normal mb-2 hover:text-white transition-colors"
-        >
-          {link.name}
+      </span>
+      {links.map((l) => (
+        <Link key={l.name} href={l.href} className="block hover:text-orange transition-colors">
+          {l.name}
         </Link>
       ))}
     </div>

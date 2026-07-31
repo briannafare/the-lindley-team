@@ -14,9 +14,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const neighborhood = getNeighborhoodBySlug(params.slug);
   if (!neighborhood) return {};
+  const canonical = `/neighborhoods/${neighborhood.slug}`;
   return {
     title: neighborhood.seo.title,
     description: neighborhood.seo.description,
+    alternates: { canonical },
+    openGraph: {
+      type: "article",
+      url: canonical,
+      title: neighborhood.seo.title,
+      description: neighborhood.seo.description,
+    },
   };
 }
 

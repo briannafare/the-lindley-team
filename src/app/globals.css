@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Accent — Sanity's EXACT wide-gamut (P3) red-orange, copied verbatim. On P3 displays
+   (Mac/iPhone) this renders MORE vivid than any sRGB hex — it will not match a hex
+   swatch, and that extra punch is the whole point. sRGB #ef4434 fallback for the rest. */
+:root {
+  --accent: #ef4434;
+}
+@supports (color: color(display-p3 0.898 0.297 0.224)) {
+  :root {
+    --accent: color(display-p3 0.898 0.297 0.224);
+  }
+}
+
 /* Noise overlay */
 body::after {
   content: "";
@@ -20,8 +32,8 @@ html {
 
 /* Selection color */
 ::selection {
-  background: #F2FF91;
-  color: #222;
+  background: #DDE84B;
+  color: #0D0D0D;
 }
 
 /* Image treatments */

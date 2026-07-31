@@ -19,7 +19,7 @@ Set this up as a single pipeline in GHL with these stages:
 | 2. Contacted | Bri makes first human touchpoint | Manual move — Bri confirms she's spoken to them |
 | 3. Discovery Scheduled | Calendar booking confirmed | Auto-move when GHL calendar event is created |
 | 4. Pre-Qualification | Financial info reviewed | Manual move after Bri reviews their numbers |
-| 5. Application Started | Clicked through to Mortgage Express | Auto-tag when UTM-tracked link is clicked |
+| 5. Application Started | Clicked through to Movement Mortgage | Auto-tag when UTM-tracked link is clicked |
 | 6. In Processing | Loan is in underwriting | Manual move |
 | 7. Closed — Won | Loan funded | Manual move → triggers post-close sequence |
 | 8. Closed — Lost | Didn't proceed | Manual move → add loss reason tag → long-term nurture |
@@ -33,17 +33,13 @@ Each form submits via webhook to GHL. Every form captures UTM parameters from th
 
 ### Form 1: Get Pre-Approved (Primary CTA — every page)
 **Where it appears:** Nav CTA, Hero, service page CTAs, CTA sections
-**What it actually does:** Redirects to Mortgage Express application with UTM tracking
+**What it actually does:** Redirects to Movement Mortgage application with UTM tracking
 **URL pattern:**
 ```
-https://mtgxps.mymortgage-online.com/loan-app/
-  ?siteId=1878266072
-  &lar=blindley
-  &workFlowId=71729
-  &utm_source=thelindleyteam
-  &utm_medium=website
-  &utm_campaign={page-type}
-  &utm_content={specific-cta-id}
+# Movement easyApp — one link per loan officer (live values in src/app/apply/page.tsx):
+David Chandler: https://easyapp.movement.com/apply/create_profile?userid=10107026
+Bri Lindley:    https://easyapp.movement.com/apply/login?userid=10115700
+# apply-click tracking still works via /api/lead (formType "apply-click") → wh-apply-click.
 ```
 **GHL tracking:** Fire a webhook on click (not form submission) that creates/updates a contact with tag `clicked-apply` and the UTM data. This lets you see who clicked but didn't complete the application.
 

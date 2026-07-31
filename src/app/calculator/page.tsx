@@ -130,9 +130,9 @@ export default function CalculatorPage() {
       <section className="py-16 border-t border-border bg-bg-alt">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               More Tools
-            </p>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[720px]">
               {[
                 { name: "Refinance Break-Even", href: "/services/refinance", desc: "Should you refinance? Calculate your break-even point." },
@@ -162,9 +162,9 @@ export default function CalculatorPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
             <div>
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-1">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-1">
                 FAQ
-              </p>
+              </h2>
               <p className="text-[0.78rem] text-ink-light">
                 {faqs.length} questions
               </p>

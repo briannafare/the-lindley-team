@@ -38,7 +38,7 @@ export default function NeighborhoodsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
-              href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
+              href="/apply"
               className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2 justify-center"
             >
               Get Pre-Approved <span>→</span>
@@ -58,9 +58,9 @@ export default function NeighborhoodsPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           {/* Section header */}
           <div className="flex items-baseline gap-4 mb-10">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Neighborhoods
-            </p>
+            </h2>
             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-bg-alt border border-border text-[0.68rem] font-bold text-ink-light tracking-[0.06em]">
               {neighborhoods.length} ready
             </span>
@@ -85,9 +85,9 @@ export default function NeighborhoodsPage() {
                 <p className="text-[0.65rem] font-bold tracking-[0.15em] uppercase text-ink-light mb-2">
                   {n.city}, {n.state}
                 </p>
-                <h2 className="font-display text-[1.1rem] font-bold text-ink group-hover:text-orange transition-colors leading-snug mb-3">
+                <h3 className="font-display text-[1.1rem] font-bold text-ink group-hover:text-orange transition-colors leading-snug mb-3">
                   {n.name}
-                </h2>
+                </h3>
                 <p className="text-[0.82rem] text-ink-mid font-normal leading-relaxed line-clamp-2 mb-4">
                   {n.personality}
                 </p>

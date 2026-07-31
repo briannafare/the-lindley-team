@@ -82,25 +82,26 @@ export default function MortgageCalculator({
   const handleLeadSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    const webhookUrl = process.env.NEXT_PUBLIC_GHL_CALC_WEBHOOK || "";
-    if (webhookUrl) {
-      fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          source: "calculator",
-          name: leadName,
-          email: leadEmail,
-          phone: leadPhone,
-          home_price: homePrice,
-          loan_amount: loanAmount,
-          rate,
-          term,
-          down_payment_pct: downPaymentPct,
-          monthly_payment: results?.monthlyPayment,
-        }),
-      }).catch(() => {});
-    }
+    // Route through /api/lead (formType "calculator") like every other form,
+    // so the GHL wh-calculator workflow tags + creates the opportunity.
+    fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        formType: "calculator",
+        source: "thelindleyteam.com/calculator",
+        name: leadName,
+        email: leadEmail,
+        phone: leadPhone,
+        message: `Calculator lead — ${formatCurrency(homePrice)} home, ${downPaymentPct}% down, ${rate}% / ${term}yr → est. ${formatCurrency(results?.monthlyPayment ?? 0)}/mo`,
+        home_price: homePrice,
+        loan_amount: loanAmount,
+        rate,
+        term,
+        down_payment_pct: downPaymentPct,
+        monthly_payment: results?.monthlyPayment,
+      }),
+    }).catch(() => {});
     setLeadCaptured(true);
     setShowForm(false);
     setSubmitting(false);
@@ -215,7 +216,7 @@ export default function MortgageCalculator({
             <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
               Interest Rate
             </label>
-            <div className="flex items-center border border-border rounded-xl px-3 py-2">
+            <div className="flex items-center border border-border rounded-xl px-3 py-2 focus-within:border-ink transition-colors">
               <input
                 type="number"
                 value={rate}
@@ -262,7 +263,7 @@ export default function MortgageCalculator({
               <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
                 Annual Taxes
               </label>
-              <div className="flex items-center border border-border rounded-xl px-3 py-2">
+              <div className="flex items-center border border-border rounded-xl px-3 py-2 focus-within:border-ink transition-colors">
                 <span className="text-ink-light text-sm mr-1">$</span>
                 <input
                   type="number"
@@ -280,7 +281,7 @@ export default function MortgageCalculator({
               <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
                 Annual Insurance
               </label>
-              <div className="flex items-center border border-border rounded-xl px-3 py-2">
+              <div className="flex items-center border border-border rounded-xl px-3 py-2 focus-within:border-ink transition-colors">
                 <span className="text-ink-light text-sm mr-1">$</span>
                 <input
                   type="number"

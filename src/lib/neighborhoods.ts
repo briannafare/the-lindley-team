@@ -52,6 +52,90 @@ export interface NeighborhoodData {
 
 export const neighborhoods: NeighborhoodData[] = [
   {
+    slug: "mt-scott-arleta",
+    name: "Mt. Scott-Arleta",
+    city: "Portland",
+    state: "OR",
+    description: [
+      "SE Foster Road is the spine of Mt. Scott-Arleta, and on a weekday evening it smells like wood smoke and fryer oil from Carts on Foster — a covered food-cart pod where you can get Korean fusion, ramen, or a wood-fired pie and eat at a picnic table under string lights. Across the street, Space Monkey Coffee roasts its own beans. This is inner Southeast Portland without the inner-Southeast price tag: bungalows on tree-lined blocks, a food scene that punches above its weight, and the Mt. Scott Community Center — a real public pool, roller rink, and gym — anchoring the whole thing.",
+      "The housing is mostly early-1900s Craftsman bungalows and Portland foursquares, with mid-century ranches filling in and a growing share of ADUs and thoughtful infill. The median sits around $468,000 — meaningfully below Richmond or Sellwood for a comparable house, which is exactly why buyers priced out of inner SE keep landing here. The neighborhood runs from SE Foster on the north to SE Duke on the south, SE 60th to SE 82nd. It's the kind of place with block parties and a pollinator garden neighbors built out of a neglected traffic triangle.",
+      "The honest trade-offs: SE Foster and SE 82nd are busy arterials, and the blocks closest to them carry traffic and noise. A lot of the housing is old enough that you should budget for the roof, the foundation, or the knob-and-tube — get the inspection. And the schools are solid but mid-tier by Portland standards, with Franklin High the bright spot. None of that scares off the people who buy here. They come for the value, the walkability, and a neighborhood that still feels like a neighborhood.",
+    ],
+    personality: "Portland's backyard porch — bungalows, food carts, and a community-center pool",
+    mapEmbedSrc:
+      "https://maps.google.com/maps?q=Mt+Scott+Arleta+Portland+OR&output=embed&z=14",
+    directionsSrc:
+      "https://maps.google.com/maps?saddr=Mt+Scott+Arleta+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
+    walkScore: 77,
+    bikeScore: 78,
+    transitScore: 45,
+    schoolDistrict: "Portland Public Schools",
+    schools: [
+      { name: "Arleta Elementary", type: "elementary", grades: "PK–5", rating: 5 },
+      { name: "Lane Middle School", type: "middle", grades: "6–8", rating: 5 },
+      { name: "Franklin High School", type: "high", grades: "9–12", rating: 7 },
+    ],
+    parks: [
+      {
+        name: "Mt. Scott Park",
+        amenities: ["playground", "sports fields", "tennis & basketball courts", "picnic shelters"],
+      },
+      {
+        name: "Arleta Triangle",
+        amenities: ["pollinator garden", "community art", "pop-up events"],
+      },
+      {
+        name: "Firland Parkway",
+        amenities: ["tree-lined median", "walking path", "dog-walking"],
+      },
+    ],
+    restaurants: [
+      { name: "Carts on Foster", cuisine: "Food carts", vibe: "Covered cart pod on SE Foster — Korean fusion, ramen, wood-fired pizza, burgers, open-air seating" },
+      { name: "An Xuyen Bakery", cuisine: "Vietnamese", vibe: "Long-standing bakery — banh mi, fresh baguettes, French pastries" },
+      { name: "Pizzeria Otto", cuisine: "Pizza", vibe: "Wood-fired Neapolitan pies with local ingredients, family-friendly, craft beer" },
+    ],
+    coffee: [
+      { name: "Space Monkey Coffee", vibe: "Artsy SE Foster coffeehouse — house-roasted beans, sandwiches, pastries" },
+      { name: "Speedboat Coffee", vibe: "Espresso and vegan pastries out of a vintage trailer, with a drive-thru" },
+    ],
+    bars: [
+      { name: "The Slingshot Lounge", vibe: "Relaxed Foster dive — pinball, strong pours, pub menu with vegan options" },
+      { name: "Foster Gardens", vibe: "Neighborhood taproom with a big patio and Oregon brews" },
+      { name: "Mad Hanna", vibe: "Quirky spot off SE 82nd — backyard fire pits and karaoke nights" },
+    ],
+    medianHomePrice: 468000,
+    priceRange: { low: 380000, high: 600000 },
+    commuteToDowntown:
+      "About 18 minutes by car outside rush hour via SE Foster or Powell to the bridges — longer when Foster backs up. Roughly 20 minutes by bike on the neighborhood greenways. Bus lines on Foster and SE 72nd reach downtown in about 35–45 minutes.",
+    faqs: [
+      {
+        q: "How much does a home cost in Mt. Scott-Arleta?",
+        a: "The median is around $468,000 — one of the better values in inner Southeast Portland. Most houses trade between roughly $380k and $600k: original Craftsman bungalows and foursquares in the middle, updated and larger infill homes toward the top. Because it's more affordable than Richmond, Sellwood, or Woodstock next door, well-priced homes in good condition still draw multiple offers. We'll tell you honestly what your budget actually buys here.",
+      },
+      {
+        q: "Is Mt. Scott-Arleta walkable?",
+        a: "Yes — the Walk Score is 77. SE Foster is the walkable heart, where you can handle coffee, groceries, a meal, and a pint on foot. The flat, gridded residential streets are easy to bike, and the Mt. Scott Community Center puts a public pool and gym within walking distance for much of the neighborhood.",
+      },
+      {
+        q: "What kinds of homes are in Mt. Scott-Arleta?",
+        a: "Mostly early-20th-century Craftsman bungalows and Portland foursquares, with mid-century ranches and newer ADUs and infill mixed in. Lots are a comfortable size and many homes have been updated — though plenty are original enough that an inspection matters. It's a strong fit for first-time buyers and families who want classic Portland character without an inner-SE price tag.",
+      },
+      {
+        q: "What are the schools like in Mt. Scott-Arleta?",
+        a: "The neighborhood is served by Portland Public Schools — Arleta Elementary (PK–5), Lane Middle School, and Franklin High School, which has strong college-prep and arts programming and is the standout of the three. Ratings are mid-tier by district standards, but community involvement is high. We can walk you through the exact attendance boundaries for any address you're weighing, since parts of the neighborhood feed differently.",
+      },
+    ],
+    testimonials: [],
+    relatedServices: ["purchase", "fha", "refinance"],
+    adjacentNeighborhoods: ["woodstock", "montavilla", "richmond"],
+    seo: {
+      title: "Buying a Home in Mt. Scott-Arleta, Portland OR | The Lindley Team",
+      description:
+        "Real talk on Mt. Scott-Arleta real estate: home prices near $468k, schools, walkability, and what buyers should know. David & Bri, The Lindley Team at Movement Mortgage — NMLS #1367416 / #265974.",
+    },
+  },
+
+  {
     slug: "sellwood-moreland",
     name: "Sellwood-Moreland",
     city: "Portland",
@@ -65,7 +149,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Sellwood+Moreland+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Sellwood+Moreland+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Sellwood+Moreland+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 71,
     bikeScore: 92,
     transitScore: 51,
@@ -158,7 +242,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Buckman+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Buckman+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Buckman+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 88,
     bikeScore: 94,
     transitScore: 72,
@@ -246,7 +330,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Alberta+Arts+District+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Alberta+Arts+District+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Alberta+Arts+District+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 75,
     bikeScore: 88,
     transitScore: 55,
@@ -336,7 +420,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Pearl+District+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Pearl+District+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Pearl+District+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 97,
     bikeScore: 96,
     transitScore: 92,
@@ -425,7 +509,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Irvington+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Irvington+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Irvington+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 83,
     bikeScore: 88,
     transitScore: 60,
@@ -514,7 +598,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Eastmoreland+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Eastmoreland+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Eastmoreland+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 58,
     bikeScore: 80,
     transitScore: 38,
@@ -604,7 +688,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Laurelhurst+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Laurelhurst+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Laurelhurst+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 76,
     bikeScore: 88,
     transitScore: 55,
@@ -689,7 +773,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Woodstock+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Woodstock+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Woodstock+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 73,
     bikeScore: 88,
     transitScore: 45,
@@ -778,7 +862,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=St+Johns+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=St+Johns+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=St+Johns+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 82,
     bikeScore: 78,
     transitScore: 50,
@@ -868,7 +952,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Kenton+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Kenton+Portland+OR&daddr=10260+SW+Greenburg+Rd+Ste+830+Portland+OR+97223&output=embed",
+      "https://maps.google.com/maps?saddr=Kenton+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
     walkScore: 75,
     bikeScore: 72,
     transitScore: 68,
@@ -4946,7 +5030,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Sherwood, OR | The Lindley Team",
       description:
-        "Sherwood, Oregon home prices, school district ratings, commute times, and what buyers need to know. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Sherwood, Oregon home prices, school district ratings, commute times, and what buyers need to know. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -5181,7 +5265,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Forest Grove, OR | The Lindley Team",
       description:
-        "Forest Grove, Oregon home prices, school district info, commute realities, and what buyers need to know. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Forest Grove, Oregon home prices, school district info, commute realities, and what buyers need to know. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -5297,7 +5381,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Cornelius, OR | The Lindley Team",
       description:
-        "Cornelius, Oregon home prices, Hillsboro school district, commute times, and what buyers need to know. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Cornelius, Oregon home prices, Hillsboro school district, commute times, and what buyers need to know. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -5406,9 +5490,9 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "jumbo", "refinance", "heloc", "cash-out"],
     adjacentNeighborhoods: ["west-linn", "milwaukie", "sellwood-moreland", "tualatin", "wilsonville"],
     seo: {
-      title: "Lake Oswego OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Lake Oswego OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
-        "Buying a home in Lake Oswego? Understand the lake access realities, school district, and price range before you shop. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Buying a home in Lake Oswego? Understand the lake access realities, school district, and price range before you shop. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -5512,7 +5596,7 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "refinance", "jumbo", "fha", "heloc", "cash-out"],
     adjacentNeighborhoods: ["lake-oswego", "oregon-city", "tualatin", "wilsonville"],
     seo: {
-      title: "West Linn OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "West Linn OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
         "West Linn offers top-rated schools at a lower price point than Lake Oswego. Learn what buyers need to know about the neighborhoods, commute, and housing market. Bri Lindley, NMLS #1367416.",
     },
@@ -5614,7 +5698,7 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "fha", "va", "refinance", "cash-out", "investment"],
     adjacentNeighborhoods: ["west-linn", "milwaukie", "happy-valley", "canby", "wilsonville"],
     seo: {
-      title: "Oregon City OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Oregon City OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
         "Oregon City offers real affordability in Clackamas County — historic neighborhoods, Willamette Falls, and a price point that opens doors for buyers priced out of Lake Oswego or West Linn. Bri Lindley, NMLS #1367416.",
     },
@@ -5717,7 +5801,7 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "fha", "refinance", "cash-out", "investment", "heloc"],
     adjacentNeighborhoods: ["sellwood-moreland", "eastmoreland", "woodstock", "oregon-city", "happy-valley", "lake-oswego"],
     seo: {
-      title: "Milwaukie OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Milwaukie OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
         "Milwaukie has MAX light rail, the Springwater Corridor, and North Clackamas schools at a price point well below inner SE Portland. Learn what buyers need to know. Bri Lindley, NMLS #1367416.",
     },
@@ -5820,7 +5904,7 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "fha", "refinance", "heloc", "cash-out", "investment"],
     adjacentNeighborhoods: ["milwaukie", "oregon-city", "west-linn", "canby"],
     seo: {
-      title: "Happy Valley OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Happy Valley OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
         "Happy Valley is one of Oregon's fastest-growing cities — newer construction, North Clackamas schools, and Mt. Hood views. Learn what buyers need to know before they shop. Bri Lindley, NMLS #1367416.",
     },
@@ -5929,9 +6013,9 @@ export const neighborhoods: NeighborhoodData[] = [
     relatedServices: ["purchase", "fha", "va", "refinance", "cash-out", "investment", "reverse-mortgage"],
     adjacentNeighborhoods: ["oregon-city", "happy-valley", "wilsonville", "west-linn"],
     seo: {
-      title: "Canby OR Homes & Mortgages | Bri Lindley, Mortgage Express",
+      title: "Canby OR Homes & Mortgages | Bri Lindley, Movement Mortgage",
       description:
-        "Canby is a small city at the southern edge of the Portland metro — the Canby Ferry, working farms, and the lowest price point in Clackamas County. Bri Lindley, NMLS #1367416, Mortgage Express.",
+        "Canby is a small city at the southern edge of the Portland metro — the Canby Ferry, working farms, and the lowest price point in Clackamas County. Bri Lindley, NMLS #1367416, Movement Mortgage.",
     },
   },
 
@@ -6055,7 +6139,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Newberg, OR | Mortgage Lender | The Lindley Team",
       description:
-        "Newberg real estate and home loans with Bri Lindley at Mortgage Express. Median $450k, wine country access, George Fox University, honest 99W commute guidance. NMLS #1367416.",
+        "Newberg real estate and home loans with Bri Lindley at Movement Mortgage. Median $450k, wine country access, George Fox University, honest 99W commute guidance. NMLS #1367416.",
     },
   },
 
@@ -6179,7 +6263,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in McMinnville, OR | Mortgage Lender | The Lindley Team",
       description:
-        "McMinnville home loans with Bri Lindley at Mortgage Express. Yamhill County seat, Third Street dining, Evergreen Museum, median $430k. Honest mortgage guidance for wine country buyers. NMLS #1367416.",
+        "McMinnville home loans with Bri Lindley at Movement Mortgage. Yamhill County seat, Third Street dining, Evergreen Museum, median $430k. Honest mortgage guidance for wine country buyers. NMLS #1367416.",
     },
   },
 
@@ -6263,7 +6347,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Can I get a jumbo loan for a vineyard property in Dundee?",
-        a: "It depends on the property structure. Agricultural land with a residential component often requires specialized financing — not all lenders can handle it. Bri Lindley at Mortgage Express has worked with vineyard-adjacent purchases in Yamhill County and can assess what financing structure fits the specific property. The answer varies considerably by acreage, existing improvements, and how the land is classified.",
+        a: "It depends on the property structure. Agricultural land with a residential component often requires specialized financing — not all lenders can handle it. Bri Lindley at Movement Mortgage has worked with vineyard-adjacent purchases in Yamhill County and can assess what financing structure fits the specific property. The answer varies considerably by acreage, existing improvements, and how the land is classified.",
       },
     ],
     testimonials: [
@@ -6300,7 +6384,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Dundee, OR | Mortgage Lender | The Lindley Team",
       description:
-        "Dundee Hills real estate and home loans with Bri Lindley at Mortgage Express. Yamhill County wine country, Domaine Drouhin, Sokol Blosser, median $560k, vineyard financing specialists. NMLS #1367416.",
+        "Dundee Hills real estate and home loans with Bri Lindley at Movement Mortgage. Yamhill County wine country, Domaine Drouhin, Sokol Blosser, median $560k, vineyard financing specialists. NMLS #1367416.",
     },
   },
 
@@ -6423,7 +6507,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Carlton, OR | Mortgage Lender | The Lindley Team",
       description:
-        "Carlton, Oregon home loans with Bri Lindley at Mortgage Express. Yamhill County wine country, Carlton Winemakers Studio, median $420k, rural acreage financing. NMLS #1367416.",
+        "Carlton, Oregon home loans with Bri Lindley at Movement Mortgage. Yamhill County wine country, Carlton Winemakers Studio, median $420k, rural acreage financing. NMLS #1367416.",
     },
   },
 

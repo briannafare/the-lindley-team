@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { NeighborhoodData } from "@/lib/neighborhoods";
 import { neighborhoods } from "@/lib/neighborhoods";
 
@@ -35,7 +36,7 @@ const SERVICE_NAMES: Record<string, string> = {
 
 const SCHOOL_TYPE_COLORS: Record<string, string> = {
   elementary: "bg-blue/10 text-blue",
-  middle: "bg-orange/10 text-orange",
+  middle: "bg-[#ef44341a] text-orange",
   high: "bg-ink/10 text-ink",
   private: "bg-yellow text-ink",
   charter: "bg-green-100 text-green-700",
@@ -175,9 +176,9 @@ export default function NeighborhoodPageLayout({
               <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mt-4 mb-3">
                 {neighborhood.city}, {neighborhood.state}
               </p>
-              <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight mb-4">
+              <h1 className="font-serif font-semibold text-[clamp(3rem,7.5vw,6rem)] leading-[0.92] tracking-[-0.02em] mb-4">
                 {leadWords && <span>{leadWords} </span>}
-                <span className="font-script font-normal text-orange text-[0.85em]">
+                <span className="italic font-medium text-orange">
                   {lastWord}
                 </span>
               </h1>
@@ -186,7 +187,7 @@ export default function NeighborhoodPageLayout({
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
-                  href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
+                  href="/apply"
                   className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2 justify-center"
                 >
                   Get Pre-Approved <span>→</span>
@@ -199,20 +200,27 @@ export default function NeighborhoodPageLayout({
                 </Link>
               </div>
             </div>
-            {/* Map */}
-            <div className="rounded-[2rem] overflow-hidden hidden lg:block" style={{ aspectRatio: "4/3" }}>
-              <iframe
-                src={neighborhood.mapEmbedSrc}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title={`Map of ${neighborhood.name}`}
-              />
-            </div>
+            {/* Emotional hero image — leads with feeling, not a map */}
+            <ImagePlaceholder
+              seed={`hero-${neighborhood.slug}`}
+              tone="color"
+              className="rounded-[1.5rem] hidden lg:block aspect-[4/3]"
+              label={`Editorial hero — ${neighborhood.name}: a real street, home, or moment that sells the feeling of living here.`}
+            />
           </div>
+        </div>
+      </section>
+
+      {/* ── 1.5 Feeling band — emotion first, full-bleed ───────── */}
+      <section className="px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto">
+          <ImagePlaceholder
+            seed={`feel-${neighborhood.slug}`}
+            tone="bw"
+            className="rounded-[1.5rem] aspect-[21/9]"
+            overlayTitle={`“${neighborhood.personality}”`}
+            label={`Wide editorial photo — the mood of ${neighborhood.name}, warm and lived-in.`}
+          />
         </div>
       </section>
 
@@ -220,9 +228,9 @@ export default function NeighborhoodPageLayout({
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Overview
-            </p>
+            </h2>
             <div className="max-w-[720px]">
               <div className="space-y-4 mb-10">
                 {neighborhood.description.map((para, i) => (
@@ -245,23 +253,23 @@ export default function NeighborhoodPageLayout({
       <section className="py-16 border-t border-border bg-bg-alt">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Getting Around
-            </p>
+            </h2>
             <div className="max-w-[720px]">
               <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-6">
                 {neighborhood.commuteToDowntown}
               </p>
               <div className="rounded-[1.25rem] overflow-hidden">
                 <iframe
-                  src={neighborhood.directionsSrc}
+                  src={neighborhood.mapEmbedSrc}
                   width="100%"
                   height="400"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title={`Directions from ${neighborhood.name} to The Lindley Team`}
+                  title={`Map of ${neighborhood.name}`}
                 />
               </div>
             </div>
@@ -273,16 +281,16 @@ export default function NeighborhoodPageLayout({
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Local Life
-            </p>
+            </h2>
             <div className="max-w-[720px] space-y-10">
               {/* Restaurants */}
               {neighborhood.restaurants.length > 0 && (
                 <div>
-                  <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
+                  <h3 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
                     Restaurants
-                  </p>
+                  </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {neighborhood.restaurants.map((r, i) => (
                       <div key={i} className="py-3 border-b border-border">
@@ -305,9 +313,9 @@ export default function NeighborhoodPageLayout({
               {/* Coffee */}
               {neighborhood.coffee.length > 0 && (
                 <div>
-                  <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
+                  <h3 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
                     Coffee
-                  </p>
+                  </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {neighborhood.coffee.map((c, i) => (
                       <div key={i} className="py-3 border-b border-border">
@@ -325,9 +333,9 @@ export default function NeighborhoodPageLayout({
               {/* Bars */}
               {neighborhood.bars.length > 0 && (
                 <div>
-                  <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
+                  <h3 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
                     Bars &amp; Nightlife
-                  </p>
+                  </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {neighborhood.bars.map((b, i) => (
                       <div key={i} className="py-3 border-b border-border">
@@ -351,9 +359,9 @@ export default function NeighborhoodPageLayout({
       <section className="py-16 border-t border-border bg-bg-alt">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Schools
-            </p>
+            </h2>
             <div className="max-w-[720px]">
               <p className="font-display text-[1.1rem] font-semibold text-ink mb-6">
                 {neighborhood.schoolDistrict}
@@ -389,9 +397,9 @@ export default function NeighborhoodPageLayout({
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Parks &amp; Green Space
-            </p>
+            </h2>
             <div className="max-w-[720px] space-y-6">
               {neighborhood.parks.map((park, i) => (
                 <div key={i}>
@@ -419,9 +427,9 @@ export default function NeighborhoodPageLayout({
       <section className="py-16 border-t border-border bg-bg-alt">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               The Market
-            </p>
+            </h2>
             <div className="max-w-[720px]">
               <div className="font-display text-4xl font-extrabold text-ink mb-2">
                 {formatPrice(neighborhood.medianHomePrice)}
@@ -436,7 +444,7 @@ export default function NeighborhoodPageLayout({
                 </span>
               </div>
               <p className="text-[0.82rem] text-ink-light font-normal leading-relaxed border-l-2 border-border pl-4">
-                Prices shown are estimates based on recent sales. Contact Bri for current market data.
+                Prices shown are estimates based on recent sales. Contact David &amp; Bri for current market data.
               </p>
             </div>
           </div>
@@ -447,9 +455,9 @@ export default function NeighborhoodPageLayout({
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Relevant Loans
-            </p>
+            </h2>
             <div className="max-w-[720px] grid grid-cols-1 sm:grid-cols-2 gap-3">
               {neighborhood.relatedServices.map((slug) => (
                 <Link
@@ -468,22 +476,45 @@ export default function NeighborhoodPageLayout({
         </div>
       </section>
 
+      {/* ── 8.5 Personal moment — David & Bri (emotional/human) ── */}
+      <section className="py-16 border-t border-border">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 items-center">
+          <ImagePlaceholder
+            seed="david-bri-portrait"
+            tone="bw"
+            className="rounded-[1.5rem] aspect-[4/5]"
+            label="Personal portrait — David & Bri (studio-editorial, neutral backdrop, some B&W). Real photoshoot — cannot be AI-generated."
+          />
+          <div className="max-w-[520px]">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-4">
+              Your team
+            </h2>
+            <p className="font-serif text-[clamp(1.6rem,3vw,2.4rem)] leading-[1.15] text-ink mb-5">
+              We actually know {neighborhood.name}&nbsp;&mdash; and we&rsquo;ll tell you the truth about buying here.
+            </p>
+            <p className="text-[1rem] text-ink-mid leading-relaxed">
+              David &amp; Bri, Movement Mortgage. Portland born, Portland based &mdash; the local read no rate sheet gives you.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── 9. CTA ─────────────────────────────────────────────── */}
       <section className="py-20 bg-yellow text-center">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-tight text-ink mb-4">
             Buying in{" "}
-            <span className="font-script font-normal text-[0.9em]">
+            <span className="font-serif italic font-medium text-orange text-[0.95em]">
               {neighborhood.name}
             </span>
             ?
           </h2>
           <p className="text-base text-ink-mid font-normal max-w-[480px] mx-auto mb-8">
-            Get expert guidance from a Portland-based lender who knows this market. Bri Lindley, NMLS #1367416.
+            Get expert guidance from a Portland team that knows this market — David &amp; Bri, Movement Mortgage. NMLS #1367416 / #265974.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
+              href="/apply"
               className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] transition-all inline-flex items-center gap-2 justify-center"
             >
               Get Pre-Approved <span>→</span>
@@ -503,9 +534,9 @@ export default function NeighborhoodPageLayout({
         <section className="py-16 border-t border-border">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 What Clients Say
-              </p>
+              </h2>
               <div className="max-w-[720px] space-y-8">
                 {neighborhood.testimonials.map((t, i) => (
                   <blockquote key={i} className="py-6 border-b border-border">
@@ -534,9 +565,9 @@ export default function NeighborhoodPageLayout({
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
               <div>
-                <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-1">
+                <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-1">
                   FAQ
-                </p>
+                </h2>
                 <p className="text-[0.78rem] text-ink-light">
                   {neighborhood.faqs.length} questions
                 </p>
@@ -570,9 +601,9 @@ export default function NeighborhoodPageLayout({
         <section className="py-16 border-t border-border">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Nearby
-              </p>
+              </h2>
               <div className="max-w-[720px] grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {neighborhood.adjacentNeighborhoods.map((adjSlug) => {
                   const found = neighborhoods.find((n) => n.slug === adjSlug);

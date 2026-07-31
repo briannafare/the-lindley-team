@@ -1,0 +1,91 @@
+import Link from "next/link";
+
+const PEOPLE: {
+  src: string;
+  hover: string | null;
+  bw: boolean;
+  name: string;
+  role: string;
+  meta: string;
+}[] = [
+  // Met treatment: composed B&W first → warm/fun color on hover.
+  { src: "/team/david-serious.png", hover: "/team/david-fun.png", bw: true, name: "David Chandler", role: "Loan Officer", meta: "NMLS 265974 · Movement" },
+  { src: "/team/bri-serious.png", hover: "/team/bri-fun.png", bw: true, name: "Bri Lindley", role: "Senior Loan Officer · CDLP®", meta: "NMLS 1367416 · Movement" },
+];
+
+export default function MeetTheTeam() {
+  return (
+    <section className="max-w-[1440px] mx-auto px-5 lg:px-[54px] mt-[clamp(56px,8vw,120px)]">
+      {/* header */}
+      <div className="flex items-baseline gap-3.5 border-t border-ink pt-4">
+        <h2 className="font-grotesk font-extrabold text-[clamp(26px,3.4vw,46px)] leading-none tracking-[-0.02em]">
+          Meet David &amp; Bri
+        </h2>
+        <sup className="font-body text-[12px] text-cobalt font-semibold">(01)</sup>
+        <span className="flex-1" />
+        <Link
+          href="/about"
+          className="font-body text-[12px] tracking-[0.1em] uppercase font-semibold flex items-center gap-1.5 hover:text-orange transition-colors"
+        >
+          Our story <span className="w-1.5 h-1.5 rounded-full bg-orange inline-block" />
+        </Link>
+      </div>
+
+      {/* statement */}
+      <p className="font-serif text-[clamp(30px,5vw,72px)] leading-[1.0] tracking-[-0.02em] max-w-[20ch] mt-10">
+        You get David or Bri. That&rsquo;s the{" "}
+        <em className="italic text-orange">whole org chart.</em>
+      </p>
+
+      {/* two real faces, clean */}
+      <div className="grid md:grid-cols-2 gap-[clamp(16px,2vw,32px)] mt-[clamp(28px,3.5vw,52px)]">
+        {PEOPLE.map((p) => (
+          <div key={p.name} className="group">
+            <div className="aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-ink/5 relative">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={p.src}
+                alt={p.name}
+                className={`w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03] ${p.bw ? "img-bw" : ""}`}
+              />
+              {p.hover && (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  src={p.hover}
+                  alt=""
+                  aria-hidden
+                  className="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:scale-[1.03]"
+                />
+              )}
+            </div>
+            <div className="mt-5 flex items-baseline justify-between gap-3">
+              <h3 className="font-serif text-[clamp(26px,3vw,42px)] leading-none tracking-[-0.01em]">
+                {p.name}
+              </h3>
+              <Link
+                href="/apply"
+                className="font-body text-[11px] tracking-[0.12em] uppercase font-semibold shrink-0 border-b border-ink pb-0.5 hover:text-orange hover:border-orange transition-colors"
+              >
+                Apply →
+              </Link>
+            </div>
+            <p className="font-body text-[0.72rem] tracking-[0.12em] uppercase text-ink-light mt-2.5">
+              {p.role}
+            </p>
+            <p className="font-body text-[0.72rem] tracking-[0.06em] uppercase text-orange mt-1">
+              {p.meta}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <p className="text-[clamp(15px,1.2vw,18px)] text-ink-mid leading-relaxed max-w-[56ch] mt-10">
+        David brings 20-plus years and can handle the tricky stuff when it comes up — jumbo, new
+        construction, the self-employed borrower whose tax returns need a bank statement to tell the
+        real story. Bri was raised in this business — her mom built The Lindley Team — and she&rsquo;s one
+        of the few CDLP&reg;-certified lenders in Oregon, the person attorneys call when a mortgage is caught in the middle
+        of a divorce. Between them: 35 years, and a client list that&rsquo;s mostly referrals.
+      </p>
+    </section>
+  );
+}
