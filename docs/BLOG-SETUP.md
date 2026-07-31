@@ -82,9 +82,32 @@ npx sanity@latest dataset import scripts/sanity-seed.ndjson production
 
 All 23 posts land with their real titles, excerpts, categories, dates, and
 `oldSlug`. **Slugs are byte-identical to the current live URLs — verified 1:1.
-No redirects change, no rankings move.** The 2 posts with real bodies come
-across as structured Portable Text (32 and 24 blocks). The other 21 are flagged
-`needsFullDraft` and appear under **Needs writing** in the Studio.
+No redirects change, no rankings move.**
+
+### The import has two layers — this is deliberate
+
+The seed contains 51 documents:
+
+- **23 published posts** (`post.<slug>`) whose bodies are *exactly what is on
+  the live site today*, including the "Full article coming soon" stubs.
+  Importing changes nothing the public can see.
+- **21 unpublished drafts** (`drafts.post.<slug>`) containing newly written
+  full articles — 27,217 words total, 1,100–1,500 words each, 4 FAQs apiece.
+
+In Sanity, a `drafts.` document is an unpublished revision that overlays its
+published counterpart. So after import each stub post shows an **unpublished
+draft** badge in the Studio. The live site is untouched until a human opens the
+post, reads it, and clicks Publish.
+
+**These 21 drafts were AI-written and have had no compliance review.** This is
+a licensed mortgage originator's site and the blog is regulated advertising.
+They were written against explicit rules — no rate or APR figures presented as
+current or available, no promises of approval or savings, no "lowest/best
+rates" or "guaranteed", all examples marked hypothetical — and were
+automatically scanned for violations before import. That scan is not a
+substitute for Movement's compliance team. **Nothing here should go live until
+a licensed human has read it.** The two-layer structure exists precisely so
+that gate cannot be skipped by accident.
 
 ### 4. CORS
 

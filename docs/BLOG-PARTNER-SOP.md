@@ -37,19 +37,24 @@ Drafts are only visible to you. Nothing is public until you hit Publish.
 
 ---
 
-## The 21 articles waiting to be written
+## The 21 articles waiting for review
 
-Click **Needs writing** in the sidebar. Those are the posts that currently have a headline, a summary, and nothing else — the live site shows "Full article coming soon" on all of them.
+Click **Needs writing** in the sidebar. Those are the posts the live site currently shows "Full article coming soon" on.
 
-To fix one:
+**Each one already has a full draft written and waiting.** Roughly 1,200–1,500 words with FAQs. You'll see an *unpublished changes* badge on the post — that's the draft sitting on top of the stub. Nothing is live until you publish it.
 
-1. Open it. The headline, summary, category, date, and URL are already correct — **don't change the URL**, it's already indexed by Google.
-2. Write the body in the **Article** field.
-3. Add FAQs.
-4. Go to **Settings** tab → switch **"Still needs to be written"** to off.
-5. Publish.
+Your job on each is to **review, not write**:
+
+1. Open it. Read the whole thing. The headline, summary, category, date, and URL are already correct — **don't change the URL**, it's already indexed by Google.
+2. Fix anything that's wrong, generic, or doesn't sound like you. Add a real client story if you have one — that's the part no draft can supply.
+3. Check the FAQs at the bottom of the Content tab.
+4. **Run it past compliance before publishing.** See below — this is not optional.
+5. Go to **Settings** tab → switch **"Still needs to be written"** to off.
+6. Publish.
 
 It disappears from the Needs writing list. That's your progress bar.
+
+> **These drafts were AI-written and nobody licensed has read them yet.** They were written against strict rules — no rate figures presented as current, no promises of approval or savings, no "lowest rates" or "guaranteed", every example marked hypothetical — and were scanned automatically before import. That is not compliance review. You are the licensed human in this loop. Read every word before it goes public.
 
 ---
 
