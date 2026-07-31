@@ -19,10 +19,10 @@ export default function Hero() {
             <div className="mb-3 flex items-center gap-3 lg:mb-6">
               <span className="h-px w-9 bg-ink/40" aria-hidden />
               <span className="font-body text-[11px] font-semibold uppercase tracking-[0.24em] text-ink-light">
-                Portland home loans
+                Portland mortgage lenders
               </span>
             </div>
-            <h1 className="font-serif font-semibold text-ink text-[clamp(40px,8vw,116px)] leading-[0.92] lg:leading-[0.9] tracking-[-0.035em] pb-[0.06em]">
+            <h1 className="font-serif font-semibold text-ink text-[clamp(32px,5.4vw,74px)] leading-[0.96] lg:leading-[0.94] tracking-[-0.03em] pb-[0.06em]">
               <span className="hero-line block">
                 Nobody{" "}
                 <em className="not-italic relative inline-block">
@@ -30,9 +30,12 @@ export default function Hero() {
                   <svg className="hero-underline absolute -bottom-1 left-0 w-full" height="10" viewBox="0 0 120 14" preserveAspectRatio="none" aria-hidden>
                     <path d="M2 9 C30 2, 90 2, 118 8" stroke="var(--accent)" strokeWidth="3" fill="none" strokeLinecap="round" />
                   </svg>
-                </em>
+                </em>{" "}
+                about getting a mortgage.
               </span>
-              <span className="hero-line block">about a mortgage.</span>
+              <span className="hero-line block">
+                You dream about <span className="font-medium italic text-orange">the home.</span>
+              </span>
             </h1>
           </div>
 
@@ -58,50 +61,59 @@ export default function Hero() {
             <p className="hero-caption hidden lg:block font-serif text-ink text-[clamp(14px,1.3vw,17px)] leading-relaxed mt-5">
               <span className="italic">&ldquo;This is the part you dream about.&rdquo;</span>
               <span className="block not-italic text-ink-light mt-1">
-                We handle the other part. &mdash; David &amp; Bri
+                We&rsquo;ll make the financing part easier. &mdash; David &amp; Bri
               </span>
             </p>
           </div>
 
           {/* BODY — pitch, CTAs, proof, licensing */}
           <div className="mt-5 lg:mt-8 lg:col-start-1 lg:col-end-8 lg:row-start-2">
-            <p className="hero-sub max-w-[46ch] text-[clamp(16px,1.2vw,19px)] text-ink-mid leading-snug lg:leading-relaxed">
-              So we made ours the easy part. We&rsquo;ve spent{" "}
-              <strong className="font-semibold text-orange">35 years</strong> on Portland
-              mortgages — show us what you&rsquo;re working with and you&rsquo;ll know exactly
-              where you stand, usually the same day you ask.
+            <p className="hero-sub max-w-[52ch] text-[clamp(16px,1.3vw,21px)] text-ink-mid leading-snug lg:leading-relaxed">
+              We handle the part nobody dreams about &mdash; so the numbers are clear, the
+              plan is yours, and the only surprise on closing day is how good it feels.
+            </p>
+
+            <p className="max-w-[62ch] text-[clamp(14px,1vw,16px)] text-ink-light leading-relaxed mt-4">
+              David Chandler and Bri Lindley start by understanding you &mdash; your finances,
+              your timeline, your long-term goals. Then we build a mortgage strategy around
+              them and walk you through a{" "}
+              <strong className="font-semibold text-ink">Mortgage Cost Analysis</strong>: a
+              clear, side-by-side breakdown of your options, explained patiently and down to
+              the decimal. No jargon. No pressure. Just the clarity to move forward with
+              confidence.
             </p>
 
             <div className="hero-cta grid sm:flex sm:flex-wrap items-center gap-3 sm:gap-x-4 mt-5 sm:mt-7">
-              <Btn href="/apply" variant="accent" size="lg" className="w-full sm:w-auto justify-between">
-                Find out where you stand
+              <Btn href="/contact#schedule" variant="accent" size="lg" className="w-full sm:w-auto justify-between">
+                Get Your Free Mortgage Cost Analysis
               </Btn>
-              <Btn href="/contact#schedule" variant="outline" size="lg" className="w-full sm:w-auto justify-between">
-                Ask us anything
+              <Btn href="#how-it-works" variant="outline" size="lg" className="w-full sm:w-auto justify-between">
+                See How It Works
               </Btn>
             </div>
 
-            {/* Trust footnote — reviews + reassurance on one row, NMLS quiet beneath. */}
-            <div className="hero-proof mt-6 flex flex-wrap items-center gap-x-5 gap-y-1.5">
+            {/* Trust line — reviews, experience, licensing. */}
+            <div className="hero-proof mt-6 flex flex-wrap items-center gap-x-3 gap-y-1.5 font-body text-[13px] text-ink-light">
               <a
                 href={GOOGLE_REVIEWS}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group/rev flex items-center gap-2 font-body text-[13px] text-ink-light hover:text-orange transition-colors"
+                className="group/rev flex items-center gap-2 hover:text-orange transition-colors"
               >
                 <span className="text-orange" aria-hidden>★★★★★</span>
                 <span className="font-semibold text-ink group-hover/rev:text-orange transition-colors">156</span>
                 <span className="underline decoration-ink/20 underline-offset-4 group-hover/rev:decoration-orange transition-colors">
-                  five-star reviews
+                  five-star Google reviews
                 </span>
               </a>
-              <span className="font-body text-[13px] text-ink-light">
-                No credit pull to start.
-              </span>
+              <span aria-hidden className="text-ink-light/50">·</span>
+              <span>35 years combined experience</span>
+              <span aria-hidden className="text-ink-light/50">·</span>
+              <span>NMLS #265974 / #1367416</span>
             </div>
-            {/* NMLS licensing — required visible. */}
+            {/* Movement's NMLS ID — required visible. */}
             <p className="font-body text-[10.5px] tracking-[0.02em] text-ink-light/70 mt-2 leading-relaxed">
-              Movement Mortgage NMLS #39179 · David Chandler NMLS #265974 · Brianna Lindley NMLS #1367416
+              Movement Mortgage NMLS #39179 · Equal Housing Lender
             </p>
           </div>
         </div>

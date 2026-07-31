@@ -82,13 +82,13 @@ const ORG_LD = {
     {
       "@type": "Person",
       name: "Bri Lindley",
-      jobTitle: "Senior Loan Officer, CDLP",
+      jobTitle: "Mortgage Loan Officer, CDLP",
       identifier: "NMLS #1367416",
     },
     {
       "@type": "Person",
       name: "David Chandler",
-      jobTitle: "Loan Officer",
+      jobTitle: "Mortgage Loan Officer",
       identifier: "NMLS #265974",
     },
   ],
