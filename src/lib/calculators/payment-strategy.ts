@@ -151,9 +151,7 @@ export function calculatePaymentStrategy(
     interestRate,
     loanTermYears,
     extraMonthlyPayment,
-    // ponytail: `oneExtraPerYear` input isn't wired into the simulation yet —
-    // dropped from the destructure to unblock lint. Wire it when porting the
-    // payment-strategy calculator page.
+    oneExtraPerYear,
     lumpSumPayment,
   } = inputs;
 
@@ -194,9 +192,11 @@ export function calculatePaymentStrategy(
   );
 
   // ── 4. One Extra Payment Per Year ──
+  // Honour the flag: with it off, this strategy adds nothing and matches baseline.
+  const annualExtra = oneExtraPerYear ? baseMonthlyPi : 0;
   const oneExtra = simulate(
     loanAmount, interestRate, loanTermYears,
-    baseMonthlyPi, 0, baseMonthlyPi, 0,
+    baseMonthlyPi, 0, annualExtra, 0,
     "1 Extra/Year",
     "Make one additional full payment toward principal each year",
     baselineInterest

@@ -20,7 +20,7 @@ export type FilingStatus =
   | "head_of_household";
 
 /** 2024 standard deduction amounts */
-const STANDARD_DEDUCTION: Record<FilingStatus, number> = {
+export const STANDARD_DEDUCTION: Record<FilingStatus, number> = {
   single: 14600,
   married_filing_jointly: 29200,
   married_filing_separately: 14600,

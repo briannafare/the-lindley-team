@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { neighborhoods } from "@/lib/neighborhoods";
 import { blogPosts } from "@/lib/blog-posts";
+import { CALCULATOR_TOOLS } from "@/lib/calculator-tools";
 
 const BASE = "https://thelindleyteam.com";
 
@@ -31,6 +32,7 @@ const STATIC = [
   { path: "/neighborhoods", priority: 0.9, freq: "weekly" as const },
   { path: "/blog", priority: 0.7, freq: "weekly" as const },
   { path: "/calculator", priority: 0.6, freq: "monthly" as const },
+  { path: "/calculators", priority: 0.8, freq: "monthly" as const },
   { path: "/contact", priority: 0.8, freq: "monthly" as const },
   { path: "/apply", priority: 0.8, freq: "monthly" as const },
   { path: "/first-time-buyer", priority: 0.9, freq: "monthly" as const },
@@ -61,6 +63,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const calculatorRoutes = CALCULATOR_TOOLS.map((t) => ({
+    url: `${BASE}/calculators/${t.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   const blogRoutes = blogPosts.map((p) => ({
     url: `${BASE}/blog/${p.slug}`,
     lastModified: p.date ? new Date(p.date) : now,
@@ -68,5 +77,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...neighborhoodRoutes, ...blogRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...calculatorRoutes, ...neighborhoodRoutes, ...blogRoutes];
 }

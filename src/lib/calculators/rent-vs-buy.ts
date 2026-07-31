@@ -22,7 +22,7 @@
 
 import { calculateMonthlyPi, buildAmortizationSchedule } from "./amortization";
 import { AmortizationRow } from "./types";
-import { FilingStatus } from "./tax-deduction";
+import { FilingStatus, STANDARD_DEDUCTION } from "./tax-deduction";
 
 export type { FilingStatus };
 
@@ -42,9 +42,7 @@ const SALT_CAP: Record<FilingStatus, number> = {
   head_of_household: 10000,
 };
 
-// ponytail: STANDARD_DEDUCTION removed — it was defined but unused, so the
-// rent-vs-buy tax-savings math currently assumes itemizing always wins. Revisit
-// (standard vs itemized comparison) when porting the rent-vs-buy calculator page.
+// STANDARD_DEDUCTION is imported from ./tax-deduction — one source of truth.
 
 const BRACKETS: Record<FilingStatus, [number, number][]> = {
   single: [
@@ -204,6 +202,7 @@ export function calculateRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyOutputs {
   const mortgageCap = MORTGAGE_CAP[filingStatus];
   const saltCap = SALT_CAP[filingStatus];
   const deductiblePropertyTax = Math.min(annualPropertyTax, saltCap);
+  const standardDeduction = STANDARD_DEDUCTION[filingStatus];
   const balanceRatio = loanAmount > mortgageCap ? mortgageCap / loanAmount : 1;
 
   // Year-by-year accumulation
@@ -235,7 +234,14 @@ export function calculateRentVsBuy(inputs: RentVsBuyInputs): RentVsBuyOutputs {
     const grossInterestY = annualInterestForYear(fullSchedule, y);
     const deductibleInterestY = grossInterestY * balanceRatio;
     const totalDeductible = deductibleInterestY + deductiblePropertyTax;
-    const annualTaxSavings = Math.round(totalDeductible * marginalTaxRate * 100) / 100;
+    // Only the amount by which itemized deductions EXCEED the standard deduction is
+    // an actual saving. A buyer whose mortgage interest + capped property tax lands
+    // under the standard deduction simply takes the standard deduction and saves
+    // nothing by owning. Treating the full deductible amount as a saving (the prior
+    // behaviour) materially overstated the case for buying — at 2024 standard
+    // deduction levels most borrowers see little or no benefit.
+    const deductionAboveStandard = Math.max(0, totalDeductible - standardDeduction);
+    const annualTaxSavings = Math.round(deductionAboveStandard * marginalTaxRate * 100) / 100;
     totalTaxSavings += annualTaxSavings;
 
     yearlyData.push({

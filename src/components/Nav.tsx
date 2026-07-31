@@ -22,7 +22,7 @@ const GROUPS = [
     items: [
       { name: "Neighborhoods", href: "/neighborhoods" },
       { name: "Journal", href: "/blog" },
-      { name: "Mortgage Calculator", href: "/calculator" },
+      { name: "Mortgage Calculators", href: "/calculators" },
     ],
   },
   {

@@ -27,7 +27,7 @@ const exploreLinks = [
 
 const teamLinks = [
   { name: "Meet David & Bri", href: "/about" },
-  { name: "Mortgage Calculator", href: "/calculator" },
+  { name: "Mortgage Calculators", href: "/calculators" },
 ];
 
 export default function Footer() {
