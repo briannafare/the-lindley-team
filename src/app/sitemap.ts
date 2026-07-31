@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { neighborhoods } from "@/lib/neighborhoods";
-import { blogPosts } from "@/lib/blog-posts";
+import { client } from "@/sanity/lib/client";
+import { sitemapQuery } from "@/sanity/lib/queries";
 
 const BASE = "https://thelindleyteam.com";
 
@@ -37,7 +38,11 @@ const STATIC = [
   { path: "/privacy", priority: 0.3, freq: "yearly" as const },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const blogPosts = await client.fetch<
+    { slug: string; date: string; updatedAt?: string }[]
+  >(sitemapQuery);
+
   const now = new Date();
 
   const staticRoutes = STATIC.map((s) => ({

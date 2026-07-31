@@ -1,19 +1,32 @@
-import { marked } from "marked";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import {
-  blogPosts,
-  getBlogPostBySlug,
-  getBlogPostsByCategory,
-} from "@/lib/blog-posts";
+import PortableBody from "@/components/blog/PortableBody";
+import FaqSection from "@/components/blog/FaqSection";
+import { client } from "@/sanity/lib/client";
+import { imageUrl } from "@/sanity/lib/image";
+import { sanityFetch } from "@/sanity/lib/fetch";
+import { postQuery, postSlugsQuery } from "@/sanity/lib/queries";
+import type { Post, PostCard, Faq } from "@/sanity/lib/types";
 
 /* ── Static params ────────────────────────────────────────────────────────── */
 
-export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+// Every post is pre-rendered at build. New posts are added on demand by ISR,
+// and the /api/revalidate webhook busts the tag the moment Sanity publishes.
+export async function generateStaticParams() {
+  const slugs = await client.fetch<string[]>(postSlugsQuery);
+  return slugs.map((slug) => ({ slug }));
+}
+
+async function getPost(slug: string): Promise<Post | null> {
+  return sanityFetch<Post | null>({
+    query: postQuery,
+    params: { slug },
+    tags: ["posts", `post:${slug}`],
+  });
 }
 
 /* ── Metadata ─────────────────────────────────────────────────────────────── */
@@ -24,20 +37,38 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = await getPost(slug);
   if (!post) return {};
-  const canonical = `/blog/${post.slug}`;
+
+  const title = post.seo?.metaTitle || post.title;
+  const description = post.seo?.metaDescription || post.excerpt;
+  const canonical = post.seo?.canonicalUrl || `/blog/${post.slug}`;
+  const og = post.seo?.ogImage?.asset
+    ? imageUrl(post.seo.ogImage, 1200, 630)
+    : post.heroImage?.asset
+      ? imageUrl(post.heroImage, 1200, 630)
+      : undefined;
+
   return {
-    title: post.title,
-    description: post.excerpt,
+    title,
+    description,
     alternates: { canonical },
+    robots: post.seo?.noIndex ? { index: false, follow: true } : undefined,
     openGraph: {
       type: "article",
       url: canonical,
-      title: post.title,
-      description: post.excerpt,
+      title,
+      description,
       publishedTime: post.date,
-      authors: ["Bri Lindley", "David Chandler"],
+      modifiedTime: post.updatedAt || post.date,
+      authors: post.author?.name ? [post.author.name] : ["Bri Lindley"],
+      images: og ? [{ url: og, width: 1200, height: 630 }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: og ? [og] : undefined,
     },
   };
 }
@@ -70,22 +101,33 @@ const categoryColors: Record<string, string> = {
 
 /* ── Structured data components ───────────────────────────────────────────── */
 
-function ArticleSchema({ post }: { post: NonNullable<ReturnType<typeof getBlogPostBySlug>> }) {
+function ArticleSchema({ post }: { post: Post }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
+    description: post.seo?.metaDescription || post.excerpt,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updatedAt || post.date,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://thelindleyteam.com/blog/${post.slug}`,
+    },
+    ...(post.heroImage?.asset
+      ? { image: [imageUrl(post.heroImage, 1200, 630)] }
+      : {}),
     author: {
       "@type": "Person",
-      name: "Bri Lindley",
-      identifier: "NMLS #1367416",
+      name: post.author?.name ?? "Bri Lindley",
+      ...(post.author?.title ? { jobTitle: post.author.title } : {}),
+      identifier: post.author?.credentials ?? "NMLS #1367416",
     },
     publisher: {
       "@type": "Organization",
       name: "The Lindley Team",
+      "@id": "https://thelindleyteam.com/#lindleyteam",
     },
+    ...(post.categoryLabel ? { articleSection: post.categoryLabel } : {}),
   };
   return (
     <script
@@ -95,7 +137,7 @@ function ArticleSchema({ post }: { post: NonNullable<ReturnType<typeof getBlogPo
   );
 }
 
-function BreadcrumbSchema({ post }: { post: NonNullable<ReturnType<typeof getBlogPostBySlug>> }) {
+function BreadcrumbSchema({ post }: { post: Post }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -128,6 +170,25 @@ function BreadcrumbSchema({ post }: { post: NonNullable<ReturnType<typeof getBlo
   );
 }
 
+function FaqSchema({ post }: { post: Post }) {
+  if (!post.faqs?.length) return null;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faqs.map((f: Faq) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 /* ── Page ─────────────────────────────────────────────────────────────────── */
 
 export default async function BlogPostPage({
@@ -136,23 +197,21 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = await getPost(slug);
 
   if (!post) notFound();
 
-  const htmlContent = await marked.parse(post.content);
-
-  const related = getBlogPostsByCategory(post.category)
-    .filter((p) => p.slug !== post.slug)
-    .slice(0, 3);
+  const related: PostCard[] = post.related ?? [];
 
   const badgeClass = categoryColors[post.category] ?? "bg-bg-alt text-ink-mid";
-  const categoryLabel = categoryLabels[post.category] ?? post.category;
+  const categoryLabel =
+    post.categoryLabel ?? categoryLabels[post.category] ?? post.category;
 
   return (
     <>
       <ArticleSchema post={post} />
       <BreadcrumbSchema post={post} />
+      <FaqSchema post={post} />
 
       <Nav />
 
@@ -185,7 +244,10 @@ export default async function BlogPostPage({
 
             {/* Author + date */}
             <p className="text-[0.78rem] font-medium text-ink-light uppercase tracking-[0.06em] mb-5">
-              Bri Lindley&nbsp;&nbsp;·&nbsp;&nbsp;Senior Loan Officer, NMLS #1367416&nbsp;&nbsp;·&nbsp;&nbsp;{formatDate(post.date)}
+              {post.author?.name ?? "Bri Lindley"}&nbsp;&nbsp;·&nbsp;&nbsp;
+              {post.author?.title ?? "Senior Loan Officer"}
+              {post.author?.credentials ? `, ${post.author.credentials}` : ""}
+              &nbsp;&nbsp;·&nbsp;&nbsp;{formatDate(post.date)}
             </p>
 
             {/* Excerpt as subtitle */}
@@ -196,6 +258,24 @@ export default async function BlogPostPage({
           </div>
         </section>
 
+        {/* ── Hero image ────────────────────────────────────────────────────── */}
+        {post.heroImage?.asset && (
+          <section className="pb-4">
+            <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+              <div className="relative w-full aspect-[21/9] rounded-2xl overflow-hidden bg-bg-alt">
+                <Image
+                  src={imageUrl(post.heroImage, 1800)}
+                  alt={post.heroImage.alt || ""}
+                  fill
+                  priority
+                  sizes="(max-width: 1400px) 100vw, 1400px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* ── Article content ───────────────────────────────────────────────── */}
         <section className="py-16 border-t border-border">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -205,14 +285,53 @@ export default async function BlogPostPage({
                 Article
               </h2>
 
-              <div
-                className="max-w-[720px] [&>p]:mb-6 [&>p]:text-ink-mid [&>p]:leading-[1.8] [&>p]:text-[1.05rem] [&>h2]:font-display [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:mt-10 [&>h2]:mb-4 [&>ul]:mb-6 [&>ul>li]:mb-2 [&>ul>li]:text-ink-mid [&>ul>li]:leading-relaxed [&>ol]:mb-6 [&>ol>li]:mb-2"
-                dangerouslySetInnerHTML={{ __html: htmlContent }}
-              />
+              <div className="max-w-[720px]">
+                <PortableBody value={post.body} />
+              </div>
 
             </div>
           </div>
         </section>
+
+        <FaqSection faqs={post.faqs} />
+
+        {/* ── Author ────────────────────────────────────────────────────────── */}
+        {post.author?.bio && (
+          <section className="py-14 border-t border-border">
+            <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+              <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
+                <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+                  Written by
+                </h2>
+                <div className="max-w-[720px] flex gap-5 items-start">
+                  {post.author.headshot?.asset && (
+                    <Image
+                      src={imageUrl(post.author.headshot, 160, 160)}
+                      alt={post.author.headshot.alt || post.author.name}
+                      width={72}
+                      height={72}
+                      className="rounded-full object-cover shrink-0"
+                    />
+                  )}
+                  <div>
+                    <p className="font-display font-bold text-ink mb-1">
+                      {post.author.name}
+                    </p>
+                    <p className="text-[0.72rem] uppercase tracking-[0.08em] text-ink-light mb-3">
+                      {post.author.title}
+                      {post.author.credentials
+                        ? `  ·  ${post.author.credentials}`
+                        : ""}
+                    </p>
+                    <p className="text-ink-mid leading-[1.75] text-[0.95rem]">
+                      {post.author.bio}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ── CTA ───────────────────────────────────────────────────────────── */}
         <section className="py-20 bg-yellow text-center">
@@ -259,10 +378,13 @@ export default async function BlogPostPage({
                   {related.map((relPost) => {
                     const relBadge =
                       categoryColors[relPost.category] ?? "bg-bg-alt text-ink-mid";
-                    const relLabel = categoryLabels[relPost.category] ?? relPost.category;
+                    const relLabel =
+                      relPost.categoryLabel ??
+                      categoryLabels[relPost.category] ??
+                      relPost.category;
                     return (
                       <Link
-                        key={relPost.slug}
+                        key={relPost._id}
                         href={`/blog/${relPost.slug}`}
                         className="group border border-border rounded-2xl p-7 flex flex-col hover:border-ink/30 hover:shadow-md transition-all"
                       >

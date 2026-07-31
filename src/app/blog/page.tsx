@@ -4,7 +4,8 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CategoryFilter from "@/components/blog/CategoryFilter";
-import { blogPosts } from "@/lib/blog-posts";
+import { sanityFetch } from "@/sanity/lib/fetch";
+import { postsQuery } from "@/sanity/lib/queries";
 
 export const metadata: Metadata = {
   title: "The Journal | Portland Mortgage Insights | The Lindley Team",
@@ -37,14 +38,32 @@ function formatDate(iso: string): string {
   });
 }
 
-// Sort posts by date descending; pick the most recent as featured
-const sortedPosts = [...blogPosts].sort(
-  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-);
-const featuredPost = sortedPosts[0];
-const remainingPosts = sortedPosts.slice(1);
+type PostCard = {
+  _id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  featured?: boolean;
+};
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  // Ordered newest-first by the GROQ query. An editor can override which post
+  // sits in the hero slot with the "Feature at top of blog" toggle in Sanity.
+  const sortedPosts = await sanityFetch<PostCard[]>({
+    query: postsQuery,
+    tags: ["posts"],
+  });
+
+  const featuredPost =
+    sortedPosts.find((p) => p.featured) ?? sortedPosts[0];
+  const remainingPosts = sortedPosts.filter(
+    (p) => p.slug !== featuredPost?.slug
+  );
+
+  if (!featuredPost) return null;
+
   return (
     <>
       <Nav />
@@ -125,7 +144,7 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {remainingPosts.map((post) => (
                 <Link
-                  key={post.slug}
+                  key={post._id}
                   href={`/blog/${post.slug}`}
                   className="group border border-border rounded-2xl p-7 flex flex-col hover:border-ink/30 hover:shadow-md transition-all"
                 >
