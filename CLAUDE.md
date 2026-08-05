@@ -52,6 +52,37 @@ period while `main` sat stale, which is what allowed the two to diverge unnotice
 Do not resurrect that pattern. If `main` is not what is live, stop and fix that
 before doing anything else.
 
+## No work lives only on one laptop
+
+Bri works from more than one machine, and often through Claude in the browser,
+which can only see what is on GitHub. Anything that exists solely in a local
+working tree is invisible there and gets rebuilt from scratch — that has now
+happened twice.
+
+The rule: **end every working session with the work pushed somewhere.** A real
+branch if it is ready, an `autosave/*` branch if it is not. "I'll commit it
+later" is how the July 2026 incident and the August 2026 neighborhoods loss
+both started.
+
+`./scripts/git-autosave.sh` does this in one step. It snapshots the entire
+working tree — including uncommitted and untracked files, honouring
+`.gitignore` — and pushes it to `origin/autosave/<branch>`. It never touches
+the working tree, the index, or any real branch, and it never pushes `main`
+(which would deploy). Run it before closing the laptop; recover with
+`git fetch origin && git checkout autosave/<branch>`.
+
+To make it automatic for every project, wire it to a Claude Code `Stop` hook in
+`~/.claude/settings.json`:
+
+```json
+"hooks": {
+  "Stop": [
+    { "hooks": [{ "type": "command",
+                  "command": "bash \"$CLAUDE_PROJECT_DIR/scripts/git-autosave.sh\" >/dev/null 2>&1 &" }] }
+  ]
+}
+```
+
 ## Verifying a change actually landed
 
 Do not report a change as live because a build succeeded. Confirm it:
