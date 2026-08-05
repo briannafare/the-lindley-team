@@ -5320,7 +5320,7 @@
       "label": "fraunces",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "src_app_layout_fraunces",
       "community": 45,
@@ -5331,7 +5331,7 @@
       "label": "inter",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L17",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "src_app_layout_inter",
       "community": 45,
@@ -5342,7 +5342,7 @@
       "label": "metadata",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L29",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "src_app_layout_metadata",
       "community": 45,
@@ -5353,7 +5353,7 @@
       "label": "ORG_LD",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "src_app_layout_org_ld",
       "community": 45,
@@ -5364,7 +5364,7 @@
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L97",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "src_app_layout_rootlayout",
       "community": 45,
@@ -6104,8 +6104,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app_sitemap",
-      "community": 5,
-      "community_name": "Journal Index",
+      "community": 8,
+      "community_name": "Core Loan Products",
       "norm_label": "sitemap.ts"
     },
     {
@@ -6115,8 +6115,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_app_sitemap_service_slugs",
-      "community": 5,
-      "community_name": "Journal Index",
+      "community": 8,
+      "community_name": "Core Loan Products",
       "norm_label": "service_slugs"
     },
     {
@@ -6126,8 +6126,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_app_sitemap_static",
-      "community": 5,
-      "community_name": "Journal Index",
+      "community": 8,
+      "community_name": "Core Loan Products",
       "norm_label": "static"
     },
     {
@@ -6137,8 +6137,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "src_app_sitemap_sitemap",
-      "community": 5,
-      "community_name": "Journal Index",
+      "community": 8,
+      "community_name": "Core Loan Products",
       "norm_label": "sitemap()"
     },
     {
@@ -6299,7 +6299,7 @@
       "label": "FEATURED",
       "file_type": "code",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L5",
+      "source_location": "L4",
       "_origin": "ast",
       "id": "src_components_exploreneighborhoods_featured",
       "community": 5,
@@ -6310,7 +6310,7 @@
       "label": "CURATED",
       "file_type": "code",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "src_components_exploreneighborhoods_curated",
       "community": 5,
@@ -6321,7 +6321,7 @@
       "label": "TILE_STYLE",
       "file_type": "code",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L19",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "src_components_exploreneighborhoods_tile_style",
       "community": 5,
@@ -6332,7 +6332,7 @@
       "label": "PearlArt()",
       "file_type": "code",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L28",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "src_components_exploreneighborhoods_pearlart",
       "community": 5,
@@ -6343,7 +6343,7 @@
       "label": "StJohnsArt()",
       "file_type": "code",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L43",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "src_components_exploreneighborhoods_stjohnsart",
       "community": 5,
@@ -6354,7 +6354,7 @@
       "label": "ExploreNeighborhoods()",
       "file_type": "code",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L55",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "src_components_exploreneighborhoods_exploreneighborhoods",
       "community": 5,
@@ -6464,7 +6464,7 @@
       "label": "FooterCol()",
       "file_type": "code",
       "source_file": "src/components/Footer.tsx",
-      "source_location": "L86",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "src_components_footer_footercol",
       "community": 30,
@@ -6483,70 +6483,26 @@
       "norm_label": "hero.tsx"
     },
     {
-      "label": "Hero()",
+      "label": "PATHWAYS",
       "file_type": "code",
       "source_file": "src/components/Hero.tsx",
       "source_location": "L5",
+      "_origin": "ast",
+      "id": "src_components_hero_pathways",
+      "community": 2,
+      "community_name": "Homepage Experience",
+      "norm_label": "pathways"
+    },
+    {
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "src/components/Hero.tsx",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "src_components_hero_hero",
       "community": 2,
       "community_name": "Homepage Experience",
       "norm_label": "hero()"
-    },
-    {
-      "label": "HeroPathways.tsx",
-      "file_type": "code",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_heropathways",
-      "community": 5,
-      "community_name": "Journal Index",
-      "norm_label": "heropathways.tsx"
-    },
-    {
-      "label": "PATHWAYS",
-      "file_type": "code",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_components_heropathways_pathways",
-      "community": 5,
-      "community_name": "Journal Index",
-      "norm_label": "pathways"
-    },
-    {
-      "label": "useActiveOnScroll()",
-      "file_type": "code",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "src_components_heropathways_useactiveonscroll",
-      "community": 5,
-      "community_name": "Journal Index",
-      "norm_label": "useactiveonscroll()"
-    },
-    {
-      "label": "PathwayCard()",
-      "file_type": "code",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L65",
-      "_origin": "ast",
-      "id": "src_components_heropathways_pathwaycard",
-      "community": 5,
-      "community_name": "Journal Index",
-      "norm_label": "pathwaycard()"
-    },
-    {
-      "label": "HeroPathways()",
-      "file_type": "code",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L111",
-      "_origin": "ast",
-      "id": "src_components_heropathways_heropathways",
-      "community": 5,
-      "community_name": "Journal Index",
-      "norm_label": "heropathways()"
     },
     {
       "label": "HowItWorks.tsx",
@@ -6739,7 +6695,7 @@
       "label": "ChoiceCard()",
       "file_type": "code",
       "source_file": "src/components/JuneWidget.tsx",
-      "source_location": "L428",
+      "source_location": "L416",
       "_origin": "ast",
       "id": "src_components_junewidget_choicecard",
       "community": 45,
@@ -6750,7 +6706,7 @@
       "label": "ReachButton()",
       "file_type": "code",
       "source_file": "src/components/JuneWidget.tsx",
-      "source_location": "L441",
+      "source_location": "L429",
       "_origin": "ast",
       "id": "src_components_junewidget_reachbutton",
       "community": 45,
@@ -6956,39 +6912,6 @@
       "norm_label": "neighborhoodgrid()"
     },
     {
-      "label": "Rail.tsx",
-      "file_type": "code",
-      "source_file": "src/components/Rail.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_rail",
-      "community": 5,
-      "community_name": "Journal Index",
-      "norm_label": "rail.tsx"
-    },
-    {
-      "label": "Rail()",
-      "file_type": "code",
-      "source_file": "src/components/Rail.tsx",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_components_rail_rail",
-      "community": 5,
-      "community_name": "Journal Index",
-      "norm_label": "rail()"
-    },
-    {
-      "label": "Arrow()",
-      "file_type": "code",
-      "source_file": "src/components/Rail.tsx",
-      "source_location": "L69",
-      "_origin": "ast",
-      "id": "src_components_rail_arrow",
-      "community": 5,
-      "community_name": "Journal Index",
-      "norm_label": "arrow()"
-    },
-    {
       "label": "Reveal.tsx",
       "file_type": "code",
       "source_file": "src/components/Reveal.tsx",
@@ -7053,28 +6976,6 @@
       "community": 2,
       "community_name": "Homepage Experience",
       "norm_label": "reviewsmarquee()"
-    },
-    {
-      "label": "ScrollActiveController.tsx",
-      "file_type": "code",
-      "source_file": "src/components/ScrollActiveController.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_scrollactivecontroller",
-      "community": 45,
-      "community_name": "layout.tsx",
-      "norm_label": "scrollactivecontroller.tsx"
-    },
-    {
-      "label": "ScrollActiveController()",
-      "file_type": "code",
-      "source_file": "src/components/ScrollActiveController.tsx",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "src_components_scrollactivecontroller_scrollactivecontroller",
-      "community": 45,
-      "community_name": "layout.tsx",
-      "norm_label": "scrollactivecontroller()"
     },
     {
       "label": "ServicesList.tsx",
@@ -7193,8 +7094,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_calculators_amortizationchart",
-      "community": 31,
-      "community_name": "rent-vs-buy.ts",
+      "community": 16,
+      "community_name": "Reverse Mortgages",
       "norm_label": "amortizationchart.tsx"
     },
     {
@@ -7204,8 +7105,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_components_calculators_amortizationchart_props",
-      "community": 31,
-      "community_name": "rent-vs-buy.ts",
+      "community": 16,
+      "community_name": "Reverse Mortgages",
       "norm_label": "props"
     },
     {
@@ -7215,8 +7116,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_calculators_amortizationchart_amortizationchart",
-      "community": 31,
-      "community_name": "rent-vs-buy.ts",
+      "community": 16,
+      "community_name": "Reverse Mortgages",
       "norm_label": "amortizationchart()"
     },
     {
@@ -7952,8 +7853,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_calculators_cltv",
-      "community": 44,
-      "community_name": "cltv.ts",
+      "community": 59,
+      "community_name": "cash-to-close.ts",
       "norm_label": "cltv.ts"
     },
     {
@@ -7963,8 +7864,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_lib_calculators_cltv_lieninput",
-      "community": 44,
-      "community_name": "cltv.ts",
+      "community": 59,
+      "community_name": "cash-to-close.ts",
       "norm_label": "lieninput"
     },
     {
@@ -7974,8 +7875,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_lib_calculators_cltv_lienbreakdown",
-      "community": 44,
-      "community_name": "cltv.ts",
+      "community": 59,
+      "community_name": "cash-to-close.ts",
       "norm_label": "lienbreakdown"
     },
     {
@@ -7985,8 +7886,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_lib_calculators_cltv_cltvinputs",
-      "community": 44,
-      "community_name": "cltv.ts",
+      "community": 59,
+      "community_name": "cash-to-close.ts",
       "norm_label": "cltvinputs"
     },
     {
@@ -7996,8 +7897,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_lib_calculators_cltv_cltvoutputs",
-      "community": 44,
-      "community_name": "cltv.ts",
+      "community": 59,
+      "community_name": "cash-to-close.ts",
       "norm_label": "cltvoutputs"
     },
     {
@@ -8007,8 +7908,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "src_lib_calculators_cltv_calculatecltv",
-      "community": 44,
-      "community_name": "cltv.ts",
+      "community": 59,
+      "community_name": "cash-to-close.ts",
       "norm_label": "calculatecltv()"
     },
     {
@@ -8414,8 +8315,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_calculators_investment_property",
-      "community": 13,
-      "community_name": "Calculator Content",
+      "community": 26,
+      "community_name": "Search Crawling",
       "norm_label": "investment-property.ts"
     },
     {
@@ -8425,8 +8326,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_lib_calculators_investment_property_investmentpropertyinputs",
-      "community": 13,
-      "community_name": "Calculator Content",
+      "community": 26,
+      "community_name": "Search Crawling",
       "norm_label": "investmentpropertyinputs"
     },
     {
@@ -8436,8 +8337,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_lib_calculators_investment_property_investmentpropertyoutputs",
-      "community": 13,
-      "community_name": "Calculator Content",
+      "community": 26,
+      "community_name": "Search Crawling",
       "norm_label": "investmentpropertyoutputs"
     },
     {
@@ -8447,8 +8348,8 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "src_lib_calculators_investment_property_calculateinvestmentproperty",
-      "community": 13,
-      "community_name": "Calculator Content",
+      "community": 26,
+      "community_name": "Search Crawling",
       "norm_label": "calculateinvestmentproperty()"
     },
     {
@@ -8645,8 +8546,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_calculators_move_up",
-      "community": 60,
-      "community_name": "move-up.ts",
+      "community": 13,
+      "community_name": "Calculator Content",
       "norm_label": "move-up.ts"
     },
     {
@@ -8656,8 +8557,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_lib_calculators_move_up_downpaymentsource",
-      "community": 60,
-      "community_name": "move-up.ts",
+      "community": 13,
+      "community_name": "Calculator Content",
       "norm_label": "downpaymentsource"
     },
     {
@@ -8667,8 +8568,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_lib_calculators_move_up_moveupinputs",
-      "community": 60,
-      "community_name": "move-up.ts",
+      "community": 13,
+      "community_name": "Calculator Content",
       "norm_label": "moveupinputs"
     },
     {
@@ -8678,8 +8579,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_lib_calculators_move_up_moveupoutputs",
-      "community": 60,
-      "community_name": "move-up.ts",
+      "community": 13,
+      "community_name": "Calculator Content",
       "norm_label": "moveupoutputs"
     },
     {
@@ -8689,8 +8590,8 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "src_lib_calculators_move_up_calculatemoveup",
-      "community": 60,
-      "community_name": "move-up.ts",
+      "community": 13,
+      "community_name": "Calculator Content",
       "norm_label": "calculatemoveup()"
     },
     {
@@ -8953,8 +8854,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_lib_calculators_tax_deduction",
-      "community": 29,
-      "community_name": "tax-deduction.ts",
+      "community": 31,
+      "community_name": "rent-vs-buy.ts",
       "norm_label": "tax-deduction.ts"
     },
     {
@@ -8975,8 +8876,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_lib_calculators_tax_deduction_standard_deduction",
-      "community": 29,
-      "community_name": "tax-deduction.ts",
+      "community": 31,
+      "community_name": "rent-vs-buy.ts",
       "norm_label": "standard_deduction"
     },
     {
@@ -8986,8 +8887,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "src_lib_calculators_tax_deduction_mortgage_cap",
-      "community": 29,
-      "community_name": "tax-deduction.ts",
+      "community": 31,
+      "community_name": "rent-vs-buy.ts",
       "norm_label": "mortgage_cap"
     },
     {
@@ -8997,8 +8898,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_lib_calculators_tax_deduction_salt_cap",
-      "community": 29,
-      "community_name": "tax-deduction.ts",
+      "community": 31,
+      "community_name": "rent-vs-buy.ts",
       "norm_label": "salt_cap"
     },
     {
@@ -9008,8 +8909,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_lib_calculators_tax_deduction_brackets",
-      "community": 29,
-      "community_name": "tax-deduction.ts",
+      "community": 31,
+      "community_name": "rent-vs-buy.ts",
       "norm_label": "brackets"
     },
     {
@@ -9019,8 +8920,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "src_lib_calculators_tax_deduction_getmarginalrate",
-      "community": 29,
-      "community_name": "tax-deduction.ts",
+      "community": 31,
+      "community_name": "rent-vs-buy.ts",
       "norm_label": "getmarginalrate()"
     },
     {
@@ -9030,8 +8931,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "src_lib_calculators_tax_deduction_taxdeductioninputs",
-      "community": 29,
-      "community_name": "tax-deduction.ts",
+      "community": 31,
+      "community_name": "rent-vs-buy.ts",
       "norm_label": "taxdeductioninputs"
     },
     {
@@ -9041,8 +8942,8 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "src_lib_calculators_tax_deduction_taxdeductionoutputs",
-      "community": 29,
-      "community_name": "tax-deduction.ts",
+      "community": 31,
+      "community_name": "rent-vs-buy.ts",
       "norm_label": "taxdeductionoutputs"
     },
     {
@@ -9052,8 +8953,8 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "src_lib_calculators_tax_deduction_calculatetaxdeduction",
-      "community": 29,
-      "community_name": "tax-deduction.ts",
+      "community": 31,
+      "community_name": "rent-vs-buy.ts",
       "norm_label": "calculatetaxdeduction()"
     },
     {
@@ -9129,8 +9030,8 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "src_lib_calculators_types_amortizationrow",
-      "community": 31,
-      "community_name": "rent-vs-buy.ts",
+      "community": 16,
+      "community_name": "Reverse Mortgages",
       "norm_label": "amortizationrow"
     },
     {
@@ -22297,7 +22198,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -22308,7 +22209,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L17",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -22319,7 +22220,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L29",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -22330,7 +22231,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -22341,7 +22242,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/app/layout.tsx",
-      "source_location": "L97",
+      "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app_layout",
@@ -22358,30 +22259,6 @@
       "_origin": "ast",
       "source": "src_app_layout",
       "target": "src_components_junewidget",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_layout",
-      "target": "src_components_scrollactivecontroller",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/layout.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_layout",
-      "target": "src_components_scrollactivecontroller_scrollactivecontroller",
       "confidence_score": 1.0
     },
     {
@@ -22675,18 +22552,6 @@
       "_origin": "ast",
       "source": "src_app_page",
       "target": "src_components_hero",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/app/page.tsx",
-      "source_location": "L2",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app_page",
-      "target": "src_components_hero_hero",
       "confidence_score": 1.0
     },
     {
@@ -24570,7 +24435,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Hero.tsx",
-      "source_location": "L1",
+      "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hero",
@@ -24618,7 +24483,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Hero.tsx",
-      "source_location": "L1",
+      "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hero",
@@ -24709,7 +24574,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_exploreneighborhoods",
@@ -24720,7 +24585,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L55",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_exploreneighborhoods",
@@ -24731,7 +24596,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L5",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_exploreneighborhoods",
@@ -24742,7 +24607,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_exploreneighborhoods",
@@ -24753,7 +24618,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L43",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_exploreneighborhoods",
@@ -24764,7 +24629,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L19",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_exploreneighborhoods",
@@ -24780,18 +24645,6 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_exploreneighborhoods",
-      "target": "src_components_rail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_exploreneighborhoods",
       "target": "src_lib_neighborhoods",
       "confidence_score": 1.0
     },
@@ -24800,7 +24653,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ExploreNeighborhoods.tsx",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_exploreneighborhoods",
@@ -24855,7 +24708,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Footer.tsx",
-      "source_location": "L86",
+      "source_location": "L85",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_footer",
@@ -24900,7 +24753,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Hero.tsx",
-      "source_location": "L5",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hero",
@@ -24908,15 +24761,14 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Hero.tsx",
-      "source_location": "L2",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_hero",
-      "target": "src_components_heropathways",
+      "target": "src_components_hero_pathways",
       "confidence_score": 1.0
     },
     {
@@ -24929,74 +24781,6 @@
       "_origin": "ast",
       "source": "src_components_hero",
       "target": "src_lib_links",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L111",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_heropathways",
-      "target": "src_components_heropathways_heropathways",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L65",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_heropathways",
-      "target": "src_components_heropathways_pathwaycard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_heropathways",
-      "target": "src_components_heropathways_pathways",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L41",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_heropathways",
-      "target": "src_components_heropathways_useactiveonscroll",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_heropathways",
-      "target": "src_components_rail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/HeroPathways.tsx",
-      "source_location": "L66",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_heropathways_pathwaycard",
-      "target": "src_components_heropathways_useactiveonscroll",
       "confidence_score": 1.0
     },
     {
@@ -25059,7 +24843,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/JuneWidget.tsx",
-      "source_location": "L428",
+      "source_location": "L416",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_junewidget",
@@ -25136,7 +24920,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/JuneWidget.tsx",
-      "source_location": "L441",
+      "source_location": "L429",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_junewidget",
@@ -25277,7 +25061,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/JuneWidget.tsx",
-      "source_location": "L436",
+      "source_location": "L424",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_junewidget_choicecard",
@@ -25289,7 +25073,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/JuneWidget.tsx",
-      "source_location": "L371",
+      "source_location": "L359",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_junewidget_junewidget",
@@ -25454,28 +25238,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Rail.tsx",
-      "source_location": "L69",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_rail",
-      "target": "src_components_rail_arrow",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Rail.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_rail",
-      "target": "src_components_rail_rail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/components/Reveal.tsx",
       "source_location": "L6",
       "weight": 1.0,
@@ -25527,17 +25289,6 @@
       "_origin": "ast",
       "source": "src_components_reviewsmarquee",
       "target": "src_lib_links",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/ScrollActiveController.tsx",
-      "source_location": "L17",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_scrollactivecontroller",
-      "target": "src_components_scrollactivecontroller_scrollactivecontroller",
       "confidence_score": 1.0
     },
     {
@@ -32833,5 +32584,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "762f09128d48edb5624433fb89fc71f23748059e"
+  "built_at_commit": "bb08a5fdeea391760020566d690df6f185524d41"
 }

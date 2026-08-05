@@ -61,7 +61,7 @@ export default function MeetTheTeam() {
       {/* two real faces, clean */}
       <div className="grid md:grid-cols-2 gap-[clamp(16px,2vw,32px)] mt-[clamp(28px,3.5vw,52px)]">
         {PEOPLE.map((p) => (
-          <div key={p.name} className="group">
+          <div key={p.name} data-scroll-active className="group">
             <div className="aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-ink/5 relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -71,10 +71,12 @@ export default function MeetTheTeam() {
                 height={p.height}
                 loading="lazy"
                 decoding="async"
-                className={`w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03] ${p.bw ? "img-bw" : ""}`}
+                className={`w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03] group-data-[active=true]:scale-[1.03] ${p.bw ? "img-bw" : ""}`}
               />
               {p.hover && (
                 /* eslint-disable-next-line @next/next/no-img-element */
+                /* Color version fades in on hover (desktop) or when the card scrolls
+                   through center on touch (via ScrollActiveController). */
                 <img
                   src={p.hover}
                   alt=""
@@ -83,7 +85,7 @@ export default function MeetTheTeam() {
                   height={p.height}
                   loading="lazy"
                   decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:scale-[1.03]"
+                  className="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-hover:scale-[1.03] group-data-[active=true]:opacity-100 group-data-[active=true]:scale-[1.03]"
                 />
               )}
             </div>

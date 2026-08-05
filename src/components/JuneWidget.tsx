@@ -315,6 +315,16 @@ function Capture({ mode }: { mode: "call" | "text" | "message" }) {
 export default function JuneWidget() {
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<View>("choose");
+  // Stay out of the way on first paint — only surface once the visitor has
+  // scrolled past the hero, so the launcher never covers the CTA above the fold.
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setRevealed(window.scrollY > window.innerHeight * 0.6);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
@@ -326,12 +336,14 @@ export default function JuneWidget() {
 
   return (
     <div className="fixed bottom-4 right-4 z-[70] font-grotesk sm:bottom-6 sm:right-6">
-      {/* launcher */}
-      {!open && (
+      <style>{`@keyframes june-rise{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}`}</style>
+      {/* launcher — hidden until the visitor scrolls past the hero */}
+      {!open && revealed && (
         <button
           onClick={openWidget}
           aria-label="Talk with June, the Lindley Team assistant"
           className="flex items-center gap-3 rounded-full bg-orange py-3 pl-3 pr-5 text-paper shadow-[0_10px_30px_rgba(239,68,52,0.3)] transition-transform hover:-translate-y-0.5"
+          style={{ animation: "june-rise .26s cubic-bezier(.16,.84,.44,1) both" }}
         >
           <span className="relative grid h-8 w-8 flex-none place-items-center rounded-full bg-paper font-serif text-lg italic text-orange">
             J

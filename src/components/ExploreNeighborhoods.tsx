@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Rail from "@/components/Rail";
 import { neighborhoods } from "@/lib/neighborhoods";
 
 const FEATURED = ["sellwood-moreland", "alberta-arts", "pearl-district", "irvington", "st-johns"];
@@ -75,7 +76,7 @@ export default function ExploreNeighborhoods() {
         </Link>
       </div>
 
-      <div className="mobile-rail -mx-5 grid grid-flow-col auto-cols-[46%] overflow-x-auto snap-x snap-mandatory px-5 pb-2 md:mx-0 md:grid-flow-row md:auto-cols-auto md:grid-cols-5 md:overflow-visible md:px-0 md:pb-0 gap-[clamp(10px,1.2vw,18px)] mt-6">
+      <Rail className="mobile-rail -mx-5 grid grid-flow-col auto-cols-[46%] overflow-x-auto snap-x snap-mandatory scroll-pl-5 px-5 pb-2 md:mx-0 md:grid-flow-row md:auto-cols-auto md:grid-cols-5 md:overflow-visible md:scroll-pl-0 md:px-0 md:pb-0 gap-[clamp(10px,1.2vw,18px)] mt-6">
         {tiles.map((t) => (
           <Link key={t.slug} href={`/neighborhoods/${t.slug}`} className="group block snap-start">
             {t.style === "poster-cobalt" ? (
@@ -118,7 +119,7 @@ export default function ExploreNeighborhoods() {
             </div>
           </Link>
         ))}
-      </div>
+      </Rail>
     </section>
   );
 }

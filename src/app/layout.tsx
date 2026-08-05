@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import JuneWidget from "@/components/JuneWidget";
+import ScrollActiveController from "@/components/ScrollActiveController";
 
 // Serif display + italic swash accent (the "Museum of Art" move)
 const fraunces = Fraunces({
@@ -148,6 +149,9 @@ export default function RootLayout({
             Voice AI agent ("Voice Assistant-1") over LiveKit; call/text/message capture
             through /api/lead. Replaces the stock GHL chat bubble. */}
         <JuneWidget />
+        {/* On touch devices, plays hover-driven motion (e.g. B&W→color) as
+            elements scroll through center — see components marked data-scroll-active. */}
+        <ScrollActiveController />
       </body>
     </html>
   );

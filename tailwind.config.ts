@@ -6,6 +6,11 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // Hover styles only apply on real pointer devices — no "sticky hover" after a
+  // tap on touch screens. (Default in Tailwind v4; opt-in here on v3.)
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     extend: {
       colors: {

@@ -1,16 +1,16 @@
-# Graph Report - the-lindley-team  (2026-07-23)
+# Graph Report - the-lindley-team  (2026-07-21)
 
 ## Corpus Check
-- 188 files · ~564,422 words
+- 185 files · ~563,410 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1187 nodes · 1728 edges · 101 communities (81 shown, 20 thin omitted)
+- 1178 nodes · 1715 edges · 98 communities (78 shown, 20 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `762f0912`
+- Built from commit: `bb08a5fd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -44,7 +44,6 @@
 - Search Crawling
 - Primary CTA
 - Featured Neighborhoods
-- tax-deduction.ts
 - Trust Statistics
 - rent-vs-buy.ts
 - The Lindley Team — First-Touch Agent Prompts (source of truth)
@@ -59,7 +58,6 @@
 - page.tsx
 - fha.ts
 - fha.ts
-- cltv.ts
 - layout.tsx
 - affordability.ts
 - debt-consolidation.ts
@@ -75,7 +73,6 @@
 - The Lindley Team — Conversation AI (chat/SMS) + Voice AI (source of truth)
 - page.tsx
 - cash-to-close.ts
-- move-up.ts
 - 3. Appt No Show
 - INDEX.md
 - wh-apply-click
@@ -139,7 +136,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (101 total, 20 thin omitted)
+## Communities (98 total, 20 thin omitted)
 
 ### Community 0 - "Neighborhood Experience"
 Cohesion: 0.04
@@ -162,8 +159,8 @@ Cohesion: 0.06
 Nodes (35): Complete setup guide with every prompt, document, and resource, Custom Fields, For each form on the website, create a Webhook trigger in GHL:, GHL Help Links:, GHL Help Links:, GHL Help Links:, Go to: AI Agents → Knowledge Base → Create New, Import to GHL: (+27 more)
 
 ### Community 5 - "Journal Index"
-Cohesion: 0.06
-Nodes (25): formatPrice(), metadata, NeighborhoodsPage(), generateMetadata(), NeighborhoodPage(), SERVICE_SLUGS, STATIC, CURATED (+17 more)
+Cohesion: 0.08
+Nodes (20): formatPrice(), metadata, NeighborhoodsPage(), generateMetadata(), NeighborhoodPage(), CURATED, FEATURED, TILE_STYLE (+12 more)
 
 ### Community 6 - "Calculator and Loans"
 Cohesion: 0.11
@@ -174,8 +171,8 @@ Cohesion: 0.06
 Nodes (32): autoprefixer, dependencies, next, react, react-dom, recharts, devDependencies, autoprefixer (+24 more)
 
 ### Community 8 - "Core Loan Products"
-Cohesion: 0.11
-Nodes (18): BlogPage(), categories, categoryLabels, formatDate(), metadata, remainingPosts, sortedPosts, BlogPostPage() (+10 more)
+Cohesion: 0.09
+Nodes (20): BlogPage(), categories, categoryLabels, formatDate(), metadata, remainingPosts, sortedPosts, BlogPostPage() (+12 more)
 
 ### Community 9 - "Service Page System"
 Cohesion: 0.11
@@ -194,8 +191,8 @@ Cohesion: 0.13
 Nodes (18): AmortizationChart, BREAKDOWN_COLORS, BreakdownRow(), CompactCalculator(), CREDIT_SCORE_OPTIONS, DonutLegendRow(), FullCalculator(), LOAN_TERMS (+10 more)
 
 ### Community 13 - "Calculator Content"
-Cohesion: 0.14
-Nodes (17): buildAmortizationSchedule(), calculateMonthlyPi(), BuyNowVsWaitInputs, BuyNowVsWaitOutputs, BuyNowVsWaitScenario, calculateBuyNowVsWait(), calculateDscr(), DscrInputs (+9 more)
+Cohesion: 0.13
+Nodes (18): buildAmortizationSchedule(), calculateMonthlyPi(), BuyNowVsWaitInputs, BuyNowVsWaitOutputs, BuyNowVsWaitScenario, calculateBuyNowVsWait(), calculateDscr(), DscrInputs (+10 more)
 
 ### Community 14 - "Motion Utilities"
 Cohesion: 0.15
@@ -206,8 +203,8 @@ Cohesion: 0.14
 Nodes (23): calculateMonthlyPi(), calculateTotalInterest(), calculateConventionalPayment(), calculateUsdaFees(), UsdaFeeContext, UsdaFeeResult, calculateMonthlyMiPremium(), getArchMiAnnualRate() (+15 more)
 
 ### Community 16 - "Reverse Mortgages"
-Cohesion: 0.19
-Nodes (16): calculateConventionalPayment(), calculateMonthlyMiPremium(), getArchMiAnnualRate(), getLoanTermBand(), getLtvBand(), LtvBandKey, mapCreditScoreToTier(), MI_ADJUSTMENTS (+8 more)
+Cohesion: 0.15
+Nodes (18): Props, calculateConventionalPayment(), calculateMonthlyMiPremium(), getArchMiAnnualRate(), getLoanTermBand(), getLtvBand(), LtvBandKey, mapCreditScoreToTier() (+10 more)
 
 ### Community 17 - "DSCR Loans"
 Cohesion: 0.11
@@ -246,8 +243,8 @@ Cohesion: 0.18
 Nodes (8): VALID, WEBHOOKS, metadata, BookingCalendar(), State, calendarFor(), LEAD_TAGS, LeadFormType
 
 ### Community 26 - "Search Crawling"
-Cohesion: 0.18
-Nodes (11): calculateTotalInterest(), calculateUsdaFees(), UsdaFeeContext, UsdaFeeResult, calculateHouseHacking(), HouseHackingInputs, HouseHackingOutputs, RentalUnit (+3 more)
+Cohesion: 0.14
+Nodes (14): calculateTotalInterest(), calculateUsdaFees(), UsdaFeeContext, UsdaFeeResult, calculateHouseHacking(), HouseHackingInputs, HouseHackingOutputs, RentalUnit (+6 more)
 
 ### Community 27 - "Primary CTA"
 Cohesion: 0.16
@@ -257,17 +254,13 @@ Nodes (11): CashToClosePage(), DEFAULT_PREPAIDS, PROGRAM_LABELS, PROGRAM_MIN_DOW
 Cohesion: 0.15
 Nodes (8): DEFAULT_FIRST, DEFAULT_OTHER, DEFAULT_SECOND, calculateCltv(), CltvInputs, CltvOutputs, LienBreakdown, LienInput
 
-### Community 29 - "tax-deduction.ts"
-Cohesion: 0.25
-Nodes (8): BRACKETS, calculateTaxDeduction(), getMarginalRate(), MORTGAGE_CAP, SALT_CAP, STANDARD_DEDUCTION, TaxDeductionInputs, TaxDeductionOutputs
-
 ### Community 30 - "Trust Statistics"
 Cohesion: 0.13
 Nodes (6): metadata, metadata, metadata, exploreLinks, loanLinks, teamLinks
 
 ### Community 31 - "rent-vs-buy.ts"
-Cohesion: 0.17
-Nodes (12): Props, annualInterestForYear(), BRACKETS, calculateRentVsBuy(), getMarginalRate(), MORTGAGE_CAP, RentVsBuyInputs, RentVsBuyOutputs (+4 more)
+Cohesion: 0.13
+Nodes (18): annualInterestForYear(), BRACKETS, calculateRentVsBuy(), getMarginalRate(), MORTGAGE_CAP, RentVsBuyInputs, RentVsBuyOutputs, RentVsBuyYearData (+10 more)
 
 ### Community 32 - "The Lindley Team — First-Touch Agent Prompts (source of truth)"
 Cohesion: 0.14
@@ -317,13 +310,9 @@ Nodes (7): FhaInputs, FhaOutputs, calculateFhaMip(), FhaMipContext, FhaMipDurati
 Cohesion: 0.33
 Nodes (7): FhaInputs, FhaOutputs, calculateFhaMip(), FhaMipContext, FhaMipDuration, FhaMipResult, getAnnualMipRateAndDuration()
 
-### Community 44 - "cltv.ts"
-Cohesion: 0.33
-Nodes (4): CltvInputs, CltvOutputs, LienBreakdown, LienInput
-
 ### Community 45 - "layout.tsx"
-Cohesion: 0.14
-Nodes (17): fraunces, inter, metadata, ORG_LD, Capture(), ChoiceCard(), GHL_VOICE, hex() (+9 more)
+Cohesion: 0.15
+Nodes (16): fraunces, inter, metadata, ORG_LD, Capture(), ChoiceCard(), GHL_VOICE, hex() (+8 more)
 
 ### Community 46 - "affordability.ts"
 Cohesion: 0.39
@@ -374,12 +363,8 @@ Cohesion: 0.33
 Nodes (5): Chat AI, Deployable system prompt, Deployable system prompt, The Lindley Team — Conversation AI (chat/SMS) + Voice AI (source of truth), Voice AI
 
 ### Community 59 - "cash-to-close.ts"
-Cohesion: 0.33
-Nodes (4): CashToCloseInputs, CashToCloseOutputs, FeeItem, LoanProgram
-
-### Community 60 - "move-up.ts"
-Cohesion: 0.40
-Nodes (4): calculateMoveUp(), DownPaymentSource, MoveUpInputs, MoveUpOutputs
+Cohesion: 0.15
+Nodes (8): CashToCloseInputs, CashToCloseOutputs, FeeItem, LoanProgram, CltvInputs, CltvOutputs, LienBreakdown, LienInput
 
 ### Community 61 - "3. Appt No Show"
 Cohesion: 0.40
@@ -456,8 +441,8 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `formatCurrency()` connect `Calculator and Loans` to `page.tsx`, `Core Conversion Pages`, `page.tsx`, `page.tsx`, `page.tsx`, `Motion Utilities`, `Refinance Loans`, `Service Marquee`, `Primary CTA`, `Featured Neighborhoods`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `buildAmortizationSchedule()` connect `Calculator Content` to `Search Crawling`, `fha.ts`, `USDA Product Data`, `rent-vs-buy.ts`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `calculateConventionalPayment()` connect `Reverse Mortgages` to `Search Crawling`, `USDA Product Data`, `Calculator Content`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `calculateMonthlyPi()` connect `Calculator Content` to `va.ts`, `fha.ts`, `debt-consolidation.ts`, `Reverse Mortgages`, `Search Crawling`, `rent-vs-buy.ts`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `next/core-web-vitals`, `next/typescript`, `SCENARIO_META` to the rest of the system?**
   _505 weakly-connected nodes found - possible documentation gaps or missing edges._
@@ -466,4 +451,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Core Conversion Pages` be split into smaller, more focused modules?**
   _Cohesion score 0.0641025641025641 - nodes in this community are weakly interconnected._
 - **Should `Homepage Experience` be split into smaller, more focused modules?**
-  _Cohesion score 0.0728744939271255 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06923076923076923 - nodes in this community are weakly interconnected._

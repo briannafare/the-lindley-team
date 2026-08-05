@@ -1,0 +1,697 @@
+{
+  ".collector.sh": {
+    "mtime": 1784087946.1245353,
+    "ast_hash": "abd07a2525d9b8d799aa089e1a4471ae",
+    "semantic_hash": ""
+  },
+  ".strategist.sh": {
+    "mtime": 1784103851.6834953,
+    "ast_hash": "a89a849e40582a7f999b59ecd94e1f53",
+    "semantic_hash": ""
+  },
+  ".supervisor.sh": {
+    "mtime": 1784108124.0911136,
+    "ast_hash": "cb46f654ccebfb91357f353a7e227d1d",
+    "semantic_hash": ""
+  },
+  "bootstrap.sh": {
+    "mtime": 1784087986.5803947,
+    "ast_hash": "190a89953562504df9e7b2b48bab2909",
+    "semantic_hash": ""
+  },
+  "build-explorer.py": {
+    "mtime": 1784109915.613594,
+    "ast_hash": "030eb30059139636466d5b1ac2199d49",
+    "semantic_hash": ""
+  },
+  "stack/build-map.py": {
+    "mtime": 1784093349.6938858,
+    "ast_hash": "bd85ad44e41f63675eddb19f7d8678f0",
+    "semantic_hash": ""
+  },
+  "stack/refresh.sh": {
+    "mtime": 1784093364.3501136,
+    "ast_hash": "d069e3b1e5d88c16d978364eb845ede8",
+    "semantic_hash": ""
+  },
+  "stack/stack-sync.sh": {
+    "mtime": 1784082886.5761857,
+    "ast_hash": "056937c5e911035e5ea7439234a7f8ed",
+    "semantic_hash": ""
+  },
+  "strategy/build-dashboard.py": {
+    "mtime": 1784084418.8105865,
+    "ast_hash": "4d92a8d34803ffd05cac52bf26c2a6af",
+    "semantic_hash": ""
+  },
+  "strategy/recommendations.json": {
+    "mtime": 1784657277.006549,
+    "ast_hash": "73109e623546b478b7f9875789b284d8",
+    "semantic_hash": ""
+  },
+  ".github/copilot-instructions.md": {
+    "mtime": 1784601048.751014,
+    "ast_hash": "ea89edc99f5f3c5364fa86afff83e2cc",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1784601048.751014,
+    "ast_hash": "ea89edc99f5f3c5364fa86afff83e2cc",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1784601048.751014,
+    "ast_hash": "ea89edc99f5f3c5364fa86afff83e2cc",
+    "semantic_hash": ""
+  },
+  "archive/README.md": {
+    "mtime": 1784601059.2069728,
+    "ast_hash": "c9379a9d0c12a3a45c46405fe89052e3",
+    "semantic_hash": ""
+  },
+  "brain-explorer.html": {
+    "mtime": 1784609473.361361,
+    "ast_hash": "19c41303fbecd5c76bc62e9c392ce721",
+    "semantic_hash": ""
+  },
+  "dashboard.html": {
+    "mtime": 1784657280.0602024,
+    "ast_hash": "1d43446c261e3bc524283234d1e379c9",
+    "semantic_hash": ""
+  },
+  "notes/auto-organize-inbox.md": {
+    "mtime": 1784077492.326804,
+    "ast_hash": "811c142d1c547b1cda5bcd4c35eb698f",
+    "semantic_hash": ""
+  },
+  "notes/boxless-ghl-system-prompt.md": {
+    "mtime": 1784096144.7321358,
+    "ast_hash": "488eac8d4d0ee4159fbdc02068a5da65",
+    "semantic_hash": ""
+  },
+  "notes/boxless-vibe-coder.md": {
+    "mtime": 1784096144.7419348,
+    "ast_hash": "ae5a0295345b29e195bff365b4e9924a",
+    "semantic_hash": ""
+  },
+  "notes/boxless-workflow-build-handoff.md": {
+    "mtime": 1784096144.7500632,
+    "ast_hash": "230da36ae557c26ce547a78230396eb5",
+    "semantic_hash": ""
+  },
+  "notes/boxless-workflow-perplexity-computer-handoff.md": {
+    "mtime": 1784096144.7589614,
+    "ast_hash": "cbb62da3b9198f92bfc241c1ef5bd912",
+    "semantic_hash": ""
+  },
+  "notes/boxless-workflow-prompts-standalone.md": {
+    "mtime": 1784096144.7673004,
+    "ast_hash": "766ffd55b5841fb898c57dc05b5468f3",
+    "semantic_hash": ""
+  },
+  "notes/e5l-ai-visibility-seo-method.md": {
+    "mtime": 1784097441.4490325,
+    "ast_hash": "29d8346e88d8584b133b1fe6e3f4912a",
+    "semantic_hash": ""
+  },
+  "notes/e5l-ghl-form-intake-pattern.md": {
+    "mtime": 1784097471.8104703,
+    "ast_hash": "744b25528925d0ddb0aaa10979e55295",
+    "semantic_hash": ""
+  },
+  "notes/e5l-image-naming-aeo-spec.md": {
+    "mtime": 1784097457.4292016,
+    "ast_hash": "acb9e6df6b0de4c86d4e52a03a529c3e",
+    "semantic_hash": ""
+  },
+  "notes/e5l-website-clone-product-model.md": {
+    "mtime": 1784097488.511721,
+    "ast_hash": "f7fe1590b4f06fffb4b054c1307be1b4",
+    "semantic_hash": ""
+  },
+  "notes/hannah-wolfe-cms-setup.md": {
+    "mtime": 1784096193.957891,
+    "ast_hash": "f07408371af60c660348b033489646f5",
+    "semantic_hash": ""
+  },
+  "notes/hannah-wolfe-cms-studio-readme.md": {
+    "mtime": 1784096199.5613022,
+    "ast_hash": "6271558797571b8cca913e616f9531db",
+    "semantic_hash": ""
+  },
+  "notes/houselab-agent-instructions.md": {
+    "mtime": 1784093766.120208,
+    "ast_hash": "ccdde80a640d141baeb0a1e524c0b709",
+    "semantic_hash": ""
+  },
+  "notes/houselab-agent-persona.md": {
+    "mtime": 1784489571.450934,
+    "ast_hash": "8faed42697d30cefc9542e163ee6803f",
+    "semantic_hash": ""
+  },
+  "notes/houselab-board-advisor.md": {
+    "mtime": 1784657167.1698136,
+    "ast_hash": "d53f6acb3cbbcb63e7d41e8483d57108",
+    "semantic_hash": ""
+  },
+  "notes/houselab.md": {
+    "mtime": 1784657216.3870256,
+    "ast_hash": "9a6fd301cfc1268f0b85f73ea36affc2",
+    "semantic_hash": ""
+  },
+  "notes/how-the-brain-works.md": {
+    "mtime": 1784076893.177957,
+    "ast_hash": "89aa9758dae9123544510769c8014d1a",
+    "semantic_hash": ""
+  },
+  "notes/life-os-access-model.md": {
+    "mtime": 1784096284.3262866,
+    "ast_hash": "a689186c448f1e209b1ee5aaab072618",
+    "semantic_hash": ""
+  },
+  "notes/life-os-comms-ingestion.md": {
+    "mtime": 1784096368.6058543,
+    "ast_hash": "199fd14c4d5fd1f4af29a2078dc7c168",
+    "semantic_hash": ""
+  },
+  "notes/life-os-consent-layer.md": {
+    "mtime": 1784096350.9710653,
+    "ast_hash": "e99a74789f2f58bef527689d0961b348",
+    "semantic_hash": ""
+  },
+  "notes/life-os-delegation-kit.md": {
+    "mtime": 1784096240.2614875,
+    "ast_hash": "40b144d127a37ecba03b2c050d1374c8",
+    "semantic_hash": ""
+  },
+  "notes/life-os-deployment-runbook.md": {
+    "mtime": 1784096270.434112,
+    "ast_hash": "91fc2ddda249789b1f88b53280e284bf",
+    "semantic_hash": ""
+  },
+  "notes/life-os-email-triage-prompt.md": {
+    "mtime": 1784098937.9683402,
+    "ast_hash": "49b958513b385b5b4b8bed374575cdaa",
+    "semantic_hash": ""
+  },
+  "notes/life-os-loop-extraction-prompt.md": {
+    "mtime": 1784096332.0122716,
+    "ast_hash": "77c17e57671d9cba885dc3d8ac5db1bc",
+    "semantic_hash": ""
+  },
+  "notes/life-os-n8n-setup.md": {
+    "mtime": 1784096302.7850726,
+    "ast_hash": "d6bd2fdbcfaa94ed3d104bf4c508c334",
+    "semantic_hash": ""
+  },
+  "notes/life-os-overview.md": {
+    "mtime": 1784096213.69187,
+    "ast_hash": "2a38613d70bf6e77fd03528c2d9230b6",
+    "semantic_hash": ""
+  },
+  "notes/lindley-conversation-ai-prompt.md": {
+    "mtime": 1784578645.9238489,
+    "ast_hash": "eccae92ac9af5e02333aba936e294690",
+    "semantic_hash": ""
+  },
+  "notes/lindley-copy-deck-voice.md": {
+    "mtime": 1784578628.3318703,
+    "ast_hash": "e3100aff89aac4dbc249ace741d96a6f",
+    "semantic_hash": ""
+  },
+  "notes/lindley-design-lanes.md": {
+    "mtime": 1784096210.9410574,
+    "ast_hash": "fa9cdf7149b2749fa19752e1c5779a90",
+    "semantic_hash": ""
+  },
+  "notes/lindley-ghl-automation-arch.md": {
+    "mtime": 1784578667.2480276,
+    "ast_hash": "76145ec3819679ed4aecccb9e12280b5",
+    "semantic_hash": ""
+  },
+  "notes/lindley-ghl-kb-strategy.md": {
+    "mtime": 1784578700.3329191,
+    "ast_hash": "8b6621cf4404e9d08ce245c9d3995157",
+    "semantic_hash": ""
+  },
+  "notes/lindley-imagery-brief.md": {
+    "mtime": 1784096155.0568883,
+    "ast_hash": "7a612e727689d1c1ba83aaa9dadcc83f",
+    "semantic_hash": ""
+  },
+  "notes/lindley-met-direction.md": {
+    "mtime": 1784096269.6243157,
+    "ast_hash": "2b87106f39d25eab21f8271904b11ba7",
+    "semantic_hash": ""
+  },
+  "notes/rinse-asset-prompts.md": {
+    "mtime": 1784096182.8023267,
+    "ast_hash": "9f1ef77c4d2aedda8e43391013c71b2d",
+    "semantic_hash": ""
+  },
+  "notes/rinse-design-plan.md": {
+    "mtime": 1784096182.7700148,
+    "ast_hash": "aea2a1001f96c6a460375c63ffbfedcc",
+    "semantic_hash": ""
+  },
+  "notes/rinse-design-skill.md": {
+    "mtime": 1784096182.792784,
+    "ast_hash": "e25337e5c558605e4c1d843f62327ba1",
+    "semantic_hash": ""
+  },
+  "notes/rinse-design-system.md": {
+    "mtime": 1784096182.7814343,
+    "ast_hash": "07c43052c7cd440475b256da13077503",
+    "semantic_hash": ""
+  },
+  "notes/rinse-master-plan.md": {
+    "mtime": 1784096182.759759,
+    "ast_hash": "1613f70080e08de2a4e650ae65248198",
+    "semantic_hash": ""
+  },
+  "notes/signal-autop1lot-suitedash-ghl-alternative.md": {
+    "mtime": 1784218281.1071608,
+    "ast_hash": "2fa96d20aa5494b3cb5b8011ff9eb33f",
+    "semantic_hash": ""
+  },
+  "notes/signal-boxless-competitor-1776-moving-realtor-program.md": {
+    "mtime": 1784435637.4592056,
+    "ast_hash": "b59a38cf83f5d543fe9762ee35e3795c",
+    "semantic_hash": ""
+  },
+  "notes/signal-boxless-competitor-flowtote.md": {
+    "mtime": 1784326907.1290436,
+    "ast_hash": "3535920f0f723e0f0ed9ae208e6dc217",
+    "semantic_hash": ""
+  },
+  "notes/signal-boxless-competitor-pricing-gap.md": {
+    "mtime": 1784370407.654847,
+    "ast_hash": "d4a63bff6ac4a7b9e2f391a724c94092",
+    "semantic_hash": ""
+  },
+  "notes/signal-boxless-competitor-stack.md": {
+    "mtime": 1784153218.485007,
+    "ast_hash": "a629d76a98401061643a472b0ed84161",
+    "semantic_hash": ""
+  },
+  "notes/signal-figma-ai-design-agent.md": {
+    "mtime": 1784457318.6922727,
+    "ast_hash": "ed7192c58e0c252f74a7ad38974917e2",
+    "semantic_hash": ""
+  },
+  "notes/signal-ghl-ai-builder-targeted-edits-bot-routing.md": {
+    "mtime": 1784522564.2177544,
+    "ast_hash": "f9771492f4cde210f27eb9fd45e86205",
+    "semantic_hash": ""
+  },
+  "notes/signal-ghl-ai-employee-pricing.md": {
+    "mtime": 1784109775.5899005,
+    "ast_hash": "d67a277e7d669beeefbaa9c12098a3bf",
+    "semantic_hash": ""
+  },
+  "notes/signal-ghl-ai-studio-context-persistence.md": {
+    "mtime": 1784566103.0535445,
+    "ast_hash": "c8b61010b019ce3ac3d6a6373cfd9d0c",
+    "semantic_hash": ""
+  },
+  "notes/signal-ghl-ai-studio-launch.md": {
+    "mtime": 1784566111.6942847,
+    "ast_hash": "d60fc3298a7731dad57688c235e8b58b",
+    "semantic_hash": ""
+  },
+  "notes/signal-ghl-conversation-ai-bundled-free.md": {
+    "mtime": 1784479056.6461987,
+    "ast_hash": "a891bb740cc9578d9fa63e6c2605cc50",
+    "semantic_hash": ""
+  },
+  "notes/signal-ghl-prospect-ai-activity-center.md": {
+    "mtime": 1784240039.764647,
+    "ast_hash": "169251f6064e86a4a8d0e68aa21e9b31",
+    "semantic_hash": ""
+  },
+  "notes/signal-ghl-rentals-module-launch.md": {
+    "mtime": 1784544350.1774998,
+    "ast_hash": "c763bad070ef31c725811e68695d0165",
+    "semantic_hash": ""
+  },
+  "notes/signal-ghl-voiceai-bilingual-latency.md": {
+    "mtime": 1784500790.4675984,
+    "ast_hash": "edcd1c821ca869ee31cade6d875d2d28",
+    "semantic_hash": ""
+  },
+  "notes/signal-ghl-workflow-ai-builder-rebuild.md": {
+    "mtime": 1784348660.3773975,
+    "ast_hash": "d0ac1b40d1819d19112e2986100b99b6",
+    "semantic_hash": ""
+  },
+  "notes/signal-google-march2026-schema-aeo.md": {
+    "mtime": 1784131437.2224095,
+    "ast_hash": "03ff33beb42a37cf634bed7bced508e6",
+    "semantic_hash": ""
+  },
+  "notes/signal-houselab-competitor-portland-hearthbeat.md": {
+    "mtime": 1784479059.5015302,
+    "ast_hash": "a6a8ecac9b0f6bb8cd49ab9d863828f2",
+    "semantic_hash": ""
+  },
+  "notes/signal-kw-command-launchpad-kelle-ai.md": {
+    "mtime": 1784305184.0995426,
+    "ast_hash": "71c77eca38f49a5a9e6370f2f92ae501",
+    "semantic_hash": ""
+  },
+  "notes/signal-lindley-cdlp-niche-professionalizing.md": {
+    "mtime": 1784579956.2019105,
+    "ast_hash": "caee8cd7ac8a97b1b17fee5e913e3488",
+    "semantic_hash": ""
+  },
+  "notes/signal-lindley-ohcs-forgivable-dpa-2026.md": {
+    "mtime": 1784579943.2378304,
+    "ast_hash": "6d3748658f0fc7a2b00eb9f018f42f01",
+    "semantic_hash": ""
+  },
+  "notes/signal-lindley-portland-market-balanced-2026.md": {
+    "mtime": 1784579931.9199295,
+    "ast_hash": "9975af8ef91b421ada3b6637eda99176",
+    "semantic_hash": ""
+  },
+  "notes/signal-lovable-series-b.md": {
+    "mtime": 1784392187.6036372,
+    "ast_hash": "5d95fa142cbb3b5d75e106e21c39792b",
+    "semantic_hash": ""
+  },
+  "notes/signal-lovable-valuation.md": {
+    "mtime": 1784109779.0332649,
+    "ast_hash": "1f26cca4e74d3893848500117e4e0a00",
+    "semantic_hash": ""
+  },
+  "notes/signal-n8n-cloud-pricing-change.md": {
+    "mtime": 1784283463.3065686,
+    "ast_hash": "cc8558e6526e90dd40cb5282809cbc98",
+    "semantic_hash": ""
+  },
+  "notes/signal-oregon-mortgage-rates-2026.md": {
+    "mtime": 1784153215.8065321,
+    "ast_hash": "4e215b417594777f3b77d9b4ce44e82b",
+    "semantic_hash": ""
+  },
+  "notes/signal-portland-housing-inventory-2026.md": {
+    "mtime": 1784174898.2365596,
+    "ast_hash": "a4c173a16042818c5e23719ff41a2c2c",
+    "semantic_hash": ""
+  },
+  "notes/signal-portland-listing-inventory-buyer-demand-2026.md": {
+    "mtime": 1784587751.1315892,
+    "ast_hash": "46e0c213e98f728af31aacf68399d0a2",
+    "semantic_hash": ""
+  },
+  "notes/signal-pressure-washing-industry-growth-2026.md": {
+    "mtime": 1784587756.7010558,
+    "ast_hash": "6f14ae4705d24a2bf0a610745cc55858",
+    "semantic_hash": ""
+  },
+  "notes/signal-rinse-moss-busters-competitor.md": {
+    "mtime": 1784196603.2001536,
+    "ast_hash": "1d41fedfa5b374b9556f104ab26b8ae4",
+    "semantic_hash": ""
+  },
+  "notes/signal-saint-irenes-competitor.md": {
+    "mtime": 1784283468.0214343,
+    "ast_hash": "badac762ab32edfffa619184df93dedd",
+    "semantic_hash": ""
+  },
+  "notes/signal-social-revolution-2026-wedding-venue-trends.md": {
+    "mtime": 1784609463.800113,
+    "ast_hash": "f0b0dce36c05f4618f61250624e46a50",
+    "semantic_hash": ""
+  },
+  "notes/signal-sonnet5-api-pricing-increase.md": {
+    "mtime": 1784153212.5342526,
+    "ast_hash": "a35e3b2c9433e48f4b66066a3566c379",
+    "semantic_hash": ""
+  },
+  "notes/signal-webflow-aeo-framer3-agents.md": {
+    "mtime": 1784131432.8320582,
+    "ast_hash": "dc52022a6af669111a1ede57cea26db7",
+    "semantic_hash": ""
+  },
+  "notes/signal-zillow-redfin-compass-ai-agents.md": {
+    "mtime": 1784261760.9226546,
+    "ast_hash": "6f45bf0caec105f911bb1d889a73fd64",
+    "semantic_hash": ""
+  },
+  "notes/social-revolution-design-brief-chat.md": {
+    "mtime": 1784096164.4388,
+    "ast_hash": "fe872968e3c8c60ae40acc2135f1c9d3",
+    "semantic_hash": ""
+  },
+  "notes/social-revolution-image-manifest.md": {
+    "mtime": 1784096164.4469166,
+    "ast_hash": "a14218ee9ae3969f3520344eb912c259",
+    "semantic_hash": ""
+  },
+  "notes/social-revolution-image-prompts.md": {
+    "mtime": 1784096164.4285169,
+    "ast_hash": "faadc25da336bb4cdaea4ec352b5d9b9",
+    "semantic_hash": ""
+  },
+  "notes/sonnet-subscription-check.md": {
+    "mtime": 1784085316.8785768,
+    "ast_hash": "d2b0e14b8ac66367a7125311a77e4615",
+    "semantic_hash": ""
+  },
+  "notes/tool-gohighlevel-cli-readme.md": {
+    "mtime": 1784096200.7844381,
+    "ast_hash": "6ecbe304ccb15c1ae4bf8a69b4f12eba",
+    "semantic_hash": ""
+  },
+  "notes/tool-gohighlevel-cli-skill.md": {
+    "mtime": 1784096221.0168395,
+    "ast_hash": "ec1d8dc97f1f29e916bfafa7ffd19f02",
+    "semantic_hash": ""
+  },
+  "projects/ai-tools.md": {
+    "mtime": 1784103949.1237369,
+    "ast_hash": "58ad98035d0ef05772d5fccb80e4bf1f",
+    "semantic_hash": ""
+  },
+  "projects/boxless.md": {
+    "mtime": 1784096179.2543411,
+    "ast_hash": "ffd3bf0d6c2c0fa3fa1e15954381c38b",
+    "semantic_hash": ""
+  },
+  "projects/eighty5labs.md": {
+    "mtime": 1784097530.899545,
+    "ast_hash": "930a23d6c38073985d29ca6240416568",
+    "semantic_hash": ""
+  },
+  "projects/hannah-wolfe.md": {
+    "mtime": 1784103949.0850422,
+    "ast_hash": "4dd911428ef3430cf3b60cc8a36c55ab",
+    "semantic_hash": ""
+  },
+  "projects/houselab-website/README.md": {
+    "mtime": 1784093741.4318883,
+    "ast_hash": "e41804c988f54a449004be983cf81094",
+    "semantic_hash": ""
+  },
+  "projects/life-os.md": {
+    "mtime": 1784096402.627988,
+    "ast_hash": "520f9b2399bc4ac67146b46692d7615a",
+    "semantic_hash": ""
+  },
+  "projects/lindley-team.md": {
+    "mtime": 1784671138.3209107,
+    "ast_hash": "12f036c6b61a2ba78115f57290f4310e",
+    "semantic_hash": ""
+  },
+  "projects/rinse-it-off.md": {
+    "mtime": 1784103949.0638072,
+    "ast_hash": "7db12d341ac5f94df4c98199a4017302",
+    "semantic_hash": ""
+  },
+  "projects/social-revolution.md": {
+    "mtime": 1784103949.1091354,
+    "ast_hash": "35abb7530dacad51b654395b1a90c03a",
+    "semantic_hash": ""
+  },
+  "self/archive-review.md": {
+    "mtime": 1784657172.0502617,
+    "ast_hash": "b0ac3f921ec7768d084617c8c9821a9b",
+    "semantic_hash": ""
+  },
+  "self/friction-log.md": {
+    "mtime": 1784108095.0612257,
+    "ast_hash": "84b4ee8cd6b44ec5ff91976002b86a42",
+    "semantic_hash": ""
+  },
+  "self/proposals.md": {
+    "mtime": 1784109786.5490181,
+    "ast_hash": "9b71154c1e30b389726b893aad01b98c",
+    "semantic_hash": ""
+  },
+  "self/standards.md": {
+    "mtime": 1784108306.8101583,
+    "ast_hash": "b9ab70c79dff367e85e27994ed292050",
+    "semantic_hash": ""
+  },
+  "stack-map.html": {
+    "mtime": 1784671067.2009048,
+    "ast_hash": "167a54905c9e56fa525af4cc3e027dd5",
+    "semantic_hash": ""
+  },
+  "stack/README.md": {
+    "mtime": 1784671067.1077564,
+    "ast_hash": "22a8fd88b1d60d72ab0e487310f3d045",
+    "semantic_hash": ""
+  },
+  "stack/commands.md": {
+    "mtime": 1784671067.0958369,
+    "ast_hash": "ef0158044194987b5504f5e8d90d9fc7",
+    "semantic_hash": ""
+  },
+  "stack/commands/capture.md": {
+    "mtime": 1784076878.5283732,
+    "ast_hash": "ff73de3f9dcdfb986694ae21f3290351",
+    "semantic_hash": ""
+  },
+  "stack/commands/design.md": {
+    "mtime": 1782787694.166312,
+    "ast_hash": "0a44168933e6fc9ac3510e6843505a69",
+    "semantic_hash": ""
+  },
+  "stack/mcp-servers.md": {
+    "mtime": 1784671067.0929737,
+    "ast_hash": "ed6ebe7ad84c76650bcfeddf6b9ff295",
+    "semantic_hash": ""
+  },
+  "stack/skills.md": {
+    "mtime": 1784671067.0939443,
+    "ast_hash": "7479973b8a696f283092fd3229c6dac0",
+    "semantic_hash": ""
+  },
+  "strategy/COLLECT.md": {
+    "mtime": 1784087937.0942438,
+    "ast_hash": "b68e20f9bb9f5ca12da1971545b36321",
+    "semantic_hash": ""
+  },
+  "strategy/DIGEST.md": {
+    "mtime": 1784098817.4017565,
+    "ast_hash": "39c36a155341369e30656cd65b51765e",
+    "semantic_hash": ""
+  },
+  "strategy/PROMPT.md": {
+    "mtime": 1784601070.1145504,
+    "ast_hash": "b353b1c06b744a0f9d90c783318144c7",
+    "semantic_hash": ""
+  },
+  "strategy/SUPERVISE.md": {
+    "mtime": 1784109826.8756413,
+    "ast_hash": "b78dac7b93cdac5482be9eb77ad7b362",
+    "semantic_hash": ""
+  },
+  "strategy/context.md": {
+    "mtime": 1784577954.4046326,
+    "ast_hash": "0ca40269f05cb31f6e4b37b8553f7a04",
+    "semantic_hash": ""
+  },
+  "systems/BACKLOG.md": {
+    "mtime": 1784657208.68509,
+    "ast_hash": "bfae5c0927ec2a9f1cddcdeebfd3e2c3",
+    "semantic_hash": ""
+  },
+  "systems/INDEX.md": {
+    "mtime": 1784669998.6246645,
+    "ast_hash": "a3d6c8b0d2bf2d5bc7835f186e0c7999",
+    "semantic_hash": ""
+  },
+  "systems/board-of-directors-advisor.md": {
+    "mtime": 1784657156.5607712,
+    "ast_hash": "690a5fb979cba1a31d3f38cab8069dcb",
+    "semantic_hash": ""
+  },
+  "systems/ghl-automation-method.md": {
+    "mtime": 1784097601.695873,
+    "ast_hash": "28cf1052cc60aa85544c82fe016176c7",
+    "semantic_hash": ""
+  },
+  "systems/ghl-knowledge-base-method.md": {
+    "mtime": 1784578686.4184227,
+    "ast_hash": "03c6b253becace66283e7f3b2e7f6889",
+    "semantic_hash": ""
+  },
+  "systems/ghl-voice-ai-web-widget.md": {
+    "mtime": 1784669966.7842534,
+    "ast_hash": "35e3e025a63b9503ca14899e1c0d6160",
+    "semantic_hash": ""
+  },
+  "systems/imagery-consistency-method.md": {
+    "mtime": 1784097617.2482152,
+    "ast_hash": "c64051460eb26e2051c6adb577697c06",
+    "semantic_hash": ""
+  },
+  "systems/lead-followup-sequence.md": {
+    "mtime": 1784094461.7741206,
+    "ast_hash": "b0d6da40ad12be839f96ff278b9f0729",
+    "semantic_hash": ""
+  },
+  "systems/real-estate-vertical-persona.md": {
+    "mtime": 1784489551.0152113,
+    "ast_hash": "4d85bd145fc8141660f5e48a67015e1f",
+    "semantic_hash": ""
+  },
+  "systems/voice-principles.md": {
+    "mtime": 1784094441.4381826,
+    "ast_hash": "67f7d5afb549ece613b71608402d786a",
+    "semantic_hash": ""
+  },
+  "assets/ai-tools/how-it-works.png": {
+    "mtime": 1784103881.9663312,
+    "ast_hash": "ccb475891f7ad9e2454a10e8b8a45fac",
+    "semantic_hash": ""
+  },
+  "assets/hannah-wolfe/hero-portland.png": {
+    "mtime": 1784103880.9173958,
+    "ast_hash": "6aa2fa7cbc9e071ec9c23991d8cddb5a",
+    "semantic_hash": ""
+  },
+  "assets/hannah-wolfe/sellers-home.png": {
+    "mtime": 1784103881.1533756,
+    "ast_hash": "e61cfbc9040c32de4ac15a3806e21a5f",
+    "semantic_hash": ""
+  },
+  "assets/houselab/hero-aerial.jpg": {
+    "mtime": 1784103880.0871487,
+    "ast_hash": "cc0e84a9377d083ba597acedbb254ce9",
+    "semantic_hash": ""
+  },
+  "assets/lindley-team/home-buy.webp": {
+    "mtime": 1784103880.1646147,
+    "ast_hash": "c4343c9ca7f8c0cb0031cae9bb018135",
+    "semantic_hash": ""
+  },
+  "assets/lindley-team/logo-full.png": {
+    "mtime": 1784103880.1556315,
+    "ast_hash": "3eda92eabc1482f04d0700cf7fab9d15",
+    "semantic_hash": ""
+  },
+  "assets/rinse-it-off/hero-house-softwash.png": {
+    "mtime": 1784103880.4557748,
+    "ast_hash": "c280ee5438ef7f6ac9a117069d25142d",
+    "semantic_hash": ""
+  },
+  "assets/rinse-it-off/hero-plate-clean.png": {
+    "mtime": 1784103880.7200105,
+    "ast_hash": "e8fb29375d40a1c6211bfa2515ecb9c6",
+    "semantic_hash": ""
+  },
+  "assets/social-revolution/hemlock-forest-path.jpg": {
+    "mtime": 1784103881.4032753,
+    "ast_hash": "d9854c4f0d0ca5c5862f8ef0ab563c13",
+    "semantic_hash": ""
+  },
+  "assets/social-revolution/signal-conference.jpg": {
+    "mtime": 1784103881.6379883,
+    "ast_hash": "ef012c7df0416d8df7c25cd93e9dcf50",
+    "semantic_hash": ""
+  }
+}
