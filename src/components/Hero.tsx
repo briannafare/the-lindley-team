@@ -69,18 +69,17 @@ export default function Hero() {
           {/* BODY — pitch, CTAs, proof, licensing */}
           <div className="mt-5 lg:mt-8 lg:col-start-1 lg:col-end-8 lg:row-start-2">
             <p className="hero-sub max-w-[52ch] text-[clamp(16px,1.3vw,21px)] text-ink-mid leading-snug lg:leading-relaxed">
-              We handle the part nobody dreams about &mdash; so the numbers are clear, the
-              plan is yours, and the only surprise on closing day is how good it feels.
+              We handle the part nobody dreams about, so you know your real numbers
+              before you fall for a house.
             </p>
 
             <p className="max-w-[62ch] text-[clamp(14px,1vw,16px)] text-ink-light leading-relaxed mt-4">
-              David Chandler and Bri Lindley start by understanding you &mdash; your finances,
-              your timeline, your long-term goals. Then we build a mortgage strategy around
-              them and walk you through a{" "}
-              <strong className="font-semibold text-ink">Mortgage Cost Analysis</strong>: a
-              clear, side-by-side breakdown of your options, explained patiently and down to
-              the decimal. No jargon. No pressure. Just the clarity to move forward with
-              confidence.
+              David Chandler and Bri Lindley start with your actual situation: your income,
+              your timeline, and what you need this house to do for you. Then we walk you
+              through a{" "}
+              <strong className="font-semibold text-ink">Mortgage Cost Analysis</strong> &mdash;
+              a side-by-side breakdown of your real options, down to the decimal, so you can
+              see what each one costs you over the years you plan to keep it.
             </p>
 
             <div className="hero-cta grid sm:flex sm:flex-wrap items-center gap-3 sm:gap-x-4 mt-5 sm:mt-7">

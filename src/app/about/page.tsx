@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "What areas does The Chandler/Lindley Lending Team serve?",
-    a: "Our roots are in the Portland area, and we personally handle loans across Oregon, Washington, and Arizona. But if you're looking to buy outside of those states, you are still in excellent hands. We have a dedicated, in-house team at Movement Mortgage that handles our out-of-state clients. They work closely with us behind the scenes to guarantee you receive the exact same level of service and exactness you expect from our team.",
+    a: "Our roots are in the Portland area. Bri is licensed in Oregon and Washington; David is licensed in Oregon, Washington, and Arizona. If you're buying outside those states, we hand you to a team at Movement we know and work with directly, and we stay on your file the whole way through so nothing gets lost in the handoff.",
   },
   {
     q: "What is a Certified Divorce Lending Professional (CDLP®)?",
@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "Why Movement Mortgage?",
-    a: "Most lenders scramble just to hit a deadline. Movement does the exact opposite. By underwriting your loan at the very beginning of the process, we eliminate the last-minute chaos typical of the mortgage industry. We aim to assess and clear your loan from underwriting within six hours, and we process over 75% of our loans in seven business days or less — which lets us send closing documents out weeks in advance. We coordinate the final paperwork and funds with the closing attorney early, so when closing day arrives there is no rushing, just the moment you get your keys. This commitment to a best-in-class experience, with the resources of a major national lender combined with our boutique and highly communicative team approach, is what sets us apart.",
+    a: "Movement underwrites your loan at the start of the process rather than the end, which is where a lot of last-minute closing chaos comes from. Their goal is underwriting results within six hours, and over 75% of loans are processed in seven business days or less, so closing documents usually go out well ahead of the date on your contract. We coordinate the final paperwork and funds with the closing attorney early. You get the resources of a national lender and a two-person team that actually answers the phone.",
   },
 ];
 
@@ -39,7 +39,7 @@ const STEPS = [
   },
   {
     title: "Close With Confidence",
-    body: "Rely on our best-in-class underwriting, processing, and funding teams, plus our proactive communication, to cross the finish line smoothly and step into your new home.",
+    body: "Our underwriting, processing, and funding teams take it from there, and we tell you where your file stands at each step so you are never left guessing.",
   },
 ];
 
@@ -110,7 +110,7 @@ export default function AboutPage() {
               <em className="italic font-medium text-orange">in the Making</em>
             </h1>
             <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[620px]">
-              More than 20 years ago, David Chandler hired Tammi Lindley as a new loan officer with zero industry experience. It turned out to be one of the best decisions he ever made.
+              More than 20 years ago, David Chandler brought Tammi Lindley into the mortgage business with zero industry experience behind her. It worked out.
             </p>
           </div>
         </section>
@@ -164,10 +164,10 @@ export default function AboutPage() {
                   </figure>
                   <div className="space-y-5">
                     <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                      It turned out to be a lifelong friendship, and what has become a defining partnership. Over the next two decades, Tammi — alongside her daughter, Bri — built one of the most trusted and premier mortgage lending teams in the Portland area. Tammi built her mortgage practice the right way: one straight conversation at a time, until half of Portland seemed to know someone she&apos;d taken care of.
+                      It turned out to be a lifelong friendship, and what has become a defining partnership. Over the next two decades, Tammi — alongside her daughter, Bri — built this team into what it is today. She built her practice one straight conversation at a time, until half of Portland seemed to know someone she&apos;d taken care of.
                     </p>
                     <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
-                      Today, Tammi is enjoying a well-deserved retirement, but the standard that she set remains our baseline. David and Bri now lead the team together — bringing decades of combined lending expertise and meticulous operational systems to every client.
+                      Tammi is retired now. David and Bri lead the team together, and the way she worked is still the way the team works.
                     </p>
                   </div>
                 </div>
