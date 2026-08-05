@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useMemo, useState } from "react";
 
 interface CalcResults {
   monthlyPayment: number;
@@ -13,6 +13,13 @@ interface CalcResults {
   totalInterest: number;
 }
 
+const formatCurrency = (value: number, maximumFractionDigits = 0) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits,
+  }).format(value);
+
 export default function MortgageCalculator({
   variant = "full",
 }: {
@@ -24,9 +31,6 @@ export default function MortgageCalculator({
   const [term, setTerm] = useState(30);
   const [taxes, setTaxes] = useState(5000);
   const [insurance, setInsurance] = useState(1500);
-  const [results, setResults] = useState<CalcResults | null>(null);
-
-  // Lead capture state
   const [showForm, setShowForm] = useState(false);
   const [leadCaptured, setLeadCaptured] = useState(false);
   const [leadName, setLeadName] = useState("");
@@ -34,7 +38,7 @@ export default function MortgageCalculator({
   const [leadPhone, setLeadPhone] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  const calculate = useCallback(() => {
+  const results = useMemo<CalcResults>(() => {
     const downPayment = homePrice * (downPaymentPct / 100);
     const loanAmount = homePrice - downPayment;
     const monthlyRate = rate / 100 / 12;
@@ -52,7 +56,7 @@ export default function MortgageCalculator({
     const totalMonthly = monthlyPI + monthlyTaxes + monthlyInsurance + monthlyPMI;
     const totalInterest = monthlyPI * numPayments - loanAmount;
 
-    setResults({
+    return {
       monthlyPayment: totalMonthly,
       principal: monthlyPI - loanAmount * monthlyRate,
       interest: loanAmount * monthlyRate,
@@ -61,27 +65,18 @@ export default function MortgageCalculator({
       pmi: monthlyPMI,
       totalPayment: totalMonthly,
       totalInterest,
-    });
+    };
   }, [homePrice, downPaymentPct, rate, term, taxes, insurance]);
 
-  // Calculate on first render
-  useState(() => {
-    calculate();
-  });
-
-  const formatCurrency = (n: number) =>
-    new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      maximumFractionDigits: 0,
-    }).format(n);
-
-  const downPayment = homePrice * (downPaymentPct / 100);
-  const loanAmount = homePrice - downPayment;
+  const loanAmount = useMemo(
+    () => homePrice - homePrice * (downPaymentPct / 100),
+    [homePrice, downPaymentPct]
+  );
 
   const handleLeadSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
+
     const webhookUrl = process.env.NEXT_PUBLIC_GHL_CALC_WEBHOOK || "";
     if (webhookUrl) {
       fetch(webhookUrl, {
@@ -97,22 +92,24 @@ export default function MortgageCalculator({
           rate,
           term,
           down_payment_pct: downPaymentPct,
-          monthly_payment: results?.monthlyPayment,
+          monthly_payment: results.monthlyPayment,
         }),
       }).catch(() => {});
     }
+
     setLeadCaptured(true);
     setShowForm(false);
     setSubmitting(false);
   };
 
   const calcPmiPayoffMonth = () => {
-    if (downPaymentPct >= 20 || !results) return null;
+    if (downPaymentPct >= 20) return null;
+
     const targetBalance = homePrice * 0.8;
     const monthlyRate = rate / 100 / 12;
-    const loanAmt = homePrice - homePrice * (downPaymentPct / 100);
-    let balance = loanAmt;
+    let balance = homePrice - homePrice * (downPaymentPct / 100);
     const monthlyPI = results.principal + results.interest;
+
     for (let month = 1; month <= term * 12; month++) {
       const interestPart = balance * monthlyRate;
       const principalPart = monthlyPI - interestPart;
@@ -123,218 +120,236 @@ export default function MortgageCalculator({
   };
 
   const calcAmortizationAt = (yearTarget: number) => {
-    if (!results) return null;
     const monthlyRate = rate / 100 / 12;
-    const loanAmt = homePrice - homePrice * (downPaymentPct / 100);
+    let balance = homePrice - homePrice * (downPaymentPct / 100);
     const monthlyPI = results.principal + results.interest;
-    let balance = loanAmt;
-    const months = yearTarget * 12;
-    for (let m = 0; m < months && m < term * 12; m++) {
+    const months = Math.min(term * 12, yearTarget * 12);
+
+    for (let m = 0; m < months; m++) {
       const interestPart = balance * monthlyRate;
       const principalPart = monthlyPI - interestPart;
       balance = Math.max(0, balance - principalPart);
     }
-    const equity = homePrice - balance;
-    return { balance, equity };
+
+    return { balance, equity: homePrice - balance };
   };
 
   const pmiPayoffMonth = leadCaptured ? calcPmiPayoffMonth() : null;
   const amort1 = leadCaptured ? calcAmortizationAt(1) : null;
-  const amort5 = leadCaptured ? calcAmortizationAt(5) : null;
-  const amort10 = leadCaptured ? calcAmortizationAt(10) : null;
+  const amort5 = leadCaptured && term >= 5 ? calcAmortizationAt(5) : null;
+  const amort10 = leadCaptured && term >= 10 ? calcAmortizationAt(10) : null;
+
+  const showFullInputs = variant === "full";
 
   return (
-    <div className="bg-white rounded-[2rem] border border-border p-8">
-      <h3 className="font-display text-xl font-bold mb-1">
-        Portland Mortgage Calculator
-      </h3>
-      <p className="text-sm text-ink-light mb-6">
-        Estimate your monthly payment for a home in Portland, Oregon.
-      </p>
-
-      <div className="space-y-6">
-        {/* Home Price */}
-        <div>
-          <div className="flex justify-between items-baseline mb-2">
-            <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink">
-              Home Price
-            </label>
-            <span className="font-display text-lg font-bold">
-              {formatCurrency(homePrice)}
-            </span>
-          </div>
-          <input
-            type="range"
-            min={100000}
-            max={2000000}
-            step={10000}
-            value={homePrice}
-            onChange={(e) => {
-              setHomePrice(Number(e.target.value));
-              calculate();
-            }}
-            className="w-full accent-orange"
-          />
-          <div className="flex justify-between text-[0.65rem] text-ink-light mt-1">
-            <span>$100k</span>
-            <span>$2M</span>
-          </div>
+    <div className="bg-white rounded-[2rem] border border-border p-8 shadow-[0_28px_80px_rgba(34,34,34,0.08)]">
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="max-w-[560px]">
+          <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-ink-light mb-2">
+            Mortgage calculator
+          </p>
+          <h3 className="font-display text-2xl font-extrabold text-ink mb-3">
+            Estimate your monthly payment.
+          </h3>
+          <p className="text-sm text-ink-mid leading-relaxed">
+            Run Portland mortgage numbers with loan amount, down payment, interest rate, and loan term. The calculator includes taxes, insurance, and PMI so you can compare real payment scenarios.
+          </p>
         </div>
 
-        {/* Down Payment */}
-        <div>
-          <div className="flex justify-between items-baseline mb-2">
-            <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink">
-              Down Payment
-            </label>
-            <span className="font-display text-lg font-bold">
-              {downPaymentPct}% ({formatCurrency(downPayment)})
-            </span>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="rounded-[1.5rem] bg-bg-alt border border-border px-4 py-4">
+            <p className="text-[0.68rem] uppercase tracking-[0.18em] text-ink-light mb-1">
+              Loan amount
+            </p>
+            <p className="font-display text-lg font-bold text-ink">
+              {formatCurrency(loanAmount)}
+            </p>
           </div>
-          <input
-            type="range"
-            min={0}
-            max={40}
-            step={1}
-            value={downPaymentPct}
-            onChange={(e) => {
-              setDownPaymentPct(Number(e.target.value));
-              calculate();
-            }}
-            className="w-full accent-orange"
-          />
-          <div className="flex justify-between text-[0.65rem] text-ink-light mt-1">
-            <span>0%</span>
-            <span>40%</span>
+          <div className="rounded-[1.5rem] bg-bg-alt border border-border px-4 py-4">
+            <p className="text-[0.68rem] uppercase tracking-[0.18em] text-ink-light mb-1">
+              Estimated payment
+            </p>
+            <p className="font-display text-lg font-bold text-ink">
+              {formatCurrency(results.monthlyPayment)}
+            </p>
           </div>
         </div>
-
-        {/* Rate & Term */}
-        <div className="grid grid-cols-2 gap-4">
-          <div>
-            <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
-              Interest Rate
-            </label>
-            <div className="flex items-center border border-border rounded-xl px-3 py-2">
-              <input
-                type="number"
-                value={rate}
-                step={0.125}
-                min={0}
-                max={15}
-                onChange={(e) => {
-                  setRate(Number(e.target.value));
-                  calculate();
-                }}
-                className="w-full text-sm font-semibold bg-transparent outline-none"
-              />
-              <span className="text-ink-light text-sm ml-1">%</span>
-            </div>
-          </div>
-          <div>
-            <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
-              Loan Term
-            </label>
-            <div className="flex gap-2">
-              {[15, 20, 30].map((t) => (
-                <button
-                  key={t}
-                  onClick={() => {
-                    setTerm(t);
-                    calculate();
-                  }}
-                  className={`flex-1 py-2 rounded-xl text-sm font-semibold transition-all ${
-                    term === t
-                      ? "bg-ink text-white"
-                      : "border border-border text-ink-mid hover:border-ink"
-                  }`}
-                >
-                  {t}yr
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {variant === "full" && (
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
-                Annual Taxes
-              </label>
-              <div className="flex items-center border border-border rounded-xl px-3 py-2">
-                <span className="text-ink-light text-sm mr-1">$</span>
-                <input
-                  type="number"
-                  value={taxes}
-                  step={100}
-                  onChange={(e) => {
-                    setTaxes(Number(e.target.value));
-                    calculate();
-                  }}
-                  className="w-full text-sm font-semibold bg-transparent outline-none"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
-                Annual Insurance
-              </label>
-              <div className="flex items-center border border-border rounded-xl px-3 py-2">
-                <span className="text-ink-light text-sm mr-1">$</span>
-                <input
-                  type="number"
-                  value={insurance}
-                  step={100}
-                  onChange={(e) => {
-                    setInsurance(Number(e.target.value));
-                    calculate();
-                  }}
-                  className="w-full text-sm font-semibold bg-transparent outline-none"
-                />
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
-      {/* Results */}
-      {results && (
-        <div className="mt-8 pt-8 border-t border-border">
-          {/* Always visible: big payment number */}
+      <div className="mt-8 space-y-6">
+        <div className="space-y-6 rounded-[1.75rem] border border-border bg-bg-alt p-6">
+          <div>
+            <div className="flex justify-between items-baseline gap-4 mb-3">
+              <div>
+                <p className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink">
+                  Home Price
+                </p>
+                <p className="font-display text-xl font-bold text-ink">
+                  {formatCurrency(homePrice)}
+                </p>
+              </div>
+              <p className="text-sm text-ink-light">
+                {formatCurrency(100000)} – {formatCurrency(2000000)}
+              </p>
+            </div>
+            <input
+              type="range"
+              min={100000}
+              max={2000000}
+              step={10000}
+              value={homePrice}
+              onChange={(e) => setHomePrice(Number(e.target.value))}
+              className="w-full accent-orange"
+              aria-label="Home price"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between items-baseline gap-4 mb-3">
+              <div>
+                <p className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink">
+                  Down Payment
+                </p>
+                <p className="font-display text-xl font-bold text-ink">
+                  {downPaymentPct}% ({formatCurrency(homePrice * (downPaymentPct / 100))})
+                </p>
+              </div>
+              <p className="text-sm text-ink-light">
+                0% – 40%
+              </p>
+            </div>
+            <input
+              type="range"
+              min={0}
+              max={40}
+              step={1}
+              value={downPaymentPct}
+              onChange={(e) => setDownPaymentPct(Number(e.target.value))}
+              className="w-full accent-orange"
+              aria-label="Down payment percentage"
+            />
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            <div>
+              <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
+                Interest Rate
+              </label>
+              <div className="flex items-center border border-border rounded-xl px-3 py-2 bg-white">
+                <input
+                  type="number"
+                  value={rate}
+                  step={0.125}
+                  min={0}
+                  max={15}
+                  onChange={(e) => setRate(Number(e.target.value))}
+                  className="w-full text-sm font-semibold bg-transparent outline-none"
+                  aria-label="Interest rate"
+                />
+                <span className="text-ink-light text-sm ml-2">%</span>
+              </div>
+            </div>
+
+            <div>
+              <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
+                Loan Term
+              </label>
+              <div className="flex gap-2">
+                {[15, 20, 30].map((t) => (
+                  <button
+                    key={t}
+                    type="button"
+                    onClick={() => setTerm(t)}
+                    className={`flex-1 rounded-xl border px-4 py-2 text-sm font-semibold transition-all ${
+                      term === t
+                        ? "bg-ink text-white"
+                        : "border-border text-ink hover:border-ink"
+                    }`}
+                    aria-pressed={term === t}
+                  >
+                    {t}yr
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {showFullInputs && (
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
+                  Annual Taxes
+                </label>
+                <div className="flex items-center border border-border rounded-xl px-3 py-2 bg-white">
+                  <span className="text-ink-light text-sm mr-2">$</span>
+                  <input
+                    type="number"
+                    value={taxes}
+                    step={100}
+                    min={0}
+                    onChange={(e) => setTaxes(Number(e.target.value))}
+                    className="w-full text-sm font-semibold bg-transparent outline-none"
+                    aria-label="Annual property taxes"
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-2">
+                  Annual Insurance
+                </label>
+                <div className="flex items-center border border-border rounded-xl px-3 py-2 bg-white">
+                  <span className="text-ink-light text-sm mr-2">$</span>
+                  <input
+                    type="number"
+                    value={insurance}
+                    step={100}
+                    min={0}
+                    onChange={(e) => setInsurance(Number(e.target.value))}
+                    className="w-full text-sm font-semibold bg-transparent outline-none"
+                    aria-label="Annual homeowners insurance"
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="rounded-[1.75rem] border border-border bg-white p-6">
           <div className="text-center mb-6">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-1">
-              Estimated Monthly Payment
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-ink-light mb-3">
+              Estimated monthly payment
             </p>
             <p className="font-display text-[3rem] font-extrabold text-ink leading-none">
               {formatCurrency(results.monthlyPayment)}
             </p>
-            <p className="text-sm text-ink-light mt-1">
+            <p className="text-sm text-ink-light mt-2">
               on a {formatCurrency(loanAmount)} loan
             </p>
           </div>
 
-          {/* Lead gate — show teaser or form or full breakdown */}
           {!leadCaptured ? (
-            <div className="mt-6">
-              <div className="border-t border-border pt-6 text-center space-y-3">
+            <div className="space-y-4">
+              <div className="rounded-[1.5rem] bg-bg-alt p-4 text-center">
+                <p className="text-sm text-ink-mid">
+                  Unlock the full amortization, PMI, and interest breakdown when you request your detailed summary.
+                </p>
+              </div>
+              <div className="space-y-3">
                 {!showForm ? (
                   <>
                     <button
+                      type="button"
                       onClick={() => setShowForm(true)}
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] transition-all"
+                      className="w-full inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-[0.78rem] font-bold uppercase tracking-[0.04em] text-white transition-all hover:scale-[1.02]"
                     >
-                      Get your full breakdown →
+                      Get your full breakdown
                     </button>
-                    <p className="text-[0.72rem] text-ink-light">
-                      We&apos;ll email you a personalized mortgage summary.
+                    <p className="text-center text-[0.72rem] text-ink-light">
+                      We&apos;ll email a personalized mortgage summary, including taxes, insurance, and PMI.
                     </p>
                   </>
                 ) : (
-                  <form
-                    onSubmit={handleLeadSubmit}
-                    className="text-left space-y-3"
-                  >
+                  <form onSubmit={handleLeadSubmit} className="space-y-4">
                     <div>
                       <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-1">
                         Name
@@ -345,7 +360,7 @@ export default function MortgageCalculator({
                         value={leadName}
                         onChange={(e) => setLeadName(e.target.value)}
                         placeholder="Jane Smith"
-                        className="w-full border border-border rounded-xl px-3 py-2 text-sm bg-transparent outline-none focus:border-ink transition-colors"
+                        className="w-full rounded-xl border border-border bg-bg-alt px-4 py-2 text-sm outline-none focus:border-ink focus:bg-white transition-colors"
                       />
                     </div>
                     <div>
@@ -358,31 +373,29 @@ export default function MortgageCalculator({
                         value={leadEmail}
                         onChange={(e) => setLeadEmail(e.target.value)}
                         placeholder="jane@email.com"
-                        className="w-full border border-border rounded-xl px-3 py-2 text-sm bg-transparent outline-none focus:border-ink transition-colors"
+                        className="w-full rounded-xl border border-border bg-bg-alt px-4 py-2 text-sm outline-none focus:border-ink focus:bg-white transition-colors"
                       />
                     </div>
                     <div>
                       <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink block mb-1">
-                        Phone{" "}
-                        <span className="normal-case font-normal text-ink-light">
-                          (optional)
-                        </span>
+                        Phone
+                        <span className="ml-1 text-[0.75rem] font-normal text-ink-light">(optional)</span>
                       </label>
                       <input
                         type="tel"
                         value={leadPhone}
                         onChange={(e) => setLeadPhone(e.target.value)}
                         placeholder="(503) 555-1234"
-                        className="w-full border border-border rounded-xl px-3 py-2 text-sm bg-transparent outline-none focus:border-ink transition-colors"
+                        className="w-full rounded-xl border border-border bg-bg-alt px-4 py-2 text-sm outline-none focus:border-ink focus:bg-white transition-colors"
                       />
                     </div>
-                    <div className="flex flex-col items-center gap-2 pt-1">
+                    <div className="flex flex-col gap-3">
                       <button
                         type="submit"
                         disabled={submitting}
-                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] transition-all disabled:opacity-60 disabled:scale-100"
+                        className="inline-flex w-full items-center justify-center rounded-full bg-ink px-6 py-3 text-[0.78rem] font-bold uppercase tracking-[0.04em] text-white transition-all disabled:opacity-60 disabled:cursor-not-allowed hover:scale-[1.02]"
                       >
-                        {submitting ? "Sending..." : "Show My Full Breakdown →"}
+                        {submitting ? "Sending..." : "Show my full breakdown"}
                       </button>
                       <button
                         type="button"
@@ -400,147 +413,110 @@ export default function MortgageCalculator({
               </div>
             </div>
           ) : (
-            /* Full breakdown after lead capture */
-            <div className="space-y-2">
-              {/* Payment breakdown rows */}
-              <div className="flex justify-between text-sm">
-                <span className="text-ink-mid">Principal & Interest</span>
-                <span className="font-semibold">
-                  {formatCurrency(results.principal + results.interest)}
-                </span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-ink-mid">Property Taxes</span>
-                <span className="font-semibold">
-                  {formatCurrency(results.taxes)}
-                </span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-ink-mid">Insurance</span>
-                <span className="font-semibold">
-                  {formatCurrency(results.insurance)}
-                </span>
-              </div>
-              {results.pmi > 0 && (
-                <div className="flex justify-between text-sm">
-                  <span className="text-ink-mid">PMI</span>
-                  <span className="font-semibold text-orange">
-                    {formatCurrency(results.pmi)}
-                  </span>
-                </div>
-              )}
-              <div className="flex justify-between text-sm pt-2 border-t border-border">
-                <span className="text-ink-mid">
-                  Total Interest ({term} years)
-                </span>
-                <span className="font-semibold">
-                  {formatCurrency(results.totalInterest)}
-                </span>
-              </div>
-
-              {/* PMI payoff */}
-              {pmiPayoffMonth !== null && (
-                <div className="mt-4 p-3 bg-yellow/30 rounded-xl">
-                  <p className="text-[0.78rem] text-ink-mid">
-                    <strong>PMI drops off at month {pmiPayoffMonth}</strong> —
-                    approximately{" "}
-                    {(pmiPayoffMonth / 12) % 1 === 0
-                      ? pmiPayoffMonth / 12
-                      : (pmiPayoffMonth / 12).toFixed(1)}{" "}
-                    years.
+            <div className="space-y-4">
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-[1.5rem] bg-bg-alt p-4">
+                  <p className="text-[0.72rem] uppercase tracking-[0.18em] text-ink-light mb-1">
+                    Principal & Interest
+                  </p>
+                  <p className="font-semibold text-ink">
+                    {formatCurrency(results.principal + results.interest)}
                   </p>
                 </div>
+                <div className="rounded-[1.5rem] bg-bg-alt p-4">
+                  <p className="text-[0.72rem] uppercase tracking-[0.18em] text-ink-light mb-1">
+                    Total interest
+                  </p>
+                  <p className="font-semibold text-ink">
+                    {formatCurrency(results.totalInterest)}
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-2 text-sm text-ink-mid">
+                <div className="flex justify-between">
+                  <span>Property Taxes</span>
+                  <span>{formatCurrency(results.taxes)}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Insurance</span>
+                  <span>{formatCurrency(results.insurance)}</span>
+                </div>
+                {results.pmi > 0 && (
+                  <div className="flex justify-between">
+                    <span>PMI</span>
+                    <span className="font-semibold text-orange">
+                      {formatCurrency(results.pmi)}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {results.pmi > 0 && pmiPayoffMonth !== null && (
+                <div className="rounded-[1.5rem] bg-yellow/30 p-4 text-sm text-ink-mid">
+                  <strong className="text-ink">PMI drops off at month {pmiPayoffMonth}</strong> — around{' '}
+                  {(pmiPayoffMonth / 12) % 1 === 0
+                    ? pmiPayoffMonth / 12
+                    : (pmiPayoffMonth / 12).toFixed(1)}{' '}
+                  years.
+                </div>
               )}
 
-              {/* Amortization highlights */}
               {(amort1 || amort5 || amort10) && (
-                <div className="mt-4">
-                  <p className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink mb-2">
-                    Amortization Highlights
+                <div className="rounded-[1.5rem] border border-border p-4">
+                  <p className="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-ink mb-3">
+                    Amortization highlights
                   </p>
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b border-border">
-                        <th className="text-left text-[0.7rem] font-semibold uppercase tracking-[0.06em] text-ink-light pb-1">
-                          Year
-                        </th>
-                        <th className="text-right text-[0.7rem] font-semibold uppercase tracking-[0.06em] text-ink-light pb-1">
-                          Balance
-                        </th>
-                        <th className="text-right text-[0.7rem] font-semibold uppercase tracking-[0.06em] text-ink-light pb-1">
-                          Equity
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {amort1 && (
-                        <tr className="border-b border-border">
-                          <td className="py-1.5 text-ink-mid">After Year 1</td>
-                          <td className="py-1.5 text-right font-semibold">
-                            {formatCurrency(amort1.balance)}
-                          </td>
-                          <td className="py-1.5 text-right font-semibold text-green-700">
-                            {formatCurrency(amort1.equity)}
-                          </td>
-                        </tr>
-                      )}
-                      {amort5 && term >= 5 && (
-                        <tr className="border-b border-border">
-                          <td className="py-1.5 text-ink-mid">After Year 5</td>
-                          <td className="py-1.5 text-right font-semibold">
-                            {formatCurrency(amort5.balance)}
-                          </td>
-                          <td className="py-1.5 text-right font-semibold text-green-700">
-                            {formatCurrency(amort5.equity)}
-                          </td>
-                        </tr>
-                      )}
-                      {amort10 && term >= 10 && (
-                        <tr>
-                          <td className="py-1.5 text-ink-mid">After Year 10</td>
-                          <td className="py-1.5 text-right font-semibold">
-                            {formatCurrency(amort10.balance)}
-                          </td>
-                          <td className="py-1.5 text-right font-semibold text-green-700">
-                            {formatCurrency(amort10.equity)}
-                          </td>
-                        </tr>
-                      )}
-                    </tbody>
-                  </table>
+                  <div className="grid gap-3 text-sm">
+                    {amort1 && (
+                      <div className="flex justify-between text-ink-mid">
+                        <span>After year 1</span>
+                        <span className="font-semibold text-right">
+                          {formatCurrency(amort1.balance)}
+                        </span>
+                      </div>
+                    )}
+                    {amort5 && (
+                      <div className="flex justify-between text-ink-mid">
+                        <span>After year 5</span>
+                        <span className="font-semibold text-right">
+                          {formatCurrency(amort5.balance)}
+                        </span>
+                      </div>
+                    )}
+                    {amort10 && (
+                      <div className="flex justify-between text-ink-mid">
+                        <span>After year 10</span>
+                        <span className="font-semibold text-right">
+                          {formatCurrency(amort10.balance)}
+                        </span>
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
               {downPaymentPct < 20 && pmiPayoffMonth === null && (
-                <div className="mt-4 p-3 bg-yellow/30 rounded-xl">
-                  <p className="text-[0.78rem] text-ink-mid">
-                    <strong>Tip:</strong> Putting 20% down eliminates PMI and
-                    saves you {formatCurrency(results.pmi)}/mo.
-                  </p>
+                <div className="rounded-[1.5rem] bg-yellow/30 p-4 text-sm text-ink-mid">
+                  <strong>Tip:</strong> Putting 20% down eliminates PMI and saves you {formatCurrency(results.pmi)} / month.
                 </div>
               )}
-            </div>
-          )}
 
-          {/* Second CTA — always shown after lead capture */}
-          {leadCaptured && (
-            <div className="mt-8 border border-border rounded-xl p-5">
-              <p className="font-semibold text-ink text-sm mb-0.5">
-                Want exact numbers based on today&apos;s rates?
-              </p>
-              <p className="text-sm text-ink-mid mb-4">
-                Schedule a complimentary call with Bri.
-              </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] transition-all"
-              >
-                Schedule a Call →
-              </a>
+              <div className="rounded-[1.5rem] border border-border bg-bg-alt p-4 text-center">
+                <p className="text-sm text-ink-mid mb-3">
+                  Want exact numbers based on today&apos;s rates?
+                </p>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-[0.78rem] font-bold uppercase tracking-[0.04em] text-white transition-all hover:scale-[1.02]"
+                >
+                  Schedule a call →
+                </a>
+              </div>
             </div>
           )}
         </div>
-      )}
+      </div>
     </div>
   );
 }
