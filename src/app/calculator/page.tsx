@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "What are current mortgage rates in Portland Oregon?",
-    a: "Mortgage rates change daily based on market conditions, your credit score, down payment, and loan type. Rather than publishing rates that will be outdated by tomorrow, we encourage you to contact us for a personalized rate quote based on your specific financial situation. We'll compare options — including products we fund in-house — to find the most competitive rate for your situation.",
+    a: "Mortgage rates change daily based on market conditions, your credit score, down payment, and loan type. Rather than publishing rates that will be outdated by tomorrow, we encourage you to contact us for a personalized rate quote based on your specific financial situation. We'll walk you through the options side by side so you can see what each one actually costs you.",
   },
   {
     q: "How much is PMI and when can I remove it?",
