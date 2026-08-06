@@ -1,7 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { LeadFormType } from "@/lib/ghl";
+
+// When someone asks for a call, the alert has to say when they want it. Booking a
+// real slot at /contact#schedule is still the better path; this is for the people
+// who send a message instead.
+const BEST_TIMES = [
+  "Weekday morning (8–12)",
+  "Weekday afternoon (12–5)",
+  "Weekday evening (5–7)",
+  "Weekend",
+  "Any time — just call me",
+];
 
 // Posts leads through the /api/lead route, which fans out to the correct GHL
 // workflow webhook based on formType (see src/app/api/lead/route.ts and
@@ -17,11 +28,15 @@ export default function ContactForm({
   formType?: LeadFormType;
 }) {
   const [state, setState] = useState<State>("idle");
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", bestTime: "" });
   const [smsConsent, setSmsConsent] = useState(false);
+  const [company, setCompany] = useState(""); // honeypot
+  const renderedAt = useRef(Date.now());
 
-  const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm((f) => ({ ...f, [k]: e.target.value }));
+  const set =
+    (k: keyof typeof form) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+      setForm((f) => ({ ...f, [k]: e.target.value }));
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -31,7 +46,15 @@ export default function ContactForm({
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, formType, source, smsConsent, consentTimestamp: new Date().toISOString() }),
+        body: JSON.stringify({
+          ...form,
+          formType,
+          source,
+          smsConsent,
+          consentTimestamp: new Date().toISOString(),
+          company,
+          renderedAt: renderedAt.current,
+        }),
       });
       if (!res.ok) throw new Error(String(res.status));
       setState("sent");
@@ -78,6 +101,18 @@ export default function ContactForm({
         <input id="contact-email" className={field} type="email" placeholder="Email" value={form.email} onChange={set("email")} required />
       </div>
       <div>
+        <label htmlFor="contact-besttime" className={label}>
+          Best time to reach you{" "}
+          <span className="normal-case tracking-normal font-normal text-ink-light">(optional)</span>
+        </label>
+        <select id="contact-besttime" className={field} value={form.bestTime} onChange={set("bestTime")}>
+          <option value="">Pick a window — or book an exact time above</option>
+          {BEST_TIMES.map((t) => (
+            <option key={t} value={t}>{t}</option>
+          ))}
+        </select>
+      </div>
+      <div>
         <label htmlFor="contact-message" className={label}>What can we help with?</label>
         <textarea
           id="contact-message"
@@ -85,6 +120,19 @@ export default function ContactForm({
           placeholder="Buying, refinancing, divorce lending, just exploring…"
           value={form.message}
           onChange={set("message")}
+        />
+      </div>
+      {/* Honeypot: off-screen and hidden from assistive tech. Only bots fill it. */}
+      <div aria-hidden className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+        <label htmlFor="contact-company">Company</label>
+        <input
+          id="contact-company"
+          name="company"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
         />
       </div>
       <label className="flex items-start gap-3 rounded-xl bg-bg-alt/70 p-4 text-[0.76rem] text-ink-mid leading-relaxed cursor-pointer">

@@ -26,6 +26,18 @@ const VALID: LeadFormType[] = [
   "neighborhood", "guide", "divorce", "first-time-buyer", "apply-click",
 ];
 
+// Bots fill every field they can see, and they submit instantly. Two cheap checks
+// catch the scripted majority without putting a captcha in front of a real lead.
+// Returning ok:true on a reject keeps the bot from learning it was caught.
+const MIN_FILL_MS = 3000;
+
+function looksAutomated(body: Record<string, unknown>): boolean {
+  if (String(body.company ?? "").trim()) return true; // honeypot — hidden from humans
+  const rendered = Number(body.renderedAt);
+  if (Number.isFinite(rendered) && Date.now() - rendered < MIN_FILL_MS) return true;
+  return false;
+}
+
 export async function POST(req: Request) {
   let body: Record<string, unknown>;
   try {
@@ -33,6 +45,8 @@ export async function POST(req: Request) {
   } catch {
     return NextResponse.json({ ok: false, error: "bad request" }, { status: 400 });
   }
+
+  if (looksAutomated(body)) return NextResponse.json({ ok: true });
 
   const formType = (VALID as string[]).includes(String(body.formType))
     ? (body.formType as LeadFormType)
@@ -52,8 +66,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "webhook not configured" }, { status: 501 });
   }
 
+  const { company: _hp, renderedAt: _rt, ...clean } = body;
   const payload = {
-    ...body,
+    ...clean,
     formType,
     source: body.source ?? "thelindleyteam.com",
     tags: LEAD_TAGS[formType],
