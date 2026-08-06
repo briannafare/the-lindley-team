@@ -22,11 +22,23 @@ export interface Testimonial {
   context: string;
 }
 
+export type NeighborhoodRegion =
+  | "Inner Southeast"
+  | "Outer Southeast"
+  | "Northeast"
+  | "North Portland"
+  | "Northwest & Pearl"
+  | "Southwest & Downtown"
+  | "Clackamas & East County"
+  | "Washington County"
+  | "SW Washington";
+
 export interface NeighborhoodData {
   slug: string;
   name: string;
   city: string;
   state: "OR" | "WA";
+  region: NeighborhoodRegion;
   description: string[];
   personality: string;
   mapEmbedSrc: string;
@@ -47,6 +59,7 @@ export interface NeighborhoodData {
   testimonials: Testimonial[];
   relatedServices: string[];
   adjacentNeighborhoods: string[];
+  image?: string;
   seo: { title: string; description: string };
 }
 
@@ -56,6 +69,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Mt. Scott-Arleta",
     city: "Portland",
     state: "OR",
+    region: "Outer Southeast",
     description: [
       "SE Foster Road is the spine of Mt. Scott-Arleta, and on a weekday evening it smells like wood smoke and fryer oil from Carts on Foster — a covered food-cart pod where you can get Korean fusion, ramen, or a wood-fired pie and eat at a picnic table under string lights. Across the street, Space Monkey Coffee roasts its own beans. This is inner Southeast Portland without the inner-Southeast price tag: bungalows on tree-lined blocks, a food scene that punches above its weight, and the Mt. Scott Community Center — a real public pool, roller rink, and gym — anchoring the whole thing.",
       "The housing is mostly early-1900s Craftsman bungalows and Portland foursquares, with mid-century ranches filling in and a growing share of ADUs and thoughtful infill. The median sits around $468,000 — meaningfully below Richmond or Sellwood for a comparable house, which is exactly why buyers priced out of inner SE keep landing here. The neighborhood runs from SE Foster on the north to SE Duke on the south, SE 60th to SE 82nd. It's the kind of place with block parties and a pollinator garden neighbors built out of a neglected traffic triangle.",
@@ -140,6 +154,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Sellwood-Moreland",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "SE 13th Avenue smells like old wood and coffee on Saturday mornings. Antique shops line both sides — not vintage boutiques, actual antique stores, the kind where someone who knows what they're looking at can still find something good. The Springwater Corridor trail runs along the eastern edge of the neighborhood right next to the Willamette, and Oaks Bottom Wildlife Refuge backs up to it. You can watch blue herons from the trail on a weekday morning and be at a downtown office in 25 minutes.",
       "The housing is mostly 1910s–1940s Craftsmans, scattered ranches from the 1950s, and a handful of newer infill houses. Sellwood Park has a public outdoor pool — first-come, first-served — that fills up fast in July. The Sellwood Bridge was rebuilt in 2016 and is the neighborhood's main artery. It's a beautiful crossing. It also backs up every weekday afternoon.",
@@ -221,6 +236,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     relatedServices: ["purchase", "refinance", "fha"],
     adjacentNeighborhoods: ["woodstock", "eastmoreland", "buckman"],
+    image: "/img/hood-sellwood.webp",
     seo: {
       title: "Buying a Home in Sellwood-Moreland, Portland OR | The Lindley Team",
       description:
@@ -233,6 +249,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Buckman",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "Coava Coffee's Grand Avenue location is inside a converted basketball court. Ceilings 40 feet high, hanging plants, and genuinely excellent coffee. It's one block from the Hawthorne Bridge, which means you're in downtown Portland in eight minutes on a bike. This is what Buckman has over most Portland neighborhoods: proximity. You're not in the suburbs pretending to be in the city.",
       "Nostrana on SE Morrison has been making wood-fired pizza since 2005 and is still the answer when someone asks for a good dinner recommendation. Screen Door on East Burnside does Southern-style brunch — the wait is worth it once. Ladd's Addition is the residential sub-neighborhood to know: 1920s streets laid out in a diamond grid with rose test gardens at the intersections. Houses there sell fast, often over asking, in any market.",
@@ -321,6 +338,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Alberta Arts District",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "Last Thursday has been happening on NE Alberta Street every last Thursday of the month since 1997. Artists and food carts take over several blocks, the street closes to cars, and it draws a crowd from across the city. It's on tourist maps now, which some longtime residents find annoying. The commercial strip — Alberta from MLK to about 33rd — has stayed mostly independently owned, which is increasingly rare in Portland.",
       "Extracto Coffee at 2921 NE Alberta is one of Portland's best roasters. The Bye and Bye has been doing craft cocktails in a room full of hanging plants since before that was a design trend. Pine State Biscuits will ruin you for breakfast sandwiches. Tin Shed Garden Cafe does weekend brunch on a garden patio that works better than it should.",
@@ -399,6 +417,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: ["irvington", "buckman", "st-johns"],
+    image: "/img/hood-alberta.webp",
     seo: {
       title: "Buying a Home in Alberta Arts District, Portland OR | The Lindley Team",
       description:
@@ -411,6 +430,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Pearl District",
     city: "Portland",
     state: "OR",
+    region: "Northwest & Pearl",
     description: [
       "Powell's Books takes up a full city block at NW 10th and Burnside and stays open until 11pm. This tells you something about the Pearl District: it's built for people who don't want to drive, and it actually delivers. The Portland Streetcar runs through it. Jamison Square has a fountain kids use as a splash pad in summer. Tanner Springs Park is a native-plant stormwater garden that doubles as the neighborhood's front lawn. You can walk to almost everything.",
       "You're buying condos here. The range is enormous — studios in older buildings start around $300k, penthouses in newer buildings push past $2M. HOA fees are a real part of the underwriting math. Newer buildings have lower fees and higher prices; older buildings have caught up over time. Jake's Famous Crawfish on SW 12th has been there since 1892 and feels like it. Coava Coffee has a Pearl location. The neighborhood has exactly the restaurants and services you'd expect for the price point.",
@@ -488,6 +508,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     relatedServices: ["purchase", "jumbo", "refinance"],
     adjacentNeighborhoods: ["buckman", "irvington", "st-johns"],
+    image: "/img/hood-pearl.webp",
     seo: {
       title: "Buying a Condo in the Pearl District, Portland OR | The Lindley Team",
       description:
@@ -500,6 +521,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Irvington",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "Walk NE 19th Avenue between Knott and Tillamook on a spring evening and you'll understand why people pay a premium for Irvington. Victorian houses with original craftwork, old trees overhanging the sidewalk, front porches that get used. The neighborhood was developed between 1890 and 1930, and a lot of it looks like it. Irvington Elementary consistently ranks among PPS's top K–5 schools, which drives a significant portion of the demand.",
       "Grant High School runs an IB program that draws students from across NE Portland — one of PPS's genuine success stories. The school pipeline matters to buyers with kids, and it shows in the prices. Nothing move-in ready goes under $550k. Most houses trade in the $650k–$900k range. The jumbo threshold starts to matter here for buyers putting less than 20% down.",
@@ -577,6 +599,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     relatedServices: ["purchase", "jumbo", "refinance"],
     adjacentNeighborhoods: ["alberta-arts", "buckman", "laurelhurst"],
+    image: "/img/hood-irvington.webp",
     seo: {
       title: "Buying a Home in Irvington, Portland OR | The Lindley Team",
       description:
@@ -589,6 +612,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Eastmoreland",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "Reed College sits at the southeastern edge of Eastmoreland, and Crystal Springs Rhododendron Garden runs right next to the campus. In May the rhododendrons bloom hard — it draws visitors from across the city. The residential streets around SE Crystal Springs Blvd and SE Bybee have some of the largest, best-maintained houses in inner SE Portland: Tudor Revivals, Colonial Revivals, and large Craftsmans from the 1920s through 1940s on wide lots.",
       "This is a quiet prestige neighborhood. No commercial strip to walk to, limited transit, almost no foot traffic. You drive or bike down to SE Woodstock or SE Division for coffee and food. The Eastmoreland Golf Course is a public course — a good amenity if you play. Duniway Elementary and Cleveland High School serve the area. The housing stock is the draw, not the walkability.",
@@ -679,6 +703,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Laurelhurst",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "Laurelhurst Park has a lake. A real one — Crystal Lake, with wood ducks and a walking loop around the perimeter. The off-leash dog area at the north end is one of the busiest in Portland on a Sunday morning. The residential streets surrounding it — NE 35th, NE Glisan, NE Cesar Chavez — have some of the finest houses in inner Portland: large Craftsmans and Colonial Revivals from 1905–1930 on lots that were generous even when the neighborhood was new.",
       "Laurelhurst Elementary is one of PPS's top-rated K–5 schools, which is the single biggest driver of demand here. Grant High's IB program is the destination high school. Laurelhurst Market on SE 28th is part butcher shop, part restaurant, and worth knowing about — it's been a Portland institution for over a decade. East Burn on E Burnside is the gastropub for the neighborhood.",
@@ -764,6 +789,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Woodstock",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "SE Woodstock Boulevard has been a real neighborhood street longer than most Portland residents have been alive. Reed College anchors the eastern end — the campus feels designed for the neighborhood, not the other way around. Crystal Springs Rhododendron Garden sits just past Reed and is one of the better reasons to live in this part of SE Portland. The commercial strip on Woodstock has stayed neighborhood-scale: Grand Central Baking opens early, there's a pizza place people actually order from, a wine shop that knows its regulars.",
       "Woodstock is more affordable than its neighbors Eastmoreland and Sellwood — not dramatically, but meaningfully. You're buying a Craftsman or ranch from the 1920s–1950s, probably with original hardwood floors and a backyard that's large by Portland standards. The houses are solid and the neighborhood doesn't have a lot of investor turnover. People buy here and stay.",
@@ -853,6 +879,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "St. Johns",
     city: "Portland",
     state: "OR",
+    region: "North Portland",
     description: [
       "Stand under the Cathedral Park arches at dusk when the Gothic towers of the St. Johns Bridge are lit and the water is calm. You'll understand why people who move to St. Johns tend to stay. The park sits directly under one of the most dramatic bridge structures in the Pacific Northwest — the kind of place that feels like it belongs somewhere more famous than North Portland.",
       "N Lombard Street is the main drag: coffee shops, a hardware store, barbershops, restaurants, and McMenamins St. Johns Pub and Movie Theater in a restored 1913 building. Smith BBQ on N Lombard is the answer when someone asks where to get brisket in Portland. The neighborhood has a strong community identity — the St. Johns neighborhood association is active and pays attention to what happens here.",
@@ -930,6 +957,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: ["alberta-arts", "kenton", "woodstock"],
+    image: "/img/hood-stjohns.webp",
     seo: {
       title: "Buying a Home in St. Johns, Portland OR | The Lindley Team",
       description:
@@ -943,6 +971,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Kenton",
     city: "Portland",
     state: "OR",
+    region: "North Portland",
     description: [
       "There is a 31-foot fiberglass Paul Bunyan statue on N Denver Avenue, and Portland has decided to love it rather than question it. Kenton is that kind of neighborhood. The Yellow MAX line runs through — N Kenton/Denver Ave station — which gives you a real transit connection to downtown and north to the Expo Center. The commercial strip on N Denver has been developing slowly and honestly, without the full polish of Alberta or Mississippi.",
       "Po'Shines Café de la Soul on N Denver is the neighborhood restaurant people point you to first. The Kenton Club has been a dive bar long enough that nobody questions it. The houses are 1940s and 1950s bungalows on 5,000 sq ft lots — smaller than St. Johns, smaller than Alberta, but with MAX access that those neighborhoods don't have. Prices are among the lowest for single-family homes with light rail access in Portland.",
@@ -1033,6 +1062,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Beaumont-Wilshire",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "Beaumont Village on NE Fremont Street is about four blocks long and has been the same four blocks for decades. Empire Provisions does charcuterie and sandwiches. Beaumont Hardware is still there. Some of the best independent retail left in inner NE Portland, none of it national chains. The residential streets east of NE 33rd Ave are quiet in the way that feels earned — mature street trees, kids on bikes, neighbors who actually know each other's names.",
       "The housing is mostly 1910s through 1940s: Craftsmans, bungalows, and the occasional Dutch Colonial. Lots are mid-sized, houses are well-maintained, and the neighborhood has one of the lowest turnover rates in Portland. Fernwood Middle School is the feeder for Grant High, which is the most sought-after comprehensive high school in PPS. That pipeline matters to buyers with kids, and it's priced into the houses.",
@@ -1150,6 +1180,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Alameda",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "Alameda Ridge runs diagonally across NE Portland, and on a clear day from the upper streets you can see both Mt. Hood and Mt. St. Helens at the same time. The streets curve around the hillside — they don't follow the Portland grid — which gives the neighborhood an unusual physical presence for a city this flat. Houses from the 1920s and 1930s: large Craftsmans, Tudor Revivals, and a few Colonial Revivals that look slightly out of place and are usually the most expensive things on the block.",
       "Alameda Elementary has a strong reputation within PPS and is one of the reasons families target this specific neighborhood over adjacent Beaumont-Wilshire. There's no commercial district inside Alameda itself — for coffee or dinner you're driving or biking to NE Fremont Street to the west, which is lined with the Beaumont Village shops. That's not a complaint from most residents; it keeps the neighborhood genuinely quiet. Streets are wide, parking is easy, and Friday nights don't have bar noise.",
@@ -1266,6 +1297,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Rose City Park",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "Rose City Golf Course runs along the western edge of the neighborhood — 18 holes operated by the city, open to the public, and surrounded by some of the most underpriced housing in inner NE Portland. The residential streets between NE 57th and NE 72nd are mostly 1920s and 1930s bungalows: small front yards, covered porches, and the occasional larger Craftsman that someone bought for $180k in 2001 and renovated well. The neighborhood sits between Hollywood to the west and Beaumont-Wilshire to the north, which means the bones are similar but the prices are not.",
       "Hollywood Transit Center is close enough that the MAX Red and Green lines are genuinely useful from here. Buyers who are priced out of Irvington often land in Rose City Park and find the housing type is nearly identical — same bungalow stock, same era, similar street scale — for meaningfully less money. That story has been true for a decade and the gap is narrowing. The commercial options are thin inside the neighborhood itself, but Sandy Blvd and the Hollywood district shops and restaurants are a short bike ride away.",
@@ -1382,6 +1414,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Hollywood",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "The Hollywood Theatre on NE Sandy Boulevard has been showing films since 1926 and is still independently operated — repertory cinema, first runs, and a bar inside. It's the neighborhood's most important landmark and a good signal of what Hollywood District is at its best: old bones repurposed well. Sandy Boulevard is the commercial spine from NE 33rd to around NE 52nd, and it runs the full range from genuinely excellent restaurants to check-cashing storefronts within four blocks of each other. You take the strip as a whole or you don't take it.",
       "Hollywood Transit Center sits at NE 42nd and Halsey and is one of the most functional transit hubs in east Portland — MAX Red and Green lines, eight TriMet bus routes, and covered waiting areas. For buyers who work downtown or at OHSU and don't want to drive, this is one of the few NE neighborhoods where transit is a real alternative. The housing mix is broader than most NE neighborhoods: single-family 1920s–1950s homes on the residential streets, 1990s and 2000s condo buildings closer to Sandy, and enough newer apartment complexes to keep the neighborhood's density visible.",
@@ -1498,6 +1531,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Sabin",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "Sabin Community Garden on NE 14th is one of the largest community gardens in Portland — over 200 plots, a long waiting list, and the kind of place that actually explains a neighborhood. The people who tend it have been there for years. Sabin sits between NE Alberta Street to the north and NE Fremont to the south, which means you're one or two blocks from two of the better commercial streets in inner NE without being in either Alberta Arts District or Beaumont Village. That positioning is exactly why Sabin works as a neighborhood.",
       "The housing is dense: bungalows on 25x100-foot lots, built mostly in the 1920s and 1930s, sitting close to each other and close to the sidewalk. It's not the spacious Craftsman on a 7,000-square-foot lot that you find in Alameda. Sabin houses are smaller, the yards are narrow, and parking is always a project. But you can walk to coffee on NE 15th, walk to dinner on Alberta, and be at NE Fremont shops without getting in your car. The trade-off is real and intentional.",
@@ -1615,6 +1649,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Cully",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "Cully Park finally opened in 2021 after nearly two decades of community advocacy — 25 acres of green space on land that was a former gravel pit, with a covered outdoor stage, community garden plots, and a skate feature. It's the largest new park Portland has built in years, and it belongs to a neighborhood that waited a long time for it. Cully is Portland's largest neighborhood by area, running roughly from NE Alberta Street north to Prescott, and from NE 42nd east to NE 72nd. It does not feel like one neighborhood — it feels like six different blocks arranged in a loose grid, some of them fully settled residential and some of them still working out what they are.",
       "The housing is more varied than most inner Portland neighborhoods: post-war ranches, original bungalows, some newer construction infill, and a stretch along Columbia Blvd that transitions into industrial. There are blocks in Cully that feel like mid-century suburban Portland — wide lots, mature trees, garages, backyards that actually function. There are also blocks where a vinyl-sided rental abuts a storage facility. The southern half of Cully, near Alberta, tends to be more settled; the northern portions near Prescott and Columbia feel more in-transition. The Latino community that has anchored Cully for decades has maintained cultural businesses — taquerias, a Mexican grocery — that give the neighborhood genuine character.",
@@ -1738,6 +1773,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Sunnyside",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "The Powell's Books annex on SE Hawthorne is the size of a small library. On a Saturday you'll spend two hours in there without meaning to, then walk across the street to Paxton Gate and spend another twenty minutes looking at taxidermied animals and oddities. Hawthorne Boulevard is Sunnyside's main spine — it runs east from the Willamette past cafes, bars, bookstores, and restaurants for about two miles, dense enough that you can forget you have a car for weeks at a time. The Produce Row neighborhood to the north used to be industrial warehouses; a lot of it still is, but that's changing.",
       "The housing is almost all early 1900s — small lots, houses close together, a lot of bungalows and foursquares from the 1910s and 1920s. Apartment buildings are scattered throughout, and ADUs behind the main houses are common. Division Street forms the southern boundary and has developed into one of Portland's best restaurant corridors over the past decade. People move here because they want to walk to everything and don't mind smaller houses in exchange for location. The bike infrastructure is genuinely good — SE Ankeny, Salmon, and the Hawthorne Bridge path get you downtown in under 15 minutes.",
@@ -1831,6 +1867,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Richmond",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "SE Division Street between 20th and 50th might be the best restaurant street in Portland. Ava Gene's has been turning out vegetable-forward plates that make you forget you're not eating meat. Tusk is a few blocks down. Checkerboard Pizza opened on Division and the line has not shortened. The street didn't get here overnight — it took about a decade of incremental openings, and the result is a walkable dining strip that doesn't feel like it was designed by a real estate developer.",
       "Richmond's housing is mostly 1920s — bungalows and foursquares on 4,000–5,000 square foot lots, well-maintained because the neighborhood has been desirable long enough for owners to invest. Clinton Street is a secondary commercial corridor to the south — quieter, more neighborhood-scaled, with a handful of good coffee spots and bars. The houses here are denser than Sellwood but less expensive than Laurelhurst. The neighborhood's sweet spot is the blocks between Division and Clinton, roughly SE 26th to SE 44th.",
@@ -1924,6 +1961,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Mount Tabor",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "Mount Tabor Park sits at the top of an extinct volcano — the only cinder cone inside a U.S. city limit. The park has old-growth Douglas firs, three reservoirs, and a hiking loop that takes about an hour at a reasonable pace. On a clear day from the summit you can see Hood, St. Helens, and Adams. People who live in the surrounding neighborhood have park access most cities don't give you within a national forest. They walk up to it from their backyards.",
       "The houses surrounding the park are some of the best in SE Portland. 1910s–1930s Craftsmans and Victorian foursquares on large, tree-lined lots. The streets are quiet in a way that inner SE usually isn't — wide setbacks, mature trees, and a neighborhood that takes its historic character seriously. Hoyt Arboretum is nearby; the community is connected. People who move here tend to stay. The SE Hawthorne corridor and Division Street are both within easy biking distance for restaurants and errands.",
@@ -2013,6 +2051,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Montavilla",
     city: "Portland",
     state: "OR",
+    region: "Outer Southeast",
     description: [
       "SE Stark Street near 78th is the strip to watch in Montavilla. Bipartisan Cafe has been pulling shots and hosting neighborhood debates since 2009. Asylum Records is a few doors down. The Montavilla Community Center anchors the neighborhood's civic life — it has a public pool, gym, and meeting rooms that actually get used. This is outer SE, which means the vibe is less curated than inner SE and the prices reflect it.",
       "Housing is mostly 1940s–1960s — post-war ranches and boxes, with some older Craftsmans from the teens and twenties scattered in. The neighborhood sits between SE Burnside to the north and SE Division to the south, roughly from 72nd to 92nd. It's more affordable than inner SE by a meaningful margin — a two-bedroom house that would be $580k in Richmond is $440k here. SE 82nd Avenue runs along the western edge: it's the commercial arterial that Portlanders love to complain about, but it has groceries, hardware, and Vietnamese food within easy distance.",
@@ -2102,6 +2141,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Foster-Powell",
     city: "Portland",
     state: "OR",
+    region: "Outer Southeast",
     description: [
       "The neighborhood is named for the intersection where Foster Road and Powell Boulevard meet, and that corner tells you a lot. It's not pretty, but it's functional — a busy urban intersection surrounded by businesses that serve people who actually live here: a hardware store, a Vietnamese restaurant, a bar that doesn't charge too much. Foster Road running east from there has been developing for about fifteen years, and it's reached a point where you can eat well, drink well, and get your car fixed all within a ten-block radius.",
       "The housing is almost entirely post-WWII — 1940s and 1950s ranches and small boxes, occasionally a bungalow from the 1920s that survived. Lots are tight. The neighborhood has been appreciating faster than its reputation suggested it should, which is what happens when inner SE prices push buyers east. The Foster-Powell Neighborhood Association is one of the more active in outer SE — they publish a newsletter, organize cleanups, and actually show up at city council when something affects the neighborhood. That matters in Portland.",
@@ -2195,6 +2235,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Brooklyn",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "Brooklyn is one of the smaller, less-discussed SE Portland neighborhoods, which is part of why it still has value for buyers who know where to look. The Springwater Corridor runs along its eastern edge — the 40-mile multi-use trail that connects inner Portland to Boring and beyond. From Brooklyn you can get on the trail in five minutes and be at Sellwood Park in fifteen. McLoughlin Boulevard cuts through the neighborhood on a viaduct, which is less of a daily nuisance than it sounds and more of a dividing line that keeps through traffic off the residential streets.",
       "The housing stock is early 1900s — small Victorians, bungalows, and foursquares from the 1900s through 1920s. The Brooklyn Action Corps neighborhood association has been active for decades and takes the neighborhood's character seriously. The area is wedged between Sellwood-Moreland to the south and the Central Eastside industrial district to the north, which gives it an odd geography — residential blocks that feel settled and quiet, then a hard edge into warehousing and rail. The Union Pacific yard is nearby and you will hear trains.",
@@ -2284,6 +2325,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Concordia",
     city: "Portland",
     state: "OR",
+    region: "Northeast",
     description: [
       "NE Alberta Street runs right through the southern edge of Concordia, so you get the independent coffee shops and restaurants without paying Alberta Arts District prices. Extracto is a ten-minute walk. The Last Thursday crowds are within range if you want them, far enough away if you don't. The old Concordia University campus — the Lutheran school that closed in 2020 — sits at NE 28th and Killingsworth. Parts of it have been converted to housing and community use; the main building still looks like a college campus dropped into a residential neighborhood, which is exactly what it is.",
       "The housing is mostly bungalows from the 1920s and 1940s — smaller lots, smaller square footage than what you'd find in Irvington, but the same architectural era. People buy here when they lose a bidding war on a house in Alberta proper and then realize this was the better deal all along. The blocks between NE 33rd and NE 42nd are the core residential streets. Gardening is taken seriously here — front yards tend to be planted, not just mowed. Community garden plots fill up years in advance.",
@@ -2404,6 +2446,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Creston-Kenilworth",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "Powell Blvd on the north end of this neighborhood is what it is: a wide commercial arterial with car dealerships, tire shops, fast food, and a few unremarkable strip malls. Don't let that drive by define the neighborhood. Turn south on SE 26th or SE 34th and the streets change immediately. Wide tree-lined blocks, 1940s and 1950s working-class houses with genuine front yards, the kind of neighborhood where people still leave things on their porch overnight. Creston Park anchors the center of it — one of Portland's best neighborhood parks, with a public outdoor pool that opens in summer and fills up with kids from a six-block radius.",
       "The housing stock here is honest. These were built as working-class homes and many have been in the same families for decades. Larger lots than you'd find in Richmond or Sunnyside — 5,500 to 7,000 square feet is common. Ranch-style houses from the 1950s alongside Cape Cods and small bungalows. Buyers who prioritize square footage and yard space over address prestige figure this out faster than most. SE 26th Avenue between Powell and Holgate is a modest but functional commercial strip: a few restaurants, a bakery, a hardware store.",
@@ -2547,6 +2590,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Lents",
     city: "Portland",
     state: "OR",
+    region: "Outer Southeast",
     description: [
       "The MAX Green Line stops at SE Foster and 92nd — Lents/Foster station — and puts you at PSU in 28 minutes and PDX in 36. That's a legitimate transit commute in a city where transit is often more aspiration than reality. SE Foster Road has changed over the past decade: Hey Love is a hotel bar that draws people from across Portland, and the Foster-Powell restaurant corridor between 50th and 72nd has genuine range. Lents Park, the neighborhood anchor, has sports fields, a community garden, and hosts the Lents International Farmers Market in season.",
       "The housing here is Portland's most affordable mix of single-family stock that still has decent bones. 1940s and 1950s working-class houses, some with garages and actual yard space, on streets that are genuinely quiet once you're off the main arterials. Lents Town Center has been in development discussion and partial construction for years — there's a mix of new affordable housing, some commercial space, and long-planned improvements that move slowly. The industrial land to the northeast keeps some streets from being purely residential in character.",
@@ -2696,6 +2740,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Reed",
     city: "Portland",
     state: "OR",
+    region: "Inner Southeast",
     description: [
       "Reed College's campus has a canyon in the middle of it. Crystal Springs Creek runs through a wooded ravine that students use for trail runs, and the canyon is open to the public — you can walk it on a weekday morning and mostly have it to yourself. The college's nuclear reactor, TRIGA Mark I, is operational and run by students. It's one of only two student-operated research reactors in the country. The campus buildings are early 20th-century collegiate gothic, and the whole institution has a long-standing reputation for academic intensity and individualism. It shapes the surrounding neighborhood in visible ways: the coffee shops have a certain clientele, the bookshop matters, the weekly farmer's market draws people who care about that kind of thing.",
       "Woodstock Boulevard is the commercial main street. Woodstock Wine & Deli has been a neighborhood institution for decades — good charcuterie, good wine selection, not precious about it. Tails & Trails at SE Woodstock and 45th draws the dog crowd. The housing on the blocks immediately surrounding the college is a mix of faculty-owned Craftsmans, rentals in various states of upkeep, and 1920s single-family homes that have aged at different rates. SE 28th Place to SE 38th between Woodstock and Steele is the most desirable residential section — prices reflect it.",
@@ -2852,6 +2897,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Brentwood-Darlington",
     city: "Portland",
     state: "OR",
+    region: "Outer Southeast",
     description: [
       "SE 52nd Avenue runs north-south through the middle of Brentwood-Darlington and is the neighborhood's main organizing street. At the north end it connects to Foster Road; at the south end it runs toward Woodstock and eventually Milwaukie. The commercial options on 52nd are modest: a few convenience stores, a laundromat, some auto services, a handful of restaurants. You drive to Foster or Powell for anything beyond basics. The neighborhood is quiet in the genuine sense — not the real estate brochure sense. Streets in here on a Tuesday afternoon are essentially empty.",
       "The housing is 1950s and 1960s ranches and split-levels on lots that run 6,000 to 8,000 square feet, sometimes larger. These are real lots — room for a garden, room for a dog, room to put up a fence. The construction is functional rather than architectural: aluminum siding, attached garages, original windows that haven't been updated since the Carter administration on some houses. Buyers who know how to evaluate a house and don't mind a project can find genuine value here. The square footage per dollar is among the best in Portland proper.",
@@ -3007,6 +3053,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Multnomah Village",
     city: "Portland",
     state: "OR",
+    region: "Southwest & Downtown",
     description: [
       "Annie Bloom's Books on SW Capitol Highway has been a neighborhood independent bookstore since 1978 — the kind of place where the staff has opinions and the shelves are curated rather than algorithmic. The Capitol Highway commercial strip running through Multnomah Village has a half-dozen businesses that have been in the same location for decades: a hardware store, a barber, Obi for Japanese izakaya, a pizza spot that doesn't have a website. It's a genuine small-town commercial strip inside Portland city limits, and that's not an accident — residents have pushed back against chain creep for years.",
       "Gabriel Park, at 90 acres, is one of the better parks in SW Portland: tennis courts, a skate park, a large off-leash dog area, soccer and baseball fields, and trails that connect into the SW greenway network. The housing is primarily 1940s–1960s ranches and split-levels — affordable by Portland standards, well-built, on lots that run 6,000–10,000 sq ft. Craftsmans from the 1930s show up occasionally and sell fast. The neighborhood sits at about 400 feet elevation, which means views from the upper streets and a legitimate hill climb if you're biking in.",
@@ -3136,6 +3183,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Hillsdale",
     city: "Portland",
     state: "OR",
+    region: "Southwest & Downtown",
     description: [
       "The Hillsdale Town Center sits at SW Capitol Highway and SW Sunset Boulevard — a strip commercial intersection with a New Seasons Market, a hardware store, a Thai restaurant, and a handful of independently-owned businesses that have lasted long enough to count. It doesn't have the postcard quality of Multnomah Village, but it's functional in a way that matters more on a Tuesday: grocery, pharmacy, coffee, lunch, all within a quarter mile. Wilson High School is four blocks away, which explains a significant portion of why families move to Hillsdale.",
       "The housing stock is more suburban than inner Portland — ranch houses and split-levels from the 1950s and 1960s on standard city lots, with some older Craftsmans mixed in on the streets above the town center. The Duniway Park trail connects the neighborhood east toward Barbur Blvd and eventually the South Park Blocks. Ava's Kitchen on SW Capitol Hwy has been a neighborhood Mexican restaurant for years and is the kind of place you go back to. The Barbur World Foods grocery — a local institution — is nearby on Barbur Blvd.",
@@ -3263,6 +3311,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Nob Hill",
     city: "Portland",
     state: "OR",
+    region: "Northwest & Pearl",
     description: [
       "NW 23rd Avenue — 'Trendy-Third' to people who've lived in Portland long enough — is still the most walkable retail street in residential Portland. Ken's Artisan Bakery on NW 21st opens at 7am and is one of the best reasons to live in this part of the city. St. Honoré Boulangerie on NW 23rd is the other one. Elephants Delicatessen, Escape from New York Pizza, the original Patagonia store — the commercial strip has had turnover over the years but the density of independently-owned businesses per block is still higher here than anywhere outside the Pearl. Thurman Street at the north end of 23rd leads directly into Forest Park.",
       "The housing stock is what Portland built before cars became the organizing principle: Victorian houses from the 1880s–1910s, early 20th-century apartment buildings, and narrow lots with deep houses on a street grid that actually works on foot. Chapman Elementary feeds into West Sylvan Middle School and Lincoln High School — Lincoln runs the International Baccalaureate program, which is the school anchor for NW Portland. Most of the residential streets between NW Lovejoy and NW Thurman are quiet despite the commercial activity two blocks away.",
@@ -3389,6 +3438,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Slabtown",
     city: "Portland",
     state: "OR",
+    region: "Northwest & Pearl",
     description: [
       "Portland's newest officially designated neighborhood — official status came in 2015 — Slabtown sits between Nob Hill and the Pearl District in a way that makes the geography easy to explain but the feel harder to pin down. The NW 23rd commercial strip runs along its eastern edge, giving residents walking access to Ken's Artisan Bakery, St. Honoré, and the rest of the NW 23rd infrastructure without paying Nob Hill Victorian prices. Amazon Fresh opened a location here. The MAX Blue and Red lines stop at NW 23rd and Lovejoy, which is the best transit situation in NW Portland.",
       "The housing stock is entirely dense: condos, townhomes, and a handful of converted industrial buildings. No single-family homes. The buyers here are skewing young, skewing professional, and skewing toward the tradeoff of square footage for location — a 750 sq ft condo at NW 18th and Hoyt at $450k is the entry-level calculation. Newer buildings have better energy efficiency and higher HOA fees; older converted buildings have more character and deferred maintenance risks worth checking. The neighborhood fills in a gap that used to be light industrial, and some of the best buildings here preserve that aesthetic.",
@@ -3514,6 +3564,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Goose Hollow",
     city: "Portland",
     state: "OR",
+    region: "Southwest & Downtown",
     description: [
       "Providence Park — Portland Timbers and Thorns home stadium — sits at SW 18th and Morrison, and it is the physical organizing fact of Goose Hollow. On match days the neighborhood fills with green scarves, noise, and a line out the door at every bar within four blocks. On non-match days it's one of the most convenient neighborhoods in Portland: downtown is a 10-minute walk on flat ground, the MAX Blue and Red lines run along SW Jefferson, and Lincoln High School — PPS's IB school — is two blocks from the park. If you work downtown or commute by rail, the location calculus is hard to beat.",
       "The housing is dense. Apartments and condos make up most of the stock, with some single-family houses appearing on the southern and western edges where the neighborhood transitions into the West Hills. Lincoln High School and the adjacent area have a small cluster of 1920s–1940s houses for buyers willing to look carefully. The neighborhood has good transit scores and genuinely earns them — SW Jefferson MAX runs frequently and connects quickly to the Red and Blue line network. Parking is permit-required on most residential streets and limited near the park.",
@@ -3641,6 +3692,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Overlook",
     city: "Portland",
     state: "OR",
+    region: "North Portland",
     description: [
       "N Willamette Boulevard runs along the bluffs above the river, and on a clear day you can see Mount Hood framed between houses. This isn't a selling point some agent dreamed up — it's just what the street looks like. Overlook Park sits at the edge of the bluff with benches facing west across the Willamette to the West Hills. The Interstate MAX line runs along the eastern edge of the neighborhood, and the N Interstate/Overlook Park station puts you in downtown in under 20 minutes without a car.",
       "The housing stock is predominantly 1910s and 1920s bungalows and four-squares, with slightly larger lots than you'll find a mile north in Kenton or Piedmont. The blocks feel established — not polished, just old in a good way, with mature trees and front yards that get used. There's not much commercial in Overlook proper; most residents go to the Mississippi corridor or to the shops along N Interstate for everyday needs. The neighborhood association has been active here for a long time and tends to stay involved in what happens to it.",
@@ -3730,6 +3782,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Piedmont",
     city: "Portland",
     state: "OR",
+    region: "North Portland",
     description: [
       "Ainsworth Elementary on N Borthwick Avenue has one of the better reputations of any elementary school in North Portland — within PPS, families who care about school ratings seek it out, and that affects where people buy. The residential streets around Ainsworth are 1920s and 1930s bungalows on lots around 5,000 sq ft, with the mature landscaping that comes from a neighborhood that's been settled for 90 years. N Dekum Street has a small commercial node — a few restaurants, a coffee shop — that gives the neighborhood its own modest gravity.",
       "Piedmont sits between Overlook to the south and Kenton to the north, and it has a quieter character than either. There's no signature park, no dramatic geography, no trendy commercial strip. What it has is stable: homeowners who stay, well-kept blocks, and a price point that's accessible without being in the investor-target range. The neighborhood association is active and long-established. People buy here and the turnover is low.",
@@ -3819,6 +3872,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Portsmouth",
     city: "Portland",
     state: "OR",
+    region: "North Portland",
     description: [
       "N Lombard Street is Portsmouth's main commercial corridor and it's better than its reputation. You'll find independent spots alongside the usual strip-mall businesses — dry cleaners, nail salons, a couple of decent food options, the things a working neighborhood actually needs. The University of Portland campus anchors the western end of the neighborhood, a full 131-acre bluff campus with trails, athletic fields, and the kind of physical presence that keeps the streets around it stable and maintained.",
       "The residential blocks off N Lombard are 1940s and 1950s housing — a later vintage than most of inner North Portland. Ranch homes and modest bungalows with larger front lawns, more setback from the street, a suburban-scaled feeling. These aren't Victorian-era blocks; they're the kind of neighborhood that grew up after World War II when North Portland was still being built out. Families and longtime residents make up the core. The neighborhood has held steady over time without the churn that some North Portland neighborhoods have experienced.",
@@ -3909,6 +3963,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "University Park",
     city: "Portland",
     state: "OR",
+    region: "North Portland",
     description: [
       "The view from N Willamette Boulevard here is the same geography as Overlook — bluffs above the Willamette, Mount Hood on the horizon on a clear morning, the West Hills across the water — but quieter, less trafficked, and anchored physically by the University of Portland campus. The UP Pilot House sits at the edge of the bluff. The residential streets between the campus and the bluff edge have some of the most stable and well-maintained housing in North Portland: 1920s and 1930s houses on good lots, neighbors who have been there for decades.",
       "University Park attracts faculty, university staff, and families who want North Portland prices with a more settled character than neighborhoods further south on the Interstate corridor. The commercial options within the neighborhood are minimal — a few UP-adjacent spots, but nothing like N Mississippi or N Alberta for walkable restaurants and coffee. Most residents drive or bike to N Lombard or the Mississippi corridor for daily needs. It's a neighborhood built around the residential experience, not around nightlife or commercial energy.",
@@ -3999,6 +4054,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Boise-Eliot",
     city: "Portland",
     state: "OR",
+    region: "North Portland",
     description: [
       "N Mississippi Avenue has changed more in 20 years than most Portland streets change in 50. Prost! opened in the early 2000s. Gado Gado, one of Portland's best restaurants regardless of neighborhood, is on N Mississippi. Mississippi Pizza has been there long enough to feel like a fixture. Tasty n Daughters does all-day breakfast on N Williams. The commercial stretch between N Fremont and N Skidmore is one of the most dense concentrations of independent restaurants and bars in North Portland. The housing is 1900s–1920s bungalows and Victorian cottages — the walkable fabric is intact because the buildings survived.",
       "The neighborhood was predominantly Black through the mid-20th century. Vanport flooding in 1948 displaced thousands of Black Portlanders into this part of North Portland. Urban renewal in the 1950s and 1960s demolished the Albina neighborhood to the south. What remained in Boise-Eliot was built by a community that had been systematically pushed to this part of the city. The commercial investment on Mississippi Avenue starting in the 2000s brought money and new residents, and it displaced many of the people who had built what made the neighborhood worth investing in. That's not ancient history — it's living memory for people still in Portland. If you're buying here, that context is part of what you're buying into.",
@@ -4089,6 +4145,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Humboldt",
     city: "Portland",
     state: "OR",
+    region: "North Portland",
     description: [
       "The N Williams Avenue bike corridor runs through Humboldt's eastern edge, connecting this neighborhood to the Mississippi and Alberta commercial corridors by a protected bike lane that actually gets used. Humboldt itself is quieter than its western neighbor Boise-Eliot — fewer destination restaurants, fewer bars, more residential blocks that feel like people's actual neighborhoods rather than places to go out. The housing is 1910s and 1920s bungalows and four-squares on standard North Portland lots, the same vintage and footprint you'd find a mile in any direction.",
       "Humboldt shares the same demographic history as Boise-Eliot — this part of North Portland was home to Portland's Black community for most of the 20th century, shaped by the same discriminatory housing policies that concentrated that community here. The neighborhood has experienced significant demographic change over the past two decades, more quietly than Boise-Eliot but no less real. That's not context to be dismissed when thinking about what kind of neighbor you want to be here.",
@@ -4178,6 +4235,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Arbor Lodge",
     city: "Portland",
     state: "OR",
+    region: "North Portland",
     description: [
       "N Killingsworth station on the Interstate MAX Yellow Line is the neighborhood's main transit anchor — downtown in about 25 minutes, no car needed. N Interstate Avenue runs through the eastern edge with enough commercial presence to handle daily needs: coffee, food, hardware, a few restaurants. N Rosa Parks Way has been developing slowly with some newer businesses. Arbor Lodge Park is the neighborhood's central green space — not Cathedral Park, but a genuine neighborhood park with lawns and a rose garden that gets used.",
       "The housing is 1920s–1940s bungalows on small lots, typical of the North Portland pattern. The neighborhood has a working-class character that hasn't been fully polished away by new investment — the blocks have some mix of original and renovated homes, some long-term residents, and some turnover. It's not as far along in its transition as Boise-Eliot or Kenton, which means lower prices and less destination commercial, but also less of the investor frenzy that comes with higher-profile neighborhoods.",
@@ -4269,6 +4327,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Beaverton",
     city: "Beaverton",
     state: "OR",
+    region: "Washington County",
     description: [
       "Intel's campus on NW Murray Boulevard employs more than 20,000 people — the single largest private employer in Oregon — and it sits inside Beaverton city limits. That fact explains a lot: the diversity (significant South Asian and East Asian communities from the tech corridor), the traffic on TV Highway and Beaverton-Hillsdale Highway, and why housing demand here is durable even when the broader market softens. The MAX Blue and Red lines both terminate at Beaverton Transit Center, making this the most transit-connected suburb in the metro. Cedar Hills Crossing and Beaverton Town Square cover the major retail.",
       "Housing is a mix of 1970s–1990s ranches and split-levels, scattered condos and townhome complexes, and newer infill on parcels that used to be commercial. You get more square footage per dollar than comparable inner Portland neighborhoods. The Beaverton School District consistently outperforms Portland Public Schools on standardized measures — high school graduation rates are strong, and the district has added capacity as the city has grown. Families who moved out of Portland for schools tend to stay. Sunset High School and Westview High School both draw from strong feeder systems.",
@@ -4431,6 +4490,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Hillsboro",
     city: "Hillsboro",
     state: "OR",
+    region: "Washington County",
     description: [
       "Intel's Jones Farm and Hawthorn Farm campuses in Hillsboro together make up one of the largest semiconductor manufacturing operations in the United States. The eastern edge of the city feels like a tech corridor — campuses, hotels, and new apartments along Cornell Road. But drive five minutes west toward downtown and you hit Main Street, the Venetian Theatre (a 1921 movie palace that still runs films), and a Saturday farmers market that's been running since 1982. Hillsboro has a downtown that actually functions. The MAX Blue line runs the length of the city and connects to Portland, though the ride to downtown Portland is about 45 minutes.",
       "Housing here is more affordable than Beaverton because Hillsboro is further from Portland and the western side of the city is still actively developing. You can find 3-bedroom houses from the 1990s and early 2000s in the mid-$400s, and new construction subdivisions on the west side pushing toward $600k+. The Hillsboro School District has a strong reputation — particularly at the elementary level — and the district has grown to keep pace with the city's expansion since 2010. The growth has been significant: new apartment towers downtown, new subdivisions where farmland was, new commercial strips on the west side.",
@@ -4598,6 +4658,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Tigard",
     city: "Tigard",
     state: "OR",
+    region: "Washington County",
     description: [
       "Highway 217 cuts through the middle of Tigard and I-5 runs along its eastern edge — these two roads define the city more than anything else about it. Washington Square Mall has anchored the northern end since 1973, and the Tigard Triangle, the redevelopment zone near 99W, is slowly becoming a denser commercial district. The location is genuinely central: 20 minutes to downtown Portland, 15 minutes to Beaverton, 10 minutes to Tualatin or Lake Oswego. For people who work across the south metro — or who need I-5 access toward Salem or points south — Tigard's position is hard to beat.",
       "Housing is mostly 1960s–1990s ranches and split-levels with a scattering of newer subdivisions where older commercial land has been redeveloped. The price point sits above Hillsboro and Tualatin but below Lake Oswego directly to the east. The Tigard-Tualatin School District is one of the stronger suburban districts in the metro — Durham Elementary, Fowler Middle School, and Tigard High are all consistently rated well. Families who leave Portland for schools often land here because the schools are good and the housing is still affordable relative to the Eastside suburbs.",
@@ -4766,6 +4827,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Tualatin",
     city: "Tualatin",
     state: "OR",
+    region: "Washington County",
     description: [
       "Tualatin Commons is the downtown that Tualatin built from scratch — a mixed-use development centered on a small lake, with restaurants, a public plaza, and apartments ringing the water. It works better than it sounds. On summer evenings the lake path fills up with strollers and dog walkers, and the restaurants that face the water are actually good. The I-5/I-205 interchange nearby makes Tualatin one of the most regionally accessible cities in the metro — you can be at PDX in 25 minutes, Salem in 45, or Beaverton in 20. The tradeoff is that Tualatin exists primarily as a car city, and the Tualatin-Sherwood Road commercial strip is the daily retail experience for most residents.",
       "New housing has been added on the western side of the city — subdivisions from the 2010s and 2020s with 3- and 4-bedroom homes that typically run in the $500s and $600s. Older sections of the city, particularly near the river and around the commons, have 1970s–1990s ranches that often come in below $500k with more land. The Tigard-Tualatin School District serves the city — the same solid district as Tigard, with Tualatin High School as the main comprehensive high school and consistently strong elementary programs. Tualatin is a genuine option for families who want good schools and don't need to be near Portland.",
@@ -4921,6 +4983,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Sherwood",
     city: "Sherwood",
     state: "OR",
+    region: "Washington County",
     description: [
       "Sherwood sits at the southern end of Washington County where 99W finally stops pretending to be a city street and starts moving again. Roy Rogers Road marks the line between Tualatin and Sherwood — cross it and the subdivisions get newer and the lots get slightly larger. Old Town Sherwood, clustered around SW Railroad Street, has an actual independent hardware store, a handful of restaurants, and a seasonal farmers market. It's not a destination, but it functions. Sherwood's growth in the 2000s and 2010s added thousands of homes in master-planned developments east and west of town — Sherwood's Meadowbrook, Maplewood Estates, and the newer sections north of Sunset Boulevard.",
       "The draw for most buyers is the Sherwood School District. It's consistently rated among the top five districts in Washington County — Edy Ridge Elementary, Middleton Elementary, and Sherwood Middle School all pull strong test scores, and Sherwood High School has above-average graduation rates and a range of AP courses. The district is small enough that it hasn't fractured into attendance-zone politics the way larger districts have. Homes here run about $600k at the median, which buys a 4-bedroom house built in the 1990s or 2000s with a real yard — the same money in Lake Oswego or west Portland gets you less house on a smaller lot in an older building.",
@@ -5039,6 +5102,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Wilsonville",
     city: "Wilsonville",
     state: "OR",
+    region: "Washington County",
     description: [
       "Wilsonville sits at the junction of I-5 and the Boone Bridge, right where Clackamas County meets the southern edge of Washington County. Intel, Xerox, and Mentor Graphics (now Siemens EDA) have operated facilities here for decades, which means the city has a base of tech and manufacturing workers who don't necessarily need to commute to Portland at all. The WES Commuter Rail station at Wilsonville Town Center connects north to Beaverton, where passengers transfer to the MAX Blue or Red line — the full trip to downtown Portland is 55–70 minutes, but it runs on a schedule and doesn't involve sitting on I-5. SMART Bus provides service south toward Salem and Canby. The freeway access is the other piece: I-5 onramps here are not the bottleneck — they're at Tualatin or Tigard.",
       "West Linn-Wilsonville School District serves the city and has a strong reputation — Wilsonville High School consistently ranks in the top tier for Washington County. Villebois, the master-planned development on the city's west side, has been growing since the mid-2000s and now represents a significant share of the city's housing stock. It's walkable within itself, with pocket parks, a town green, and higher-density attached housing alongside detached single-family homes. Median prices here run about $580k — buyers get more square footage than they would in Beaverton or Tigard for similar money, and the lots are newer construction.",
@@ -5156,6 +5220,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Forest Grove",
     city: "Forest Grove",
     state: "OR",
+    region: "Washington County",
     description: [
       "Pacific University has been on Pacific Avenue in Forest Grove since 1849, which makes it one of the oldest universities west of the Rockies. The campus sits near the downtown core and employs a few hundred people in teaching, administration, and healthcare — Pacific has a well-regarded optometry school and a physical therapy program. Main Street has a mix of independent restaurants, an old-school hardware store, a small theater, and a few antique shops. Forest Grove is the seat of what was once Oregon's hop-growing industry; the surrounding farmland still produces nursery stock and some grain. Wine country is 15–20 minutes south on Hwy 47 toward Gaston — the Tualatin Valley AVA has 40-plus wineries within reasonable driving distance.",
       "Housing affordability is Forest Grove's main argument for buyers. The median sits around $420k, which puts a 3- or 4-bedroom house within reach for first-time buyers who've been priced out of Hillsboro and Beaverton. The stock is older — lots of 1960s and 1970s ranches, some Craftsman-era houses in the historic neighborhoods near downtown — which means buyers should budget for updates. Forest Grove School District is adequate; it's not a district families move from Portland specifically to access, but it's functional and improving. The city has a fairly large Latinx community, particularly concentrated near the downtown corridor, which gives the local restaurant scene more texture than you'd expect for a city this size.",
@@ -5274,6 +5339,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Cornelius",
     city: "Cornelius",
     state: "OR",
+    region: "Washington County",
     description: [
       "Cornelius is a city of about 13,000 people sandwiched between Hillsboro and Forest Grove on Tualatin Valley Highway. Cornelius Pass Road runs north-south through the area and has been a local landmark since well before the city existed — the Cornelius Pass Roadhouse, a McMenamins property in a historic farmhouse at the north end of the road in Hillsboro, takes its name from the same route. The city's commercial core is thin: a strip of services along Adair Street and TV Hwy, a Bi-Mart, some auto-repair shops, and a scattering of small restaurants. Most residents drive to Hillsboro's Tanasbourne district or to Forest Grove for larger grocery runs and retail.",
       "The housing stock dates mostly to the 1960s through 1990s — single-family ranches, smaller bungalows, and some manufactured housing. Cornelius has a substantial and longtime Latinx community, reflecting its agricultural history as a hub for farmworkers in the Tualatin Valley. That history shows in the restaurant options along TV Hwy: there are several small taquerias and Mexican grocery stores that are among the better cheap-food options in Washington County. Hillsboro School District serves most of Cornelius, which means students feed into Liberty High School and Hillsboro's network of elementary and middle schools — a better outcome than the city's small commercial base might suggest. Prices here are among the lowest in Washington County — median is around $400k.",
@@ -5390,6 +5456,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Lake Oswego",
     city: "Lake Oswego",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "Oswego Lake is not a public amenity. That needs to be said up front, because people move here assuming they can kayak or swim in it — they can't unless they join the Lake Oswego Lake Corporation, which requires membership ranging from $25,000 to $35,000+ depending on the access tier, paid separately from any home purchase. What you do get with a Lake Oswego address is one of the most consistently well-maintained residential cities in Oregon, a downtown on A Avenue with actual independent restaurants like Tucci and Riccardo's Ristorante, and a walkable commercial core that most suburbs only approximate. State Street connects the east and west sides; it's the road you'll know after one week.",
       "The housing stock ranges from 1950s ranch homes on modest lots in the older Hallinan and Lake Grove areas to $2M+ estates with private lake easements on the east side. The Lake Oswego School District is repeatedly ranked among Oregon's top districts — River Grove, Westridge, Hallinan, and Uplands feed into Lake Oswego Middle and then Lake Oswego High, which has a graduation rate and test score profile that draws families from across the metro. The demographic is upper-income professionals, many of them tech workers or physicians commuting to Portland or Beaverton.",
@@ -5501,6 +5568,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "West Linn",
     city: "West Linn",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "West Linn sits on a set of steep wooded hills above the west bank of the Willamette, directly across the river from Oregon City and south of Lake Oswego. The topography is real — Bolton Hill Road climbs hard, and navigating between the Sunset neighborhood on the plateau and Willamette neighborhood down by the river requires either knowing the roads or getting comfortable with GPS. Highway 43 connects West Linn to Lake Oswego to the north and to Willamette Falls Drive along the river. That falls — Willamette Falls, visible from several points near Oregon City — is a legitimate geological landmark: the second-largest waterfall by volume in the US, and West Linn is close enough that it's part of the area's identity even if it sits technically on the Oregon City side.",
       "The housing stock is predominantly 1970s–1990s single-family construction on good-sized lots, with some newer developments on the remaining hillside land and a handful of older homes in the Willamette neighborhood near the river. West Linn-Wilsonville School District has one of the strongest academic reputations in the state — Rosemont Ridge Middle and West Linn High are the names you'll hear most. The demographic overlaps substantially with Lake Oswego: dual-income families in professional fields who want top schools and suburban space but are working with a budget $150,000 to $200,000 below what Lake Oswego requires.",
@@ -5607,6 +5675,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Oregon City",
     city: "Oregon City",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "Oregon City is the actual end of the Oregon Trail — the National Historic Trail designation ends here, and the End of the Oregon Trail Interpretive Center sits in a park on the south edge of town to mark it. More practically relevant to daily life is the municipal elevator: a free, city-operated lift that runs between the lower riverfront district and the upper bluff where much of the historic downtown sits. It's on 7th Street, it's operational, and it's one of the more unusual pieces of urban infrastructure in the Pacific Northwest. Willamette Falls is visible from several points along the river here — it's large, genuinely impressive when the river is running full, and one of the main natural features that distinguishes Oregon City from every other Clackamas County suburb.",
       "The housing stock covers a wide range: Victorian and Craftsman homes in the historic districts on the upper bluff, 1950s–1970s ranches in the McLoughlin area, and newer subdivisions that have expanded the city's footprint south and east over the past 20 years. Oregon City School District serves the area. For buyers who've been priced out of Lake Oswego, West Linn, and even Milwaukie, Oregon City represents a real entry point into the Clackamas County market at a price that pencils differently. The demographic is diverse — long-time Oregon City families, Portland buyers trading square footage for price, and some who genuinely prefer the smaller-city scale.",
@@ -5709,6 +5778,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Milwaukie",
     city: "Milwaukie",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "Park Ave Station in downtown Milwaukie is the southern terminus of the MAX Orange Line, which means Milwaukie has genuine light rail access to Portland — not a bus connection, not a park-and-ride at the edge of a freeway, but a station in the city's downtown core. The ride to the South Park Blocks or PSU takes about 20–25 minutes. The Springwater Corridor trail also connects Milwaukie directly to Portland by bike, running along the Willamette from Sellwood south. These two facts — MAX access and the Springwater Corridor — differentiate Milwaukie from every other Clackamas County suburb and make it the most transit-and-bike-accessible community south of Portland proper.",
       "The housing stock is a mix of 1940s–1960s working-class bungalows and ranches, with more recent infill development near the downtown core as the MAX line matured. North Clackamas School District covers Milwaukie — it's a well-regarded district, notably better than Portland Public Schools in overall rankings, serving a mix of Milwaukie, Happy Valley, and surrounding communities. Downtown Milwaukie has developed incrementally: Wy'East Pizza is the anchor of the Main Street scene, The Railyard food cart pod operates seasonally, and there's a small but real cluster of independent businesses. The demographic is younger buyers and families who want Portland-adjacent living at a price that's 20–30% below comparable inner SE neighborhoods.",
@@ -5812,6 +5882,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Happy Valley",
     city: "Happy Valley",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "From the higher streets in Happy Valley — Altamont Drive, the upper reaches of SE Sunnyside Road — you get clear views of Mt. Hood on the days the mountain shows itself. That view is real, and it's one of the things people mention when they describe why they bought here. The city sits in the Clackamas County foothills southeast of Portland, and it's one of the fastest-growing incorporated cities in Oregon over the past 15 years. What that growth looks like on the ground is subdivisions: planned communities from 2000 through 2020, some of which are still being built out, with names like Scouters Mountain Heights and Summerfield. The infrastructure is new. The streets are wide. The houses have garages.",
       "Nearly all of the housing stock is newer construction — 2-story single-family homes on established subdivisions lots, built by regional and national builders. You will not find 1920s bungalows in Happy Valley. What you will find is square footage: a 4-bedroom, 2.5-bath house at $600,000 that might be $850,000 in comparable Portland neighborhoods, or more. North Clackamas School District serves Happy Valley, and it's one of the primary draws — the district ranks well above Portland Public Schools, and the newer school facilities in Happy Valley reflect the city's recent growth. The demographic is young families, many of them first-time buyers moving from inner Portland or SE Portland apartments.",
@@ -5915,6 +5986,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Canby",
     city: "Canby",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "The Canby Ferry is a cable-guided ferry across the Willamette River — not a bridge, an actual ferry. It runs from Canby to the Wilsonville side, costs a few dollars, and takes about five minutes. It operates seasonally and carries cars, cyclists, and pedestrians. It's a practical crossing that also happens to be one of those Oregon things that people who know about it talk about. It's at the end of S Holly Street on the Canby side. Canby itself is a city of around 18,000 people, south of Wilsonville, with a genuine small-city downtown on 1st and 2nd Avenues — not a downtown that's been converted from something else, but one that grew that way over time, with local businesses that have been operating for decades.",
       "The housing stock mixes older 1940s–1970s homes in the historic core with newer subdivisions on Canby's edges. Canby School District is an independent district with strong community support — Canby High School is the main high school, and the district serves a population that's meaningfully different from the urban-professional demographic of Lake Oswego or Happy Valley. Agriculture is not a peripheral feature of Canby: the Canby area has active nurseries and farms — Horticulture is genuinely part of the local economy, and the land around the city reflects it. The price point reflects all of this: at a median of around $460,000, Canby offers more house than any other community covered here at an equivalent price.",
@@ -6024,6 +6096,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Newberg",
     city: "Newberg",
     state: "OR",
+    region: "Washington County",
     description: [
       "Highway 99W enters Newberg from the north past a Chevy dealer and a Fred Meyer, and somewhere around the first stoplight you notice the Chehalem Mountains rising to the south. That transition — from suburban commercial strip to the start of Willamette Valley wine country — happens fast here. George Fox University sits in the middle of town, which means you get a college-town calendar: events, lectures, the Bene Coffee on Villa Road that stays open late. Recipe on First Street does the kind of cooking that would draw a crowd in Portland. The Painted Lady, just off downtown, has been one of Oregon's better special-occasion restaurants for years.",
       "Housing is a mix of modest 1950s–1970s ranches in established neighborhoods, newer subdivisions on the east side of town, and the occasional older Victorian on the streets near downtown. Schools fall under the Newberg School District — Newberg High School is the main comprehensive high, and the district has a functional reputation without being exceptional. The pull for buyers is the price-to-land ratio and proximity to the AVA: you can have a half-acre lot with mountain views for what a small Portland bungalow costs. That calculation is drawing remote workers and people leaving larger metros in a serious way.",
@@ -6148,6 +6221,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "McMinnville",
     city: "McMinnville",
     state: "OR",
+    region: "Washington County",
     description: [
       "Third Street in downtown McMinnville is one of the better main streets in Oregon — not a marketing claim, just a fact you notice when you walk it. Nick's Italian Cafe has been there since 1977; the James Beard Foundation noticed. Bistro Maison does French country food in an old Victorian. The Evergreen Aviation and Space Museum holds the Spruce Goose — Howard Hughes's flying boat, the largest wooden aircraft ever built — and draws serious visitors from outside the state. On the southeast edge of town, the Carlton-Yamhill AVA and the Chehalem Mountains AVA are both within twenty minutes. McMinnville isn't just a gateway to wine country; it has its own identity that exists independent of the vineyards.",
       "The city functions more on its own terms than most small Oregon cities its size. There's a hospital (Willamette Valley Medical Center), a community college (Linfield University, now a four-year institution), county government employment, and a manufacturing base that includes PCC Airfoils and other aerospace suppliers. McMinnville School District covers elementary through high school. McMinnville High School is the comprehensive high, with an IB program and generally solid academic reputation for a district this size. Housing is a wide range: modest older ranch homes in the $350k–$450k band, newer construction subdivisions on the north and east edges of town in the $450k–$600k range, and acreage properties with vineyard adjacency that can push well past $700k.",
@@ -6272,6 +6346,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Dundee",
     city: "Dundee",
     state: "OR",
+    region: "Washington County",
     description: [
       "The Dundee Hills AVA produces some of the most expensive Pinot Noir in North America, and the wineries that anchor it are all within a few miles of each other: Domaine Drouhin Oregon on Breyman Orchards Road, Argyle Winery on Highway 99W, Sokol Blosser on Orchard Lane, Archery Summit on Spring Valley Road. This is not a tourist approximation of wine country — it's the thing itself. The Dundee Bistro on Highway 99W is the town's dinner anchor, Willamette Valley Vineyards pours above it on the hill. The town of Dundee proper has around 3,500 people, one stoplight on 99W, and almost no commercial infrastructure beyond the restaurants and tasting rooms. That is either a feature or a bug depending on who's buying.",
       "Real estate here sorts into two categories: residential parcels in town (modest, older, the Newberg School District) and agricultural or vineyard-adjacent land on the surrounding hills. The residential median sits around $560,000, which sounds high until you see what $560k gets you elsewhere in the metro — and the vineyard-adjacent acreage parcels that come to market range from $700k for raw land to several million for established vineyard properties. The Newberg School District serves Dundee, which means Newberg High School is the high school of record. Families with school priorities typically view this as workable rather than exceptional, and many have structured their Dundee purchase partly around Linfield or George Fox university proximity for the cultural benefits rather than the K–12 schools specifically.",
@@ -6393,6 +6468,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Carlton",
     city: "Carlton",
     state: "OR",
+    region: "Washington County",
     description: [
       "Main Street in Carlton is four blocks long and has more serious wine behind its doors than most American towns ten times its size. The Carlton Winemakers Studio opened in 2002 as the country's first custom-crush cooperative facility — multiple producers sharing a single space — and it put Carlton on the wine map before the Dundee Hills had mainstream recognition. Scott Paul Wines is around the corner. The Horse Radish, a wine bar and restaurant on Main Street, is the social center of town — cheese boards, a focused wine list, and the kind of Friday evening that makes you wonder why you ever needed a city. Carlton has about 2,200 residents, and on a Tuesday morning the main street is genuinely quiet.",
       "Housing reflects the town's scale: modest ranch homes and older farmhouses in the $350k–$500k range, with agricultural and rural residential parcels available at price points that aren't accessible in the Dundee Hills or even central Newberg. The McMinnville School District serves Carlton — students attend schools in McMinnville for middle and high school, which means a daily drive. For buyers who want Yamhill County wine country without Dundee Hills land prices or McMinnville's relative density, Carlton sits in an interesting gap. It's genuinely rural, genuinely quiet, and genuinely connected to the wine industry in a way that isn't tourist-facing.",
@@ -6516,6 +6592,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Vancouver",
     city: "Vancouver",
     state: "WA",
+    region: "SW Washington",
     description: [
       "Officers Row on East Evergreen Boulevard is fourteen Victorian and Colonial Revival homes built for the U.S. Army in the 1880s, running alongside what was once Fort Vancouver — a Hudson's Bay Company trading post before Oregon was even a state. The National Historic Site sits immediately adjacent. It's a real thing, not a reconstructed tourist attraction, and it's two miles from the I-5 bridge. The Waterfront Vancouver development that opened in 2018 added restaurants and a walking path along the Columbia, and the area around Esther Short Park has enough foot traffic now to feel like a downtown rather than a city center that emptied out twenty years ago.",
       "The housing draw across the Columbia is, bluntly, Washington's lack of a state income tax. Oregon's top marginal rate is 9.9%. On a $150,000 household income, that math can translate to $10,000–$13,000 a year in additional take-home pay after the move — enough to meaningfully affect how much mortgage a buyer can carry. The Clark County School District covers most of Vancouver proper and is a large district, solid across the middle with strong programs at Hudson's Bay High. The Uptown neighborhood between McLoughlin and 33rd has older Craftsman housing and some of the most competitive inventory in the city.",
@@ -6638,6 +6715,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Camas",
     city: "Camas",
     state: "WA",
+    region: "SW Washington",
     description: [
       "Google built a major data center campus in Camas — roughly 400 acres along the Columbia. It's not the city's identity, but it's the city's largest property taxpayer and a signal that east Clark County has tech infrastructure underneath the small-town surface. The paper mill at the western edge of the city — originally Camas Paper, later Crown Zellerbach, now Nippon Paper — has been operating since 1883. On certain wind directions you know it's there. But downtown Camas has put enough distance between itself and the mill identity that first-time visitors are often surprised: the 1920s brick storefronts along NE 4th Avenue are genuinely intact, Grains of Wrath brewery fills a former hardware store, and the old Camas Hotel has been restored. This is not a city that looks like it should be this good.",
       "Camas School District is the main reason buyers stretch their budget to get here. It's consistently one of the top-rated districts in Washington state — small enough that teachers know students, large enough to offer AP tracks and strong extracurricular programs. Camas High School regularly ranks in the top five percent of Washington high schools. Buyers relocating from Portland who have kids in middle school or older specifically target Camas for the schools. The housing reflects that demand: medians run $100,000–$150,000 above Vancouver proper, and well-priced homes don't sit. Lacamas Lake Regional Park anchors the outdoor life — a 304-acre lake with swimming, kayaking, and loop trails that see serious use on summer weekends.",
@@ -6754,6 +6832,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Washougal",
     city: "Washougal",
     state: "WA",
+    region: "SW Washington",
     description: [
       "Pendleton Woolen Mills has had a factory in Washougal since 1912. The wool blankets and shirts made there sell in gear shops across the country, and the factory outlet store at 2 Pendleton Way is worth the stop. It's not a museum piece — the factory still runs, you can watch the looms through the windows, and the seconds rack has real deals. Washougal sits at the point where the Columbia starts to narrow into the beginning of the Gorge, and from the right streets on the south side of town you get Columbia River views that in any other housing market would add $200,000 to the asking price. Here they don't, because Washougal is still east county before the money arrived.",
       "The housing is more affordable than Camas — medians run about $130,000 less — and buyers who want the east-county character without the Camas price tag end up here. The Washougal School District is smaller and somewhat less decorated than Camas SD, but Washougal High School has strong vocational and outdoor education programs, and the district is stable. The real draw for outdoor-oriented buyers is geography: Cape Horn — one of the Columbia Gorge's most dramatic viewpoints — is 15 minutes east on Highway 14. The National Scenic Area boundary is effectively at the city's eastern edge, which means the land east of Washougal cannot be developed. That view is not going away.",
@@ -6860,6 +6939,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Battle Ground",
     city: "Battle Ground",
     state: "WA",
+    region: "SW Washington",
     description: [
       "Battle Ground Lake State Park is four miles north of the city — a volcanic crater lake with a campground, swimming, and trails. It's one of the few crater lakes in the contiguous United States accessible by car and genuinely usable for an after-work swim. The city of Battle Ground itself sits in north Clark County with working farms on most of its edges. The Bi-Mart and the Ace Hardware and the drive-through coffee stands along SR-503 are the commercial texture here, alongside a Main Street with a few restaurants and a Saturday farmers market that draws from a wide radius. This is a city of 25,000 that feels its size accurately — not a suburb pretending to be a city, and not a town trying to become something else.",
       "The financial math that brings buyers here is straightforward. No Washington state income tax, land prices that still allow a half-acre lot at reasonable cost, and new construction subdivisions going in on all four edges of the city at prices $100,000–$200,000 below Vancouver proper. Battle Ground School District is a solid mid-tier district — Prairie High School has strong athletics and vocational programs. Buyers with young families who want a true yard, a garage that fits two cars, and room for a dog without shared walls end up here. The trade-off is that this is one of the most car-dependent addresses in Clark County — there's essentially no sidewalk grid in the newer subdivisions and the concept of walking to anything is theoretical.",
@@ -6976,6 +7056,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Ridgefield",
     city: "Ridgefield",
     state: "WA",
+    region: "SW Washington",
     description: [
       "The Ridgefield National Wildlife Refuge covers more than 5,000 acres of Columbia River floodplain wetlands at the edge of town. During fall migration, the Birding Loop trail puts you within 50 yards of sandhill cranes, tundra swans, and northern pintails in numbers that bird people come from across the region to see. The refuge is free, the parking lot fills early on October mornings, and it's the single clearest reason Ridgefield is a different kind of town than its size suggests. The city itself has about 12,000 people, a Main Street that's still forming its identity, and new construction on virtually every available parcel.",
       "Ridgefield has been one of Washington's fastest-growing cities by percentage for the better part of a decade — growing from 4,700 people in 2010 to over 12,000 today. The growth is visible in real time: crane-set roof trusses on new subdivisions, freshly paved cul-de-sacs with no houses yet, model homes with flags. The Ridgefield School District is small — Ridgefield High School has under 1,000 students — and consistently rated well. Teachers know students, class sizes are manageable, and the district has passed bond measures to build schools ahead of the enrollment curve. The new construction means buyers can often get warranties, energy-efficient construction, and layouts designed for how people actually live now.",
@@ -7087,6 +7168,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Forest Heights",
     city: "Portland",
     state: "OR",
+    region: "Northwest & Pearl",
     description: [
       "NW Cornelius Pass Road climbs out of the Tualatin Valley and dead-ends, essentially, into Forest Heights. The neighborhood was carved out of West Hills timber land starting in the early 1990s, and the result is one of the only parts of Portland where you can buy a 3,500-square-foot house built after 1995 with a Portland address. Homes run large — four-bedroom Colonials and Craftsman-revival houses on quarter-acre lots with views of the Tualatin Valley and, on clear days, the Coast Range. The Forest Heights Town Center at NW Miller Road has a New Seasons, a handful of services, and not much else.",
       "Skyline K–8 feeds into Lincoln High School, which is Portland Public Schools' IB school and one of the most academically competitive high schools in the district. The Tualatin Hills Nature Park is a seven-minute drive and has over five miles of trails through lowland forest — it's where Forest Heights families actually recreate. Closer in, the West Hills Trail system is accessible from several neighborhood trailheads. The HOA maintains common areas and enforces architectural standards, which keeps the neighborhood tidy and is either a comfort or an annoyance depending on your disposition.",
@@ -7249,6 +7331,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Beaverton-Hillsdale",
     city: "Portland",
     state: "OR",
+    region: "Southwest & Downtown",
     description: [
       "Beaverton-Hillsdale Highway is one of those Portland roads that exists in the gap between jurisdictions. The corridor runs through SW Portland, clips through unincorporated Washington County, and bumps up against Beaverton city limits — sometimes within a single block. The housing reflects that geography: 1950s and 1960s ranches with oversized lots, original hardwood floors, single-car garages, and none of the polish that makes comparable houses in Hillsdale or Multnomah Village cost $75,000 more. Grocery Options include Fred Meyer on SW Beaverton-Hillsdale, and the Raleigh Hills area just to the west adds a QFC and a handful of services.",
       "SW Barbur Boulevard is a few minutes north, connecting to downtown Portland in 15–20 minutes by car. Highway 217 is equally close and routes traffic south to Lake Oswego and Tualatin. Tri-Met Line 54 and Line 56 both run along Beaverton-Hillsdale Highway and provide real, if slow, bus service — 40 to 50 minutes to downtown. The mix of Portland and unincorporated Washington County addresses here matters for taxes and services. Portland city addresses pay Portland city income tax and property tax rates; Washington County unincorporated addresses do not pay the city income tax, which is a real dollar difference.",
@@ -7419,6 +7502,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Raleigh Hills",
     city: "Portland",
     state: "OR",
+    region: "Washington County",
     description: [
       "Raleigh Hills sits in a gap on most maps — unincorporated Washington County, wedged between the City of Portland's SW neighborhoods and Beaverton's eastern edge. SW Scholls Ferry Road and SW Beaverton-Hillsdale Highway bracket it on two sides. The housing is almost entirely 1950s through 1970s: ranches, split-levels, and a few two-story colonials on lots that run 8,000 to 15,000 square feet — larger than what the same money buys inside Portland city limits. The QFC at SW Scholls Ferry and the Raleigh Hills commercial area on Beaverton-Hillsdale Highway handle the basics.",
       "Being unincorporated Washington County means no Portland city income tax. That single fact draws buyers from SW Portland who want to stay in the same geographic corridor but shed the city tax burden. Property taxes also run lower than Portland rates. Most parcels fall in the Beaverton School District, which has performed consistently above Portland Public Schools at both the elementary and high school levels. Beaverton High School and Sunset High School both serve Raleigh Hills addresses depending on location; both are solid comprehensive high schools.",
@@ -7590,6 +7674,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Cedar Mill",
     city: "Beaverton",
     state: "OR",
+    region: "Washington County",
     description: [
       "NW Cornell Road has been Cedar Mill's commercial spine since before the area had a name. The Cedar Mill Business District between NW 107th and NW 118th has a real, functioning commercial strip: QFC for groceries, a handful of independent restaurants, a library branch, and enough services that most weekly errands can happen within a half mile. It's not a lifestyle district — nobody's doing a Saturday morning wander here — but it works, and it's been working for 40 years without requiring a major redevelopment plan to survive.",
       "The housing is 1960s and 1970s ranches, split-levels, and two-stories on generous lots. Mature firs and alders line most residential streets, and the setbacks are large enough that neighbors aren't looking into each other's living rooms. Beaverton School District serves the entire community — there's no cross-district boundary confusion here. Sunset High School is the main high school feed, and it consistently tests above state averages. NW Cornell connects westward to Portland's NW district in about 15 minutes in normal traffic, which gives Cedar Mill residents reasonable access to Portland restaurants and culture without the city tax bill.",
@@ -7760,6 +7845,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Cedar Hills",
     city: "Beaverton",
     state: "OR",
+    region: "Washington County",
     description: [
       "Cedar Hills Crossing sits at the SW Cedar Hills Boulevard MAX station — a regional retail center that opened in 1969 and has cycled through formats over the decades. It anchors the neighborhood's sense of place in a way that few Washington County suburbs can claim: the MAX Blue Line stops here, which means you can get to downtown Portland in about 35 minutes without a car and without a transfer. For a suburb this far west, that's genuinely useful. The shopping center has a Target, a theater, and enough everyday retail that households without a second car can make it work.",
       "The housing stock is primarily 1950s and 1960s construction — ranches and split-levels on lots ranging from 7,000 to 14,000 square feet. Streets are tree-lined in the older sections, and mature landscaping gives the neighborhood a settled appearance that newer Washington County developments like Bethany lack. Beaverton School District serves Cedar Hills entirely; most residential streets feed into Sunset High School. The Tualatin Hills Park & Recreation District runs a large community center at SW Walker Road and SW Cedar Hills Boulevard with a pool, gym, and full programming — it's a real facility.",
@@ -7936,6 +8022,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Bethany",
     city: "Beaverton",
     state: "OR",
+    region: "Washington County",
     description: [
       "Bethany grew fast. Through the 2010s it was one of Washington County's most active new-construction zones — subdivisions carved out of farmland along NW 185th Avenue and NW Springville Road at a pace that generated a consistent waiting list at local schools. The housing reflects that growth: 2000s and 2010s construction, four-bedroom Craftsman-revival and contemporary houses on 5,000–8,000-square-foot lots, two-car garages, open floor plans. Bethany Town Center at NW 185th and NW Laidlaw has the basics — Starbucks, a grocery store, a few chain restaurants — and functions as the community's practical center.",
       "Intel's Hillsboro campus is about 15 minutes west on US-26, which explains a large portion of Bethany's buyer pool. Nike's campus is 20 minutes south. Both campuses have enough employment concentration that Bethany gets frequent mentions in relocation conversations among tech and semiconductor workers. Beaverton School District serves the whole community; Sunset High School and Westview High School both serve Bethany depending on address, and both are among Beaverton SD's better high schools. The schools fill up during enrollment periods — verify school capacity and assignment before making an offer.",
@@ -8108,6 +8195,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Orenco Station",
     city: "Hillsboro",
     state: "OR",
+    region: "Washington County",
     description: [
       "Orenco Station was designed from the ground up around the MAX Blue Line stop at NW 231st Avenue, and it shows. The streets are intentionally narrow, the blocks are short, and the front porches face the sidewalk — things that read as obvious on paper but are genuinely rare in Washington County. When it was built in the late 1990s, it was one of the most deliberately walkable new communities in the Pacific Northwest. That planning holds up. On a weekday morning you can walk to coffee, catch the MAX, and be at Portland Union Station in 45 minutes without touching a car.",
       "The town center along NW Cornell Road has a small cluster of restaurants and shops — Orenco Station Grill, a wine bar, a hair salon. Nothing huge, but enough to run most errands on foot. Intel's Ronler Acres campus is about five minutes by bike, which is a significant reason why the neighborhood draws the buyers it does. Housing is a mix of attached townhomes, smaller single-family homes on tight lots, and some larger detached houses toward the edges of the neighborhood. Scholls Creek Elementary and Poynter Middle serve the area; Liberty High School is the feeder for Beaverton School District.",
@@ -8221,6 +8309,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Tanasbourne",
     city: "Hillsboro",
     state: "OR",
+    region: "Washington County",
     description: [
       "Tanasbourne is the commercial and corporate spine of the Beaverton-Hillsboro corridor, centered on NW 185th Avenue where the two cities technically meet. Streets of Tanasbourne is the main outdoor retail center — Target, restaurants, a movie theater, the kind of cluster that means most residents never need to drive further than a mile for day-to-day errands. Nike's world headquarters is a few miles south, Intel's facilities are within five miles in multiple directions, and several other tech employers have offices in the corridor. If you work in Washington County tech, this is the geographic center of your commute.",
       "Housing near the Quatama and Hawthorn Farm MAX stations runs heavily toward newer apartments and condos, with some townhome developments mixed in. Single-family homes exist in the residential blocks east and west of the commercial corridor — mostly 1990s and early 2000s construction. The MAX Blue Line stops at both Quatama and Hawthorn Farm, making Portland commutes more realistic than in most of Washington County. For buyers who want low-maintenance housing close to employment and with transit access, Tanasbourne condos represent one of the more affordable entry points in the corridor.",
@@ -8330,6 +8419,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Murrayhill",
     city: "Beaverton",
     state: "OR",
+    region: "Washington County",
     description: [
       "Murrayhill is a master-planned community in SW Beaverton that was developed through the 1990s on land that had been farmland a decade before. The neighborhood is built around Murrayhill Marketplace on SW Scholls Ferry Road — a Fred Meyer-anchored shopping center with restaurants, a gym, and services that covers most routine errands without leaving the area. The streets curve through the hills in the way that 1990s master-planned communities do, and the lots are larger than what you'd find in older Beaverton neighborhoods to the north. Families with kids in Beaverton School District make up the majority of buyers.",
       "Scholls Heights Elementary feeds most of the neighborhood's younger students; Mountain View Middle School and Mountainside High School are the secondary feeders. Covenant Park is the main green space — a well-maintained park with good trail access to the surrounding hills. The housing stock is almost entirely 1990s single-family construction: 3- and 4-bedroom homes on 5,000–9,000 square foot lots, two-car garages, the standard suburban footprint. Condition and updates drive price variation more than location within the neighborhood.",
@@ -8443,6 +8533,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Progress Ridge",
     city: "Beaverton",
     state: "OR",
+    region: "Washington County",
     description: [
       "Progress Ridge is the newest of SW Beaverton's master-planned communities, built out primarily during the 2010s on land that was largely undeveloped at the turn of the millennium. Progress Ridge Towncenter is the retail anchor — a New Seasons Market, a Regal movie theater, a handful of restaurants, and enough services to make it function as an actual walkable destination within the immediate area. For new construction in suburban Washington County, the retail component is more complete than most.",
       "The housing stock reflects its era: 2010s and 2020s townhomes, craftsman-style single-family homes, and some larger production homes on the outer edges. Lots are smaller than Murrayhill to the north, but construction quality and finishes are newer — updated kitchens, open floor plans, energy-efficient systems. Beaverton School District serves the area, and the school pipeline is the same as Murrayhill: Scholls Heights Elementary, Mountain View Middle School, Mountainside High School. That school trajectory is a meaningful draw for families with kids.",
@@ -8556,6 +8647,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Aloha",
     city: "Aloha",
     state: "OR",
+    region: "Washington County",
     description: [
       "Aloha is the largest unincorporated community in Washington County, with roughly 50,000 residents and no city government, no city council, and no downtown in any traditional sense. TV Highway (Oregon Route 8) is the main commercial artery, running east-west through the middle of the community and lined with the strip malls, car dealerships, fast food, and small businesses that define unincorporated Washington County commercial corridors. The MAX Blue Line runs along the northern edge — the Hawthorn Farm, Quatama, and Elmonica stations all serve Aloha — giving the community more transit access than its car-oriented street grid suggests.",
       "The housing stock is almost entirely single-family, built across several decades from the 1960s through the early 2000s. You'll find 1970s ranch homes, 1980s split-levels, and 1990s construction in roughly equal measure depending on the block. Lot sizes are reasonable for the price — larger than what you'd find in inner Portland neighborhoods at comparable price points. Beaverton School District serves the area, and school quality is consistent with the rest of BSD. The affordability relative to incorporated Beaverton and Hillsboro is the defining feature of the market: this is where the first-time buyers who can't make the numbers work elsewhere tend to end up.",
@@ -8669,6 +8761,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Gladstone",
     city: "Gladstone",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "Gladstone sits at the confluence of the Clackamas and Willamette rivers, a geographic fact that shapes the city more than anything else. Meldrum Bar Park stretches along the Willamette — a long gravel bar with boat launches, grassy flats, and unobstructed river views that residents of much pricier neighborhoods would pay a premium to access. The Clackamas River is minutes away in the other direction. At roughly 12,000 people, Gladstone is small enough that you recognize faces at the Fred Meyer on McLoughlin.",
       "The housing stock is mostly 1950s through 1970s — single-story ranches, split-levels, and a few two-story colonials on larger lots. The Gladstone School District is compact: one high school, one middle school, and two elementaries. That size means staff knows students. The city has its own parks system with Meldrum Bar as the centerpiece, plus smaller neighborhood parks scattered through the residential grid. Commuting north to Portland takes 30 to 40 minutes via I-205 or McLoughlin Blvd depending on traffic — Oregon City sits right to the south along the same corridor.",
@@ -8786,6 +8879,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Lake Grove",
     city: "Lake Oswego",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "Lake Grove is the southern section of Lake Oswego, below the lake itself and separated from it by about a mile of residential streets. Boones Ferry Road runs north-south as the commercial spine — a mix of local services, small restaurants, and neighborhood retail that has been there for decades without much churn. The area sits mostly between Highway 43 (State Street) to the east and the I-5 corridor to the west, with Kruse Way and the tech office parks forming the northern anchor.",
       "The draw for buyers here is straightforward: Lake Oswego School District without Lake Oswego lake-view prices. Bryant Elementary is well-regarded within the district. Lakeridge Middle and Lakeridge High School serve the area, and Lakeridge is consistently one of the stronger performing high schools in the region. The housing stock is 1960s through 1980s ranches and split-levels on flat to gently rolling lots — not the larger Craftsmans and colonials of the neighborhoods immediately around the lake, but well-maintained and solidly built. Lot sizes run 7,000 to 10,000 square feet on most blocks.",
@@ -8903,6 +8997,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Oak Grove",
     city: "Milwaukie",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "Oak Grove is an unincorporated Clackamas County community wedged between Milwaukie to the north and Lake Oswego to the south, with McLoughlin Blvd running the length of its western edge. McLoughlin is commercial, loud at rush hour, and not the place you want to be walking — but it does mean the drive to Portland or Oregon City is straightforward. The residential streets that run east from McLoughlin into the interior of Oak Grove are a different story: established trees, large lots on many blocks, and the kind of quiet that you do not get two miles north in inner SE Portland.",
       "North Clackamas School District serves Oak Grove, which includes Lewelling Elementary, Rowe Middle School, and Milwaukie High School for most of the area. The Springwater Corridor Trail runs along the eastern edge with river access points — an asset that does not get as much attention as it should. North Clackamas Sports Park is a significant recreational facility with multiple athletic fields that draws use from across the district. The housing stock is primarily 1950s through 1970s, with some larger lots than you find in Milwaukie proper.",
@@ -9020,6 +9115,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Jennings Lodge",
     city: "Milwaukie",
     state: "OR",
+    region: "Clackamas & East County",
     description: [
       "Jennings Lodge is an unincorporated Clackamas County community along the Willamette River bluff south of Oak Grove. The bluff-top streets — Courtney Ave, Jennings Ave, and the residential grid just behind the western face — have Willamette River views that would cost considerably more in almost any other part of the metro. On a clear morning you can see across the river to the fields and hills of Clackamas County's west side. Not many people in the broader metro know this exists.",
       "North Clackamas School District covers Jennings Lodge — the same schools as Oak Grove, with Milwaukie High School as the high school. McLoughlin Blvd forms the western edge of the community: commercial, busy, and not particularly pleasant to live next to. The residential streets behind the bluff are entirely insulated from it. Housing ranges from 1940s bungalows and post-war ranches to 1970s construction, with a genuine mix of conditions. Some properties have been well-maintained for decades; others need real work. Lot sizes vary.",
@@ -9137,6 +9233,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "West Haven-Sylvan",
     city: "Portland",
     state: "OR",
+    region: "Southwest & Downtown",
     description: [
       "West Haven-Sylvan occupies the lower West Hills between Highway 26 (the Sunset Highway) and SW Scholls Ferry Road, roughly west of NW 53rd Ave and east of the Beaverton city limits. Oregon Zoo and Washington Park are at the northeastern edge, which means Forest Park trailheads are reachable without getting in a car. OHSU is a 10-minute drive down the hill. The neighborhood is Portland city limits, Portland Public Schools, and a Portland property tax bill — but the character reads more like a quiet hill suburb than anything in the inner city.",
       "The housing is primarily 1950s through 1970s construction — ranch homes and split-levels on larger lots than you find in inner SW Portland, with some newer hillside infill from the 1990s and 2000s on steeper terrain. West Sylvan Middle School serves the area and feeds to Lincoln High School, which is one of Portland Public Schools' stronger comprehensive high schools. Families specifically seeking the Lincoln High attendance area find West Haven-Sylvan an affordable entry compared to the inner SW neighborhoods closer to the river.",
@@ -9254,6 +9351,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Skyline",
     city: "Portland",
     state: "OR",
+    region: "Southwest & Downtown",
     description: [
       "Skyline Blvd runs the length of the West Hills ridge, a two-lane road that winds from the northern end of Forest Park south through terrain that reads as rural but is technically within Portland city limits. The views are east-facing — Mt. Hood on a clear morning, the Tualatin Valley to the west at dusk. Properties range from older farmhouses on one-acre lots to newer custom builds on five-plus acres, and the road itself passes working farms, a small airstrip, and more deer than traffic signals. This is Portland's back forty.",
       "Portland Public Schools serves Skyline — Skyline K-8 is the neighborhood school, a combined elementary and middle that sits on the ridge and serves a small community of students who arrive mostly by bus because there is no other option. High school feeds to Lincoln or Wilson depending on address. The Forest Park trailhead system is accessible directly from Skyline Blvd; several trailheads within a short drive give access to 80-plus miles of trail in the country's largest urban forest. The Northwest 23rd commercial district and the Hillside neighborhoods are 15 to 20 minutes down the hill.",
@@ -9374,6 +9472,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Salmon Creek",
     city: "Vancouver",
     state: "WA",
+    region: "SW Washington",
     description: [
       "Salmon Creek is North Vancouver's most recognizable address — the name belongs to both the community and the actual creek that winds through it, flanked by the Salmon Creek Greenway Trail, a paved multi-use path running 3.1 miles along the water through wetlands and forest. Legacy Salmon Creek Medical Center (2211 NE 139th St) anchors the area as a major employer and trauma resource for all of Clark County, opened in 2005 and offering full inpatient and emergency services. The housing stock runs from 1990s ranches and colonials through 2010s planned subdivisions, mostly on standard suburban lots with some larger parcels toward the creek corridor.",
       "Schools here are among the strongest in Vancouver Public Schools. Skyview High School, opened in 1997, carries a B+ Niche grade and a 7/10 GreatSchools rating, with a 95% graduation rate and a competitive SMT magnet program. Salmon Creek Elementary consistently ranks in the top 20% of Washington elementary schools. The pull toward North Vancouver from Portland-area families is partly about schools and partly about the Washington state income tax situation — there is none, and families doing the long-term math often land here.",
@@ -9461,6 +9560,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Felida",
     city: "Vancouver",
     state: "WA",
+    region: "SW Washington",
     description: [
       "Felida occupies the northwest corner of Vancouver — north of the Columbia River, west of I-5, and largely east of the ridge that drops toward the Lewis River lowlands. It has the most rural-feeling character of any community in the Vancouver metro while still sitting 20–25 minutes from Portland via I-5. Lots commonly run a quarter acre to a full acre, with custom homes and estate-style subdivisions scattered alongside older farmhouses. Some properties retain horse facilities or agricultural outbuildings. The Felida Village commercial node at NW 36th Ave and NW 119th St provides a small-town center without being a full shopping district.",
       "Schools draw from Vancouver Public Schools, with Felida Elementary as the standout — ranked in the top quartile of Washington elementary schools, with 58% math proficiency and 69% reading proficiency, well above state averages. Students feed to McLoughlin Middle School and Hudson's Bay High School, which is where the academic picture becomes more mixed. Buyers with older children or a multi-decade view on school quality should research the full pipeline. The Felida community has consistently high owner-occupancy and long-tenured residents.",
@@ -9547,6 +9647,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Hazel Dell",
     city: "Vancouver",
     state: "WA",
+    region: "SW Washington",
     description: [
       "Hazel Dell runs along NE Highway 99 (the old Pacific Highway) north of downtown Vancouver, a corridor that has been commercial for decades and shows it. Strip malls, chain restaurants, a Fred Meyer, a Target, and a Home Depot bracket the residential streets that branch off the main road. The housing is mostly 1950s–1980s single-family ranches and bungalows on large lots with mature trees, mixed with apartment complexes at the arterial edges. It is not a neighborhood people move to for aesthetics. They move here because it is the most affordable entry point in North Vancouver, and because I-5 access from NE Hazel Dell Ave is immediate.",
       "Vancouver Public Schools serves the area — Hazel Dell Elementary (K–5), Jason Lee Middle School, and Hudson's Bay High School. Of the three tiers, the elementary tends to be rated above average locally; Hudson's Bay High School has GreatSchools scores in the low range and academic proficiency well below state averages, though its graduation rate runs above the state average. Families with school-age children who are prioritizing academic rankings should compare Hazel Dell's pipeline to Salmon Creek or Felida before committing.",
@@ -9638,6 +9739,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Orchards",
     city: "Vancouver",
     state: "WA",
+    region: "SW Washington",
     description: [
       "Orchards takes its name from the commercial orchards that covered this part of East Vancouver until suburban development rolled through in the 1960s and accelerated through the 1990s. The housing stock is a legible record of that timeline — 1960s ranches on the western edges, 1970s–1980s colonials filling in the middle, newer infill developments toward the east. The area sits between NE Fourth Plain Blvd to the north and SR-500 and Highway 14 to the south, with NE Mill Plain Blvd serving as the main east-west corridor. Orchards Community Park, 33 acres with forested picnic areas and a rose garden, is one of the better neighborhood parks in East Vancouver.",
       "Evergreen School District serves the area. Orchards Elementary has struggled on standardized testing — proficiency rates well below district and state averages — and sits near the bottom of the district's elementary school rankings. The Evergreen District overall runs a mixed picture: Mountain View High School carries an A- Niche grade and a 7/10 GreatSchools rating with a 92% graduation rate, which is meaningfully better than the district's lower-performing schools. Buyers with school-age children should verify boundaries — which school specifically serves their address — rather than evaluating the district as a single unit.",
@@ -9729,6 +9831,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Cascade Park",
     city: "Vancouver",
     state: "WA",
+    region: "SW Washington",
     description: [
       "Cascade Park is East Vancouver's most established and accessible community for Portland commuters. Centered roughly at SE 164th Ave and Mill Plain Blvd, it has the infrastructure of a complete neighborhood: the Cascade Park Community Library (a well-designed 25,000-square-foot branch with a signature sloped-wood ceiling reading room), the Cascade Athletic Club, and a Mill Plain Blvd commercial strip that covers groceries, dining, and daily services without driving to the sprawl further east. The housing stock is 1970s–1990s single-family suburban on standard lots — mature trees, established landscaping, the look of a neighborhood that has been lived-in for thirty years because it has.",
       "Evergreen Public Schools serves the area, with Crestline Elementary (PK–5), Cascade Middle School (6–8), and Mountain View High School (9–12) covering the K–12 pipeline. Crestline and Cascade Middle run below district and state averages on proficiency measures. Mountain View High School is the positive outlier in the district — A- Niche grade, 7/10 GreatSchools, 92% graduation rate, above-average science performance. The arc from elementary to high school improves noticeably, which buyers with young children should factor into long-term planning.",
@@ -9816,6 +9919,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Bull Mountain",
     city: "Tigard",
     state: "OR",
+    region: "Washington County",
     description: [
       "Bull Mountain sits above Tigard on a ridge between Highway 99W and Scholls Ferry Road, and on a clear day you can see Mt. Hood from the upper streets. The neighborhood is unincorporated Washington County — it has resisted annexation into Tigard for decades — which means no city income tax, Washington County property taxes rather than Tigard's, and land use decisions that go through the county rather than city hall. That distinction matters at closing and it matters at tax time.",
       "Most of the housing was built between the mid-1990s and the early 2010s: larger single-family homes on cul-de-sacs, many with territorial or mountain views, served by Tigard-Tualatin School District. Alberta Rider Elementary, Mary Woodward Elementary, and Twality Middle School are the primary feeder schools. Tigard High School, recently remodeled and offering the International Baccalaureate program, is the high school for the area. SW Beef Bend Road and SW Bull Mountain Road are the main routes down to 99W — they narrow at the bottom and back up during morning rush hour.",
@@ -9933,6 +10037,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "King City",
     city: "King City",
     state: "OR",
+    region: "Washington County",
     description: [
       "King City is a small incorporated city — population around 5,000 — tucked between Tigard and Tualatin at the south end of Washington County. It was developed in the 1960s as a planned retirement community, and that origin still shapes the housing stock: single-story homes, modest square footage, original kitchens and baths on many properties. The streets are quiet, the lots are manageable, and the prices reflect what the homes are rather than what the zip code wishes they were.",
       "The city has evolved well beyond its retirement-community roots. Tigard-Tualatin School District serves all school-age residents — Durham Elementary and Tualatin High School are the main schools. Tualatin Country Club Golf Course is within the city limits. King City Community Park is a 17-acre green space with fields, walking paths, and access to the Tualatin River Greenway Trail. Commuting to Portland means either I-5 at Tualatin (a few miles south) or Highway 99W north through Tigard.",
@@ -10045,6 +10150,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Metzger",
     city: "Portland",
     state: "OR",
+    region: "Washington County",
     description: [
       "Metzger has a Portland OR mailing address — SW Barbur Blvd and SW Hall Blvd run through it, and Washington Square Mall sits at its edge — but it is unincorporated Washington County. That distinction has real consequences: your property tax rate is different from Portland's, and your school district is almost certainly Beaverton, not Portland Public Schools. Buyers relocating from other states sometimes miss this entirely until closing, which is why it's worth stating plainly at the start.",
       "The housing stock is mostly 1950s–1970s: ranches, split-levels, and a fair number of mid-century originals that have been updated to varying degrees. Greenway Park is the main green space — seven acres with a nine-hole disc golf course, basketball courts, and access to the Koll Center Wetlands where you can spot otters and waterfowl. Washington Square Mall is a short drive or walk for the utilitarian needs. Metzger Park at SW Hemlock and Hall is a community park with tennis courts and horseshoe pits. Beaverton School District serves the area: Greenway Elementary and Whitford Middle are the primary feeders, with Beaverton High or Southridge depending on address.",
@@ -10154,6 +10260,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "Garden Home",
     city: "Portland",
     state: "OR",
+    region: "Southwest & Downtown",
     description: [
       "Garden Home sits along SW Garden Home Road at the edge of where Portland bleeds into unincorporated Washington County. The neighborhood name is widely used and recognized; the jurisdictional reality is more complicated. Some parcels are inside Portland city limits, some are in unincorporated Washington County, and a small number fall along the Multnomah–Washington County line. That split determines your school district — Portland Public Schools or Beaverton School District — and your property tax rate. Always verify by address before assuming.",
       "The housing stock is mostly 1940s–1960s: established trees, mid-century ranches, and the occasional Cape Cod. Gabriel Park is a short walk or bike ride and is one of the better neighborhood parks in SW Portland — baseball fields, tennis courts, off-leash dog area, trails, and a community garden. Multnomah Village, with Marco's Cafe, Old Market Pub, and Broder Söder, is within easy walking distance for the Portland-side parcels. For residents in the unincorporated portion, it's still a quick drive. Garden Home Recreation Center, run by Tualatin Hills Park and Recreation District, provides additional amenities for Washington County residents.",
@@ -10267,6 +10374,7 @@ export const neighborhoods: NeighborhoodData[] = [
     name: "South Burlingame",
     city: "Portland",
     state: "OR",
+    region: "Southwest & Downtown",
     description: [
       "South Burlingame occupies the stretch of SW Portland between Multnomah Village and the SW Terwilliger Blvd transit corridor, with Tryon Creek State Natural Area forming its southern boundary. The neighborhood is mostly 1950s ranches on streets that step up and down the hillside topography, and Tryon Creek is the anchor. It is one of Portland's better urban forest parks: 670 acres of old-growth Douglas fir, eight miles of trails accessible within a few blocks of most South Burlingame addresses. People who live near it understand what they're paying for.",
       "Portland Public Schools serves the area along the established SW pipeline: Markham Elementary (K–5), Robert Gray Middle School (6–8), and Ida B. Wells High School (9–12, formerly Wilson). Market of Choice at SW Terwilliger and Taylors Ferry is the neighborhood grocery and deli — walkable for many residents and the kind of grocery store that reduces the perceived need for a car. Tryon Creek Bar and Grill at 8610 SW Terwilliger is the neighborhood's local sports bar. JoLa Cafe at SW Corbett is a short drive for serious coffee.",
