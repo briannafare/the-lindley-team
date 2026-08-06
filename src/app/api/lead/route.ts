@@ -66,7 +66,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: "webhook not configured" }, { status: 501 });
   }
 
-  const { company: _hp, renderedAt: _rt, ...clean } = body;
+  const clean = { ...body };
+  delete clean.company; // honeypot + timing stamp are ours, not GHL's
+  delete clean.renderedAt;
   const payload = {
     ...clean,
     formType,
