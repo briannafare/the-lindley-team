@@ -71,7 +71,7 @@ export const CALCULATOR_TOOLS: CalculatorTool[] = [
       "Buy a 2-4 unit property, live in one unit, and let the tenants cover most of the mortgage. Models owner-occupied multi-unit financing and what you would actually pay each month after rent.",
     question: "Can I buy a duplex in Portland and rent out the other unit?",
     answer:
-      "Yes — a 2-4 unit property you live in qualifies for owner-occupied financing, which means far lower down payments than an investment loan, and lenders will usually count a portion of the projected rent as income. That combination is why house hacking is often the cheapest way into Portland real estate.",
+      "Yes — a 2-4 unit property you live in qualifies for owner-occupied financing, which means far lower down payments than an investment loan, and lenders will usually count a portion of the projected rent as income. That combination is why house hacking is often one of the more accessible ways into Portland real estate.",
     related: [
       { label: "Investment property loans", href: "/services/investment" },
       { label: "Home purchase loans", href: "/services/purchase" },

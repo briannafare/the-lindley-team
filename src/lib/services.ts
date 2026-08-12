@@ -144,7 +144,7 @@ export const services: ServiceData[] = [
       { q: "Can I refinance with bad credit?", a: "FHA Streamline refinances have more flexible credit requirements (580+) and don't always require a new appraisal. Conventional refinances typically need 620+. If your credit has dropped, we can discuss options or strategies to improve it first." },
       { q: "How long does a refinance take?", a: "Typically 3-5 weeks from application to closing. FHA Streamline refinances can be faster since they require less documentation." },
       { q: "Should I refinance to a 15-year mortgage?", a: "A 15-year mortgage saves a huge amount in total interest, but your monthly payment will be higher. We'll show you both scenarios side-by-side so you can see the tradeoff between monthly cash flow and long-term savings." },
-      { q: "What is an FHA Streamline refinance?", a: "If you currently have an FHA loan, an FHA Streamline lets you refinance with minimal documentation, no appraisal in many cases, and reduced closing costs. It's one of the fastest and cheapest ways to lower your rate." },
+      { q: "What is an FHA Streamline refinance?", a: "If you currently have an FHA loan, an FHA Streamline lets you refinance with minimal documentation, no appraisal in many cases, and reduced closing costs. It's one of the simpler ways to lower your rate, with less paperwork and lower closing costs than a full refinance." },
       { q: "Can I refinance if I'm underwater on my mortgage?", a: "It's harder but not impossible. Some programs allow refinancing up to 97% LTV (loan-to-value). If you owe more than your home is worth, let's talk about your specific situation — there may be options." },
       { q: "What's the difference between rate-and-term and cash-out refinance?", a: "Rate-and-term refinance changes your rate and/or loan term without taking cash out. Cash-out refinance lets you borrow more than you owe and take the difference as cash. They have different rates, requirements, and purposes. We cover cash-out refinancing on a separate page." },
     ],
@@ -257,7 +257,7 @@ export const services: ServiceData[] = [
     name: "VA Loans",
     shortName: "VA Loans",
     tagline: "Zero down, no PMI, competitive rates — the benefit you earned, used right.",
-    description: "VA loans are mortgage loans guaranteed by the U.S. Department of Veterans Affairs, available to active-duty service members, veterans, and eligible surviving spouses. They're arguably the best mortgage product available — zero down payment, no private mortgage insurance, competitive interest rates, and flexible qualification standards. If you've served, this is a benefit you've earned and we'll make sure you use it to its full advantage.",
+    description: "VA loans are mortgage loans guaranteed by the U.S. Department of Veterans Affairs, available to active-duty service members, veterans, and eligible surviving spouses. The terms are strong: zero down payment, no private mortgage insurance, competitive interest rates, and flexible qualification standards. If you've served, this is a benefit you've earned and we'll make sure you use it to its full advantage.",
     icon: "concentric",
     seo: {
       title: "VA Loans Portland Oregon | Zero Down | The Lindley Team",
@@ -322,7 +322,7 @@ export const services: ServiceData[] = [
     faqs: [
       { q: "What is the jumbo loan limit in Portland?", a: "Any loan above the current conforming limit is considered jumbo. This limit is updated annually by the FHFA. We'll confirm the current limit for your specific county during our initial conversation." },
       { q: "Are jumbo loan rates higher?", a: "Historically yes, but the gap has narrowed significantly. In some cases, jumbo rates are actually competitive with or even below conforming rates. It depends on your credit profile and down payment." },
-      { q: "Can I get a jumbo loan with less than 20% down?", a: "Some programs allow 10-15% down on jumbo loans, but you'll likely pay a higher rate. With 20%+ down, you get the best rates and avoid any additional costs." },
+      { q: "Can I get a jumbo loan with less than 20% down?", a: "Some programs allow 10-15% down on jumbo loans, but you'll likely pay a higher rate. With 20%+ down, you'll generally see stronger pricing and avoid the extra costs that come with a smaller down payment." },
     ],
   },
   {
@@ -352,7 +352,7 @@ export const services: ServiceData[] = [
     process: [
       { step: "01", title: "Equity Analysis", desc: "We estimate your home's current value and calculate how much cash you can access while maintaining 20% equity." },
       { step: "02", title: "Purpose Review", desc: "We discuss what the cash is for and whether a cash-out refi is the best tool vs. HELOC or other options." },
-      { step: "03", title: "Rate & Structure", desc: "We match your cash-out amount and term to the right Movement program and structure it for the best rate we can get you." },
+      { step: "03", title: "Rate & Structure", desc: "We match your cash-out amount and term to the right Movement program and structure it for the strongest pricing you qualify for." },
       { step: "04", title: "Close & Fund", desc: "After closing, you typically receive your cash within 3 business days." },
     ],
     faqs: [
@@ -378,7 +378,7 @@ export const services: ServiceData[] = [
     whoFor: ["Homeowners funding phased renovations", "Those wanting a financial safety net", "Homeowners with ongoing large expenses", "Those who prefer flexible borrowing over lump sum"],
     requirements: [
       { label: "Equity", value: "15-20%+ equity in your home" },
-      { label: "Credit Score", value: "680+ for best rates" },
+      { label: "Credit Score", value: "680+ for stronger pricing" },
       { label: "DTI Ratio", value: "Under 43% typically" },
       { label: "Draw Period", value: "5-10 years" },
       { label: "Repayment Period", value: "10-20 years after draw period ends" },
@@ -414,7 +414,7 @@ export const services: ServiceData[] = [
     whoFor: ["First-time rental property buyers", "Experienced investors scaling their portfolio", "House flippers needing purchase + rehab financing", "Buyers of multi-unit properties (2-4 units)"],
     requirements: [
       { label: "Down Payment", value: "15-25% depending on property type" },
-      { label: "Credit Score", value: "680+ for best rates" },
+      { label: "Credit Score", value: "680+ for stronger pricing" },
       { label: "Reserves", value: "6 months of payments per property" },
       { label: "DSCR Option", value: "Qualify on rental income, not personal income" },
       { label: "Experience", value: "Some programs require prior landlord experience" },
@@ -476,7 +476,7 @@ export const services: ServiceData[] = [
     name: "Conventional Loans",
     shortName: "Conventional",
     tagline: "The loan most Portland buyers end up with — and usually the right call. As little as 3% down with solid credit.",
-    description: "A conventional loan is a mortgage that isn't backed by a government agency — it follows Fannie Mae and Freddie Mac guidelines instead. For borrowers with a 620+ credit score, it's usually the simplest, cheapest path to a Portland home: down payments start at 3%, mortgage insurance drops off once you reach 20% equity, and the paperwork is lighter than FHA. The Lindley Team walks you through whether conventional beats FHA for your numbers — the answer depends on your credit score and down payment, and we'll show you both side by side.",
+    description: "A conventional loan is a mortgage that isn't backed by a government agency — it follows Fannie Mae and Freddie Mac guidelines instead. For borrowers with a 620+ credit score, it's often the more straightforward route to a Portland home: down payments start at 3%, mortgage insurance drops off once you reach 20% equity, and the paperwork is lighter than FHA. The Lindley Team walks you through whether conventional beats FHA for your numbers — the answer depends on your credit score and down payment, and we'll show you both side by side.",
     icon: "circle",
     tag: "Most Common",
     seo: {
@@ -520,7 +520,7 @@ export const services: ServiceData[] = [
       { step: "04", title: "Close", desc: "We manage underwriting, appraisal, and closing. You show up and sign." },
     ],
     faqs: [
-      { q: "What credit score do I need for a conventional loan?", a: "620 is the minimum, but pricing improves meaningfully as your score climbs — 740+ gets the best rates. If you're in the 620-680 range, we'll compare conventional against FHA, because FHA sometimes wins on monthly payment at lower scores." },
+      { q: "What credit score do I need for a conventional loan?", a: "620 is the minimum, but pricing improves meaningfully as your score climbs — 740+ gets the strongest pricing. If you're in the 620-680 range, we'll compare conventional against FHA, because FHA sometimes wins on monthly payment at lower scores." },
       { q: "Is 3% down really possible on a conventional loan?", a: "Yes — first-time buyer conventional programs allow 3% down. On a $500,000 Portland home, that's $15,000. You'll pay PMI until you reach 20% equity, but unlike FHA, it eventually goes away without refinancing." },
       { q: "Conventional vs. FHA — which is better?", a: "It depends almost entirely on your credit score and down payment. Strong credit usually favors conventional (cheaper PMI that cancels). Lower scores or thin savings can favor FHA. We run both and show you the actual monthly numbers — it takes about ten minutes." },
       { q: "What is PMI and how do I get rid of it?", a: "Private mortgage insurance protects the lender when you put down less than 20%. It's removable: once you reach 20% equity through payments or appreciation, you can request cancellation, and at 22% it drops automatically. That's a major advantage over FHA's insurance, which usually lasts the life of the loan." },
