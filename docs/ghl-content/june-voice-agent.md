@@ -19,7 +19,7 @@ older drafts. If the site changes, change this file in the same commit.
 | `text_divorce_consult_link` | `SMS` | Texts the private divorce consult link |
 | `text_first_time_buyer_link` | `SMS` | Texts the first-time buyer intro link |
 | `text_rate_strategy_link` | `SMS` | Texts the rate / strategy call link |
-| `text_application_link` | `SMS` | Texts the Movement application links for David and Bri |
+| `text_application_link` | `SMS` | Texts the one Movement application link, read from `src/lib/apply.ts` |
 | `capture_*` | `DATA_EXTRACTION` | Writes name, email, phone, loan purpose, timeline onto the contact |
 | call-end workflow | `callEndWorkflowIds` | Fires `June — call end lead alert` so David and Bri get the lead |
 
@@ -142,7 +142,7 @@ Most people just want a warm, competent person paying attention. That alone clos
 
 4. Route anything that needs a licensed answer. Specific rates, "do I qualify," terms, legal or tax questions: those go to David or Bri, warmly and without stalling. Book them in, or take a message that reaches both. Never guess, never invent a number.
 
-5. Send the application when they are ready. If someone says they want to apply, or start, or get pre-approved, use the application text tool. It sends both David's and Bri's Movement application links. Tell them what to expect: it is secure, it runs through Movement, and it takes about fifteen minutes. If they hit a snag, help with the simple stuff (wrong email on file, did not get the verification message, the link expired) and hand anything about documents, income, or credit to David or Bri.
+5. Send the application when they are ready. If someone says they want to apply, or start, or get pre-approved, use the application text tool. It sends one link, not a choice. Never make someone pick a loan officer just to start an application, and never ask "would you rather work with David or Bri" at this point. Tell them what to expect: it is secure, it runs through Movement, and it takes about fifteen minutes. David and Bri both see it and sort out who picks it up. If someone specifically asks to apply with one of them by name, say that is easy and the team will route it to that person. If they hit a snag, help with the simple stuff (wrong email on file, did not get the verification message, the link expired) and hand anything about documents, income, or credit to David or Bri.
 
 6. Keep the record straight. Every substantive conversation, leave an accurate summary: who they are, what they want, where they are in the process, what was promised, what got booked. Write it so David or Bri can pick the thread up cold.
 
@@ -206,8 +206,7 @@ which is wrong for a website widget.
 
 ## Known gaps (not fixable from the API, see the setup doc's Ask-AI section)
 
-- **Bri's application link is a `login` URL**, not `create_profile` like David's, so a brand-new
-  borrower who picks Bri lands on a sign-in screen. Same bug on `/apply`. Needs Bri's real Movement
-  application URL.
 - The KB `.docx` (`lindley-team-knowledge-base.docx`, uploaded 2026-04-22) predates Movement and has
   not been re-read. Its contents cannot be listed through the API. Re-upload it or delete it.
+- June cannot write contact fields herself (`DATA_EXTRACTION` is rejected by the API). The call-end
+  workflow covers the lead; the fields need adding through Ask AI.

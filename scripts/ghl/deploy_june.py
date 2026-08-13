@@ -29,6 +29,7 @@ from cli_anything.gohighlevel.utils.ghl_internal_client import TokenManager, BAS
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PROMPT_DOC = os.path.join(REPO, "docs", "ghl-content", "june-voice-agent.md")
+APPLY_TS = os.path.join(REPO, "src", "lib", "apply.ts")
 
 LOC = "pe2yBdfaVo406b3BaavZ"
 JUNE = "6a5fc3d5d0c5f9597a206aa0"
@@ -41,8 +42,17 @@ BOOK = "https://api.leadconnectorhq.com/widget/booking/"
 LINK_DIVORCE = BOOK + "OwSdQeWY7mySxMYWPfQN"
 LINK_FTB = BOOK + "HO4qop4LqQWemPhKj4IC"
 LINK_RATE = BOOK + "nCrKarsV3BLrp1WiwHN8"
-APPLY_DAVID = "https://easyapp.movement.com/apply/create_profile?userid=10107026"
-APPLY_BRI = "https://easyapp.movement.com/apply/login?userid=10115700"
+
+
+def apply_link(const: str) -> str:
+    """Read an application URL out of src/lib/apply.ts so the site and June cannot drift apart."""
+    m = re.search(rf'export const {const} = "([^"]+)"', open(APPLY_TS).read())
+    if not m:
+        sys.exit(f"{const} not found in {APPLY_TS}")
+    return m.group(1)
+
+
+APPLY_DEFAULT = apply_link("APPLY_BRI")  # same default the site's /apply redirect uses
 
 _tm = TokenManager()
 
@@ -106,12 +116,14 @@ WANTED = [
         "Texting you the link now.",
         "Here's the rate and strategy call with David or Bri: " + LINK_RATE +
         ". They'll quote your actual situation. Not a commitment to lock or lend."),
+    # One link, not two. Nobody should have to pick a loan officer to start an application; the
+    # site's /apply redirect makes the same call. David or Bri sort it out on their end.
     sms("Text application link",
         "They say they're ready to apply, start an application, or get pre-approved.",
-        "Sending you the application links now.",
-        "Here's where to start, both secure through Movement and about fifteen minutes. "
-        "David: " + APPLY_DAVID + " . Bri: " + APPLY_BRI +
-        " . Pick whoever you've been talking to, and text us here if anything sticks."),
+        "Sending you the application link now.",
+        "Here's where to start: " + APPLY_DEFAULT + " . It's secure through Movement and takes "
+        "about fifteen minutes. David and Bri both see it, and they'll sort out who picks it up. "
+        "Text us here if anything sticks."),
     # No DATA_EXTRACTION actions here on purpose. POST /voice-ai/actions rejects every shape with
     # 422 "Invalid actionParameters for the given actionType" (6 variants tried, 2026-08-11), and
     # the agent PUT rejects contactFieldActions too. Add the five capture fields through GHL's
@@ -254,8 +266,20 @@ def main() -> None:
     print(f"  welcome  : {live.get('agentWelcomeMessage')!r}\n          -> {WELCOME!r}")
     print(f"  KB       : {live.get('knowledgeBaseIds')}")
     print(f"  tools now: {sorted(have)}")
+    # Drift check: an action already exists under this name, but the parameters we manage have
+    # changed here. There is no PUT for actions, so those get deleted and recreated.
+    def drifted(want: dict) -> bool:
+        cur = have.get(want["name"])
+        if not cur:
+            return False
+        live_p = cur.get("actionParameters") or {}
+        return any(live_p.get(k) != v for k, v in want["actionParameters"].items()
+                   if k not in ("examples", "selectedPaths", "parameters"))
+
     todo = [a for a in WANTED if a["name"] not in have]
+    stale = [a for a in WANTED if drifted(a)]
     print(f"  tools to create: {[a['name'] for a in todo]}")
+    print(f"  tools to replace (params drifted): {[a['name'] for a in stale]}")
     print(f"  call-end wf now: {live.get('callEndWorkflowIds')}")
     if not apply:
         ensure_call_end_workflow(False)
@@ -273,7 +297,12 @@ def main() -> None:
     s, d = req(f"/voice-ai/agents/{JUNE}", "PUT", body)
     print(f"\nPUT agent -> {s}" + ("" if s == 200 else f" {d}"))
 
-    for a in todo:
+    for a in stale:
+        old_id = have[a["name"]]["_id"]
+        s, d = req(f"/voice-ai/actions/{old_id}?locationId={LOC}&agentId={JUNE}", "DELETE")
+        print(f"DELETE stale {a['name']!r} -> {s}")
+
+    for a in todo + stale:
         s, d = req("/voice-ai/actions", "POST", {"locationId": LOC, "agentId": JUNE, **a})
         print(f"POST action {a['name']!r} -> {s}"
               + (f" id={d.get('_id')}" if s in (200, 201) and isinstance(d, dict) else f" {d}"))

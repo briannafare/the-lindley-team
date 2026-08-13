@@ -132,6 +132,28 @@ date were full of Mortgage Express language, assume this file is too. See the As
 
 ---
 
+## Applying: one link, no choosing
+
+Decided 2026-08-12. **Nobody should have to pick a loan officer to start an application.**
+
+- Both URLs live in **`src/lib/apply.ts`**, which is the single source. `deploy_june.py` reads
+  `APPLY_BRI` straight out of that file with a regex, so the site and June cannot drift apart.
+- **`/apply` is a server redirect** to `APPLY_DEFAULT` (Bri's `create_profile` link). Every "Apply",
+  "Apply now" and "Get pre-approved" button on the site, all 28 of them, still points at `/apply`
+  and now lands directly in the application.
+  - The `/apply` route carries `export const dynamic = "force-dynamic"`, and that line is
+    load-bearing. Prerendered, Next bakes the target into the RSC payload and serves a 307 with
+    **no `Location` header**, so a new tab from `target="_blank"` or a pasted URL gets an HTML page
+    instead of a redirect. Verified both ways with `curl -L`.
+- **`/apply/choose`** is the two-officer picker, the page `/apply` used to be. It is linked only
+  from `/about` (under Meet Your Guides) and from the per-person "Apply" link on each team card,
+  which now goes to that person's own application.
+- **June sends one link too.** Her `Text application link` tool used to text both and say "pick
+  whoever you've been talking to". It now sends the single link and says David and Bri both see it.
+  Her prompt explicitly forbids asking someone to choose an officer at application time.
+
+---
+
 ## Conversation AI (chat / SMS) — NOT built, and not buildable from here
 
 The website chat and SMS threads are the remaining gap. Two separate GHL products matter here and
@@ -211,9 +233,8 @@ Never let any agent say: "we're a bank", "we shop hundreds of lenders", "broker"
 
 1. **Alert emails go to the wrong inboxes.** `david@eighty5labs.com` and `hello@rinseitoff.com`,
    not `@movement.com`. Changing a GHL user's email changes their login. Confirm before touching.
-2. **Bri's application link is a `login` URL** (`easyapp.movement.com/apply/login?userid=10115700`)
-   while David's is `create_profile`. A brand-new borrower who picks Bri hits a sign-in wall. Same
-   bug on `/apply` and now in June's application text. Needs Bri's real application URL.
+2. ~~Bri's application link is a `login` URL~~ **Fixed 2026-08-12.** Bri supplied the real
+   `create_profile` URL. See "Applying" below.
 3. **`hl-david-chandler-team` is a second live sub-account** (`udDUy1eTol8oaFCyuryw`) holding 5
    Voice AI agents of its own, including one called "Linda" with 22 data-extraction fields and full
    booking. It is not wired to the website. Confirm `hl-lindley-team` is canonical and archive the

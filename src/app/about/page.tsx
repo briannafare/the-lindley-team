@@ -224,6 +224,13 @@ export default function AboutPage() {
                   </Guide>
                 </div>
 
+                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mt-10">
+                  Now that you&apos;ve met them both:{" "}
+                  <Link href="/apply/choose" className="underline decoration-ink/25 underline-offset-4 hover:text-orange hover:decoration-orange transition-colors">
+                    apply with David or with Bri
+                  </Link>. Either one is the right answer, and they sort it out between them.
+                </p>
+
                 <p className="text-[0.7rem] text-ink-light leading-relaxed mt-10">
                   Both work through Movement Mortgage, NMLS ID&nbsp;#39179. CDLP&reg; is a registered certification mark of the Divorce Lending Association.
                 </p>

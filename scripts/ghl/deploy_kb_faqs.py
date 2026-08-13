@@ -82,9 +82,11 @@ FAQS = {
         "email, so you do not have to come in.",
 
     "How do I apply":
-        "Head to thelindleyteam.com/apply and pick whoever you have been talking to, David or Bri. "
-        "It runs securely through Movement and takes about fifteen minutes. If something snags, "
-        "text 971-754-1771 and a human will unstick it.",
+        "Head to thelindleyteam.com/apply and it takes you straight into the application. No "
+        "picking anybody first. It runs securely through Movement and takes about fifteen minutes, "
+        "and David and Bri both see it. If you would rather apply with one of them specifically, "
+        "thelindleyteam.com/apply/choose has both. If something snags, text 971-754-1771 and a "
+        "human will unstick it.",
 
     "Do you do divorce lending":
         "Yes, and it is the thing the team is known for. Bri is a Certified Divorce Lending "
@@ -117,6 +119,24 @@ def req(path, method="GET", body=None):
         return e.code, (e.read() or b"")[:400].decode(errors="replace")
 
 
+def read_all_faqs() -> list[dict]:
+    """The list endpoint returns 10 rows and reports the real total in `count`. `&page=` is
+    silently ignored, which is how you end up creating duplicates of everything past row 10.
+    `&offset=` is the one that works. Assert the total before trusting the result."""
+    base = f"/knowledge-base/faqs?locationId={LOC}&knowledgeBaseId={KB_ID}"
+    s, d = req(base)
+    if s != 200:
+        sys.exit(f"read failed: {s} {d}")
+    faqs, total = list(d.get("faqs", [])), d.get("count", 0)
+    while len(faqs) < total:
+        s, d = req(f"{base}&offset={len(faqs)}")
+        if s != 200 or not d.get("faqs"):
+            break
+        faqs += d["faqs"]
+    assert len(faqs) == total, f"paged {len(faqs)} of {total} FAQs; refusing to guess"
+    return faqs
+
+
 def main() -> None:
     apply = "--apply" in sys.argv
 
@@ -124,10 +144,7 @@ def main() -> None:
         for bad in BANNED:
             assert bad.lower() not in (" " + a + " ").lower(), f"{q!r} contains banned {bad!r}"
 
-    s, d = req(f"/knowledge-base/faqs?locationId={LOC}&knowledgeBaseId={KB_ID}")
-    if s != 200:
-        sys.exit(f"read failed: {s} {d}")
-    live = {f["question"].rstrip("?").strip().lower(): f for f in d.get("faqs", [])}
+    live = {f["question"].rstrip("?").strip().lower(): f for f in read_all_faqs()}
 
     for q, a in FAQS.items():
         key = q.rstrip("?").strip().lower()
@@ -153,10 +170,13 @@ def main() -> None:
               f"add it here.")
 
     if apply:
-        s, d = req(f"/knowledge-base/faqs?locationId={LOC}&knowledgeBaseId={KB_ID}")
-        bad = [(f["question"], b) for f in d.get("faqs", []) for b in BANNED
+        back = read_all_faqs()
+        bad = [(f["question"], b) for f in back for b in BANNED
                if b.lower() in (" " + f["answer"] + " ").lower()]
-        print(f"\nread-back: {d.get('count')} FAQs live, banned-phrase hits: {bad or 'none'}")
+        dupes = [q for q in {f["question"] for f in back}
+                 if sum(1 for f in back if f["question"] == q) > 1]
+        print(f"\nread-back: {len(back)} FAQs live, banned-phrase hits: {bad or 'none'}, "
+              f"duplicates: {dupes or 'none'}")
     else:
         print("\ndry run. pass --apply to write.")
 
