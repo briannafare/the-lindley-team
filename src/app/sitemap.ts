@@ -34,7 +34,8 @@ const STATIC = [
   { path: "/calculator", priority: 0.6, freq: "monthly" as const },
   { path: "/calculators", priority: 0.8, freq: "monthly" as const },
   { path: "/contact", priority: 0.8, freq: "monthly" as const },
-  { path: "/apply", priority: 0.8, freq: "monthly" as const },
+  // /apply 307s straight to an application, so the picker is what belongs in the sitemap.
+  { path: "/apply/choose", priority: 0.8, freq: "monthly" as const },
   { path: "/first-time-buyer", priority: 0.9, freq: "monthly" as const },
   { path: "/privacy", priority: 0.3, freq: "yearly" as const },
 ];

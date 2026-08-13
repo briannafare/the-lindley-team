@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { APPLY_BRI, APPLY_DAVID } from "@/lib/apply";
 
 const PEOPLE: {
   src: string;
@@ -10,6 +11,8 @@ const PEOPLE: {
   bio: string;
   width: number;
   height: number;
+  /** This card names one person, so its Apply link goes to that person's application. */
+  apply: string;
 }[] = [
   // Met treatment: composed B&W first → warm/fun color on hover.
   {
@@ -19,6 +22,7 @@ const PEOPLE: {
     name: "David Chandler",
     role: "Mortgage Loan Officer",
     meta: "NMLS 265974 · Movement",
+    apply: APPLY_DAVID,
     bio: "Twenty-plus years in, and David explains a mortgage like someone with nothing to hide — plain, patient, down to the decimal. Most loans are simpler than the internet makes them look, and he'll tell you so; when yours isn't — self-employed, building, the price says jumbo — he's closed a few hundred like it. He invests in real estate himself, so he reads a deal like a buyer, not a brochure.",
     width: 1024,
     height: 1024,
@@ -30,6 +34,7 @@ const PEOPLE: {
     name: "Bri Lindley",
     role: "Mortgage Loan Officer · CDLP®",
     meta: "NMLS 1367416 · Movement",
+    apply: APPLY_BRI,
     bio: "A Southwest Portland local and one of the few Certified Divorce Lending Professionals in Oregon — the person attorneys call when a house is stuck in the middle of a divorce. She got into this because nothing sets people up for long-term wealth like owning where they live: it turns a necessity into an investment without much extra effort, and almost nobody says that part out loud. Before mortgages she trained surgeons on medical devices, which is about how she reads your file — carefully, out loud, until it makes sense.",
     width: 800,
     height: 1280,
@@ -93,12 +98,14 @@ export default function MeetTheTeam() {
               <h3 className="font-serif text-[clamp(26px,3vw,42px)] leading-none tracking-[-0.01em]">
                 {p.name}
               </h3>
-              <Link
-                href="/apply"
+              <a
+                href={p.apply}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-body text-[14px] font-medium shrink-0 underline decoration-ink/20 underline-offset-4 hover:text-orange hover:decoration-orange transition-colors"
               >
                 Apply →
-              </Link>
+              </a>
             </div>
             <p className="font-body text-[13px] text-ink-light mt-2.5">
               {p.role} · {p.meta}
