@@ -66,7 +66,6 @@ const nextConfig = {
       { source: "/overlook-neighborhood", destination: "/neighborhoods/overlook", permanent: true },
       { source: "/lending-options", destination: "/services", permanent: true },
       { source: "/home-loan-programs-portland", destination: "/services", permanent: true },
-      { source: "/services", destination: "/services", permanent: true },
       { source: "/divorce-lending", destination: "/services/divorce-lending", permanent: true },
       { source: "/mortgage-calculator-portland", destination: "/calculator", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },
@@ -76,7 +75,6 @@ const nextConfig = {
       { source: "/contact-us", destination: "/contact", permanent: true },
       { source: "/30-minute-meeting", destination: "/contact#schedule", permanent: true },
       { source: "/get-to-know-portland", destination: "/neighborhoods", permanent: true },
-      { source: "/blog", destination: "/blog", permanent: true },
       { source: "/privacy-policy", destination: "/privacy", permanent: true },
       // Old WordPress system/junk pages — send home so nothing 404s
       { source: "/sample-page", destination: "/", permanent: true },
