@@ -6,8 +6,11 @@ const SITE = 'https://thelindleyteam.com'
 
 export const revalidate = 3600
 
-function esc(s = '') {
-  return s
+// GROQ returns null (not undefined) for a field a document lacks, and a default
+// parameter only covers undefined — so one post without an excerpt took down the
+// entire feed with `null.replace`. Coalesce instead.
+function esc(s?: string | null) {
+  return (s ?? '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -23,7 +26,7 @@ export async function GET() {
       <title>${esc(p.title)}</title>
       <link>${SITE}/blog/${p.slug}</link>
       <guid isPermaLink="true">${SITE}/blog/${p.slug}</guid>
-      <pubDate>${new Date(p.date).toUTCString()}</pubDate>
+      ${Number.isNaN(new Date(p.date).getTime()) ? '' : `<pubDate>${new Date(p.date).toUTCString()}</pubDate>`}
       <description>${esc(p.excerpt)}</description>
       ${p.categoryLabel ? `<category>${esc(p.categoryLabel)}</category>` : ''}
     </item>`
