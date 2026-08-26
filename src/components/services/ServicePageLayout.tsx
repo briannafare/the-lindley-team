@@ -32,10 +32,12 @@ function ServiceSchema({ service }: { service: ServiceData }) {
     name: service.name,
     description: service.description,
     provider: {
-      "@type": "Person",
-      name: "Bri Lindley",
-      jobTitle: "Senior Loan Officer",
-      identifier: "NMLS #1367416",
+      "@type": "Organization",
+      name: "The Lindley Team at Movement Mortgage",
+      employee: [
+        { "@type": "Person", name: "David Chandler", jobTitle: "Mortgage Loan Officer", identifier: "NMLS #265974" },
+        { "@type": "Person", name: "Bri Lindley", jobTitle: "Mortgage Loan Officer", identifier: "NMLS #1367416" },
+      ],
     },
     areaServed: [
       { "@type": "State", name: "Oregon" },
@@ -73,13 +75,11 @@ export default function ServicePageLayout({
               >
                 ← Services
               </Link>
-              <h1 className="font-display text-[clamp(3rem,7vw,5.5rem)] font-extrabold leading-[0.95] tracking-tight mt-4 mb-6">
+              <h1 className="font-serif font-semibold text-[clamp(3rem,7.5vw,6rem)] leading-[0.92] tracking-[-0.02em] mt-4 mb-6">
                 {service.name.split(" ").map((word, i, arr) =>
                   i === arr.length - 1 ? (
-                    <span key={i}>
-                      <span className="font-script font-normal text-orange text-[0.85em]">
-                        {word}
-                      </span>
+                    <span key={i} className="italic font-medium text-orange">
+                      {word}
                     </span>
                   ) : (
                     <span key={i}>{word} </span>
@@ -114,7 +114,7 @@ export default function ServicePageLayout({
                 sizes="400px"
                 priority
               />
-              <div className="absolute inset-0 bg-orange/5 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[#ef44340d] mix-blend-multiply" />
             </div>
           </div>
         </div>
@@ -124,9 +124,9 @@ export default function ServicePageLayout({
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Overview
-            </p>
+            </h2>
             <div className="max-w-[720px]">
               <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal">
                 {service.description}
@@ -140,9 +140,9 @@ export default function ServicePageLayout({
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Who It&apos;s For
-            </p>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[720px]">
               {service.whoFor.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
@@ -161,9 +161,9 @@ export default function ServicePageLayout({
       <section className="py-16 border-t border-border bg-bg-alt">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               How It Works
-            </p>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[720px]">
               {service.process.map((step) => (
                 <div key={step.step}>
@@ -187,9 +187,9 @@ export default function ServicePageLayout({
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Requirements
-            </p>
+            </h2>
             <div className="max-w-[720px]">
               {service.requirements.map((req, i) => (
                 <div
@@ -205,9 +205,12 @@ export default function ServicePageLayout({
                 </div>
               ))}
               <p className="text-[0.78rem] text-ink-light font-normal leading-relaxed mt-5 border-l-2 border-border pl-4">
-                These are general guidelines. As a correspondent lender with an extensive wholesale network, we have access to additional programs with different requirements.{" "}
+                These are general guidelines, not a quote or commitment to lend. Actual terms depend
+                on credit approval, income, and underwriting — not all applicants will qualify, and
+                programs and requirements are subject to change without notice. Through Movement
+                Mortgage we have access to additional programs with different requirements.{" "}
                 <a href="/contact" className="underline hover:text-ink transition-colors">
-                  Contact Bri
+                  Contact David &amp; Bri
                 </a>{" "}
                 for options specific to your situation.
               </p>
@@ -220,9 +223,9 @@ export default function ServicePageLayout({
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
               Pros & Cons
-            </p>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[720px]">
               <div>
                 <h3 className="font-display text-sm font-bold uppercase tracking-[0.1em] text-ink mb-4">
@@ -260,9 +263,9 @@ export default function ServicePageLayout({
         <section className="py-16 border-t border-border bg-bg-alt">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Calculator
-              </p>
+              </h2>
               <div className="max-w-[720px]">{calculator}</div>
             </div>
           </div>
@@ -274,9 +277,9 @@ export default function ServicePageLayout({
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
             <div>
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-1">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-1">
                 FAQ
-              </p>
+              </h2>
               <p className="text-[0.78rem] text-ink-light">
                 {service.faqs.length} questions
               </p>
@@ -312,7 +315,7 @@ export default function ServicePageLayout({
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-tight text-ink mb-4">
             Ready to explore{" "}
-            <span className="font-script font-normal text-[0.9em]">
+            <span className="font-serif italic font-medium text-orange text-[0.95em]">
               {service.shortName.toLowerCase()}
             </span>
             ?

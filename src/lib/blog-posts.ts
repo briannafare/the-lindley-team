@@ -1,3 +1,8 @@
+// DEPRECATED — blog content now lives in Sanity (see src/sanity/).
+// Retained only as the historical record of the WordPress -> Next slug
+// mapping behind the 301s hardcoded in next.config.mjs. Nothing imports
+// this file any more. Safe to delete once those redirects are verified.
+
 // Blog post data migrated from WordPress (thelindleyteam.com)
 // Full content included where available; remaining posts need content fetched from URLs below
 

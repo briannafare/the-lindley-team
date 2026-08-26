@@ -7,14 +7,14 @@
 
 ### Source 1: DOCX Upload — "Services & Business Info"
 **File:** `lindley-team-knowledge-base.docx` (already built — download from outputs)
-**What it contains:** Team bios, correspondent lender explanation, all service descriptions, FAQ library, contact info, compliance text, booking info
+**What it contains:** Team bios, Movement Mortgage positioning, all service descriptions, FAQ library, contact info, compliance text, booking info
 **Update frequency:** Manual — update when services or business info change
 
 ### Source 2: CSV Table — "Product Types"
 **File:** `lindley-product-types.csv` (already built — download from outputs)
-**What it contains:** 20 broad product categories organized by type (Core, Non-QM, Specialty, Equity, Assistance, Government). Each row has what it is, who it is for, key benefit, and whether we fund it in-house or through our wholesale network. No specific lender names or guidelines that go stale — just enough for the AI to know what we CAN do and route to Bri for specifics
+**What it contains:** 20 broad product categories organized by type (Core, Non-QM, Specialty, Equity, Assistance, Government). Each row has what it is, who it is for, key benefit, and whether it's a core in-house program or a specialty program on Movement's shelf. No specific lender names or guidelines that go stale — just enough for the AI to know what we CAN do and route to Bri for specifics
 **Why CSV:** GHL's Table Search uses semantic matching — a visitor can ask "I'm self-employed and my tax returns look low" and the AI will surface Bank Statement Loans without the visitor knowing the product name
-**Update frequency:** Manual — update when you add/remove wholesale partners or product offerings change
+**Update frequency:** Manual — update when Movement's program shelf or your offerings change
 
 ### Source 3: CSV Table — "Portland Neighborhoods"
 **File:** `lindley-portland-neighborhoods.csv` (already built — download from outputs)
@@ -46,8 +46,8 @@
 **Auto-Refresh:** MONTHLY
 **Why:** Oregon down payment assistance programs change periodically. Monthly refresh ensures your AI agent has current program info when first-time buyers ask about DPA.
 
-### Source 8: Web Crawler — Mortgage Express Company Info
-**URL:** `https://mtgxps.mymortgage-online.com/`
+### Source 8: Web Crawler — Movement Mortgage Company Info
+**URL:** `https://easyapp.movement.com/`
 **Crawl type:** Exact URL
 **Auto-Refresh:** MONTHLY
 **Why:** Keeps your AI current with any company-level changes (licensing, compliance language, contact info).
@@ -61,10 +61,10 @@ Q: "What are your current rates?"
 A: "Rates change daily based on market conditions and your specific financial profile. Rather than giving you a number that'll be outdated by tomorrow, I'd recommend connecting with Bri for a personalized rate quote based on your situation. You can call or text 971-754-1771, or I can help you schedule a time."
 
 Q: "Are you a broker or a bank?"
-A: "Neither, actually. The Lindley Team is a correspondent lender operating under Mortgage Express. That means we fund most of our loans in-house through our own bank — which gives us faster closings and more control over the process. But when a different product fits better for your situation, we can also broker through our network of over 40 wholesale lending partners. You get the speed of a direct lender with the flexibility to access specialty products when you need them."
+A: "We're loan officers at Movement Mortgage. Same personal service you'd get from a small team, with a big company behind us, so most of our loan programs are in-house instead of brokered out. That means faster answers, more control of your file, and real room to be flexible on pricing. And if a specialty program fits your situation better, Movement's shelf is deep enough to find it."
 
 Q: "What types of loans do you offer?"
-A: "We offer a much wider range than most lenders. Beyond conventional, FHA, VA, and jumbo, we have access to bank statement loans for self-employed borrowers, DSCR loans for investors, ITIN loans, construction/renovation financing, bridge loans, manufactured home loans, reverse mortgages, HELOCs, down payment assistance programs, and more. Our wholesale lending network gives us access to specialty products most lenders cannot offer. What's your situation? I can point you toward the right product."
+A: "We offer a much wider range than most lenders. Beyond conventional, FHA, VA, and jumbo, we have bank statement loans for self-employed borrowers, DSCR loans for investors, ITIN loans, construction/renovation financing, bridge loans, manufactured home loans, reverse mortgages, HELOCs, down payment assistance programs, and more. Movement's program shelf runs deep, so specialty situations most lenders turn away usually have a path here. What's your situation? I can point you toward the right product."
 
 Q: "Do you charge for consultations?"
 A: "No — consultations with Bri are complimentary. Schedule a 30-minute conversation and she'll review your situation honestly. If something doesn't make sense, she'll tell you."
@@ -85,7 +85,7 @@ A: "Tammi is Bri's mom and co-founded The Lindley Team. She built the business o
 | FHFA loan limits | Monthly | Annual change, monthly catches it |
 | Freddie Mac rates | Weekly | Published every Thursday |
 | Oregon OHCS | Monthly | Program changes periodically |
-| Mortgage Express | Monthly | Company info changes rarely |
+| Movement Mortgage | Monthly | Company info changes rarely |
 | Product types CSV | Manual | You control when products change |
 | Neighborhoods CSV | Quarterly | Prices and businesses shift slowly |
 | Services DOCX | Manual | Core business info changes rarely |
@@ -106,7 +106,7 @@ When loan limits change, or rates shift significantly, your Knowledge Base updat
 **Content that needs manual updates:**
 - Median home prices on neighborhood pages → Update quarterly in Sanity CMS (later) or directly
 - Service page requirements → Update in `services.ts` when guidelines change
-- Product types CSV → Update when wholesale relationships change
+- Product types CSV → Update when Movement's program shelf changes
 
 **Claude Code note:** Tell Claude Code to NEVER hardcode loan limits, specific rate numbers, or DPA dollar amounts in the website. Always use language like "current conforming loan limits" or "today's rates" and point to your calculator or a contact CTA. This way the content never goes stale.
 
@@ -121,7 +121,7 @@ With all 9 sources configured, your Conversation AI and Voice AI agents can accu
 - "What neighborhoods are good for families under $500k?" → Semantic search on neighborhoods CSV
 - "What's the current conforming loan limit?" → Auto-refreshed from FHFA
 - "How are rates trending?" → Weekly Freddie Mac data (with caveat to contact Bri for specifics)
-- "Do you do ITIN loans?" → Yes, through wholesale partners
+- "Do you do ITIN loans?" → Ask us and we'll check the current program options for your situation
 - "Can I buy a manufactured home?" → Yes, on land or in parks, multiple options
 - "Tell me about Sellwood" → Neighborhood-specific data
 - "What DPA programs are available in Oregon?" → Auto-refreshed from OHCS

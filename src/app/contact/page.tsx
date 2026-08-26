@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
+import BookingCalendar from "@/components/BookingCalendar";
 
 export const metadata: Metadata = {
   title: "Contact The Lindley Team | Portland Mortgage | NMLS #1367416",
@@ -15,20 +17,14 @@ export default function ContactPage() {
       <main>
 
         {/* Hero */}
-        <section className="pt-40 pb-20 relative overflow-hidden">
+        <section className="pt-[clamp(36px,6vh,72px)] pb-[clamp(80px,10vw,144px)] relative overflow-hidden">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-border">
-              <span className="w-1.5 h-1.5 rounded-full bg-orange" />
-              <span className="text-[0.72rem] font-medium text-ink-mid tracking-[0.04em]">
-                Usually responds within 2 hours during business hours
-              </span>
-            </div>
-            <h1 className="font-display text-[clamp(3rem,8vw,6rem)] font-extrabold leading-[0.95] tracking-tight mb-6">
+            <h1 className="font-serif text-[clamp(3rem,8vw,6rem)] font-semibold leading-[0.92] tracking-[-0.03em] mb-6">
               Let&apos;s<br />
-              <span className="font-script font-normal text-orange text-[0.9em]">Talk</span>
+              <em className="italic font-medium text-orange">Talk</em>
             </h1>
             <p className="text-lg text-ink-mid font-normal leading-relaxed max-w-[540px]">
-              No sales pressure. Tell us where you are and we&apos;ll tell you honestly what makes sense.
+              Tell us what&apos;s going on. You&apos;ll get a straight answer about what makes sense — even when the answer is &ldquo;not yet.&rdquo;
             </p>
           </div>
         </section>
@@ -37,10 +33,10 @@ export default function ContactPage() {
         <section className="py-16 border-t border-border">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Reach Us
-              </p>
-              <div className="max-w-[720px]">
+              </h2>
+              <div className="max-w-[820px] rounded-[1.5rem] border border-border bg-paper px-5 sm:px-7">
                 {[
                   {
                     label: "Phone",
@@ -50,19 +46,19 @@ export default function ContactPage() {
                   },
                   {
                     label: "Email",
-                    display: "LindleyTeam@mtgxps.com",
-                    href: "mailto:LindleyTeam@mtgxps.com",
+                    display: "brianna.lindley@movement.com",
+                    href: "mailto:brianna.lindley@movement.com",
                     isLink: true,
                   },
                   {
                     label: "Office",
-                    display: "15115 SW Sequoia Pkwy, Suite 100, Portland OR 97224",
+                    display: "10135 SE Sunnyside Rd, Ste 125, Clackamas OR 97015",
                     href: null,
                     isLink: false,
                   },
                   {
                     label: "Hours",
-                    display: "Monday–Friday 8am–6pm · Saturday by appointment",
+                    display: "24/7 — answered by a real person, no voicemail",
                     href: null,
                     isLink: false,
                   },
@@ -75,7 +71,7 @@ export default function ContactPage() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex justify-between items-baseline py-4 border-b border-border first:border-t"
+                    className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-baseline py-4 border-b border-border first:border-t"
                   >
                     <span className="text-[0.88rem] font-semibold text-ink shrink-0 mr-8">
                       {item.label}
@@ -83,12 +79,12 @@ export default function ContactPage() {
                     {item.isLink && item.href ? (
                       <a
                         href={item.href}
-                        className="text-[0.88rem] text-ink-mid font-normal text-right hover:text-ink transition-colors"
+                        className="text-[0.88rem] text-ink-mid font-normal sm:text-right hover:text-ink transition-colors"
                       >
                         {item.display}
                       </a>
                     ) : (
-                      <span className="text-[0.88rem] text-ink-mid font-normal text-right">
+                      <span className="text-[0.88rem] text-ink-mid font-normal sm:text-right">
                         {item.display}
                       </span>
                     )}
@@ -100,20 +96,31 @@ export default function ContactPage() {
         </section>
 
         {/* Schedule a Call — GHL Widget Placeholder */}
-        <section className="py-16 border-t border-border bg-bg-alt">
+        <section id="schedule" className="py-16 border-t border-border bg-bg-alt scroll-mt-24">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-                Book Time
-              </p>
-              <div className="max-w-[720px]">
-                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-6">
-                  Pick a time that works for you. These calls are low-key — no pitch, no pressure. Just an honest look at your situation.
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+                Grab a Time
+              </h2>
+              <div className="max-w-[1120px]">
+                <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-10 max-w-[760px]">
+                  Tell us where you are — buying, refinancing, divorce lending, or just exploring. No pitch, no pressure. Book a time below, or send a message and we&apos;ll reach out with an honest look at your situation.
                 </p>
-                {/* GHL Scheduling Widget — integrate here */}
-                <div className="border-2 border-dashed border-border rounded-2xl p-12 text-center">
-                  <p className="text-ink-light text-sm">Scheduling widget coming soon</p>
-                  <p className="text-ink-light text-xs mt-2">In the meantime, call (971) 754-1771</p>
+                <div className="grid items-start gap-8 xl:grid-cols-[1.05fr_0.95fr]">
+                  <div>
+                    <p className="text-[0.68rem] font-bold tracking-[0.16em] uppercase text-ink-light mb-4">
+                      Choose a time
+                    </p>
+                    {/* Self-serve booking — pulls the right GHL calendar per request type.
+                        Set NEXT_PUBLIC_GHL_CAL_SCHEDULE (see .env.local.example). */}
+                    <BookingCalendar type="schedule" />
+                  </div>
+                  <div>
+                    <p className="text-[0.68rem] font-bold tracking-[0.16em] uppercase text-ink-light mb-4">
+                      Or send a message
+                    </p>
+                    <ContactForm formType="schedule" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -124,9 +131,9 @@ export default function ContactPage() {
         <section className="py-16 border-t border-border">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 The Process
-              </p>
+              </h2>
               <div className="max-w-[720px] grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
@@ -137,7 +144,7 @@ export default function ContactPage() {
                   {
                     step: "02",
                     title: "We review your options",
-                    desc: "Bri will run your numbers and show you the full picture — including options you might not have known existed.",
+                    desc: "David or Bri runs your numbers and shows you the full picture — including options you might not have known existed.",
                   },
                   {
                     step: "03",
@@ -168,17 +175,15 @@ export default function ContactPage() {
         <section className="py-16 border-t border-border bg-bg-alt">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-              <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
+              <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
                 Apply Now
-              </p>
+              </h2>
               <div className="max-w-[720px]">
                 <p className="text-[1.05rem] leading-[1.8] text-ink-mid font-normal mb-6">
                   Ready to move forward? Start your application online — it takes about 15 minutes and you can save your progress.
                 </p>
                 <a
-                  href="https://mtgxps.mymortgage-online.com/loan-app/?siteId=1878266072&lar=blindley&workFlowId=71729"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/apply"
                   className="px-8 py-4 bg-ink text-white rounded-full text-[0.78rem] font-bold tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2"
                 >
                   Start Application <span>→</span>
@@ -193,18 +198,18 @@ export default function ContactPage() {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
               <div>
-                <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-3">
+                <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light mb-3">
                   Our Office
-                </p>
+                </h2>
                 <p className="text-[0.88rem] text-ink-mid font-normal leading-relaxed">
-                  15115 SW Sequoia Pkwy<br />
-                  Suite 100<br />
-                  Portland OR 97224
+                  10135 SE Sunnyside Rd<br />
+                  Ste 125<br />
+                  Clackamas OR 97015
                 </p>
               </div>
-              <div className="rounded-2xl overflow-hidden" style={{ height: "400px" }}>
+              <div className="rounded-[1.5rem] overflow-hidden border border-border" style={{ height: "400px" }}>
                 <iframe
-                  src="https://maps.google.com/maps?q=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed"
+                  src="https://maps.google.com/maps?q=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

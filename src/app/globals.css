@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Accent — Sanity's EXACT wide-gamut (P3) red-orange, copied verbatim. On P3 displays
+   (Mac/iPhone) this renders MORE vivid than any sRGB hex — it will not match a hex
+   swatch, and that extra punch is the whole point. sRGB #ef4434 fallback for the rest. */
+:root {
+  --accent: #ef4434;
+}
+@supports (color: color(display-p3 0.898 0.297 0.224)) {
+  :root {
+    --accent: color(display-p3 0.898 0.297 0.224);
+  }
+}
+
+/* Mortgage calculator suite — shared field/card primitives (ported from the
+   calculator suite so every calculator page reads as one system). */
+@layer components {
+  .input-field {
+    @apply w-full rounded-[1.25rem] border border-border bg-white px-4 py-3 text-sm text-ink transition-all duration-200;
+  }
+  .input-field::placeholder {
+    @apply text-ink-400;
+  }
+  .input-field:focus {
+    @apply outline-none border-ink;
+  }
+  .input-label {
+    @apply block text-[0.75rem] font-semibold uppercase tracking-[0.18em] text-ink-light mb-3;
+  }
+  .input-helper {
+    @apply text-sm text-ink-mid;
+  }
+  .section-card {
+    @apply rounded-[1.75rem] border border-border bg-white p-6;
+  }
+  .section-title {
+    @apply mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-ink-light;
+  }
+  .result-card {
+    @apply rounded-[1.75rem] border border-border bg-white p-6 shadow-card;
+  }
+  .result-card:hover {
+    @apply shadow-card-hover;
+  }
+}
+
 /* Noise overlay */
 body::after {
   content: "";
@@ -16,12 +60,44 @@ body::after {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* A calmer reading rhythm across every template. */
+:where(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+:where(p, li) {
+  text-wrap: pretty;
+}
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+:where(button, input, textarea, select) {
+  font: inherit;
+}
+
+/* Prevent long addresses, email addresses, and regulatory strings from
+   forcing horizontal scroll on narrow phones. */
+:where(main, footer) :where(p, a, span) {
+  overflow-wrap: anywhere;
 }
 
 /* Selection color */
 ::selection {
-  background: #F2FF91;
-  color: #222;
+  background: #DDE84B;
+  color: #0D0D0D;
 }
 
 /* Image treatments */
@@ -62,4 +138,103 @@ html {
 
 .animate-marquee {
   animation: scroll-marquee 50s linear infinite;
+}
+
+/* Reusable, intentionally quiet horizontal rails. The visible edge of the
+   next item provides the affordance without adding instructional copy. */
+.mobile-rail {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-rail::-webkit-scrollbar {
+  display: none;
+}
+
+/* Embedded third-party widgets should never push beyond the viewport. */
+iframe {
+  max-width: 100%;
+}
+
+/* Long-form templates keep related content clustered inside each section,
+   while the sections themselves get enough room to read as distinct ideas. */
+main section.py-16 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+main section.py-20 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+main section.py-32 {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+@media (max-width: 767px) {
+  /* Most inner pages used desktop-scale vertical rhythm on phones. These
+     overrides keep every section distinct while making long SEO-rich pages
+     much easier to scan. */
+  main > section.py-16,
+  main section.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  main > section.py-20,
+  main section.py-20 {
+    padding-top: 4.75rem;
+    padding-bottom: 4.75rem;
+  }
+
+  main > section.py-32,
+  main section.py-32 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  main .px-6,
+  footer .px-6 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Keep tap targets reliable even when legacy page buttons use compact
+     padding utilities. */
+  :where(main, footer) :where(a, button)[class*="rounded-full"] {
+    min-height: 44px;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  textarea,
+  select {
+    min-height: 48px;
+    font-size: 16px !important; /* prevents iOS input zoom */
+  }
+
+  .booking-calendar {
+    min-height: 600px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .gsap-reveal {
+    opacity: 1;
+    transform: none;
+  }
 }

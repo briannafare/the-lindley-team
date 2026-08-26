@@ -1,202 +1,123 @@
-"use client";
-
-import Link from "next/link";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import Btn from "@/components/Btn";
+import HeroPathways from "@/components/HeroPathways";
+import { GOOGLE_REVIEWS } from "@/lib/links";
 
 export default function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({ delay: 0.3 });
-
-      tl.from(".hero-label", {
-        y: 20,
-        duration: 0.5,
-        ease: "power3.out",
-      })
-        .from(
-          ".hero-title-line",
-          {
-            y: 60,
-            duration: 0.7,
-            ease: "power3.out",
-            stagger: 0.12,
-          },
-          "-=0.2"
-        )
-        .from(
-          ".hero-script",
-          {
-            scale: 0.9,
-            duration: 0.6,
-            ease: "power3.out",
-          },
-          "-=0.3"
-        )
-        .from(
-          ".hero-sub",
-          {
-            y: 30,
-            duration: 0.5,
-            ease: "power3.out",
-          },
-          "-=0.2"
-        )
-        .from(
-          ".hero-btn",
-          {
-            y: 20,
-            duration: 0.4,
-            ease: "power3.out",
-            stagger: 0.1,
-          },
-          "-=0.2"
-        );
-
-      // SVG decorations
-      gsap.from(".hero-circle", {
-        strokeDashoffset: 1760,
-        duration: 2,
-        ease: "power2.inOut",
-        delay: 0.6,
-      });
-
-      gsap.to(".hero-circle-group", {
-        rotation: 360,
-        duration: 120,
-        repeat: -1,
-        ease: "none",
-        transformOrigin: "center center",
-      });
-    },
-    { scope: sectionRef }
-  );
-
   return (
-    <section
-      ref={sectionRef}
-      className="min-h-screen flex items-end relative overflow-hidden pb-16 lg:pb-20 bg-ink text-white"
-    >
-      {/* Decorative SVG elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Large rotating circle */}
-        <svg
-          className="absolute -top-[15%] -right-[10%] w-[700px] h-[700px] hero-circle-group"
-          viewBox="0 0 700 700"
-        >
-          <circle
-            className="hero-circle"
-            cx="350"
-            cy="350"
-            r="280"
-            stroke="#E26125"
-            strokeWidth="0.75"
-            fill="none"
-            opacity="0.15"
-            strokeDasharray="1760"
-            strokeDashoffset="0"
-          />
-          <circle
-            cx="350"
-            cy="350"
-            r="200"
-            stroke="#3554D9"
-            strokeWidth="0.5"
-            fill="none"
-            opacity="0.08"
-            strokeDasharray="8 8"
-          />
-        </svg>
+    <section className="bg-paper pt-[clamp(18px,3.5vh,44px)] pb-[clamp(64px,9vw,120px)] overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-5 lg:px-[54px]">
+        {/* GALLERY POSTER. One editorial system across breakpoints: the serif
+            headline is the star, the photo is a matted print floating on a flat
+            lime block (the collage/Met signature), set in intentional negative
+            space. Desktop: type sweeps wide-left, the print anchors lower-right,
+            pitch + CTAs beneath the type. Mobile: the same three parts reflow —
+            kicker+headline, the print, then pitch + CTAs — sized so the buttons
+            stay on-screen. No text over the photo (Met keeps type on white). */}
+        <div className="grid lg:grid-cols-12 lg:gap-x-10 lg:items-start">
+          {/* HEADLINE + kicker — the star */}
+          <div className="lg:col-start-1 lg:col-end-9 lg:row-start-1">
+            <div className="mb-3 flex items-center gap-3 lg:mb-6">
+              <span className="h-px w-9 bg-ink/40" aria-hidden />
+              <span className="font-body text-[11px] font-semibold uppercase tracking-[0.24em] text-ink-light">
+                Portland mortgage lenders
+              </span>
+            </div>
+            <h1 className="font-serif font-semibold text-ink text-[clamp(32px,5.4vw,74px)] leading-[0.96] lg:leading-[0.94] tracking-[-0.03em] pb-[0.06em]">
+              <span className="hero-line block">
+                Nobody{" "}
+                <em className="not-italic relative inline-block">
+                  <span className="font-medium italic text-orange">dreams</span>
+                  <svg className="hero-underline absolute -bottom-1 left-0 w-full" height="10" viewBox="0 0 120 14" preserveAspectRatio="none" aria-hidden>
+                    <path d="M2 9 C30 2, 90 2, 118 8" stroke="var(--accent)" strokeWidth="3" fill="none" strokeLinecap="round" />
+                  </svg>
+                </em>{" "}
+                about getting a mortgage.
+              </span>
+              <span className="hero-line block">
+                You dream about <span className="font-medium italic text-orange">the home.</span>
+              </span>
+            </h1>
+          </div>
 
-        {/* Portland bridge silhouette — abstract St. Johns arches */}
-        <svg
-          className="absolute bottom-[5%] right-[5%] w-[500px] h-[200px] opacity-[0.06]"
-          viewBox="0 0 500 200"
-          fill="none"
-        >
-          <path
-            d="M0 180 Q60 40 120 180 Q180 40 240 180 Q300 40 360 180 Q420 40 500 180"
-            stroke="white"
-            strokeWidth="1"
-          />
-          <line x1="60" y1="180" x2="60" y2="200" stroke="white" strokeWidth="0.5" />
-          <line x1="180" y1="180" x2="180" y2="200" stroke="white" strokeWidth="0.5" />
-          <line x1="300" y1="180" x2="300" y2="200" stroke="white" strokeWidth="0.5" />
-          <line x1="420" y1="180" x2="420" y2="200" stroke="white" strokeWidth="0.5" />
-        </svg>
+          {/* MEDIA — matted print: photo on a flat lime block, offset like a
+              collage. A contained object (not a full-bleed band) so it reads as
+              a placed print on both screens. */}
+          <div className="hero-media -mx-5 mt-6 lg:mx-0 lg:mt-0 lg:col-start-9 lg:col-end-13 lg:row-start-1 lg:row-span-2 lg:self-center lg:pt-2">
+            <div className="relative">
+              <div className="absolute inset-0 bg-lime translate-y-3 lg:translate-x-4 lg:translate-y-4" aria-hidden />
+              <div className="hero-visual relative overflow-hidden aspect-[2/1] lg:aspect-[4/5]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/img/hero-moving-day.webp"
+                  alt="Overhead shot of someone lying arms-out on the bare floor of their new living room on move-in day, boxes and a pizza box beside them"
+                  width="1260"
+                  height="672"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-full h-full object-cover object-[58%_42%] saturate-[0.96] contrast-[1.02]"
+                />
+              </div>
+            </div>
+            <p className="hero-caption hidden lg:block font-serif text-ink text-[clamp(14px,1.3vw,17px)] leading-relaxed mt-5">
+              <span className="italic">&ldquo;This is the part you dream about.&rdquo;</span>
+              <span className="block not-italic text-ink-light mt-1">
+                We&rsquo;ll make the financing part easier. &mdash; David &amp; Bri
+              </span>
+            </p>
+          </div>
 
-        {/* Mt. Hood outline */}
-        <svg
-          className="absolute bottom-[8%] right-[25%] w-[300px] h-[150px] opacity-[0.04]"
-          viewBox="0 0 300 150"
-          fill="none"
-        >
-          <path
-            d="M0 150 L120 30 L150 50 L170 20 L200 60 L300 150"
-            stroke="white"
-            strokeWidth="1"
-          />
-        </svg>
+          {/* BODY — pitch, CTAs, proof, licensing */}
+          <div className="mt-5 lg:mt-8 lg:col-start-1 lg:col-end-8 lg:row-start-2">
+            <p className="hero-sub max-w-[52ch] text-[clamp(16px,1.3vw,21px)] text-ink-mid leading-snug lg:leading-relaxed">
+              We handle the part nobody dreams about, so you know your real numbers
+              before you fall for a house.
+            </p>
 
-        {/* Dot grid — architectural motif */}
-        <svg className="absolute top-[10%] left-[5%] w-[200px] h-[200px] opacity-[0.05]" viewBox="0 0 200 200">
-          <pattern id="hero-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1.5" fill="white" />
-          </pattern>
-          <rect width="200" height="200" fill="url(#hero-dots)" />
-        </svg>
+            <p className="max-w-[62ch] text-[clamp(14px,1vw,16px)] text-ink-light leading-relaxed mt-4">
+              David Chandler and Bri Lindley start with your actual situation: your income,
+              your timeline, and what you need this house to do for you. Then we walk you
+              through a{" "}
+              <strong className="font-semibold text-ink">Mortgage Cost Analysis</strong> &mdash;
+              a side-by-side breakdown of your real options, down to the decimal, so you can
+              see what each one costs you over the years you plan to keep it.
+            </p>
 
-        {/* Blue accent arc */}
-        <svg
-          className="absolute top-[30%] right-[20%] w-[120px] h-[120px] opacity-[0.12]"
-          viewBox="0 0 120 120"
-          fill="none"
-        >
-          <path
-            d="M10 110 A90 90 0 0 1 110 10"
-            stroke="#3554D9"
-            strokeWidth="1"
-          />
-        </svg>
-      </div>
+            <div className="hero-cta grid sm:flex sm:flex-wrap items-center gap-3 sm:gap-x-4 mt-5 sm:mt-7">
+              <Btn href="/contact#schedule" variant="accent" size="lg" className="w-full sm:w-auto justify-between">
+                Get Your Free Mortgage Cost Analysis
+              </Btn>
+              <Btn href="#how-it-works" variant="outline" size="lg" className="w-full sm:w-auto justify-between">
+                See How It Works
+              </Btn>
+            </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-10">
-        <p className="hero-label text-[0.72rem] font-medium tracking-[0.2em] uppercase text-white/50 mb-8">
-          Portland, Oregon · Mortgage Strategy
-        </p>
-
-        <h1 className="font-display text-[clamp(4.5rem,10vw,10rem)] font-light leading-[0.92] tracking-tight max-w-[800px] mb-10">
-          <span className="hero-title-line block">The Lindley</span>
-          <span className="hero-script font-script font-normal text-orange leading-none text-[1.15em] inline-block">
-            Team
-          </span>
-        </h1>
-
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8">
-          <p className="hero-sub text-[0.95rem] leading-relaxed text-white/50 font-normal max-w-[400px]">
-            Three decades helping Portland families build wealth through real
-            estate — not just buy houses.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              href="/apply"
-              className="hero-btn px-8 py-4 bg-white text-ink rounded-full text-[0.78rem] font-medium tracking-[0.04em] uppercase hover:scale-[1.03] hover:shadow-xl transition-all inline-flex items-center gap-2"
-            >
-              Get Pre-Approved <span>→</span>
-            </Link>
-            <Link
-              href="/neighborhoods"
-              className="hero-btn px-8 py-4 border-[1.5px] border-white/30 text-white rounded-full text-[0.78rem] font-medium tracking-[0.04em] uppercase hover:border-white transition-all inline-flex items-center gap-2"
-            >
-              Explore Portland <span>→</span>
-            </Link>
+            {/* Trust line — reviews, experience, licensing. */}
+            <div className="hero-proof mt-6 flex flex-wrap items-center gap-x-3 gap-y-1.5 font-body text-[13px] text-ink-light">
+              <a
+                href={GOOGLE_REVIEWS}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group/rev flex items-center gap-2 hover:text-orange transition-colors"
+              >
+                <span className="text-orange" aria-hidden>★★★★★</span>
+                <span className="font-semibold text-ink group-hover/rev:text-orange transition-colors">156</span>
+                <span className="underline decoration-ink/20 underline-offset-4 group-hover/rev:decoration-orange transition-colors">
+                  five-star Google reviews
+                </span>
+              </a>
+              <span aria-hidden className="text-ink-light/50">·</span>
+              <span>35 years combined experience</span>
+              <span aria-hidden className="text-ink-light/50">·</span>
+              <span>NMLS #265974 / #1367416</span>
+            </div>
+            {/* Movement's NMLS ID — required visible. */}
+            <p className="font-body text-[10.5px] tracking-[0.02em] text-ink-light/70 mt-2 leading-relaxed">
+              Movement Mortgage NMLS #39179 · Equal Housing Lender
+            </p>
           </div>
         </div>
+
+        <HeroPathways />
       </div>
     </section>
   );

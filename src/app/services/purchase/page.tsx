@@ -19,7 +19,7 @@ export default function PurchasePage() {
       <Nav />
       <ServicePageLayout
         service={service}
-        calculator={<MortgageCalculator variant="full" />}
+        calculator={<MortgageCalculator variant="compact" />}
       />
       <Footer />
     </>
