@@ -16,11 +16,6 @@ function formatSlug(slug: string): string {
     .join(" ");
 }
 
-function formatPrice(n: number): string {
-  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(2)}M`;
-  return `$${(n / 1_000).toFixed(0)}k`;
-}
-
 const SERVICE_NAMES: Record<string, string> = {
   purchase: "Purchase Loans",
   refinance: "Refinancing",
@@ -95,53 +90,6 @@ function FAQSchema({ faqs }: { faqs: NeighborhoodData["faqs"] }) {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
-  );
-}
-
-// ---------- Score Bar ----------
-
-function ScoreBar({
-  label,
-  score,
-  color,
-}: {
-  label: string;
-  score: number;
-  color: string;
-}) {
-  return (
-    <div className="flex items-center gap-4">
-      <div className={`font-display text-3xl font-extrabold ${color} w-14 shrink-0`}>
-        {score}
-      </div>
-      <div className="flex-1">
-        <div className="text-[0.72rem] font-bold tracking-[0.1em] uppercase text-ink-light mb-1.5">
-          {label}
-        </div>
-        <div className="h-1.5 bg-border rounded-full overflow-hidden">
-          <div
-            className={`h-full rounded-full transition-all ${color === "text-orange" ? "bg-orange" : color === "text-blue" ? "bg-blue" : "bg-green-500"}`}
-            style={{ width: `${score}%` }}
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ---------- Rating Dots ----------
-
-function RatingDots({ rating }: { rating: number }) {
-  return (
-    <div className="flex items-center gap-1">
-      {Array.from({ length: 10 }).map((_, i) => (
-        <span
-          key={i}
-          className={`w-2 h-2 rounded-full ${i < rating ? "bg-orange" : "bg-border"}`}
-        />
-      ))}
-      <span className="ml-1.5 text-[0.72rem] text-ink-light font-normal">{rating}/10</span>
-    </div>
   );
 }
 
@@ -236,13 +184,7 @@ export default function NeighborhoodPageLayout({
                     {para}
                   </p>
                 ))}
-              </div>
-              <div className="space-y-5">
-                <ScoreBar label="Walk Score" score={neighborhood.walkScore} color="text-orange" />
-                <ScoreBar label="Bike Score" score={neighborhood.bikeScore} color="text-blue" />
-                <ScoreBar label="Transit Score" score={neighborhood.transitScore} color="text-green-500" />
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </div>
       </section>
@@ -381,7 +323,6 @@ export default function NeighborhoodPageLayout({
                       <div className="text-[0.78rem] text-ink-light mb-2">
                         Grades {school.grades}
                       </div>
-                      <RatingDots rating={school.rating} />
                     </div>
                   </div>
                 ))}
@@ -416,34 +357,6 @@ export default function NeighborhoodPageLayout({
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 7. Home Prices ─────────────────────────────────────── */}
-      <section className="py-16 border-t border-border bg-bg-alt">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
-            <h2 className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-ink-light">
-              The Market
-            </h2>
-            <div className="max-w-[720px]">
-              <div className="font-display text-4xl font-extrabold text-ink mb-2">
-                {formatPrice(neighborhood.medianHomePrice)}
-              </div>
-              <div className="text-[0.78rem] text-ink-light uppercase tracking-[0.08em] mb-1">
-                Median Home Price
-              </div>
-              <div className="text-[0.88rem] text-ink-mid mt-3 mb-6">
-                Typical range:{" "}
-                <span className="font-semibold text-ink">
-                  {formatPrice(neighborhood.priceRange.low)} – {formatPrice(neighborhood.priceRange.high)}
-                </span>
-              </div>
-              <p className="text-[0.82rem] text-ink-light font-normal leading-relaxed border-l-2 border-border pl-4">
-                Prices shown are estimates based on recent sales. Contact David &amp; Bri for current market data.
-              </p>
             </div>
           </div>
         </div>

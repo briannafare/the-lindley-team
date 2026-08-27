@@ -2,7 +2,6 @@ export interface School {
   name: string;
   type: "elementary" | "middle" | "high" | "private" | "charter";
   grades: string;
-  rating: number;
 }
 
 export interface Park {
@@ -43,17 +42,12 @@ export interface NeighborhoodData {
   personality: string;
   mapEmbedSrc: string;
   directionsSrc: string;
-  walkScore: number;
-  bikeScore: number;
-  transitScore: number;
   schoolDistrict: string;
   schools: School[];
   parks: Park[];
   restaurants: Place[];
   coffee: Place[];
   bars: Place[];
-  medianHomePrice: number;
-  priceRange: { low: number; high: number };
   commuteToDowntown: string;
   faqs: Array<{ q: string; a: string }>;
   testimonials: Testimonial[];
@@ -80,14 +74,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Mt+Scott+Arleta+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Mt+Scott+Arleta+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 77,
-    bikeScore: 78,
-    transitScore: 45,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Arleta Elementary", type: "elementary", grades: "PK–5", rating: 5 },
-      { name: "Lane Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Franklin High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Arleta Elementary", type: "elementary", grades: "PK–5" },
+      { name: "Lane Middle School", type: "middle", grades: "6–8" },
+      { name: "Franklin High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -117,8 +108,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Foster Gardens", vibe: "Neighborhood taproom with a big patio and Oregon brews" },
       { name: "Mad Hanna", vibe: "Quirky spot off SE 82nd — backyard fire pits and karaoke nights" },
     ],
-    medianHomePrice: 468000,
-    priceRange: { low: 380000, high: 600000 },
     commuteToDowntown:
       "About 18 minutes by car outside rush hour via SE Foster or Powell to the bridges — longer when Foster backs up. Roughly 20 minutes by bike on the neighborhood greenways. Bus lines on Foster and SE 72nd reach downtown in about 35–45 minutes.",
     faqs: [
@@ -165,14 +154,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Sellwood+Moreland+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Sellwood+Moreland+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 71,
-    bikeScore: 92,
-    transitScore: 51,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Duniway Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Sellwood Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Cleveland High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Duniway Elementary", type: "elementary", grades: "K–5" },
+      { name: "Sellwood Middle School", type: "middle", grades: "6–8" },
+      { name: "Cleveland High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -201,8 +187,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "The Sellwood Bar", vibe: "Neighborhood dive, pool table, no pretense" },
       { name: "The Observatory", vibe: "Doubles as a bar after dinner — good rotating taps" },
     ],
-    medianHomePrice: 620000,
-    priceRange: { low: 480000, high: 1100000 },
     commuteToDowntown: "20–25 min by car (35+ in rush hour), 10 min by bike via Springwater + Hawthorne Bridge, 40 min by bus",
     faqs: [
       {
@@ -249,13 +233,10 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Buckman+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Buckman+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 88,
-    bikeScore: 94,
-    transitScore: 72,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Buckman Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Lincoln High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Buckman Elementary", type: "elementary", grades: "K–5" },
+      { name: "Lincoln High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -280,8 +261,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "East Burn", vibe: "Gastropub on E Burnside, big covered patio, local crowd" },
       { name: "Aalto Lounge", vibe: "SE Belmont spot, cocktails, low-key" },
     ],
-    medianHomePrice: 470000,
-    priceRange: { low: 320000, high: 800000 },
     commuteToDowntown: "8 min by bike, 12–15 min by car, 10 min on MAX, 15 min on bus",
     faqs: [
       {
@@ -327,14 +306,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Alberta+Arts+District+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Alberta+Arts+District+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 75,
-    bikeScore: 88,
-    transitScore: 55,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Sabin Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Jefferson High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Sabin Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "Jefferson High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -360,8 +336,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "The Bye and Bye", vibe: "1011 NE Alberta, craft cocktails, hanging plants everywhere, been here since it mattered" },
       { name: "Radio Room", vibe: "Rooftop bar, NE Alberta, good for summer evenings" },
     ],
-    medianHomePrice: 480000,
-    priceRange: { low: 350000, high: 800000 },
     commuteToDowntown: "25 min by car, 20 min by bike via Burnside Bridge, 30–35 min by bus",
     faqs: [
       {
@@ -408,13 +382,10 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Pearl+District+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Pearl+District+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 97,
-    bikeScore: 96,
-    transitScore: 92,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Chapman Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Lincoln High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Chapman Elementary", type: "elementary", grades: "K–5" },
+      { name: "Lincoln High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -440,8 +411,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Raven & Rose", vibe: "Upscale cocktail bar in a historic carriage house, SW Broadway" },
       { name: "Bailey's Taproom", vibe: "20+ rotating taps, SW Broadway, no-frills craft beer" },
     ],
-    medianHomePrice: 580000,
-    priceRange: { low: 300000, high: 2000000 },
     commuteToDowntown: "5–10 min on foot or Streetcar, MAX accessible at Old Town/Chinatown",
     faqs: [
       {
@@ -488,14 +457,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Irvington+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Irvington+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 83,
-    bikeScore: 88,
-    transitScore: 60,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Irvington Elementary", type: "elementary", grades: "K–5", rating: 9 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Grant High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Irvington Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "Grant High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -520,8 +486,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Expatriate", vibe: "NE 30th Ave, small cocktail bar with a strong menu, one of Portland's best" },
       { name: "Pints Urban Brewery", vibe: "NW 14th area, solid house-brewed beers, low-key" },
     ],
-    medianHomePrice: 750000,
-    priceRange: { low: 550000, high: 1500000 },
     commuteToDowntown: "20 min by car, 25 min by bike, 30 min by bus (Lines 6, 77)",
     faqs: [
       {
@@ -568,14 +532,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Eastmoreland+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Eastmoreland+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 58,
-    bikeScore: 80,
-    transitScore: 38,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Duniway Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Sellwood Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Cleveland High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Duniway Elementary", type: "elementary", grades: "K–5" },
+      { name: "Sellwood Middle School", type: "middle", grades: "6–8" },
+      { name: "Cleveland High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -600,8 +561,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Woodstock Wine & Deli", vibe: "SE Woodstock, wine bar feel, good for a quiet evening" },
       { name: "Sellwood Bar", vibe: "Short bike ride to Sellwood, neighborhood dive with no pretense" },
     ],
-    medianHomePrice: 720000,
-    priceRange: { low: 560000, high: 1400000 },
     commuteToDowntown: "25 min by car, 35 min by bus, 20 min by bike via Springwater Corridor",
     faqs: [
       {
@@ -648,14 +607,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Laurelhurst+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Laurelhurst+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 76,
-    bikeScore: 88,
-    transitScore: 55,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Laurelhurst Elementary", type: "elementary", grades: "K–5", rating: 9 },
-      { name: "Beaumont Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Grant High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Laurelhurst Elementary", type: "elementary", grades: "K–5" },
+      { name: "Beaumont Middle School", type: "middle", grades: "6–8" },
+      { name: "Grant High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -676,8 +632,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "East Burn", vibe: "Doubles as the neighborhood bar after dinner — good rotating taps and a patio that actually works" },
       { name: "Expatriate", vibe: "NE 30th Ave cocktail bar, small, very good, reservation helps on weekends" },
     ],
-    medianHomePrice: 780000,
-    priceRange: { low: 580000, high: 1400000 },
     commuteToDowntown: "20 min by car, 25 min by bike, 30–35 min by bus (Line 15 or 20)",
     faqs: [
       {
@@ -723,14 +677,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Woodstock+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Woodstock+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 73,
-    bikeScore: 88,
-    transitScore: 45,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Woodstock Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Hosford Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Cleveland High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Woodstock Elementary", type: "elementary", grades: "K–5" },
+      { name: "Hosford Middle School", type: "middle", grades: "6–8" },
+      { name: "Cleveland High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -755,8 +706,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Woodstock Wine & Deli", vibe: "Wine bar feel on SE Woodstock, good for a quiet Tuesday evening" },
       { name: "The Observatory", vibe: "Short ride to Sellwood — gastropub with good beer list" },
     ],
-    medianHomePrice: 500000,
-    priceRange: { low: 370000, high: 800000 },
     commuteToDowntown: "25 min by car, 30 min by bike, 35–40 min by bus (Line 19)",
     faqs: [
       {
@@ -802,14 +751,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=St+Johns+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=St+Johns+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 82,
-    bikeScore: 78,
-    transitScore: 50,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "James John Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "George Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Roosevelt High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "James John Elementary", type: "elementary", grades: "K–5" },
+      { name: "George Middle School", type: "middle", grades: "6–8" },
+      { name: "Roosevelt High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -834,8 +780,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "McMenamins St. Johns Pub & Movie Theater", vibe: "8203 N Ivanhoe — restored 1913 building, second-run movies, pub food, St. Johns institution" },
       { name: "The Standard", vibe: "N Denver Ave, neighborhood bar, low-key" },
     ],
-    medianHomePrice: 420000,
-    priceRange: { low: 325000, high: 650000 },
     commuteToDowntown: "25 min by car, 40 min by bus (Line 75), 35 min by bike",
     faqs: [
       {
@@ -883,14 +827,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Kenton+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Kenton+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Ste+125+Clackamas+OR+97015&output=embed",
-    walkScore: 75,
-    bikeScore: 72,
-    transitScore: 68,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Kenton Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "George Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Roosevelt High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Kenton Elementary", type: "elementary", grades: "K–5" },
+      { name: "George Middle School", type: "middle", grades: "6–8" },
+      { name: "Roosevelt High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -914,8 +855,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "The Kenton Club", vibe: "N Denver Ave dive bar — pool table, no pretense, been here decades" },
       { name: "The Standard Bar & Grill", vibe: "N Denver, neighborhood bar with food, low-key" },
     ],
-    medianHomePrice: 380000,
-    priceRange: { low: 290000, high: 600000 },
     commuteToDowntown: "30 min on Yellow MAX, 25 min by car, 40 min by bike",
     faqs: [
       {
@@ -963,15 +902,12 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Beaumont+Wilshire+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Beaumont+Wilshire+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 74,
-    bikeScore: 82,
-    transitScore: 54,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Beaumont Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Fernwood Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Grant High School", type: "high", grades: "9–12", rating: 7 },
-      { name: "Beverly Cleary School", type: "elementary", grades: "K–5", rating: 7 },
+      { name: "Beaumont Middle School", type: "middle", grades: "6–8" },
+      { name: "Fernwood Middle School", type: "middle", grades: "6–8" },
+      { name: "Grant High School", type: "high", grades: "9–12" },
+      { name: "Beverly Cleary School", type: "elementary", grades: "K–5" },
     ],
     parks: [
       {
@@ -1020,8 +956,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Low-key neighborhood bar on Fremont, not a destination, but it's yours if you live nearby",
       },
     ],
-    medianHomePrice: 710000,
-    priceRange: { low: 560000, high: 1100000 },
     commuteToDowntown:
       "20–25 min by car, 25 min by bike via NE Broadway or the Sullivan's Gulch trail, 35 min on bus Line 75",
     faqs: [
@@ -1068,14 +1002,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Alameda+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Alameda+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 68,
-    bikeScore: 72,
-    transitScore: 48,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Alameda Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Fernwood Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Grant High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Alameda Elementary", type: "elementary", grades: "K–5" },
+      { name: "Fernwood Middle School", type: "middle", grades: "6–8" },
+      { name: "Grant High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1124,8 +1055,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Walking distance, unpretentious, exactly what a neighborhood bar should be",
       },
     ],
-    medianHomePrice: 820000,
-    priceRange: { low: 750000, high: 1450000 },
     commuteToDowntown:
       "22–28 min by car, 30 min by bike via NE 33rd to Sullivan's Gulch trail, limited direct bus service",
     faqs: [
@@ -1172,14 +1101,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Rose+City+Park+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Rose+City+Park+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 72,
-    bikeScore: 80,
-    transitScore: 64,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Rose City Park Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Beaumont Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Grant High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Rose City Park Elementary", type: "elementary", grades: "K–5" },
+      { name: "Beaumont Middle School", type: "middle", grades: "6–8" },
+      { name: "Grant High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1228,8 +1154,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Izakaya on NE Burnside, short bike ride, strong cocktails",
       },
     ],
-    medianHomePrice: 555000,
-    priceRange: { low: 420000, high: 780000 },
     commuteToDowntown:
       "25–30 min by car, 20 min by MAX Red/Green line from Hollywood TC, 25 min by bike via NE Broadway",
     faqs: [
@@ -1276,14 +1200,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Hollywood+District+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Hollywood+District+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 85,
-    bikeScore: 82,
-    transitScore: 78,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Beverly Cleary School", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Laurelhurst School", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Grant High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Beverly Cleary School", type: "elementary", grades: "K–5" },
+      { name: "Laurelhurst School", type: "elementary", grades: "K–5" },
+      { name: "Grant High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1332,8 +1253,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Wine bar on NE 28th, quieter than most options near Sandy",
       },
     ],
-    medianHomePrice: 480000,
-    priceRange: { low: 350000, high: 750000 },
     commuteToDowntown:
       "20 min by MAX Red/Green line from Hollywood TC, 25 min by car, 22 min by bike via NE Broadway",
     faqs: [
@@ -1380,15 +1299,12 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Sabin+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Sabin+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 83,
-    bikeScore: 90,
-    transitScore: 68,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Sabin Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Jefferson High School", type: "high", grades: "9–12", rating: 4 },
-      { name: "Grant High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Sabin Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "Jefferson High School", type: "high", grades: "9–12" },
+      { name: "Grant High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1437,8 +1353,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "NE 30th Ave cocktail bar, lower key than Alberta spots, worth knowing",
       },
     ],
-    medianHomePrice: 560000,
-    priceRange: { low: 430000, high: 790000 },
     commuteToDowntown:
       "18–25 min by car, 22 min by bike via NE Broadway or the Sullivan's Gulch path, 35 min on bus Line 72",
     faqs: [
@@ -1485,14 +1399,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Cully+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Cully+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 63,
-    bikeScore: 78,
-    transitScore: 57,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Rigler Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Faubion School", type: "elementary", grades: "K–8", rating: 5 },
-      { name: "Jefferson High School", type: "high", grades: "9–12", rating: 4 },
+      { name: "Rigler Elementary", type: "elementary", grades: "K–5" },
+      { name: "Faubion School", type: "elementary", grades: "K–8" },
+      { name: "Jefferson High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1548,8 +1459,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "North Portland tiki bar, a drive from Cully but an institution — worth going once",
       },
     ],
-    medianHomePrice: 450000,
-    priceRange: { low: 350000, high: 620000 },
     commuteToDowntown:
       "25–35 min by car depending on traffic, 30 min by bike via NE 42nd to Sullivan's Gulch, 40 min on bus Line 71 or 72",
     faqs: [
@@ -1596,14 +1505,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Sunnyside+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Sunnyside+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 92,
-    bikeScore: 97,
-    transitScore: 68,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Sunnyside Environmental School", type: "elementary", grades: "K–8", rating: 7 },
-      { name: "Mt. Tabor Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Cleveland High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Sunnyside Environmental School", type: "elementary", grades: "K–8" },
+      { name: "Mt. Tabor Middle School", type: "middle", grades: "6–8" },
+      { name: "Cleveland High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1632,8 +1538,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Produce Row Cafe", vibe: "Long-running SE Oak bar with one of Portland's better draft beer lists, low-key crowd" },
       { name: "Horse Brass Pub", vibe: "British-style pub on SE Belmont, 300+ beers, no television pretense" },
     ],
-    medianHomePrice: 560000,
-    priceRange: { low: 340000, high: 850000 },
     commuteToDowntown: "12–15 min by bike via Hawthorne Bridge, 15–20 min by car, 20 min by bus on Line 14",
     faqs: [
       {
@@ -1679,14 +1583,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Richmond+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Richmond+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 88,
-    bikeScore: 95,
-    transitScore: 64,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Richmond Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Mt. Tabor Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Cleveland High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Richmond Elementary", type: "elementary", grades: "K–5" },
+      { name: "Mt. Tabor Middle School", type: "middle", grades: "6–8" },
+      { name: "Cleveland High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1715,8 +1616,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Bar Avignon", vibe: "Natural wine bar on SE Division, small, good list, needs a reservation on weekends" },
       { name: "The Bye and Bye", vibe: "Vegan bar on Alberta, technically not Richmond but walkable — worth noting" },
     ],
-    medianHomePrice: 580000,
-    priceRange: { low: 420000, high: 950000 },
     commuteToDowntown: "14–18 min by bike via Division or Clinton, 18–22 min by car, 25 min on Line 9 bus",
     faqs: [
       {
@@ -1762,14 +1661,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Mount+Tabor+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Mount+Tabor+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 78,
-    bikeScore: 85,
-    transitScore: 58,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Glencoe Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Mt. Tabor Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Franklin High School", type: "high", grades: "9–12", rating: 6 },
+      { name: "Glencoe Elementary", type: "elementary", grades: "K–5" },
+      { name: "Mt. Tabor Middle School", type: "middle", grades: "6–8" },
+      { name: "Franklin High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1794,8 +1690,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "The Standard", vibe: "SE Hawthorne neighborhood bar, pool table, no theatrics" },
       { name: "Sapphire Hotel", vibe: "Moody hotel bar on SE Hawthorne, cocktails, good for a date" },
     ],
-    medianHomePrice: 680000,
-    priceRange: { low: 520000, high: 1400000 },
     commuteToDowntown: "18–22 min by bike via SE Hawthorne, 20–25 min by car, 30 min on Line 14 bus",
     faqs: [
       {
@@ -1841,14 +1735,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Montavilla+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Montavilla+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 72,
-    bikeScore: 80,
-    transitScore: 55,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Vestal Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 4 },
-      { name: "David Douglas High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Vestal Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "David Douglas High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1873,8 +1764,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Montavilla Brew Works", vibe: "The neighborhood brewery — no pretense, neighborhood crowd, reasonable prices" },
       { name: "Thanh Thao", vibe: "Vietnamese dive bar and restaurant on SE 82nd, cheap, honest, packed on weekends" },
     ],
-    medianHomePrice: 440000,
-    priceRange: { low: 320000, high: 650000 },
     commuteToDowntown: "25–30 min by car, 35 min by bus on Line 14, 30 min by bike to downtown",
     faqs: [
       {
@@ -1920,14 +1809,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Foster-Powell+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Foster-Powell+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 75,
-    bikeScore: 82,
-    transitScore: 58,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Grout Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Kellogg Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Franklin High School", type: "high", grades: "9–12", rating: 6 },
+      { name: "Grout Elementary", type: "elementary", grades: "K–5" },
+      { name: "Kellogg Middle School", type: "middle", grades: "6–8" },
+      { name: "Franklin High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -1956,8 +1842,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Bar Carlo", vibe: "Italian wine bar on SE Foster, small, good by-the-glass list, neighborhood regulars" },
       { name: "Apex", vibe: "SE Division, technically close enough — one of Portland's best beer lists, no kitchen, no pretense" },
     ],
-    medianHomePrice: 460000,
-    priceRange: { low: 340000, high: 650000 },
     commuteToDowntown: "22–28 min by car, 30 min by bus on Line 9 or Line 17, 28 min by bike",
     faqs: [
       {
@@ -2003,14 +1887,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Brooklyn+Neighborhood+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Brooklyn+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 66,
-    bikeScore: 88,
-    transitScore: 52,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Brooklyn Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Kellogg Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Cleveland High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Brooklyn Elementary", type: "elementary", grades: "K–5" },
+      { name: "Kellogg Middle School", type: "middle", grades: "6–8" },
+      { name: "Cleveland High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -2035,8 +1916,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Loyal Legion", vibe: "SE Belmont, technically not Brooklyn but close — 99 Oregon taps, huge space, no bad beer options" },
       { name: "The Bullpen", vibe: "Neighborhood sports bar, unpretentious, close to the rail yards" },
     ],
-    medianHomePrice: 490000,
-    priceRange: { low: 360000, high: 720000 },
     commuteToDowntown: "15–20 min by car, 18 min by bike via Springwater + Hawthorne Bridge, 35 min by bus",
     faqs: [
       {
@@ -2082,14 +1961,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Concordia+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Concordia+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 72,
-    bikeScore: 87,
-    transitScore: 53,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Faubion School", type: "elementary", grades: "PK–8", rating: 6 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Jefferson High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Faubion School", type: "elementary", grades: "PK–8" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "Jefferson High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -2142,8 +2018,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "German beer hall on Mississippi Ave nearby, good for a group, loud in the best way",
       },
     ],
-    medianHomePrice: 520000,
-    priceRange: { low: 400000, high: 750000 },
     commuteToDowntown:
       "25–30 min by car, 35+ in rush hour via Burnside Bridge; 20 min by bike; 40 min on the 72 bus",
     faqs: [
@@ -2190,28 +2064,22 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Creston-Kenilworth+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Creston-Kenilworth+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 68,
-    bikeScore: 80,
-    transitScore: 55,
     schoolDistrict: "Portland Public Schools",
     schools: [
       {
         name: "Creston Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 5,
       },
       {
         name: "Kellogg Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 5,
       },
       {
         name: "Cleveland High School",
         type: "high",
         grades: "9–12",
-        rating: 7,
       },
     ],
     parks: [
@@ -2267,8 +2135,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "SE Division, 50-tap bottle shop and bar, outdoor space, no food so you order in — a Portland institution",
       },
     ],
-    medianHomePrice: 440000,
-    priceRange: { low: 340000, high: 620000 },
     commuteToDowntown:
       "20–25 min by car; 25 min by bike via SE Division or Hawthorne routes; 35–40 min on the 9-Powell or 10-Harold bus",
     faqs: [
@@ -2321,34 +2187,27 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Lents+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Lents+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 60,
-    bikeScore: 73,
-    transitScore: 58,
     schoolDistrict: "Portland Public Schools",
     schools: [
       {
         name: "Lents Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 4,
       },
       {
         name: "Harold Oliver Intermediate",
         type: "elementary",
         grades: "3–5",
-        rating: 4,
       },
       {
         name: "Lane Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 4,
       },
       {
         name: "David Douglas High School",
         type: "high",
         grades: "9–12",
-        rating: 5,
       },
     ],
     parks: [
@@ -2405,8 +2264,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "SE Division bottle shop and bar, 50-tap, outdoor space, a real destination from Lents on a bike",
       },
     ],
-    medianHomePrice: 390000,
-    priceRange: { low: 290000, high: 540000 },
     commuteToDowntown:
       "28 min on MAX Green Line; 25–30 min by car outside rush hour; 40+ min by car in rush hour",
     faqs: [
@@ -2458,28 +2315,22 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Reed+Neighborhood+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Reed+Neighborhood+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 70,
-    bikeScore: 84,
-    transitScore: 55,
     schoolDistrict: "Portland Public Schools",
     schools: [
       {
         name: "Woodstock Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 6,
       },
       {
         name: "Sellwood Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 6,
       },
       {
         name: "Cleveland High School",
         type: "high",
         grades: "9–12",
-        rating: 7,
       },
     ],
     parks: [
@@ -2548,8 +2399,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "SE Division, good cocktails, extensive backyard patio, neighborhood crowd on weeknights",
       },
     ],
-    medianHomePrice: 580000,
-    priceRange: { low: 440000, high: 850000 },
     commuteToDowntown:
       "25–30 min by car; 20–25 min by bike via SE Division or Hawthorne; 35–45 min on the 14-Hawthorne or 75-Cesar Chavez bus",
     faqs: [
@@ -2602,34 +2451,27 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Brentwood-Darlington+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Brentwood-Darlington+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 49,
-    bikeScore: 58,
-    transitScore: 40,
     schoolDistrict: "Portland Public Schools",
     schools: [
       {
         name: "Brentwood Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 4,
       },
       {
         name: "Whitman Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 4,
       },
       {
         name: "Lane Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 4,
       },
       {
         name: "Franklin High School",
         type: "high",
         grades: "9–12",
-        rating: 5,
       },
     ],
     parks: [
@@ -2692,8 +2534,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "NW Portland pub, in-house brews, the neighborhood's approach to this is simply driving",
       },
     ],
-    medianHomePrice: 380000,
-    priceRange: { low: 290000, high: 530000 },
     commuteToDowntown:
       "30–40 min by car (highly variable with Barbur/I-5 or SE Powell); 45–55 min by bus; limited MAX access",
     faqs: [
@@ -2745,14 +2585,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Multnomah+Village+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Multnomah+Village+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 62,
-    bikeScore: 55,
-    transitScore: 35,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Hayhurst Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Robert Gray Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Ida B. Wells-Barnett High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Hayhurst Elementary", type: "elementary", grades: "K–5" },
+      { name: "Robert Gray Middle School", type: "middle", grades: "6–8" },
+      { name: "Ida B. Wells-Barnett High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -2814,8 +2651,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Has a bar side worth knowing about — quiet weeknights, good well drinks",
       },
     ],
-    medianHomePrice: 620000,
-    priceRange: { low: 480000, high: 950000 },
     commuteToDowntown:
       "20–25 min by car (35+ in rush hour on SW Barbur or SW Capitol), no meaningful transit option",
     faqs: [
@@ -2862,14 +2697,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Hillsdale+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Hillsdale+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 65,
-    bikeScore: 48,
-    transitScore: 38,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Rieke Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Robert Gray Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Ida B. Wells-Barnett High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Rieke Elementary", type: "elementary", grades: "K–5" },
+      { name: "Robert Gray Middle School", type: "middle", grades: "6–8" },
+      { name: "Ida B. Wells-Barnett High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -2929,8 +2761,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "SW Capitol Hwy, casual neighborhood pub, patio, not a destination bar but a solid local option",
       },
     ],
-    medianHomePrice: 580000,
-    priceRange: { low: 440000, high: 880000 },
     commuteToDowntown:
       "20–25 min by car on SW Barbur or I-5 (30–40 in rush hour), bus service on Barbur takes 40+ min",
     faqs: [
@@ -2977,14 +2807,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Nob+Hill+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Nob+Hill+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 92,
-    bikeScore: 72,
-    transitScore: 68,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Chapman Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "West Sylvan Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Lincoln High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Chapman Elementary", type: "elementary", grades: "K–5" },
+      { name: "West Sylvan Middle School", type: "middle", grades: "6–8" },
+      { name: "Lincoln High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -3043,8 +2870,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "NW 13th Ave in the Pearl edge, upscale cocktails, worth the walk if you're doing a proper evening",
       },
     ],
-    medianHomePrice: 850000,
-    priceRange: { low: 600000, high: 1800000 },
     commuteToDowntown:
       "15–20 min by car (parking at destination is the issue), 25–30 min by bike (hilly), 20 min on bus (Line 15 or 77)",
     faqs: [
@@ -3091,14 +2916,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Slabtown+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Slabtown+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 94,
-    bikeScore: 88,
-    transitScore: 82,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Chapman Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "West Sylvan Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Lincoln High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Chapman Elementary", type: "elementary", grades: "K–5" },
+      { name: "West Sylvan Middle School", type: "middle", grades: "6–8" },
+      { name: "Lincoln High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -3156,8 +2978,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "NW 23rd Ave, reliable taps and a bar that's been the NW Portland standard for years",
       },
     ],
-    medianHomePrice: 620000,
-    priceRange: { low: 400000, high: 900000 },
     commuteToDowntown:
       "10 min on MAX Blue/Red from NW 23rd & Lovejoy, 15 min by bike, 15–20 min by car",
     faqs: [
@@ -3204,14 +3024,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Goose+Hollow+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Goose+Hollow+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 88,
-    bikeScore: 78,
-    transitScore: 80,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Chapman Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "West Sylvan Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Lincoln High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Chapman Elementary", type: "elementary", grades: "K–5" },
+      { name: "West Sylvan Middle School", type: "middle", grades: "6–8" },
+      { name: "Lincoln High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -3271,8 +3088,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "SW Broadway, 20+ rotating taps, no food, the kind of place you go to actually drink good beer",
       },
     ],
-    medianHomePrice: 700000,
-    priceRange: { low: 300000, high: 1200000 },
     commuteToDowntown:
       "10 min on foot, 5 min on MAX Blue/Red from SW Jefferson, 10 min by bike",
     faqs: [
@@ -3319,14 +3134,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Overlook+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Overlook+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 62,
-    bikeScore: 68,
-    transitScore: 65,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Overlook Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Jefferson High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Overlook Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "Jefferson High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -3351,8 +3163,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Prost!", vibe: "N Mississippi Ave beer hall — German imports on draft, long tables, good in any weather" },
       { name: "The Bye and Bye", vibe: "NE Alberta — short bike ride, craft cocktails, the neighborhood bar when you want something better than a dive" },
     ],
-    medianHomePrice: 500000,
-    priceRange: { low: 385000, high: 750000 },
     commuteToDowntown: "18–22 min on Interstate MAX, 20 min by car, 25 min by bike",
     faqs: [
       {
@@ -3398,14 +3208,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Piedmont+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Piedmont+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 55,
-    bikeScore: 68,
-    transitScore: 52,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Ainsworth Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Jefferson High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Ainsworth Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "Jefferson High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -3430,8 +3237,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Ecliptic Brewing", vibe: "N Overlook Blvd — good house beers, food that works, neighborhood brewery crowd" },
       { name: "Prost!", vibe: "N Mississippi Ave, German beer hall, easy bike ride from Piedmont" },
     ],
-    medianHomePrice: 470000,
-    priceRange: { low: 360000, high: 650000 },
     commuteToDowntown: "22 min by car, 30 min by bike, 35 min on bus to Interstate MAX connection",
     faqs: [
       {
@@ -3477,15 +3282,12 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Portsmouth+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Portsmouth+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 58,
-    bikeScore: 62,
-    transitScore: 48,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Portsmouth Elementary", type: "elementary", grades: "K–5", rating: 4 },
-      { name: "George Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Roosevelt High School", type: "high", grades: "9–12", rating: 5 },
-      { name: "University of Portland Campus School", type: "private", grades: "K–8", rating: 8 },
+      { name: "Portsmouth Elementary", type: "elementary", grades: "K–5" },
+      { name: "George Middle School", type: "middle", grades: "6–8" },
+      { name: "Roosevelt High School", type: "high", grades: "9–12" },
+      { name: "University of Portland Campus School", type: "private", grades: "K–8" },
     ],
     parks: [
       {
@@ -3510,8 +3312,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "McMenamins St. Johns Pub & Movie Theater", vibe: "8203 N Ivanhoe — the closest real destination bar, 1913 building, second-run movies" },
       { name: "The Standard", vibe: "N Denver Ave, neighborhood bar, low-key and unpretentious" },
     ],
-    medianHomePrice: 420000,
-    priceRange: { low: 320000, high: 600000 },
     commuteToDowntown: "25 min by car, 35 min by bus (Line 40 or 75), 30 min by bike",
     faqs: [
       {
@@ -3557,15 +3357,12 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=University+Park+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=University+Park+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 45,
-    bikeScore: 64,
-    transitScore: 40,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Astor Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "George Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Roosevelt High School", type: "high", grades: "9–12", rating: 5 },
-      { name: "University of Portland Campus School", type: "private", grades: "K–8", rating: 8 },
+      { name: "Astor Elementary", type: "elementary", grades: "K–5" },
+      { name: "George Middle School", type: "middle", grades: "6–8" },
+      { name: "Roosevelt High School", type: "high", grades: "9–12" },
+      { name: "University of Portland Campus School", type: "private", grades: "K–8" },
     ],
     parks: [
       {
@@ -3590,8 +3387,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Ecliptic Brewing", vibe: "N Overlook Blvd — short drive south, good house beers, neighborhood brewery crowd" },
       { name: "McMenamins St. Johns Pub", vibe: "N Ivanhoe in St. Johns, 1913 building, the closest destination bar" },
     ],
-    medianHomePrice: 490000,
-    priceRange: { low: 380000, high: 720000 },
     commuteToDowntown: "25 min by car, 35 min by bike via N Willamette Blvd path, 40 min by bus",
     faqs: [
       {
@@ -3637,14 +3432,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Boise+Eliot+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Boise+Eliot+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 82,
-    bikeScore: 90,
-    transitScore: 65,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Boise-Eliot/Humboldt Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Jefferson High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Boise-Eliot/Humboldt Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "Jefferson High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -3670,8 +3462,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Prost!", vibe: "N Mississippi Ave — German imports on draft, long communal tables, the go-to neighborhood beer bar" },
       { name: "The Bye and Bye", vibe: "NE Alberta — craft cocktails, hanging plants, easy bike ride, the elevated option nearby" },
     ],
-    medianHomePrice: 540000,
-    priceRange: { low: 400000, high: 800000 },
     commuteToDowntown: "20 min by car, 18 min by bike via N Williams corridor, 22 min on Interstate MAX",
     faqs: [
       {
@@ -3717,14 +3507,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Humboldt+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Humboldt+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 68,
-    bikeScore: 85,
-    transitScore: 60,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Boise-Eliot/Humboldt Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Jefferson High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Boise-Eliot/Humboldt Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "Jefferson High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -3749,8 +3536,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Prost!", vibe: "N Mississippi Ave, short bike ride — German beer hall, the obvious answer when you want a beer and a seat" },
       { name: "Ecliptic Brewing", vibe: "N Overlook Blvd nearby — solid house beers, food that works, good for a weeknight" },
     ],
-    medianHomePrice: 490000,
-    priceRange: { low: 370000, high: 680000 },
     commuteToDowntown: "20 min by car, 20 min by bike via N Williams, 25 min on Interstate MAX",
     faqs: [
       {
@@ -3796,14 +3581,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Arbor+Lodge+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Arbor+Lodge+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 70,
-    bikeScore: 72,
-    transitScore: 68,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Chief Joseph Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Jefferson High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Chief Joseph Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harriet Tubman Middle School", type: "middle", grades: "6–8" },
+      { name: "Jefferson High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -3828,8 +3610,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Ecliptic Brewing", vibe: "N Overlook Blvd — good house beers, pizza that works, the neighborhood brewery for a weeknight" },
       { name: "Prost!", vibe: "N Mississippi Ave, easy bike ride south — German beer hall, big patio, the destination bar nearby" },
     ],
-    medianHomePrice: 430000,
-    priceRange: { low: 330000, high: 610000 },
     commuteToDowntown: "25 min on Interstate MAX Yellow Line, 22 min by car, 25 min by bike",
     faqs: [
       {
@@ -3876,40 +3656,32 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Beaverton+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Beaverton+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 52,
-    bikeScore: 58,
-    transitScore: 48,
     schoolDistrict: "Beaverton School District",
     schools: [
       {
         name: "Errol Hassell Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 7,
       },
       {
         name: "Mountain View Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 7,
       },
       {
         name: "Westview High School",
         type: "high",
         grades: "9–12",
-        rating: 8,
       },
       {
         name: "Sunset High School",
         type: "high",
         grades: "9–12",
-        rating: 8,
       },
       {
         name: "Valley Catholic High School",
         type: "private",
         grades: "9–12",
-        rating: 8,
       },
     ],
     parks: [
@@ -3979,8 +3751,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Local tap room with rotating Oregon craft beers, low-key weekend spot",
       },
     ],
-    medianHomePrice: 525000,
-    priceRange: { low: 350000, high: 900000 },
     commuteToDowntown:
       "35–40 min on MAX Blue or Red line; 25–35 min by car in normal traffic, 45–55 min in rush hour via Hwy 26",
     faqs: [
@@ -4026,40 +3796,32 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Hillsboro+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Hillsboro+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 42,
-    bikeScore: 52,
-    transitScore: 40,
     schoolDistrict: "Hillsboro School District",
     schools: [
       {
         name: "McKinney Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 7,
       },
       {
         name: "Poynter Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 7,
       },
       {
         name: "Liberty High School",
         type: "high",
         grades: "9–12",
-        rating: 7,
       },
       {
         name: "Hillsboro High School",
         type: "high",
         grades: "9–12",
-        rating: 7,
       },
       {
         name: "Glencoe High School",
         type: "high",
         grades: "9–12",
-        rating: 7,
       },
     ],
     parks: [
@@ -4134,8 +3896,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Hillsboro brewpub, rotating taps, neighborhood crowd, sports on in the corner",
       },
     ],
-    medianHomePrice: 490000,
-    priceRange: { low: 330000, high: 850000 },
     commuteToDowntown:
       "45 min on MAX Blue line; 30–40 min by car to Portland downtown in normal traffic, 55–70 min in rush hour via Hwy 26",
     faqs: [
@@ -4181,40 +3941,32 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Tigard+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Tigard+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 39,
-    bikeScore: 44,
-    transitScore: 35,
     schoolDistrict: "Tigard-Tualatin School District",
     schools: [
       {
         name: "Durham Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 7,
       },
       {
         name: "Metzger Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 7,
       },
       {
         name: "Fowler Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 7,
       },
       {
         name: "Tigard High School",
         type: "high",
         grades: "9–12",
-        rating: 7,
       },
       {
         name: "Oregon Episcopal School",
         type: "private",
         grades: "PK–12",
-        rating: 9,
       },
     ],
     parks: [
@@ -4290,8 +4042,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Eugene brewery with a Tigard taproom, good rotating selection, family-friendly earlier in the evening",
       },
     ],
-    medianHomePrice: 560000,
-    priceRange: { low: 400000, high: 950000 },
     commuteToDowntown:
       "20–30 min by car via Barbur Blvd (I-5) in normal traffic, 40–50 min in rush hour; no direct MAX — bus line 12 runs to downtown via Barbur in 45–55 min",
     faqs: [
@@ -4337,28 +4087,22 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Tualatin+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Tualatin+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 33,
-    bikeScore: 38,
-    transitScore: 28,
     schoolDistrict: "Tigard-Tualatin School District",
     schools: [
       {
         name: "Byrom Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 7,
       },
       {
         name: "Hazelbrook Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 7,
       },
       {
         name: "Tualatin High School",
         type: "high",
         grades: "9–12",
-        rating: 7,
       },
     ],
     parks: [
@@ -4433,8 +4177,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Tualatin location of the Portland organic brewery — good food, family-friendly, busy on weekends",
       },
     ],
-    medianHomePrice: 520000,
-    priceRange: { low: 380000, high: 850000 },
     commuteToDowntown:
       "25–35 min by car via I-5 in normal traffic, 45–60 min in rush hour; no direct MAX — commuter bus takes 55–65 min to downtown Portland",
     faqs: [
@@ -4480,16 +4222,13 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Sherwood+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Sherwood+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 31,
-    bikeScore: 28,
-    transitScore: 22,
     schoolDistrict: "Sherwood School District 88J",
     schools: [
-      { name: "Edy Ridge Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Middleton Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Sherwood Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Sherwood High School", type: "high", grades: "9–12", rating: 8 },
-      { name: "St. Francis School", type: "private", grades: "K–8", rating: 7 },
+      { name: "Edy Ridge Elementary", type: "elementary", grades: "K–5" },
+      { name: "Middleton Elementary", type: "elementary", grades: "K–5" },
+      { name: "Sherwood Middle School", type: "middle", grades: "6–8" },
+      { name: "Sherwood High School", type: "high", grades: "9–12" },
+      { name: "St. Francis School", type: "private", grades: "K–8" },
     ],
     parks: [
       {
@@ -4542,8 +4281,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "House-brewed ales, full menu, families and adults both — the 6pm crowd is mostly parents who just left a school event",
       },
     ],
-    medianHomePrice: 600000,
-    priceRange: { low: 440000, high: 950000 },
     commuteToDowntown: "40–55 min by car via 99W through Tigard (longer in rush hour); 90+ min by TriMet bus to MAX to downtown; no light rail",
     faqs: [
       {
@@ -4588,15 +4325,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Wilsonville+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Wilsonville+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 33,
-    bikeScore: 37,
-    transitScore: 30,
     schoolDistrict: "West Linn-Wilsonville School District",
     schools: [
-      { name: "Boones Ferry Primary School", type: "elementary", grades: "K–3", rating: 8 },
-      { name: "Lowrie Primary School", type: "elementary", grades: "K–3", rating: 7 },
-      { name: "Wilsonville Middle School", type: "middle", grades: "6–8", rating: 8 },
-      { name: "Wilsonville High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Boones Ferry Primary School", type: "elementary", grades: "K–3" },
+      { name: "Lowrie Primary School", type: "elementary", grades: "K–3" },
+      { name: "Wilsonville Middle School", type: "middle", grades: "6–8" },
+      { name: "Wilsonville High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -4649,8 +4383,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "McMenamins presence in a renovated space — live music occasionally, house beer, family-friendly early and bar-focused late",
       },
     ],
-    medianHomePrice: 580000,
-    priceRange: { low: 400000, high: 1100000 },
     commuteToDowntown: "55–70 min via WES Commuter Rail + MAX transfer at Beaverton; 35–45 min by car on I-5 in light traffic (longer in peak hours)",
     faqs: [
       {
@@ -4695,16 +4427,13 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Forest+Grove+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Forest+Grove+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 48,
-    bikeScore: 53,
-    transitScore: 27,
     schoolDistrict: "Forest Grove School District 15",
     schools: [
-      { name: "Fern Hill Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Harvey Clarke Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Neil Armstrong Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Forest Grove High School", type: "high", grades: "9–12", rating: 6 },
-      { name: "Pacific University Early Learning Community", type: "private", grades: "PK–K", rating: 7 },
+      { name: "Fern Hill Elementary", type: "elementary", grades: "K–5" },
+      { name: "Harvey Clarke Elementary", type: "elementary", grades: "K–5" },
+      { name: "Neil Armstrong Middle School", type: "middle", grades: "6–8" },
+      { name: "Forest Grove High School", type: "high", grades: "9–12" },
+      { name: "Pacific University Early Learning Community", type: "private", grades: "PK–K" },
     ],
     parks: [
       {
@@ -4757,8 +4486,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Renovated Masonic lodge on Pac Ave with multiple bars, a soaking pool, gardens, and hotel rooms — biggest nightlife anchor in Forest Grove",
       },
     ],
-    medianHomePrice: 420000,
-    priceRange: { low: 295000, high: 700000 },
     commuteToDowntown: "50–70 min by car via Hwy 8 to Hwy 26 (longer in peak traffic); 75–90 min by TriMet Line 57 to Hillsboro MAX station to downtown",
     faqs: [
       {
@@ -4803,14 +4530,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Cornelius+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Cornelius+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 38,
-    bikeScore: 42,
-    transitScore: 28,
     schoolDistrict: "Hillsboro School District 1J",
     schools: [
-      { name: "Echo Shaw Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "J.W. Poynter Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Liberty High School", type: "high", grades: "9–12", rating: 6 },
+      { name: "Echo Shaw Elementary", type: "elementary", grades: "K–5" },
+      { name: "J.W. Poynter Middle School", type: "middle", grades: "6–8" },
+      { name: "Liberty High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -4863,8 +4587,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Straightforward neighborhood tavern on Tualatin Valley Highway — pool table, cold beer, no frills",
       },
     ],
-    medianHomePrice: 400000,
-    priceRange: { low: 290000, high: 600000 },
     commuteToDowntown: "35–45 min by car to downtown Portland via Hwy 26; 70–80 min by TriMet Line 57 to Hillsboro MAX then Blue Line to downtown; 10–15 min to Hillsboro tech corridor",
     faqs: [
       {
@@ -4909,16 +4631,13 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Lake+Oswego+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Lake+Oswego+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 58,
-    bikeScore: 44,
-    transitScore: 34,
     schoolDistrict: "Lake Oswego School District",
     schools: [
-      { name: "Uplands Elementary", type: "elementary", grades: "K–5", rating: 9 },
-      { name: "Westridge Elementary", type: "elementary", grades: "K–5", rating: 9 },
-      { name: "Lake Oswego Middle School", type: "middle", grades: "6–8", rating: 9 },
-      { name: "Lake Oswego High School", type: "high", grades: "9–12", rating: 9 },
-      { name: "Lakeridge High School", type: "high", grades: "9–12", rating: 9 },
+      { name: "Uplands Elementary", type: "elementary", grades: "K–5" },
+      { name: "Westridge Elementary", type: "elementary", grades: "K–5" },
+      { name: "Lake Oswego Middle School", type: "middle", grades: "6–8" },
+      { name: "Lake Oswego High School", type: "high", grades: "9–12" },
+      { name: "Lakeridge High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -4962,8 +4681,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Lake Theater & Cafe", vibe: "Movie theater with a bar — Lake Oswego's version of a neighborhood pub" },
       { name: "Red Rock", vibe: "Doubles as the main bar scene downtown, especially weekends" },
     ],
-    medianHomePrice: 900000,
-    priceRange: { low: 550000, high: 3500000 },
     commuteToDowntown: "20–30 min by car off-peak, 35–50 in rush hour via Hwy 43 or I-5; no MAX, bus to Barbur TC available",
     faqs: [
       {
@@ -5008,15 +4725,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=West+Linn+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=West+Linn+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 31,
-    bikeScore: 28,
-    transitScore: 25,
     schoolDistrict: "West Linn-Wilsonville School District",
     schools: [
-      { name: "Sunset Primary", type: "elementary", grades: "K–3", rating: 9 },
-      { name: "Boeckman Creek Primary", type: "elementary", grades: "K–3", rating: 8 },
-      { name: "Rosemont Ridge Middle School", type: "middle", grades: "6–8", rating: 9 },
-      { name: "West Linn High School", type: "high", grades: "9–12", rating: 9 },
+      { name: "Sunset Primary", type: "elementary", grades: "K–3" },
+      { name: "Boeckman Creek Primary", type: "elementary", grades: "K–3" },
+      { name: "Rosemont Ridge Middle School", type: "middle", grades: "6–8" },
+      { name: "West Linn High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -5060,8 +4774,6 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       { name: "Abella Kitchen + Bar", vibe: "Doubles as the evening drinks spot for the neighborhood" },
     ],
-    medianHomePrice: 700000,
-    priceRange: { low: 480000, high: 1600000 },
     commuteToDowntown: "25–35 min by car via I-205; no light rail; limited bus service",
     faqs: [
       {
@@ -5102,14 +4814,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Oregon+City+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Oregon+City+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 47,
-    bikeScore: 38,
-    transitScore: 35,
     schoolDistrict: "Oregon City School District",
     schools: [
-      { name: "Candy Lane Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Gardiner Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Oregon City High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Candy Lane Elementary", type: "elementary", grades: "K–5" },
+      { name: "Gardiner Middle School", type: "middle", grades: "6–8" },
+      { name: "Oregon City High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -5150,8 +4859,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "McMenamins Hotel Oregon Pub", vibe: "Rooftop bar in the summer, historic hotel setting, reliably good" },
       { name: "Oregon City Brewing", vibe: "Taproom with local beers, casual, often has live music on weekends" },
     ],
-    medianHomePrice: 490000,
-    priceRange: { low: 320000, high: 850000 },
     commuteToDowntown: "30–40 min by car; bus to MAX Park Ave terminus then rail to downtown (~55–65 min total)",
     faqs: [
       {
@@ -5192,15 +4899,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Milwaukie+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Milwaukie+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 56,
-    bikeScore: 72,
-    transitScore: 52,
     schoolDistrict: "North Clackamas School District",
     schools: [
-      { name: "Linwood Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Rowe Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Milwaukie High School", type: "high", grades: "9–12", rating: 7 },
-      { name: "Rex Putnam High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Linwood Elementary", type: "elementary", grades: "K–5" },
+      { name: "Rowe Middle School", type: "middle", grades: "6–8" },
+      { name: "Milwaukie High School", type: "high", grades: "9–12" },
+      { name: "Rex Putnam High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -5241,8 +4945,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Brewers Union Local 180 (Milwaukie)", vibe: "Oregon craft beer pub, comfortable, not loud" },
       { name: "Fultano's Pizza & Pub", vibe: "Neighborhood bar with pizza — been here longer than the MAX line" },
     ],
-    medianHomePrice: 490000,
-    priceRange: { low: 340000, high: 750000 },
     commuteToDowntown: "20–25 min by MAX from Park Ave Station; 10–15 min by bike via Springwater; 20 min by car off-peak",
     faqs: [
       {
@@ -5283,15 +4985,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Happy+Valley+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Happy+Valley+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 22,
-    bikeScore: 20,
-    transitScore: 18,
     schoolDistrict: "North Clackamas School District",
     schools: [
-      { name: "Happy Valley Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Happy Valley Middle School", type: "middle", grades: "6–8", rating: 8 },
-      { name: "Clackamas High School", type: "high", grades: "9–12", rating: 8 },
-      { name: "Oregon City High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Happy Valley Elementary", type: "elementary", grades: "K–5" },
+      { name: "Happy Valley Middle School", type: "middle", grades: "6–8" },
+      { name: "Clackamas High School", type: "high", grades: "9–12" },
+      { name: "Oregon City High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -5332,8 +5031,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Rock Bottom Brewery", vibe: "The main sit-down bar option — family restaurant that also serves beer" },
       { name: "McMenamins Clackamas", vibe: "McMenamins outpost near the Town Center, reliable and predictable" },
     ],
-    medianHomePrice: 600000,
-    priceRange: { low: 450000, high: 950000 },
     commuteToDowntown: "25–40 min by car via I-205; no light rail or meaningful transit",
     faqs: [
       {
@@ -5374,14 +5071,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Canby+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Canby+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 38,
-    bikeScore: 40,
-    transitScore: 15,
     schoolDistrict: "Canby School District",
     schools: [
-      { name: "Ackerman Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Baker Prairie Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Canby High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Ackerman Elementary", type: "elementary", grades: "K–5" },
+      { name: "Baker Prairie Middle School", type: "middle", grades: "6–8" },
+      { name: "Canby High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -5425,8 +5119,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Old-school Canby bar — pool table, regulars, no pretense, been there longer than most residents",
       },
     ],
-    medianHomePrice: 460000,
-    priceRange: { low: 300000, high: 750000 },
     commuteToDowntown: "35–45 min by car via Hwy 99E and I-205; car-dependent, no transit option for daily commute",
     faqs: [
       {
@@ -5471,15 +5163,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Newberg+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Newberg+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 52,
-    bikeScore: 44,
-    transitScore: 18,
     schoolDistrict: "Newberg School District",
     schools: [
-      { name: "Mabel Rush Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Mountain View Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Newberg High School", type: "high", grades: "9–12", rating: 5 },
-      { name: "George Fox University", type: "private", grades: "College", rating: 7 },
+      { name: "Mabel Rush Elementary", type: "elementary", grades: "K–5" },
+      { name: "Mountain View Middle School", type: "middle", grades: "6–8" },
+      { name: "Newberg High School", type: "high", grades: "9–12" },
+      { name: "George Fox University", type: "private", grades: "College" },
     ],
     parks: [
       {
@@ -5520,8 +5209,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Ghost Hill Cellars", vibe: "Tasting room in a converted industrial space, pour-your-own flights, relaxed" },
       { name: "Subterra Wine Bar", vibe: "Curated Oregon wine list in a cellar setting, serious without being precious" },
     ],
-    medianHomePrice: 450000,
-    priceRange: { low: 325000, high: 850000 },
     commuteToDowntown: "35–55 min by car via Hwy 99W (traffic-dependent, no bypass); no practical transit option to Portland",
     faqs: [
       {
@@ -5577,15 +5264,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=McMinnville+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=McMinnville+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 58,
-    bikeScore: 54,
-    transitScore: 20,
     schoolDistrict: "McMinnville School District",
     schools: [
-      { name: "Memorial Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Duniway Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "McMinnville High School", type: "high", grades: "9–12", rating: 6 },
-      { name: "Linfield University", type: "private", grades: "College", rating: 8 },
+      { name: "Memorial Elementary", type: "elementary", grades: "K–5" },
+      { name: "Duniway Middle School", type: "middle", grades: "6–8" },
+      { name: "McMinnville High School", type: "high", grades: "9–12" },
+      { name: "Linfield University", type: "private", grades: "College" },
     ],
     parks: [
       {
@@ -5626,8 +5310,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Golden Valley Brewery", vibe: "McMinnville's original craft brewery — full menu, good house lagers, family-friendly" },
       { name: "Pinot Quarter", vibe: "Wine bar on Third Street with strong Yamhill County pours and late-evening hours" },
     ],
-    medianHomePrice: 430000,
-    priceRange: { low: 310000, high: 950000 },
     commuteToDowntown: "50–70 min by car via Hwy 18 or 99W; no commuter transit to Portland",
     faqs: [
       {
@@ -5683,14 +5365,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Dundee+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Dundee+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 28,
-    bikeScore: 22,
-    transitScore: 8,
     schoolDistrict: "Newberg School District",
     schools: [
-      { name: "Dundee Elementary School", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Mountain View Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Newberg High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Dundee Elementary School", type: "elementary", grades: "K–5" },
+      { name: "Mountain View Middle School", type: "middle", grades: "6–8" },
+      { name: "Newberg High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -5731,8 +5410,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Domaine Drouhin Tasting Room", vibe: "Oregon Pinot and Chardonnay from one of the valley's most respected producers — appointment preferred" },
       { name: "Argyle Winery", vibe: "Walk-in sparkling wine and Pinot tasting on 99W — the most accessible tasting room in the AVA" },
     ],
-    medianHomePrice: 560000,
-    priceRange: { low: 380000, high: 3500000 },
     commuteToDowntown: "45–75 min by car via Hwy 99W (highly variable, especially weekends and summer); no transit option",
     faqs: [
       {
@@ -5786,14 +5463,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Carlton+OR&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Carlton+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 32,
-    bikeScore: 28,
-    transitScore: 5,
     schoolDistrict: "McMinnville School District",
     schools: [
-      { name: "Carlton Elementary School", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Duniway Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "McMinnville High School", type: "high", grades: "9–12", rating: 6 },
+      { name: "Carlton Elementary School", type: "elementary", grades: "K–5" },
+      { name: "Duniway Middle School", type: "middle", grades: "6–8" },
+      { name: "McMinnville High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -5834,8 +5508,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Carlton Winemakers Studio", vibe: "Multiple producers, one space — the original cooperative tasting room, still the most interesting pour in town" },
       { name: "Scott Paul Wines", vibe: "Burgundy-focused Pinot in an industrial tasting room — serious and unpretentious" },
     ],
-    medianHomePrice: 420000,
-    priceRange: { low: 295000, high: 1100000 },
     commuteToDowntown: "60–80 min by car via Hwy 47 north or via McMinnville/99W; no transit option to Portland",
     faqs: [
       {
@@ -5891,16 +5563,13 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Vancouver+WA&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 42,
-    bikeScore: 55,
-    transitScore: 38,
     schoolDistrict: "Vancouver Public Schools",
     schools: [
-      { name: "Lieser Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Discovery Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Hudson's Bay High School", type: "high", grades: "9–12", rating: 6 },
-      { name: "Prairie High School", type: "high", grades: "9–12", rating: 7 },
-      { name: "Vancouver School of Arts and Academics", type: "charter", grades: "6–12", rating: 8 },
+      { name: "Lieser Elementary", type: "elementary", grades: "K–5" },
+      { name: "Discovery Middle School", type: "middle", grades: "6–8" },
+      { name: "Hudson's Bay High School", type: "high", grades: "9–12" },
+      { name: "Prairie High School", type: "high", grades: "9–12" },
+      { name: "Vancouver School of Arts and Academics", type: "charter", grades: "6–12" },
     ],
     parks: [
       {
@@ -5952,8 +5621,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Loowit Brewing", vibe: "Local craft brewery with food, named for Mount St. Helens, good for a post-work pint" },
       { name: "At the Waterfront", vibe: "Marina bar on the Columbia, boat crowd and bridge commuters in equal measure" },
     ],
-    medianHomePrice: 480000,
-    priceRange: { low: 320000, high: 850000 },
     commuteToDowntown:
       "25–35 min in light traffic; 50–70 min in afternoon rush hour via I-5 or I-205. Both bridges back up daily. No light rail option exists yet.",
     faqs: [
@@ -6003,16 +5670,13 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Camas+WA&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Camas+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 38,
-    bikeScore: 44,
-    transitScore: 18,
     schoolDistrict: "Camas School District",
     schools: [
-      { name: "Lacamas Heights Elementary", type: "elementary", grades: "K–5", rating: 9 },
-      { name: "Dorothy Fox Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Skyridge Middle School", type: "middle", grades: "6–8", rating: 8 },
-      { name: "Camas Middle School", type: "middle", grades: "6–8", rating: 8 },
-      { name: "Camas High School", type: "high", grades: "9–12", rating: 9 },
+      { name: "Lacamas Heights Elementary", type: "elementary", grades: "K–5" },
+      { name: "Dorothy Fox Elementary", type: "elementary", grades: "K–5" },
+      { name: "Skyridge Middle School", type: "middle", grades: "6–8" },
+      { name: "Camas Middle School", type: "middle", grades: "6–8" },
+      { name: "Camas High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -6058,8 +5722,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Grains of Wrath", vibe: "Doubles as the main bar — the tap list is the reason to stay after dinner" },
       { name: "Cellar 55 Brewing", vibe: "More a taproom than a bar, but that's not a complaint" },
     ],
-    medianHomePrice: 620000,
-    priceRange: { low: 480000, high: 1200000 },
     commuteToDowntown:
       "45–60 min to downtown Portland in afternoon peak via I-205 South. Highway 14 west to I-205 is the standard route. No transit option that makes commuting practical.",
     faqs: [
@@ -6109,15 +5771,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Washougal+WA&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Washougal+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 28,
-    bikeScore: 32,
-    transitScore: 12,
     schoolDistrict: "Washougal School District",
     schools: [
-      { name: "Jemtegaard Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Hathaway Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Canyon Creek Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Washougal High School", type: "high", grades: "9–12", rating: 6 },
+      { name: "Jemtegaard Middle School", type: "middle", grades: "6–8" },
+      { name: "Hathaway Elementary", type: "elementary", grades: "K–5" },
+      { name: "Canyon Creek Elementary", type: "elementary", grades: "K–5" },
+      { name: "Washougal High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -6158,8 +5817,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "The Jealous Monk", vibe: "Craft beer anchor for the city, patio open when the weather cooperates" },
       { name: "Mike's Bar & Grill", vibe: "Old-school bar that comes with the diner, cash-friendly crowd" },
     ],
-    medianHomePrice: 490000,
-    priceRange: { low: 360000, high: 780000 },
     commuteToDowntown:
       "50–65 min on a good morning via Hwy 14 to I-205 south. Afternoon peak runs 60–80 minutes. Some residents route via Bridge of the Gods to I-84 west — longer mileage, sometimes faster.",
     faqs: [
@@ -6205,16 +5862,13 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Battle+Ground+WA&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Battle+Ground+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 22,
-    bikeScore: 28,
-    transitScore: 8,
     schoolDistrict: "Battle Ground Public Schools",
     schools: [
-      { name: "Tukes Valley Primary", type: "elementary", grades: "K–4", rating: 6 },
-      { name: "Amboy Middle School", type: "middle", grades: "5–8", rating: 6 },
-      { name: "Battle Ground High School", type: "high", grades: "9–12", rating: 6 },
-      { name: "Prairie High School", type: "high", grades: "9–12", rating: 7 },
-      { name: "Summit View High School", type: "charter", grades: "9–12", rating: 7 },
+      { name: "Tukes Valley Primary", type: "elementary", grades: "K–4" },
+      { name: "Amboy Middle School", type: "middle", grades: "5–8" },
+      { name: "Battle Ground High School", type: "high", grades: "9–12" },
+      { name: "Prairie High School", type: "high", grades: "9–12" },
+      { name: "Summit View High School", type: "charter", grades: "9–12" },
     ],
     parks: [
       {
@@ -6260,8 +5914,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Battle Ground Pub", vibe: "Low-key neighborhood bar, sports on the TV, north county crowd" },
       { name: "Smokey's Tavern", vibe: "Old-school tavern, the kind of place that's been there through multiple rounds of city growth" },
     ],
-    medianHomePrice: 460000,
-    priceRange: { low: 340000, high: 750000 },
     commuteToDowntown:
       "45–75 min to downtown Portland on a normal day via I-5 south or SR-503 to I-205. 90+ minutes is possible on days with bridge incidents. No practical transit alternative.",
     faqs: [
@@ -6311,15 +5963,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Ridgefield+WA&output=embed&z=13",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Ridgefield+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 18,
-    bikeScore: 24,
-    transitScore: 10,
     schoolDistrict: "Ridgefield School District",
     schools: [
-      { name: "South Ridge Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Union Ridge Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "View Ridge Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Ridgefield High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "South Ridge Elementary", type: "elementary", grades: "K–5" },
+      { name: "Union Ridge Elementary", type: "elementary", grades: "K–5" },
+      { name: "View Ridge Middle School", type: "middle", grades: "6–8" },
+      { name: "Ridgefield High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -6359,8 +6008,6 @@ export const neighborhoods: NeighborhoodData[] = [
     bars: [
       { name: "Ridgefield Pub", vibe: "Neighborhood bar with a small-town feel — limited options, loyal regulars, unpretentious" },
     ],
-    medianHomePrice: 520000,
-    priceRange: { low: 410000, high: 820000 },
     commuteToDowntown:
       "35–45 min to downtown Portland on a good morning via I-5 south. Afternoon peak runs 55–70 minutes. No transit option for Portland commuters.",
     faqs: [
@@ -6413,28 +6060,22 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Forest+Heights+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Forest+Heights+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 18,
-    bikeScore: 14,
-    transitScore: 22,
     schoolDistrict: "Portland Public Schools",
     schools: [
       {
         name: "Skyline K–8 School",
         type: "elementary",
         grades: "K–8",
-        rating: 7,
       },
       {
         name: "Lincoln High School",
         type: "high",
         grades: "9–12",
-        rating: 9,
       },
       {
         name: "Northwest Academy",
         type: "private",
         grades: "6–12",
-        rating: 8,
       },
     ],
     parks: [
@@ -6503,8 +6144,6 @@ export const neighborhoods: NeighborhoodData[] = [
           "Closest actual bar to Forest Heights, Cedar Mill location, neighborhood regulars",
       },
     ],
-    medianHomePrice: 750000,
-    priceRange: { low: 580000, high: 1400000 },
     commuteToDowntown:
       "25–30 min by car to downtown (40+ in morning rush), no practical transit option",
     faqs: [
@@ -6563,34 +6202,27 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Beaverton-Hillsdale+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Beaverton-Hillsdale+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 52,
-    bikeScore: 38,
-    transitScore: 44,
     schoolDistrict: "Portland Public Schools or Beaverton School District — verify by parcel",
     schools: [
       {
         name: "Raleigh Park Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 7,
       },
       {
         name: "Whitford Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 6,
       },
       {
         name: "Beaverton High School",
         type: "high",
         grades: "9–12",
-        rating: 6,
       },
       {
         name: "Ida B. Wells-Barnett High School",
         type: "high",
         grades: "9–12",
-        rating: 7,
       },
     ],
     parks: [
@@ -6660,8 +6292,6 @@ export const neighborhoods: NeighborhoodData[] = [
           "Marco's Café and the Village area are 10 minutes east for better options",
       },
     ],
-    medianHomePrice: 510000,
-    priceRange: { low: 390000, high: 750000 },
     commuteToDowntown:
       "15–20 min by car via Barbur Blvd (30 min in rush hour), 40–50 min by bus on Lines 54/56",
     faqs: [
@@ -6721,34 +6351,27 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Raleigh+Hills+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Raleigh+Hills+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 42,
-    bikeScore: 32,
-    transitScore: 35,
     schoolDistrict: "Beaverton School District (most parcels — verify by address)",
     schools: [
       {
         name: "Raleigh Park Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 7,
       },
       {
         name: "Whitford Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 7,
       },
       {
         name: "Beaverton High School",
         type: "high",
         grades: "9–12",
-        rating: 7,
       },
       {
         name: "Sunset High School",
         type: "high",
         grades: "9–12",
-        rating: 8,
       },
     ],
     parks: [
@@ -6819,8 +6442,6 @@ export const neighborhoods: NeighborhoodData[] = [
           "Short drive into SW Portland — reliably good Irish pub energy without the downtown cover charge",
       },
     ],
-    medianHomePrice: 560000,
-    priceRange: { low: 430000, high: 850000 },
     commuteToDowntown:
       "20–25 min by car via Barbur Blvd or Hwy 217 (35+ in rush hour), minimal transit service",
     faqs: [
@@ -6880,28 +6501,22 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Cedar+Mill+Beaverton+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Cedar+Mill+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 48,
-    bikeScore: 42,
-    transitScore: 38,
     schoolDistrict: "Beaverton School District",
     schools: [
       {
         name: "Cedar Mill Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 7,
       },
       {
         name: "Tumwater Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 7,
       },
       {
         name: "Sunset High School",
         type: "high",
         grades: "9–12",
-        rating: 8,
       },
     ],
     parks: [
@@ -6976,8 +6591,6 @@ export const neighborhoods: NeighborhoodData[] = [
           "Short drive up Cornell — historic farmhouse setting, multiple bars and spaces, reliably good for groups",
       },
     ],
-    medianHomePrice: 560000,
-    priceRange: { low: 430000, high: 850000 },
     commuteToDowntown:
       "20–25 min by car via NW Cornell or Hwy 26 (35 min in rush hour), no MAX service",
     faqs: [
@@ -7038,34 +6651,27 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Cedar+Hills+Beaverton+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Cedar+Hills+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 54,
-    bikeScore: 48,
-    transitScore: 58,
     schoolDistrict: "Beaverton School District",
     schools: [
       {
         name: "Elmonica Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 6,
       },
       {
         name: "Five Oaks Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 6,
       },
       {
         name: "Sunset High School",
         type: "high",
         grades: "9–12",
-        rating: 8,
       },
       {
         name: "Valley Catholic School",
         type: "private",
         grades: "K–12",
-        rating: 8,
       },
     ],
     parks: [
@@ -7141,8 +6747,6 @@ export const neighborhoods: NeighborhoodData[] = [
           "Short drive south on Cedar Hills Boulevard — classic McMenamins setup with multiple bars and a movie theater",
       },
     ],
-    medianHomePrice: 530000,
-    priceRange: { low: 390000, high: 780000 },
     commuteToDowntown:
       "35 min on MAX Blue Line, 20–25 min by car via US-26 (30–40 min in rush hour)",
     faqs: [
@@ -7202,34 +6806,27 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Bethany+Beaverton+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Bethany+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 32,
-    bikeScore: 28,
-    transitScore: 24,
     schoolDistrict: "Beaverton School District",
     schools: [
       {
         name: "Sato Elementary",
         type: "elementary",
         grades: "K–5",
-        rating: 8,
       },
       {
         name: "Stoller Middle School",
         type: "middle",
         grades: "6–8",
-        rating: 8,
       },
       {
         name: "Westview High School",
         type: "high",
         grades: "9–12",
-        rating: 8,
       },
       {
         name: "Sunset High School",
         type: "high",
         grades: "9–12",
-        rating: 8,
       },
     ],
     parks: [
@@ -7300,8 +6897,6 @@ export const neighborhoods: NeighborhoodData[] = [
           "10 minutes east on NW Cornell — the closest McMenamins to Bethany, multiple rooms and a covered outdoor space",
       },
     ],
-    medianHomePrice: 650000,
-    priceRange: { low: 500000, high: 1100000 },
     commuteToDowntown:
       "30–40 min by car via US-26 or NW Cornell (45+ in rush hour), no MAX service",
     faqs: [
@@ -7361,14 +6956,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Orenco+Station+Hillsboro+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Orenco+Station+Hillsboro+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 68,
-    bikeScore: 72,
-    transitScore: 55,
     schoolDistrict: "Beaverton School District",
     schools: [
-      { name: "Scholls Heights Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "Poynter Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Liberty High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Scholls Heights Elementary", type: "elementary", grades: "K–5" },
+      { name: "Poynter Middle School", type: "middle", grades: "6–8" },
+      { name: "Liberty High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -7409,8 +7001,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Orenco Station Grill", vibe: "Doubles as the neighborhood bar on weekend evenings — patio fills up in summer" },
       { name: "McMenamins Cornelius Pass Roadhouse", vibe: "Historic farmstead turned pub complex, 10 min away — good for a longer evening out" },
     ],
-    medianHomePrice: 580000,
-    priceRange: { low: 420000, high: 850000 },
     commuteToDowntown:
       "45–50 min by MAX Blue Line to downtown Portland; 25–30 min by car via US-26 (add 10–15 in peak rush); 5–10 min by bike to Intel Ronler Acres",
     faqs: [
@@ -7456,14 +7046,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Tanasbourne+Hillsboro+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Tanasbourne+Hillsboro+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 62,
-    bikeScore: 58,
-    transitScore: 52,
     schoolDistrict: "Beaverton School District",
     schools: [
-      { name: "Quatama Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Five Oaks Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Westview High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Quatama Elementary", type: "elementary", grades: "K–5" },
+      { name: "Five Oaks Middle School", type: "middle", grades: "6–8" },
+      { name: "Westview High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -7504,8 +7091,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Growler Guys Tanasbourne", vibe: "Rotating local taps, fill-your-own growler setup, low-key" },
       { name: "Buffalo Wild Wings (Streets of Tanasbourne)", vibe: "Sports bar, loud on game days, reliably busy" },
     ],
-    medianHomePrice: 480000,
-    priceRange: { low: 300000, high: 700000 },
     commuteToDowntown:
       "45–55 min by MAX Blue Line from Quatama or Hawthorn Farm to Portland; 25–30 min by car via US-26; walking distance to NW 185th Ave employment cluster",
     faqs: [
@@ -7547,14 +7132,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Murrayhill+Beaverton+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Murrayhill+Beaverton+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 42,
-    bikeScore: 38,
-    transitScore: 28,
     schoolDistrict: "Beaverton School District",
     schools: [
-      { name: "Scholls Heights Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Mountain View Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Mountainside High School", type: "high", grades: "9–12", rating: 9 },
+      { name: "Scholls Heights Elementary", type: "elementary", grades: "K–5" },
+      { name: "Mountain View Middle School", type: "middle", grades: "6–8" },
+      { name: "Mountainside High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -7595,8 +7177,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "McMenamins Greenway Pub", vibe: "Closest McMenamins option — good rotating taps and a comfortable neighborhood vibe" },
       { name: "Oswaldo's Chophouse bar", vibe: "Quieter bar scene, good for a weeknight drink after dinner" },
     ],
-    medianHomePrice: 580000,
-    priceRange: { low: 480000, high: 800000 },
     commuteToDowntown:
       "30–40 min by car via Hwy 217 N and I-5 or Barbur Blvd (add 15–20 in peak rush); no direct MAX access; TriMet bus lines connect to Beaverton TC with additional transfer time",
     faqs: [
@@ -7642,14 +7222,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Progress+Ridge+Beaverton+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Progress+Ridge+Beaverton+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 52,
-    bikeScore: 42,
-    transitScore: 22,
     schoolDistrict: "Beaverton School District",
     schools: [
-      { name: "Scholls Heights Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Mountain View Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Mountainside High School", type: "high", grades: "9–12", rating: 9 },
+      { name: "Scholls Heights Elementary", type: "elementary", grades: "K–5" },
+      { name: "Mountain View Middle School", type: "middle", grades: "6–8" },
+      { name: "Mountainside High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -7690,8 +7267,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Hopworks Urban Brewery (Progress Ridge)", vibe: "The main neighborhood bar — family-friendly before 8pm, more of a bar scene after" },
       { name: "Regal Progress Ridge ScreenX & 4DX bar lounge", vibe: "Pre-movie drinks, convenient, nothing remarkable" },
     ],
-    medianHomePrice: 620000,
-    priceRange: { low: 490000, high: 900000 },
     commuteToDowntown:
       "35–45 min by car via Hwy 217 N and I-5 (longer in peak rush); no direct MAX access; Bridgeport Village area is 10 min south via Roy Rogers Rd for additional retail and services",
     faqs: [
@@ -7737,14 +7312,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Aloha+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Aloha+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 38,
-    bikeScore: 44,
-    transitScore: 45,
     schoolDistrict: "Beaverton School District",
     schools: [
-      { name: "Hazeldale Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Five Oaks Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Aloha High School", type: "high", grades: "9–12", rating: 6 },
+      { name: "Hazeldale Elementary", type: "elementary", grades: "K–5" },
+      { name: "Five Oaks Middle School", type: "middle", grades: "6–8" },
+      { name: "Aloha High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -7785,8 +7357,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Reedville Cafe", vibe: "Classic tavern on TV Highway — pool table, cheap beer, regulars at the bar, no pretense" },
       { name: "Round Table Pizza", vibe: "Beer-and-pizza situation, family-friendly, functional for a low-key evening out" },
     ],
-    medianHomePrice: 450000,
-    priceRange: { low: 350000, high: 620000 },
     commuteToDowntown:
       "30–40 min by car via US-26 E; 45–55 min by MAX Blue Line from Elmonica, Hawthorn Farm, or Quatama stations to Portland; TV Highway bus line also connects to Beaverton TC",
     faqs: [
@@ -7833,14 +7403,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Gladstone+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Gladstone+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 42,
-    bikeScore: 38,
-    transitScore: 28,
     schoolDistrict: "Gladstone School District",
     schools: [
-      { name: "Gladstone Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Kraxberger Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Gladstone High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Gladstone Elementary", type: "elementary", grades: "K–5" },
+      { name: "Kraxberger Middle School", type: "middle", grades: "6–8" },
+      { name: "Gladstone High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -7893,8 +7460,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Old-school dive, pool table, regulars who've been coming for years",
       },
     ],
-    medianHomePrice: 430000,
-    priceRange: { low: 330000, high: 600000 },
     commuteToDowntown: "30–40 min by car via I-205 or McLoughlin Blvd, 50+ min by TriMet bus",
     faqs: [
       {
@@ -7940,14 +7505,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Lake+Grove+Lake+Oswego+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Lake+Grove+Lake+Oswego+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 52,
-    bikeScore: 44,
-    transitScore: 35,
     schoolDistrict: "Lake Oswego School District",
     schools: [
-      { name: "Bryant Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Lakeridge Middle School", type: "middle", grades: "6–8", rating: 8 },
-      { name: "Lakeridge High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Bryant Elementary", type: "elementary", grades: "K–5" },
+      { name: "Lakeridge Middle School", type: "middle", grades: "6–8" },
+      { name: "Lakeridge High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8000,8 +7562,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "German-American pub near the I-5 corridor, extensive tap list, loud on game days",
       },
     ],
-    medianHomePrice: 680000,
-    priceRange: { low: 530000, high: 950000 },
     commuteToDowntown: "25–35 min by car via I-5 or Hwy 43, 45+ min by TriMet bus",
     faqs: [
       {
@@ -8047,14 +7607,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Oak+Grove+Milwaukie+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Oak+Grove+Milwaukie+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 38,
-    bikeScore: 42,
-    transitScore: 32,
     schoolDistrict: "North Clackamas School District",
     schools: [
-      { name: "Lewelling Elementary", type: "elementary", grades: "K–5", rating: 6 },
-      { name: "Rowe Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Milwaukie High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Lewelling Elementary", type: "elementary", grades: "K–5" },
+      { name: "Rowe Middle School", type: "middle", grades: "6–8" },
+      { name: "Milwaukie High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8107,8 +7664,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Long-running dive on McLoughlin, pool table, cash-friendly",
       },
     ],
-    medianHomePrice: 460000,
-    priceRange: { low: 350000, high: 650000 },
     commuteToDowntown: "25–35 min by car via McLoughlin Blvd or I-205, 45+ min by TriMet bus",
     faqs: [
       {
@@ -8154,14 +7709,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Jennings+Lodge+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Jennings+Lodge+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 28,
-    bikeScore: 30,
-    transitScore: 22,
     schoolDistrict: "North Clackamas School District",
     schools: [
-      { name: "Jennings Lodge Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Rowe Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Milwaukie High School", type: "high", grades: "9–12", rating: 5 },
+      { name: "Jennings Lodge Elementary", type: "elementary", grades: "K–5" },
+      { name: "Rowe Middle School", type: "middle", grades: "6–8" },
+      { name: "Milwaukie High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8214,8 +7766,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Neighborhood bar in nearby Oak Grove, local crowd, cold beer",
       },
     ],
-    medianHomePrice: 460000,
-    priceRange: { low: 340000, high: 680000 },
     commuteToDowntown: "30–40 min by car via McLoughlin Blvd or I-205, 50+ min by TriMet",
     faqs: [
       {
@@ -8261,14 +7811,11 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=West+Haven-Sylvan+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=West+Haven-Sylvan+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 32,
-    bikeScore: 28,
-    transitScore: 38,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Bridlemile Elementary", type: "elementary", grades: "K–5", rating: 7 },
-      { name: "West Sylvan Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Lincoln High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Bridlemile Elementary", type: "elementary", grades: "K–5" },
+      { name: "West Sylvan Middle School", type: "middle", grades: "6–8" },
+      { name: "Lincoln High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8321,8 +7868,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "SW Scholls Ferry area institution, historic burger bar, been open since 1949",
       },
     ],
-    medianHomePrice: 680000,
-    priceRange: { low: 520000, high: 1100000 },
     commuteToDowntown: "15–25 min by car via Hwy 26 or SW Canyon Rd, 30 min on TriMet bus line 54",
     faqs: [
       {
@@ -8368,13 +7913,10 @@ export const neighborhoods: NeighborhoodData[] = [
       "https://maps.google.com/maps?q=Skyline+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Skyline+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 8,
-    bikeScore: 12,
-    transitScore: 10,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Skyline K-8 School", type: "elementary", grades: "K–8", rating: 7 },
-      { name: "Lincoln High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Skyline K-8 School", type: "elementary", grades: "K–8" },
+      { name: "Lincoln High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8427,8 +7969,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "NW 23rd option down the hill, upscale-casual, good cocktail program",
       },
     ],
-    medianHomePrice: 850000,
-    priceRange: { low: 550000, high: 2500000 },
     commuteToDowntown: "25–40 min by car via Hwy 30 or Cornell Rd to NW 23rd, no meaningful transit option",
     faqs: [
       {
@@ -8476,14 +8016,11 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Clark County's most sought-after zip code — schools, hospitals, and greenway trails, with an I-5 commute cost",
     mapEmbedSrc: "https://maps.google.com/maps?q=Salmon+Creek+Vancouver+WA&output=embed&z=14",
     directionsSrc: "https://maps.google.com/maps?saddr=Salmon+Creek+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 32,
-    bikeScore: 42,
-    transitScore: 28,
     schoolDistrict: "Vancouver Public Schools",
     schools: [
-      { name: "Salmon Creek Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Jason Lee Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Skyview High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Salmon Creek Elementary", type: "elementary", grades: "K–5" },
+      { name: "Jason Lee Middle School", type: "middle", grades: "6–8" },
+      { name: "Skyview High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8508,8 +8045,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Hudson's Bar and Grill", vibe: "Located inside the Heathman Lodge — Northwest farm-to-table menu, local ingredients, adult crowd, far less casual than Billygan's" },
       { name: "Billygan's Roadhouse", vibe: "The neighborhood bar you actually end up at — cold beer, burgers, no pretense" },
     ],
-    medianHomePrice: 540000,
-    priceRange: { low: 420000, high: 850000 },
     commuteToDowntown: "35–45 min to Portland in decent traffic via I-5; 55–75 min during peak hours crossing the Interstate Bridge; no practical transit option",
     faqs: [
       {
@@ -8553,14 +8088,11 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Northwest Vancouver's closest thing to acreage living — large lots, quiet roads, and a small commercial village, all within 25 minutes of Portland",
     mapEmbedSrc: "https://maps.google.com/maps?q=Felida+Vancouver+WA&output=embed&z=14",
     directionsSrc: "https://maps.google.com/maps?saddr=Felida+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 14,
-    bikeScore: 22,
-    transitScore: 10,
     schoolDistrict: "Vancouver Public Schools",
     schools: [
-      { name: "Felida Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "McLoughlin Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Hudson's Bay High School", type: "high", grades: "9–12", rating: 4 },
+      { name: "Felida Elementary", type: "elementary", grades: "K–5" },
+      { name: "McLoughlin Middle School", type: "middle", grades: "6–8" },
+      { name: "Hudson's Bay High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8584,8 +8116,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Mahoney's Public House", vibe: "The after-work bar for Felida — craft taps, nothing pretentious, neighborhood crowd" },
       { name: "Farrar's Bistro", vibe: "Doubles as a bar on weekends — cocktail-forward, patio crowd, more of a date-night spot than a dive" },
     ],
-    medianHomePrice: 650000,
-    priceRange: { low: 500000, high: 1200000 },
     commuteToDowntown: "20–25 min to Portland via I-5 in off-peak; 45–60 min during rush hour crossing the Interstate Bridge; no transit option",
     faqs: [
       {
@@ -8629,14 +8159,11 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "North Vancouver's most affordable entry point — older housing, highway corridor, no pretense, quick I-5 access",
     mapEmbedSrc: "https://maps.google.com/maps?q=Hazel+Dell+Vancouver+WA&output=embed&z=14",
     directionsSrc: "https://maps.google.com/maps?saddr=Hazel+Dell+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 52,
-    bikeScore: 38,
-    transitScore: 34,
     schoolDistrict: "Vancouver Public Schools",
     schools: [
-      { name: "Hazel Dell Elementary", type: "elementary", grades: "K–5", rating: 5 },
-      { name: "Jason Lee Middle School", type: "middle", grades: "6–8", rating: 5 },
-      { name: "Hudson's Bay High School", type: "high", grades: "9–12", rating: 4 },
+      { name: "Hazel Dell Elementary", type: "elementary", grades: "K–5" },
+      { name: "Jason Lee Middle School", type: "middle", grades: "6–8" },
+      { name: "Hudson's Bay High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8665,8 +8192,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Frontier Public House", vibe: "Doubles as the neighborhood bar — local tap list, sports on TV, approachable prices" },
       { name: "Billy Blues Bar and Grill", vibe: "Weekly jam nights, live music, the main entertainment anchor for the area's regular crowd" },
     ],
-    medianHomePrice: 400000,
-    priceRange: { low: 320000, high: 550000 },
     commuteToDowntown: "30–40 min to Portland via I-5 in normal traffic; 50–70 min at peak crossings; C-TRAN bus routes available but limited for Portland commuters",
     faqs: [
       {
@@ -8710,14 +8235,11 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "East Vancouver's family-practical neighborhood — older housing, fair prices, I-205 access, and a park system that punches above its weight",
     mapEmbedSrc: "https://maps.google.com/maps?q=Orchards+Vancouver+WA&output=embed&z=14",
     directionsSrc: "https://maps.google.com/maps?saddr=Orchards+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 38,
-    bikeScore: 34,
-    transitScore: 26,
     schoolDistrict: "Evergreen Public Schools",
     schools: [
-      { name: "Orchards Elementary", type: "elementary", grades: "PK–5", rating: 3 },
-      { name: "Shahala Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Mountain View High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Orchards Elementary", type: "elementary", grades: "PK–5" },
+      { name: "Shahala Middle School", type: "middle", grades: "6–8" },
+      { name: "Mountain View High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8746,8 +8268,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "Orchards Tap", vibe: "The neighborhood bar — pool, karaoke, games, cold beer; the spot locals default to when they want a no-fuss weeknight" },
       { name: "Fourth Plain Bar & Grill", vibe: "Older-school tavern on the Fourth Plain corridor, longtime regulars, no surprises" },
     ],
-    medianHomePrice: 440000,
-    priceRange: { low: 340000, high: 620000 },
     commuteToDowntown: "25–35 min to Portland via I-205 in normal traffic; 40–60 min during peak bridge crossings; Vancouver Mall area C-TRAN routes available but slow for Portland commuters",
     faqs: [
       {
@@ -8791,14 +8311,11 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "East Vancouver's most complete neighborhood — a real library, a real commercial strip, and the best I-205 position in Clark County",
     mapEmbedSrc: "https://maps.google.com/maps?q=Cascade+Park+Vancouver+WA&output=embed&z=14",
     directionsSrc: "https://maps.google.com/maps?saddr=Cascade+Park+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 44,
-    bikeScore: 40,
-    transitScore: 30,
     schoolDistrict: "Evergreen Public Schools",
     schools: [
-      { name: "Crestline Elementary", type: "elementary", grades: "PK–5", rating: 4 },
-      { name: "Cascade Middle School", type: "middle", grades: "6–8", rating: 4 },
-      { name: "Mountain View High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Crestline Elementary", type: "elementary", grades: "PK–5" },
+      { name: "Cascade Middle School", type: "middle", grades: "6–8" },
+      { name: "Mountain View High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8823,8 +8340,6 @@ export const neighborhoods: NeighborhoodData[] = [
       { name: "TJ's Cascade Bar & Grill", vibe: "Nineteen taps, pool tables, live music and karaoke on weekends; the legitimate neighborhood bar for East Vancouver" },
       { name: "Little Italy's Trattoria", vibe: "Happy hour bar side — Italian wines and cocktails, patio, lower-key than the main dining room crowd" },
     ],
-    medianHomePrice: 460000,
-    priceRange: { low: 360000, high: 660000 },
     commuteToDowntown: "20–30 min to Portland via I-205 in normal traffic; 40–55 min during peak bridge crossings; Portland International Airport 15 min; no practical transit connection to Portland",
     faqs: [
       {
@@ -8869,15 +8384,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Bull+Mountain+Tigard+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Bull+Mountain+Tigard+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 12,
-    bikeScore: 18,
-    transitScore: 14,
     schoolDistrict: "Tigard-Tualatin School District 23J",
     schools: [
-      { name: "Alberta Rider Elementary", type: "elementary", grades: "K–5", rating: 9 },
-      { name: "Mary Woodward Elementary", type: "elementary", grades: "K–5", rating: 9 },
-      { name: "Twality Middle School", type: "middle", grades: "6–8", rating: 8 },
-      { name: "Tigard High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Alberta Rider Elementary", type: "elementary", grades: "K–5" },
+      { name: "Mary Woodward Elementary", type: "elementary", grades: "K–5" },
+      { name: "Twality Middle School", type: "middle", grades: "6–8" },
+      { name: "Tigard High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -8930,8 +8442,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Craft beers on tap near the 99W corridor, casual after-work stop",
       },
     ],
-    medianHomePrice: 650000,
-    priceRange: { low: 500000, high: 1200000 },
     commuteToDowntown: "30–40 min by car via I-5 or Hwy 99W (45+ in rush hour); limited bus service to Tigard Transit Center",
     faqs: [
       {
@@ -8976,14 +8486,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=King+City+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=King+City+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 22,
-    bikeScore: 28,
-    transitScore: 20,
     schoolDistrict: "Tigard-Tualatin School District 23J",
     schools: [
-      { name: "Durham Elementary", type: "elementary", grades: "PK–5", rating: 7 },
-      { name: "Hazelbrook Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Tualatin High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Durham Elementary", type: "elementary", grades: "PK–5" },
+      { name: "Hazelbrook Middle School", type: "middle", grades: "6–8" },
+      { name: "Tualatin High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -9032,8 +8539,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Down-the-road neighborhood bar in Tigard, easy drive from King City",
       },
     ],
-    medianHomePrice: 450000,
-    priceRange: { low: 350000, high: 600000 },
     commuteToDowntown: "35–45 min by car via I-5 north from Tualatin, or Hwy 99W; TriMet bus routes connect to Tigard Transit Center",
     faqs: [
       {
@@ -9078,15 +8583,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Metzger+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Metzger+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 52,
-    bikeScore: 44,
-    transitScore: 38,
     schoolDistrict: "Beaverton School District 48J (most parcels)",
     schools: [
-      { name: "Greenway Elementary", type: "elementary", grades: "PK–5", rating: 8 },
-      { name: "Whitford Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Beaverton High School", type: "high", grades: "9–12", rating: 7 },
-      { name: "Southridge High School", type: "high", grades: "9–12", rating: 8 },
+      { name: "Greenway Elementary", type: "elementary", grades: "PK–5" },
+      { name: "Whitford Middle School", type: "middle", grades: "6–8" },
+      { name: "Beaverton High School", type: "high", grades: "9–12" },
+      { name: "Southridge High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -9131,8 +8633,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "The sports bar side of the house — pool tables, game day crowds, neighborhood regulars",
       },
     ],
-    medianHomePrice: 510000,
-    priceRange: { low: 400000, high: 720000 },
     commuteToDowntown: "20–30 min by car via SW Barbur Blvd; 35–45 min on TriMet Line 12 or 44",
     faqs: [
       {
@@ -9177,15 +8677,12 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=Garden+Home+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=Garden+Home+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 58,
-    bikeScore: 50,
-    transitScore: 35,
     schoolDistrict: "Portland Public Schools or Beaverton School District 48J (verify by parcel)",
     schools: [
-      { name: "Markham Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Nancy Ryles Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Robert Gray Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Ida B. Wells High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Markham Elementary", type: "elementary", grades: "K–5" },
+      { name: "Nancy Ryles Elementary", type: "elementary", grades: "K–5" },
+      { name: "Robert Gray Middle School", type: "middle", grades: "6–8" },
+      { name: "Ida B. Wells High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -9234,8 +8731,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "Sports bar directly on SW Garden Home Rd — neighborhood regulars, game day staple",
       },
     ],
-    medianHomePrice: 530000,
-    priceRange: { low: 415000, high: 750000 },
     commuteToDowntown: "20–25 min by car via SW Barbur Blvd (30–40 in rush hour); TriMet Line 12 or 45 connect to downtown",
     faqs: [
       {
@@ -9280,14 +8775,11 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc: "https://maps.google.com/maps?q=South+Burlingame+Portland+OR&output=embed&z=14",
     directionsSrc:
       "https://maps.google.com/maps?saddr=South+Burlingame+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
-    walkScore: 42,
-    bikeScore: 36,
-    transitScore: 32,
     schoolDistrict: "Portland Public Schools",
     schools: [
-      { name: "Markham Elementary", type: "elementary", grades: "K–5", rating: 8 },
-      { name: "Robert Gray Middle School", type: "middle", grades: "6–8", rating: 7 },
-      { name: "Ida B. Wells High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Markham Elementary", type: "elementary", grades: "K–5" },
+      { name: "Robert Gray Middle School", type: "middle", grades: "6–8" },
+      { name: "Ida B. Wells High School", type: "high", grades: "9–12" },
     ],
     parks: [
       {
@@ -9336,8 +8828,6 @@ export const neighborhoods: NeighborhoodData[] = [
         vibe: "A short drive toward Multnomah Village — pub atmosphere, good tap list",
       },
     ],
-    medianHomePrice: 600000,
-    priceRange: { low: 480000, high: 900000 },
     commuteToDowntown: "20–30 min by car via SW Barbur or SW Terwilliger (35+ in rush hour); TriMet Line 12 on Barbur Blvd",
     faqs: [
       {
