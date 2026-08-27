@@ -66,7 +66,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Outer Southeast",
     description: [
       "SE Foster Road is the spine of Mt. Scott-Arleta, and on a weekday evening it smells like wood smoke and fryer oil from Carts on Foster — a covered food-cart pod where you can get Korean fusion, ramen, or a wood-fired pie and eat at a picnic table under string lights. Across the street, Space Monkey Coffee roasts its own beans. This is inner Southeast Portland without the inner-Southeast price tag: bungalows on tree-lined blocks, a food scene that punches above its weight, and the Mt. Scott Community Center — a real public pool, roller rink, and gym — anchoring the whole thing.",
-      "The housing is mostly early-1900s Craftsman bungalows and Portland foursquares, with mid-century ranches filling in and a growing share of ADUs and thoughtful infill. The median sits around $468,000 — meaningfully below Richmond or Sellwood for a comparable house, which is exactly why buyers priced out of inner SE keep landing here. The neighborhood runs from SE Foster on the north to SE Duke on the south, SE 60th to SE 82nd. It's the kind of place with block parties and a pollinator garden neighbors built out of a neglected traffic triangle.",
+      "The housing is mostly early-1900s Craftsman bungalows and Portland foursquares, with mid-century ranches filling in and a growing share of ADUs and thoughtful infill. It prices meaningfully below Richmond or Sellwood for a comparable house, which is exactly why buyers priced out of inner SE keep landing here. The neighborhood runs from SE Foster on the north to SE Duke on the south, SE 60th to SE 82nd. It's the kind of place with block parties and a pollinator garden neighbors built out of a neglected traffic triangle.",
       "The honest trade-offs: SE Foster and SE 82nd are busy arterials, and the blocks closest to them carry traffic and noise. A lot of the housing is old enough that you should budget for the roof, the foundation, or the knob-and-tube — get the inspection. And the schools are solid but mid-tier by Portland standards, with Franklin High the bright spot. None of that scares off the people who buy here. They come for the value, the walkability, and a neighborhood that still feels like a neighborhood.",
     ],
     personality: "Portland's backyard porch — bungalows, food carts, and a community-center pool",
@@ -113,7 +113,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How much does a home cost in Mt. Scott-Arleta?",
-        a: "The median is around $468,000 — one of the better values in inner Southeast Portland. Most houses trade between roughly $380k and $600k: original Craftsman bungalows and foursquares in the middle, updated and larger infill homes toward the top. Because it's more affordable than Richmond, Sellwood, or Woodstock next door, well-priced homes in good condition still draw multiple offers. We'll tell you honestly what your budget actually buys here.",
+        a: "One of the better values in inner Southeast Portland. Original Craftsman bungalows and foursquares are most of what trades, with updated and larger infill homes at the top of the range. Because it costs less than Richmond, Sellwood, or Woodstock next door, well-priced homes in good condition still draw multiple offers. Rather than publish a median that goes stale, we would rather run your numbers against what is actually listed this week and tell you honestly what your budget buys here.",
       },
       {
         q: "Is Mt. Scott-Arleta walkable?",
@@ -134,7 +134,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Mt. Scott-Arleta, Portland OR | The Lindley Team",
       description:
-        "Real talk on Mt. Scott-Arleta real estate: home prices near $468k, schools, walkability, and what buyers should know. David & Bri, The Lindley Team at Movement Mortgage — NMLS #1367416 / #265974.",
+        "Real talk on Mt. Scott-Arleta real estate: home prices, schools, walkability, and what buyers should know. David & Bri, The Lindley Team at Movement Mortgage — NMLS #1367416 / #265974.",
     },
   },
 
@@ -175,17 +175,19 @@ export const neighborhoods: NeighborhoodData[] = [
       },
     ],
     restaurants: [
-      { name: "The Observatory", cuisine: "American", vibe: "Gastropub on SE Milwaukie — good burgers, good beer list, neighborhood crowd" },
-      { name: "Guero's", cuisine: "Mexican", vibe: "Casual tacos and burritos, quick lunch, SE Milwaukie Ave" },
-      { name: "Nick's Famous Coney Island", cuisine: "Diner", vibe: "Classic Portland diner on SE Milwaukie, been there forever, cash only" },
+      { name: "Gino's Restaurant and Bar", cuisine: "Italian-American", vibe: "SE 13th at Spokane, in a century-old building — pastas, clams and mussels, the neighborhood's sit-down standby" },
+      { name: "Sebastiano's", cuisine: "Sicilian deli", vibe: "8235 SE 13th Ave — deli, bakery and market in one, sandwiches to eat there or groceries to take home" },
+      { name: "Papa Haydn", cuisine: "Northwest", vibe: "5829 SE Milwaukie Ave — a Westmoreland institution people have been coming to for the dessert case for decades" },
+      { name: "Bertie Lou's Cafe", cuisine: "Breakfast", vibe: "8051 SE 17th Ave — tiny counter-service breakfast spot, expect a wait on weekends" },
     ],
     coffee: [
-      { name: "Fuller's Coffee Shop", vibe: "No-frills diner coffee on SE 13th, regulars only" },
-      { name: "Lucky Lab Beer & Coffee", vibe: "Dog-friendly, big patio, more neighborhood pub than cafe" },
+      { name: "Blue Kangaroo Coffee Roasters", vibe: "7901 SE 13th Ave — small-batch organic roasting, couches and sidewalk tables, dog-friendly" },
+      { name: "Fetch Coffee Roasters", vibe: "1540 SE Bybee Blvd — roaster and cafe a block off the Bybee commercial strip" },
     ],
     bars: [
-      { name: "The Sellwood Bar", vibe: "Neighborhood dive, pool table, no pretense" },
-      { name: "The Observatory", vibe: "Doubles as a bar after dinner — good rotating taps" },
+      { name: "Smitty's Wine and Taphouse", vibe: "7718 SE 13th Ave — rotating taps and wine by the glass in the middle of the antique row" },
+      { name: "Sellwood Salloon", vibe: "8301 SE 17th Ave — the neighborhood dive, no pretense" },
+      { name: "Corkscrew Wine Bar", vibe: "1665 SE Bybee Blvd — small wine bar on Bybee, walkable from most of Westmoreland" },
     ],
     commuteToDowntown: "20–25 min by car (35+ in rush hour), 10 min by bike via Springwater + Hawthorne Bridge, 40 min by bus",
     faqs: [
@@ -199,7 +201,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a home cost in Sellwood-Moreland?",
-        a: "Median is around $620,000. Most houses trade between $480k and $800k — Craftsmans on the residential streets between SE 7th and SE 17th sit in the middle of that range. Larger Victorian-era houses closer to the river push higher. Well-priced homes in good condition typically go over asking.",
+        a: "More than most of inner Southeast, and the reason is the one thing everyone here agrees on: people move to Sellwood and stay, so very little comes up for sale. Craftsmans on the residential streets between SE 7th and SE 17th are the bulk of what trades; the larger Victorian-era houses closer to the river sit above them. We would rather pull live comps for the specific blocks you are watching than publish a median that is stale the week after we write it. Tell us your range and we will show you what it actually buys right now.",
       },
       {
         q: "Is Sellwood-Moreland good for families?",
@@ -213,7 +215,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Sellwood-Moreland, Portland OR | The Lindley Team",
       description:
-        "Real talk on Sellwood-Moreland real estate: home prices, schools, commute, and what buyers need to know. Bri Lindley, NMLS #1367416.",
+        "Real talk on Sellwood-Moreland real estate: what buyers should know about the housing stock, schools, the Sellwood Bridge commute, and getting an offer accepted. Bri Lindley, NMLS #1367416.",
     },
   },
 
@@ -269,15 +271,15 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What's Ladd's Addition?",
-        a: "A sub-neighborhood of Buckman with a 1920s diamond-grid street plan and rose test gardens at the intersections. The roses bloom in May and June. Houses there are well-maintained early 20th-century Craftsmans on tight lots — it's a Portland Historic Landmark district, so design standards apply for exterior work. Prices run $600k+ for a well-maintained house.",
+        a: "A sub-neighborhood of Buckman with a 1920s diamond-grid street plan and rose test gardens at the intersections. The roses bloom in May and June. Houses there are well-maintained early 20th-century Craftsmans on tight lots — it's a Portland Historic Landmark district, so design standards apply for exterior work. A well-maintained house there carries a clear premium over the rest of Buckman.",
       },
       {
         q: "How much does a home cost in Buckman?",
-        a: "Median is around $470,000, which includes condos and houses. Ladd's Addition houses trade significantly higher — $600k+ isn't unusual. Condos near SE Grand bring the average down. The entry point is below comparable walkability in most other cities.",
+        a: "Buckman covers a wide range, because it is really two markets. Ladd's Addition houses trade well above the rest of the neighborhood; condos near SE Grand sit at the bottom. For the walkability you get, the entry point is lower than comparable neighborhoods in most other cities. Tell us your range and we will show you which of those two markets you are actually shopping in.",
       },
       {
         q: "Is Buckman good for first-time buyers?",
-        a: "Yes, with realistic expectations. Condos and townhomes bring the entry price under the Portland median. For single-family houses — especially in Ladd's Addition — competition is real. If your budget is under $400k, you're looking at attached housing. At $500k+, single-family becomes realistic.",
+        a: "Yes, with realistic expectations. Condos and townhomes bring the entry price below the Portland median. For single-family houses — especially in Ladd's Addition — competition is real. Where your budget lands decides whether you are shopping attached or detached, and that is worth sorting out before you start touring. We will draw that line for you in one conversation.",
       },
     ],
     testimonials: [],
@@ -344,7 +346,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a home cost in the Alberta Arts District?",
-        a: "Median is around $480,000. Craftsman bungalows on NE 24th through NE 28th run $430k–$650k depending on condition. Houses further from the commercial strip come in slightly lower. Investors compete in this market for rental properties, so cash buyers show up in some price ranges.",
+        a: "Craftsman bungalows on NE 24th through NE 28th are the core of the market, priced by condition more than anything else. Houses further from the commercial strip come in lower. Investors compete here for rental properties, so cash buyers show up in some price ranges — which makes a fast, clean pre-approval worth more than it sounds. We will tell you what your budget reaches on these blocks right now.",
       },
       {
         q: "Is Alberta Arts District good for families?",
@@ -374,8 +376,8 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Northwest & Pearl",
     description: [
       "Powell's Books takes up a full city block at NW 10th and Burnside and stays open until 11pm. This tells you something about the Pearl District: it's built for people who don't want to drive, and it actually delivers. The Portland Streetcar runs through it. Jamison Square has a fountain kids use as a splash pad in summer. Tanner Springs Park is a native-plant stormwater garden that doubles as the neighborhood's front lawn. You can walk to almost everything.",
-      "You're buying condos here. The range is enormous — studios in older buildings start around $300k, penthouses in newer buildings push past $2M. HOA fees are a real part of the underwriting math. Newer buildings have lower fees and higher prices; older buildings have caught up over time. Jake's Famous Crawfish on SW 12th has been there since 1892 and feels like it. Coava Coffee has a Pearl location. The neighborhood has exactly the restaurants and services you'd expect for the price point.",
-      "The honest numbers: no yard, neighbors on all sides, street noise along the main corridors is constant, and parking is either included in your unit or $200–$300/month in a garage. The neighborhood is designed for people who don't own a car. If you bring one anyway, it will cost you. The trade is square footage for location, and it's a trade plenty of buyers make willingly.",
+      "You're buying condos here. The range is enormous — studios in older converted buildings at the bottom, penthouses in newer towers at the top. HOA fees are a real part of the underwriting math. Newer buildings have lower fees and higher prices; older buildings have caught up over time. Jake's Famous Crawfish on SW 12th has been there since 1892 and feels like it. Coava Coffee has a Pearl location. The neighborhood has exactly the restaurants and services you'd expect for the price point.",
+      "The honest numbers: no yard, neighbors on all sides, street noise along the main corridors is constant, and parking is either included in your unit or a monthly garage fee on top of everything else. The neighborhood is designed for people who don't own a car. If you bring one anyway, it will cost you. The trade is square footage for location, and it's a trade plenty of buyers make willingly.",
     ],
     personality: "The neighborhood that made Portland prove it could do urban density",
     mapEmbedSrc:
@@ -419,7 +421,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a condo cost in the Pearl District?",
-        a: "Range is wide: studios in older buildings from around $300k, up to $2M+ for top-floor units in newer buildings. Most buyers land between $400k and $900k. HOA fees add $400–$800/month depending on the building and amenities. Make sure you're accounting for that in your monthly budget.",
+        a: "Wider than almost anywhere else in Portland, because you are comparing studios in older converted buildings against top-floor units in new towers. The bigger point is that the sticker price is only half the math here: HOA dues vary a lot building to building, and they change what you qualify for. We underwrite the dues alongside the price so the monthly number you plan around is the real one. Send us the buildings you are watching and we will run them.",
       },
       {
         q: "Is the Pearl District good for families?",
@@ -449,7 +451,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Northeast",
     description: [
       "Walk NE 19th Avenue between Knott and Tillamook on a spring evening and you'll understand why people pay a premium for Irvington. Victorian houses with original craftwork, old trees overhanging the sidewalk, front porches that get used. The neighborhood was developed between 1890 and 1930, and a lot of it looks like it. Irvington Elementary consistently ranks among PPS's top K–5 schools, which drives a significant portion of the demand.",
-      "Grant High School runs an IB program that draws students from across NE Portland — one of PPS's genuine success stories. The school pipeline matters to buyers with kids, and it shows in the prices. Nothing move-in ready goes under $550k. Most houses trade in the $650k–$900k range. The jumbo threshold starts to matter here for buyers putting less than 20% down.",
+      "Grant High School runs an IB program that draws students from across NE Portland — one of PPS's genuine success stories. The school pipeline matters to buyers with kids, and it shows in the prices. Move-in-ready houses here sit at the top of inner NE, and the jumbo threshold starts to matter for buyers putting less than 20% down. That is worth knowing before you tour, not after.",
       "The eastern streets toward the Lloyd District get more commercial traffic than the neighborhood's aesthetic implies — NE Broadway, the northern boundary, can be noisy. Prices are higher than comparable houses in Woodstock or St. Johns, and the honest question to ask yourself is whether the schools and address justify the premium for your situation. For some buyers they absolutely do.",
     ],
     personality: "NE Portland's historic benchmark — the school district drives half the demand",
@@ -710,7 +712,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How does Woodstock compare to Eastmoreland in price?",
-        a: "Woodstock runs about $200k lower on median — around $500k vs $720k. The lots in Eastmoreland are larger and the houses are bigger, which accounts for much of the gap. If the school situation is similar (they share Sellwood Middle and Cleveland High) and you don't need the square footage, Woodstock often makes better financial sense.",
+        a: "Woodstock runs meaningfully below Eastmoreland at the median. The lots in Eastmoreland are larger and the houses are bigger, which accounts for much of the gap. If the school situation is similar (they share Sellwood Middle and Cleveland High) and you don't need the square footage, Woodstock often makes better financial sense.",
       },
       {
         q: "Is Woodstock good for first-time buyers?",
@@ -859,7 +861,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "Is Kenton a good neighborhood for first-time buyers?",
-        a: "It can be, with clear eyes. The price point is genuinely low for Portland — one of the few places where single-family houses still trade under $400k. The MAX connection to downtown is real. The competition from investors is also real. If you can move fast and have your financing pre-approved, Kenton is worth pursuing. If you need weeks to decide, you'll lose houses.",
+        a: "It can be, with clear eyes. The price point is genuinely low for Portland — one of the few places where a single-family house is still within reach of a first purchase. The MAX connection to downtown is real. The competition from investors is also real. If you can move fast and have your financing pre-approved, Kenton is worth pursuing. If you need weeks to decide, you'll lose houses.",
       },
       {
         q: "How does Kenton compare to St. Johns?",
@@ -895,7 +897,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Beaumont Village on NE Fremont Street is about four blocks long and has been the same four blocks for decades. Empire Provisions does charcuterie and sandwiches. Beaumont Hardware is still there. Some of the best independent retail left in inner NE Portland, none of it national chains. The residential streets east of NE 33rd Ave are quiet in the way that feels earned — mature street trees, kids on bikes, neighbors who actually know each other's names.",
       "The housing is mostly 1910s through 1940s: Craftsmans, bungalows, and the occasional Dutch Colonial. Lots are mid-sized, houses are well-maintained, and the neighborhood has one of the lowest turnover rates in Portland. Fernwood Middle School is the feeder for Grant High, which is the most sought-after comprehensive high school in PPS. That pipeline matters to buyers with kids, and it's priced into the houses.",
-      "Low turnover cuts both ways. You won't find much inventory, and when something comes up, you're competing with buyers who've been waiting. Median prices have pushed past $700k, and the lower end of the range doesn't stay on market long. If you need to buy quickly, Beaumont is not a patient neighborhood. Come in with a lender letter ready and your terms tight.",
+      "Low turnover cuts both ways. You won't find much inventory, and when something comes up, you're competing with buyers who've been waiting. Prices sit at the upper end of NE Portland, and the lower end of the range doesn't stay on market long. If you need to buy quickly, Beaumont is not a patient neighborhood. Come in with a lender letter ready and your terms tight.",
     ],
     personality: "Fremont Street shops, quiet streets, zero for-sale signs",
     mapEmbedSrc:
@@ -995,7 +997,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Alameda Ridge runs diagonally across NE Portland, and on a clear day from the upper streets you can see both Mt. Hood and Mt. St. Helens at the same time. The streets curve around the hillside — they don't follow the Portland grid — which gives the neighborhood an unusual physical presence for a city this flat. Houses from the 1920s and 1930s: large Craftsmans, Tudor Revivals, and a few Colonial Revivals that look slightly out of place and are usually the most expensive things on the block.",
       "Alameda Elementary has a strong reputation within PPS and is one of the reasons families target this specific neighborhood over adjacent Beaumont-Wilshire. There's no commercial district inside Alameda itself — for coffee or dinner you're driving or biking to NE Fremont Street to the west, which is lined with the Beaumont Village shops. That's not a complaint from most residents; it keeps the neighborhood genuinely quiet. Streets are wide, parking is easy, and Friday nights don't have bar noise.",
-      "The price point is real: the floor on a single-family home in Alameda is around $750k, and the ceiling on a well-restored large Craftsman has broken $1.4 million more than once. Buyers who come in expecting Beaumont prices and find themselves looking at Alameda listings are usually surprised in the wrong direction. These are not starter homes. If you're looking at a jumbo loan threshold, you're looking at Alameda.",
+      "The price point is real: Alameda sits above its neighbors, and a well-restored large Craftsman here can run well past seven figures. Buyers who come in expecting Beaumont prices and find themselves looking at Alameda listings are usually surprised in the wrong direction. These are not starter homes. If you're looking at a jumbo loan threshold, you're looking at Alameda.",
     ],
     personality: "Hilltop Craftsmans with mountain views and zero commercial noise",
     mapEmbedSrc:
@@ -1064,7 +1066,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Do I need a jumbo loan to buy in Alameda?",
-        a: "Probably, yes. The conforming loan limit for 2025 is $806,500. With most Alameda houses priced above $800k and a standard down payment, you'll be in jumbo territory. Jumbo loans have different underwriting requirements — typically tighter debt-to-income limits and sometimes higher reserves. We work jumbo loans regularly and can walk you through exactly what you'll need.",
+        a: "Often, yes. The conforming loan limit adjusts every year and varies by county, and a lot of Alameda houses sit close enough to the line that it decides your loan type. Jumbo loans have different underwriting requirements — typically tighter debt-to-income limits and sometimes higher reserves. We work jumbo loans regularly, and we'll confirm exactly which side of the current limit your purchase falls on before you write an offer.",
       },
       {
         q: "Is Alameda walkable?",
@@ -1092,7 +1094,7 @@ export const neighborhoods: NeighborhoodData[] = [
     state: "OR",
     region: "Northeast",
     description: [
-      "Rose City Golf Course runs along the western edge of the neighborhood — 18 holes operated by the city, open to the public, and surrounded by some of the most underpriced housing in inner NE Portland. The residential streets between NE 57th and NE 72nd are mostly 1920s and 1930s bungalows: small front yards, covered porches, and the occasional larger Craftsman that someone bought for $180k in 2001 and renovated well. The neighborhood sits between Hollywood to the west and Beaumont-Wilshire to the north, which means the bones are similar but the prices are not.",
+      "Rose City Golf Course runs along the western edge of the neighborhood — 18 holes operated by the city, open to the public, and surrounded by some of the most underpriced housing in inner NE Portland. The residential streets between NE 57th and NE 72nd are mostly 1920s and 1930s bungalows: small front yards, covered porches, and the occasional larger Craftsman that someone bought decades ago and renovated well. The neighborhood sits between Hollywood to the west and Beaumont-Wilshire to the north, which means the bones are similar but the prices are not.",
       "Hollywood Transit Center is close enough that the MAX Red and Green lines are genuinely useful from here. Buyers who are priced out of Irvington often land in Rose City Park and find the housing type is nearly identical — same bungalow stock, same era, similar street scale — for meaningfully less money. That story has been true for a decade and the gap is narrowing. The commercial options are thin inside the neighborhood itself, but Sandy Blvd and the Hollywood district shops and restaurants are a short bike ride away.",
       "The trade-offs are real. NE Sandy Boulevard is loud if you're on a block close to it, and the closer you get to the Hollywood district, the more the neighborhood transitions toward apartment density. The golf course is a strong boundary on the west side, but it also means the blocks on NE Halsey and NE Glisan near 57th have consistent cut-through traffic from the course. School options are PPS standard — Rose City Park Elementary feeds into Grant High via Beaumont Middle.",
     ],
@@ -1159,7 +1161,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How is Rose City Park different from Beaumont-Wilshire?",
-        a: "The housing stock is similar — same bungalow era, same lot sizes, comparable condition on the renovated ones — but Rose City Park is roughly $150k cheaper at the median. The trade-off is proximity to Sandy Blvd and the Hollywood district, which adds traffic and noise on some blocks. If the Grant High school boundary matters to you, confirm your specific address because parts of Rose City Park feed differently.",
+        a: "The housing stock is similar — same bungalow era, same lot sizes, comparable condition on the renovated ones — but Rose City Park runs meaningfully cheaper at the median. The trade-off is proximity to Sandy Blvd and the Hollywood district, which adds traffic and noise on some blocks. If the Grant High school boundary matters to you, confirm your specific address because parts of Rose City Park feed differently.",
       },
       {
         q: "Is the MAX useful from Rose City Park?",
@@ -1171,7 +1173,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Are there FHA-eligible homes in Rose City Park?",
-        a: "Yes. The price range here includes a lot of homes in the $420k–$600k range that work well for FHA financing. Most are single-family detached, which clears the property eligibility bar easily. The main FHA consideration in this price range is making sure the house passes the FHA appraisal — older bungalows sometimes have deferred maintenance that triggers conditions.",
+        a: "Yes. A lot of the housing here sits in the range where FHA financing works well, and most of it is single-family detached, which clears the property eligibility bar easily. The main FHA consideration is making sure the house passes the FHA appraisal — older bungalows sometimes have deferred maintenance that triggers conditions. We'll flag that risk before you write, not after the appraisal comes back.",
       },
     ],
     testimonials: [],
@@ -1193,7 +1195,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "The Hollywood Theatre on NE Sandy Boulevard has been showing films since 1926 and is still independently operated — repertory cinema, first runs, and a bar inside. It's the neighborhood's most important landmark and a good signal of what Hollywood District is at its best: old bones repurposed well. Sandy Boulevard is the commercial spine from NE 33rd to around NE 52nd, and it runs the full range from genuinely excellent restaurants to check-cashing storefronts within four blocks of each other. You take the strip as a whole or you don't take it.",
       "Hollywood Transit Center sits at NE 42nd and Halsey and is one of the most functional transit hubs in east Portland — MAX Red and Green lines, eight TriMet bus routes, and covered waiting areas. For buyers who work downtown or at OHSU and don't want to drive, this is one of the few NE neighborhoods where transit is a real alternative. The housing mix is broader than most NE neighborhoods: single-family 1920s–1950s homes on the residential streets, 1990s and 2000s condo buildings closer to Sandy, and enough newer apartment complexes to keep the neighborhood's density visible.",
-      "Hollywood's median for single-family homes sits around $480k, but the neighborhood's reputation is mixed enough that buyers with options sometimes skip it. The blocks east of NE 42nd toward the transit center have more foot traffic and some of the grit that comes with commercial density. A few blocks off Sandy in either direction and it quiets down considerably. It's not a neighborhood you buy into without knowing which end of Sandy you're on.",
+      "Hollywood prices below its NE neighbors, but the neighborhood's reputation is mixed enough that buyers with options sometimes skip it. The blocks east of NE 42nd toward the transit center have more foot traffic and some of the grit that comes with commercial density. A few blocks off Sandy in either direction and it quiets down considerably. It's not a neighborhood you buy into without knowing which end of Sandy you're on.",
     ],
     personality: "Transit-first, Sandy Blvd grit, Hollywood Theatre is worth it",
     mapEmbedSrc:
@@ -1262,7 +1264,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What are the condo and multi-family options like in Hollywood?",
-        a: "More than most NE neighborhoods. There are 1990s–2000s condo buildings within a few blocks of the transit center, plus newer apartment complexes along Sandy. Condo pricing starts around $250k for smaller units. FHA and conventional both work for condos here, though HOA dues and condo document reviews add time to the process. We handle condo loans regularly and know what to look for.",
+        a: "More than most NE neighborhoods. There are 1990s–2000s condo buildings within a few blocks of the transit center, plus newer apartment complexes along Sandy. Condos here are among the more accessible entry points in inner NE. FHA and conventional both work, though HOA dues and condo document reviews add time to the process. We handle condo loans regularly and know what to look for.",
       },
       {
         q: "How does the MAX affect home values in Hollywood?",
@@ -1292,7 +1294,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Sabin Community Garden on NE 14th is one of the largest community gardens in Portland — over 200 plots, a long waiting list, and the kind of place that actually explains a neighborhood. The people who tend it have been there for years. Sabin sits between NE Alberta Street to the north and NE Fremont to the south, which means you're one or two blocks from two of the better commercial streets in inner NE without being in either Alberta Arts District or Beaumont Village. That positioning is exactly why Sabin works as a neighborhood.",
       "The housing is dense: bungalows on 25x100-foot lots, built mostly in the 1920s and 1930s, sitting close to each other and close to the sidewalk. It's not the spacious Craftsman on a 7,000-square-foot lot that you find in Alameda. Sabin houses are smaller, the yards are narrow, and parking is always a project. But you can walk to coffee on NE 15th, walk to dinner on Alberta, and be at NE Fremont shops without getting in your car. The trade-off is real and intentional.",
-      "Street parking is genuinely difficult on residential blocks near Alberta. Summer weekends, when Alberta and its adjacent streets fill up with people from other neighborhoods, the parking crunch extends into Sabin blocks that used to be reliable. Buyers coming from the suburbs should understand this before purchase — off-street parking adds real value here. The median is around $560k, which is fair for inner NE Portland, but Sabin has seen some of the fastest appreciation in the area over the last five years.",
+      "Street parking is genuinely difficult on residential blocks near Alberta. Summer weekends, when Alberta and its adjacent streets fill up with people from other neighborhoods, the parking crunch extends into Sabin blocks that used to be reliable. Buyers coming from the suburbs should understand this before purchase — off-street parking adds real value here. Sabin prices fairly for inner NE Portland relative to what you actually get.",
     ],
     personality: "One block from Alberta, half the noise, most of the walkability",
     mapEmbedSrc:
@@ -1358,7 +1360,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How does Sabin compare to buying in the Alberta Arts District?",
-        a: "Sabin is usually $30k–$80k cheaper than an equivalent house on the Alberta side of the street. The commercial noise and weekend foot traffic are lower because you're not on Alberta itself. You get walkability to Alberta without the summer circus. The trade-off is that the school boundaries for Sabin feed into Jefferson rather than Grant for high school — that matters to some buyers significantly.",
+        a: "Sabin usually costs less than an equivalent house on the Alberta side of the street. The commercial noise and weekend foot traffic are lower because you're not on Alberta itself. You get walkability to Alberta without the summer circus. The trade-off is that the school boundaries for Sabin feed into Jefferson rather than Grant for high school — that matters to some buyers significantly.",
       },
       {
         q: "What are Sabin's schools like?",
@@ -1392,7 +1394,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Cully Park finally opened in 2021 after nearly two decades of community advocacy — 25 acres of green space on land that was a former gravel pit, with a covered outdoor stage, community garden plots, and a skate feature. It's the largest new park Portland has built in years, and it belongs to a neighborhood that waited a long time for it. Cully is Portland's largest neighborhood by area, running roughly from NE Alberta Street north to Prescott, and from NE 42nd east to NE 72nd. It does not feel like one neighborhood — it feels like six different blocks arranged in a loose grid, some of them fully settled residential and some of them still working out what they are.",
       "The housing is more varied than most inner Portland neighborhoods: post-war ranches, original bungalows, some newer construction infill, and a stretch along Columbia Blvd that transitions into industrial. There are blocks in Cully that feel like mid-century suburban Portland — wide lots, mature trees, garages, backyards that actually function. There are also blocks where a vinyl-sided rental abuts a storage facility. The southern half of Cully, near Alberta, tends to be more settled; the northern portions near Prescott and Columbia feel more in-transition. The Latino community that has anchored Cully for decades has maintained cultural businesses — taquerias, a Mexican grocery — that give the neighborhood genuine character.",
-      "Cully is the most affordable neighborhood in inner NE Portland, and that attracts investor buyers who are active in the market. When a distressed house comes up below $400k, it gets multiple offers from people who will wholesale it or flip it — which can mean competing against cash buyers as a financed purchaser. The FHA and conventional markets are functional here in the $380k–$550k range, but you need to understand which blocks you're on, what the property condition triggers might be on an appraisal, and where Cully is going rather than just where it's been.",
+      "Cully is the most affordable neighborhood in inner NE Portland, and that attracts investor buyers who are active in the market. When a distressed house comes up cheap, it gets multiple offers from people who will wholesale it or flip it — which can mean competing against cash buyers as a financed purchaser. The FHA and conventional markets are functional here, but you need to understand which blocks you're on, what the property condition triggers might be on an appraisal, and where Cully is going rather than just where it's been.",
     ],
     personality: "Portland's biggest neighborhood: affordable, uneven, genuinely itself",
     mapEmbedSrc:
@@ -1468,15 +1470,15 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Why are Cully homes cheaper than nearby NE neighborhoods?",
-        a: "Larger neighborhood, more varied housing quality, less walkable commercial density, and a reputation that hasn't fully followed the physical improvements being made. Cully Park opening, the Concordia Brewing taproom on the southern edge, and continued infill development are closing the gap. The discount is real but it's compressing. What you buy in Cully for $430k today would have been $350k five years ago and might be $500k in five more.",
+        a: "Larger neighborhood, more varied housing quality, less walkable commercial density, and a reputation that hasn't fully followed the physical improvements being made. Cully Park opening, the Concordia Brewing taproom on the southern edge, and continued infill development are closing the gap. The discount is real, but it has been compressing for years, and the buyers who move early are the ones who capture it.",
       },
       {
         q: "How do investor buyers affect the Cully market?",
-        a: "Meaningfully, especially at the lower price points. Houses priced under $400k in distressed condition often attract cash offers from wholesale buyers and flippers. As a financed buyer, you can compete — but you need a fast pre-approval, strong earnest money, and realistic expectations on inspection flexibility. We've helped financed buyers win in Cully; it requires the offer to be clean and the lender to be fast.",
+        a: "Meaningfully, especially at the lower price points. The cheapest houses, in distressed condition, often attract cash offers from wholesale buyers and flippers. As a financed buyer, you can compete — but you need a fast pre-approval, strong earnest money, and realistic expectations on inspection flexibility. We've helped financed buyers win in Cully; it requires the offer to be clean and the lender to be fast.",
       },
       {
         q: "What's the Cully Park development story?",
-        a: "The land sat as a gravel pit for decades while the community advocated for a park. After nearly 20 years of advocacy and $15M in funding, Cully Park opened in 2021. It's now one of the best neighborhood parks in NE Portland — 25 acres, designed with community input, with a skate feature, stage, and garden. It's the kind of investment that changes a neighborhood's trajectory. Buyers paying attention to long arcs should notice it.",
+        a: "The land sat as a gravel pit for decades while the community advocated for a park. After nearly 20 years of advocacy and a major public and philanthropic funding effort, Cully Park opened in 2021. It's now one of the best neighborhood parks in NE Portland — designed with community input, with a skate feature, stage, and garden. It's the kind of investment that changes a neighborhood's trajectory. Buyers paying attention to long arcs should notice it.",
       },
     ],
     testimonials: [],
@@ -1546,7 +1548,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a house cost in Sunnyside?",
-        a: "Median single-family is around $560,000. There's also a real condo and ADU market here — attached units and smaller condos start around $340,000–$380,000. Houses on the larger lots between Division and Hawthorne closer to SE 30th push into the $700s. Well-conditioned houses in good locations sell quickly.",
+        a: "Sunnyside spans a wider range than it looks. Single-family houses are the bulk of it, but there's a real condo and ADU market here too, and attached units sit well below the detached ones. Houses on the larger lots between Division and Hawthorne closer to SE 30th are the top of the neighborhood. Well-conditioned houses in good locations sell quickly, so having financing ready matters more than shaving a little off your target.",
       },
       {
         q: "Are the Portland Public Schools in Sunnyside worth it?",
@@ -1576,7 +1578,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "SE Division Street between 20th and 50th might be the best restaurant street in Portland. Ava Gene's has been turning out vegetable-forward plates that make you forget you're not eating meat. Tusk is a few blocks down. Checkerboard Pizza opened on Division and the line has not shortened. The street didn't get here overnight — it took about a decade of incremental openings, and the result is a walkable dining strip that doesn't feel like it was designed by a real estate developer.",
       "Richmond's housing is mostly 1920s — bungalows and foursquares on 4,000–5,000 square foot lots, well-maintained because the neighborhood has been desirable long enough for owners to invest. Clinton Street is a secondary commercial corridor to the south — quieter, more neighborhood-scaled, with a handful of good coffee spots and bars. The houses here are denser than Sellwood but less expensive than Laurelhurst. The neighborhood's sweet spot is the blocks between Division and Clinton, roughly SE 26th to SE 44th.",
-      "Division Street has a noise and traffic problem that no amount of good restaurants fixes. On weekend evenings, the street is loud, parking is a competition, and food cart lines stretch half a block. Houses on or very near Division are priced lower for exactly this reason. The neighborhood has also appreciated significantly over the past ten years — what was a relatively affordable inner SE option in 2015 is now firmly in the $580k median range. Clinton Street still has some of that older character, but it won't last forever.",
+      "Division Street has a noise and traffic problem that no amount of good restaurants fixes. On weekend evenings, the street is loud, parking is a competition, and food cart lines stretch half a block. Houses on or very near Division are priced lower for exactly this reason. The neighborhood has also appreciated significantly over the past ten years — what was a relatively affordable inner SE option ten years ago is now firmly mid-market for inner SE. Clinton Street still has some of that older character, but it won't last forever.",
     ],
     personality: "Portland's best restaurant street, with houses attached",
     mapEmbedSrc:
@@ -1620,7 +1622,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How does Richmond compare to Sunnyside or Laurelhurst price-wise?",
-        a: "Richmond sits between them. Sunnyside medians around $560k, Richmond around $580k, Laurelhurst pushes into the $700s and above. You get more lot than Sunnyside and more location than Laurelhurst. The houses are good condition 1920s stock — not the fancier Craftsmans you see in Irvington, but solid.",
+        a: "Richmond sits between them — above Sunnyside, below Laurelhurst. You get more lot than Sunnyside and more location than Laurelhurst. The houses are good condition 1920s stock — not the fancier Craftsmans you see in Irvington, but solid.",
       },
       {
         q: "What's the parking situation on Division Street?",
@@ -1654,7 +1656,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Mount Tabor Park sits at the top of an extinct volcano — the only cinder cone inside a U.S. city limit. The park has old-growth Douglas firs, three reservoirs, and a hiking loop that takes about an hour at a reasonable pace. On a clear day from the summit you can see Hood, St. Helens, and Adams. People who live in the surrounding neighborhood have park access most cities don't give you within a national forest. They walk up to it from their backyards.",
       "The houses surrounding the park are some of the best in SE Portland. 1910s–1930s Craftsmans and Victorian foursquares on large, tree-lined lots. The streets are quiet in a way that inner SE usually isn't — wide setbacks, mature trees, and a neighborhood that takes its historic character seriously. Hoyt Arboretum is nearby; the community is connected. People who move here tend to stay. The SE Hawthorne corridor and Division Street are both within easy biking distance for restaurants and errands.",
-      "Mount Tabor is expensive relative to most of SE Portland, and the prices reflect how much people want to be here. Median is around $680,000, and well-situated houses near the park push well above that. East Burnside to the north brings noise and traffic to the northern edge of the neighborhood. The Hawthorne commercial strip has become more congested than it used to be. And like all of SE Portland, Portland Public Schools are what they are — families often have strong opinions about specific schools before choosing which block to buy on.",
+      "Mount Tabor is expensive relative to most of SE Portland, and the prices reflect how much people want to be here. Well-situated houses near the park push well above the rest of the neighborhood. East Burnside to the north brings noise and traffic to the northern edge of the neighborhood. The Hawthorne commercial strip has become more congested than it used to be. And like all of SE Portland, Portland Public Schools are what they are — families often have strong opinions about specific schools before choosing which block to buy on.",
     ],
     personality: "Hiking trails and Craftsmans, volcano included",
     mapEmbedSrc:
@@ -1698,7 +1700,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How expensive are homes near the park itself?",
-        a: "Houses with direct park access or park views — meaning on the roads that border or climb the park itself — routinely sell above $800,000. The premium over comparable houses a few blocks away is real. If the park is the reason you're buying, expect to pay for it. The broader neighborhood median is around $680k.",
+        a: "Houses with direct park access or park views — meaning on the roads that border or climb the park itself — sell at a clear premium over comparable houses a few blocks away. If the park is the reason you're buying, expect to pay for it — and expect it to change which loan program makes sense. We'll price both scenarios for you.",
       },
       {
         q: "What are the schools like in Mount Tabor?",
@@ -1727,8 +1729,8 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Outer Southeast",
     description: [
       "SE Stark Street near 78th is the strip to watch in Montavilla. Bipartisan Cafe has been pulling shots and hosting neighborhood debates since 2009. Asylum Records is a few doors down. The Montavilla Community Center anchors the neighborhood's civic life — it has a public pool, gym, and meeting rooms that actually get used. This is outer SE, which means the vibe is less curated than inner SE and the prices reflect it.",
-      "Housing is mostly 1940s–1960s — post-war ranches and boxes, with some older Craftsmans from the teens and twenties scattered in. The neighborhood sits between SE Burnside to the north and SE Division to the south, roughly from 72nd to 92nd. It's more affordable than inner SE by a meaningful margin — a two-bedroom house that would be $580k in Richmond is $440k here. SE 82nd Avenue runs along the western edge: it's the commercial arterial that Portlanders love to complain about, but it has groceries, hardware, and Vietnamese food within easy distance.",
-      "The 82nd Ave MAX light rail project has been discussed for years and will eventually get built, which will push Montavilla prices when it does. That's the speculative upside. The current reality is a neighborhood in the middle of a decade-long transition — some blocks feel fully arrived, others don't. SE 82nd itself is genuinely unglamorous: traffic, car dealerships, and the infrastructure of a busy urban arterial. Buyers who understand that dynamic and price accordingly tend to be happy here. Buyers expecting inner SE at outer SE prices are often surprised by what $440k looks like on the ground.",
+      "Housing is mostly 1940s–1960s — post-war ranches and boxes, with some older Craftsmans from the teens and twenties scattered in. The neighborhood sits between SE Burnside to the north and SE Division to the south, roughly from 72nd to 92nd. It's more affordable than inner SE by a meaningful margin — the same two-bedroom house costs noticeably less here than in Richmond. SE 82nd Avenue runs along the western edge: it's the commercial arterial that Portlanders love to complain about, but it has groceries, hardware, and Vietnamese food within easy distance.",
+      "The 82nd Ave MAX light rail project has been discussed for years and will eventually get built, which will push Montavilla prices when it does. That's the speculative upside. The current reality is a neighborhood in the middle of a decade-long transition — some blocks feel fully arrived, others don't. SE 82nd itself is genuinely unglamorous: traffic, car dealerships, and the infrastructure of a busy urban arterial. Buyers who understand that dynamic and price accordingly tend to be happy here. Buyers expecting inner SE at outer SE prices are often surprised by what the money actually buys on the ground.",
     ],
     personality: "Outer SE's best-kept affordable secret, transitioning fast",
     mapEmbedSrc:
@@ -1768,7 +1770,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "Why is Montavilla so much cheaper than inner SE?",
-        a: "Distance and perception. Montavilla is about three miles further east than the Hawthorne corridor, which in Portland real estate terms is a significant price difference. The neighborhood is also transitioning — not all of SE 82nd is there yet, and the housing stock is more post-war ranch than 1920s Craftsman. Buyers who do the math on $140k savings and a slightly longer commute often end up happy.",
+        a: "Distance and perception. Montavilla is about three miles further east than the Hawthorne corridor, which in Portland real estate terms is a significant price difference. The neighborhood is also transitioning — not all of SE 82nd is there yet, and the housing stock is more post-war ranch than 1920s Craftsman. Buyers who do the math on the savings and a slightly longer commute often end up happy.",
       },
       {
         q: "Will the 82nd Ave MAX really change prices?",
@@ -1802,7 +1804,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "The neighborhood is named for the intersection where Foster Road and Powell Boulevard meet, and that corner tells you a lot. It's not pretty, but it's functional — a busy urban intersection surrounded by businesses that serve people who actually live here: a hardware store, a Vietnamese restaurant, a bar that doesn't charge too much. Foster Road running east from there has been developing for about fifteen years, and it's reached a point where you can eat well, drink well, and get your car fixed all within a ten-block radius.",
       "The housing is almost entirely post-WWII — 1940s and 1950s ranches and small boxes, occasionally a bungalow from the 1920s that survived. Lots are tight. The neighborhood has been appreciating faster than its reputation suggested it should, which is what happens when inner SE prices push buyers east. The Foster-Powell Neighborhood Association is one of the more active in outer SE — they publish a newsletter, organize cleanups, and actually show up at city council when something affects the neighborhood. That matters in Portland.",
-      "Powell Boulevard is the northern boundary, and it is loud. Houses on Powell itself are significantly cheaper — sometimes $50k cheaper — than comparable houses two blocks south, because the traffic noise is real and constant. Foster Road has improved but it still has some rough edges. Lot sizes are smaller than Sellwood and yards are minimal. Buyers who want a large backyard should adjust expectations or look further out.",
+      "Powell Boulevard is the northern boundary, and it is loud. Houses on Powell itself are significantly cheaper than comparable houses two blocks south, because the traffic noise is real and constant. Foster Road has improved but it still has some rough edges. Lot sizes are smaller than Sellwood and yards are minimal. Buyers who want a large backyard should adjust expectations or look further out.",
     ],
     personality: "Working Portland, affordable, and more than a little scrappy",
     mapEmbedSrc:
@@ -1846,11 +1848,11 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How does Foster-Powell compare to Richmond and Woodstock price-wise?",
-        a: "Foster-Powell is cheaper than both. Richmond medians around $580k, Woodstock around $530k, Foster-Powell around $460k. You get a similar housing vintage (with FoPo being more post-war than 1920s) but more square footage per dollar. The trade-off is that Foster Road isn't as polished as Division or SE Hawthorne.",
+        a: "Foster-Powell is cheaper than both. You get a similar housing vintage (with FoPo being more post-war than 1920s) but more square footage per dollar. The trade-off is that Foster Road isn't as polished as Division or SE Hawthorne.",
       },
       {
         q: "Is Foster-Powell good for first-time buyers?",
-        a: "It's one of the better options for first-timers who want a house in Portland without stretching to the absolute limit. The $340k–$460k range is realistic for a 2BR or small 3BR. FHA works here. The neighborhood is stable and improving. The school quality is mid-tier, which matters for some buyers and doesn't matter for others.",
+        a: "It's one of the better options for first-timers who want a house in Portland without stretching to the absolute limit. A 2BR or small 3BR here is realistically within reach on a first-time-buyer budget. FHA works here. The neighborhood is stable and improving. The school quality is mid-tier, which matters for some buyers and doesn't matter for others.",
       },
       {
         q: "What's the noise situation near Powell Boulevard?",
@@ -1880,7 +1882,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Brooklyn is one of the smaller, less-discussed SE Portland neighborhoods, which is part of why it still has value for buyers who know where to look. The Springwater Corridor runs along its eastern edge — the 40-mile multi-use trail that connects inner Portland to Boring and beyond. From Brooklyn you can get on the trail in five minutes and be at Sellwood Park in fifteen. McLoughlin Boulevard cuts through the neighborhood on a viaduct, which is less of a daily nuisance than it sounds and more of a dividing line that keeps through traffic off the residential streets.",
       "The housing stock is early 1900s — small Victorians, bungalows, and foursquares from the 1900s through 1920s. The Brooklyn Action Corps neighborhood association has been active for decades and takes the neighborhood's character seriously. The area is wedged between Sellwood-Moreland to the south and the Central Eastside industrial district to the north, which gives it an odd geography — residential blocks that feel settled and quiet, then a hard edge into warehousing and rail. The Union Pacific yard is nearby and you will hear trains.",
-      "The train noise is the honest issue. Depending on where in Brooklyn you're buying, you might hear one freight train a night or several. The rail yard is not decorative. McLoughlin Boulevard also creates some visual and noise friction along the western edge. The neighborhood's proximity to the industrial edge keeps prices below what you'd pay in Sellwood, and buyers who aren't bothered by the industrial adjacency often find it's a reasonable trade. Median is around $490k — about $130k less than Sellwood for similar housing vintage.",
+      "The train noise is the honest issue. Depending on where in Brooklyn you're buying, you might hear one freight train a night or several. The rail yard is not decorative. McLoughlin Boulevard also creates some visual and noise friction along the western edge. The neighborhood's proximity to the industrial edge keeps prices below what you'd pay in Sellwood, and buyers who aren't bothered by the industrial adjacency often find it's a reasonable trade. Brooklyn runs well below Sellwood for a similar housing vintage.",
     ],
     personality: "Industrial edges, early 1900s houses, and underpriced by buyers who don't look",
     mapEmbedSrc:
@@ -1924,7 +1926,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Why is Brooklyn cheaper than Sellwood?",
-        a: "Primarily the industrial adjacency and the train noise. The housing vintage and quality is comparable — both neighborhoods have early 1900s stock in reasonable condition. Sellwood has the Willamette river proximity, the antique strip, and better perception. Brooklyn has the Springwater access and lower prices. For buyers who do the comparison, the $130k savings is real.",
+        a: "Primarily the industrial adjacency and the train noise. The housing vintage and quality is comparable — both neighborhoods have early 1900s stock in reasonable condition. Sellwood has the Willamette river proximity, the antique strip, and better perception. Brooklyn has the Springwater access and lower prices. For buyers who do the comparison, the savings are real.",
       },
       {
         q: "What does the Springwater Corridor access actually mean for daily life?",
@@ -2023,7 +2025,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How is Concordia different from the Alberta Arts District?",
-        a: "They share the Alberta commercial strip on the south edge of Concordia, but Concordia is its own neighborhood — quieter residential streets, smaller bungalows, and prices that run $50k–$100k below comparable houses in Alberta proper. It's where buyers who lose Alberta deals often end up, and many say the trade was worth it.",
+        a: "They share the Alberta commercial strip on the south edge of Concordia, but Concordia is its own neighborhood — quieter residential streets, smaller bungalows, and prices that run below comparable houses in Alberta proper. It's where buyers who lose Alberta deals often end up, and many say the trade was worth it.",
       },
       {
         q: "What happened to Concordia University?",
@@ -2031,7 +2033,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a home cost in Concordia?",
-        a: "Median is around $520,000. Most houses trade between $400k and $650k. Smaller 2-bedroom bungalows in need of work can still come in under $450k. Well-maintained 3-bedrooms on the core residential streets are typically $525k–$650k. Competition exists but it's not as intense as Alberta or Irvington.",
+        a: "Concordia sits below Alberta and Irvington, which is much of the appeal. Smaller 2-bedroom bungalows needing work are the entry point; well-maintained 3-bedrooms on the core residential streets are the top of the neighborhood. Competition exists but it's not as intense as Alberta or Irvington. Tell us your range and we'll show you which end of that you're shopping.",
       },
       {
         q: "What are the schools like in Concordia?",
@@ -2148,7 +2150,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What do homes cost in Creston-Kenilworth?",
-        a: "Median is around $440,000. Most single-family houses trade between $370k and $550k. You can still find a 3-bedroom 1950s ranch on a 6,000 sq ft lot in the low $400s if you move quickly. That's meaningfully below comparable houses in Sunnyside, Richmond, or Sellwood.",
+        a: "Creston-Kenilworth prices below comparable houses in Sunnyside, Richmond, or Sellwood, which is the whole reason buyers look here. Most of what trades is single-family, and you can still find a 3-bedroom 1950s ranch on a decent lot if you move quickly. We'd rather pull live comps for the blocks you're watching than publish a median that's stale next month.",
       },
       {
         q: "How are the schools in Creston-Kenilworth?",
@@ -2277,7 +2279,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What do homes cost in Lents?",
-        a: "Median around $390,000 for a single-family residence. Fixer-uppers and smaller houses still trade in the high $200s to low $300s. A solid 3-bedroom with a functional kitchen and yard runs $380k–$470k. Cash offers from investors are common and competitive on anything under $400k in good condition.",
+        a: "Lents is one of the most affordable places to buy a single-family house inside Portland. Fixer-uppers and smaller houses are the entry point; a solid 3-bedroom with a functional kitchen and yard sits above them. Cash offers from investors are common and competitive on anything cheap and in good condition, so a fast pre-approval matters more here than almost anywhere else in the city.",
       },
       {
         q: "How are the schools in Lents?",
@@ -2412,7 +2414,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What does a home cost in the Reed neighborhood?",
-        a: "Median around $580,000. The range is wide — smaller Craftsmans and post-war houses south of the college can come in at $450k–$500k. Well-maintained 1920s houses close to the college or near Woodstock Blvd trade at $600k–$750k. Faculty housing and owner-occupied houses near the campus grounds command premiums.",
+        a: "The range is wide. Smaller Craftsmans and post-war houses south of the college are the entry point; well-maintained 1920s houses close to the college or near Woodstock Blvd sit above them. Owner-occupied houses near the campus grounds command a premium. Send us the blocks you're looking at and we'll pull what's actually trading.",
       },
       {
         q: "How does the Reed neighborhood compare to Woodstock or Eastmoreland?",
@@ -2444,7 +2446,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "SE 52nd Avenue runs north-south through the middle of Brentwood-Darlington and is the neighborhood's main organizing street. At the north end it connects to Foster Road; at the south end it runs toward Woodstock and eventually Milwaukie. The commercial options on 52nd are modest: a few convenience stores, a laundromat, some auto services, a handful of restaurants. You drive to Foster or Powell for anything beyond basics. The neighborhood is quiet in the genuine sense — not the real estate brochure sense. Streets in here on a Tuesday afternoon are essentially empty.",
       "The housing is 1950s and 1960s ranches and split-levels on lots that run 6,000 to 8,000 square feet, sometimes larger. These are real lots — room for a garden, room for a dog, room to put up a fence. The construction is functional rather than architectural: aluminum siding, attached garages, original windows that haven't been updated since the Carter administration on some houses. Buyers who know how to evaluate a house and don't mind a project can find genuine value here. The square footage per dollar is among the best in Portland proper.",
-      "The schools in this attendance area rate below the Portland average at every level — that's not an opinion, it's the data. Barbur Blvd is the western edge of the neighborhood and is a freeway-speed arterial with noise and no pedestrian environment. The neighborhood is not walkable — you need a car. There is no MAX or frequent-service bus. For buyers who need square footage and lot size and have exhausted everything under $450k in inner SE, Brentwood-Darlington deserves an honest look. It doesn't deserve a pitch about its potential — it deserves a buyer who understands what it is.",
+      "The schools in this attendance area rate below the Portland average at every level — that's not an opinion, it's the data. Barbur Blvd is the western edge of the neighborhood and is a freeway-speed arterial with noise and no pedestrian environment. The neighborhood is not walkable — you need a car. There is no MAX or frequent-service bus. For buyers who need square footage and lot size and have exhausted their options in inner SE, Brentwood-Darlington deserves an honest look. It doesn't deserve a pitch about its potential — it deserves a buyer who understands what it is.",
     ],
     personality: "Outer SE's most honest value: real lots, real space, real trade-offs",
     mapEmbedSrc:
@@ -2539,7 +2541,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "What's the honest case for buying in Brentwood-Darlington?",
-        a: "Price and lot size. You get a freestanding house with a real yard in Portland proper for under $400,000 in most cases. That entry point doesn't exist in inner SE anymore. If you work remotely or commute at off-hours, the commute is manageable. If you need schools in the top half of PPS, you'll be looking at option schools. If you need walkability or transit, this neighborhood doesn't offer it.",
+        a: "Price and lot size. You get a freestanding house with a real yard in Portland proper, at an entry point that doesn't exist in inner SE anymore. If you work remotely or commute at off-hours, the commute is manageable. If you need schools in the top half of PPS, you'll be looking at option schools. If you need walkability or transit, this neighborhood doesn't offer it.",
       },
       {
         q: "Is Brentwood-Darlington safe?",
@@ -2547,7 +2549,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What does a home in Brentwood-Darlington cost?",
-        a: "Median around $380,000. Smaller 1950s ranches and split-levels start in the high $290s–$320s with work needed. A solid, updated 3-bedroom ranch on a 7,000 sq ft lot runs $380k–$450k. The price per square foot is among the lowest in Portland inside the city limits.",
+        a: "Among the lowest price per square foot in Portland inside the city limits. Smaller 1950s ranches and split-levels needing work are the entry point; a solid, updated 3-bedroom ranch on a big lot sits above them. That gap is the reason to look here, and we'll tell you honestly what your budget reaches on these blocks.",
       },
       {
         q: "Are there plans for development in Brentwood-Darlington?",
@@ -2578,7 +2580,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Annie Bloom's Books on SW Capitol Highway has been a neighborhood independent bookstore since 1978 — the kind of place where the staff has opinions and the shelves are curated rather than algorithmic. The Capitol Highway commercial strip running through Multnomah Village has a half-dozen businesses that have been in the same location for decades: a hardware store, a barber, Obi for Japanese izakaya, a pizza spot that doesn't have a website. It's a genuine small-town commercial strip inside Portland city limits, and that's not an accident — residents have pushed back against chain creep for years.",
       "Gabriel Park, at 90 acres, is one of the better parks in SW Portland: tennis courts, a skate park, a large off-leash dog area, soccer and baseball fields, and trails that connect into the SW greenway network. The housing is primarily 1940s–1960s ranches and split-levels — affordable by Portland standards, well-built, on lots that run 6,000–10,000 sq ft. Craftsmans from the 1930s show up occasionally and sell fast. The neighborhood sits at about 400 feet elevation, which means views from the upper streets and a legitimate hill climb if you're biking in.",
-      "There is no meaningful transit to downtown. The 44 bus runs but adds 45+ minutes each way, which is why everyone drives. SW Capitol Highway through the village backs up at afternoon rush — it's the main arterial and there's no good workaround. Buyers coming from inner NE Portland are sometimes surprised by how car-dependent this is. If that's a dealbreaker, Multnomah Village isn't the right neighborhood. If it's not, you get a lot of house and a genuinely functional neighborhood for around $620k.",
+      "There is no meaningful transit to downtown. The 44 bus runs but adds 45+ minutes each way, which is why everyone drives. SW Capitol Highway through the village backs up at afternoon rush — it's the main arterial and there's no good workaround. Buyers coming from inner NE Portland are sometimes surprised by how car-dependent this is. If that's a dealbreaker, Multnomah Village isn't the right neighborhood. If it's not, you get a lot of house and a genuinely functional neighborhood for the money.",
     ],
     personality: "Real small-town street inside Portland — car-dependent and proud of it",
     mapEmbedSrc:
@@ -2664,7 +2666,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a home cost in Multnomah Village?",
-        a: "Median is around $620,000. Most houses trade between $480k and $750k — ranches and split-levels from the 1950s and 1960s at the lower end, better-maintained or larger Craftsmans pushing higher. Inventory is low and turnover is slow. Well-priced houses in the village core tend to move fast.",
+        a: "Multnomah Village runs above most of SW Portland. Ranches and split-levels from the 1950s and 1960s are the lower end; better-maintained or larger Craftsmans push higher. Inventory is low and turnover is slow, so well-priced houses in the village core move fast — which makes having your financing settled before you tour the difference between writing an offer and watching one.",
       },
       {
         q: "Is Multnomah Village good for families?",
@@ -2770,7 +2772,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How does Hillsdale compare to Multnomah Village?",
-        a: "They share the same school pipeline — Rieke vs. Hayhurst at the elementary level, then Robert Gray and Ida B. Wells-Barnett. Multnomah Village has a more developed, walkable commercial strip. Hillsdale's town center is more utilitarian. Prices in Hillsdale tend to run $20k–$50k lower on comparable houses, which is the trade most buyers make.",
+        a: "They share the same school pipeline — Rieke vs. Hayhurst at the elementary level, then Robert Gray and Ida B. Wells-Barnett. Multnomah Village has a more developed, walkable commercial strip. Hillsdale's town center is more utilitarian. Prices in Hillsdale tend to run lower on comparable houses, which is the trade most buyers make.",
       },
       {
         q: "Is Hillsdale good for families?",
@@ -2800,7 +2802,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "NW 23rd Avenue — 'Trendy-Third' to people who've lived in Portland long enough — is still the most walkable retail street in residential Portland. Ken's Artisan Bakery on NW 21st opens at 7am and is one of the best reasons to live in this part of the city. St. Honoré Boulangerie on NW 23rd is the other one. Elephants Delicatessen, Escape from New York Pizza, the original Patagonia store — the commercial strip has had turnover over the years but the density of independently-owned businesses per block is still higher here than anywhere outside the Pearl. Thurman Street at the north end of 23rd leads directly into Forest Park.",
       "The housing stock is what Portland built before cars became the organizing principle: Victorian houses from the 1880s–1910s, early 20th-century apartment buildings, and narrow lots with deep houses on a street grid that actually works on foot. Chapman Elementary feeds into West Sylvan Middle School and Lincoln High School — Lincoln runs the International Baccalaureate program, which is the school anchor for NW Portland. Most of the residential streets between NW Lovejoy and NW Thurman are quiet despite the commercial activity two blocks away.",
-      "The hills between Nob Hill and downtown are real. The route to the city center looks bikeable on a map until you're on it. The Burnside Bridge approach involves climbing NW 14th or dealing with the MAX corridor. Driving is easier but parking is metered or permitted on most streets near 23rd. The entry price for a Victorian with original woodwork is real: $850k is the median, and that buys a house that needs work on the upper streets or a well-maintained one further from the park trailhead.",
+      "The hills between Nob Hill and downtown are real. The route to the city center looks bikeable on a map until you're on it. The Burnside Bridge approach involves climbing NW 14th or dealing with the MAX corridor. Driving is easier but parking is metered or permitted on most streets near 23rd. The entry price for a Victorian with original woodwork is real: at the neighborhood median you're choosing between a house that needs work on the upper streets or a well-maintained one further from the park trailhead.",
     ],
     personality: "Portland's best walking street, backed into Forest Park",
     mapEmbedSrc:
@@ -2879,7 +2881,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What do homes in Nob Hill cost?",
-        a: "Median is around $850,000. The range is wide: smaller condos in older buildings from $500k, Victorians with original character on NW 18th–22nd from $750k–$1.2M, and full-renovation projects at the upper end. Parking is often missing or in a garage, which affects price. If you're buying for the IB program at Lincoln High, budget above $750k for a house.",
+        a: "Nob Hill is one of the more expensive neighborhoods in Portland, and the range is wide: smaller condos in older buildings at the bottom, Victorians with original character on NW 18th–22nd in the middle, full-renovation projects at the top. Parking is often missing or in a garage, which affects price. If you're buying for the IB program at Lincoln High, a house rather than a condo moves your budget up meaningfully — worth modelling before you shop.",
       },
       {
         q: "Is Nob Hill good for families?",
@@ -2908,8 +2910,8 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Northwest & Pearl",
     description: [
       "Portland's newest officially designated neighborhood — official status came in 2015 — Slabtown sits between Nob Hill and the Pearl District in a way that makes the geography easy to explain but the feel harder to pin down. The NW 23rd commercial strip runs along its eastern edge, giving residents walking access to Ken's Artisan Bakery, St. Honoré, and the rest of the NW 23rd infrastructure without paying Nob Hill Victorian prices. Amazon Fresh opened a location here. The MAX Blue and Red lines stop at NW 23rd and Lovejoy, which is the best transit situation in NW Portland.",
-      "The housing stock is entirely dense: condos, townhomes, and a handful of converted industrial buildings. No single-family homes. The buyers here are skewing young, skewing professional, and skewing toward the tradeoff of square footage for location — a 750 sq ft condo at NW 18th and Hoyt at $450k is the entry-level calculation. Newer buildings have better energy efficiency and higher HOA fees; older converted buildings have more character and deferred maintenance risks worth checking. The neighborhood fills in a gap that used to be light industrial, and some of the best buildings here preserve that aesthetic.",
-      "Everything Nob Hill has on walkability and transit, Slabtown has too, at a lower price point and without the Victorian character. That's the honest pitch. The tradeoff: no yard, no single-family option, and HOA fees are a permanent part of your housing cost. If your budget is $400k–$700k and car-free or car-light living matters, this is one of the strongest cases in Portland. If you're eventually planning for a yard, buy here knowing you'll outgrow it.",
+      "The housing stock is entirely dense: condos, townhomes, and a handful of converted industrial buildings. No single-family homes. The buyers here are skewing young, skewing professional, and skewing toward the tradeoff of square footage for location — a small condo around NW 18th and Hoyt is the entry-level calculation. Newer buildings have better energy efficiency and higher HOA fees; older converted buildings have more character and deferred maintenance risks worth checking. The neighborhood fills in a gap that used to be light industrial, and some of the best buildings here preserve that aesthetic.",
+      "Everything Nob Hill has on walkability and transit, Slabtown has too, at a lower price point and without the Victorian character. That's the honest pitch. The tradeoff: no yard, no single-family option, and HOA fees are a permanent part of your housing cost. If car-free or car-light living matters and you're shopping in the condo range, this is one of the strongest cases in Portland. If you're eventually planning for a yard, buy here knowing you'll outgrow it.",
     ],
     personality: "The Pearl's younger neighbor — condos, MAX access, NW 23rd walkable",
     mapEmbedSrc:
@@ -2983,7 +2985,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "What's the difference between Slabtown and Nob Hill?",
-        a: "Slabtown is denser, newer, and lacks single-family housing. Nob Hill has Victorian houses and a more established neighborhood character. They share NW 23rd walkability and the same school district. Slabtown typically runs $150k–$200k lower in median price on comparable square footage, and the transit situation with the MAX stop at Lovejoy is better in Slabtown than most of Nob Hill.",
+        a: "Slabtown is denser, newer, and lacks single-family housing. Nob Hill has Victorian houses and a more established neighborhood character. They share NW 23rd walkability and the same school district. Slabtown typically runs lower in median price on comparable square footage, and the transit situation with the MAX stop at Lovejoy is better in Slabtown than most of Nob Hill.",
       },
       {
         q: "Are there any single-family homes in Slabtown?",
@@ -2991,7 +2993,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What does a condo in Slabtown cost?",
-        a: "Entry-level studios and one-bedrooms in older buildings start around $400k. Two-bedrooms in newer buildings with amenities run $600k–$800k. HOA fees range from $350 to $600/month depending on building age and amenities. Always factor HOA into your monthly housing number — on a $500k purchase at $450/month HOA, you're effectively carrying $550k in housing costs.",
+        a: "Entry-level studios and one-bedrooms in older buildings are the bottom of the market; two-bedrooms in newer buildings with amenities sit at the top. The number that actually decides your budget here is the HOA: dues vary a lot by building age and amenities, and they count against what you qualify for exactly like a payment does. Factor them into your monthly housing number rather than the sticker price — send us the buildings you're considering and we'll show you the real monthly on each.",
       },
       {
         q: "Is Slabtown good for first-time buyers?",
@@ -3017,7 +3019,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Providence Park — Portland Timbers and Thorns home stadium — sits at SW 18th and Morrison, and it is the physical organizing fact of Goose Hollow. On match days the neighborhood fills with green scarves, noise, and a line out the door at every bar within four blocks. On non-match days it's one of the most convenient neighborhoods in Portland: downtown is a 10-minute walk on flat ground, the MAX Blue and Red lines run along SW Jefferson, and Lincoln High School — PPS's IB school — is two blocks from the park. If you work downtown or commute by rail, the location calculus is hard to beat.",
       "The housing is dense. Apartments and condos make up most of the stock, with some single-family houses appearing on the southern and western edges where the neighborhood transitions into the West Hills. Lincoln High School and the adjacent area have a small cluster of 1920s–1940s houses for buyers willing to look carefully. The neighborhood has good transit scores and genuinely earns them — SW Jefferson MAX runs frequently and connects quickly to the Red and Blue line network. Parking is permit-required on most residential streets and limited near the park.",
-      "The two things to know going in: match day noise is real and predictable — 10,000 people, 90 minutes of continuous chanting, and a post-match crowd that disperses through the neighborhood. It's not constant but it's not subtle. Street parking is essentially unusable on match days even blocks away. Single-family homes are rare and expensive here, pushing $700k when they appear. The condo market ranges from $300k for an older one-bedroom to $600k+ for a newer two-bedroom with a parking spot.",
+      "The two things to know going in: match day noise is real and predictable — a full stadium, 90 minutes of continuous chanting, and a post-match crowd that disperses through the neighborhood. It's not constant but it's not subtle. Street parking is essentially unusable on match days even blocks away. Single-family homes are rare and expensive here when they appear at all. The condo market spans older one-bedrooms at the bottom to newer two-bedrooms with a parking spot at the top.",
     ],
     personality: "Downtown on foot, MAX out the door, Timbers noise included",
     mapEmbedSrc:
@@ -3097,7 +3099,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Are there single-family homes in Goose Hollow?",
-        a: "Yes, but they're rare. Most appear on the southern and western edges of the neighborhood toward SW Vista Ave and SW 20th. When they hit the market they tend to move quickly — $700k+ is typical for anything in decent condition. Most buyers in Goose Hollow are buying condos or apartments. If a house is the specific requirement, the adjacent inventory in Nob Hill and the West Hills is the better hunting ground.",
+        a: "Yes, but they're rare. Most appear on the southern and western edges of the neighborhood toward SW Vista Ave and SW 20th. When they hit the market they tend to move quickly, and anything in decent condition prices at the top of the neighborhood. Most buyers in Goose Hollow are buying condos or apartments. If a house is the specific requirement, the adjacent inventory in Nob Hill and the West Hills is the better hunting ground.",
       },
       {
         q: "How good is the transit from Goose Hollow?",
@@ -3127,7 +3129,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "N Willamette Boulevard runs along the bluffs above the river, and on a clear day you can see Mount Hood framed between houses. This isn't a selling point some agent dreamed up — it's just what the street looks like. Overlook Park sits at the edge of the bluff with benches facing west across the Willamette to the West Hills. The Interstate MAX line runs along the eastern edge of the neighborhood, and the N Interstate/Overlook Park station puts you in downtown in under 20 minutes without a car.",
       "The housing stock is predominantly 1910s and 1920s bungalows and four-squares, with slightly larger lots than you'll find a mile north in Kenton or Piedmont. The blocks feel established — not polished, just old in a good way, with mature trees and front yards that get used. There's not much commercial in Overlook proper; most residents go to the Mississippi corridor or to the shops along N Interstate for everyday needs. The neighborhood association has been active here for a long time and tends to stay involved in what happens to it.",
-      "The bluff location is the main draw and also creates a real geographic constraint — east-west access off the bluff involves a limited set of streets, and the Interstate MAX corridor, while excellent for downtown commuters, isn't the quietest eastern edge to live next to. Prices have held up because supply is constrained: the bluff frontage doesn't grow and the neighborhood isn't big. Competition at or under $500k is real.",
+      "The bluff location is the main draw and also creates a real geographic constraint — east-west access off the bluff involves a limited set of streets, and the Interstate MAX corridor, while excellent for downtown commuters, isn't the quietest eastern edge to live next to. Prices have held up because supply is constrained: the bluff frontage doesn't grow and the neighborhood isn't big. Competition at the accessible end of the range is real.",
     ],
     personality: "Bluff views, MAX access, and a neighborhood that doesn't need to advertise",
     mapEmbedSrc:
@@ -3175,7 +3177,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a home cost in Overlook?",
-        a: "Median is around $500k. The range goes from low $400s for smaller bungalows needing work, up to $700k+ for renovated houses with actual river views on N Willamette Blvd. The bluff-facing properties command a real premium. Properties further east toward the Interstate MAX corridor come in at the lower end of the range.",
+        a: "Overlook runs mid-market for North Portland. Smaller bungalows needing work are the entry point; renovated houses with actual river views on N Willamette Blvd are the top. The bluff-facing properties command a real premium, and properties further east toward the Interstate MAX corridor come in lower. We'll pull live comps for the specific streets you're watching.",
       },
       {
         q: "Is Overlook walkable?",
@@ -3245,7 +3247,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a home cost in Piedmont?",
-        a: "Median is around $470k — meaningfully below Overlook and Irvington, roughly comparable to Arbor Lodge. Most houses trade between $360k and $580k. The 1920s–1930s bungalows are the dominant type: 1,100–1,600 sq ft, 5,000 sq ft lots, original hardwood floors in most. Well-maintained and move-in ready homes go quickly.",
+        a: "Piedmont sits meaningfully below Overlook and Irvington, and roughly level with Arbor Lodge. The 1920s–1930s bungalows are the dominant type — modest square footage, small lots, original hardwood floors in most. Well-maintained, move-in-ready homes go quickly. Send us the blocks you're watching and we'll pull what's actually trading.",
       },
       {
         q: "What's the commute like from Piedmont?",
@@ -3253,7 +3255,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Is Piedmont a good neighborhood for first-time buyers?",
-        a: "Yes. The price range is accessible, the neighborhood is stable, and the housing stock is solid 1920s–1930s construction. FHA works well here. The main thing to know is that competition increases notably below $450k — investor buyers show up in that range. At $470k–$550k for a move-in ready bungalow, first-time buyers tend to have less competition.",
+        a: "Yes. The price range is accessible, the neighborhood is stable, and the housing stock is solid 1920s–1930s construction. FHA works well here. The main thing to know is that competition increases notably at the cheaper end — investor buyers show up there. A step above that, for a move-in-ready bungalow, first-time buyers tend to have less competition.",
       },
     ],
     testimonials: [],
@@ -3275,7 +3277,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "N Lombard Street is Portsmouth's main commercial corridor and it's better than its reputation. You'll find independent spots alongside the usual strip-mall businesses — dry cleaners, nail salons, a couple of decent food options, the things a working neighborhood actually needs. The University of Portland campus anchors the western end of the neighborhood, a full 131-acre bluff campus with trails, athletic fields, and the kind of physical presence that keeps the streets around it stable and maintained.",
       "The residential blocks off N Lombard are 1940s and 1950s housing — a later vintage than most of inner North Portland. Ranch homes and modest bungalows with larger front lawns, more setback from the street, a suburban-scaled feeling. These aren't Victorian-era blocks; they're the kind of neighborhood that grew up after World War II when North Portland was still being built out. Families and longtime residents make up the core. The neighborhood has held steady over time without the churn that some North Portland neighborhoods have experienced.",
-      "Portsmouth is the most affordable of the University of Portland-adjacent neighborhoods, and that gap from University Park is real — you're getting less dramatic bluff geography and no Willamette views, but you're paying $70k less for comparable housing. The school situation is the main honest concern: Portsmouth Elementary and Roosevelt High School are below average within PPS, and families who prioritize school ratings will want to look carefully. Some buyers account for private school costs in their mortgage math.",
+      "Portsmouth is the most affordable of the University of Portland-adjacent neighborhoods, and that gap from University Park is real — you're getting less dramatic bluff geography and no Willamette views, but you're paying less for comparable housing. The school situation is the main honest concern: Portsmouth Elementary and Roosevelt High School are below average within PPS, and families who prioritize school ratings will want to look carefully. Some buyers account for private school costs in their mortgage math.",
     ],
     personality: "Affordable, stable, and more neighborhood than Portland gives it credit for",
     mapEmbedSrc:
@@ -3316,7 +3318,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How does Portsmouth compare to St. Johns in price and feel?",
-        a: "They're close in price — Portsmouth median is around $420k, St. Johns around $420k as well. St. Johns has Cathedral Park and a more developed N Lombard commercial strip with more destination restaurants. Portsmouth has University of Portland as a physical anchor and slightly newer housing stock from the 1940s–50s. Both share the same school options: George Middle and Roosevelt High.",
+        a: "They're close in price. St. Johns has Cathedral Park and a more developed N Lombard commercial strip with more destination restaurants. Portsmouth has University of Portland as a physical anchor and slightly newer housing stock from the 1940s–50s. Both share the same school options: George Middle and Roosevelt High.",
       },
       {
         q: "Are the schools good in Portsmouth?",
@@ -3391,7 +3393,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "What's the difference between University Park and Portsmouth?",
-        a: "About $70k in median home price and a bluff. University Park sits on the Willamette bluffs adjacent to the UP campus, with river views from the higher streets and a more settled, quieter residential character. Portsmouth is slightly inland, flatter, with 1940s–50s housing on a similar price tier. Both share George Middle and Roosevelt High. University Park is more expensive for the geography and the character, not for better schools or better transit.",
+        a: "A bluff, and a step up in price. University Park sits on the Willamette bluffs adjacent to the UP campus, with river views from the higher streets and a more settled, quieter residential character. Portsmouth is slightly inland, flatter, with 1940s–50s housing at a lower price tier. Both share George Middle and Roosevelt High. University Park is more expensive for the geography and the character, not for better schools or better transit.",
       },
       {
         q: "Do I need a car to live in University Park?",
@@ -3425,7 +3427,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "N Mississippi Avenue has changed more in 20 years than most Portland streets change in 50. Prost! opened in the early 2000s. Gado Gado, one of Portland's best restaurants regardless of neighborhood, is on N Mississippi. Mississippi Pizza has been there long enough to feel like a fixture. Tasty n Daughters does all-day breakfast on N Williams. The commercial stretch between N Fremont and N Skidmore is one of the most dense concentrations of independent restaurants and bars in North Portland. The housing is 1900s–1920s bungalows and Victorian cottages — the walkable fabric is intact because the buildings survived.",
       "The neighborhood was predominantly Black through the mid-20th century. Vanport flooding in 1948 displaced thousands of Black Portlanders into this part of North Portland. Urban renewal in the 1950s and 1960s demolished the Albina neighborhood to the south. What remained in Boise-Eliot was built by a community that had been systematically pushed to this part of the city. The commercial investment on Mississippi Avenue starting in the 2000s brought money and new residents, and it displaced many of the people who had built what made the neighborhood worth investing in. That's not ancient history — it's living memory for people still in Portland. If you're buying here, that context is part of what you're buying into.",
-      "On the practical side: the neighborhood is genuinely walkable, the bike infrastructure on N Williams is among the best in North Portland, and transit connections on N Interstate are solid. The median is around $540k, which is among the higher entry points in North Portland. Competition below $500k is intense. The honest buyer question here is whether you've thought through what it means to be a new homeowner in a neighborhood with this specific history — not to be paralyzed by it, but to be clear-eyed.",
+      "On the practical side: the neighborhood is genuinely walkable, the bike infrastructure on N Williams is among the best in North Portland, and transit connections on N Interstate are solid. Boise-Eliot is among the higher entry points in North Portland, and competition at the accessible end is intense. The honest buyer question here is whether you've thought through what it means to be a new homeowner in a neighborhood with this specific history — not to be paralyzed by it, but to be clear-eyed.",
     ],
     personality: "N Mississippi's best tables, a history that still matters, real walkability",
     mapEmbedSrc:
@@ -3474,7 +3476,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a home cost in Boise-Eliot?",
-        a: "Median is around $540k — higher than most North Portland neighborhoods. The Victorian cottages and early bungalows closest to N Mississippi trade at a premium. Renovated houses in good condition on the residential streets between the two commercial corridors typically land $480k–$680k. Cash buyers and investors compete in this price range, especially below $500k.",
+        a: "Higher than most North Portland neighborhoods. The Victorian cottages and early bungalows closest to N Mississippi trade at a premium; renovated houses on the residential streets between the two commercial corridors sit below them. Cash buyers and investors compete here, especially at the cheaper end, so a fast and airtight pre-approval is worth real money. Tell us your range and we'll show you what it reaches.",
       },
       {
         q: "How do the schools compare in Boise-Eliot?",
@@ -3540,7 +3542,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How does Humboldt compare to Boise-Eliot?",
-        a: "Similar housing vintage and lot sizes, but Boise-Eliot has N Mississippi Avenue's concentration of destination restaurants and bars — that's the primary price difference. Humboldt trades at roughly $50k below Boise-Eliot on comparable houses. The N Williams bike corridor runs through both, so bike access to commercial corridors is similar. If the destination commercial matters to you, Boise-Eliot costs more. If you want residential quiet and are fine biking 10 minutes to dinner, Humboldt makes financial sense.",
+        a: "Similar housing vintage and lot sizes, but Boise-Eliot has N Mississippi Avenue's concentration of destination restaurants and bars — that's the primary price difference. Humboldt trades below Boise-Eliot on comparable houses. The N Williams bike corridor runs through both, so bike access to commercial corridors is similar. If the destination commercial matters to you, Boise-Eliot costs more. If you want residential quiet and are fine biking 10 minutes to dinner, Humboldt makes financial sense.",
       },
       {
         q: "Is the I-5 noise a serious issue in Humboldt?",
@@ -3552,7 +3554,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Is Humboldt good for first-time buyers?",
-        a: "Yes, with the same caveats that apply across North Portland: investor competition below $450k is real, financing pre-approval matters, and you need to be ready to move. The N Williams bike corridor makes Humboldt genuinely useful for car-free or car-light living in a way that more car-dependent North Portland neighborhoods aren't. At $430k–$510k for a solid bungalow, it's a reasonable entry point.",
+        a: "Yes, with the same caveats that apply across North Portland: investor competition at the cheaper end is real, financing pre-approval matters, and you need to be ready to move. The N Williams bike corridor makes Humboldt genuinely useful for car-free or car-light living in a way that more car-dependent North Portland neighborhoods aren't. For a solid bungalow, it's a reasonable entry point.",
       },
     ],
     testimonials: [],
@@ -3614,7 +3616,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "Is Arbor Lodge a good entry point into Portland homeownership?",
-        a: "It's one of the better options in North Portland for buyers at the $380k–$470k range who want MAX access. The Yellow Line is a real daily-use transit connection to downtown. The tradeoff is that investor competition is consistent at this price point — you need to be pre-approved, decisive, and ready to move quickly. If you're flexible enough to act in 24 hours when the right house comes up, Arbor Lodge works. If you need weeks to decide, you'll lose houses to cash offers.",
+        a: "It's one of the better options in North Portland for buyers at the accessible end of the market who want MAX access. The Yellow Line is a real daily-use transit connection to downtown. The tradeoff is that investor competition is consistent at this price point — you need to be pre-approved, decisive, and ready to move quickly. If you're flexible enough to act in 24 hours when the right house comes up, Arbor Lodge works. If you need weeks to decide, you'll lose houses to cash offers.",
       },
       {
         q: "How does Arbor Lodge compare to Kenton?",
@@ -3626,7 +3628,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What's the investor competition situation really like?",
-        a: "It's real and consistent. Arbor Lodge's combination of entry-level prices and MAX proximity makes it attractive to both owner-occupants and investors buying for rentals. On well-priced houses under $450k in acceptable condition, cash buyers and investor-backed offers show up regularly. As an owner-occupant buyer, your financing pre-approval needs to be airtight and your decision timeline needs to be short. FHA is workable here but competes against conventional and cash.",
+        a: "It's real and consistent. Arbor Lodge's combination of entry-level prices and MAX proximity makes it attractive to both owner-occupants and investors buying for rentals. On well-priced houses in acceptable condition, cash buyers and investor-backed offers show up regularly. As an owner-occupant buyer, your financing pre-approval needs to be airtight and your decision timeline needs to be short. FHA is workable here but competes against conventional and cash.",
       },
     ],
     testimonials: [],
@@ -3764,7 +3766,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What's the housing market like in Beaverton?",
-        a: "Median around $525,000. You'll find 1970s–1990s ranches and split-levels in the $400k–$600k range, condos and townhomes from the mid-$300s, and newer construction pushing into the $700k+ range. Comparable space to inner SE Portland generally costs 15–25% less here. Well-priced homes in good condition move quickly.",
+        a: "Beaverton spans a wide range. 1970s–1990s ranches and split-levels are the core of the market, with condos and townhomes below them and newer construction above. Comparable space to inner SE Portland generally costs meaningfully less here. Well-priced homes in good condition move quickly — we'll tell you what your budget reaches across those three tiers.",
       },
       {
         q: "Is Beaverton walkable?",
@@ -3789,7 +3791,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Washington County",
     description: [
       "Intel's Jones Farm and Hawthorn Farm campuses in Hillsboro together make up one of the largest semiconductor manufacturing operations in the United States. The eastern edge of the city feels like a tech corridor — campuses, hotels, and new apartments along Cornell Road. But drive five minutes west toward downtown and you hit Main Street, the Venetian Theatre (a 1921 movie palace that still runs films), and a Saturday farmers market that's been running since 1982. Hillsboro has a downtown that actually functions. The MAX Blue line runs the length of the city and connects to Portland, though the ride to downtown Portland is about 45 minutes.",
-      "Housing here is more affordable than Beaverton because Hillsboro is further from Portland and the western side of the city is still actively developing. You can find 3-bedroom houses from the 1990s and early 2000s in the mid-$400s, and new construction subdivisions on the west side pushing toward $600k+. The Hillsboro School District has a strong reputation — particularly at the elementary level — and the district has grown to keep pace with the city's expansion since 2010. The growth has been significant: new apartment towers downtown, new subdivisions where farmland was, new commercial strips on the west side.",
+      "Housing here is more affordable than Beaverton because Hillsboro is further from Portland and the western side of the city is still actively developing. You can find 3-bedroom houses from the 1990s and early 2000s at accessible prices, with new-construction subdivisions on the west side well above them. The Hillsboro School District has a strong reputation — particularly at the elementary level — and the district has grown to keep pace with the city's expansion since 2010. The growth has been significant: new apartment towers downtown, new subdivisions where farmland was, new commercial strips on the west side.",
       "Hillsboro is car-dependent for the majority of daily life. Outside of a few walkable blocks around the MAX stations and downtown, you're driving. Cornell Road and Baseline Road carry heavy traffic during commutes. The 45-minute MAX ride to downtown Portland is a real constraint if you work or socialize there regularly — this is a city that functions most naturally for people who work within it or in nearby Beaverton, not for people who need to be in Portland daily.",
     ],
     personality: "Silicon Forest city with a real downtown",
@@ -3909,7 +3911,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What's the housing market like in Hillsboro?",
-        a: "Median around $490,000, which is typically $30,000–$50,000 less than comparable Beaverton homes. The east side of Hillsboro near MAX and Intel is more established — 1990s–2000s houses in the $420k–$580k range. The west side has newer construction from the past decade, often in the $550k–$800k+ range. First-time buyers find more entry-level inventory here than in Beaverton or Tigard.",
+        a: "Hillsboro generally comes in below comparable Beaverton homes. The east side near MAX and Intel is more established, mostly 1990s–2000s houses; the west side has newer construction from the past decade at higher prices. First-time buyers find more entry-level inventory here than in Beaverton or Tigard.",
       },
       {
         q: "Is Hillsboro a good place for families?",
@@ -4055,7 +4057,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How does Tigard compare to Lake Oswego for housing value?",
-        a: "Meaningfully more affordable. Lake Oswego's median sits roughly $150,000–$200,000 higher than Tigard's, and Lake Oswego has tighter lot sizes. In Tigard you're more likely to find a ranch with a real backyard in the $500k–$600k range. The schools are both good — different districts but comparable reputations. The main difference is Lake Oswego has more walkable commercial areas. Tigard does not.",
+        a: "Meaningfully more affordable. Lake Oswego's median sits well above Tigard's, and Lake Oswego has tighter lot sizes. In Tigard you're more likely to find a ranch with a real backyard. The schools are both good — different districts but comparable reputations. The main difference is Lake Oswego has more walkable commercial areas. Tigard does not.",
       },
       {
         q: "Is the Tigard Triangle worth buying into?",
@@ -4080,7 +4082,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Washington County",
     description: [
       "Tualatin Commons is the downtown that Tualatin built from scratch — a mixed-use development centered on a small lake, with restaurants, a public plaza, and apartments ringing the water. It works better than it sounds. On summer evenings the lake path fills up with strollers and dog walkers, and the restaurants that face the water are actually good. The I-5/I-205 interchange nearby makes Tualatin one of the most regionally accessible cities in the metro — you can be at PDX in 25 minutes, Salem in 45, or Beaverton in 20. The tradeoff is that Tualatin exists primarily as a car city, and the Tualatin-Sherwood Road commercial strip is the daily retail experience for most residents.",
-      "New housing has been added on the western side of the city — subdivisions from the 2010s and 2020s with 3- and 4-bedroom homes that typically run in the $500s and $600s. Older sections of the city, particularly near the river and around the commons, have 1970s–1990s ranches that often come in below $500k with more land. The Tigard-Tualatin School District serves the city — the same solid district as Tigard, with Tualatin High School as the main comprehensive high school and consistently strong elementary programs. Tualatin is a genuine option for families who want good schools and don't need to be near Portland.",
+      "New housing has been added on the western side of the city — subdivisions from the 2010s and 2020s with 3- and 4-bedroom homes at the top of the local market. Older sections of the city, particularly near the river and around the commons, have 1970s–1990s ranches that come in lower with more land. The Tigard-Tualatin School District serves the city — the same solid district as Tigard, with Tualatin High School as the main comprehensive high school and consistently strong elementary programs. Tualatin is a genuine option for families who want good schools and don't need to be near Portland.",
       "The Tualatin River runs along the northern edge of the city and provides the most compelling natural feature — Tualatin Community Park sits on the bank and is worth knowing. But Tualatin is not a city you walk around. Most neighborhoods require a car for every errand. There is no light rail and the bus connections to Portland take close to an hour. If proximity to Portland matters to you daily, Tualatin makes that commute real work. If your life is oriented around the south metro — Tualatin, Tigard, Sherwood, Wilsonville — the location is excellent.",
     ],
     personality: "Built-from-scratch lakefront downtown, south metro freeway access",
@@ -4194,7 +4196,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How does Tualatin compare to Tigard for home buyers?",
-        a: "Tualatin typically comes in slightly below Tigard in median price — you can find more 1970s–1990s ranches with larger lots in Tualatin in the $400k–$500k range. The newer west-side subdivisions in both cities are similarly priced. Tigard has marginally better Portland access. Tualatin has better freeway access toward Salem and the south valley. If you're working in Wilsonville or Sherwood, Tualatin's position is actually better.",
+        a: "Tualatin typically comes in slightly below Tigard in median price — you can find more 1970s–1990s ranches with larger lots in Tualatin. The newer west-side subdivisions in both cities are similarly priced. Tigard has marginally better Portland access. Tualatin has better freeway access toward Salem and the south valley. If you're working in Wilsonville or Sherwood, Tualatin's position is actually better.",
       },
     ],
     testimonials: [],
@@ -4215,7 +4217,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Washington County",
     description: [
       "Sherwood sits at the southern end of Washington County where 99W finally stops pretending to be a city street and starts moving again. Roy Rogers Road marks the line between Tualatin and Sherwood — cross it and the subdivisions get newer and the lots get slightly larger. Old Town Sherwood, clustered around SW Railroad Street, has an actual independent hardware store, a handful of restaurants, and a seasonal farmers market. It's not a destination, but it functions. Sherwood's growth in the 2000s and 2010s added thousands of homes in master-planned developments east and west of town — Sherwood's Meadowbrook, Maplewood Estates, and the newer sections north of Sunset Boulevard.",
-      "The draw for most buyers is the Sherwood School District. It's consistently rated among the top five districts in Washington County — Edy Ridge Elementary, Middleton Elementary, and Sherwood Middle School all pull strong test scores, and Sherwood High School has above-average graduation rates and a range of AP courses. The district is small enough that it hasn't fractured into attendance-zone politics the way larger districts have. Homes here run about $600k at the median, which buys a 4-bedroom house built in the 1990s or 2000s with a real yard — the same money in Lake Oswego or west Portland gets you less house on a smaller lot in an older building.",
+      "The draw for most buyers is the Sherwood School District. It's consistently rated among the top five districts in Washington County — Edy Ridge Elementary, Middleton Elementary, and Sherwood Middle School all pull strong test scores, and Sherwood High School has above-average graduation rates and a range of AP courses. The district is small enough that it hasn't fractured into attendance-zone politics the way larger districts have. At the median you get a 4-bedroom house built in the 1990s or 2000s with a real yard — the same money in Lake Oswego or west Portland gets you less house on a smaller lot in an older building.",
       "There is no light rail to Sherwood and no plan for one. TriMet bus service (Line 96) runs up 99W to Tigard and connects to MAX, but the trip from Sherwood to downtown Portland takes 90 minutes minimum in each direction. Most Sherwood residents drive. Tualatin Valley Highway backs up through Tigard every weekday morning from about 7:15 to 8:30, and again in reverse on the return. If you're commuting to the west side — Hillsboro, Beaverton, Tigard itself — it's manageable. If you're going downtown daily, build the commute time into the decision.",
     ],
     personality: "Top-rated schools, new subdivisions, and a 99W commute that's the honest price of admission",
@@ -4288,8 +4290,8 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "For families prioritizing K–12 public schools, it's one of the strongest arguments for buying in Sherwood over comparable-priced suburbs closer to Portland. The district is small (around 5,000 students), test scores are above Oregon averages, and Sherwood High has a solid course catalog. If schools are the deciding factor and Lake Oswego is out of budget, Sherwood is the conversation.",
       },
       {
-        q: "What does $600,000 buy in Sherwood?",
-        a: "At the median you're typically looking at a 4-bedroom, 2.5-bath house built between 1995 and 2010, with a two-car garage and a yard — usually 6,000–8,000 square feet of lot. Most of these are in master-planned developments east or west of downtown. Anything under $500k needs work or is smaller than average.",
+        q: "What kind of house do you get in Sherwood?",
+        a: "At the median you're typically looking at a 4-bedroom, 2.5-bath house built between 1995 and 2010, with a two-car garage and a yard. Most of these are in master-planned developments east or west of downtown. Below the median you're generally looking at something smaller, or something that needs work.",
       },
       {
         q: "Can I commute from Sherwood to downtown Portland without a car?",
@@ -4297,7 +4299,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How fast is the Sherwood real estate market?",
-        a: "Competitive for anything priced correctly in the $500k–$700k range. Well-presented homes in good school attendance zones routinely go over asking. The market slows somewhat above $800k — there's less demand at that price point relative to inventory.",
+        a: "Competitive for anything priced correctly through the heart of the market. Well-presented homes in good school attendance zones routinely go over asking. The market slows at the top end, where there's less demand relative to inventory.",
       },
     ],
     testimonials: [],
@@ -4318,7 +4320,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Washington County",
     description: [
       "Wilsonville sits at the junction of I-5 and the Boone Bridge, right where Clackamas County meets the southern edge of Washington County. Intel, Xerox, and Mentor Graphics (now Siemens EDA) have operated facilities here for decades, which means the city has a base of tech and manufacturing workers who don't necessarily need to commute to Portland at all. The WES Commuter Rail station at Wilsonville Town Center connects north to Beaverton, where passengers transfer to the MAX Blue or Red line — the full trip to downtown Portland is 55–70 minutes, but it runs on a schedule and doesn't involve sitting on I-5. SMART Bus provides service south toward Salem and Canby. The freeway access is the other piece: I-5 onramps here are not the bottleneck — they're at Tualatin or Tigard.",
-      "West Linn-Wilsonville School District serves the city and has a strong reputation — Wilsonville High School consistently ranks in the top tier for Washington County. Villebois, the master-planned development on the city's west side, has been growing since the mid-2000s and now represents a significant share of the city's housing stock. It's walkable within itself, with pocket parks, a town green, and higher-density attached housing alongside detached single-family homes. Median prices here run about $580k — buyers get more square footage than they would in Beaverton or Tigard for similar money, and the lots are newer construction.",
+      "West Linn-Wilsonville School District serves the city and has a strong reputation — Wilsonville High School consistently ranks in the top tier for Washington County. Villebois, the master-planned development on the city's west side, has been growing since the mid-2000s and now represents a significant share of the city's housing stock. It's walkable within itself, with pocket parks, a town green, and higher-density attached housing alongside detached single-family homes. Buyers here get more square footage than they would in Beaverton or Tigard for similar money, and the lots are newer construction.",
       "Wilsonville is a bedroom community in the honest sense — most of the retail is utilitarian (grocery stores, a Costco nearby in Tualatin, chain restaurants along Boones Ferry Road), and the cultural life is limited. If going to a show, a museum, or an independent restaurant matters to the household, you're making a 30–40 minute drive to Portland. That's a real trade-off. The city is also growing fast, which means construction traffic and evolving infrastructure are part of daily life in some neighborhoods. The Charbonneau district on the south end is a separate golf-course retirement community — it operates differently from the rest of the city and has its own HOA landscape.",
     ],
     personality: "WES commuter rail, I-5 access, and one of the county's better school districts — minus the nightlife",
@@ -4420,7 +4422,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Washington County",
     description: [
       "Pacific University has been on Pacific Avenue in Forest Grove since 1849, which makes it one of the oldest universities west of the Rockies. The campus sits near the downtown core and employs a few hundred people in teaching, administration, and healthcare — Pacific has a well-regarded optometry school and a physical therapy program. Main Street has a mix of independent restaurants, an old-school hardware store, a small theater, and a few antique shops. Forest Grove is the seat of what was once Oregon's hop-growing industry; the surrounding farmland still produces nursery stock and some grain. Wine country is 15–20 minutes south on Hwy 47 toward Gaston — the Tualatin Valley AVA has 40-plus wineries within reasonable driving distance.",
-      "Housing affordability is Forest Grove's main argument for buyers. The median sits around $420k, which puts a 3- or 4-bedroom house within reach for first-time buyers who've been priced out of Hillsboro and Beaverton. The stock is older — lots of 1960s and 1970s ranches, some Craftsman-era houses in the historic neighborhoods near downtown — which means buyers should budget for updates. Forest Grove School District is adequate; it's not a district families move from Portland specifically to access, but it's functional and improving. The city has a fairly large Latinx community, particularly concentrated near the downtown corridor, which gives the local restaurant scene more texture than you'd expect for a city this size.",
+      "Housing affordability is Forest Grove's main argument for buyers. It puts a 3- or 4-bedroom house within reach for first-time buyers who've been priced out of Hillsboro and Beaverton. The stock is older — lots of 1960s and 1970s ranches, some Craftsman-era houses in the historic neighborhoods near downtown — which means buyers should budget for updates. Forest Grove School District is adequate; it's not a district families move from Portland specifically to access, but it's functional and improving. The city has a fairly large Latinx community, particularly concentrated near the downtown corridor, which gives the local restaurant scene more texture than you'd expect for a city this size.",
       "The commute is the honest problem. Forest Grove is 25 miles west of Portland, and getting there from downtown means Hwy 26 to Hwy 8 — two-lane highway much of the way, no freeway bypass. In traffic that combination runs 50–70 minutes each direction. There is TriMet bus service (Line 57) to Hillsboro and MAX, but the full trip to Portland takes 75–90 minutes minimum. Remote or hybrid workers do well here. Daily commuters to Portland typically reassess within a year. The payoff is that the dollar goes further than anywhere else in Washington County, and you're close to outdoor recreation — Hagg Lake is 15 minutes south, the Coast Range is accessible on weekends.",
     ],
     personality: "Washington County's most affordable city, anchored by a university, 25 miles from Portland",
@@ -4523,7 +4525,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Washington County",
     description: [
       "Cornelius is a city of about 13,000 people sandwiched between Hillsboro and Forest Grove on Tualatin Valley Highway. Cornelius Pass Road runs north-south through the area and has been a local landmark since well before the city existed — the Cornelius Pass Roadhouse, a McMenamins property in a historic farmhouse at the north end of the road in Hillsboro, takes its name from the same route. The city's commercial core is thin: a strip of services along Adair Street and TV Hwy, a Bi-Mart, some auto-repair shops, and a scattering of small restaurants. Most residents drive to Hillsboro's Tanasbourne district or to Forest Grove for larger grocery runs and retail.",
-      "The housing stock dates mostly to the 1960s through 1990s — single-family ranches, smaller bungalows, and some manufactured housing. Cornelius has a substantial and longtime Latinx community, reflecting its agricultural history as a hub for farmworkers in the Tualatin Valley. That history shows in the restaurant options along TV Hwy: there are several small taquerias and Mexican grocery stores that are among the better cheap-food options in Washington County. Hillsboro School District serves most of Cornelius, which means students feed into Liberty High School and Hillsboro's network of elementary and middle schools — a better outcome than the city's small commercial base might suggest. Prices here are among the lowest in Washington County — median is around $400k.",
+      "The housing stock dates mostly to the 1960s through 1990s — single-family ranches, smaller bungalows, and some manufactured housing. Cornelius has a substantial and longtime Latinx community, reflecting its agricultural history as a hub for farmworkers in the Tualatin Valley. That history shows in the restaurant options along TV Hwy: there are several small taquerias and Mexican grocery stores that are among the better cheap-food options in Washington County. Hillsboro School District serves most of Cornelius, which means students feed into Liberty High School and Hillsboro's network of elementary and middle schools — a better outcome than the city's small commercial base might suggest. Prices here are among the lowest in Washington County.",
       "Cornelius is affordable specifically because it doesn't have much. There's no downtown with independent businesses the way Forest Grove does, no light rail, and no major employer within city limits. TriMet Line 57 runs east to Hillsboro MAX, making a westside commute workable, but getting to Portland downtown takes 70–80 minutes transit or 35–45 minutes by car. The city is improving — sidewalks and parks have been upgraded in recent years — but it remains a place where buyers trade proximity to amenities for a lower entry price. For buyers who work in Hillsboro's tech corridor (Intel, Nike, Epson) or in Forest Grove, the location is genuinely practical.",
     ],
     personality: "Washington County's most affordable city for single-family houses, ten minutes from Hillsboro's job corridor",
@@ -4591,7 +4593,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "Why is Cornelius cheaper than Hillsboro when they're right next to each other?",
-        a: "Cornelius has a smaller commercial base, fewer amenities within city limits, and less infrastructure investment than Hillsboro. The housing stock is older and the city has historically had less political and developer attention. That's changing incrementally, but the price gap remains meaningful — typically $80k–$120k lower for comparable square footage.",
+        a: "Cornelius has a smaller commercial base, fewer amenities within city limits, and less infrastructure investment than Hillsboro. The housing stock is older and the city has historically had less political and developer attention. That's changing incrementally, but the price gap remains meaningful for comparable square footage.",
       },
       {
         q: "What schools do Cornelius kids attend?",
@@ -4603,7 +4605,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What are the realistic downsides of buying in Cornelius?",
-        a: "Limited walkability and almost no commercial amenities within city limits — you'll drive to Hillsboro or Forest Grove for most errands. The housing stock is older and some properties need meaningful capital investment. School ratings are below the county average. It's the trade you make to access Washington County at a price closer to $400k than $600k.",
+        a: "Limited walkability and almost no commercial amenities within city limits — you'll drive to Hillsboro or Forest Grove for most errands. The housing stock is older and some properties need meaningful capital investment. School ratings are below the county average. It's the trade you make to access Washington County at the low end of its price range.",
       },
     ],
     testimonials: [],
@@ -4623,8 +4625,8 @@ export const neighborhoods: NeighborhoodData[] = [
     state: "OR",
     region: "Clackamas & East County",
     description: [
-      "Oswego Lake is not a public amenity. That needs to be said up front, because people move here assuming they can kayak or swim in it — they can't unless they join the Lake Oswego Lake Corporation, which requires membership ranging from $25,000 to $35,000+ depending on the access tier, paid separately from any home purchase. What you do get with a Lake Oswego address is one of the most consistently well-maintained residential cities in Oregon, a downtown on A Avenue with actual independent restaurants like Tucci and Riccardo's Ristorante, and a walkable commercial core that most suburbs only approximate. State Street connects the east and west sides; it's the road you'll know after one week.",
-      "The housing stock ranges from 1950s ranch homes on modest lots in the older Hallinan and Lake Grove areas to $2M+ estates with private lake easements on the east side. The Lake Oswego School District is repeatedly ranked among Oregon's top districts — River Grove, Westridge, Hallinan, and Uplands feed into Lake Oswego Middle and then Lake Oswego High, which has a graduation rate and test score profile that draws families from across the metro. The demographic is upper-income professionals, many of them tech workers or physicians commuting to Portland or Beaverton.",
+      "Oswego Lake is not a public amenity. That needs to be said up front, because people move here assuming they can kayak or swim in it — they can't unless they join the Lake Oswego Lake Corporation, which requires buying into the Lake Oswego Lake Corporation separately from any home purchase, at a cost that surprises most people. What you do get with a Lake Oswego address is one of the most consistently well-maintained residential cities in Oregon, a downtown on A Avenue with actual independent restaurants like Tucci and Riccardo's Ristorante, and a walkable commercial core that most suburbs only approximate. State Street connects the east and west sides; it's the road you'll know after one week.",
+      "The housing stock ranges from 1950s ranch homes on modest lots in the older Hallinan and Lake Grove areas to large estates with private lake easements on the east side. The Lake Oswego School District is repeatedly ranked among Oregon's top districts — River Grove, Westridge, Hallinan, and Uplands feed into Lake Oswego Middle and then Lake Oswego High, which has a graduation rate and test score profile that draws families from across the metro. The demographic is upper-income professionals, many of them tech workers or physicians commuting to Portland or Beaverton.",
       "MAX doesn't reach Lake Oswego. Your options are driving — I-5 or Highway 43 depending on your destination — or connecting to the Barbur TC bus service, which is an option but not a fast one. Commute to downtown Portland is typically 20–30 minutes by car in off-peak hours and 35–50 in peak traffic. The premium here is real and layered: you pay for the address, the school district, and if you want lake access, you pay for that separately. Buyers who know what they're buying get a lot for the price. Buyers who expect a public-access recreational lake get a more complicated experience.",
     ],
     personality: "Oregon's premier suburb — the lake is members-only, the schools are the best in the state",
@@ -4685,7 +4687,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "Is Oswego Lake open to the public?",
-        a: "No. Oswego Lake is private, managed by the Lake Oswego Lake Corporation. Access requires a membership that is purchased separately from your home — costs typically range from $25,000 to $35,000+ depending on the tier. Some lakefront homes include easements. Buying a home in Lake Oswego does not grant lake access.",
+        a: "No. Oswego Lake is private, managed by the Lake Oswego Lake Corporation. Access requires a membership purchased separately from your home, and it is a significant cost — check current figures with the Lake Corporation before you budget around it. Some lakefront homes include easements. Buying a home in Lake Oswego does not grant lake access.",
       },
       {
         q: "How are the schools in Lake Oswego?",
@@ -4718,8 +4720,8 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Clackamas & East County",
     description: [
       "West Linn sits on a set of steep wooded hills above the west bank of the Willamette, directly across the river from Oregon City and south of Lake Oswego. The topography is real — Bolton Hill Road climbs hard, and navigating between the Sunset neighborhood on the plateau and Willamette neighborhood down by the river requires either knowing the roads or getting comfortable with GPS. Highway 43 connects West Linn to Lake Oswego to the north and to Willamette Falls Drive along the river. That falls — Willamette Falls, visible from several points near Oregon City — is a legitimate geological landmark: the second-largest waterfall by volume in the US, and West Linn is close enough that it's part of the area's identity even if it sits technically on the Oregon City side.",
-      "The housing stock is predominantly 1970s–1990s single-family construction on good-sized lots, with some newer developments on the remaining hillside land and a handful of older homes in the Willamette neighborhood near the river. West Linn-Wilsonville School District has one of the strongest academic reputations in the state — Rosemont Ridge Middle and West Linn High are the names you'll hear most. The demographic overlaps substantially with Lake Oswego: dual-income families in professional fields who want top schools and suburban space but are working with a budget $150,000 to $200,000 below what Lake Oswego requires.",
-      "I-205 is the main highway — it's faster than Highway 43 for reaching Portland, and the commute to downtown Portland runs 25–35 minutes depending on where exactly you're going and what hour you leave. That range can stretch to 45+ on bad traffic days. There is effectively no transit. The core trade-off that every West Linn buyer eventually articulates: comparable school quality to Lake Oswego, $150,000 to $200,000 less on the purchase price, and a commute that's slightly more I-205-dependent. That trade is real and it makes sense for a lot of families.",
+      "The housing stock is predominantly 1970s–1990s single-family construction on good-sized lots, with some newer developments on the remaining hillside land and a handful of older homes in the Willamette neighborhood near the river. West Linn-Wilsonville School District has one of the strongest academic reputations in the state — Rosemont Ridge Middle and West Linn High are the names you'll hear most. The demographic overlaps substantially with Lake Oswego: dual-income families in professional fields who want top schools and suburban space but are working with a budget below what Lake Oswego requires.",
+      "I-205 is the main highway — it's faster than Highway 43 for reaching Portland, and the commute to downtown Portland runs 25–35 minutes depending on where exactly you're going and what hour you leave. That range can stretch to 45+ on bad traffic days. There is effectively no transit. The core trade-off that every West Linn buyer eventually articulates: comparable school quality to Lake Oswego, meaningfully less on the purchase price, and a commute that's slightly more I-205-dependent. That trade is real and it makes sense for a lot of families.",
     ],
     personality: "The Lake Oswego alternative — same school district quality, more accessible entry price, harder terrain",
     mapEmbedSrc: "https://maps.google.com/maps?q=West+Linn+OR&output=embed&z=13",
@@ -4778,7 +4780,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "How does West Linn compare to Lake Oswego?",
-        a: "The school districts are different but both top-rated. West Linn-Wilsonville and Lake Oswego School District consistently rank near the top of Oregon. West Linn typically prices $150,000–$200,000 lower on equivalent homes. The trade-off is that Lake Oswego has a more walkable downtown and more retail options. Most families doing the comparison come down on the side of West Linn when budget matters.",
+        a: "The school districts are different but both top-rated. West Linn-Wilsonville and Lake Oswego School District consistently rank near the top of Oregon. West Linn typically prices lower on equivalent homes. The trade-off is that Lake Oswego has a more walkable downtown and more retail options. Most families doing the comparison come down on the side of West Linn when budget matters.",
       },
       {
         q: "What neighborhoods are within West Linn?",
@@ -4871,7 +4873,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How does the Oregon City school district compare to Lake Oswego or West Linn?",
-        a: "Oregon City School District is solid — Oregon City High School has good programs and strong community support. It's not at the same ranking level as Lake Oswego or West Linn-Wilsonville districts, and that difference shows up in the price. You're paying $400,000 less for a comparable home, and the school trade-off is part of that math.",
+        a: "Oregon City School District is solid — Oregon City High School has good programs and strong community support. It's not at the same ranking level as Lake Oswego or West Linn-Wilsonville districts, and that difference shows up in the price. You're paying meaningfully less for a comparable home, and the school trade-off is part of that math.",
       },
     ],
     testimonials: [],
@@ -4893,7 +4895,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Park Ave Station in downtown Milwaukie is the southern terminus of the MAX Orange Line, which means Milwaukie has genuine light rail access to Portland — not a bus connection, not a park-and-ride at the edge of a freeway, but a station in the city's downtown core. The ride to the South Park Blocks or PSU takes about 20–25 minutes. The Springwater Corridor trail also connects Milwaukie directly to Portland by bike, running along the Willamette from Sellwood south. These two facts — MAX access and the Springwater Corridor — differentiate Milwaukie from every other Clackamas County suburb and make it the most transit-and-bike-accessible community south of Portland proper.",
       "The housing stock is a mix of 1940s–1960s working-class bungalows and ranches, with more recent infill development near the downtown core as the MAX line matured. North Clackamas School District covers Milwaukie — it's a well-regarded district, notably better than Portland Public Schools in overall rankings, serving a mix of Milwaukie, Happy Valley, and surrounding communities. Downtown Milwaukie has developed incrementally: Wy'East Pizza is the anchor of the Main Street scene, The Railyard food cart pod operates seasonally, and there's a small but real cluster of independent businesses. The demographic is younger buyers and families who want Portland-adjacent living at a price that's 20–30% below comparable inner SE neighborhoods.",
-      "The trade-off that buyers need to acknowledge: Milwaukie is not inner SE Portland, even if it's adjacent to it and connected by trail and rail. The commercial infrastructure is still developing. McLoughlin Boulevard is not a pleasant street to be near. Some blocks have industrial or light-commercial uses that won't change. But for buyers who specifically want the Springwater connection and the MAX, who want North Clackamas schools instead of Portland Public, and who want to buy for $490,000 instead of $650,000, the calculation is clear and a lot of buyers are making it.",
+      "The trade-off that buyers need to acknowledge: Milwaukie is not inner SE Portland, even if it's adjacent to it and connected by trail and rail. The commercial infrastructure is still developing. McLoughlin Boulevard is not a pleasant street to be near. Some blocks have industrial or light-commercial uses that won't change. But for buyers who specifically want the Springwater connection and the MAX, who want North Clackamas schools instead of Portland Public, and who want to buy at a Clackamas County price instead of an inner-SE one, the calculation is clear and a lot of buyers are making it.",
     ],
     personality: "Clackamas County's most transit-connected suburb — MAX on one end, the Springwater on the other",
     mapEmbedSrc: "https://maps.google.com/maps?q=Milwaukie+OR&output=embed&z=13",
@@ -4957,7 +4959,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How is Milwaukie different from inner SE Portland?",
-        a: "Price is the most obvious difference — median is around $490,000 versus $650,000+ in comparable inner SE neighborhoods. The school district is different (North Clackamas vs Portland Public). The commercial infrastructure is less dense. And Milwaukie is its own incorporated city with its own municipal services, not a Portland neighborhood. The Springwater trail makes the geographic connection to SE Portland feel shorter than it is.",
+        a: "Price is the most obvious difference — Milwaukie sits well below comparable inner SE neighborhoods. The school district is different (North Clackamas vs Portland Public). The commercial infrastructure is less dense. And Milwaukie is its own incorporated city with its own municipal services, not a Portland neighborhood. The Springwater trail makes the geographic connection to SE Portland feel shorter than it is.",
       },
     ],
     testimonials: [],
@@ -4978,7 +4980,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Clackamas & East County",
     description: [
       "From the higher streets in Happy Valley — Altamont Drive, the upper reaches of SE Sunnyside Road — you get clear views of Mt. Hood on the days the mountain shows itself. That view is real, and it's one of the things people mention when they describe why they bought here. The city sits in the Clackamas County foothills southeast of Portland, and it's one of the fastest-growing incorporated cities in Oregon over the past 15 years. What that growth looks like on the ground is subdivisions: planned communities from 2000 through 2020, some of which are still being built out, with names like Scouters Mountain Heights and Summerfield. The infrastructure is new. The streets are wide. The houses have garages.",
-      "Nearly all of the housing stock is newer construction — 2-story single-family homes on established subdivisions lots, built by regional and national builders. You will not find 1920s bungalows in Happy Valley. What you will find is square footage: a 4-bedroom, 2.5-bath house at $600,000 that might be $850,000 in comparable Portland neighborhoods, or more. North Clackamas School District serves Happy Valley, and it's one of the primary draws — the district ranks well above Portland Public Schools, and the newer school facilities in Happy Valley reflect the city's recent growth. The demographic is young families, many of them first-time buyers moving from inner Portland or SE Portland apartments.",
+      "Nearly all of the housing stock is newer construction — 2-story single-family homes on established subdivisions lots, built by regional and national builders. You will not find 1920s bungalows in Happy Valley. What you will find is square footage: a 4-bedroom, 2.5-bath house for what a much smaller place costs in comparable Portland neighborhoods. North Clackamas School District serves Happy Valley, and it's one of the primary draws — the district ranks well above Portland Public Schools, and the newer school facilities in Happy Valley reflect the city's recent growth. The demographic is young families, many of them first-time buyers moving from inner Portland or SE Portland apartments.",
       "The honest accounting: Happy Valley has no light rail, no meaningful transit network, and no walkable commercial core. I-205 is the main artery, and it slows materially during the evening peak. Commute to downtown Portland runs 25–40 minutes depending on traffic and your specific destination. You drive for everything — groceries, coffee, kids' activities, the school run. The neighborhood fabric is younger and still forming in ways that established Portland neighborhoods are not. What you get for those trade-offs is new construction, good schools, more space, and a price per square foot that's lower than anywhere closer to Portland.",
     ],
     personality: "Fast-growing foothills suburb — new construction, Mt. Hood views, no transit, good schools",
@@ -5064,7 +5066,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Clackamas & East County",
     description: [
       "The Canby Ferry is a cable-guided ferry across the Willamette River — not a bridge, an actual ferry. It runs from Canby to the Wilsonville side, costs a few dollars, and takes about five minutes. It operates seasonally and carries cars, cyclists, and pedestrians. It's a practical crossing that also happens to be one of those Oregon things that people who know about it talk about. It's at the end of S Holly Street on the Canby side. Canby itself is a city of around 18,000 people, south of Wilsonville, with a genuine small-city downtown on 1st and 2nd Avenues — not a downtown that's been converted from something else, but one that grew that way over time, with local businesses that have been operating for decades.",
-      "The housing stock mixes older 1940s–1970s homes in the historic core with newer subdivisions on Canby's edges. Canby School District is an independent district with strong community support — Canby High School is the main high school, and the district serves a population that's meaningfully different from the urban-professional demographic of Lake Oswego or Happy Valley. Agriculture is not a peripheral feature of Canby: the Canby area has active nurseries and farms — Horticulture is genuinely part of the local economy, and the land around the city reflects it. The price point reflects all of this: at a median of around $460,000, Canby offers more house than any other community covered here at an equivalent price.",
+      "The housing stock mixes older 1940s–1970s homes in the historic core with newer subdivisions on Canby's edges. Canby School District is an independent district with strong community support — Canby High School is the main high school, and the district serves a population that's meaningfully different from the urban-professional demographic of Lake Oswego or Happy Valley. Agriculture is not a peripheral feature of Canby: the Canby area has active nurseries and farms — Horticulture is genuinely part of the local economy, and the land around the city reflects it. The price point reflects all of this: Canby offers more house than any other community covered here at an equivalent price.",
       "The commute is 35–45 minutes to Portland by car and entirely car-dependent — there's no transit option that makes sense for a daily commute. Highway 99E is the main north-south road connecting Canby to Wilsonville and Oregon City. For buyers who've been looking at the metro and want space, lower density, and a genuine break from the Portland suburban aesthetic, Canby is a real option — not a compromise, but a deliberate choice. The distance is a daily fact of life, and buyers who thrive here are the ones who've made peace with that up front.",
     ],
     personality: "Genuine small city at the edge of the metro — the ferry is real, the farms are real, the commute is real",
@@ -5135,7 +5137,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Is Canby a good area for first-time buyers?",
-        a: "It can be, especially for buyers who want more house at a lower price and are comfortable with the commute. At a median of ~$460,000, the entry point is lower than any comparable suburb closer to Portland. FHA loans and conventional financing both work well in this price range. The key is being honest about the 35–45 minute commute before you commit.",
+        a: "It can be, especially for buyers who want more house at a lower price and are comfortable with the commute. The entry point is lower than any comparable suburb closer to Portland, and FHA and conventional financing both work well here. The key is being honest about the 35–45 minute commute before you commit.",
       },
     ],
     testimonials: [],
@@ -5217,7 +5219,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What kind of homes are available in Newberg?",
-        a: "The bulk of the market is 1960s–1990s single-family ranches and two-stories in established residential neighborhoods. The east side of town has newer construction from the 2000s and 2010s. Downtown-adjacent streets have older Victorians and Craftsmans. Acreage parcels with Chehalem Mountain views are available in the $500k–$800k range — that price point is nearly impossible in Washington County for comparable land.",
+        a: "The bulk of the market is 1960s–1990s single-family ranches and two-stories in established residential neighborhoods. The east side of town has newer construction from the 2000s and 2010s. Downtown-adjacent streets have older Victorians and Craftsmans. Acreage parcels with Chehalem Mountain views come to market at prices that are nearly impossible in Washington County for comparable land.",
       },
       {
         q: "How are the schools in Newberg?",
@@ -5245,7 +5247,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Newberg, OR | Mortgage Lender | The Lindley Team",
       description:
-        "Newberg real estate and home loans with Bri Lindley at Movement Mortgage. Median $450k, wine country access, George Fox University, honest 99W commute guidance. NMLS #1367416.",
+        "Newberg real estate and home loans with Bri Lindley at Movement Mortgage. Wine country access, George Fox University, honest 99W commute guidance. NMLS #1367416.",
     },
   },
 
@@ -5257,7 +5259,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Washington County",
     description: [
       "Third Street in downtown McMinnville is one of the better main streets in Oregon — not a marketing claim, just a fact you notice when you walk it. Nick's Italian Cafe has been there since 1977; the James Beard Foundation noticed. Bistro Maison does French country food in an old Victorian. The Evergreen Aviation and Space Museum holds the Spruce Goose — Howard Hughes's flying boat, the largest wooden aircraft ever built — and draws serious visitors from outside the state. On the southeast edge of town, the Carlton-Yamhill AVA and the Chehalem Mountains AVA are both within twenty minutes. McMinnville isn't just a gateway to wine country; it has its own identity that exists independent of the vineyards.",
-      "The city functions more on its own terms than most small Oregon cities its size. There's a hospital (Willamette Valley Medical Center), a community college (Linfield University, now a four-year institution), county government employment, and a manufacturing base that includes PCC Airfoils and other aerospace suppliers. McMinnville School District covers elementary through high school. McMinnville High School is the comprehensive high, with an IB program and generally solid academic reputation for a district this size. Housing is a wide range: modest older ranch homes in the $350k–$450k band, newer construction subdivisions on the north and east edges of town in the $450k–$600k range, and acreage properties with vineyard adjacency that can push well past $700k.",
+      "The city functions more on its own terms than most small Oregon cities its size. There's a hospital (Willamette Valley Medical Center), a community college (Linfield University, now a four-year institution), county government employment, and a manufacturing base that includes PCC Airfoils and other aerospace suppliers. McMinnville School District covers elementary through high school. McMinnville High School is the comprehensive high, with an IB program and generally solid academic reputation for a district this size. Housing is a wide range: modest older ranch homes at the entry point, newer-construction subdivisions on the north and east edges of town above them, and acreage properties with vineyard adjacency at the top.",
       "Most people who live in McMinnville don't commute to Portland, and the math tells you why. The drive is 40 miles via Highway 18 or 99W and takes 50–65 minutes in normal conditions — closer to 75 in morning rush. There's no rail connection and no meaningful transit. The city draws retirees from the Bay Area and Southern California who want Oregon's quality of life at a fraction of the cost, remote workers who prioritize wine country living, and buyers who work locally in agriculture, healthcare, or manufacturing. For a specific kind of buyer — one who has accepted that Portland is an occasional destination, not a daily commute — McMinnville offers a complete life in a way that smaller Yamhill County towns can't match.",
     ],
     personality: "The most self-sufficient small city in the Willamette Valley — wine country address, real employment base, and a downtown worth walking",
@@ -5326,7 +5328,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What types of homes are available in McMinnville?",
-        a: "The range is wide. Older ranch homes and Craftsmans in established neighborhoods start in the low $300ks. Newer construction on the north and east sides of town runs $450k–$600k. Vineyard-adjacent acreage properties and custom homes push $700k and above. The market moves slower than Portland suburbs, which means less competition pressure on individual offers.",
+        a: "The range is wide. Older ranch homes and Craftsmans in established neighborhoods are the entry point; newer construction on the north and east sides sits above them; vineyard-adjacent acreage and custom homes are the top of the market. The market moves slower than the Portland suburbs, which means less competition pressure on individual offers — and more room to get an inspection done properly.",
       },
     ],
     testimonials: [],
@@ -5346,7 +5348,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in McMinnville, OR | Mortgage Lender | The Lindley Team",
       description:
-        "McMinnville home loans with Bri Lindley at Movement Mortgage. Yamhill County seat, Third Street dining, Evergreen Museum, median $430k. Honest mortgage guidance for wine country buyers. NMLS #1367416.",
+        "McMinnville home loans with Bri Lindley at Movement Mortgage. Yamhill County seat, Third Street dining, Evergreen Museum. Honest mortgage guidance for wine country buyers. NMLS #1367416.",
     },
   },
 
@@ -5358,7 +5360,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Washington County",
     description: [
       "The Dundee Hills AVA produces some of the most expensive Pinot Noir in North America, and the wineries that anchor it are all within a few miles of each other: Domaine Drouhin Oregon on Breyman Orchards Road, Argyle Winery on Highway 99W, Sokol Blosser on Orchard Lane, Archery Summit on Spring Valley Road. This is not a tourist approximation of wine country — it's the thing itself. The Dundee Bistro on Highway 99W is the town's dinner anchor, Willamette Valley Vineyards pours above it on the hill. The town of Dundee proper has around 3,500 people, one stoplight on 99W, and almost no commercial infrastructure beyond the restaurants and tasting rooms. That is either a feature or a bug depending on who's buying.",
-      "Real estate here sorts into two categories: residential parcels in town (modest, older, the Newberg School District) and agricultural or vineyard-adjacent land on the surrounding hills. The residential median sits around $560,000, which sounds high until you see what $560k gets you elsewhere in the metro — and the vineyard-adjacent acreage parcels that come to market range from $700k for raw land to several million for established vineyard properties. The Newberg School District serves Dundee, which means Newberg High School is the high school of record. Families with school priorities typically view this as workable rather than exceptional, and many have structured their Dundee purchase partly around Linfield or George Fox university proximity for the cultural benefits rather than the K–12 schools specifically.",
+      "Real estate here sorts into two categories: residential parcels in town (modest, older, the Newberg School District) and agricultural or vineyard-adjacent land on the surrounding hills. The residential median sounds high until you see what the same money buys elsewhere in the metro — and the vineyard-adjacent acreage parcels that come to market run from raw land at the bottom to several million for established vineyard properties. The Newberg School District serves Dundee, which means Newberg High School is the high school of record. Families with school priorities typically view this as workable rather than exceptional, and many have structured their Dundee purchase partly around Linfield or George Fox university proximity for the cultural benefits rather than the K–12 schools specifically.",
       "Dundee is not a commuter town, and anyone honest about the traffic will tell you so. Highway 99W through Dundee is the single route in and out, and it feeds into the same 99W corridor that makes Newberg commutes hard — except you're adding another 8 miles. The drive to Portland on a clear Tuesday afternoon is 40 minutes. On a Friday evening in summer, when wine country visitors and Portland commuters are both on the road, it can be 75 minutes. People who buy here have typically made a definitive decision about where their life is centered: it's here, and Portland is something they visit. That clarity makes the purchase decision easier, and the lifestyle — rural quiet, one of Oregon's most beautiful landscapes, and being genuinely surrounded by world-class vineyards — is real.",
     ],
     personality: "The heart of Oregon wine country, for buyers who want the landscape as their actual life rather than a weekend destination",
@@ -5414,7 +5416,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "What does real estate in Dundee actually look like?",
-        a: "Two distinct markets. In-town residential: older homes, smaller lots, mostly in the $380k–$600k range, served by Newberg schools. Hillside and agricultural parcels: vineyard-adjacent land from $700k for raw acreage to several million for established, planted vineyard properties with structures. The spread is genuinely wide — a two-bedroom in-town house and a 20-acre Dundee Hills vineyard parcel are both 'Dundee real estate,' just completely different purchases.",
+        a: "Two distinct markets. In-town residential: older homes, smaller lots, served by Newberg schools. Hillside and agricultural parcels: vineyard-adjacent land from raw acreage at the bottom to several million for established, planted vineyard properties with structures. The spread is genuinely wide — a two-bedroom in-town house and a 20-acre Dundee Hills vineyard parcel are both 'Dundee real estate,' completely different purchases, financed completely differently.",
       },
       {
         q: "Is Dundee practical for someone who needs to get to Portland sometimes?",
@@ -5444,7 +5446,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Dundee, OR | Mortgage Lender | The Lindley Team",
       description:
-        "Dundee Hills real estate and home loans with Bri Lindley at Movement Mortgage. Yamhill County wine country, Domaine Drouhin, Sokol Blosser, median $560k, vineyard financing specialists. NMLS #1367416.",
+        "Dundee Hills real estate and home loans with Bri Lindley at Movement Mortgage. Yamhill County wine country, Domaine Drouhin, Sokol Blosser, vineyard financing specialists. NMLS #1367416.",
     },
   },
 
@@ -5456,7 +5458,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Washington County",
     description: [
       "Main Street in Carlton is four blocks long and has more serious wine behind its doors than most American towns ten times its size. The Carlton Winemakers Studio opened in 2002 as the country's first custom-crush cooperative facility — multiple producers sharing a single space — and it put Carlton on the wine map before the Dundee Hills had mainstream recognition. Scott Paul Wines is around the corner. The Horse Radish, a wine bar and restaurant on Main Street, is the social center of town — cheese boards, a focused wine list, and the kind of Friday evening that makes you wonder why you ever needed a city. Carlton has about 2,200 residents, and on a Tuesday morning the main street is genuinely quiet.",
-      "Housing reflects the town's scale: modest ranch homes and older farmhouses in the $350k–$500k range, with agricultural and rural residential parcels available at price points that aren't accessible in the Dundee Hills or even central Newberg. The McMinnville School District serves Carlton — students attend schools in McMinnville for middle and high school, which means a daily drive. For buyers who want Yamhill County wine country without Dundee Hills land prices or McMinnville's relative density, Carlton sits in an interesting gap. It's genuinely rural, genuinely quiet, and genuinely connected to the wine industry in a way that isn't tourist-facing.",
+      "Housing reflects the town's scale: modest ranch homes and older farmhouses, with agricultural and rural residential parcels available at price points that aren't accessible in the Dundee Hills or even central Newberg. The McMinnville School District serves Carlton — students attend schools in McMinnville for middle and high school, which means a daily drive. For buyers who want Yamhill County wine country without Dundee Hills land prices or McMinnville's relative density, Carlton sits in an interesting gap. It's genuinely rural, genuinely quiet, and genuinely connected to the wine industry in a way that isn't tourist-facing.",
       "Carlton is not for anyone relying on Portland employment. The drive runs an hour to an hour-fifteen in typical conditions via Highway 47 north to Forest Grove and then 26 west, or via McMinnville and 99W — neither route is fast. Buyers in Carlton are either locally employed (healthcare in McMinnville, agriculture, the wine industry itself), fully remote, or retired. The upside is that the agricultural land market offers parcels and older farmhouses that simply don't exist at this price in Washington County or closer in. If the question is 'how little land can I afford that still feels like country life,' Carlton is worth calculating seriously.",
     ],
     personality: "Oregon wine country's quietest address — a four-block main street with serious wine credibility and rural land at prices the Dundee Hills don't offer",
@@ -5520,7 +5522,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What types of homes are available in Carlton?",
-        a: "The in-town market has older single-family homes — ranches and Craftsmans from the 1940s through 1980s — in the $295k–$480k range. Rural residential parcels outside town offer farmhouses, older homes on acreage, and undeveloped agricultural land. The price ceiling on Carlton agricultural properties is lower than Dundee Hills comparables, often by $200k–$400k per acre, which is the primary financial argument for looking here.",
+        a: "The in-town market has older single-family homes — ranches and Craftsmans from the 1940s through 1980s. Rural residential parcels outside town offer farmhouses, older homes on acreage, and undeveloped agricultural land. The price ceiling on Carlton agricultural properties is meaningfully lower than Dundee Hills comparables, which is the primary financial argument for looking here.",
       },
       {
         q: "What are the schools like for Carlton residents?",
@@ -5544,7 +5546,7 @@ export const neighborhoods: NeighborhoodData[] = [
     seo: {
       title: "Buying a Home in Carlton, OR | Mortgage Lender | The Lindley Team",
       description:
-        "Carlton, Oregon home loans with Bri Lindley at Movement Mortgage. Yamhill County wine country, Carlton Winemakers Studio, median $420k, rural acreage financing. NMLS #1367416.",
+        "Carlton, Oregon home loans with Bri Lindley at Movement Mortgage. Yamhill County wine country, Carlton Winemakers Studio, rural acreage financing. NMLS #1367416.",
     },
   },
 
@@ -5556,7 +5558,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "SW Washington",
     description: [
       "Officers Row on East Evergreen Boulevard is fourteen Victorian and Colonial Revival homes built for the U.S. Army in the 1880s, running alongside what was once Fort Vancouver — a Hudson's Bay Company trading post before Oregon was even a state. The National Historic Site sits immediately adjacent. It's a real thing, not a reconstructed tourist attraction, and it's two miles from the I-5 bridge. The Waterfront Vancouver development that opened in 2018 added restaurants and a walking path along the Columbia, and the area around Esther Short Park has enough foot traffic now to feel like a downtown rather than a city center that emptied out twenty years ago.",
-      "The housing draw across the Columbia is, bluntly, Washington's lack of a state income tax. Oregon's top marginal rate is 9.9%. On a $150,000 household income, that math can translate to $10,000–$13,000 a year in additional take-home pay after the move — enough to meaningfully affect how much mortgage a buyer can carry. The Clark County School District covers most of Vancouver proper and is a large district, solid across the middle with strong programs at Hudson's Bay High. The Uptown neighborhood between McLoughlin and 33rd has older Craftsman housing and some of the most competitive inventory in the city.",
+      "The housing draw across the Columbia is, bluntly, Washington's lack of a state income tax. Oregon's top marginal rate is 9.9%; Washington has none. For a household paying Oregon's top rate, that difference in take-home pay is large enough to meaningfully affect how much mortgage a buyer can carry — run your own numbers with a tax professional before you count on a specific figure. The Clark County School District covers most of Vancouver proper and is a large district, solid across the middle with strong programs at Hudson's Bay High. The Uptown neighborhood between McLoughlin and 33rd has older Craftsman housing and some of the most competitive inventory in the city.",
       "The I-5 bridge between Vancouver and Portland was built in 1917. The I-205 bridge, ten miles east, is the alternative when I-5 backs up, which is every weekday afternoon. The Columbia River Crossing — a replacement bridge with light rail — has been proposed, studied, and litigated since the mid-2000s without a shovel in the ground. Commute to downtown Portland runs 25–35 minutes on a good day and 50–70 in afternoon rush hour. That is not a temporary construction problem. It is the daily reality of living in Vancouver.",
     ],
     personality: "Oregon's commuter city that happens to be in Washington",
@@ -5634,7 +5636,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does not paying Oregon income tax actually save?",
-        a: "Oregon's top marginal income tax rate is 9.9% starting at $125,000 for joint filers. On a $150,000 household income, the difference between Oregon and Washington tax burdens is roughly $8,000–$12,000 per year, depending on deductions. That's real money — it's the equivalent of a meaningfully larger mortgage payment. Washington has no state income tax at all. Property taxes in Clark County are comparable to Multnomah County.",
+        a: "Oregon's top marginal income tax rate is 9.9%. Washington has no state income tax at all, so for a household paying Oregon's top rate the annual difference is substantial — the equivalent of a meaningfully larger mortgage payment. The exact figure depends on your income, your deductions, and where you work, so confirm it with a tax professional rather than a rule of thumb. Property taxes in Clark County are comparable to Multnomah County.",
       },
       {
         q: "Can I use an Oregon mortgage lender if I'm buying in Washington?",
@@ -5663,7 +5665,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "SW Washington",
     description: [
       "Google built a major data center campus in Camas — roughly 400 acres along the Columbia. It's not the city's identity, but it's the city's largest property taxpayer and a signal that east Clark County has tech infrastructure underneath the small-town surface. The paper mill at the western edge of the city — originally Camas Paper, later Crown Zellerbach, now Nippon Paper — has been operating since 1883. On certain wind directions you know it's there. But downtown Camas has put enough distance between itself and the mill identity that first-time visitors are often surprised: the 1920s brick storefronts along NE 4th Avenue are genuinely intact, Grains of Wrath brewery fills a former hardware store, and the old Camas Hotel has been restored. This is not a city that looks like it should be this good.",
-      "Camas School District is the main reason buyers stretch their budget to get here. It's consistently one of the top-rated districts in Washington state — small enough that teachers know students, large enough to offer AP tracks and strong extracurricular programs. Camas High School regularly ranks in the top five percent of Washington high schools. Buyers relocating from Portland who have kids in middle school or older specifically target Camas for the schools. The housing reflects that demand: medians run $100,000–$150,000 above Vancouver proper, and well-priced homes don't sit. Lacamas Lake Regional Park anchors the outdoor life — a 304-acre lake with swimming, kayaking, and loop trails that see serious use on summer weekends.",
+      "Camas School District is the main reason buyers stretch their budget to get here. It's consistently one of the top-rated districts in Washington state — small enough that teachers know students, large enough to offer AP tracks and strong extracurricular programs. Camas High School regularly ranks in the top five percent of Washington high schools. Buyers relocating from Portland who have kids in middle school or older specifically target Camas for the schools. The housing reflects that demand: medians run well above Vancouver proper, and well-priced homes don't sit. Lacamas Lake Regional Park anchors the outdoor life — a big lake with swimming, kayaking, and loop trails that see serious use on summer weekends.",
       "Camas is 25 miles east of Portland via Highway 14 along the Columbia, then across the Glenn Jackson Bridge on I-205. Southbound I-205 backs up reliably every weekday afternoon — expect 45–60 minutes to downtown Portland in peak traffic. The longer route is faster exactly never. What buyers are trading for that commute is no Oregon income tax, schools that outperform most of Portland's options, and a downtown that doesn't feel like a trade-off.",
     ],
     personality: "The school district that makes people do the bridge commute math twice",
@@ -5763,8 +5765,8 @@ export const neighborhoods: NeighborhoodData[] = [
     state: "WA",
     region: "SW Washington",
     description: [
-      "Pendleton Woolen Mills has had a factory in Washougal since 1912. The wool blankets and shirts made there sell in gear shops across the country, and the factory outlet store at 2 Pendleton Way is worth the stop. It's not a museum piece — the factory still runs, you can watch the looms through the windows, and the seconds rack has real deals. Washougal sits at the point where the Columbia starts to narrow into the beginning of the Gorge, and from the right streets on the south side of town you get Columbia River views that in any other housing market would add $200,000 to the asking price. Here they don't, because Washougal is still east county before the money arrived.",
-      "The housing is more affordable than Camas — medians run about $130,000 less — and buyers who want the east-county character without the Camas price tag end up here. The Washougal School District is smaller and somewhat less decorated than Camas SD, but Washougal High School has strong vocational and outdoor education programs, and the district is stable. The real draw for outdoor-oriented buyers is geography: Cape Horn — one of the Columbia Gorge's most dramatic viewpoints — is 15 minutes east on Highway 14. The National Scenic Area boundary is effectively at the city's eastern edge, which means the land east of Washougal cannot be developed. That view is not going away.",
+      "Pendleton Woolen Mills has had a factory in Washougal since 1912. The wool blankets and shirts made there sell in gear shops across the country, and the factory outlet store at 2 Pendleton Way is worth the stop. It's not a museum piece — the factory still runs, you can watch the looms through the windows, and the seconds rack has real deals. Washougal sits at the point where the Columbia starts to narrow into the beginning of the Gorge, and from the right streets on the south side of town you get Columbia River views that in any other housing market would be priced as a premium. Here they don't, because Washougal is still east county before the money arrived.",
+      "The housing is more affordable than Camas — medians run meaningfully less — and buyers who want the east-county character without the Camas price tag end up here. The Washougal School District is smaller and somewhat less decorated than Camas SD, but Washougal High School has strong vocational and outdoor education programs, and the district is stable. The real draw for outdoor-oriented buyers is geography: Cape Horn — one of the Columbia Gorge's most dramatic viewpoints — is 15 minutes east on Highway 14. The National Scenic Area boundary is effectively at the city's eastern edge, which means the land east of Washougal cannot be developed. That view is not going away.",
       "Commute to Portland is the honest complication. There's no direct interstate — the route is Highway 14 west through Camas to I-205, then south across the Glenn Jackson Bridge. In morning traffic, plan 50–65 minutes to downtown Portland. In afternoon peak, 60–80 minutes is realistic on bad days. Some Washougal residents use the Bridge of the Gods at Cascade Locks (45 minutes east) to cross into Oregon and take I-84 west — it adds mileage but avoids the I-205 backup on days when the bridge is the problem. Neither option is quick. The buyers who make it work have flexible schedules, remote work flexibility, or specific jobs in the east metro area.",
     ],
     personality: "Columbia Gorge access at prices that don't yet reflect the view",
@@ -5826,7 +5828,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How does Washougal compare to Camas for home buyers?",
-        a: "Washougal is typically $100,000–$150,000 less expensive than Camas for comparable homes. The school district is smaller and less ranked than Camas SD. The Gorge access is equivalent or better — Cape Horn is closer to Washougal than it is to Camas. Buyers who prioritize outdoor access and price over school district ratings tend to choose Washougal.",
+        a: "Washougal is typically meaningfully less expensive than Camas for comparable homes. The school district is smaller and less ranked than Camas SD. The Gorge access is equivalent or better — Cape Horn is closer to Washougal than it is to Camas. Buyers who prioritize outdoor access and price over school district ratings tend to choose Washougal.",
       },
       {
         q: "Is Washougal growing?",
@@ -5855,7 +5857,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "SW Washington",
     description: [
       "Battle Ground Lake State Park is four miles north of the city — a volcanic crater lake with a campground, swimming, and trails. It's one of the few crater lakes in the contiguous United States accessible by car and genuinely usable for an after-work swim. The city of Battle Ground itself sits in north Clark County with working farms on most of its edges. The Bi-Mart and the Ace Hardware and the drive-through coffee stands along SR-503 are the commercial texture here, alongside a Main Street with a few restaurants and a Saturday farmers market that draws from a wide radius. This is a city of 25,000 that feels its size accurately — not a suburb pretending to be a city, and not a town trying to become something else.",
-      "The financial math that brings buyers here is straightforward. No Washington state income tax, land prices that still allow a half-acre lot at reasonable cost, and new construction subdivisions going in on all four edges of the city at prices $100,000–$200,000 below Vancouver proper. Battle Ground School District is a solid mid-tier district — Prairie High School has strong athletics and vocational programs. Buyers with young families who want a true yard, a garage that fits two cars, and room for a dog without shared walls end up here. The trade-off is that this is one of the most car-dependent addresses in Clark County — there's essentially no sidewalk grid in the newer subdivisions and the concept of walking to anything is theoretical.",
+      "The financial math that brings buyers here is straightforward. No Washington state income tax, land prices that still allow a half-acre lot at reasonable cost, and new construction subdivisions going in on all four edges of the city at prices below Vancouver proper. Battle Ground School District is a solid mid-tier district — Prairie High School has strong athletics and vocational programs. Buyers with young families who want a true yard, a garage that fits two cars, and room for a dog without shared walls end up here. The trade-off is that this is one of the most car-dependent addresses in Clark County — there's essentially no sidewalk grid in the newer subdivisions and the concept of walking to anything is theoretical.",
       "The commute to Portland is the realistic constraint that limits who can live in Battle Ground long-term. It's 20 miles north of Vancouver and 40 miles from downtown Portland. On a Tuesday morning with no incidents: 45 minutes. During a normal afternoon rush hour: 60–75 minutes. On a bad day with bridge backup: 90 minutes is not unusual. There's no express bus service that makes commuting practical. This is a city for buyers who work in Clark County, work remotely, or have made a deliberate decision that the trade-off is worth it for the price, the space, and the tax savings.",
     ],
     personality: "Rural adjacency, genuine land, and a commute that demands honest evaluation",
@@ -5935,7 +5937,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does Washington's no income tax save a Battle Ground resident?",
-        a: "Oregon taxes income on the source — if you work in Oregon, you owe Oregon income tax regardless of where you live. If you work in Washington or remotely for a Washington employer, living in Battle Ground means you pay no state income tax at all. On a $120,000 income, that's roughly $8,000–$10,000 per year in Oregon taxes you don't pay. Check with a tax professional on your specific employment situation.",
+        a: "Oregon taxes income on the source — if you work in Oregon, you owe Oregon income tax regardless of where you live. If you work in Washington or remotely for a Washington employer, living in Battle Ground means you pay no state income tax at all. The annual difference is substantial, but the exact number depends entirely on your situation. Check with a tax professional on your specific employment situation.",
       },
     ],
     testimonials: [],
@@ -6157,11 +6159,11 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Does Forest Heights have an HOA?",
-        a: "Most of the neighborhood does, yes. The Forest Heights HOA manages common green space and enforces architectural covenants that govern exterior changes, fencing, and landscaping. HOA fees are typically $100–$200 per month depending on the sub-association. Review the CC&Rs carefully before closing — the rules are real and enforced.",
+        a: "Most of the neighborhood does, yes. The Forest Heights HOA manages common green space and enforces architectural covenants that govern exterior changes, fencing, and landscaping. HOA fees vary by sub-association. Review the CC&Rs carefully before closing — the rules are real and enforced.",
       },
       {
         q: "How does Forest Heights compare to other West Hills neighborhoods on price?",
-        a: "Forest Heights runs meaningfully less expensive than closer-in West Hills neighborhoods like the West Hills above NW 23rd or Goose Hollow. The trade-off is newer construction and larger lots — most homes here were built in the 1990s and 2000s — but much longer commutes to downtown and the Pearl. Median is around $750,000, compared to $900k+ for the closer hills.",
+        a: "Forest Heights runs meaningfully less expensive than closer-in West Hills neighborhoods like the West Hills above NW 23rd or Goose Hollow. The trade-off is newer construction and larger lots — most homes here were built in the 1990s and 2000s — but much longer commutes to downtown and the Pearl. It prices below the closer hills.",
       },
     ],
     testimonials: [],
@@ -6193,7 +6195,7 @@ export const neighborhoods: NeighborhoodData[] = [
     state: "OR",
     region: "Southwest & Downtown",
     description: [
-      "Beaverton-Hillsdale Highway is one of those Portland roads that exists in the gap between jurisdictions. The corridor runs through SW Portland, clips through unincorporated Washington County, and bumps up against Beaverton city limits — sometimes within a single block. The housing reflects that geography: 1950s and 1960s ranches with oversized lots, original hardwood floors, single-car garages, and none of the polish that makes comparable houses in Hillsdale or Multnomah Village cost $75,000 more. Grocery Options include Fred Meyer on SW Beaverton-Hillsdale, and the Raleigh Hills area just to the west adds a QFC and a handful of services.",
+      "Beaverton-Hillsdale Highway is one of those Portland roads that exists in the gap between jurisdictions. The corridor runs through SW Portland, clips through unincorporated Washington County, and bumps up against Beaverton city limits — sometimes within a single block. The housing reflects that geography: 1950s and 1960s ranches with oversized lots, original hardwood floors, single-car garages, and none of the polish that makes comparable houses in Hillsdale or Multnomah Village cost more. Grocery Options include Fred Meyer on SW Beaverton-Hillsdale, and the Raleigh Hills area just to the west adds a QFC and a handful of services.",
       "SW Barbur Boulevard is a few minutes north, connecting to downtown Portland in 15–20 minutes by car. Highway 217 is equally close and routes traffic south to Lake Oswego and Tualatin. Tri-Met Line 54 and Line 56 both run along Beaverton-Hillsdale Highway and provide real, if slow, bus service — 40 to 50 minutes to downtown. The mix of Portland and unincorporated Washington County addresses here matters for taxes and services. Portland city addresses pay Portland city income tax and property tax rates; Washington County unincorporated addresses do not pay the city income tax, which is a real dollar difference.",
       "The honest trade-off here is that Beaverton-Hillsdale is not a destination neighborhood. The commercial strip on the highway is functional rather than appealing. School district assignments require verification by parcel — some blocks are Portland Public, some are Beaverton School District, and that gap in school quality matters to families. What you get is a lower entry point into SW Portland, genuinely large lots by Portland standards, and proximity to both downtown Portland and the Washington County tech corridor. For buyers priced out of Hillsdale or Multnomah Village, this is where the math starts working.",
     ],
@@ -7014,7 +7016,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What do homes cost in Orenco Station?",
-        a: "Median is around $580,000. Attached townhomes and smaller single-family homes on the original town center lots start in the low $400s; larger detached homes at the edges of the neighborhood push toward $700k–$850k. Well-maintained homes with good MAX proximity move quickly.",
+        a: "Orenco Station sits mid-market for the corridor. Attached townhomes and smaller single-family homes on the original town-center lots are the entry point; larger detached homes at the edges are the top. Well-maintained homes with good MAX proximity move quickly, so have your financing settled before you tour.",
       },
       {
         q: "What's the school situation in Orenco Station?",
@@ -7100,7 +7102,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Are there affordable condos in Tanasbourne?",
-        a: "Yes — condos near the Quatama and Hawthorn Farm stations start around $300,000, which is one of the lower entry points in the Beaverton-Hillsboro corridor. They're newer construction and tend to have HOA fees; factor those into your monthly payment calculation when comparing to a single-family home.",
+        a: "Yes — condos near the Quatama and Hawthorn Farm stations are one of the lower entry points in the Beaverton-Hillsboro corridor. They're newer construction and tend to have HOA fees; factor those into your monthly payment calculation when comparing to a single-family home.",
       },
       {
         q: "How is the commute from Tanasbourne to downtown Portland?",
@@ -7190,7 +7192,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What does a home in Murrayhill cost?",
-        a: "Median is around $580,000. Most single-family homes trade between $480k and $700k depending on size, condition, and updates. Fully renovated 4-bedroom homes can push $750k–$800k. The neighborhood saw significant appreciation from 2020 to 2022 and has since stabilized.",
+        a: "Murrayhill sits mid-market for Washington County. Most single-family homes trade in a band set by size, condition, and updates; fully renovated 4-bedroom homes push above it. The neighborhood saw significant appreciation in the early 2020s and has since stabilized.",
       },
       {
         q: "How car-dependent is Murrayhill?",
@@ -7284,7 +7286,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much do homes cost in Progress Ridge?",
-        a: "Median is around $620,000. Townhomes start in the low-to-mid $400s; larger single-family homes run $600k–$850k. Newer construction from the late 2010s and early 2020s commands a premium. The newer you go, the higher the price per square foot.",
+        a: "Progress Ridge runs above most of the corridor. Townhomes are the entry point; larger single-family homes sit well above them. Newer construction from the late 2010s and early 2020s commands a premium — the newer you go, the higher the price per square foot.",
       },
     ],
     testimonials: [],
@@ -7374,7 +7376,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Is Aloha a good place to buy a first home?",
-        a: "For buyers who are primarily price-constrained, yes. The median around $450,000 is the lowest of any community in the Beaverton-Hillsboro corridor. You'll get more square footage and lot size per dollar than in Beaverton or Hillsboro proper. The trade-offs are older housing stock, fewer walkable amenities, and a commercial corridor that prioritizes car access over everything else.",
+        a: "For buyers who are primarily price-constrained, yes. It is the lowest-priced community in the Beaverton-Hillsboro corridor. You'll get more square footage and lot size per dollar than in Beaverton or Hillsboro proper. The trade-offs are older housing stock, fewer walkable amenities, and a commercial corridor that prioritizes car access over everything else.",
       },
     ],
     testimonials: [],
@@ -7472,7 +7474,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much does a home cost in Gladstone?",
-        a: "Median is around $430,000, making it one of the more affordable cities in Clackamas County. Most homes trade between $330k and $550k. The 1950s–1970s ranch stock is solid but older — budget for updates on anything in that range. Well-maintained homes with river proximity sit at the higher end.",
+        a: "Gladstone is one of the more affordable cities in Clackamas County. The 1950s–1970s ranch stock is solid but older — budget for updates. Well-maintained homes with river proximity sit at the higher end.",
       },
       {
         q: "Is Gladstone a good place for first-time buyers?",
@@ -7574,7 +7576,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much do homes cost in Lake Grove?",
-        a: "Median is around $680,000. Most of the 1960s–1980s ranches and split-levels sell between $530k and $850k. Larger updated homes and anything with recent renovations push past that. The price difference from the neighborhoods north of the lake is real — similar square footage near Oswego Lake often runs $800k to $1.2M or more.",
+        a: "Lake Grove prices below the neighborhoods north of the lake, and the difference is real — similar square footage near Oswego Lake runs substantially higher. Most of what trades here is 1960s–1980s ranches and split-levels; larger updated homes and recent renovations push past them.",
       },
       {
         q: "What's the commute from Lake Grove to Portland?",
@@ -7676,7 +7678,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much do homes cost in Oak Grove?",
-        a: "Median is around $460,000 — lower than Milwaukie proper and well below Lake Oswego to the south. The 1950s–1970s ranches and split-levels that make up most of the inventory run $350k to $580k depending on size, lot, and condition. Large-lot properties with older homes that need work can come in lower.",
+        a: "Oak Grove prices below Milwaukie proper and well below Lake Oswego to the south. The 1950s–1970s ranches and split-levels that make up most of the inventory vary by size, lot, and condition. Large-lot properties with older homes that need work come in lower still.",
       },
       {
         q: "Can I bike to the Springwater Corridor from Oak Grove?",
@@ -7778,7 +7780,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much do homes cost in Jennings Lodge?",
-        a: "Median is around $460,000. The range is wide — older homes that need significant work can come in around $340k, while well-maintained bluff-view properties with updates push $600k to $700k. Condition variance is higher here than in more turnover-active neighborhoods, so inspections and contingencies matter.",
+        a: "The range is wide: older homes that need significant work are the entry point, while well-maintained bluff-view properties with updates are the top. Condition variance is higher here than in more turnover-active neighborhoods, so inspections and contingencies matter.",
       },
       {
         q: "Is Jennings Lodge a good investment area?",
@@ -7880,7 +7882,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much do homes cost in West Haven-Sylvan?",
-        a: "Median is around $680,000. The 1950s–1970s ranches and split-levels on the flatter streets run $520k to $750k. Newer hillside construction and properties with east-facing view corridors push above $800k and sometimes above $1M. The area is priced below the neighborhoods immediately around Washington Park but above Beaverton for similar square footage.",
+        a: "The 1950s–1970s ranches and split-levels on the flatter streets are the core of the market. Newer hillside construction and properties with east-facing view corridors push well above them, often into jumbo territory. The area is priced below the neighborhoods immediately around Washington Park but above Beaverton for similar square footage.",
       },
       {
         q: "Is West Haven-Sylvan good for families?",
@@ -7981,7 +7983,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much do homes cost on Skyline?",
-        a: "Median is around $850,000, but the range is extremely wide. Older farmhouses and cottages on smaller lots can come in at $550k to $700k. Custom builds on several acres with views push $1.5M to $2.5M or higher. Jumbo financing is common in this area. There is not a typical Skyline house — it depends entirely on lot size, condition, and position on the ridge.",
+        a: "The range is extremely wide. Older farmhouses and cottages on smaller lots are the entry point; custom builds on several acres with views run into the millions. Jumbo financing is common here. There is not a typical Skyline house — it depends entirely on lot size, condition, and position on the ridge, which is exactly why we price these one at a time.",
       },
       {
         q: "What about snow and ice on Skyline Blvd?",
@@ -8154,7 +8156,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Hazel Dell runs along NE Highway 99 (the old Pacific Highway) north of downtown Vancouver, a corridor that has been commercial for decades and shows it. Strip malls, chain restaurants, a Fred Meyer, a Target, and a Home Depot bracket the residential streets that branch off the main road. The housing is mostly 1950s–1980s single-family ranches and bungalows on large lots with mature trees, mixed with apartment complexes at the arterial edges. It is not a neighborhood people move to for aesthetics. They move here because it is the most affordable entry point in North Vancouver, and because I-5 access from NE Hazel Dell Ave is immediate.",
       "Vancouver Public Schools serves the area — Hazel Dell Elementary (K–5), Jason Lee Middle School, and Hudson's Bay High School. Of the three tiers, the elementary tends to be rated above average locally; Hudson's Bay High School has GreatSchools scores in the low range and academic proficiency well below state averages, though its graduation rate runs above the state average. Families with school-age children who are prioritizing academic rankings should compare Hazel Dell's pipeline to Salmon Creek or Felida before committing.",
-      "Hazel Dell's genuine advantage is price and access. You can find houses in the $380k–$430k range that would cost $100k–$150k more in Salmon Creek. The Parade of Bands, held annually since 1964 on Armed Forces Day, is a legitimate community tradition that draws 20,000 spectators. Luke Jensen Sports Park is a well-maintained hub for youth sports. For buyers who want to own a house in Clark County without Washington state income tax liability and are willing to take an older home on a busy corridor, Hazel Dell closes the deal.",
+      "Hazel Dell's genuine advantage is price and access. You can find houses here that would cost meaningfully more in Salmon Creek. The Parade of Bands, held annually since 1964 on Armed Forces Day, is a legitimate community tradition that draws a serious crowd. Luke Jensen Sports Park is a well-maintained hub for youth sports. For buyers who want to own a house in Clark County without Washington state income tax liability and are willing to take an older home on a busy corridor, Hazel Dell closes the deal.",
     ],
     personality: "North Vancouver's most affordable entry point — older housing, highway corridor, no pretense, quick I-5 access",
     mapEmbedSrc: "https://maps.google.com/maps?q=Hazel+Dell+Vancouver+WA&output=embed&z=14",
@@ -8230,7 +8232,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Orchards takes its name from the commercial orchards that covered this part of East Vancouver until suburban development rolled through in the 1960s and accelerated through the 1990s. The housing stock is a legible record of that timeline — 1960s ranches on the western edges, 1970s–1980s colonials filling in the middle, newer infill developments toward the east. The area sits between NE Fourth Plain Blvd to the north and SR-500 and Highway 14 to the south, with NE Mill Plain Blvd serving as the main east-west corridor. Orchards Community Park, 33 acres with forested picnic areas and a rose garden, is one of the better neighborhood parks in East Vancouver.",
       "Evergreen School District serves the area. Orchards Elementary has struggled on standardized testing — proficiency rates well below district and state averages — and sits near the bottom of the district's elementary school rankings. The Evergreen District overall runs a mixed picture: Mountain View High School carries an A- Niche grade and a 7/10 GreatSchools rating with a 92% graduation rate, which is meaningfully better than the district's lower-performing schools. Buyers with school-age children should verify boundaries — which school specifically serves their address — rather than evaluating the district as a single unit.",
-      "The price point is East Vancouver's main competitive advantage. Median pricing around $440k gets buyers into established suburban housing that would cost 20–30% more in North Vancouver. The I-205 commute to Portland runs 25–35 minutes in normal traffic, and Vancouver Mall is minutes away for daily errands. The honest trade-off: the area is car-dependent, transit is minimal, and the Highway 14 / SR-500 edges are noisier and more industrial-adjacent than the interior residential streets.",
+      "The price point is East Vancouver's main competitive advantage. Prices here get buyers into established suburban housing that would cost meaningfully more in North Vancouver. The I-205 commute to Portland runs 25–35 minutes in normal traffic, and Vancouver Mall is minutes away for daily errands. The honest trade-off: the area is car-dependent, transit is minimal, and the Highway 14 / SR-500 edges are noisier and more industrial-adjacent than the interior residential streets.",
     ],
     personality: "East Vancouver's family-practical neighborhood — older housing, fair prices, I-205 access, and a park system that punches above its weight",
     mapEmbedSrc: "https://maps.google.com/maps?q=Orchards+Vancouver+WA&output=embed&z=14",
@@ -8306,7 +8308,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Cascade Park is East Vancouver's most established and accessible community for Portland commuters. Centered roughly at SE 164th Ave and Mill Plain Blvd, it has the infrastructure of a complete neighborhood: the Cascade Park Community Library (a well-designed 25,000-square-foot branch with a signature sloped-wood ceiling reading room), the Cascade Athletic Club, and a Mill Plain Blvd commercial strip that covers groceries, dining, and daily services without driving to the sprawl further east. The housing stock is 1970s–1990s single-family suburban on standard lots — mature trees, established landscaping, the look of a neighborhood that has been lived-in for thirty years because it has.",
       "Evergreen Public Schools serves the area, with Crestline Elementary (PK–5), Cascade Middle School (6–8), and Mountain View High School (9–12) covering the K–12 pipeline. Crestline and Cascade Middle run below district and state averages on proficiency measures. Mountain View High School is the positive outlier in the district — A- Niche grade, 7/10 GreatSchools, 92% graduation rate, above-average science performance. The arc from elementary to high school improves noticeably, which buyers with young children should factor into long-term planning.",
-      "I-205 access is the neighborhood's strongest geographic asset. From Cascade Park, the Glenn Jackson Bridge crossing to Portland takes 20–30 minutes in normal conditions — better than the I-5 corridor for most of the day. The bridge still backs up during morning and evening rush, and there is no useful transit connection for Portland workers. The price premium over Orchards is modest — typically $20k–$30k median — which buyers tend to attribute to the library, the established feel, and slightly better proximity to the freeway.",
+      "I-205 access is the neighborhood's strongest geographic asset. From Cascade Park, the Glenn Jackson Bridge crossing to Portland takes 20–30 minutes in normal conditions — better than the I-5 corridor for most of the day. The bridge still backs up during morning and evening rush, and there is no useful transit connection for Portland workers. The price premium over Orchards is modest, which buyers tend to attribute to the library, the established feel, and slightly better proximity to the freeway.",
     ],
     personality: "East Vancouver's most complete neighborhood — a real library, a real commercial strip, and the best I-205 position in Clark County",
     mapEmbedSrc: "https://maps.google.com/maps?q=Cascade+Park+Vancouver+WA&output=embed&z=14",
@@ -8344,7 +8346,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "Why choose Cascade Park over Orchards?",
-        a: "Mostly the library, the slightly closer I-205 position, and the neighborhood's established commercial center on Mill Plain. Cascade Park has a more complete feel — the library branch, Little Italy's, Larson's Bakery — than Orchards, which is more residential with a more dispersed commercial strip. The price difference is typically $20k–$30k at median. Whether that premium is worth it depends on how much the neighborhood infrastructure matters to you day-to-day.",
+        a: "Mostly the library, the slightly closer I-205 position, and the neighborhood's established commercial center on Mill Plain. Cascade Park has a more complete feel — the library branch, Little Italy's, Larson's Bakery — than Orchards, which is more residential with a more dispersed commercial strip. The price difference is modest. Whether that premium is worth it depends on how much the neighborhood infrastructure matters to you day-to-day.",
       },
       {
         q: "How is the commute from Cascade Park to Portland?",
@@ -8458,7 +8460,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much do homes cost on Bull Mountain?",
-        a: "Median is around $650,000, with most homes trading between $500k and $1.2M. Larger homes on lots with Mt. Hood or valley views push toward the top. Because the housing stock is relatively modern (1990s–2010s), you get more finished square footage per dollar compared to comparable lots in Lake Oswego or SW Portland.",
+        a: "Bull Mountain runs above most of Washington County, and larger homes on lots with Mt. Hood or valley views push toward the top of it. Because the housing stock is relatively modern (1990s–2010s), you get more finished square footage per dollar compared to comparable lots in Lake Oswego or SW Portland.",
       },
     ],
     testimonials: [],
@@ -8645,7 +8647,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How affordable is Metzger compared to inner SW Portland?",
-        a: "Median is around $510,000 — meaningfully lower than Hillsdale, Multnomah Village, or Raleigh Hills for comparable square footage. The discount exists partly because buyers perceive Metzger as less desirable than 'real Portland' neighborhoods, which creates value for buyers who understand the jurisdiction and are comfortable with car-dependent living.",
+        a: "Metzger prices meaningfully lower than Hillsdale, Multnomah Village, or Raleigh Hills for comparable square footage. The discount exists partly because buyers perceive Metzger as less desirable than 'real Portland' neighborhoods, which creates value for buyers who understand the jurisdiction and are comfortable with car-dependent living.",
       },
       {
         q: "Is there good transit from Metzger?",
@@ -8747,7 +8749,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much do homes cost in Garden Home?",
-        a: "Median around $530,000, with most homes between $415k and $750k. The unincorporated Washington County parcels tend to price slightly below the Portland-side parcels with comparable characteristics, because some buyers discount anything not officially 'Portland.' That discount can represent real value for buyers who are comfortable with the jurisdiction.",
+        a: "The unincorporated Washington County parcels tend to price slightly below the Portland-side parcels with comparable characteristics, because some buyers discount anything not officially 'Portland.' That discount can represent real value for buyers who are comfortable with the jurisdiction.",
       },
     ],
     testimonials: [],
@@ -8844,7 +8846,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How much do homes cost in South Burlingame?",
-        a: "Median around $600,000, with most homes between $480k and $900k. The closer to Tryon Creek, the higher the price — proximity to the park is priced in. Homes on the flat streets near Market of Choice sell faster. 1950s ranches in original condition at the lower end of the range offer renovation upside for buyers willing to take on a project.",
+        a: "The closer to Tryon Creek, the higher the price — proximity to the park is priced in. Homes on the flat streets near Market of Choice sell faster. 1950s ranches in original condition at the lower end of the range offer renovation upside for buyers willing to take on a project.",
       },
     ],
     testimonials: [],
