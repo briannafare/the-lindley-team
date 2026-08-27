@@ -222,18 +222,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes, one of Portland's best. Walkable for kids, a public outdoor pool, and a neighborhood that's been stable for decades. Oaks Bottom and the Springwater trail give actual outdoor space. The schools are decent, and families tend to plant roots here and not move.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We looked at 22 houses over 14 months. The day we saw the one on SE 14th, we wrote the offer that night. Bri called me the next morning to walk through the numbers before I second-guessed myself.",
-        author: "Marcus T.",
-        context: "Bought in Sellwood-Moreland, 2023",
-      },
-      {
-        quote: "I refinanced when rates dropped and saved $340 a month. Bri ran the numbers three different ways and showed me the exact break-even point. Didn't feel like a sales pitch.",
-        author: "Jennifer L.",
-        context: "Refinanced in Sellwood, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha"],
     adjacentNeighborhoods: ["woodstock", "eastmoreland", "buckman"],
     image: "/img/hood-sellwood.webp",
@@ -312,18 +301,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes, with realistic expectations. Condos and townhomes bring the entry price under the Portland median. For single-family houses — especially in Ladd's Addition — competition is real. If your budget is under $400k, you're looking at attached housing. At $500k+, single-family becomes realistic.",
       },
     ],
-    testimonials: [
-      {
-        quote: "I work downtown and didn't want to own a car. Buckman was the only neighborhood where that felt realistic. Bri helped me find a condo in Ladd's Addition and close in 28 days.",
-        author: "Devon K.",
-        context: "Bought in Ladd's Addition, 2023",
-      },
-      {
-        quote: "First home purchase and I had a lot of questions. Bri answered every single one without making me feel like I was wasting her time.",
-        author: "Rachel M.",
-        context: "Bought in Buckman, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "jumbo"],
     adjacentNeighborhoods: ["sellwood-moreland", "irvington", "alberta-arts"],
     seo: {
@@ -403,18 +381,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "About 25 minutes by car. The bus (Lines 72 or 6) gets you downtown in 30–35 minutes. Biking is 20–25 minutes via the Burnside Bridge. Going to the west side adds bridge time — Burnside is the fastest crossing from NE Portland and it gets congested in the afternoon.",
       },
     ],
-    testimonials: [
-      {
-        quote: "Moved from Denver and I knew the neighborhood from one visit. Bri flagged two houses before they hit Zillow. We bought the second one.",
-        author: "Thomas B.",
-        context: "Bought on NE 26th, 2024",
-      },
-      {
-        quote: "We were nervous about buying an investment property. Bri walked through the rental math honestly — including the scenario where rates didn't drop. We bought anyway and it's been solid.",
-        author: "Keisha and David R.",
-        context: "Investment property in Alberta Arts, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: ["irvington", "buckman", "st-johns"],
     image: "/img/hood-alberta.webp",
@@ -494,18 +461,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "No. It's one of the only Portland neighborhoods where car-free living is genuinely practical. The Streetcar, MAX, and biking infrastructure cover most trips. Grocery, restaurants, coffee, Powell's — all walkable. If you do own a car, budget for parking separately; most street parking is metered or permit.",
       },
     ],
-    testimonials: [
-      {
-        quote: "I'd been renting in the Pearl for four years and finally decided to buy. Bri walked me through the HOA financials on three different buildings before we found one that made sense. She caught a reserve fund issue I would have missed.",
-        author: "Alex W.",
-        context: "Bought a condo in Pearl District, 2024",
-      },
-      {
-        quote: "Downsizing from a house in Lake Oswego. The Pearl was the only neighborhood that felt like a real trade rather than a compromise. Bri handled the whole thing cleanly.",
-        author: "Carolyn and Jim B.",
-        context: "Bought in Pearl District, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance"],
     adjacentNeighborhoods: ["buckman", "irvington", "st-johns"],
     image: "/img/hood-pearl.webp",
@@ -585,18 +541,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Irvington has slightly better transit access and is closer to NE commercial corridors. Laurelhurst has the park and a stronger sense of enclave. Eastmoreland is quieter with larger lots. All three are in the upper tier of Portland residential neighborhoods. The school pipeline makes Irvington's case for families specifically.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We moved from Chicago specifically for the school situation. Irvington Elementary was the deciding factor. Bri helped us close on a Victorian on NE 22nd before it got a second offer.",
-        author: "Sarah and Tom K.",
-        context: "Bought in Irvington, 2023",
-      },
-      {
-        quote: "I was skeptical about the price, but Bri walked me through the comparable sales going back five years. Irvington holds value. We bought and I haven't second-guessed it.",
-        author: "Michael D.",
-        context: "Bought in Irvington, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance"],
     adjacentNeighborhoods: ["alberta-arts", "buckman", "laurelhurst"],
     image: "/img/hood-irvington.webp",
@@ -676,18 +621,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "A 9.5-acre garden managed by the American Rhododendron Society, adjacent to Reed College. Entry is free Monday mornings and during the off-season; small admission fee April through June when the rhododendrons are blooming. Genuinely worth seeing in May — it's one of those Portland things that residents take for granted and visitors are stunned by.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We wanted a 1930s house with a real yard and didn't want to leave Portland. Eastmoreland was the answer. Bri found us a Tudor Revival on SE Bybee before it was formally listed.",
-        author: "Patricia and Greg H.",
-        context: "Bought in Eastmoreland, 2023",
-      },
-      {
-        quote: "Coming from a condo in the Pearl, the lot size alone felt like a revelation. Bri walked us through what to expect on a house this size — insurance, maintenance, the works.",
-        author: "Daniel F.",
-        context: "Bought in Eastmoreland, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance"],
     adjacentNeighborhoods: ["sellwood-moreland", "woodstock", "buckman"],
     seo: {
@@ -763,18 +697,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Somewhat — Walk Score of 76. The neighborhood itself is residential, and the park is the main destination on foot. For restaurants, coffee, and errands, you're mostly biking or driving to SE 28th Ave or NE 28th Ave. Not as walkable as Buckman or the Pearl, but better than Eastmoreland.",
       },
     ],
-    testimonials: [
-      {
-        quote: "The school situation was the whole reason we were looking in Laurelhurst. Bri knew the comparable sales cold and helped us move fast when the right house came up on NE 36th.",
-        author: "Amanda and Chris P.",
-        context: "Bought in Laurelhurst, 2024",
-      },
-      {
-        quote: "We almost bought in Irvington but came back to Laurelhurst for the park. Two kids and a dog — it made sense. Bri made the jumbo side of things straightforward.",
-        author: "James T.",
-        context: "Bought in Laurelhurst, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance"],
     adjacentNeighborhoods: ["irvington", "eastmoreland", "woodstock"],
     seo: {
@@ -853,18 +776,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Woodstock Elementary is solid but not exceptional. The middle school (Hosford) and high school (Cleveland) are the same as Sellwood, which serves families well. Cleveland High School consistently performs above the PPS average. If top-tier elementary ratings are the priority, Irvington or Laurelhurst rank higher.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We maxed out at $520k and thought we'd have to leave SE Portland. Bri found us a 1940s house in Woodstock with a real backyard. We've been there two years and love the neighborhood.",
-        author: "Lauren and Eric M.",
-        context: "Bought in Woodstock, 2023",
-      },
-      {
-        quote: "Woodstock was our backup plan. It became our first choice once Bri walked us through what we were actually getting for the price difference vs. Sellwood.",
-        author: "Nina W.",
-        context: "Bought in Woodstock, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance"],
     adjacentNeighborhoods: ["eastmoreland", "sellwood-moreland", "laurelhurst"],
     seo: {
@@ -943,18 +855,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Smaller Craftsman bungalows from the 1910s–1940s, ranches from the 1950s, and some more recent infill. Lots are typically 4,500–6,000 sq ft. Houses are smaller than comparable prices in SE Portland — you get less square footage but more neighborhood per dollar. Basements are common and often unfinished, which is either a project or a feature depending on your plans.",
       },
     ],
-    testimonials: [
-      {
-        quote: "Everyone told us to look in SE Portland first. We looked at St. Johns on Bri's recommendation and bought a 1925 Craftsman on N Central for $379k. I dare you to find that price in Sellwood.",
-        author: "Owen and Lily S.",
-        context: "Bought in St. Johns, 2023",
-      },
-      {
-        quote: "Cathedral Park sealed the deal. I run there three times a week. Bri knew the neighborhood well enough to tell me which blocks to focus on.",
-        author: "Cassandra P.",
-        context: "Bought in St. Johns, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: ["alberta-arts", "kenton", "woodstock"],
     image: "/img/hood-stjohns.webp",
@@ -1034,18 +935,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "By Portland standards, Kenton is a normal working-class neighborhood. The blocks closest to N Denver Ave and the MAX station are the most active. Crime statistics are similar to other North Portland neighborhoods at this price point. The neighborhood association is active and residents are engaged about what happens here.",
       },
     ],
-    testimonials: [
-      {
-        quote: "I had $340k to spend and thought I was out of the Portland market. Bri showed me Kenton. We got a 1948 bungalow with a full basement for $318k. Two years later, I've put $40k into it and it's worth $430k.",
-        author: "Marcus B.",
-        context: "Bought in Kenton, 2022",
-      },
-      {
-        quote: "The MAX access is the whole reason. I don't have a car. Kenton made Portland ownership possible for me in a way nothing else did at my budget.",
-        author: "Simone L.",
-        context: "Bought in Kenton, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: ["st-johns", "alberta-arts", "woodstock"],
     seo: {
@@ -1152,20 +1042,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Very. Houses that are correctly priced and in good condition routinely attract multiple offers. The inventory is chronically low — some years fewer than 40 homes sell in the entire neighborhood. If you're a serious buyer, get your financing locked in before you start looking. Coming in pre-approved but without a rate lock is how people lose houses here.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We lost three houses before we got this one. Bri helped us tighten up our offer structure — shorter inspection period, escalation clause with a hard cap, strong earnest money. The fourth house, we got it at $38k over asking and we don't regret a dollar.",
-        author: "Sarah and Tom K.",
-        context: "Bought in Beaumont-Wilshire, 2023, purchase price $748,000",
-      },
-      {
-        quote:
-          "I've owned my house on NE 37th for eleven years. Did a cash-out refi last spring to fund a rental purchase. Bri ran the whole thing cleanly — no surprises at closing, rate was better than I expected given the market.",
-        author: "David M.",
-        context: "Cash-out refinance, Beaumont-Wilshire, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance", "heloc"],
     adjacentNeighborhoods: ["alameda", "rose-city-park", "hollywood", "irvington"],
     seo: {
@@ -1269,20 +1146,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Alameda Elementary has a consistently strong reputation within PPS — rated higher than most Portland elementary schools and with active parent involvement. Fernwood feeds into Grant High, which is one of the more stable and comprehensive PPS high schools. As always with PPS, verify boundaries before purchasing — attendance zones have shifted.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We moved from San Francisco and were used to jumbo loans, but Oregon's process was different than we expected. Bri explained the reserve requirements and DTI thresholds clearly upfront. Closed at $1.1M without drama.",
-        author: "Rachel and James P.",
-        context: "Jumbo purchase, Alameda, 2024",
-      },
-      {
-        quote:
-          "Used equity from the Alameda house to buy a rental in St. Johns. Bri structured the HELOC so the numbers actually worked instead of just telling me what I wanted to hear.",
-        author: "Michael O.",
-        context: "HELOC, Alameda, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "heloc", "refinance"],
     adjacentNeighborhoods: ["beaumont-wilshire", "rose-city-park", "irvington", "hollywood"],
     seo: {
@@ -1386,20 +1250,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes. The price range here includes a lot of homes in the $420k–$600k range that work well for FHA financing. Most are single-family detached, which clears the property eligibility bar easily. The main FHA consideration in this price range is making sure the house passes the FHA appraisal — older bungalows sometimes have deferred maintenance that triggers conditions.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We kept losing in Beaumont and Irvington. Bri suggested we look at Rose City Park and we were skeptical. Ended up buying on NE 62nd for $537k — three bedrooms, garage, original hardwoods. We would have paid $700k for the same house eight blocks west.",
-        author: "Nadia and Chris F.",
-        context: "First-time buyers, Rose City Park, 2023",
-      },
-      {
-        quote:
-          "FHA loan, 3.5% down, first house. Bri walked us through every step and never made us feel like we were a less serious buyer than the conventional loan people.",
-        author: "Erin S.",
-        context: "FHA purchase, Rose City Park, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance"],
     adjacentNeighborhoods: ["beaumont-wilshire", "hollywood", "alameda", "sabin"],
     seo: {
@@ -1503,20 +1354,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "The Grant High boundary covers most of Hollywood District, and Grant is one of PPS's better-functioning comprehensive high schools. Elementary options include Beverly Cleary and Laurelhurst School, both of which have solid reputations. Middle school feeds through the same PPS system as the rest of NE. Confirm your specific address with PPS boundary maps before buying.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "I specifically wanted to be close to the MAX for work. Bri helped me understand the difference between the blocks that feel urban-loud versus the ones that are just transit-convenient. Got a two-bed on NE 46th for $467k and I bike to the Hollywood TC in four minutes.",
-        author: "Jason W.",
-        context: "First-time buyer, Hollywood District, 2023",
-      },
-      {
-        quote:
-          "Divorce situation — needed to refinance the house into my name only within a tight timeline. Bri moved it through without making it more complicated than it needed to be. Closed in 28 days.",
-        author: "Karen B.",
-        context: "Divorce refinance, Hollywood District, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "divorce-lending"],
     adjacentNeighborhoods: ["beaumont-wilshire", "rose-city-park", "sabin", "laurelhurst"],
     seo: {
@@ -1621,20 +1459,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "The waitlist has historically been 2–4 years depending on plot size. It's one of the longest in Portland. There are smaller neighborhood gardens nearby, and several Sabin homeowners have good-sized backyard growing space. It's a neighborhood detail worth knowing — if garden access is part of your lifestyle, plan for the wait.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We wanted Alberta walkability without the Alberta price. Bri showed us three Sabin houses in one afternoon, explained the school boundary situation clearly, and we made an offer the same day. Closed for $547k, one block from NE 15th coffee.",
-        author: "Theo and Margot L.",
-        context: "Purchase, Sabin, 2023",
-      },
-      {
-        quote:
-          "Used a cash-out refinance to do the kitchen remodel we'd been putting off. Bri helped us figure out whether it made more sense than a HELOC given our timeline. Straightforward process, no surprises.",
-        author: "Dana K.",
-        context: "Cash-out refinance, Sabin, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "heloc", "cash-out"],
     adjacentNeighborhoods: ["alberta-arts", "rose-city-park", "hollywood", "cully", "irvington"],
     seo: {
@@ -1745,20 +1570,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "The land sat as a gravel pit for decades while the community advocated for a park. After nearly 20 years of advocacy and $15M in funding, Cully Park opened in 2021. It's now one of the best neighborhood parks in NE Portland — 25 acres, designed with community input, with a skate feature, stage, and garden. It's the kind of investment that changes a neighborhood's trajectory. Buyers paying attention to long arcs should notice it.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We had $390k to spend and didn't think we could buy anything decent in inner NE. Bri walked us through Cully specifically — showed us which streets to focus on and why. We bought a solid three-bed on NE 57th for $378k. The neighbors have lived there for 20 years.",
-        author: "Megan and Roy T.",
-        context: "First-time buyers, Cully, 2023",
-      },
-      {
-        quote:
-          "VA loan, no down payment, bought on NE 52nd for $415k. Bri handled the VA appraisal process — there were a couple of flagged items on the property and she worked through it without panicking. Closed on time.",
-        author: "Staff Sgt. Andre M. (ret.)",
-        context: "VA purchase, Cully, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "investment", "refinance"],
     adjacentNeighborhoods: ["sabin", "alberta-arts", "kenton", "rose-city-park", "hollywood"],
     seo: {
@@ -1841,18 +1653,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Generally yes by Portland standards. Like most inner SE neighborhoods, there's some property crime — car break-ins are more common than violent incidents. The Hawthorne corridor has occasional issues near the bars late at night. Most longtime residents don't feel unsafe walking the neighborhood at night, but it's not a suburb.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We bought a $520k house two blocks from Hawthorne and I haven't filled my gas tank in three months. That wasn't the plan going in — it just happened. Bri helped us figure out the FHA numbers when our down payment wasn't where we thought it needed to be.",
-        author: "Kelsey M.",
-        context: "First-time buyer in Sunnyside, 2023",
-      },
-      {
-        quote: "The inspection came back with a list. Old knob-and-tube wiring in the attic, the furnace was original. Bri walked us through what we could negotiate and what was just the cost of buying a 1918 house. We still bought it.",
-        author: "David and Renata F.",
-        context: "Purchased in Sunnyside, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "heloc"],
     adjacentNeighborhoods: ["richmond", "buckman", "mount-tabor", "laurelhurst"],
     seo: {
@@ -1935,18 +1736,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Very good. SE Clinton is a dedicated bike boulevard — low traffic, bike-specific signals at major intersections, connects to the Hawthorne Bridge path downtown. Most of the neighborhood is within easy bike range of downtown, the Central Eastside, and inner SE. It's one of the reasons Richmond has stayed popular as cars become more expensive to operate.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We sold our place in Lake Oswego and bought on SE 36th in Richmond. Size was smaller, price was similar. We walk to dinner three nights a week now. Bri helped us make the math work when we were underwater on the timing.",
-        author: "Tom and Claire S.",
-        context: "Moved from Lake Oswego to Richmond, 2023",
-      },
-      {
-        quote: "First house, $547,000. I was convinced I couldn't afford inner SE. Bri ran the FHA numbers and showed me I was wrong by about $80,000 in the wrong direction. We closed in 32 days.",
-        author: "Nina K.",
-        context: "First-time buyer in Richmond, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "heloc", "investment"],
     adjacentNeighborhoods: ["sunnyside", "mount-tabor", "woodstock", "creston-kenilworth", "buckman"],
     seo: {
@@ -2025,18 +1815,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Most of it, yes. The residential blocks are genuinely quiet — wide lots, mature trees, low through-traffic. The northern edge near East Burnside is noisier, and SE Hawthorne picks up on weekends. If you're buying in the blocks between the park and about SE 60th, you'll notice a real drop in ambient noise compared to inner SE.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We stretched to $695k and I had anxiety about it for a year. Two years later the house appraised at $760k and I took out a HELOC to finish the basement. Bri walked me through both transactions.",
-        author: "Greg and Marta H.",
-        context: "Purchased near Mount Tabor Park, 2022",
-      },
-      {
-        quote: "We moved from a condo in the Pearl. The yard is bigger than our old living room. I walk up to the park with the dog every morning. Worth every dollar of the price difference.",
-        author: "Amanda S.",
-        context: "Bought in Mount Tabor, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "heloc", "refinance", "cash-out"],
     adjacentNeighborhoods: ["sunnyside", "richmond", "montavilla", "laurelhurst"],
     seo: {
@@ -2115,18 +1894,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "By Portland standards, the residential blocks are fine. SE 82nd has more visible issues than inner SE neighborhoods — it's a high-traffic arterial that serves a wide area. The blocks east of 82nd toward 92nd are generally quieter. It's not inner SE, but it's not sketchy either. Most residents walk their neighborhood without concern.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We couldn't afford $560k in Richmond. We bought a nice house in Montavilla for $418k and have $140k in equity after two years. Bri was honest with us that the schools weren't great — we're private school anyway so it didn't matter.",
-        author: "Priya and James W.",
-        context: "Purchased in Montavilla, 2022",
-      },
-      {
-        quote: "Investment property. We bought at $390k, put $25k in, and rent it at $2,200 a month. The numbers made sense and Bri helped us structure the financing to keep cash flow positive.",
-        author: "Dan O.",
-        context: "Investment purchase in Montavilla, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment", "refinance"],
     adjacentNeighborhoods: ["mount-tabor", "foster-powell", "lents", "richmond"],
     seo: {
@@ -2209,18 +1977,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes, more than most. The Foster-Powell Neighborhood Association has pushed back on development decisions, organized streetscape improvements on Foster, and maintains active communication with residents. In Portland, a functioning neighborhood association makes a real difference on zoning and development issues.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We bought at $445k and put $30k into the kitchen and bathrooms. Two years later we refinanced based on a $530k appraisal. Bri helped us time the refi right and pulled $45k in equity without killing our rate.",
-        author: "Carlos and Elena M.",
-        context: "Purchased and refinanced in Foster-Powell, 2022–2024",
-      },
-      {
-        quote: "First house at 31. I thought I'd have to move to Gresham. Bri showed me Foster-Powell and I didn't know it existed. Bought a three-bedroom on SE 64th for $418,000.",
-        author: "Ryan B.",
-        context: "First-time buyer in Foster-Powell, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "cash-out", "heloc"],
     adjacentNeighborhoods: ["richmond", "woodstock", "creston-kenilworth", "lents", "montavilla"],
     seo: {
@@ -2299,18 +2056,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes. Brooklyn Elementary is mid-tier within PPS. Cleveland High draws from this area and has a stronger reputation than Franklin or David Douglas. The school question matters less in Brooklyn than the location-versus-price question — this is a neighborhood where the financial decision is often the primary driver.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We looked at Sellwood for eight months. Couldn't compete. Our agent suggested Brooklyn and we bought a 1912 Victorian for $482k that would have been $640k on SE 13th. Yes, there are trains. I can sleep through anything.",
-        author: "Paul and Margot D.",
-        context: "Purchased in Brooklyn after searching Sellwood, 2023",
-      },
-      {
-        quote: "I was the buyer who got scared off by the industrial thing. Then Bri showed me the actual numbers — $108k less than a comparable house in Sellwood, three blocks from the Springwater trail. I wish I'd bought sooner.",
-        author: "Simone A.",
-        context: "Bought in Brooklyn, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "investment"],
     adjacentNeighborhoods: ["sellwood-moreland", "buckman", "foster-powell", "brentwood-darlington"],
     seo: {
@@ -2418,20 +2164,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Mid-range for Portland Public Schools. Faubion is an interesting option — it's a PK–8 school co-located with a Lewis & Clark graduate education program, which brings resources. Jefferson High School is the attendance-area high school and has been through significant changes; families who stay with PPS through high school often look at Benson Polytechnic or other option schools.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We lost three offers in Alberta before Bri suggested we look at Concordia. Found a 1928 bungalow for $498,000 — two blocks from the same coffee shop we were fighting traffic to visit anyway.",
-        author: "Priya & James M.",
-        context: "Bought in Concordia, 2023",
-      },
-      {
-        quote:
-          "First-time buyer, budget was firm at $480k. Bri was honest that Alberta was mostly out of reach at that number and steered me toward Concordia without making me feel like I was settling. Closed at $467,000.",
-        author: "Tyler S.",
-        context: "First purchase in Concordia, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: ["alberta-arts", "concordia", "kenton", "irvington"],
     seo: {
@@ -2556,20 +2289,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Creston Elementary and Kellogg Middle are below the PPS average on most metrics. Cleveland High School — the attendance-area high school — is one of PPS's stronger comprehensives and pulls this picture up considerably at the high school level. Many families use PPS option schools for K–8 while staying in the neighborhood.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We had $420,000 and were getting killed in Sunnyside and Richmond. Bri walked us through Creston-Kenilworth honestly — she didn't oversell it, told us exactly what Powell was like. We bought a 1952 ranch on a big lot for $408,000. Zero regrets.",
-        author: "Sandra & Mark P.",
-        context: "Bought in Creston-Kenilworth, 2022",
-      },
-      {
-        quote:
-          "I'm a single buyer, needed three bedrooms for a home office. Everything in inner SE was $550k+. Found a house in Creston-Kenilworth for $435,000 and Bri structured the FHA loan so my payment is less than I was paying in rent.",
-        author: "Dani R.",
-        context: "First purchase in Creston-Kenilworth, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: [
       "richmond",
@@ -2707,20 +2427,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Below the Portland average on most metrics. Lents Elementary and Lane Middle School both rate around 4 out of 10 on GreatSchools. David Douglas High School is the attendance-area high school — it's a large school with career technical programs, rated around a 5. Families with school-age kids typically evaluate PPS option schools and charter options seriously before buying.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "I needed to stop renting and had $330,000 to work with in Portland. Bri was honest that my options were limited but real — we found a 1948 house in Lents for $315,000. I'm building equity instead of paying someone else's mortgage.",
-        author: "Kevin O.",
-        context: "First purchase in Lents, 2023",
-      },
-      {
-        quote:
-          "Investment property, bought at $298,000 in 2022. Bri walked me through the numbers including realistic vacancy and repair reserves. She didn't just tell me what I wanted to hear.",
-        author: "Marie T.",
-        context: "Investment property in Lents, 2022",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment", "cash-out"],
     adjacentNeighborhoods: [
       "foster-powell",
@@ -2863,20 +2570,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Eastmoreland is more expensive and more uniform in housing quality. Woodstock to the north is more commercial. Reed sits between — it has the walkability of Woodstock commercial access, some of the architectural character of Eastmoreland, with a lower price point than either for equivalent condition. The college is both the draw and the source of the rental inventory management issue.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We were set on Eastmoreland but couldn't justify the $750k+ prices. Bri pointed out that Reed gives you access to the same high school and similar housing stock at a real discount. We paid $565,000 for a house we love.",
-        author: "Greg & Alison F.",
-        context: "Bought in Reed neighborhood, 2023",
-      },
-      {
-        quote:
-          "Faculty member at Reed, needed to buy near campus. Bri understood the competitive dynamics — faculty competing with investor-buyers near campus — and helped me move fast. Closed in 22 days.",
-        author: "Dr. Sarah W.",
-        context: "Faculty purchase in Reed, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance"],
     adjacentNeighborhoods: [
       "woodstock",
@@ -3020,20 +2714,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "The Foster corridor to the north has seen consistent investment over the past decade. SE 52nd has some rezoning and infill on a slow timeline. There is no announced major development project for the interior of Brentwood-Darlington itself. Buyers who bought here 10 years ago have seen appreciation — that's the realistic case for long-term holds, not a short-term flip thesis.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We had two kids and needed a yard and three bedrooms. Everything with a real yard in SE Portland was $550k+. Bri showed us a 1961 ranch in Brentwood-Darlington for $365,000. It needed a kitchen update. We could actually afford to do that. We bought it.",
-        author: "Tom & Lucia K.",
-        context: "Bought in Brentwood-Darlington, 2023",
-      },
-      {
-        quote:
-          "Bri was the only lender who gave me a straight answer on what I could afford. She didn't try to push me toward inner SE at a price that would have stressed me out. Closed at $342,000, manageable payment.",
-        author: "Brandon H.",
-        context: "First purchase in Brentwood-Darlington, 2022",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment", "cash-out"],
     adjacentNeighborhoods: [
       "lents",
@@ -3071,7 +2752,7 @@ export const neighborhoods: NeighborhoodData[] = [
     schools: [
       { name: "Hayhurst Elementary", type: "elementary", grades: "K–5", rating: 7 },
       { name: "Robert Gray Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Wilson High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Ida B. Wells-Barnett High School", type: "high", grades: "9–12", rating: 7 },
     ],
     parks: [
       {
@@ -3144,7 +2825,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What are the schools like in Multnomah Village?",
-        a: "The pipeline is Hayhurst Elementary → Robert Gray Middle → Wilson High School. Wilson is one of PPS's stronger high schools and gets most of the attention. Hayhurst is a well-regarded neighborhood elementary with active parent involvement. The middle school is average for PPS. Overall, the school situation is a legitimate draw for families, not just a talking point.",
+        a: "The pipeline is Hayhurst Elementary → Robert Gray Middle → Ida B. Wells-Barnett High School. Ida B. Wells-Barnett is one of PPS's stronger high schools and gets most of the attention. Hayhurst is a well-regarded neighborhood elementary with active parent involvement. The middle school is average for PPS. Overall, the school situation is a legitimate draw for families, not just a talking point.",
       },
       {
         q: "How much does a home cost in Multnomah Village?",
@@ -3152,23 +2833,10 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Is Multnomah Village good for families?",
-        a: "It's one of the better SW Portland options for families specifically: Gabriel Park is big and well-equipped, the school pipeline through Wilson High is solid, and the village commercial strip gives kids actual walkable destinations without sending them to a strip mall. The trade is a full car-dependent commute for whoever works outside the neighborhood.",
+        a: "It's one of the better SW Portland options for families specifically: Gabriel Park is big and well-equipped, the school pipeline through Ida B. Wells-Barnett is solid, and the village commercial strip gives kids actual walkable destinations without sending them to a strip mall. The trade is a full car-dependent commute for whoever works outside the neighborhood.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We'd been priced out of Sellwood and didn't want to leave the SW. Bri found us a 1958 split-level in Multnomah Village at $597k. Two blocks from Gabriel Park. We'd looked for eight months and couldn't believe it was still available.",
-        author: "Alicia and Ben T.",
-        context: "Bought in Multnomah Village, 2023",
-      },
-      {
-        quote:
-          "We refinanced and got down to 5.9%. Bri showed me three rate scenarios before we committed. It wasn't a pressure situation — she wanted to make sure it actually made sense for us.",
-        author: "Frank D.",
-        context: "Refinanced in Multnomah Village, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "heloc"],
     adjacentNeighborhoods: ["hillsdale", "goose-hollow", "nob-hill"],
     seo: {
@@ -3185,11 +2853,11 @@ export const neighborhoods: NeighborhoodData[] = [
     state: "OR",
     region: "Southwest & Downtown",
     description: [
-      "The Hillsdale Town Center sits at SW Capitol Highway and SW Sunset Boulevard — a strip commercial intersection with a New Seasons Market, a hardware store, a Thai restaurant, and a handful of independently-owned businesses that have lasted long enough to count. It doesn't have the postcard quality of Multnomah Village, but it's functional in a way that matters more on a Tuesday: grocery, pharmacy, coffee, lunch, all within a quarter mile. Wilson High School is four blocks away, which explains a significant portion of why families move to Hillsdale.",
+      "The Hillsdale Town Center sits at SW Capitol Highway and SW Sunset Boulevard — a strip commercial intersection with a New Seasons Market, a hardware store, a Thai restaurant, and a handful of independently-owned businesses that have lasted long enough to count. It doesn't have the postcard quality of Multnomah Village, but it's functional in a way that matters more on a Tuesday: grocery, pharmacy, coffee, lunch, all within a quarter mile. Ida B. Wells-Barnett High School is four blocks away, which explains a significant portion of why families move to Hillsdale.",
       "The housing stock is more suburban than inner Portland — ranch houses and split-levels from the 1950s and 1960s on standard city lots, with some older Craftsmans mixed in on the streets above the town center. The Duniway Park trail connects the neighborhood east toward Barbur Blvd and eventually the South Park Blocks. Ava's Kitchen on SW Capitol Hwy has been a neighborhood Mexican restaurant for years and is the kind of place you go back to. The Barbur World Foods grocery — a local institution — is nearby on Barbur Blvd.",
       "The honest assessment: Hillsdale is car-dependent. Barbur Blvd MAX — when it eventually opens as part of the Southwest Corridor project — will change the transit picture, but that's been 'coming soon' long enough that buyers shouldn't factor it into a near-term purchase decision. Right now you drive, and Barbur Blvd rush hour is real friction. Prices are lower than Multnomah Village because the neighborhood is more utilitarian, but the school pipeline is identical.",
     ],
-    personality: "Workhorse SW neighborhood — Wilson High, New Seasons, and no pretense",
+    personality: "Workhorse SW neighborhood — Ida B. Wells-Barnett, New Seasons, and no pretense",
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Hillsdale+Portland+OR&output=embed&z=14",
     directionsSrc:
@@ -3201,7 +2869,7 @@ export const neighborhoods: NeighborhoodData[] = [
     schools: [
       { name: "Rieke Elementary", type: "elementary", grades: "K–5", rating: 7 },
       { name: "Robert Gray Middle School", type: "middle", grades: "6–8", rating: 6 },
-      { name: "Wilson High School", type: "high", grades: "9–12", rating: 7 },
+      { name: "Ida B. Wells-Barnett High School", type: "high", grades: "9–12", rating: 7 },
     ],
     parks: [
       {
@@ -3272,37 +2940,24 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How does Hillsdale compare to Multnomah Village?",
-        a: "They share the same school pipeline — Rieke vs. Hayhurst at the elementary level, then Robert Gray and Wilson. Multnomah Village has a more developed, walkable commercial strip. Hillsdale's town center is more utilitarian. Prices in Hillsdale tend to run $20k–$50k lower on comparable houses, which is the trade most buyers make.",
+        a: "They share the same school pipeline — Rieke vs. Hayhurst at the elementary level, then Robert Gray and Ida B. Wells-Barnett. Multnomah Village has a more developed, walkable commercial strip. Hillsdale's town center is more utilitarian. Prices in Hillsdale tend to run $20k–$50k lower on comparable houses, which is the trade most buyers make.",
       },
       {
         q: "Is Hillsdale good for families?",
-        a: "Yes, particularly because Wilson High School is literally four blocks from the town center. The school pipeline is the same as Multnomah Village — Rieke Elementary is well-regarded, Robert Gray Middle is average, Wilson is one of PPS's stronger comprehensive high schools. Gabriel Park is close. It's a reasonable place to raise kids with a lower price tag than some comparable neighborhoods.",
+        a: "Yes, particularly because Ida B. Wells-Barnett High School is literally four blocks from the town center. The school pipeline is the same as Multnomah Village — Rieke Elementary is well-regarded, Robert Gray Middle is average, Ida B. Wells-Barnett is one of PPS's stronger comprehensive high schools. Gabriel Park is close. It's a reasonable place to raise kids with a lower price tag than some comparable neighborhoods.",
       },
       {
         q: "What types of homes are in Hillsdale?",
         a: "Mostly 1950s and 1960s ranch houses and split-levels on 6,000–8,500 sq ft lots. Some older Craftsmans from the 1930s–1940s on the upper streets, and a small number of newer infill houses. Basements are common and often partially finished. Not a lot of Victorian or early Portland character — this is practical postwar housing that's held up well.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "Wilson High was the reason we were looking in SW Portland at all. Hillsdale got us into the zone $60k cheaper than Multnomah Village. Bri ran the school boundary maps herself so we knew exactly which streets qualified.",
-        author: "Susan and Mark H.",
-        context: "Bought in Hillsdale, 2023",
-      },
-      {
-        quote:
-          "I used the HELOC to pay off the roof and convert the basement. Bri explained the draw period and variable rate mechanics before I committed — I didn't feel like I was guessing.",
-        author: "Roger P.",
-        context: "HELOC on Hillsdale home, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "heloc", "refinance"],
     adjacentNeighborhoods: ["multnomah-village", "goose-hollow", "nob-hill"],
     seo: {
       title: "Buying a Home in Hillsdale, Portland OR | The Lindley Team",
       description:
-        "Hillsdale real estate: Wilson High School, town center, home prices, and what SW Portland buyers should know. Bri Lindley, NMLS #1367416.",
+        "Hillsdale real estate: Ida B. Wells-Barnett High School, town center, home prices, and what SW Portland buyers should know. Bri Lindley, NMLS #1367416.",
     },
   },
 
@@ -3410,20 +3065,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Thurman Street at the top of NW 23rd hits the Leif Erikson trailhead directly. From most Nob Hill blocks you're walking to the trailhead in 15–20 minutes. Wildwood Trail runs 30+ miles from there. It's one of the genuine amenities of this neighborhood and not something you can replicate elsewhere in the city at this price.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We moved from Manhattan and Nob Hill was the only Portland neighborhood that didn't feel like a downgrade on walkability. Bri helped us close on a Victorian on NW 19th — it needed work, we knew that going in, but the bones were worth it.",
-        author: "Claire and James O.",
-        context: "Bought in Nob Hill, 2023",
-      },
-      {
-        quote:
-          "The jumbo loan process was smoother than I expected. Bri had pre-approval in hand before we even started seriously looking — it's the only way to compete in this market.",
-        author: "Nathan W.",
-        context: "Bought in Nob Hill, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance", "heloc"],
     adjacentNeighborhoods: ["slabtown", "pearl-district", "goose-hollow"],
     seo: {
@@ -3536,20 +3178,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "For buyers who want to be in NW Portland without the Victorian premium, yes. The entry price is lower than Nob Hill, the transit situation is excellent, and the NW 23rd walkability is genuine. The tradeoff for first-time buyers is no yard and HOA fees that add to monthly costs. FHA loans work on condos here if the building meets FHA approval requirements — worth checking before you fall in love with a unit.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "I work at OHSU and needed MAX access. Slabtown was the only neighborhood where I could actually commute without a car. Bri found me a two-bed at NW 18th for $548k and we closed in 21 days.",
-        author: "Priya M.",
-        context: "Bought in Slabtown, 2024",
-      },
-      {
-        quote:
-          "We compared Slabtown and the Pearl side by side for three months. Bri walked us through the HOA financials on four buildings total. We bought in Slabtown for $180k less than the comparable Pearl unit we were watching.",
-        author: "Kyle and Nadia R.",
-        context: "Bought in Slabtown, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "jumbo", "refinance"],
     adjacentNeighborhoods: ["nob-hill", "pearl-district", "goose-hollow"],
     seo: {
@@ -3664,20 +3293,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "The school pipeline is one of the strongest in PPS: Chapman Elementary → West Sylvan Middle → Lincoln High School with the IB program. That's the draw for families. The neighborhood itself is dense and not particularly oriented toward kids — no neighborhood park equivalent to Gabriel Park or Laurelhurst, and the condo-heavy stock means no yards. Washington Park is a 10-minute walk up the hill and covers outdoor space reasonably well.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "I work at OHSU and then at a downtown firm — two completely different commute directions. Goose Hollow was the only place where both worked. Bri found me a two-bed at SW 20th for $512k, walked me through the HOA, and we closed without drama.",
-        author: "Dr. Yusuf A.",
-        context: "Bought in Goose Hollow, 2024",
-      },
-      {
-        quote:
-          "Lincoln High was the whole reason. We were renters in the neighborhood for two years waiting for the right condo. When it came up Bri had pre-approval ready and we wrote the same day. Closed in 18 days.",
-        author: "Ellen and Marcus T.",
-        context: "Bought in Goose Hollow, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "jumbo", "refinance"],
     adjacentNeighborhoods: ["nob-hill", "slabtown", "pearl-district", "multnomah-village"],
     seo: {
@@ -3756,18 +3372,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Moderately. Walk Score around 62 — there's no dense commercial strip within the neighborhood. The N Interstate Avenue corridor is accessible and has some services, but it's not the same as living on N Mississippi or N Alberta. For most errands you're driving or biking to the commercial corridors nearby.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We wanted North Portland but with a real commute option downtown. Overlook was the answer — Bri got us into a 1920s four-square with a view of the river for $488k. I bike to the MAX station most mornings.",
-        author: "Derek and Kate M.",
-        context: "Bought in Overlook, 2023",
-      },
-      {
-        quote: "We refinanced when rates dropped a point and a half. Bri showed us the break-even at 26 months given our closing costs. The math made sense and she didn't oversell it.",
-        author: "Patricia G.",
-        context: "Refinanced in Overlook, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha"],
     adjacentNeighborhoods: ["piedmont", "humboldt", "boise-eliot", "arbor-lodge"],
     seo: {
@@ -3846,18 +3451,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes. The price range is accessible, the neighborhood is stable, and the housing stock is solid 1920s–1930s construction. FHA works well here. The main thing to know is that competition increases notably below $450k — investor buyers show up in that range. At $470k–$550k for a move-in ready bungalow, first-time buyers tend to have less competition.",
       },
     ],
-    testimonials: [
-      {
-        quote: "Ainsworth was the whole reason we looked in Piedmont. Bri ran the financing scenarios and we got a 1930s bungalow two blocks from the school for $451k. The house needed paint and nothing else.",
-        author: "Julie and Aaron T.",
-        context: "Bought in Piedmont, 2023",
-      },
-      {
-        quote: "I'd been priced out of Overlook and thought North Portland was done for me. Bri showed me Piedmont. We closed in 30 days on a 3-bedroom for $438k. I still feel like I found something.",
-        author: "Marcus W.",
-        context: "Bought in Piedmont, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance"],
     adjacentNeighborhoods: ["overlook", "kenton", "arbor-lodge", "humboldt"],
     seo: {
@@ -3937,18 +3531,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Mostly 1940s–1960s ranches and bungalows — a different vintage than most of North Portland. Think single-story ranches with attached garages, 1,000–1,400 sq ft, on lots with big front lawns. Less architectural character than the 1920s Craftsmans in Piedmont or Overlook, but often more livable without renovation. Basements are less common than in earlier-built neighborhoods.",
       },
     ],
-    testimonials: [
-      {
-        quote: "My ceiling was $400k. Bri told me to look at Portsmouth when everything else was out of reach. We got a 1952 ranch for $387k with a garage and a real backyard. Nobody had told me Portsmouth was an option.",
-        author: "Renee and Paul B.",
-        context: "Bought in Portsmouth, 2023",
-      },
-      {
-        quote: "I work at UP and wanted to be close. Bri ran FHA scenarios and we closed at $412k with 3.5% down. The mortgage is $300 less a month than my rent was.",
-        author: "Daniel K.",
-        context: "Bought in Portsmouth, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va"],
     adjacentNeighborhoods: ["university-park", "st-johns", "kenton", "arbor-lodge"],
     seo: {
@@ -4028,18 +3611,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "People who specifically want the Willamette bluff setting and the UP campus atmosphere, are comfortable with car dependence, and don't need to be walking distance from transit or commercial amenities. Faculty, staff, and families who've been here for years account for a meaningful portion of the neighborhood. Buyers who prioritize walkability or transit connectivity tend to land in a different part of North Portland.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We teach at UP and wanted to be close. The house we found on N Willamette Blvd has a view of the river and we paid $476k. I've spent 25 years in academia — I've never owned something this good.",
-        author: "Claudia and Mark R.",
-        context: "Bought in University Park, 2023",
-      },
-      {
-        quote: "Everyone told us to look at Overlook instead. We saw one house in University Park and stopped looking. Bri helped us close quickly before a second offer came in.",
-        author: "Sam T.",
-        context: "Bought in University Park, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha"],
     adjacentNeighborhoods: ["portsmouth", "st-johns", "overlook"],
     seo: {
@@ -4119,18 +3691,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Below average within PPS. Boise-Eliot/Humboldt Elementary and Jefferson High School are not among the district's higher-rated schools. Families who prioritize school ratings often look at this carefully. Jefferson has programs including an African-American studies curriculum that some families specifically seek out, but academically it hasn't ranked at the top of the PPS system.",
       },
     ],
-    testimonials: [
-      {
-        quote: "Bri was honest with us about the neighborhood history before we started looking. We appreciated that it was part of the conversation, not something we had to bring up ourselves. We bought on N Borthwick for $512k.",
-        author: "Jess and Mike D.",
-        context: "Bought in Boise-Eliot, 2023",
-      },
-      {
-        quote: "I wanted to be within biking distance of everything. Boise-Eliot was the answer. Bri helped me find a 1915 bungalow for $488k. I bike to work, walk to Gado Gado, and I'm on the MAX in five minutes.",
-        author: "Priya N.",
-        context: "Bought in Boise-Eliot, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: ["humboldt", "overlook", "arbor-lodge", "piedmont"],
     seo: {
@@ -4209,18 +3770,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes, with the same caveats that apply across North Portland: investor competition below $450k is real, financing pre-approval matters, and you need to be ready to move. The N Williams bike corridor makes Humboldt genuinely useful for car-free or car-light living in a way that more car-dependent North Portland neighborhoods aren't. At $430k–$510k for a solid bungalow, it's a reasonable entry point.",
       },
     ],
-    testimonials: [
-      {
-        quote: "I almost bought in Boise-Eliot and got outbid twice. Bri suggested Humboldt and I was skeptical. Got a 1918 bungalow for $463k with a full basement. It needed work and I liked that — I wanted a project.",
-        author: "Tyler S.",
-        context: "Bought in Humboldt, 2023",
-      },
-      {
-        quote: "The bike lane access was the whole thing for us. My partner commutes to downtown on a bike and Humboldt made that realistic. We paid $481k and have zero regrets.",
-        author: "Kara and Nate F.",
-        context: "Bought in Humboldt, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: ["boise-eliot", "overlook", "piedmont", "arbor-lodge"],
     seo: {
@@ -4299,18 +3849,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "It's real and consistent. Arbor Lodge's combination of entry-level prices and MAX proximity makes it attractive to both owner-occupants and investors buying for rentals. On well-priced houses under $450k in acceptable condition, cash buyers and investor-backed offers show up regularly. As an owner-occupant buyer, your financing pre-approval needs to be airtight and your decision timeline needs to be short. FHA is workable here but competes against conventional and cash.",
       },
     ],
-    testimonials: [
-      {
-        quote: "Bri warned us that Arbor Lodge moves fast. We wrote an offer the day we saw our house, $15k over asking at $447k. Got it. The couple who toured after us was two hours too late.",
-        author: "Hannah and Rob C.",
-        context: "Bought in Arbor Lodge, 2023",
-      },
-      {
-        quote: "I needed MAX access or my daily commute didn't work. Arbor Lodge was the only neighborhood at my budget — $410k — where I could make that happen. Bri got me pre-approved in 48 hours and we closed in 28 days.",
-        author: "Jerome W.",
-        context: "Bought in Arbor Lodge, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "investment"],
     adjacentNeighborhoods: ["piedmont", "humboldt", "overlook", "kenton", "portsmouth"],
     seo: {
@@ -4462,20 +4001,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Partially. The blocks immediately around Beaverton Central and Beaverton Transit Center MAX stations are the most walkable. Most of the city requires a car for daily errands — grocery runs, school pickup, appointments. It's a suburb with MAX access, not a walkable urban neighborhood.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We moved from SE Portland when our oldest was about to start kindergarten. We bought a four-bedroom house in Beaverton for $498,000 — the equivalent in Woodstock would have been $650,000 minimum and smaller. Two years in, the school decision was clearly right.",
-        author: "Sarah and Tom D.",
-        context: "Moved from SE Portland to Beaverton, 2022",
-      },
-      {
-        quote:
-          "I'm an Intel contractor. Living in Beaverton and biking to the Jones Farm campus means I never deal with that commute. Bri helped me understand the condo vs. house math. We went with a townhome for $387,000 and it's worked out.",
-        author: "David K.",
-        context: "First purchase, Beaverton townhome, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "heloc"],
     adjacentNeighborhoods: ["hillsboro", "tigard", "hillsdale", "multnomah-village"],
     seo: {
@@ -4630,20 +4156,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes, particularly if at least one person in the household works locally. Good schools, affordable housing for the size, and parks like Rood Bridge and Jackson Bottom give kids real outdoor space. The trade-off is Portland proximity — trips to the city for culture, dining, or entertainment take real time. It works best when Hillsboro is your primary world, not a base for commuting west.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We couldn't afford anything in Portland that had a yard and three bedrooms. In Hillsboro we found exactly that for $467,000. We both work at Intel, so the commute is literally five minutes. Bri walked us through the FHA process without making it feel complicated.",
-        author: "Carlos and Mei L.",
-        context: "First-time buyers, Hillsboro, 2023",
-      },
-      {
-        quote:
-          "I relocated from San Jose and the price difference was staggering. We bought a 2,100-square-foot house for $512,000. In the Bay Area that doesn't exist. Bri understood the relocation timeline and made the close work on our schedule.",
-        author: "Priya S.",
-        context: "Relocated from California, purchased in Hillsboro, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance"],
     adjacentNeighborhoods: ["beaverton", "cornelius", "forest-grove"],
     seo: {
@@ -4799,20 +4312,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "It's the most active redevelopment zone in the city — the area near 99W and Hwy 217. New apartment projects and commercial development have been approved and some are underway. Buying near the Triangle now means living through construction for a few years. The long-term case is reasonable if you're holding for 5+ years, but it's not a quiet neighborhood today.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We were renting in Division Street and paying $2,100 a month. We bought a three-bedroom ranch in Tigard for $541,000 and our mortgage is $2,800. The schools alone made it worth it — our daughter is in third grade and the difference from her Portland school is immediately obvious.",
-        author: "Amanda and Ryan P.",
-        context: "Moved from SE Portland to Tigard, 2022",
-      },
-      {
-        quote:
-          "I work in Tualatin and my wife is in Beaverton. Tigard puts us both within 20 minutes of work. We found a 1980s ranch for $489,000, put money into the kitchen, and it's ours now. Bri helped us figure out the math on rate buydown vs. saving the cash for renovations.",
-        author: "Jason M.",
-        context: "Purchased in Tigard, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "heloc", "fha", "cash-out"],
     adjacentNeighborhoods: ["beaverton", "tualatin", "lake-oswego", "hillsdale"],
     seo: {
@@ -4955,20 +4455,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Tualatin typically comes in slightly below Tigard in median price — you can find more 1970s–1990s ranches with larger lots in Tualatin in the $400k–$500k range. The newer west-side subdivisions in both cities are similarly priced. Tigard has marginally better Portland access. Tualatin has better freeway access toward Salem and the south valley. If you're working in Wilsonville or Sherwood, Tualatin's position is actually better.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We bought a 1980s ranch on a quarter-acre for $482,000. Same house in Tigard would have been $530,000, same house in Lake Oswego wouldn't exist under $700,000. We both work in Tualatin so the commute is nothing. Bri laid out our options without pushing us toward anything.",
-        author: "Mark and Diane F.",
-        context: "Purchased in Tualatin, 2023",
-      },
-      {
-        quote:
-          "First house. We had $28,000 saved and were terrified nothing would work. Bri ran the FHA numbers and we closed on a three-bedroom for $415,000. I didn't know a first-time buyer could actually do that. The south suburbs made it possible.",
-        author: "Keisha T.",
-        context: "First-time buyer, Tualatin, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "investment"],
     adjacentNeighborhoods: ["tigard", "sherwood", "wilsonville", "lake-oswego"],
     seo: {
@@ -5076,18 +4563,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Competitive for anything priced correctly in the $500k–$700k range. Well-presented homes in good school attendance zones routinely go over asking. The market slows somewhat above $800k — there's less demand at that price point relative to inventory.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We were renting in Beaverton and wanted a yard and good schools without going into Clackamas County. Sherwood hit both. Bri got us into a 4-bed on Maplewood for $588k — we made an offer the day it listed.",
-        author: "Danielle and Chris M.",
-        context: "Purchased in Sherwood, 2024",
-      },
-      {
-        quote: "The school district was the whole reason we looked at Sherwood. We got a house two blocks from Edy Ridge Elementary for $565k. Same house would have been $750k in Lake Oswego.",
-        author: "Todd R.",
-        context: "Purchased in Sherwood, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "va", "jumbo"],
     adjacentNeighborhoods: ["tualatin", "tigard", "wilsonville"],
     seo: {
@@ -5194,18 +4670,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Charbonneau is an age-restricted (55+) golf course community on the south end of Wilsonville with its own HOA structure, private streets, and separate community amenities. It operates largely independently from the rest of Wilsonville. If you're not 55+, it's a different product entirely.",
       },
     ],
-    testimonials: [
-      {
-        quote: "I take the WES train to Beaverton every morning and my spouse works at Mentor Graphics five minutes away. Wilsonville made sense financially and logistically. Bri helped us close on a 3-bed in Villebois for $547k — we were surprised we could make it work.",
-        author: "Kevin and Maya S.",
-        context: "Purchased in Wilsonville, 2023",
-      },
-      {
-        quote: "We had a $560k budget and wanted West Linn-Wilsonville schools. Everything in West Linn was out of range. Bri walked us through a Wilsonville option with a VA loan — no down payment, closed in 32 days.",
-        author: "James H., U.S. Navy veteran",
-        context: "VA purchase in Wilsonville, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "va", "jumbo", "heloc"],
     adjacentNeighborhoods: ["tualatin", "sherwood", "tigard"],
     seo: {
@@ -5313,18 +4778,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Henry Hagg Lake (Scoggins Valley Park) is 15 minutes south — swimming, fishing, a paved bike loop, and boat rentals. The Coast Range is 30–40 minutes west. Tualatin Valley wine country starts about 15 minutes south on Hwy 47. It's a practical location for people who use weekends actively.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We kept getting outbid in Hillsboro. Bri suggested we look at Forest Grove — same commute distance for my wife's job in Aloha, $80k less for the same size house. We bought a 1970s ranch on a big lot for $389k. No regrets.",
-        author: "Aaron and Lidia V.",
-        context: "Purchased in Forest Grove, 2023",
-      },
-      {
-        quote: "I work fully remote and wanted a yard and a mortgage under $2,000 a month. Forest Grove was the only place in Washington County where that was possible with a conventional loan. Bri ran the numbers on an FHA option too — we ended up going conventional with 10% down.",
-        author: "Priya N.",
-        context: "First-time purchase in Forest Grove, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "cash-out", "investment"],
     adjacentNeighborhoods: ["hillsboro", "cornelius"],
     seo: {
@@ -5430,18 +4884,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Limited walkability and almost no commercial amenities within city limits — you'll drive to Hillsboro or Forest Grove for most errands. The housing stock is older and some properties need meaningful capital investment. School ratings are below the county average. It's the trade you make to access Washington County at a price closer to $400k than $600k.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We work at Intel and couldn't afford anything close to the campuses. Bri showed us that a 3-bedroom in Cornelius at $385k made more sense than renting in Hillsboro indefinitely. We closed with an FHA loan and 3.5% down.",
-        author: "Emmanuel and Rosa T.",
-        context: "First-time purchase in Cornelius, 2023",
-      },
-      {
-        quote: "I was honest with Bri that I had a $420k ceiling and good credit but not a huge down payment. She found us a house in Cornelius with a big backyard for $395k. Our mortgage is less than we were paying in rent.",
-        author: "Sarah K.",
-        context: "Purchased in Cornelius, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "investment"],
     adjacentNeighborhoods: ["hillsboro", "forest-grove"],
     seo: {
@@ -5540,20 +4983,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Lakefront homes sit directly on the lake and typically include private dock rights. Lake-access homes are in neighborhoods with shared lake easements — residents can reach the lake via a common path or shared dock. Neither guarantees full membership in the Lake Corporation; that's a separate purchase.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We came from NW Portland and the price difference for what we got was significant — same school quality we wanted, a 4-bedroom with a yard, and we closed at $880,000. In NW, that budget gets you a townhouse.",
-        author: "The Nakamura family",
-        context: "Moved from NW Portland to Lake Oswego, purchased at $880,000",
-      },
-      {
-        quote:
-          "We didn't join the lake right away. You should know that going in — it's a real conversation to have with yourself before you buy. The neighborhood is excellent regardless, but if the lake was why you're coming, budget for it separately.",
-        author: "Sarah and Tom W.",
-        context: "Relocated from Beaverton, first Lake Oswego home purchase",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance", "heloc", "cash-out"],
     adjacentNeighborhoods: ["west-linn", "milwaukie", "sellwood-moreland", "tualatin", "wilsonville"],
     seo: {
@@ -5647,20 +5077,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Effectively no. TriMet operates limited service, but West Linn is a driving city. Most households have two cars. If transit access is important, Oregon City's bus connections or Milwaukie's MAX line are better options.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We looked at Lake Oswego seriously and ran the numbers. We bought a four-bedroom in West Linn for $695,000 — comparable to what we were seeing in LO for $850,000 to $900,000. The school district is different but both are excellent. It was not a hard call.",
-        author: "Marcus and Yuki H.",
-        context: "Relocated from Portland's Pearl District, compared Lake Oswego and West Linn before buying",
-      },
-      {
-        quote:
-          "The hills take some getting used to — you learn quickly which routes work in the morning and which don't. But after two years, we don't think about it. It's just home.",
-        author: "Christina P.",
-        context: "First-time buyer in the Bolton area, purchased at $642,000",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "jumbo", "fha", "heloc", "cash-out"],
     adjacentNeighborhoods: ["lake-oswego", "oregon-city", "tualatin", "wilsonville"],
     seo: {
@@ -5750,20 +5167,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Oregon City School District is solid — Oregon City High School has good programs and strong community support. It's not at the same ranking level as Lake Oswego or West Linn-Wilsonville districts, and that difference shows up in the price. You're paying $400,000 less for a comparable home, and the school trade-off is part of that math.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We looked in SE Portland for a year and kept losing. We bought a 3-bedroom Craftsman in Oregon City's historic district for $468,000. In Sellwood, that same house is $700,000. We made our peace with the commute pretty fast.",
-        author: "James and Kelsey T.",
-        context: "Relocated from SE Portland after 18 months searching; purchased in Oregon City historic district",
-      },
-      {
-        quote:
-          "The elevator is actually useful — I work in the lower city and live up top. Takes less than a minute. People think it's a tourist thing but residents use it every day.",
-        author: "Diane M.",
-        context: "Oregon City resident and homeowner for 7 years",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "cash-out", "investment"],
     adjacentNeighborhoods: ["west-linn", "milwaukie", "happy-valley", "canby", "wilsonville"],
     seo: {
@@ -5854,20 +5258,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Price is the most obvious difference — median is around $490,000 versus $650,000+ in comparable inner SE neighborhoods. The school district is different (North Clackamas vs Portland Public). The commercial infrastructure is less dense. And Milwaukie is its own incorporated city with its own municipal services, not a Portland neighborhood. The Springwater trail makes the geographic connection to SE Portland feel shorter than it is.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We were renting in SE Portland and kept losing offers on houses in Woodstock and Sellwood. We found a three-bedroom in Milwaukie for $478,000, two blocks from the Springwater trail. I bike to the Orange Line platform in eight minutes. The commute is actually better than it was when we lived in the city.",
-        author: "Aaron and Theresa G.",
-        context: "Relocated from Woodstock/SE Portland, first-time buyers, purchased at $478,000",
-      },
-      {
-        quote:
-          "The schools were the deciding factor. North Clackamas is measurably better than PPS and we didn't want to pay Lake Oswego prices to get there. Milwaukie was the answer we didn't expect.",
-        author: "Priya S.",
-        context: "Moved from North Portland with school-age children, purchased in 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "cash-out", "investment", "heloc"],
     adjacentNeighborhoods: ["sellwood-moreland", "eastmoreland", "woodstock", "oregon-city", "happy-valley", "lake-oswego"],
     seo: {
@@ -5958,20 +5349,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Nearly all. The city grew rapidly from 2000 to present, and the housing stock reflects that. If you want a 1950s ranch or a Craftsman bungalow, Happy Valley is not the market. If you want a 4-bedroom house with an open floor plan, good energy efficiency, and a proper garage, you'll have significant inventory to work with.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We had a 2-bedroom apartment in Portland and needed space for a second kid. We bought a 4-bedroom in Happy Valley for $589,000. That square footage does not exist in SE Portland at that price. We drive more now. It's worth it.",
-        author: "Ryan and Michelle K.",
-        context: "Former NE Portland renters, purchased new construction in Happy Valley at $589,000",
-      },
-      {
-        quote:
-          "North Clackamas schools were the thing we could not find a workaround for. Happy Valley was the most practical way to access that district at a price we could manage.",
-        author: "Denise and Craig O.",
-        context: "Moved from SE Portland, bought in Happy Valley in 2022 for school access",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "heloc", "cash-out", "investment"],
     adjacentNeighborhoods: ["milwaukie", "oregon-city", "west-linn", "canby"],
     seo: {
@@ -6068,20 +5446,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "It can be, especially for buyers who want more house at a lower price and are comfortable with the commute. At a median of ~$460,000, the entry point is lower than any comparable suburb closer to Portland. FHA loans and conventional financing both work well in this price range. The key is being honest about the 35–45 minute commute before you commit.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We looked at everything between SE Portland and Oregon City for 14 months. We bought a 3-bedroom house in Canby for $441,000 with a half-acre. That does not exist closer to the city at that price. The commute is 40 minutes. We knew that going in.",
-        author: "Jason and Lori B.",
-        context: "First-time buyers after 14 months of searching; purchased in Canby at $441,000",
-      },
-      {
-        quote:
-          "We moved from Happy Valley. We wanted more land and less traffic around us. Canby was the move that made sense. The ferry is genuinely one of our favorite things about living here.",
-        author: "Stephanie and Paul N.",
-        context: "Moved from Happy Valley to Canby for more land and lower density",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "cash-out", "investment", "reverse-mortgage"],
     adjacentNeighborhoods: ["oregon-city", "happy-valley", "wilsonville", "west-linn"],
     seo: {
@@ -6176,26 +5541,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Depends on how often you go in. Two or three days a week, it's workable — you accept the commute as an occasional trade-off for significantly lower prices and better land. Five days a week, the 99W grind becomes the dominant fact of your life. Most buyers who struggled with Newberg commutes cite the unpredictability of 99W more than the raw distance.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We'd been looking in Beaverton and Hillsboro for two years. When we widened our search to Newberg, we found a 1,900-square-foot house with a view of the Chehalem Mountains for $420,000. We're both fully remote now, so we said yes immediately. Bri walked us through the financing in one conversation — she knows this market.",
-        author: "Derek and Sasha M.",
-        context: "Remote-work buyers, purchased 2024, $418,000",
-      },
-      {
-        quote:
-          "I retired from Intel and wanted out of the West Hills price point. Newberg gave me a bigger lot, a quieter street, and I'm twenty minutes from half a dozen wineries. It wasn't a complicated decision once I stopped thinking about Portland as the center of everything.",
-        author: "Robert C.",
-        context: "Retiree, purchased 2023, $485,000",
-      },
-      {
-        quote:
-          "Bri was honest with us that the commute was going to be the test. She was right — one of us goes to Portland two days a week and the other is fully remote. It works, but we're glad she set that expectation early instead of just telling us what we wanted to hear.",
-        author: "Yuki and Tom F.",
-        context: "Hybrid commuters, purchased 2024, $460,000",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "refinance",
@@ -6301,26 +5647,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "The range is wide. Older ranch homes and Craftsmans in established neighborhoods start in the low $300ks. Newer construction on the north and east sides of town runs $450k–$600k. Vineyard-adjacent acreage properties and custom homes push $700k and above. The market moves slower than Portland suburbs, which means less competition pressure on individual offers.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "My wife and I both left tech jobs in San Francisco. We wanted Oregon wine country and a real house. McMinnville gave us a four-bedroom with a yard for $495,000 — the same money that bought a one-bedroom condo in the Mission. Bri handled everything remotely until we flew up to close. Couldn't have been easier.",
-        author: "Marco and Diana R.",
-        context: "California relocation buyers, purchased 2023, $495,000",
-      },
-      {
-        quote:
-          "I work for Linfield University and wanted to live close by. Found a 1970s ranch three blocks from campus for $385,000. Bri got me a rate I didn't think I'd qualify for given my employment type. She knew exactly how to structure it.",
-        author: "Patricia H.",
-        context: "University employee, first-time buyer, purchased 2024, $385,000",
-      },
-      {
-        quote:
-          "We needed the hospital for my husband's care and wanted to stay close. McMinnville made sense — we weren't trying to commute anywhere. Third Street being ten minutes from our house is something we use every week. Bri walked us through a reverse mortgage option that let us do this without pressure on our monthly budget.",
-        author: "Carol and Jim W.",
-        context: "Retirees, purchased 2023, reverse mortgage",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "refinance",
@@ -6425,26 +5752,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "It depends on the property structure. Agricultural land with a residential component often requires specialized financing — not all lenders can handle it. Bri Lindley at Movement Mortgage has worked with vineyard-adjacent purchases in Yamhill County and can assess what financing structure fits the specific property. The answer varies considerably by acreage, existing improvements, and how the land is classified.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We spent three years in Napa before deciding Oregon was where we wanted to be. Dundee was the obvious answer — the AVA is serious, the prices were half of what comparable Napa hillside land costs, and the community of people who love wine here is genuine. Bri helped us structure a jumbo purchase on a property with both a residence and working vineyard. It was complicated and she handled every piece of it.",
-        author: "Genevieve and Paul T.",
-        context: "Vineyard property buyers, purchased 2023, $1.2M",
-      },
-      {
-        quote:
-          "I retired from software. I wanted ten acres, a view, and to stop commuting. Dundee gave me all three. I drove the 99W route once before I bought and knew I wasn't going to do it daily — that was fine with me. Bri made the financing clear and didn't oversell anything.",
-        author: "Randall K.",
-        context: "Retiree, acreage purchase, 2024, $725,000",
-      },
-      {
-        quote:
-          "We needed wine country proximity for our small production label and wanted to live where we work. Dundee Hills land made sense. The process was more complex than a standard residential purchase, and Bri walked us through the correspondent lending options that made it work.",
-        author: "Theresa and Marcus D.",
-        context: "Winemakers, land and improvement purchase, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "refinance",
@@ -6547,26 +5855,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Carlton Elementary is in town for K–5. For middle and high school, students attend in McMinnville, which means a daily drive. McMinnville High School has an IB program and a solid reputation. Families consider this workable but should factor the transportation logistics into daily life planning.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We couldn't afford Dundee Hills land and didn't need that address for what we were doing — we make wine, we don't need a famous appellation on our mailbox. Carlton gave us four acres and a farmhouse for $540,000. Bri structured an FHA loan for the residence portion and helped us think through the agricultural component separately.",
-        author: "Lena and Chris A.",
-        context: "Small-production winemakers, farmhouse and acreage purchase, 2024, $540,000",
-      },
-      {
-        quote:
-          "I work fully remote and my wife is a nurse at Willamette Valley Medical in McMinnville. Carlton is fifteen minutes from her hospital and an hour from anything we'd need in Portland — which we go to maybe once a month. The house was $395,000 and we have a view of a vineyard from the kitchen. That math made sense.",
-        author: "David and Keiko S.",
-        context: "Remote worker and healthcare employee, purchased 2023, $395,000",
-      },
-      {
-        quote:
-          "After the divorce I wanted to start over somewhere real. Carlton was affordable without feeling like a compromise — the wine community here is welcoming, the town is quiet, and I have a small yard. Bri handled the divorce-lending situation with zero drama and explained every step clearly.",
-        author: "Margaret L.",
-        context: "Post-divorce buyer, purchased 2024, $335,000",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "refinance",
@@ -6689,18 +5978,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Uptown (between McLoughlin and 33rd, roughly) has older Craftsman housing and good walkability by Vancouver standards. The area near Officers Row and the National Historic Site is quieter and has larger lots. The Waterfront district is newer and skews toward condos and townhomes. Hough is a mid-century neighborhood north of downtown that draws first-time buyers.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We were renting in Northeast Portland and doing the math on whether we could afford to buy. Bri showed us that across the river in Vancouver, we could buy a three-bedroom house for what we were paying in rent — and we'd stop paying Oregon income tax. The first year alone we came out ahead by more than $14,000.",
-        author: "Derek and Camille S.",
-        context: "Relocated from Portland to Vancouver, purchased 2023",
-      },
-      {
-        quote: "I was skeptical about the commute. My job is downtown Portland. It's real — some evenings it takes me an hour to get home. But I work from home two days a week, and on those days I'm sitting on a patio with a Columbia River view. I don't regret it.",
-        author: "Theresa M.",
-        context: "Portland commuter, bought in Uptown Vancouver, 2022",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "va", "heloc", "cash-out", "investment"],
     adjacentNeighborhoods: ["camas", "washougal", "battle-ground", "ridgefield"],
     seo: {
@@ -6806,18 +6084,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes. Bri Lindley at The Lindley Team holds a Washington state mortgage license (NMLS #1367416) and works with buyers across Clark County. If you're moving from Portland or working with Oregon-based agents, having a lender who knows both markets helps.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We moved from Lake Oswego specifically for the Camas school district. Our accountant ran the income tax numbers and we're saving about $11,000 a year. The commute adds 20 minutes to my day. It was not a hard decision.",
-        author: "Patrick and Sarah W.",
-        context: "Relocated from Lake Oswego, bought in Camas, 2023",
-      },
-      {
-        quote: "Bri had worked with three other families from our neighborhood who had made the same move. She knew exactly what the Camas market does — move fast and don't wait for a second showing. We were under contract in four days.",
-        author: "Monica R.",
-        context: "Bought near Lacamas Lake, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "jumbo", "heloc", "cash-out", "investment"],
     adjacentNeighborhoods: ["vancouver-wa", "washougal", "battle-ground"],
     seo: {
@@ -6913,18 +6180,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Cape Horn is a Columbia Gorge viewpoint about 10 miles east of Washougal on Highway 14. The loop trail is 7.5 miles with 1,400 feet of elevation gain and views down the Gorge that are among the best accessible by day hike from the Portland metro area. On weekends in summer and fall it's busy. On a Tuesday morning in March you might have it to yourself.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We couldn't afford Camas and didn't need the school district — our kids are grown. Washougal gave us a Columbia River view, a garage, a backyard, and no Oregon income tax. We sold our SE Portland house and came out $180,000 ahead on the transaction alone.",
-        author: "Jim and Carol B.",
-        context: "Empty-nesters who relocated from SE Portland, bought in Washougal, 2023",
-      },
-      {
-        quote: "I work remotely four days a week. One commute day into Portland I can handle. Washougal made financial sense — between the price difference and the income tax, the math was obvious. Bri walked me through the Washington-side mortgage process and it was no different than buying in Oregon.",
-        author: "Nate F.",
-        context: "Remote worker, purchased in Washougal, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "va", "heloc", "cash-out"],
     adjacentNeighborhoods: ["camas", "vancouver-wa"],
     seo: {
@@ -7030,18 +6286,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Oregon taxes income on the source — if you work in Oregon, you owe Oregon income tax regardless of where you live. If you work in Washington or remotely for a Washington employer, living in Battle Ground means you pay no state income tax at all. On a $120,000 income, that's roughly $8,000–$10,000 per year in Oregon taxes you don't pay. Check with a tax professional on your specific employment situation.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We bought five acres outside Battle Ground for less than a 1,200-square-foot house in Beaverton would have cost us. My company went remote-first. We don't miss Portland — we visit it.",
-        author: "Greg and Amanda P.",
-        context: "Remote workers, purchased rural property outside Battle Ground, 2022",
-      },
-      {
-        quote: "Three bedrooms, a shop, half an acre, and no Oregon income tax on my Washington job. I'm commuting to Ridgefield, not Portland. The math was obvious. Bri helped us close in 28 days.",
-        author: "Kevin T.",
-        context: "Bought in Battle Ground, works in Clark County, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "va", "heloc", "investment", "cash-out"],
     adjacentNeighborhoods: ["vancouver-wa", "ridgefield"],
     seo: {
@@ -7140,18 +6385,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes, with the growth rate it has. Commercial development typically lags residential by 5–10 years in fast-growing cities. Ridgefield in 2026 has the amenities of a city half its current size because the growth happened so quickly. The commercial corridor on Pioneer Street is building out. Short-term, Vancouver is 15 minutes south and has full retail options.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We bought new construction in Ridgefield in 2021. Our mortgage is $2,100 a month. Our friends who stayed in Portland are paying $3,400 for smaller houses with older systems. We're also not paying Oregon income tax on my wife's remote job. The math is not close.",
-        author: "Brandon and Lisa K.",
-        context: "Relocated from NE Portland, new construction purchase in Ridgefield, 2021",
-      },
-      {
-        quote: "I was skeptical about Ridgefield — I'd never heard of it. Bri suggested it because the school district matched what we wanted and the prices were $80,000 below comparable homes in Camas. We drove out on a Saturday, walked the wildlife refuge, and wrote an offer the following week.",
-        author: "Stephanie O.",
-        context: "Moved from Vancouver WA to Ridgefield for the school district, purchased 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "va", "heloc", "investment", "new-construction"],
     adjacentNeighborhoods: ["vancouver-wa", "battle-ground"],
     seo: {
@@ -7291,20 +6525,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Forest Heights runs meaningfully less expensive than closer-in West Hills neighborhoods like the West Hills above NW 23rd or Goose Hollow. The trade-off is newer construction and larger lots — most homes here were built in the 1990s and 2000s — but much longer commutes to downtown and the Pearl. Median is around $750,000, compared to $900k+ for the closer hills.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We needed a four-bedroom in Portland Public Schools and didn't want a 1940s fixer. Forest Heights checked every box. Bri walked us through the HOA documents before we even made the offer.",
-        author: "Kevin and Allison R.",
-        context: "Bought in Forest Heights, 2023",
-      },
-      {
-        quote:
-          "The jumbo loan process felt like a black box until Bri explained exactly what the underwriter was looking at. We closed on time with no surprises.",
-        author: "Thomas W.",
-        context: "Purchased in Forest Heights, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "jumbo",
@@ -7366,7 +6587,7 @@ export const neighborhoods: NeighborhoodData[] = [
         rating: 6,
       },
       {
-        name: "Wilson High School",
+        name: "Ida B. Wells-Barnett High School",
         type: "high",
         grades: "9–12",
         rating: 7,
@@ -7461,20 +6682,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "All three feel similar on the ground — quiet, suburban, 1950s–1970s housing stock. Hillsdale and Multnomah Village carry a small premium for their walkable village centers. Raleigh Hills is unincorporated Washington County throughout, so the tax situation is cleaner. Beaverton-Hillsdale has the most complicated jurisdictional picture, which some buyers find confusing and others see as an opportunity if they find a parcel with a Washington County address.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "I kept losing bidding wars in Hillsdale. Bri suggested we look two miles west — we found a better lot, paid less, and closed in 30 days.",
-        author: "Stephanie and Aaron M.",
-        context: "Bought in Beaverton-Hillsdale, 2023",
-      },
-      {
-        quote:
-          "The school district question had me paralyzed for weeks. Bri helped me get the actual BSD school locator result for the specific house before we made any decisions.",
-        author: "Chris F.",
-        context: "Bought in Beaverton-Hillsdale, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "fha",
@@ -7633,20 +6841,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Not very. There are no walkable retail or restaurant clusters within reasonable walking distance of most residential streets. You need a car for groceries, coffee, and most errands. The Fanno Creek Greenway is accessible from some parts of the neighborhood for recreation, which is a real amenity — just not a substitute for walkability.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We crossed the city line and saved the Portland income tax. Same commute, same neighborhood feel, different tax bill. Bri flagged the school district question before we'd even thought about it.",
-        author: "Eric and Dana S.",
-        context: "Bought in Raleigh Hills, 2023",
-      },
-      {
-        quote:
-          "I thought I needed to be in Portland proper. Bri walked me through the numbers side by side. Raleigh Hills made more financial sense for our family.",
-        author: "Megan H.",
-        context: "Purchased in Raleigh Hills, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "fha",
@@ -7803,20 +6998,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Three main reasons: unincorporated Washington County taxes (lower than Portland, also lower than Beaverton city taxes), good public schools through Beaverton SD, and the Cornell Road connection to Portland's NW district. The housing stock also tends to run on bigger lots than you get in Beaverton proper at similar price points.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We work in Beaverton but wanted to stay close to Portland. Cedar Mill was the answer we didn't know we were looking for. Bri explained the tax situation better than any accountant we talked to.",
-        author: "Sarah and Jason T.",
-        context: "Bought in Cedar Mill, 2023",
-      },
-      {
-        quote:
-          "The house had been on the market 45 days and we almost passed on it. Bri ran the numbers on what updates would actually add value and we made an offer. Best decision we made.",
-        author: "Derek L.",
-        context: "Purchased in Cedar Mill, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "fha",
@@ -7981,20 +7163,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "The shopping center has had vacancies over the past few years as retail has shifted. There are long-running plans for mixed-use redevelopment around the MAX station, but those timelines have stretched repeatedly. For current buyers, the practical reality is a functional but not exciting retail center — the Target and grocery options remain operational.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "My husband takes the MAX to his downtown office every day. Cedar Hills was the obvious choice once we ran the commute comparison. Bri walked us through the numbers on Washington County taxes versus Portland.",
-        author: "Lin and Marcus B.",
-        context: "Bought in Cedar Hills, 2023",
-      },
-      {
-        quote:
-          "We had a tight timeline and Bri got us to closing in 21 days. I didn't think that was possible.",
-        author: "Pamela G.",
-        context: "Purchased in Cedar Hills, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "fha",
@@ -8153,20 +7322,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Driving is 30–40 minutes via US-26 East in normal conditions, 45+ minutes during morning rush. There is no MAX in Bethany — the nearest station is Cedar Hills Crossing, about 15 minutes east by car, from which the Blue Line runs to downtown. If someone in your household needs to commute to Portland daily, test the actual drive during rush hour before committing.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We moved here for an Intel relo and needed to close in six weeks. Bri made it happen. She knew Washington County construction loans inside out.",
-        author: "Priya and Ravi N.",
-        context: "Bought in Bethany, 2023",
-      },
-      {
-        quote:
-          "We compared Bethany to Hillsboro and Beaverton proper. Bri built us a spreadsheet that showed total cost of ownership over five years across all three. Made the decision easy.",
-        author: "Andrew C.",
-        context: "Purchased in Bethany, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: [
       "purchase",
       "jumbo",
@@ -8275,26 +7431,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "All Beaverton School District. Scholls Heights Elementary and Poynter Middle School both rate well, and Liberty High School is one of the district's stronger comprehensive high schools. BSD is generally well-regarded across Washington County.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We work at Intel and wanted to be able to bike to work. Orenco Station was the obvious answer — we didn't expect to actually like the neighborhood this much on top of the commute.",
-        author: "Marcus and Yuki",
-        context: "Intel engineers, bought in Orenco Station 2022",
-      },
-      {
-        quote:
-          "Bri walked us through the difference between an FHA and conventional loan for this price point. We ended up going conventional with 5% down and it made the payment more manageable than I expected.",
-        author: "Courtney D.",
-        context: "First-time buyer, Orenco Station townhome, 2023",
-      },
-      {
-        quote:
-          "We sold in Portland and wanted to stay MAX-accessible but get more house. Orenco hit every box — we closed in 30 days and Bri handled everything.",
-        author: "Drew and Alicia M.",
-        context: "Move-up buyers from Portland, Orenco Station 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "conventional", "jumbo", "investment"],
     adjacentNeighborhoods: ["tanasbourne", "hillsboro", "bethany", "aloha"],
     seo: {
@@ -8385,26 +7522,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "By MAX from Quatama or Hawthorn Farm, figure 45–55 minutes to downtown Portland including any connection time. Driving on US-26 is 25–30 minutes in normal conditions and 40–45 in peak rush. If you work in Washington County, the commute is obviously much shorter.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "I was relocating for a Nike role and needed to close in six weeks. Bri got us pre-approved and through underwriting with five days to spare.",
-        author: "Jerome K.",
-        context: "Nike relocation, Tanasbourne condo, 2023",
-      },
-      {
-        quote:
-          "The condo prices near the MAX stations made it possible to buy instead of keep renting. Bri helped us understand the HOA impact on our DTI — it matters more than I realized.",
-        author: "Priya and Sanjay",
-        context: "First-time buyers, Tanasbourne, 2022",
-      },
-      {
-        quote:
-          "We were cross-shopping Tanasbourne and Orenco. Bri was honest that Orenco would hold value better for our timeline. We appreciated the straight talk.",
-        author: "Melissa F.",
-        context: "Move-up buyer consultation, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "va", "investment", "cash-out"],
     adjacentNeighborhoods: ["orenco-station", "aloha", "beaverton", "hillsboro", "bethany"],
     seo: {
@@ -8499,26 +7617,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Very. There's no MAX stop nearby and the street network doesn't encourage walking or biking to most destinations outside the immediate Murrayhill Marketplace area. If you work in Beaverton or work from home, this is manageable. If you commute downtown regularly, the Hwy 217 / I-5 routine adds real time to your day.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We moved here from Lake Oswego specifically for Mountainside High School. The neighborhood is quiet and exactly what we needed for our kids.",
-        author: "Tom and Sarah W.",
-        context: "Move-up buyers, Murrayhill, 2022",
-      },
-      {
-        quote:
-          "Bri found us a jumbo loan option that kept our rate lower than the broker we'd been working with. The difference on a $700k purchase mattered.",
-        author: "Kevin R.",
-        context: "Jumbo purchase, Murrayhill, 2023",
-      },
-      {
-        quote:
-          "We refinanced our Murrayhill home after rates dropped and Bri turned it around in under three weeks. Painless process.",
-        author: "Linda and Rob O.",
-        context: "Cash-out refinance, Murrayhill, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "jumbo", "cash-out", "heloc", "investment"],
     adjacentNeighborhoods: ["progress-ridge", "beaverton", "sherwood", "tigard"],
     seo: {
@@ -8613,26 +7712,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Median is around $620,000. Townhomes start in the low-to-mid $400s; larger single-family homes run $600k–$850k. Newer construction from the late 2010s and early 2020s commands a premium. The newer you go, the higher the price per square foot.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "We moved from California and needed to close quickly. Bri coordinated with our relocation company and we were in our Progress Ridge home in 28 days.",
-        author: "Brian and Michelle T.",
-        context: "Corporate relocation, Progress Ridge, 2023",
-      },
-      {
-        quote:
-          "The New Seasons and Hopworks in the Towncenter were genuinely a factor in our decision. We've lived car-heavy before and having good walkable retail changed how we use our neighborhood.",
-        author: "Stephanie P.",
-        context: "Move-up buyer, Progress Ridge, 2022",
-      },
-      {
-        quote:
-          "Bri helped us use our VA benefit on a Progress Ridge townhome. We had no idea VA loans were this straightforward with the right lender.",
-        author: "Marcus and Jen A.",
-        context: "VA purchase, Progress Ridge townhome, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "va", "fha", "jumbo", "heloc", "investment"],
     adjacentNeighborhoods: ["murrayhill", "beaverton", "tualatin", "sherwood", "tigard"],
     seo: {
@@ -8727,26 +7807,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "For buyers who are primarily price-constrained, yes. The median around $450,000 is the lowest of any community in the Beaverton-Hillsboro corridor. You'll get more square footage and lot size per dollar than in Beaverton or Hillsboro proper. The trade-offs are older housing stock, fewer walkable amenities, and a commercial corridor that prioritizes car access over everything else.",
       },
     ],
-    testimonials: [
-      {
-        quote:
-          "Every house we liked in Beaverton was $50,000 out of reach. Bri suggested we look at Aloha and we found a 3-bed ranch that checked every box. Same schools, same commute.",
-        author: "Tyler and Jess N.",
-        context: "First-time buyers, Aloha, 2023",
-      },
-      {
-        quote:
-          "Bri helped us use an FHA loan with 3.5% down on an Aloha home. We'd been renting for four years waiting until we had 20%. We didn't need to wait that long.",
-        author: "DeShawn F.",
-        context: "FHA purchase, Aloha, 2022",
-      },
-      {
-        quote:
-          "The appraisal came in low and Bri knew exactly how to handle it — she'd seen it before in Aloha. We closed on schedule and didn't lose the house.",
-        author: "Gloria and Mark R.",
-        context: "Purchase with appraisal gap, Aloha, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "cash-out", "reverse-mortgage", "divorce-lending"],
     adjacentNeighborhoods: ["beaverton", "hillsboro", "tanasbourne", "orenco-station", "cedar-mill"],
     seo: {
@@ -8853,18 +7914,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "It's one of the more accessible entry points in the south metro. Prices are lower than Oregon City to the south and significantly below Lake Oswego or Milwaukie to the north. FHA financing works well here — the price points keep you well within conforming loan limits. Competition is lower than inner Portland, which gives buyers a bit more room to do inspections and ask for repairs.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We had been priced out of everywhere else we wanted to be. Gladstone gave us a real house with a yard and river access five minutes away. Bri ran three loan scenarios and we picked the one that kept our payment where we needed it.",
-        author: "Derek and Alicia M.",
-        context: "First-time buyers in Gladstone, 2024",
-      },
-      {
-        quote: "I didn't know Gladstone at all — Bri mentioned it when I described what I was looking for. Ended up being the right call. The neighborhood is quiet, the commute is manageable, and I paid $80k less than comparable houses in Milwaukie.",
-        author: "James R.",
-        context: "Purchased in Gladstone, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "investment"],
     adjacentNeighborhoods: ["oak-grove", "milwaukie", "oregon-city", "jennings-lodge", "west-linn"],
     seo: {
@@ -8971,18 +8021,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Twenty-five to 35 minutes by car via I-5 north or Highway 43 north into SW Portland. I-5 is faster when traffic cooperates; Highway 43 (State Street) is the backup route and is slower but avoids the freeway merge. TriMet bus service runs but is not fast — most residents drive.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We specifically wanted Lake Oswego schools and couldn't swing the prices north of the lake. Bri helped us understand the loan options and we landed in Lake Grove — same district, $150k less. That's been huge.",
-        author: "Sarah and Tom K.",
-        context: "Bought in Lake Grove, 2024",
-      },
-      {
-        quote: "Bri was straightforward about what we qualified for and what the monthly payment actually looked like at different price points. No pressure to stretch. We found a place in Lake Grove that worked.",
-        author: "Michelle P.",
-        context: "First purchase in Lake Grove, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "jumbo", "heloc", "fha"],
     adjacentNeighborhoods: ["lake-oswego", "west-linn", "oak-grove", "milwaukie"],
     seo: {
@@ -9089,18 +8128,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes — the Springwater Corridor runs along Oak Grove's eastern edge and connects north to Sellwood and downtown Portland, and south toward Boring. It is a paved multi-use trail and is legitimately useful for recreational cycling and running. Biking to inner SE Portland takes 30 to 40 minutes on trail; to downtown Portland is closer to 45 to 55 minutes.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We wanted a big yard and couldn't find it in Milwaukie at a price that worked. Oak Grove had what we needed — more space, mature trees, and still close to the city. Bri got us to the finish line faster than I expected.",
-        author: "Paul and Karen F.",
-        context: "Bought in Oak Grove, 2024",
-      },
-      {
-        quote: "I asked Bri which neighborhoods gave the most house for the money south of Portland. She mentioned Oak Grove specifically and explained why. We ended up there and I'm still happy with the decision two years later.",
-        author: "Eric W.",
-        context: "Purchased in Oak Grove, 2022",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "investment", "cash-out"],
     adjacentNeighborhoods: ["milwaukie", "jennings-lodge", "lake-grove", "lake-oswego", "sellwood-moreland"],
     seo: {
@@ -9207,18 +8235,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "It is a community with upside that has not been fully priced in, partly because it lacks visibility. River views at these prices are unusual in the metro. The risk is that there is no built-in demand driver — no commercial development, no transit improvement planned — so appreciation depends on broader south metro dynamics. For a primary residence it offers real value; as a pure investment the upside is speculative.",
       },
     ],
-    testimonials: [
-      {
-        quote: "I wanted a river view and didn't want to spend Lake Oswego money. Bri knew exactly where to point me — Jennings Lodge wasn't even on my list. We got a bluff-top house with a Willamette view and I think about that every morning.",
-        author: "Craig N.",
-        context: "Purchased in Jennings Lodge, 2023",
-      },
-      {
-        quote: "The house needed work but the bones were solid and the location was everything we wanted. Bri helped us structure the financing so we had budget left for improvements. Worth every conversation.",
-        author: "Danielle and Mark S.",
-        context: "Bought in Jennings Lodge, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "refinance", "cash-out", "investment", "heloc"],
     adjacentNeighborhoods: ["oak-grove", "milwaukie", "oregon-city", "gladstone", "west-linn"],
     seo: {
@@ -9325,18 +8342,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes, specifically because of the school pipeline to Lincoln High. The neighborhood is quiet, lots are larger than inner Portland, and Washington Park and Hoyt Arboretum are accessible without driving. The lack of walkable amenities is a real consideration — you will drive for groceries and coffee. Families who prioritize yard space, good public schools, and proximity to Forest Park over walkability tend to find it fits well.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We needed to be in the Lincoln High boundary and couldn't afford the houses closer to downtown. West Haven-Sylvan gave us the school district and a yard. Bri was clear about all the financing options from the start.",
-        author: "Robert and Jenna T.",
-        context: "Bought in West Haven-Sylvan, 2024",
-      },
-      {
-        quote: "The view from the backyard looking east to Mt. Hood sealed it for us. Bri ran the numbers twice when we weren't sure about the payment and helped us find a structure that worked.",
-        author: "Amanda C.",
-        context: "Purchased in West Haven-Sylvan, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance", "heloc", "fha", "va"],
     adjacentNeighborhoods: ["hillsdale", "multnomah-village", "forest-heights", "eastmoreland"],
     seo: {
@@ -9354,7 +8360,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Southwest & Downtown",
     description: [
       "Skyline Blvd runs the length of the West Hills ridge, a two-lane road that winds from the northern end of Forest Park south through terrain that reads as rural but is technically within Portland city limits. The views are east-facing — Mt. Hood on a clear morning, the Tualatin Valley to the west at dusk. Properties range from older farmhouses on one-acre lots to newer custom builds on five-plus acres, and the road itself passes working farms, a small airstrip, and more deer than traffic signals. This is Portland's back forty.",
-      "Portland Public Schools serves Skyline — Skyline K-8 is the neighborhood school, a combined elementary and middle that sits on the ridge and serves a small community of students who arrive mostly by bus because there is no other option. High school feeds to Lincoln or Wilson depending on address. The Forest Park trailhead system is accessible directly from Skyline Blvd; several trailheads within a short drive give access to 80-plus miles of trail in the country's largest urban forest. The Northwest 23rd commercial district and the Hillside neighborhoods are 15 to 20 minutes down the hill.",
+      "Portland Public Schools serves Skyline — Skyline K-8 is the neighborhood school, a combined elementary and middle that sits on the ridge and serves a small community of students who arrive mostly by bus because there is no other option. High school feeds to Lincoln or Ida B. Wells-Barnett depending on address. The Forest Park trailhead system is accessible directly from Skyline Blvd; several trailheads within a short drive give access to 80-plus miles of trail in the country's largest urban forest. The Northwest 23rd commercial district and the Hillside neighborhoods are 15 to 20 minutes down the hill.",
       "Car dependence here is not a caveat — it is the defining feature. There is no grocery store, no coffee shop, no pharmacy within any reasonable distance. Skyline Blvd itself is two lanes with no shoulder in most stretches and becomes genuinely difficult in ice or snow. The tradeoff is space, privacy, and a natural setting that is unlike anything else available within Portland city limits. Buyers here are making a deliberate choice about what they value, and the price reflects it.",
     ],
     personality: "Rural ridge living within Portland city limits — Forest Park at the door, grocery store 25 minutes away",
@@ -9446,18 +8452,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Skyline properties have appreciated over time, but liquidity is lower than standard Portland neighborhoods — the buyer pool for a custom five-acre ridge property is smaller than for an inner SE Craftsman. Days on market tend to run longer. For buyers who plan to stay long-term and are buying for the lifestyle rather than near-term appreciation, the math often works out. For investors looking for quick turns, it is the wrong market.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We knew Skyline was unusual and we were prepared for the financing to be complicated. Bri had done jumbo loans on the ridge before — she knew the appraisal questions and got us through the process without surprises.",
-        author: "David and Laura H.",
-        context: "Purchased on Skyline, 2024",
-      },
-      {
-        quote: "People think living on Skyline is impractical. It is, a little. But the mornings are unlike anything in the city. Bri helped us figure out a structure that made the payment sustainable long term.",
-        author: "Christine M.",
-        context: "Bought on Skyline Blvd, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance", "heloc", "cash-out", "reverse-mortgage"],
     adjacentNeighborhoods: ["forest-heights", "west-haven-sylvan", "hillsdale", "multnomah-village"],
     seo: {
@@ -9534,18 +8529,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "It is a full-service, award-winning hospital opened in 2005 at 2211 NE 139th St, offering emergency, surgical, obstetrics, psychiatric, pediatric, and oncology services. It is one of Clark County's primary trauma resources and one of the area's largest employers. Having a major hospital two miles away matters for resale and peace of mind.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We had the Portland commute math wrong initially. Bri actually walked us through what our Oregon income taxes would look like if we stayed versus moved to Salmon Creek, and the numbers shifted the decision. We've been here three years and don't regret it.",
-        author: "Derek and Megan S.",
-        context: "Purchased in Salmon Creek, relocated from SE Portland",
-      },
-      {
-        quote: "We specifically wanted Skyview's magnet program for our daughter. Bri helped us close on a house in the Skyview boundary with two weeks left in the school year so she could enroll for fall.",
-        author: "Patricia L.",
-        context: "Bought in Salmon Creek, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "jumbo", "va", "fha", "heloc", "cash-out"],
     adjacentNeighborhoods: ["felida", "hazel-dell", "battle-ground", "ridgefield", "vancouver-wa"],
     seo: {
@@ -9621,18 +8605,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Felida has maintained value well because land scarcity is real — you cannot build new quarter-acre lots in NW Vancouver without going further out. Buyers who hold long tend to do well. The risk is the premium attached to lot size: if you need to sell in a market where buyers are pulling back from large-lot maintenance, the pool of buyers is narrower.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We wanted land. We had been told that was impossible under $700k near Portland. Bri found us a 0.6-acre parcel in Felida with a well-maintained custom home, and we closed without drama.",
-        author: "James and Carrie H.",
-        context: "Purchased in Felida, jumbo loan, 2024",
-      },
-      {
-        quote: "The no-state-income-tax conversation was useful but Bri was careful not to oversell it. She said run it by your CPA, and she was right to say that — our situation was more complicated than a simple savings number.",
-        author: "Tom R.",
-        context: "Relocated from Lake Oswego, purchased in Felida",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance", "heloc", "cash-out", "investment"],
     adjacentNeighborhoods: ["salmon-creek", "hazel-dell", "ridgefield", "vancouver-wa"],
     seo: {
@@ -9713,18 +8686,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Minimal new construction — the area is largely built out. What exists is infill on previously subdivided lots. Most buyers in Hazel Dell are working with 40–70-year-old houses that need updating. Budget for deferred maintenance, particularly on plumbing, electrical panels, and roofs when looking at 1960s–1970s stock.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We were priced out of Salmon Creek and thought we'd have to rent another year. Bri found us a three-bedroom in Hazel Dell at $395k and we got it under asking. It needed work but we knew that going in.",
-        author: "Kyle and Amanda F.",
-        context: "First-time buyers, FHA loan, Hazel Dell 2024",
-      },
-      {
-        quote: "Bri didn't sugarcoat the schools. She told us what the ratings were, told us to tour them ourselves, and let us make the call. We appreciated that she didn't pretend everything was equally good.",
-        author: "Nadia T.",
-        context: "Bought in Hazel Dell, relocated from Beaverton",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "cash-out"],
     adjacentNeighborhoods: ["salmon-creek", "felida", "vancouver-wa", "orchards"],
     seo: {
@@ -9805,18 +8767,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "The Glenn Jackson Bridge (I-205) was built in 1982 and is generally less congested than the older I-5 Interstate Bridge, which dates to 1917 northbound and backs up with bridge lifts for river traffic. For Orchards buyers whose Portland jobs are downtown or on the east side, I-205 is often the faster and less frustrating option. Still plan for rush-hour slowdowns — both bridges reach capacity during peak periods.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We got a 1980s ranch in Orchards with a big backyard for $425k when the equivalent in Salmon Creek was $550k minimum. Bri was straightforward about what each area actually offered, not what we wanted to hear.",
-        author: "Marcus and Jen D.",
-        context: "Purchased in Orchards, conventional loan, 2023",
-      },
-      {
-        quote: "We asked Bri to be honest about the Orchards schools. She was — she showed us the actual rating data and then helped us think through the high school timeline. We decided Mountain View was worth the tradeoff at the lower price point.",
-        author: "Damon W.",
-        context: "Bought in Orchards, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "heloc", "cash-out", "investment"],
     adjacentNeighborhoods: ["cascade-park", "hazel-dell", "vancouver-wa", "camas"],
     seo: {
@@ -9893,18 +8844,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Yes — PDX is approximately 15 minutes from Cascade Park via I-205 north. For buyers who travel frequently for work, this is a genuine quality-of-life factor that rarely shows up in neighborhood descriptions but matters for anyone making monthly or weekly trips.",
       },
     ],
-    testimonials: [
-      {
-        quote: "The library was the unexpected thing. Our kids are at it three times a week. It's a real community building, not an afterthought. We didn't think that would matter when we were buying, and it does.",
-        author: "Rachel and Paul M.",
-        context: "Purchased in Cascade Park, refinanced 2024",
-      },
-      {
-        quote: "Bri told us straight: the elementary school ratings aren't great, Mountain View is solid, and here's what that means if you have a five-year-old. She didn't sell the neighborhood, she explained it. That's why we trusted her.",
-        author: "Antonia G.",
-        context: "Bought in Cascade Park, VA loan, 2023",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "va", "fha", "refinance", "heloc", "cash-out", "investment", "reverse-mortgage"],
     adjacentNeighborhoods: ["orchards", "vancouver-wa", "camas"],
     seo: {
@@ -10011,18 +8951,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Median is around $650,000, with most homes trading between $500k and $1.2M. Larger homes on lots with Mt. Hood or valley views push toward the top. Because the housing stock is relatively modern (1990s–2010s), you get more finished square footage per dollar compared to comparable lots in Lake Oswego or SW Portland.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We wanted space, good schools, and we didn't want city taxes. Bull Mountain checked every box. Bri walked us through exactly what the unincorporated status meant for our mortgage and taxes before we even wrote the offer.",
-        author: "Derek & Melissa H.",
-        context: "Purchased on Bull Mountain, 2023",
-      },
-      {
-        quote: "The jumbo loan process felt manageable because Bri kept it simple. She explained each step and the numbers were always straight.",
-        author: "Thomas R.",
-        context: "Jumbo purchase, Bull Mountain, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "jumbo", "refinance", "heloc", "cash-out"],
     adjacentNeighborhoods: ["tigard", "king-city", "sherwood", "tualatin", "beaverton"],
     seo: {
@@ -10124,18 +9053,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Most residents take I-5 from the Tualatin interchange, a few miles south on SW Durham Rd, then north to downtown Portland. That's typically 35–40 minutes without traffic, 45–55 in rush hour. Highway 99W through Tigard is an alternative but tends to be slower through the Tigard commercial district. TriMet bus service connects to the Tigard Transit Center.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We were getting outbid in Tigard for a year. Bri suggested we look at King City and ran the numbers showing what we'd save. We closed on a solid single-story for $80k less than comparable Tigard homes. It made sense.",
-        author: "Carla & Jim T.",
-        context: "First purchase, King City, 2023",
-      },
-      {
-        quote: "FHA loan, first-time buyer, and Bri made it smooth. She knew Washington County inside out and explained every county-specific step.",
-        author: "Nadia K.",
-        context: "FHA purchase, King City, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "fha", "va", "refinance", "investment"],
     adjacentNeighborhoods: ["tigard", "bull-mountain", "tualatin", "sherwood"],
     seo: {
@@ -10234,18 +9152,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Moderate by Washington County standards. TriMet Lines 12 and 44 run along SW Barbur Blvd and can get you downtown in 35–45 minutes, but headways are not as frequent as inner Portland routes. Washington Square Transit Center is nearby for connections to other Westside routes. It is not a neighborhood where most residents can live without a car.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We got 200 square feet more than anything we'd seen in Hillsdale for $60k less. Bri knew the Washington County tax picture cold and explained exactly what we were getting into.",
-        author: "Phil & Rachel M.",
-        context: "Purchased in Metzger, 2023",
-      },
-      {
-        quote: "The refinance went quickly. Bri caught an appraisal issue early and we fixed it before it became a problem.",
-        author: "Steven L.",
-        context: "Refinanced in Metzger, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "heloc", "cash-out"],
     adjacentNeighborhoods: ["garden-home", "raleigh-hills", "beaverton", "tigard", "hillsdale"],
     seo: {
@@ -10337,7 +9244,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Which school district serves Garden Home?",
-        a: "It depends on your specific parcel. Portland Public Schools serves the Portland-side addresses, with Markham Elementary as the feeder school through the PPS pipeline to Robert Gray Middle and Ida B. Wells (formerly Wilson) High. Beaverton School District serves Washington County parcels, with Nancy Ryles Elementary as one of the feeders. Do not rely on neighborhood name to determine school assignment — check the actual boundary maps.",
+        a: "It depends on your specific parcel. Portland Public Schools serves the Portland-side addresses, with Markham Elementary as the feeder school through the PPS pipeline to Robert Gray Middle and Ida B. Wells-Barnett High School (formerly Wilson). Beaverton School District serves Washington County parcels, with Nancy Ryles Elementary as one of the feeders. Do not rely on neighborhood name to determine school assignment — check the actual boundary maps.",
       },
       {
         q: "How close is Multnomah Village?",
@@ -10348,18 +9255,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Median around $530,000, with most homes between $415k and $750k. The unincorporated Washington County parcels tend to price slightly below the Portland-side parcels with comparable characteristics, because some buyers discount anything not officially 'Portland.' That discount can represent real value for buyers who are comfortable with the jurisdiction.",
       },
     ],
-    testimonials: [
-      {
-        quote: "The jurisdictional complexity threw us at first. Bri laid out exactly what the Washington County parcel meant for our taxes and our school assignment before we wrote the offer. We felt confident going in.",
-        author: "Aaron & Claire F.",
-        context: "Purchased in Garden Home, 2023",
-      },
-      {
-        quote: "Cash-out refinance to fund a kitchen renovation. Bri ran the equity math in 20 minutes and we had a clear plan.",
-        author: "Sandra B.",
-        context: "Cash-out refi, Garden Home, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "fha", "cash-out", "heloc"],
     adjacentNeighborhoods: ["metzger", "multnomah-village", "hillsdale", "raleigh-hills", "south-burlingame", "beaverton"],
     seo: {
@@ -10377,7 +9273,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Southwest & Downtown",
     description: [
       "South Burlingame occupies the stretch of SW Portland between Multnomah Village and the SW Terwilliger Blvd transit corridor, with Tryon Creek State Natural Area forming its southern boundary. The neighborhood is mostly 1950s ranches on streets that step up and down the hillside topography, and Tryon Creek is the anchor. It is one of Portland's better urban forest parks: 670 acres of old-growth Douglas fir, eight miles of trails accessible within a few blocks of most South Burlingame addresses. People who live near it understand what they're paying for.",
-      "Portland Public Schools serves the area along the established SW pipeline: Markham Elementary (K–5), Robert Gray Middle School (6–8), and Ida B. Wells High School (9–12, formerly Wilson). Market of Choice at SW Terwilliger and Taylors Ferry is the neighborhood grocery and deli — walkable for many residents and the kind of grocery store that reduces the perceived need for a car. Tryon Creek Bar and Grill at 8610 SW Terwilliger is the neighborhood's local sports bar. JoLa Cafe at SW Corbett is a short drive for serious coffee.",
+      "Portland Public Schools serves the area along the established SW pipeline: Markham Elementary (K–5), Robert Gray Middle School (6–8), and Ida B. Wells-Barnett High School (9–12, formerly Wilson). Market of Choice at SW Terwilliger and Taylors Ferry is the neighborhood grocery and deli — walkable for many residents and the kind of grocery store that reduces the perceived need for a car. Tryon Creek Bar and Grill at 8610 SW Terwilliger is the neighborhood's local sports bar. JoLa Cafe at SW Corbett is a short drive for serious coffee.",
       "The topography that makes South Burlingame scenic also makes getting in and out feel longer than the miles suggest. SW Terwilliger curves and narrows. The Barbur Blvd transit corridor is accessible but the walk or drive down the hill adds time. SW Barbur has TriMet Line 12 service, but depending on where exactly you live, getting to the stop is its own exercise. If walkable urban density is the goal, this is the wrong neighborhood. If trail access and quiet streets matter more than convenience, it competes with very few Portland addresses.",
     ],
     personality: "Tryon Creek at the back door — SW Portland's best argument for staying out of the city proper",
@@ -10450,7 +9346,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What schools serve South Burlingame?",
-        a: "Portland Public Schools — Markham Elementary (K–5), Robert Gray Middle (6–8), Ida B. Wells High School (9–12, formerly Wilson). Markham rates well for an inner-SW Portland school. Wilson/Ida B. Wells has strong academic programs. This is the standard SW Portland school pipeline and is one of the more consistent PPS tracks.",
+        a: "Portland Public Schools — Markham Elementary (K–5), Robert Gray Middle (6–8), Ida B. Wells-Barnett High School (9–12, formerly Wilson). Markham rates well for an inner-SW Portland school. Ida B. Wells-Barnett has strong academic programs. This is the standard SW Portland school pipeline and is one of the more consistent PPS tracks.",
       },
       {
         q: "Is it hard to get in and out of South Burlingame?",
@@ -10461,18 +9357,7 @@ export const neighborhoods: NeighborhoodData[] = [
         a: "Median around $600,000, with most homes between $480k and $900k. The closer to Tryon Creek, the higher the price — proximity to the park is priced in. Homes on the flat streets near Market of Choice sell faster. 1950s ranches in original condition at the lower end of the range offer renovation upside for buyers willing to take on a project.",
       },
     ],
-    testimonials: [
-      {
-        quote: "We were specifically looking for trail access and good schools inside Portland. Bri knew South Burlingame immediately and helped us understand what we'd get for the price. We walk into Tryon Creek three mornings a week.",
-        author: "Mark & Laura T.",
-        context: "Purchased in South Burlingame, 2023",
-      },
-      {
-        quote: "HELOC for a full bathroom renovation. Bri pulled the numbers on our equity quickly and the process was straightforward.",
-        author: "Christine W.",
-        context: "HELOC, South Burlingame, 2024",
-      },
-    ],
+    testimonials: [],
     relatedServices: ["purchase", "refinance", "jumbo", "heloc", "cash-out"],
     adjacentNeighborhoods: ["multnomah-village", "garden-home", "hillsdale", "lake-oswego", "west-linn"],
     seo: {
