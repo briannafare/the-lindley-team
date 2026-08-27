@@ -218,6 +218,11 @@ export default function NeighborhoodPageLayout({
       </section>
 
       {/* ── 4. Local Life ──────────────────────────────────────── */}
+      {/* Only renders once a neighborhood has verified places. Entries are
+          sourced from local business-association directories, never generated. */}
+      {(neighborhood.restaurants.length > 0 ||
+        neighborhood.coffee.length > 0 ||
+        neighborhood.bars.length > 0) && (
       <section className="py-16 border-t border-border">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8">
@@ -294,6 +299,7 @@ export default function NeighborhoodPageLayout({
           </div>
         </div>
       </section>
+      )}
 
       {/* ── 5. Schools ─────────────────────────────────────────── */}
       <section className="py-16 border-t border-border bg-bg-alt">

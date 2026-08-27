@@ -94,20 +94,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["tree-lined median", "walking path", "dog-walking"],
       },
     ],
-    restaurants: [
-      { name: "Carts on Foster", cuisine: "Food carts", vibe: "Covered cart pod on SE Foster — Korean fusion, ramen, wood-fired pizza, burgers, open-air seating" },
-      { name: "An Xuyen Bakery", cuisine: "Vietnamese", vibe: "Long-standing bakery — banh mi, fresh baguettes, French pastries" },
-      { name: "Pizzeria Otto", cuisine: "Pizza", vibe: "Wood-fired Neapolitan pies with local ingredients, family-friendly, craft beer" },
-    ],
-    coffee: [
-      { name: "Space Monkey Coffee", vibe: "Artsy SE Foster coffeehouse — house-roasted beans, sandwiches, pastries" },
-      { name: "Speedboat Coffee", vibe: "Espresso and vegan pastries out of a vintage trailer, with a drive-thru" },
-    ],
-    bars: [
-      { name: "The Slingshot Lounge", vibe: "Relaxed Foster dive — pinball, strong pours, pub menu with vegan options" },
-      { name: "Foster Gardens", vibe: "Neighborhood taproom with a big patio and Oregon brews" },
-      { name: "Mad Hanna", vibe: "Quirky spot off SE 82nd — backyard fire pits and karaoke nights" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "About 18 minutes by car outside rush hour via SE Foster or Powell to the bridges — longer when Foster backs up. Roughly 20 minutes by bike on the neighborhood greenways. Bus lines on Foster and SE 72nd reach downtown in about 35–45 minutes.",
     faqs: [
@@ -250,19 +239,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["open lawn", "views", "quiet neighborhood park"],
       },
     ],
-    restaurants: [
-      { name: "Nostrana", cuisine: "Pizza", vibe: "Wood-fired, SE Morrison, been the answer to 'where should we go?' since 2005" },
-      { name: "Screen Door", cuisine: "Southern", vibe: "Brunch institution, East Burnside, the wait is real and usually worth it" },
-      { name: "Cheryl's on 12th", cuisine: "Breakfast", vibe: "Classic breakfast spot, regulars only feel after a few visits" },
-    ],
-    coffee: [
-      { name: "Coava Coffee Roasters", vibe: "Flagship location in a converted basketball court on SE Grand — best coffee shop interior in Portland" },
-      { name: "Water Avenue Coffee", vibe: "Industrial space near the river, where commercial roasters go to drink coffee" },
-    ],
-    bars: [
-      { name: "East Burn", vibe: "Gastropub on E Burnside, big covered patio, local crowd" },
-      { name: "Aalto Lounge", vibe: "SE Belmont spot, cocktails, low-key" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "8 min by bike, 12–15 min by car, 10 min on MAX, 15 min on bus",
     faqs: [
       {
@@ -324,20 +303,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["tennis courts", "wading pool", "basketball courts", "picnic area"],
       },
     ],
-    restaurants: [
-      { name: "Tin Shed Garden Cafe", cuisine: "American", vibe: "Weekend brunch on a garden patio, NE Alberta — better than it looks from the outside" },
-      { name: "Aviary", cuisine: "New American", vibe: "Nice dinner on Alberta, creative menu, reservation recommended" },
-      { name: "Pine State Biscuits", cuisine: "Southern", vibe: "Breakfast sandwiches that will ruin you for other breakfast sandwiches" },
-      { name: "Radio Room", cuisine: "American", vibe: "Bar with good food, rooftop, Alberta Street staple" },
-    ],
-    coffee: [
-      { name: "Extracto Coffee Roasters", vibe: "2921 NE Alberta — one of Portland's best roasters, period" },
-      { name: "Case Study Coffee", vibe: "Clean, minimal, excellent espresso on NE Alberta" },
-    ],
-    bars: [
-      { name: "The Bye and Bye", vibe: "1011 NE Alberta, craft cocktails, hanging plants everywhere, been here since it mattered" },
-      { name: "Radio Room", vibe: "Rooftop bar, NE Alberta, good for summer evenings" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25 min by car, 20 min by bike via Burnside Bridge, 30–35 min by bus",
     faqs: [
       {
@@ -399,20 +367,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["native plants", "stormwater garden", "bird watching", "quiet seating"],
       },
     ],
-    restaurants: [
-      { name: "Jake's Famous Crawfish", cuisine: "Seafood", vibe: "Been here since 1892, SW 12th — classic Portland before Portland was cool" },
-      { name: "Bullard Texas BBQ", cuisine: "BBQ", vibe: "Serious Texas-style on SW 12th, one of the better BBQ spots in the city" },
-      { name: "Imperial", cuisine: "American", vibe: "Hotel Lucia's restaurant, NW Broadway, good for a business dinner" },
-      { name: "Bamboo Sushi", cuisine: "Sushi", vibe: "Sustainable sushi, Pearl location, reservation recommended on weekends" },
-    ],
-    coffee: [
-      { name: "Coava Coffee Roasters", vibe: "Pearl location on NW Davis — smaller than the Grand Ave flagship but same quality" },
-      { name: "Barista", vibe: "NW 23rd area, precise espresso, minimal space" },
-    ],
-    bars: [
-      { name: "Raven & Rose", vibe: "Upscale cocktail bar in a historic carriage house, SW Broadway" },
-      { name: "Bailey's Taproom", vibe: "20+ rotating taps, SW Broadway, no-frills craft beer" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "5–10 min on foot or Streetcar, MAX accessible at Old Town/Chinatown",
     faqs: [
       {
@@ -475,19 +432,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["open lawn", "walking paths", "adjacent to Grant HS track"],
       },
     ],
-    restaurants: [
-      { name: "Screen Door", cuisine: "Southern", vibe: "SE Burnside brunch institution — technically just outside Irvington but everyone here goes" },
-      { name: "Tasty n Daughters", cuisine: "American", vibe: "N Williams corridor, all-day breakfast, reservation worth it on weekends" },
-      { name: "Dar Salam", cuisine: "Iraqi", vibe: "NE Alberta nearby, one of Portland's best underrated dinner spots" },
-    ],
-    coffee: [
-      { name: "Never Coffee Lab", vibe: "2120 NE Alberta — serious espresso, minimal vibe, not trying to impress anyone" },
-      { name: "Case Study Coffee", vibe: "NE Alberta location, clean and consistent" },
-    ],
-    bars: [
-      { name: "Expatriate", vibe: "NE 30th Ave, small cocktail bar with a strong menu, one of Portland's best" },
-      { name: "Pints Urban Brewery", vibe: "NW 14th area, solid house-brewed beers, low-key" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20 min by car, 25 min by bike, 30 min by bus (Lines 6, 77)",
     faqs: [
       {
@@ -550,19 +497,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["18-hole public course", "driving range", "pro shop"],
       },
     ],
-    restaurants: [
-      { name: "Grand Central Baking", cuisine: "Bakery / Cafe", vibe: "SE Woodstock location, good bread, neighborhood breakfast" },
-      { name: "Gado Gado", cuisine: "Indonesian", vibe: "SE Division, not walking distance but worth the trip — some of Portland's best cooking" },
-      { name: "Hammy's Pizza", cuisine: "Pizza", vibe: "SE Woodstock, local takeout institution" },
-    ],
-    coffee: [
-      { name: "Grand Central Baking", vibe: "SE Woodstock — bread bakery with espresso, opens early" },
-      { name: "Stumptown Coffee", vibe: "Several locations reachable by short drive or bike" },
-    ],
-    bars: [
-      { name: "Woodstock Wine & Deli", vibe: "SE Woodstock, wine bar feel, good for a quiet evening" },
-      { name: "Sellwood Bar", vibe: "Short bike ride to Sellwood, neighborhood dive with no pretense" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25 min by car, 35 min by bus, 20 min by bike via Springwater Corridor",
     faqs: [
       {
@@ -621,19 +558,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["Crystal Lake", "off-leash dog area", "walking loop", "tennis courts", "playground"],
       },
     ],
-    restaurants: [
-      { name: "Laurelhurst Market", cuisine: "American / Steakhouse", vibe: "Butcher shop + restaurant on SE 28th — one of Portland's best dinner spots, take the beef seriously" },
-      { name: "East Burn", cuisine: "American", vibe: "Gastropub on E Burnside, big covered patio, neighborhood crowd" },
-      { name: "Tusk", cuisine: "New American", vibe: "NE 28th Ave, creative menu, good for date night" },
-    ],
-    coffee: [
-      { name: "Never Coffee Lab", vibe: "NE Alberta, short bike or drive — serious espresso, no fuss" },
-      { name: "Water Avenue Coffee", vibe: "SE Water Ave, worth the trip for a slow morning" },
-    ],
-    bars: [
-      { name: "East Burn", vibe: "Doubles as the neighborhood bar after dinner — good rotating taps and a patio that actually works" },
-      { name: "Expatriate", vibe: "NE 30th Ave cocktail bar, small, very good, reservation helps on weekends" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20 min by car, 25 min by bike, 30–35 min by bus (Line 15 or 20)",
     faqs: [
       {
@@ -695,19 +622,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "tennis courts", "open lawn", "off-leash dog area"],
       },
     ],
-    restaurants: [
-      { name: "Hammy's Pizza", cuisine: "Pizza", vibe: "SE Woodstock takeout institution, the neighborhood answer for pizza night" },
-      { name: "Grand Central Baking", cuisine: "Bakery / Cafe", vibe: "SE Woodstock location, opens early, good bread and espresso" },
-      { name: "Gado Gado", cuisine: "Indonesian", vibe: "SE Division — not on Woodstock but close enough and worth the trip, some of Portland's best cooking" },
-    ],
-    coffee: [
-      { name: "Grand Central Baking", vibe: "The neighborhood morning stop — bread bakery with solid espresso" },
-      { name: "Stumptown Coffee", vibe: "Short drive or bike to multiple locations" },
-    ],
-    bars: [
-      { name: "Woodstock Wine & Deli", vibe: "Wine bar feel on SE Woodstock, good for a quiet Tuesday evening" },
-      { name: "The Observatory", vibe: "Short ride to Sellwood — gastropub with good beer list" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25 min by car, 30 min by bike, 35–40 min by bus (Line 19)",
     faqs: [
       {
@@ -769,19 +686,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["wildlife viewing", "kayak/canoe launch", "walking trails", "migrating bird habitat"],
       },
     ],
-    restaurants: [
-      { name: "Smith BBQ", cuisine: "BBQ", vibe: "N Lombard, wood-smoked brisket, the real answer to where to get BBQ in Portland" },
-      { name: "Tulip Bakery", cuisine: "Bakery / Cafe", vibe: "N Lombard, neighborhood breakfast, regulars know the staff by name" },
-      { name: "The Fixin' To", cuisine: "Southern", vibe: "N Lombard, comfort food, strong neighborhood following" },
-    ],
-    coffee: [
-      { name: "McMenamins St. Johns", vibe: "The pub serves coffee — it's the neighborhood gathering place more than a serious coffee bar" },
-      { name: "Posies Cafe", vibe: "N Lombard, neighborhood bakery cafe, good for a slower morning" },
-    ],
-    bars: [
-      { name: "McMenamins St. Johns Pub & Movie Theater", vibe: "8203 N Ivanhoe — restored 1913 building, second-run movies, pub food, St. Johns institution" },
-      { name: "The Standard", vibe: "N Denver Ave, neighborhood bar, low-key" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25 min by car, 40 min by bus (Line 75), 35 min by bike",
     faqs: [
       {
@@ -845,18 +752,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["soccer fields", "disc golf", "open space", "adjacent to Yellow MAX line"],
       },
     ],
-    restaurants: [
-      { name: "Po'Shines Café de la Soul", cuisine: "Soul Food", vibe: "N Denver Ave — fried chicken, greens, cornbread, the real answer to Sunday lunch" },
-      { name: "Proper Eats", cuisine: "American", vibe: "N Denver food cart pod, rotating vendors, good for a quick lunch" },
-    ],
-    coffee: [
-      { name: "Posies Cafe", vibe: "N Lombard nearby — doubles as the area's morning stop" },
-      { name: "Dutch Bros", vibe: "N Interstate — drive-through, not destination coffee, but it's there" },
-    ],
-    bars: [
-      { name: "The Kenton Club", vibe: "N Denver Ave dive bar — pool table, no pretense, been here decades" },
-      { name: "The Standard Bar & Grill", vibe: "N Denver, neighborhood bar with food, low-key" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "30 min on Yellow MAX, 25 min by car, 40 min by bike",
     faqs: [
       {
@@ -921,43 +819,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open lawn", "quiet neighborhood green"],
       },
     ],
-    restaurants: [
-      {
-        name: "Empire Provisions",
-        cuisine: "Deli / Charcuterie",
-        vibe: "Excellent sandwiches and house-cured meats on Fremont — worth the line at lunch",
-      },
-      {
-        name: "Tabla Mediterranean Bistro",
-        cuisine: "Mediterranean",
-        vibe: "Neighborhood dinner spot on Fremont, reliable and well-priced for the quality",
-      },
-      {
-        name: "Gado Gado",
-        cuisine: "Indonesian",
-        vibe: "One of Portland's best restaurants, period — the peanut sauce is the reason people drive here from other neighborhoods",
-      },
-    ],
-    coffee: [
-      {
-        name: "Anchor Coffee",
-        vibe: "Small, neighborhood-loyal, NE Fremont — regulars leave their mugs on the shelf",
-      },
-      {
-        name: "Stumptown Coffee Roasters",
-        vibe: "Closest location is on Belmont but worth noting — the NE crowd ends up here on weekends",
-      },
-    ],
-    bars: [
-      {
-        name: "The Bye and Bye",
-        vibe: "Vegan bar on Alberta — not in the neighborhood but where Beaumont residents go when they want actual nightlife",
-      },
-      {
-        name: "Fremont Station",
-        vibe: "Low-key neighborhood bar on Fremont, not a destination, but it's yours if you live nearby",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "20–25 min by car, 25 min by bike via NE Broadway or the Sullivan's Gulch trail, 35 min on bus Line 75",
     faqs: [
@@ -1020,43 +884,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["outdoor pool", "tennis courts", "playground", "picnic shelters", "open lawn"],
       },
     ],
-    restaurants: [
-      {
-        name: "Gado Gado",
-        cuisine: "Indonesian",
-        vibe: "Five minutes west on Fremont — one of Portland's best, worth the trip every time",
-      },
-      {
-        name: "Tabla Mediterranean Bistro",
-        cuisine: "Mediterranean",
-        vibe: "Reliable neighborhood dinner on Fremont, been a local anchor for years",
-      },
-      {
-        name: "Irving Street Kitchen",
-        cuisine: "American",
-        vibe: "More of a drive to NW but where Alameda residents go for a proper date night",
-      },
-    ],
-    coffee: [
-      {
-        name: "Anchor Coffee",
-        vibe: "Closest true neighborhood coffee shop, NE Fremont — small, locals only",
-      },
-      {
-        name: "Water Avenue Coffee",
-        vibe: "Better beans, worth driving for on a weekend morning",
-      },
-    ],
-    bars: [
-      {
-        name: "The Cleaners at the Ace",
-        vibe: "Not nearby but where Alameda's younger crowd ends up on weekends",
-      },
-      {
-        name: "Fremont Station",
-        vibe: "Walking distance, unpretentious, exactly what a neighborhood bar should be",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "22–28 min by car, 30 min by bike via NE 33rd to Sullivan's Gulch trail, limited direct bus service",
     faqs: [
@@ -1119,43 +949,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open lawn", "picnic area"],
       },
     ],
-    restaurants: [
-      {
-        name: "Luce",
-        cuisine: "Italian",
-        vibe: "Neighborhood Italian on NE 28th, close enough to be the answer for a Tuesday dinner out",
-      },
-      {
-        name: "Pastini",
-        cuisine: "Italian",
-        vibe: "Casual, reliable, and the kids eat everything on the menu",
-      },
-      {
-        name: "Cricket Cafe",
-        cuisine: "Breakfast",
-        vibe: "Breakfast on Belmont — the line moves, the food justifies it",
-      },
-    ],
-    coffee: [
-      {
-        name: "Heart Coffee Roasters",
-        vibe: "Closest specialty roaster, worth the short drive to NE 22nd location",
-      },
-      {
-        name: "Stumptown Coffee Roasters",
-        vibe: "Belmont location is the neighborhood default for weekend mornings",
-      },
-    ],
-    bars: [
-      {
-        name: "The Hollywood Theatre Bar",
-        vibe: "Bar attached to the Hollywood Theatre — you stay for a beer after the movie and end up closing it down",
-      },
-      {
-        name: "Tanuki",
-        vibe: "Izakaya on NE Burnside, short bike ride, strong cocktails",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "25–30 min by car, 20 min by MAX Red/Green line from Hollywood TC, 25 min by bike via NE Broadway",
     faqs: [
@@ -1218,43 +1014,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open lawn", "picnic area"],
       },
     ],
-    restaurants: [
-      {
-        name: "Pok Pok",
-        cuisine: "Thai",
-        vibe: "The Sandy Blvd location — still one of Portland's best known restaurants, loud and worth every minute of the wait",
-      },
-      {
-        name: "Renata",
-        cuisine: "Italian",
-        vibe: "Not in Hollywood but where the neighborhood goes for a special occasion — worth knowing",
-      },
-      {
-        name: "Tusk",
-        cuisine: "American / Vegetable-forward",
-        vibe: "Dinner spot on Sandy, creative menu, locals-first vibe",
-      },
-    ],
-    coffee: [
-      {
-        name: "Coava Coffee Roasters",
-        vibe: "The Sandy location is newer and less iconic than Grand Ave, but the coffee is identical and the line is shorter",
-      },
-      {
-        name: "Never Coffee",
-        vibe: "NE neighborhood stalwart, small space, strong lattes, familiar faces",
-      },
-    ],
-    bars: [
-      {
-        name: "The Hollywood Theatre Bar",
-        vibe: "Connected to the cinema — stay for a beer after the film, become a regular without trying",
-      },
-      {
-        name: "Quaintrelle",
-        vibe: "Wine bar on NE 28th, quieter than most options near Sandy",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "20 min by MAX Red/Green line from Hollywood TC, 25 min by car, 22 min by bike via NE Broadway",
     faqs: [
@@ -1318,43 +1080,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "sports fields", "picnic area", "walking paths"],
       },
     ],
-    restaurants: [
-      {
-        name: "Ox Restaurant",
-        cuisine: "Argentine / Wood-fire",
-        vibe: "One of Portland's best restaurants, Alberta Arts District — a short walk from most Sabin streets",
-      },
-      {
-        name: "Tusk",
-        cuisine: "American / Vegetable-forward",
-        vibe: "Good dinner, thoughtful menu, rotating seasonal focus",
-      },
-      {
-        name: "Luce",
-        cuisine: "Italian",
-        vibe: "Reliable, not trying too hard, the right call on a Tuesday",
-      },
-    ],
-    coffee: [
-      {
-        name: "Never Coffee",
-        vibe: "NE neighborhood institution — strong espresso, small space, regulars run the show",
-      },
-      {
-        name: "Stumptown Coffee Roasters",
-        vibe: "Belmont location is the closest outpost; many Sabin residents make the trip weekly",
-      },
-    ],
-    bars: [
-      {
-        name: "The Bye and Bye",
-        vibe: "Vegan bar on NE Alberta — the patio in summer is where this neighborhood goes to be social",
-      },
-      {
-        name: "Expatriate",
-        vibe: "NE 30th Ave cocktail bar, lower key than Alberta spots, worth knowing",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "18–25 min by car, 22 min by bike via NE Broadway or the Sullivan's Gulch path, 35 min on bus Line 72",
     faqs: [
@@ -1424,43 +1152,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["ponds", "wildlife habitat", "nature trails", "birdwatching"],
       },
     ],
-    restaurants: [
-      {
-        name: "Por Que No?",
-        cuisine: "Mexican",
-        vibe: "Beloved Portland taqueria — Alberta location is the nearest but worth the short drive from any Cully block",
-      },
-      {
-        name: "Taqueria Los Gorditos",
-        cuisine: "Mexican",
-        vibe: "In-neighborhood tacos, cash-friendly, no tourist markup, exactly what the neighborhood has been doing for years",
-      },
-      {
-        name: "Lovely's Fifty Fifty",
-        cuisine: "Pizza / Ice Cream",
-        vibe: "Mississippi Ave — not in Cully but a regular destination for the northern edge of the neighborhood",
-      },
-    ],
-    coffee: [
-      {
-        name: "Coava Coffee Roasters",
-        vibe: "Nearest quality coffee roaster — Cully residents make the drive to the Sandy location for good beans",
-      },
-      {
-        name: "Case Study Coffee",
-        vibe: "Closest specialty coffee shop with a sit-down vibe, Lloyd District location",
-      },
-    ],
-    bars: [
-      {
-        name: "Breakside Brewery",
-        vibe: "The Dekum location in Concordia is Cully's nearest craft brewery with a real taproom",
-      },
-      {
-        name: "The Alibi",
-        vibe: "North Portland tiki bar, a drive from Cully but an institution — worth going once",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "25–35 min by car depending on traffic, 30 min by bike via NE 42nd to Sullivan's Gulch, 40 min on bus Line 71 or 72",
     faqs: [
@@ -1527,19 +1221,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open lawn", "picnic area"],
       },
     ],
-    restaurants: [
-      { name: "Tasty n Daughters", cuisine: "American", vibe: "SE Hawthorne brunch institution — long wait, worth it once a month" },
-      { name: "Gado Gado", cuisine: "Indonesian", vibe: "One of Portland's best restaurants, Hawthorne and 29th, reservations fill fast" },
-      { name: "Pok Pok", cuisine: "Thai", vibe: "The original SE Division location, still drawing lines after two decades" },
-    ],
-    coffee: [
-      { name: "Stumptown Coffee Roasters", vibe: "The original SE Division location — still the measuring stick for Portland espresso" },
-      { name: "Extracto Coffee Roasters", vibe: "Quieter Hawthorne outpost, good for getting actual work done" },
-    ],
-    bars: [
-      { name: "Produce Row Cafe", vibe: "Long-running SE Oak bar with one of Portland's better draft beer lists, low-key crowd" },
-      { name: "Horse Brass Pub", vibe: "British-style pub on SE Belmont, 300+ beers, no television pretense" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "12–15 min by bike via Hawthorne Bridge, 15–20 min by car, 20 min by bus on Line 14",
     faqs: [
       {
@@ -1605,19 +1289,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["open lawn", "playground", "picnic area"],
       },
     ],
-    restaurants: [
-      { name: "Ava Gene's", cuisine: "Vegetable-forward", vibe: "SE Division, one of Portland's best restaurants — reservations or a long wait at the bar" },
-      { name: "Tusk", cuisine: "American", vibe: "Division Street, natural wines, carefully sourced ingredients, not cheap" },
-      { name: "Checkerboard Pizza", cuisine: "Pizza", vibe: "Detroit-style, SE Division, the lines are real and the pizza is worth it" },
-    ],
-    coffee: [
-      { name: "Coava Coffee Roasters", vibe: "SE Division outpost, same quality as the flagship, slightly less cavernous" },
-      { name: "Either/Or", vibe: "Clinton Street spot — books on the shelves, slower pace, good for an afternoon" },
-    ],
-    bars: [
-      { name: "Bar Avignon", vibe: "Natural wine bar on SE Division, small, good list, needs a reservation on weekends" },
-      { name: "The Bye and Bye", vibe: "Vegan bar on Alberta, technically not Richmond but walkable — worth noting" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "14–18 min by bike via Division or Clinton, 18–22 min by car, 25 min on Line 9 bus",
     faqs: [
       {
@@ -1679,19 +1353,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["open lawn", "farmers market", "off-leash dog area"],
       },
     ],
-    restaurants: [
-      { name: "Gado Gado", cuisine: "Indonesian", vibe: "SE Hawthorne, one of Portland's best, reservations required most nights" },
-      { name: "Tabor Bread", cuisine: "Bakery/Cafe", vibe: "Wood-fired breads on SE Hawthorne, the sourdough is worth the detour" },
-      { name: "Luce", cuisine: "Italian", vibe: "Tiny SE Hawthorne spot, good pasta, cash-comfortable crowd" },
-    ],
-    coffee: [
-      { name: "Case Study Coffee", vibe: "SE Hawthorne location, good single-origin pour-overs, quieter than most inner SE cafes" },
-      { name: "Barista", vibe: "SE Hawthorne outpost, precise brewing, minimal aesthetic, serious about coffee" },
-    ],
-    bars: [
-      { name: "The Standard", vibe: "SE Hawthorne neighborhood bar, pool table, no theatrics" },
-      { name: "Sapphire Hotel", vibe: "Moody hotel bar on SE Hawthorne, cocktails, good for a date" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "18–22 min by bike via SE Hawthorne, 20–25 min by car, 30 min on Line 14 bus",
     faqs: [
       {
@@ -1753,19 +1417,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["open lawn", "playground", "picnic area"],
       },
     ],
-    restaurants: [
-      { name: "Ya Hala", cuisine: "Lebanese", vibe: "SE Stark, one of the best Lebanese restaurants in Portland, been here for decades" },
-      { name: "Jade Bistro", cuisine: "Vietnamese-American", vibe: "SE 82nd, excellent pho and Vietnamese-American fusion, packed at lunch" },
-      { name: "Montavilla Brew Works", cuisine: "Pub", vibe: "Neighborhood brewpub on SE Stark, low-key, locals only feel on weekday evenings" },
-    ],
-    coffee: [
-      { name: "Bipartisan Cafe", vibe: "SE Stark institution — coffee, pie, and actual neighborhood conversation since 2009" },
-      { name: "Either/Or", vibe: "Books and coffee on SE Stark, slower pace, good selection" },
-    ],
-    bars: [
-      { name: "Montavilla Brew Works", vibe: "The neighborhood brewery — no pretense, neighborhood crowd, reasonable prices" },
-      { name: "Thanh Thao", vibe: "Vietnamese dive bar and restaurant on SE 82nd, cheap, honest, packed on weekends" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25–30 min by car, 35 min by bus on Line 14, 30 min by bike to downtown",
     faqs: [
       {
@@ -1831,19 +1485,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["baseball fields", "playground", "picnic shelters", "off-leash dog area"],
       },
     ],
-    restaurants: [
-      { name: "Jade Bistro", cuisine: "Vietnamese-American", vibe: "Foster Road mainstay, excellent pho, packed for lunch, honest prices" },
-      { name: "Fopiano's", cuisine: "Italian-American", vibe: "Classic Foster Road Italian, red sauce, checkered tablecloths, neighborhood institution" },
-      { name: "Bollywood Theater", cuisine: "Indian street food", vibe: "Division Street location technically, but the Foster-Powell crowd knows it" },
-    ],
-    coffee: [
-      { name: "Never Coffee Lab", vibe: "Foster Road coffee — serious about beans, neighborhood crowd, good for working" },
-      { name: "Staccato Gelato", vibe: "Not coffee, but the Foster Road dessert stop that anchors the commercial strip" },
-    ],
-    bars: [
-      { name: "Bar Carlo", vibe: "Italian wine bar on SE Foster, small, good by-the-glass list, neighborhood regulars" },
-      { name: "Apex", vibe: "SE Division, technically close enough — one of Portland's best beer lists, no kitchen, no pretense" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "22–28 min by car, 30 min by bus on Line 9 or Line 17, 28 min by bike",
     faqs: [
       {
@@ -1905,19 +1549,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["open lawn", "playground", "picnic area"],
       },
     ],
-    restaurants: [
-      { name: "Ristretto Roasters", cuisine: "Cafe", vibe: "Not in Brooklyn proper, but the NE Sandy flagship is where the neighborhood's coffee crowd ends up" },
-      { name: "Lauretta Jean's", cuisine: "Pie/Breakfast", vibe: "SE Oak location is close enough — pie shop with a short, serious menu" },
-      { name: "The Lunchbox", cuisine: "American", vibe: "Working lunch counter near the industrial edge, unpretentious" },
-    ],
-    coffee: [
-      { name: "Good Coffee", vibe: "SE Milwaukie location nearby — clean, well-sourced, no gimmicks" },
-      { name: "Extracto Coffee Roasters", vibe: "A short ride away on Hawthorne — the Brooklyn crowd bikes to it" },
-    ],
-    bars: [
-      { name: "Loyal Legion", vibe: "SE Belmont, technically not Brooklyn but close — 99 Oregon taps, huge space, no bad beer options" },
-      { name: "The Bullpen", vibe: "Neighborhood sports bar, unpretentious, close to the rail yards" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "15–20 min by car, 18 min by bike via Springwater + Hawthorne Bridge, 35 min by bus",
     faqs: [
       {
@@ -1983,43 +1617,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["tennis courts", "sports fields", "walking paths"],
       },
     ],
-    restaurants: [
-      {
-        name: "Tabor Bread",
-        cuisine: "Bakery/Cafe",
-        vibe: "Wood-fired whole-grain breads and breakfast, SE Hawthorne — slightly out of neighborhood but the draw is real",
-      },
-      {
-        name: "Eem",
-        cuisine: "Thai-BBQ",
-        vibe: "Thai barbecue on NE Alberta, James Beard recognition, worth the wait",
-      },
-      {
-        name: "Proud Mary",
-        cuisine: "Australian-style cafe",
-        vibe: "NE Alberta brunch spot, good coffee, get there before 10am on weekends",
-      },
-    ],
-    coffee: [
-      {
-        name: "Extracto Coffee Roasters",
-        vibe: "Excellent single-origin roaster on NE Killingsworth, regulars take it for granted, visitors are always surprised",
-      },
-      {
-        name: "Either/Or",
-        vibe: "Small, focused, NE Alberta — treats the craft seriously without being precious about it",
-      },
-    ],
-    bars: [
-      {
-        name: "The Bye and Bye",
-        vibe: "Vegan cocktail bar on NE Alberta, hanging plants, been doing its thing since before it was trendy",
-      },
-      {
-        name: "Prost!",
-        vibe: "German beer hall on Mississippi Ave nearby, good for a group, loud in the best way",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "25–30 min by car, 35+ in rush hour via Burnside Bridge; 20 min by bike; 40 min on the 72 bus",
     faqs: [
@@ -2100,43 +1700,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["open lawn", "playground", "community garden plots"],
       },
     ],
-    restaurants: [
-      {
-        name: "Cha Cha Cha",
-        cuisine: "Mexican",
-        vibe: "On SE Division nearby, reliable Mexican, the kind of neighborhood spot that's been there so long it stopped needing to try",
-      },
-      {
-        name: "Bollywood Theater",
-        cuisine: "Indian street food",
-        vibe: "SE Division, counter service, genuinely good food, lines out the door on weekends",
-      },
-      {
-        name: "Reverend's BBQ",
-        cuisine: "BBQ/Southern",
-        vibe: "SE Milwaukie, real pit barbecue, counter order, one of Portland's better BBQ stops",
-      },
-    ],
-    coffee: [
-      {
-        name: "Stumptown Coffee",
-        vibe: "SE Belmont flagship nearby — the place that launched Portland's coffee identity, still worth going",
-      },
-      {
-        name: "Case Study Coffee",
-        vibe: "SE Grand location nearby, serious single-origin program, quieter than downtown locations",
-      },
-    ],
-    bars: [
-      {
-        name: "Horse Brass Pub",
-        vibe: "SE Belmont institution, 50-tap British-style pub, been there since 1976, wood paneling and all",
-      },
-      {
-        name: "Apex",
-        vibe: "SE Division, 50-tap bottle shop and bar, outdoor space, no food so you order in — a Portland institution",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "20–25 min by car; 25 min by bike via SE Division or Hawthorne routes; 35–40 min on the 9-Powell or 10-Harold bus",
     faqs: [
@@ -2229,43 +1795,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["open plaza", "community events space"],
       },
     ],
-    restaurants: [
-      {
-        name: "Hey Love",
-        cuisine: "Pacific Northwest/Bar",
-        vibe: "Hotel bar at The Jupiter Next, SE Foster — tropical drinks, good food, draws a citywide crowd to outer SE",
-      },
-      {
-        name: "Taqueria Los Gorditos",
-        cuisine: "Mexican",
-        vibe: "SE Division location nearby, outstanding tacos, one of Portland's best Mexican spots at any price",
-      },
-      {
-        name: "Jade Teahouse & Patisserie",
-        cuisine: "Cafe/Pastry",
-        vibe: "SE Woodstock, solid neighborhood cafe, good baked goods, not pretentious",
-      },
-    ],
-    coffee: [
-      {
-        name: "Water Avenue Coffee",
-        vibe: "SE Grand roaster, one of Portland's best — a bit of a drive from Lents but worth keeping in rotation",
-      },
-      {
-        name: "Deadstock Coffee",
-        vibe: "SE Foster area, hip hop culture and good espresso — SE Foster's contribution to Portland coffee",
-      },
-    ],
-    bars: [
-      {
-        name: "Horse Brass Pub",
-        vibe: "SE Belmont classic, technically neighboring area, but closest quality pub to Lents — 50 taps, been open since 1976",
-      },
-      {
-        name: "Apex",
-        vibe: "SE Division bottle shop and bar, 50-tap, outdoor space, a real destination from Lents on a bike",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "28 min on MAX Green Line; 25–30 min by car outside rush hour; 40+ min by car in rush hour",
     faqs: [
@@ -2364,43 +1896,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "Woodstock Wine & Deli",
-        cuisine: "Deli/Wine",
-        vibe: "SE Woodstock neighborhood institution, charcuterie and wine you don't have to overthink, been there forever",
-      },
-      {
-        name: "Gado Gado",
-        cuisine: "Indonesian",
-        vibe: "SE Division, one of Portland's best restaurants full stop — Indonesian family cooking, book ahead",
-      },
-      {
-        name: "Ava Gene's",
-        cuisine: "Vegetable-forward Italian",
-        vibe: "SE Division, James Beard recognized, vegetable-forward dinner — the kind of place you bring someone you want to impress",
-      },
-    ],
-    coffee: [
-      {
-        name: "Stumptown Coffee",
-        vibe: "SE Belmont original location, the one that started Portland's coffee reputation — small, wood-paneled, no laptop circus",
-      },
-      {
-        name: "Tails & Trails",
-        vibe: "SE Woodstock, dog-and-coffee combination shop — works better than the concept sounds, neighborhood regulars",
-      },
-    ],
-    bars: [
-      {
-        name: "Horse Brass Pub",
-        vibe: "SE Belmont institution, 50 taps, British pub character, been the neighborhood anchor since 1976",
-      },
-      {
-        name: "Backyard Social",
-        vibe: "SE Division, good cocktails, extensive backyard patio, neighborhood crowd on weeknights",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "25–30 min by car; 20–25 min by bike via SE Division or Hawthorne; 35–45 min on the 14-Hawthorne or 75-Cesar Chavez bus",
     faqs: [
@@ -2499,43 +1997,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open space", "quiet neighborhood park"],
       },
     ],
-    restaurants: [
-      {
-        name: "Foster Burger",
-        cuisine: "Burgers",
-        vibe: "SE Foster, straightforward smash burgers, been a neighborhood staple, no frills",
-      },
-      {
-        name: "Podnah's Pit",
-        cuisine: "BBQ",
-        vibe: "NE Killingsworth, a drive but Portland's most consistent Texas-style BBQ — worth keeping in the rotation",
-      },
-      {
-        name: "Taqueria Santa Cruz",
-        cuisine: "Mexican",
-        vibe: "SE Foster, cash-preferred, honest tacos at honest prices, mostly to-go",
-      },
-    ],
-    coffee: [
-      {
-        name: "Coava Coffee",
-        vibe: "SE Grand flagship — worth the drive out of the neighborhood, converted gymnasium, best espresso program in Portland",
-      },
-      {
-        name: "Guilder",
-        vibe: "SE Division, Scandinavian-influenced cafe, excellent pour-overs, destination from this neighborhood",
-      },
-    ],
-    bars: [
-      {
-        name: "Tin Shed Garden Cafe",
-        vibe: "Alberta Arts, more a restaurant than a bar but good late-night options, worth the drive north on a weekend",
-      },
-      {
-        name: "Lompoc Tavern",
-        vibe: "NW Portland pub, in-house brews, the neighborhood's approach to this is simply driving",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "30–40 min by car (highly variable with Barbur/I-5 or SE Powell); 45–55 min by bus; limited MAX access",
     faqs: [
@@ -2611,48 +2075,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["neighborhood walking path", "stream corridor", "benches"],
       },
     ],
-    restaurants: [
-      {
-        name: "Obi",
-        cuisine: "Japanese",
-        vibe: "Izakaya on SW Capitol Hwy — yakitori, sake, good for a weeknight dinner when you don't want to drive far",
-      },
-      {
-        name: "Jade Kitchen",
-        cuisine: "Chinese-American",
-        vibe: "SW Capitol Hwy, neighborhood Chinese, the kind of place regulars return to for years",
-      },
-      {
-        name: "Fat City Cafe",
-        cuisine: "Diner",
-        vibe: "SW Multnomah Blvd breakfast diner, been there since forever, order the biscuits and gravy",
-      },
-      {
-        name: "Marco's Cafe",
-        cuisine: "American",
-        vibe: "SW Multnomah Blvd, neighborhood cafe-restaurant with loyal regulars and a good weekend brunch",
-      },
-    ],
-    coffee: [
-      {
-        name: "Coffee Time",
-        vibe: "SW Capitol Hwy — neighborhood coffee spot, not trying to be anything other than functional and good",
-      },
-      {
-        name: "Marco's Cafe",
-        vibe: "Doubles as the neighborhood morning stop — espresso and breakfast on SW Multnomah Blvd",
-      },
-    ],
-    bars: [
-      {
-        name: "The Village Pub",
-        vibe: "SW Capitol Hwy, neighborhood bar, low-key, not going anywhere",
-      },
-      {
-        name: "Jade Kitchen",
-        vibe: "Has a bar side worth knowing about — quiet weeknights, good well drinks",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "20–25 min by car (35+ in rush hour on SW Barbur or SW Capitol), no meaningful transit option",
     faqs: [
@@ -2721,48 +2146,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "Ava's Kitchen",
-        cuisine: "Mexican",
-        vibe: "SW Capitol Hwy, neighborhood Mexican with a loyal following, not flashy, consistently good",
-      },
-      {
-        name: "Bridgeport Brewpub",
-        cuisine: "American / Brewpub",
-        vibe: "Short drive on SW Barbur, one of Portland's original craft beer spots, solid pub food",
-      },
-      {
-        name: "Syun Izakaya",
-        cuisine: "Japanese",
-        vibe: "Hillsboro location for the splurge, but worth knowing — excellent ramen circuit for the area",
-      },
-      {
-        name: "Thai Orchid",
-        cuisine: "Thai",
-        vibe: "SW Capitol Hwy in the town center, neighborhood Thai that's been there for years",
-      },
-    ],
-    coffee: [
-      {
-        name: "Stumptown Coffee",
-        vibe: "Close enough via SW Barbur — the Hillsdale area runs on short drives to nearby options",
-      },
-      {
-        name: "New Seasons Hillsdale",
-        vibe: "The grocery store coffee bar works well enough for weekday mornings — it's what most people actually do",
-      },
-    ],
-    bars: [
-      {
-        name: "Bridgeport Brewpub",
-        vibe: "One of Portland's original craft brewpubs on SW Barbur — the patio is the main draw in summer",
-      },
-      {
-        name: "Hillsdale Brew & Chew",
-        vibe: "SW Capitol Hwy, casual neighborhood pub, patio, not a destination bar but a solid local option",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "20–25 min by car on SW Barbur or I-5 (30–40 in rush hour), bus service on Barbur takes 40+ min",
     faqs: [
@@ -2830,48 +2216,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open lawn", "community space"],
       },
     ],
-    restaurants: [
-      {
-        name: "Ken's Artisan Pizza",
-        cuisine: "Pizza",
-        vibe: "NW 21st Ave, wood-fired, James Beard-recognized, the best pizza in Portland and most people agree",
-      },
-      {
-        name: "Paley's Place",
-        cuisine: "New American",
-        vibe: "NW 21st Ave, long-running Northwest cuisine, good for a real dinner occasion",
-      },
-      {
-        name: "Escape from New York Pizza",
-        cuisine: "Pizza",
-        vibe: "NW 23rd Ave, by the slice, open late, been on that corner for decades",
-      },
-      {
-        name: "Elephants Delicatessen",
-        cuisine: "Deli / Cafe",
-        vibe: "NW 22nd Ave, prepared foods, catering, has fed this neighborhood for 40+ years",
-      },
-    ],
-    coffee: [
-      {
-        name: "St. Honoré Boulangerie",
-        vibe: "NW 23rd Ave French bakery — croissants and espresso that make the rent worth it",
-      },
-      {
-        name: "Ken's Artisan Bakery",
-        vibe: "NW 21st Ave, opens 7am, the pastries and bread alone justify living in this neighborhood",
-      },
-    ],
-    bars: [
-      {
-        name: "Rogue Ales Public House",
-        vibe: "NW 23rd Ave, Rogue's flagship Portland spot, solid taps and a bar crowd that's been coming for years",
-      },
-      {
-        name: "Bluehour",
-        vibe: "NW 13th Ave in the Pearl edge, upscale cocktails, worth the walk if you're doing a proper evening",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "15–20 min by car (parking at destination is the issue), 25–30 min by bike (hilly), 20 min on bus (Line 15 or 77)",
     faqs: [
@@ -2938,48 +2285,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open lawn", "dog-friendly", "close-in NW Portland"],
       },
     ],
-    restaurants: [
-      {
-        name: "Ken's Artisan Pizza",
-        cuisine: "Pizza",
-        vibe: "NW 21st Ave, within easy walking distance — Portland's best pizza, James Beard confirmed",
-      },
-      {
-        name: "Luce",
-        cuisine: "Italian",
-        vibe: "NW 21st Ave, neighborhood Italian, solid pasta and wine list without the occasion pressure",
-      },
-      {
-        name: "Tasty n Alder",
-        cuisine: "American",
-        vibe: "Downtown, short MAX ride or 20-min walk — all-day menu, one of Portland's best all-around",
-      },
-      {
-        name: "Escape from New York Pizza",
-        cuisine: "Pizza",
-        vibe: "NW 23rd, by the slice, open late, in walking range from most Slabtown blocks",
-      },
-    ],
-    coffee: [
-      {
-        name: "St. Honoré Boulangerie",
-        vibe: "NW 23rd Ave French bakery — the easiest commute to a good croissant you will ever have",
-      },
-      {
-        name: "Barista",
-        vibe: "NW 23rd area, precise single-origin espresso, minimal aesthetic, for when you're taking coffee seriously",
-      },
-    ],
-    bars: [
-      {
-        name: "Bullards",
-        vibe: "NW 23rd Ave area, solid neighborhood bar without the Pearl District price tag",
-      },
-      {
-        name: "Rogue Ales Public House",
-        vibe: "NW 23rd Ave, reliable taps and a bar that's been the NW Portland standard for years",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "10 min on MAX Blue/Red from NW 23rd & Lovejoy, 15 min by bike, 15–20 min by car",
     faqs: [
@@ -3048,48 +2356,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["running and walking trail", "open lawn", "connects to Terwilliger Blvd trail"],
       },
     ],
-    restaurants: [
-      {
-        name: "McCormick & Schmick's Harborside",
-        cuisine: "Seafood",
-        vibe: "SW Harbor Drive nearby, the kind of place you take out-of-town visitors, reliably good seafood",
-      },
-      {
-        name: "Jake's Famous Crawfish",
-        cuisine: "Seafood",
-        vibe: "SW 12th Ave, been here since 1892, classic Portland before Portland was cool — walkable from Goose Hollow",
-      },
-      {
-        name: "Luce",
-        cuisine: "Italian",
-        vibe: "Short walk into NW Portland, neighborhood Italian without the occasion pressure",
-      },
-      {
-        name: "Southpark Seafood",
-        cuisine: "Seafood",
-        vibe: "SW Salmon, downtown-edge location, good wine list and fish, worth the 10-minute walk on a nice evening",
-      },
-    ],
-    coffee: [
-      {
-        name: "Coffeehouse Northwest",
-        vibe: "NW 23rd area, a short walk north — one of Portland's better independent espresso bars",
-      },
-      {
-        name: "Barista",
-        vibe: "NW 23rd, precise espresso, for when the neighborhood coffee order matters",
-      },
-    ],
-    bars: [
-      {
-        name: "Tugboat Brewing",
-        vibe: "SW Ankeny, tiny brewpub near downtown, beers brewed in the back, regulars-only feel after a few visits",
-      },
-      {
-        name: "Bailey's Taproom",
-        vibe: "SW Broadway, 20+ rotating taps, no food, the kind of place you go to actually drink good beer",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "10 min on foot, 5 min on MAX Blue/Red from SW Jefferson, 10 min by bike",
     faqs: [
@@ -3152,19 +2421,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["open lawn", "playground", "picnic shelters", "walking paths"],
       },
     ],
-    restaurants: [
-      { name: "Tasty n Daughters", cuisine: "American", vibe: "N Williams corridor — all-day breakfast, reservation worth it on weekends, one of Portland's better morning spots" },
-      { name: "Prost!", cuisine: "German", vibe: "N Mississippi Ave German beer hall, solid sausages and a great patio in summer" },
-      { name: "Gado Gado", cuisine: "Indonesian", vibe: "N Mississippi Ave, one of Portland's best tables regardless of neighborhood" },
-    ],
-    coffee: [
-      { name: "Stumptown Coffee", vibe: "N Williams location nearby — the standard Portland morning stop" },
-      { name: "Water Avenue Coffee", vibe: "Worth the short drive, one of the better roasters in the city" },
-    ],
-    bars: [
-      { name: "Prost!", vibe: "N Mississippi Ave beer hall — German imports on draft, long tables, good in any weather" },
-      { name: "The Bye and Bye", vibe: "NE Alberta — short bike ride, craft cocktails, the neighborhood bar when you want something better than a dive" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "18–22 min on Interstate MAX, 20 min by car, 25 min by bike",
     faqs: [
       {
@@ -3226,19 +2485,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["sunken rose garden", "community center", "playground", "spray pad", "tennis courts"],
       },
     ],
-    restaurants: [
-      { name: "Gracie's Apizza", cuisine: "Pizza", vibe: "N Dekum — New Haven-style thin crust, the neighborhood dinner answer" },
-      { name: "Tasty n Daughters", cuisine: "American", vibe: "N Williams nearby, all-day breakfast, one of the better morning restaurants in North Portland" },
-      { name: "Mississippi Pizza", cuisine: "Pizza", vibe: "N Mississippi Ave, casual, live music some nights, good for a weeknight out" },
-    ],
-    coffee: [
-      { name: "Never Coffee Lab", vibe: "Short ride to N Alberta — serious espresso, no fuss" },
-      { name: "Albina Press", vibe: "N Williams corridor — reliable neighborhood coffee" },
-    ],
-    bars: [
-      { name: "Ecliptic Brewing", vibe: "N Overlook Blvd — good house beers, food that works, neighborhood brewery crowd" },
-      { name: "Prost!", vibe: "N Mississippi Ave, German beer hall, easy bike ride from Piedmont" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "22 min by car, 30 min by bike, 35 min on bus to Interstate MAX connection",
     faqs: [
       {
@@ -3301,19 +2550,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["bluff walking trails", "athletic fields", "river views", "open campus access"],
       },
     ],
-    restaurants: [
-      { name: "Smith BBQ", cuisine: "BBQ", vibe: "N Lombard, the real answer to where to get brisket in North Portland" },
-      { name: "Tulip Bakery", cuisine: "Bakery / Cafe", vibe: "N Lombard, neighborhood breakfast spot, regulars on a first-name basis" },
-      { name: "Gracie's Apizza", cuisine: "Pizza", vibe: "Short drive to N Dekum — New Haven-style thin crust, worth the trip" },
-    ],
-    coffee: [
-      { name: "Posies Cafe", vibe: "N Lombard — the neighborhood morning stop, bakery cafe, good for a slower start" },
-      { name: "Stumptown Coffee", vibe: "Short drive to several locations, no dedicated neighborhood spot" },
-    ],
-    bars: [
-      { name: "McMenamins St. Johns Pub & Movie Theater", vibe: "8203 N Ivanhoe — the closest real destination bar, 1913 building, second-run movies" },
-      { name: "The Standard", vibe: "N Denver Ave, neighborhood bar, low-key and unpretentious" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25 min by car, 35 min by bus (Line 40 or 75), 30 min by bike",
     faqs: [
       {
@@ -3376,19 +2615,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["swimming pool", "playground", "picnic areas", "rose garden", "open lawn"],
       },
     ],
-    restaurants: [
-      { name: "Tasty n Daughters", cuisine: "American", vibe: "N Williams corridor — all-day breakfast, one of the better morning destinations in North Portland" },
-      { name: "Smith BBQ", cuisine: "BBQ", vibe: "N Lombard, wood-smoked brisket, worth the short drive" },
-      { name: "Prost!", cuisine: "German", vibe: "N Mississippi Ave, easy drive south, German beer hall with good sausages" },
-    ],
-    coffee: [
-      { name: "Posies Cafe", vibe: "N Lombard — the closest real neighborhood cafe, good for a morning stop" },
-      { name: "Stumptown Coffee", vibe: "Short drive to multiple locations — there's no dedicated neighborhood coffee shop" },
-    ],
-    bars: [
-      { name: "Ecliptic Brewing", vibe: "N Overlook Blvd — short drive south, good house beers, neighborhood brewery crowd" },
-      { name: "McMenamins St. Johns Pub", vibe: "N Ivanhoe in St. Johns, 1913 building, the closest destination bar" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25 min by car, 35 min by bike via N Willamette Blvd path, 40 min by bus",
     faqs: [
       {
@@ -3450,20 +2679,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["basketball courts", "playground", "open lawn", "picnic area"],
       },
     ],
-    restaurants: [
-      { name: "Gado Gado", cuisine: "Indonesian", vibe: "N Mississippi Ave — one of Portland's best restaurants, full stop. Malaysian-Indonesian, reservation recommended" },
-      { name: "Tasty n Daughters", cuisine: "American", vibe: "N Williams, all-day breakfast, the neighborhood morning spot with actual buzz" },
-      { name: "Prost!", cuisine: "German", vibe: "N Mississippi Ave German beer hall — sausages, imported beers, big patio, a neighborhood anchor since 2005" },
-      { name: "Mississippi Pizza", cuisine: "Pizza", vibe: "N Mississippi Ave, casual pizza and live music, been here long enough to earn its place" },
-    ],
-    coffee: [
-      { name: "Albina Press", vibe: "N Williams corridor — solid neighborhood coffee, been serving this part of Portland for years" },
-      { name: "Coava Coffee", vibe: "Short bike ride south, one of Portland's best roasters for when the morning calls for something more serious" },
-    ],
-    bars: [
-      { name: "Prost!", vibe: "N Mississippi Ave — German imports on draft, long communal tables, the go-to neighborhood beer bar" },
-      { name: "The Bye and Bye", vibe: "NE Alberta — craft cocktails, hanging plants, easy bike ride, the elevated option nearby" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20 min by car, 18 min by bike via N Williams corridor, 22 min on Interstate MAX",
     faqs: [
       {
@@ -3525,19 +2743,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "basketball courts", "open lawn"],
       },
     ],
-    restaurants: [
-      { name: "Gado Gado", cuisine: "Indonesian", vibe: "Short bike ride west to N Mississippi — one of Portland's best restaurants and the obvious answer for a nice dinner" },
-      { name: "Tasty n Daughters", cuisine: "American", vibe: "N Williams corridor — all-day breakfast, neighborhood institution, easy bike access" },
-      { name: "Gracie's Apizza", cuisine: "Pizza", vibe: "N Dekum, New Haven-style thin crust, the neighborhood pizza answer" },
-    ],
-    coffee: [
-      { name: "Albina Press", vibe: "N Williams corridor — reliable neighborhood coffee, steady crowd from the bike lane regulars" },
-      { name: "Never Coffee Lab", vibe: "Short ride to N Alberta — serious espresso, no fuss, worth the extra five minutes" },
-    ],
-    bars: [
-      { name: "Prost!", vibe: "N Mississippi Ave, short bike ride — German beer hall, the obvious answer when you want a beer and a seat" },
-      { name: "Ecliptic Brewing", vibe: "N Overlook Blvd nearby — solid house beers, food that works, good for a weeknight" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20 min by car, 20 min by bike via N Williams, 25 min on Interstate MAX",
     faqs: [
       {
@@ -3599,19 +2807,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["sunken rose garden", "community center", "spray pad", "tennis courts", "short bike ride south"],
       },
     ],
-    restaurants: [
-      { name: "Gracie's Apizza", cuisine: "Pizza", vibe: "N Dekum — New Haven-style thin crust, the local dinner answer without driving far" },
-      { name: "Po'Shines Café de la Soul", cuisine: "Soul Food", vibe: "N Denver Ave in Kenton — fried chicken and greens, worth the short drive" },
-      { name: "Tasty n Daughters", cuisine: "American", vibe: "N Williams corridor — all-day breakfast, reasonable bike ride, one of North Portland's better mornings" },
-    ],
-    coffee: [
-      { name: "Never Coffee Lab", vibe: "Short ride to N Alberta — serious espresso, the destination option when you want quality" },
-      { name: "Albina Press", vibe: "N Williams corridor, accessible by bike, solid neighborhood roaster" },
-    ],
-    bars: [
-      { name: "Ecliptic Brewing", vibe: "N Overlook Blvd — good house beers, pizza that works, the neighborhood brewery for a weeknight" },
-      { name: "Prost!", vibe: "N Mississippi Ave, easy bike ride south — German beer hall, big patio, the destination bar nearby" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25 min on Interstate MAX Yellow Line, 22 min by car, 25 min by bike",
     faqs: [
       {
@@ -3711,48 +2909,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["walking paths", "open lawn", "community gathering space"],
       },
     ],
-    restaurants: [
-      {
-        name: "Swagat Indian Cuisine",
-        cuisine: "Indian",
-        vibe: "Long-running Indian restaurant on SW Canyon Road, buffet lunch draws the Intel crowd",
-      },
-      {
-        name: "Lela's Bistro",
-        cuisine: "American",
-        vibe: "Pacific NW ingredients, local wine list, Cedar Hills area — date night without driving to Portland",
-      },
-      {
-        name: "Pho Van",
-        cuisine: "Vietnamese",
-        vibe: "Reliable pho on TV Highway, busy at lunch, fast and honest",
-      },
-      {
-        name: "Sayler's Old Country Kitchen",
-        cuisine: "Steakhouse",
-        vibe: "Old-school steakhouse institution, been here since 1946, enormous portions",
-      },
-    ],
-    coffee: [
-      {
-        name: "Insomnia Coffee",
-        vibe: "Local mini-chain with a Beaverton location — better than the chains, actual espresso standards",
-      },
-      {
-        name: "Blackbird Coffee",
-        vibe: "Small neighborhood cafe near Beaverton Central MAX, regular customer base, no laptop crowd",
-      },
-    ],
-    bars: [
-      {
-        name: "Thirsty Lion Gastropub",
-        vibe: "Cedar Hills Crossing location, big selection, sports on TV — suburban gastropub done well",
-      },
-      {
-        name: "Beaverton Ales",
-        vibe: "Local tap room with rotating Oregon craft beers, low-key weekend spot",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "35–40 min on MAX Blue or Red line; 25–35 min by car in normal traffic, 45–55 min in rush hour via Hwy 26",
     faqs: [
@@ -3856,48 +3015,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "The Venetian Theatre Café",
-        cuisine: "American",
-        vibe: "Inside the 1921 theater on E Main Street — dinner and a movie without driving to Portland",
-      },
-      {
-        name: "Muchas Gracias",
-        cuisine: "Mexican",
-        vibe: "24-hour Mexican fast food with a loyal following, practical and consistent",
-      },
-      {
-        name: "Akadi Restaurant",
-        cuisine: "West African",
-        vibe: "West African cuisine on NE Cornell Road, diverse Hillsboro dining scene on display",
-      },
-      {
-        name: "Old Town Kitchen",
-        cuisine: "American",
-        vibe: "Downtown Hillsboro breakfast spot, packed on weekends, worth the wait",
-      },
-    ],
-    coffee: [
-      {
-        name: "Public Coast Brewing",
-        vibe: "Hillsboro taproom that also does solid coffee service, mixed crowd of tech workers and locals",
-      },
-      {
-        name: "Barley Pod Coffee",
-        vibe: "Small independent coffee shop near the MAX line, no-frills, consistent espresso",
-      },
-    ],
-    bars: [
-      {
-        name: "McMenamins Cornelius Pass Roadhouse",
-        vibe: "McMenamins compound in a historic farmstead — outdoor seating, multiple bars, family-friendly early",
-      },
-      {
-        name: "Plank Town Brewing",
-        vibe: "Hillsboro brewpub, rotating taps, neighborhood crowd, sports on in the corner",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "45 min on MAX Blue line; 30–40 min by car to Portland downtown in normal traffic, 55–70 min in rush hour via Hwy 26",
     faqs: [
@@ -4002,48 +3122,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "Bridgeport Brewing",
-        cuisine: "Brewpub",
-        vibe: "Washington Square area location, reliable pub food, good for groups after shopping",
-      },
-      {
-        name: "Tigard Harvest Fresh",
-        cuisine: "American",
-        vibe: "Neighborhood grocery deli that's become a lunch institution among locals",
-      },
-      {
-        name: "Gado Gado",
-        cuisine: "Indonesian",
-        vibe: "Portland-famous Indonesian spot with a Tigard outpost — worth the trip specifically",
-      },
-      {
-        name: "El Sol de Mexico",
-        cuisine: "Mexican",
-        vibe: "Long-running Mexican restaurant on Pacific Highway, lunch regulars and families",
-      },
-    ],
-    coffee: [
-      {
-        name: "Case Study Coffee",
-        vibe: "Serious Portland roaster with a Tigard Triangle location — best coffee in the city limits",
-      },
-      {
-        name: "Coffee Tree",
-        vibe: "Local drive-through coffee stand with a following, practical morning stop",
-      },
-    ],
-    bars: [
-      {
-        name: "Tigard Taphouse",
-        vibe: "Neighborhood bar with Oregon taps and no pretense, comfortable for regulars",
-      },
-      {
-        name: "Claim 52 Brewing",
-        vibe: "Eugene brewery with a Tigard taproom, good rotating selection, family-friendly earlier in the evening",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "20–30 min by car via Barbur Blvd (I-5) in normal traffic, 40–50 min in rush hour; no direct MAX — bus line 12 runs to downtown via Barbur in 45–55 min",
     faqs: [
@@ -4137,48 +3218,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "Bridgewater Bar & Grill",
-        cuisine: "American",
-        vibe: "On the commons lake, casual seafood and American fare, best patio in Tualatin on a warm evening",
-      },
-      {
-        name: "Sho Japanese Cuisine",
-        cuisine: "Japanese",
-        vibe: "Solid sushi and Japanese comfort food, consistent and popular with the evening crowd",
-      },
-      {
-        name: "McMenamins Tualatin",
-        cuisine: "Pub",
-        vibe: "McMenamins compound, full menu, family-friendly earlier in the night, local draft beers",
-      },
-      {
-        name: "El Sombrero",
-        cuisine: "Mexican",
-        vibe: "Neighborhood Mexican restaurant, loaded plates, cash-preferred lunch spot",
-      },
-    ],
-    coffee: [
-      {
-        name: "Dutch Bros Coffee",
-        vibe: "Drive-through institution for the south suburbs — fast, sweet, everyone has their order",
-      },
-      {
-        name: "Tualatin Coffee House",
-        vibe: "Small independent shop near the commons, regular customer base, reliable espresso",
-      },
-    ],
-    bars: [
-      {
-        name: "Inn at the Commons",
-        vibe: "Hotel bar on the lake — quieter, good for a catch-up conversation, unexpected setting for a suburb",
-      },
-      {
-        name: "Hopworks Urban Brewery",
-        vibe: "Tualatin location of the Portland organic brewery — good food, family-friendly, busy on weekends",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "25–35 min by car via I-5 in normal traffic, 45–60 min in rush hour; no direct MAX — commuter bus takes 55–65 min to downtown Portland",
     faqs: [
@@ -4246,43 +3288,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["baseball diamonds", "soccer fields", "concessions", "bleachers"],
       },
     ],
-    restaurants: [
-      {
-        name: "Merchant's Bar & Grill",
-        cuisine: "American",
-        vibe: "Old Town Sherwood anchor — burgers, salads, a full bar, and outdoor seating in good weather",
-      },
-      {
-        name: "McMenamins Sherwood",
-        cuisine: "American",
-        vibe: "Reliable McMenamins formula in a historic building on Railroad Street — pub food, house beer",
-      },
-      {
-        name: "Koi Fusion",
-        cuisine: "Korean-Mexican",
-        vibe: "Fast-casual Korean-Mexican on Tualatin-Sherwood Road — solid for a quick lunch",
-      },
-    ],
-    coffee: [
-      {
-        name: "Human Bean Sherwood",
-        vibe: "Drive-through coffee chain that actually does the job — faster than a sit-down cafe on school mornings",
-      },
-      {
-        name: "Dutch Bros Coffee",
-        vibe: "The line at Tualatin-Sherwood Road is long for a reason — consistent and fast",
-      },
-    ],
-    bars: [
-      {
-        name: "Merchant's Bar & Grill",
-        vibe: "The neighborhood bar for Old Town Sherwood — approachable, not a scene",
-      },
-      {
-        name: "McMenamins Sherwood",
-        vibe: "House-brewed ales, full menu, families and adults both — the 6pm crowd is mostly parents who just left a school event",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "40–55 min by car via 99W through Tigard (longer in rush hour); 90+ min by TriMet bus to MAX to downtown; no light rail",
     faqs: [
       {
@@ -4348,43 +3356,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["walking trails", "wetland views", "benches", "off-leash dog area"],
       },
     ],
-    restaurants: [
-      {
-        name: "Bugatti's Ristorante",
-        cuisine: "Italian",
-        vibe: "Long-running Italian on Old Wilsonville Road — white tablecloths, good pasta, a local institution",
-      },
-      {
-        name: "Opus Creek Brewing",
-        cuisine: "American",
-        vibe: "Wilsonville's craft brewery — brick interior, solid pub food, neighborhood regulars on weekday evenings",
-      },
-      {
-        name: "Thoa's Restaurant",
-        cuisine: "Thai/Vietnamese",
-        vibe: "Family-owned spot on Town Center Loop — reliable pho and pad thai, good lunch option",
-      },
-    ],
-    coffee: [
-      {
-        name: "Beanware Coffee",
-        vibe: "Local Wilsonville coffee shop in Town Center — actual espresso, laptop-friendly tables",
-      },
-      {
-        name: "Starbucks (Wilsonville Town Center)",
-        vibe: "Predictable but well-placed near the WES station — useful for catching the 7:14 train",
-      },
-    ],
-    bars: [
-      {
-        name: "Opus Creek Brewing",
-        vibe: "The default answer for a beer in Wilsonville — house-brewed, no pretense, good patio when the weather cooperates",
-      },
-      {
-        name: "McMenamins Old Church & Pub",
-        vibe: "McMenamins presence in a renovated space — live music occasionally, house beer, family-friendly early and bar-focused late",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "55–70 min via WES Commuter Rail + MAX transfer at Beaverton; 35–45 min by car on I-5 in light traffic (longer in peak hours)",
     faqs: [
       {
@@ -4451,43 +3425,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["swimming beach", "boat launch", "fishing", "cycling loop", "camping", "picnic areas"],
       },
     ],
-    restaurants: [
-      {
-        name: "Maggie's Buns",
-        cuisine: "Cafe/Diner",
-        vibe: "Beloved Forest Grove breakfast spot on Pacific Avenue — lines on weekend mornings, large portions, cash-friendly",
-      },
-      {
-        name: "Taqueria El Cabrito",
-        cuisine: "Mexican",
-        vibe: "Longtime taqueria downtown — no-frills, authentic, one of the better cheap meals in Washington County",
-      },
-      {
-        name: "Boas Tasting Room",
-        cuisine: "Wine bar",
-        vibe: "Small tasting room in the downtown core — local Tualatin Valley AVA wines, knowledgeable staff, weekend afternoons",
-      },
-    ],
-    coffee: [
-      {
-        name: "Coffee Mill",
-        vibe: "Pacific University-adjacent coffee shop — student-heavy during the week, relaxed on weekends",
-      },
-      {
-        name: "Human Bean Forest Grove",
-        vibe: "Drive-through on the commercial strip — quick, consistent, part of the morning routine for commuters heading east on Hwy 8",
-      },
-    ],
-    bars: [
-      {
-        name: "Bier Stein Forest Grove",
-        vibe: "Craft beer tap room with rotating Pacific Northwest selections — laid-back, wood interior, good for a weeknight beer",
-      },
-      {
-        name: "McMenamins Grand Lodge",
-        vibe: "Renovated Masonic lodge on Pac Ave with multiple bars, a soaking pool, gardens, and hotel rooms — biggest nightlife anchor in Forest Grove",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "50–70 min by car via Hwy 8 to Hwy 26 (longer in peak traffic); 75–90 min by TriMet Line 57 to Hillsboro MAX station to downtown",
     faqs: [
       {
@@ -4552,43 +3492,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["Tualatin River access", "walking trails", "picnic shelters", "rose garden"],
       },
     ],
-    restaurants: [
-      {
-        name: "Taqueria Mi Tierra",
-        cuisine: "Mexican",
-        vibe: "Family-run taqueria on TV Hwy — tortas, carnitas, and birria that hold up to anything in the metro area",
-      },
-      {
-        name: "Los Dos Amigos",
-        cuisine: "Mexican",
-        vibe: "Casual Mexican restaurant near the Adair Street corridor — sit-down, full menu, good for families",
-      },
-      {
-        name: "Shari's of Hillsboro (nearby)",
-        cuisine: "American Diner",
-        vibe: "A few minutes east on TV Hwy — 24-hour diner option when Cornelius's thin commercial strip comes up short",
-      },
-    ],
-    coffee: [
-      {
-        name: "Human Bean (Hillsboro, 10 min east)",
-        vibe: "Cornelius doesn't have its own independent coffee shops — the Human Bean on TV Hwy in Hillsboro is the practical answer",
-      },
-      {
-        name: "Dutch Bros (Hillsboro, TV Hwy)",
-        vibe: "Five-minute drive east — the standard west-side morning stop for many Cornelius commuters heading toward Hillsboro",
-      },
-    ],
-    bars: [
-      {
-        name: "Cornelius Pass Roadhouse (McMenamins, Hillsboro)",
-        vibe: "Technically in Hillsboro but the most identifiable local institution named after this area — historic farmhouse, outdoor grounds, McMenamins beer and spirits",
-      },
-      {
-        name: "TV Hwy Tavern",
-        vibe: "Straightforward neighborhood tavern on Tualatin Valley Highway — pool table, cold beer, no frills",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "35–45 min by car to downtown Portland via Hwy 26; 70–80 min by TriMet Line 57 to Hillsboro MAX then Blue Line to downtown; 10–15 min to Hillsboro tech corridor",
     faqs: [
       {
@@ -4655,34 +3561,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["hiking trails", "old-growth forest", "nature center", "equestrian trails"],
       },
     ],
-    restaurants: [
-      {
-        name: "Tucci",
-        cuisine: "Italian",
-        vibe: "Upscale but not stiff — handmade pasta, good wine list, a real neighborhood restaurant on A Ave",
-      },
-      {
-        name: "Riccardo's Ristorante",
-        cuisine: "Italian",
-        vibe: "Long-running, old-school service, the kind of place Lake Oswego regulars have been going for 20 years",
-      },
-      {
-        name: "Red Rock",
-        cuisine: "American",
-        vibe: "Consistently busy, beer and burgers, accessible price point in an otherwise pricey downtown",
-      },
-    ],
-    coffee: [
-      { name: "Coffee House Five", vibe: "Local independent on A Ave, reliable espresso, neighborhood regulars" },
-      {
-        name: "Starbucks Reserve — Lake Oswego",
-        vibe: "Predictable, but busy — there's one at every entry point to the city for a reason",
-      },
-    ],
-    bars: [
-      { name: "Lake Theater & Cafe", vibe: "Movie theater with a bar — Lake Oswego's version of a neighborhood pub" },
-      { name: "Red Rock", vibe: "Doubles as the main bar scene downtown, especially weekends" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20–30 min by car off-peak, 35–50 in rush hour via Hwy 43 or I-5; no MAX, bus to Barbur TC available",
     faqs: [
       {
@@ -4748,34 +3629,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["forested hiking", "creek access", "natural area", "unpaved trails"],
       },
     ],
-    restaurants: [
-      {
-        name: "Bugatti's Ristorante",
-        cuisine: "Italian",
-        vibe: "Upscale date-night in West Linn — pasta and seafood, long-running local institution",
-      },
-      {
-        name: "Abella Kitchen + Bar",
-        cuisine: "American",
-        vibe: "Newer spot, dinner-focused, reliable go-to for the Bolton Hill crowd",
-      },
-      {
-        name: "The Dalles Restaurant",
-        cuisine: "American",
-        vibe: "Casual, family-friendly, long-time local spot in the Willamette neighborhood",
-      },
-    ],
-    coffee: [
-      { name: "Café Delirium", vibe: "Local coffee shop in the Willamette neighborhood, the go-to for morning regulars" },
-      { name: "Stumptown Coffee (Willamette area)", vibe: "Reliable Pacific Northwest standard" },
-    ],
-    bars: [
-      {
-        name: "Pete's Bar & Grill",
-        vibe: "Unpretentious neighborhood bar, West Linn's version of a local dive, sports on TV",
-      },
-      { name: "Abella Kitchen + Bar", vibe: "Doubles as the evening drinks spot for the neighborhood" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25–35 min by car via I-205; no light rail; limited bus service",
     faqs: [
       {
@@ -4836,31 +3692,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["historic site", "walking paths", "educational exhibits", "open grounds"],
       },
     ],
-    restaurants: [
-      {
-        name: "McMenamins Hotel Oregon",
-        cuisine: "American",
-        vibe: "Historic hotel bar and restaurant on the upper bluff, a genuine Oregon institution",
-      },
-      {
-        name: "Beavercreek Bar & Grill",
-        cuisine: "American",
-        vibe: "Long-running local spot, relaxed, sports-bar adjacent",
-      },
-      {
-        name: "La Poblanita",
-        cuisine: "Mexican",
-        vibe: "Consistent, no-frills tacos and plates — the kind of place locals go on a weeknight",
-      },
-    ],
-    coffee: [
-      { name: "Rivershore Coffee", vibe: "Local independent, views toward the river, reliable morning spot" },
-      { name: "Dutch Bros (Main St)", vibe: "Drive-through, fast, crowded — the practical choice for many commuters" },
-    ],
-    bars: [
-      { name: "McMenamins Hotel Oregon Pub", vibe: "Rooftop bar in the summer, historic hotel setting, reliably good" },
-      { name: "Oregon City Brewing", vibe: "Taproom with local beers, casual, often has live music on weekends" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "30–40 min by car; bus to MAX Park Ave terminus then rail to downtown (~55–65 min total)",
     faqs: [
       {
@@ -4922,31 +3756,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["sports fields", "playground", "picnic areas", "community events space"],
       },
     ],
-    restaurants: [
-      {
-        name: "Wy'East Pizza",
-        cuisine: "Pizza",
-        vibe: "Wood-fired, local ingredients, the restaurant that put downtown Milwaukie on the map",
-      },
-      {
-        name: "The Railyard",
-        cuisine: "Food cart pod",
-        vibe: "Rotating carts, outdoor seating, casual and seasonal — good for a weekend lunch",
-      },
-      {
-        name: "Casa Colima",
-        cuisine: "Mexican",
-        vibe: "Longstanding Milwaukie Mexican restaurant, family-run, consistently good",
-      },
-    ],
-    coffee: [
-      { name: "Kokiyo Teriyaki & Espresso", vibe: "Unpretentious, quick, the working neighborhood's coffee stop" },
-      { name: "Milwaukie Coffee", vibe: "Small local shop near downtown, regulars-only feel" },
-    ],
-    bars: [
-      { name: "Brewers Union Local 180 (Milwaukie)", vibe: "Oregon craft beer pub, comfortable, not loud" },
-      { name: "Fultano's Pizza & Pub", vibe: "Neighborhood bar with pizza — been here longer than the MAX line" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20–25 min by MAX from Park Ave Station; 10–15 min by bike via Springwater; 20 min by car off-peak",
     faqs: [
       {
@@ -5008,31 +3820,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["paved walking and biking", "multi-use paths connecting subdivisions"],
       },
     ],
-    restaurants: [
-      {
-        name: "Rock Bottom Restaurant & Brewery",
-        cuisine: "American",
-        vibe: "Sit-down chain at Clackamas Town Center — reliable, suburban, frequently busy",
-      },
-      {
-        name: "Mingo's Mexican Grill",
-        cuisine: "Mexican",
-        vibe: "Local spot near the center of Happy Valley, family-friendly, consistent",
-      },
-      {
-        name: "Thai Orchid",
-        cuisine: "Thai",
-        vibe: "Strip mall Thai — the kind of place that's actually good and becomes a regular stop",
-      },
-    ],
-    coffee: [
-      { name: "Dutch Bros (multiple locations)", vibe: "Drive-through only, dominant in this area, fast and practical" },
-      { name: "Starbucks (Sunnyside Rd)", vibe: "Suburban standard, crowded at 7:30am" },
-    ],
-    bars: [
-      { name: "Rock Bottom Brewery", vibe: "The main sit-down bar option — family restaurant that also serves beer" },
-      { name: "McMenamins Clackamas", vibe: "McMenamins outpost near the Town Center, reliable and predictable" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25–40 min by car via I-205; no light rail or meaningful transit",
     faqs: [
       {
@@ -5093,34 +3883,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["scenic river crossing", "walking area", "Willamette River views", "cyclist-accessible"],
       },
     ],
-    restaurants: [
-      {
-        name: "Canemah Brewing",
-        cuisine: "American",
-        vibe: "Local brewery with food, the anchor of Canby's downtown dining scene, solid weekend spot",
-      },
-      {
-        name: "El Tapatio",
-        cuisine: "Mexican",
-        vibe: "Long-running Canby institution, the kind of neighborhood Mexican restaurant that doesn't need to advertise",
-      },
-      {
-        name: "Abby's Legendary Pizza",
-        cuisine: "Pizza",
-        vibe: "Oregon chain, but the Canby location is a genuine local gathering spot",
-      },
-    ],
-    coffee: [
-      { name: "Dutch Bros (99E)", vibe: "Drive-through, the practical caffeine stop for most Canby commuters" },
-      { name: "Canby Coffee Company", vibe: "Local independent, downtown location, where the early risers go" },
-    ],
-    bars: [
-      { name: "Canemah Brewing", vibe: "Taproom side, relaxed, locals mix with visitors, outdoor seating in summer" },
-      {
-        name: "Horseshoe Tavern",
-        vibe: "Old-school Canby bar — pool table, regulars, no pretense, been there longer than most residents",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "35–45 min by car via Hwy 99E and I-205; car-dependent, no transit option for daily commute",
     faqs: [
       {
@@ -5186,31 +3951,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["Willamette River access", "boat ramp", "picnic tables", "fishing"],
       },
     ],
-    restaurants: [
-      {
-        name: "Recipe",
-        cuisine: "American",
-        vibe: "Serious farm-to-table cooking on First Street — the kind of restaurant that justifies the drive from Portland",
-      },
-      {
-        name: "The Painted Lady",
-        cuisine: "French-American",
-        vibe: "Special-occasion fine dining in a Victorian house — prix fixe, reservations essential, genuinely excellent",
-      },
-      {
-        name: "Subterra Restaurant",
-        cuisine: "Mediterranean",
-        vibe: "Underground wine bar and restaurant on First Street, good for dates and late dinners",
-      },
-    ],
-    coffee: [
-      { name: "Bene Coffee", vibe: "George Fox adjacent, reliable espresso, stays open late on weeknights" },
-      { name: "Chapters Books and Coffee", vibe: "Independent bookstore cafe on First Street, good for working mornings" },
-    ],
-    bars: [
-      { name: "Ghost Hill Cellars", vibe: "Tasting room in a converted industrial space, pour-your-own flights, relaxed" },
-      { name: "Subterra Wine Bar", vibe: "Curated Oregon wine list in a cellar setting, serious without being precious" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "35–55 min by car via Hwy 99W (traffic-dependent, no bypass); no practical transit option to Portland",
     faqs: [
       {
@@ -5287,31 +4030,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["aviation exhibits", "IMAX theater", "Spruce Goose display", "educational programs"],
       },
     ],
-    restaurants: [
-      {
-        name: "Nick's Italian Cafe",
-        cuisine: "Italian",
-        vibe: "James Beard-recognized institution on Third Street — minestrone, pasta, old-school service since 1977",
-      },
-      {
-        name: "Bistro Maison",
-        cuisine: "French",
-        vibe: "French country cooking in a Victorian house on Third Street — the best date-night option in Yamhill County",
-      },
-      {
-        name: "Craven Farm & Kitchen",
-        cuisine: "American",
-        vibe: "Farm-sourced, seasonal menu, the kind of place that changes with what's ready",
-      },
-    ],
-    coffee: [
-      { name: "Honest Chocolates", vibe: "Bean-to-bar chocolate and espresso on Third Street, unusual and good" },
-      { name: "Cornerstone Coffee Roasters", vibe: "Local roaster, serious about sourcing, the working-morning anchor on Third" },
-    ],
-    bars: [
-      { name: "Golden Valley Brewery", vibe: "McMinnville's original craft brewery — full menu, good house lagers, family-friendly" },
-      { name: "Pinot Quarter", vibe: "Wine bar on Third Street with strong Yamhill County pours and late-evening hours" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "50–70 min by car via Hwy 18 or 99W; no commuter transit to Portland",
     faqs: [
       {
@@ -5387,31 +4108,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["walking paths", "winery gardens", "scenic overlooks"],
       },
     ],
-    restaurants: [
-      {
-        name: "The Dundee Bistro",
-        cuisine: "Pacific Northwest",
-        vibe: "The town's main serious restaurant — wood-fired cooking, strong local wine list, the anchor of downtown Dundee dining",
-      },
-      {
-        name: "Red Hills Market",
-        cuisine: "American",
-        vibe: "Wine country deli and market on 99W — sandwiches, local provisions, casual lunch before a winery afternoon",
-      },
-      {
-        name: "The Painted Lady",
-        cuisine: "French-American",
-        vibe: "Fine dining in neighboring Newberg — prix fixe, reservations required, worth the short drive for special occasions",
-      },
-    ],
-    coffee: [
-      { name: "Red Hills Market", vibe: "Espresso and pastries alongside the deli — the morning stop for most Dundee residents" },
-      { name: "Argyle Winery Tasting Room", vibe: "Not a coffee shop, but morning winery visits with sparkling pours before 11 a.m. are a real Dundee custom" },
-    ],
-    bars: [
-      { name: "Domaine Drouhin Tasting Room", vibe: "Oregon Pinot and Chardonnay from one of the valley's most respected producers — appointment preferred" },
-      { name: "Argyle Winery", vibe: "Walk-in sparkling wine and Pinot tasting on 99W — the most accessible tasting room in the AVA" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "45–75 min by car via Hwy 99W (highly variable, especially weekends and summer); no transit option",
     faqs: [
       {
@@ -5485,31 +4184,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["hiking", "vineyard-adjacent walking routes", "rural views"],
       },
     ],
-    restaurants: [
-      {
-        name: "The Horse Radish",
-        cuisine: "Wine bar and small plates",
-        vibe: "The heart of Carlton's Main Street — cheese boards, charcuterie, serious Oregon wine list, and a room full of people who actually live here",
-      },
-      {
-        name: "Cuvée Restaurant",
-        cuisine: "Pacific Northwest",
-        vibe: "Dinner-only, farm-sourced, the most formal Carlton option — good for out-of-town guests who need a proper meal",
-      },
-      {
-        name: "Carlton Bakery",
-        cuisine: "Bakery",
-        vibe: "Morning pastries and coffee, the town's casual social anchor before the tasting rooms open",
-      },
-    ],
-    coffee: [
-      { name: "Carlton Bakery", vibe: "Drip coffee and espresso alongside fresh pastries — the default morning stop" },
-      { name: "The Horse Radish", vibe: "Opens for weekend brunch, pour-over available alongside the wine list" },
-    ],
-    bars: [
-      { name: "Carlton Winemakers Studio", vibe: "Multiple producers, one space — the original cooperative tasting room, still the most interesting pour in town" },
-      { name: "Scott Paul Wines", vibe: "Burgundy-focused Pinot in an industrial tasting room — serious and unpretentious" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "60–80 min by car via Hwy 47 north or via McMinnville/99W; no transit option to Portland",
     faqs: [
       {
@@ -5591,38 +4268,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["Columbia River views", "paved trail", "public art", "fishing pier"],
       },
     ],
-    restaurants: [
-      {
-        name: "Twigs Bistro and Martini Bar",
-        cuisine: "American",
-        vibe: "Downtown Vancouver date night anchor — better than it sounds, reliable for a weeknight out",
-      },
-      {
-        name: "The Grant House",
-        cuisine: "American",
-        vibe: "Inside the Officers Row historic district, lunch and brunch in a 19th-century Army officer's home",
-      },
-      {
-        name: "Who Song and Larry's",
-        cuisine: "Mexican",
-        vibe: "On the waterfront with Columbia River views, margaritas, and enough guac to make the bridge traffic worth it",
-      },
-      {
-        name: "WildFin American Grill",
-        cuisine: "Seafood",
-        vibe: "Waterfront location, happy hour crowd, the kind of place where a table with a river view is actually achievable",
-      },
-    ],
-    coffee: [
-      { name: "Relevant Coffee", vibe: "Third-wave downtown Vancouver, single-origins and pour-overs, regulars who work downtown" },
-      { name: "Compass Coffee", vibe: "Waterfront-adjacent, quick stop before crossing the bridge, busy on weekday mornings" },
-      { name: "Hidden River Roasters", vibe: "Local roaster with a cafe, more relaxed than downtown spots, good for a longer sit" },
-    ],
-    bars: [
-      { name: "Main Event", vibe: "Downtown dive that has outlasted several waves of redevelopment, no-pretense crowd" },
-      { name: "Loowit Brewing", vibe: "Local craft brewery with food, named for Mount St. Helens, good for a post-work pint" },
-      { name: "At the Waterfront", vibe: "Marina bar on the Columbia, boat crowd and bridge commuters in equal measure" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "25–35 min in light traffic; 50–70 min in afternoon rush hour via I-5 or I-205. Both bridges back up daily. No light rail option exists yet.",
     faqs: [
@@ -5694,36 +4342,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["quiet lake loop", "bird watching", "unpaved trails"],
       },
     ],
-    restaurants: [
-      {
-        name: "Grains of Wrath",
-        cuisine: "Brewery / American",
-        vibe: "The go-to downtown Camas spot — solid food, excellent beer list, in a restored hardware store building",
-      },
-      {
-        name: "Alma Chocolate & Cafe",
-        cuisine: "Cafe",
-        vibe: "Downtown dessert and light lunch, good for weekend browsing days when you're in the brick district",
-      },
-      {
-        name: "Niche Wine Bar",
-        cuisine: "Wine bar / Small plates",
-        vibe: "Compact downtown wine bar, good list, the kind of place that fills up on Friday nights",
-      },
-      {
-        name: "Cellar 55 Brewing",
-        cuisine: "Brewery",
-        vibe: "Family-friendly tap room east of downtown, larger space, good for groups",
-      },
-    ],
-    coffee: [
-      { name: "Caffe Piccolo", vibe: "Downtown Camas classic, espresso bar in the brick district, neighborhood regulars" },
-      { name: "The Human Bean", vibe: "Drive-through chain with a Camas location, practical for the morning bridge run" },
-    ],
-    bars: [
-      { name: "Grains of Wrath", vibe: "Doubles as the main bar — the tap list is the reason to stay after dinner" },
-      { name: "Cellar 55 Brewing", vibe: "More a taproom than a bar, but that's not a complaint" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "45–60 min to downtown Portland in afternoon peak via I-205 South. Highway 14 west to I-205 is the standard route. No transit option that makes commuting practical.",
     faqs: [
@@ -5794,31 +4415,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["disc golf", "water park", "sports fields", "camping"],
       },
     ],
-    restaurants: [
-      {
-        name: "The Jealous Monk",
-        cuisine: "Brewery / Pub",
-        vibe: "Washougal's main brewery and gathering spot, good tap list, unpretentious crowd",
-      },
-      {
-        name: "Mike's Bar & Grill",
-        cuisine: "American",
-        vibe: "Local diner-bar that has been feeding the east county for decades, breakfast all day",
-      },
-      {
-        name: "Cape Horn Pub",
-        cuisine: "Pub food",
-        vibe: "Neighborhood pub named for the nearby viewpoint, good for a post-hike meal",
-      },
-    ],
-    coffee: [
-      { name: "Café Nola", vibe: "Local coffee shop downtown, relaxed morning vibe, knows the regulars by order" },
-      { name: "Dutch Bros Coffee", vibe: "Drive-through on the way to the highway, the practical choice for early morning bridge runs" },
-    ],
-    bars: [
-      { name: "The Jealous Monk", vibe: "Craft beer anchor for the city, patio open when the weather cooperates" },
-      { name: "Mike's Bar & Grill", vibe: "Old-school bar that comes with the diner, cash-friendly crowd" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "50–65 min on a good morning via Hwy 14 to I-205 south. Afternoon peak runs 60–80 minutes. Some residents route via Bridge of the Gods to I-84 west — longer mileage, sometimes faster.",
     faqs: [
@@ -5886,36 +4485,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["East Fork Lewis River swimming", "camping", "trails", "picnic shelters", "dog-friendly"],
       },
     ],
-    restaurants: [
-      {
-        name: "McMenamins on the Columbia",
-        cuisine: "American / Brewery",
-        vibe: "The most recognizable name in north county, reliable McMenamins format — good enough, never surprising",
-      },
-      {
-        name: "Casa Ramos",
-        cuisine: "Mexican",
-        vibe: "Family Mexican restaurant on Main Street, weekend crowds from the surrounding rural areas",
-      },
-      {
-        name: "Pizza Schmizza",
-        cuisine: "Pizza",
-        vibe: "Local pizza chain presence, practical family dinner option",
-      },
-      {
-        name: "Knead Bakery",
-        cuisine: "Bakery / Cafe",
-        vibe: "Downtown Battle Ground breakfast and lunch stop, Saturday farmers market adjacent",
-      },
-    ],
-    coffee: [
-      { name: "Dutch Bros Coffee", vibe: "Drive-through on SR-503, the practical pre-commute option for early departures toward Portland" },
-      { name: "Main Street Coffee", vibe: "Downtown cafe, slower pace, better for a work-from-home morning than a commuter run" },
-    ],
-    bars: [
-      { name: "Battle Ground Pub", vibe: "Low-key neighborhood bar, sports on the TV, north county crowd" },
-      { name: "Smokey's Tavern", vibe: "Old-school tavern, the kind of place that's been there through multiple rounds of city growth" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "45–75 min to downtown Portland on a normal day via I-5 south or SR-503 to I-205. 90+ minutes is possible on days with bridge incidents. No practical transit alternative.",
     faqs: [
@@ -5986,30 +4558,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["disc golf", "open field", "neighborhood access"],
       },
     ],
-    restaurants: [
-      {
-        name: "Captain's Table",
-        cuisine: "American",
-        vibe: "Family-friendly Ridgefield staple, the kind of place that fills up after high school games",
-      },
-      {
-        name: "Hazel Dell Thai Restaurant",
-        cuisine: "Thai",
-        vibe: "Short drive south toward Vancouver, consistent and reliable for when Ridgefield's limited options run thin",
-      },
-      {
-        name: "Pioneer Pizza",
-        cuisine: "Pizza",
-        vibe: "Local pizza in a city that doesn't yet have a full restaurant district — practical and liked by the regulars",
-      },
-    ],
-    coffee: [
-      { name: "Dutch Bros Coffee", vibe: "Drive-through on Pioneer Street, the commuter morning anchor before heading to I-5" },
-      { name: "Ridgefield Coffee Company", vibe: "Small local cafe, relaxed atmosphere, better suited to work-from-home mornings than commute days" },
-    ],
-    bars: [
-      { name: "Ridgefield Pub", vibe: "Neighborhood bar with a small-town feel — limited options, loyal regulars, unpretentious" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "35–45 min to downtown Portland on a good morning via I-5 south. Afternoon peak runs 55–70 minutes. No transit option for Portland commuters.",
     faqs: [
@@ -6103,49 +4654,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "New Seasons Market Café",
-        cuisine: "Deli / Prepared Foods",
-        vibe:
-          "The Town Center anchor — grab lunch from the hot bar, which is better than it sounds",
-      },
-      {
-        name: "Beaverton Bakery",
-        cuisine: "Bakery",
-        vibe:
-          "Short drive down Cornell, been making custom cakes and pastries since 1948",
-      },
-      {
-        name: "Gustav's Pub & Grill",
-        cuisine: "German-American",
-        vibe:
-          "Cedar Mill neighbor — big portions, solid bar, reliably packed on weekend evenings",
-      },
-    ],
-    coffee: [
-      {
-        name: "Coffee House Five",
-        vibe:
-          "Small independent shop in the Forest Heights Town Center, locals run into each other here on weekday mornings",
-      },
-      {
-        name: "Starbucks at New Seasons",
-        vibe:
-          "Practical — if you're already in the parking lot, it's there",
-      },
-    ],
-    bars: [
-      {
-        name: "McMenamins at the Mission Theater",
-        vibe: "Short drive into NW — classic McMenamins room, movies and pub food",
-      },
-      {
-        name: "Gustav's Pub & Grill",
-        vibe:
-          "Closest actual bar to Forest Heights, Cedar Mill location, neighborhood regulars",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "25–30 min by car to downtown (40+ in morning rush), no practical transit option",
     faqs: [
@@ -6251,49 +4762,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "Hazel Room",
-        cuisine: "American",
-        vibe:
-          "Hillsdale neighborhood restaurant a few minutes east — local farm sourcing, good wine list, not a chain",
-      },
-      {
-        name: "Laughing Planet Café",
-        cuisine: "Wraps / Bowls",
-        vibe:
-          "Quick and filling, SW Beaverton-Hillsdale location, reliably fast lunch",
-      },
-      {
-        name: "Banning's Restaurant & Pie House",
-        cuisine: "Diner",
-        vibe:
-          "Old-school SW Portland diner on Barbur, pies are the reason to go",
-      },
-    ],
-    coffee: [
-      {
-        name: "Peet's Coffee",
-        vibe:
-          "Reliable and close to the Fred Meyer corridor — practical stop on the way out of the neighborhood",
-      },
-      {
-        name: "Case Study Coffee",
-        vibe:
-          "Short drive into SW — best pour-over in the area if you're willing to make the trip",
-      },
-    ],
-    bars: [
-      {
-        name: "The Tavern on Killingsworth",
-        vibe: "Straightforward neighborhood bar, no theme, cold beer",
-      },
-      {
-        name: "Multnomah Village Bars",
-        vibe:
-          "Marco's Café and the Village area are 10 minutes east for better options",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "15–20 min by car via Barbur Blvd (30 min in rush hour), 40–50 min by bus on Lines 54/56",
     faqs: [
@@ -6400,50 +4871,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "Gustav's Pub & Grill",
-        cuisine: "German-American",
-        vibe:
-          "Long-running SW Portland staple on SW Scholls Ferry — big portions, local regulars, reliable",
-      },
-      {
-        name: "Sayler's Old Country Kitchen",
-        cuisine: "Steakhouse",
-        vibe:
-          "A Portland steakhouse institution since 1945, nearby on SW Scholls Ferry — cash-and-carry energy",
-      },
-      {
-        name: "Original Taco House",
-        cuisine: "Mexican",
-        vibe:
-          "SW Portland institution on SW Capitol Highway — no frills, consistent, been there for decades",
-      },
-    ],
-    coffee: [
-      {
-        name: "Dutch Bros Coffee",
-        vibe:
-          "Drive-through on SW Scholls Ferry — fast, inexpensive, the practical choice when you're in the car anyway",
-      },
-      {
-        name: "Starbucks",
-        vibe:
-          "Raleigh Hills commercial area — reliable if unremarkable",
-      },
-    ],
-    bars: [
-      {
-        name: "Gustav's Pub & Grill",
-        vibe:
-          "Doubles as the neighborhood bar — the pub side has a solid German beer list",
-      },
-      {
-        name: "Kell's Irish Restaurant & Pub",
-        vibe:
-          "Short drive into SW Portland — reliably good Irish pub energy without the downtown cover charge",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "20–25 min by car via Barbur Blvd or Hwy 217 (35+ in rush hour), minimal transit service",
     faqs: [
@@ -6549,50 +4979,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "Pizzicato",
-        cuisine: "Pizza",
-        vibe:
-          "NW Cornell — good gourmet pizza, quick, reliable for a Tuesday dinner without planning ahead",
-      },
-      {
-        name: "Koji Osakaya",
-        cuisine: "Japanese",
-        vibe:
-          "Cedar Mill strip — legitimate Japanese food, not a strip mall surprise, regulars know it",
-      },
-      {
-        name: "The Station",
-        cuisine: "American",
-        vibe:
-          "Local bar and grill on NW Cornell, easy neighborhood dinner, not trying too hard",
-      },
-    ],
-    coffee: [
-      {
-        name: "Insomnia Coffee",
-        vibe:
-          "Small local chainlet, NW Cornell — reliable espresso, comfortable seating, popular with remote workers",
-      },
-      {
-        name: "Dutch Bros Coffee",
-        vibe:
-          "Drive-through on NW Cornell — fast and practical for the morning commute",
-      },
-    ],
-    bars: [
-      {
-        name: "The Station Bar",
-        vibe:
-          "The neighborhood bar — low-key, local crowd, nothing fancy",
-      },
-      {
-        name: "McMenamins Cornelius Pass Roadhouse",
-        vibe:
-          "Short drive up Cornell — historic farmhouse setting, multiple bars and spaces, reliably good for groups",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "20–25 min by car via NW Cornell or Hwy 26 (35 min in rush hour), no MAX service",
     faqs: [
@@ -6705,50 +5094,9 @@ export const neighborhoods: NeighborhoodData[] = [
         ],
       },
     ],
-    restaurants: [
-      {
-        name: "Red Robin",
-        cuisine: "American",
-        vibe:
-          "Cedar Hills Crossing — family-friendly, reliable, zero pretense",
-      },
-      {
-        name: "Gustav's Pub & Grill",
-        cuisine: "German-American",
-        vibe:
-          "SW Cedar Hills Boulevard — the neighborhood's best sit-down dinner option, long-running, consistently good",
-      },
-      {
-        name: "Muchas Gracias",
-        cuisine: "Mexican",
-        vibe:
-          "Late-night fast-food Mexican on SW Cedar Hills — open until 4 a.m., useful after the MAX ride home",
-      },
-    ],
-    coffee: [
-      {
-        name: "Starbucks",
-        vibe:
-          "Multiple Cedar Hills Crossing locations — practical anchor for the neighborhood",
-      },
-      {
-        name: "Dutch Bros Coffee",
-        vibe:
-          "SW Cedar Hills Boulevard drive-through — fast, cheap, popular with the morning commute crowd",
-      },
-    ],
-    bars: [
-      {
-        name: "Gustav's Pub & Grill",
-        vibe:
-          "The neighborhood bar for Cedar Hills — large German beer selection, food until late, local regulars",
-      },
-      {
-        name: "McMenamins Beaverton",
-        vibe:
-          "Short drive south on Cedar Hills Boulevard — classic McMenamins setup with multiple bars and a movie theater",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "35 min on MAX Blue Line, 20–25 min by car via US-26 (30–40 min in rush hour)",
     faqs: [
@@ -6855,50 +5203,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["athletic fields", "playground", "open lawn"],
       },
     ],
-    restaurants: [
-      {
-        name: "The Observatory",
-        cuisine: "American",
-        vibe:
-          "Bethany Town Center — neighborhood gastropub, solid burgers and beer, the evening spot within walking distance of nearby subdivisions",
-      },
-      {
-        name: "Swagat Indian Cuisine",
-        cuisine: "Indian",
-        vibe:
-          "NW 185th — one of the better Indian restaurants in Washington County, lunch buffet is worth planning around",
-      },
-      {
-        name: "El Tepeyac Mexican Restaurant",
-        cuisine: "Mexican",
-        vibe:
-          "Bethany area — family-run, consistent, the practical weeknight dinner choice",
-      },
-    ],
-    coffee: [
-      {
-        name: "Starbucks",
-        vibe:
-          "Bethany Town Center — the primary coffee option for the neighborhood, drive-through line runs long on weekday mornings",
-      },
-      {
-        name: "Dutch Bros Coffee",
-        vibe:
-          "NW 185th corridor — fast, inexpensive, the competition for the morning commute dollar",
-      },
-    ],
-    bars: [
-      {
-        name: "The Observatory",
-        vibe:
-          "Doubles as the neighborhood bar — better beer selection than you'd expect, comfortable for a weeknight",
-      },
-      {
-        name: "McMenamins Cornelius Pass Roadhouse",
-        vibe:
-          "10 minutes east on NW Cornell — the closest McMenamins to Bethany, multiple rooms and a covered outdoor space",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "30–40 min by car via US-26 or NW Cornell (45+ in rush hour), no MAX service",
     faqs: [
@@ -6978,31 +5285,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open lawn", "picnic area"],
       },
     ],
-    restaurants: [
-      {
-        name: "Orenco Station Grill",
-        cuisine: "American",
-        vibe: "The town-center anchor — burgers, salads, solid lunch crowd from nearby offices",
-      },
-      {
-        name: "Helvetia Tavern",
-        cuisine: "Burgers",
-        vibe: "A Washington County institution a few miles out — enormous burgers, cash only, no frills, worth the drive",
-      },
-      {
-        name: "Syun Izakaya",
-        cuisine: "Japanese",
-        vibe: "Serious ramen and izakaya plates in Hillsboro, consistent favorite among Intel workers",
-      },
-    ],
-    coffee: [
-      { name: "Insomnia Coffee Company", vibe: "Local Pacific Northwest chain, reliable espresso, good work setup" },
-      { name: "Starbucks (NW Cornell Rd)", vibe: "Busy drive-through but the walk-in works fine; full Orenco Station commuter crowd" },
-    ],
-    bars: [
-      { name: "Orenco Station Grill", vibe: "Doubles as the neighborhood bar on weekend evenings — patio fills up in summer" },
-      { name: "McMenamins Cornelius Pass Roadhouse", vibe: "Historic farmstead turned pub complex, 10 min away — good for a longer evening out" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "45–50 min by MAX Blue Line to downtown Portland; 25–30 min by car via US-26 (add 10–15 in peak rush); 5–10 min by bike to Intel Ronler Acres",
     faqs: [
@@ -7068,31 +5353,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["paved walking path", "bike access", "creek views"],
       },
     ],
-    restaurants: [
-      {
-        name: "Thai Orchid",
-        cuisine: "Thai",
-        vibe: "Long-running Thai restaurant near the Streets of Tanasbourne — solid lunch spot for the office crowd",
-      },
-      {
-        name: "McMenamins Cornelius Pass Roadhouse",
-        cuisine: "Pub",
-        vibe: "10 minutes north, a McMenamins on a historic farmstead — good for a longer evening, extensive beer list",
-      },
-      {
-        name: "Beaverton Night Market (seasonal)",
-        cuisine: "Pan-Asian street food",
-        vibe: "Summer weekend market nearby — the best food event in Washington County when it's running",
-      },
-    ],
-    coffee: [
-      { name: "Dutch Bros Coffee (NW 185th)", vibe: "Drive-through institution, perpetually busy, fast" },
-      { name: "Starbucks Reserve (Streets of Tanasbourne)", vibe: "Bigger format, comfortable seating, good for a working session" },
-    ],
-    bars: [
-      { name: "Growler Guys Tanasbourne", vibe: "Rotating local taps, fill-your-own growler setup, low-key" },
-      { name: "Buffalo Wild Wings (Streets of Tanasbourne)", vibe: "Sports bar, loud on game days, reliably busy" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "45–55 min by MAX Blue Line from Quatama or Hawthorn Farm to Portland; 25–30 min by car via US-26; walking distance to NW 185th Ave employment cluster",
     faqs: [
@@ -7154,31 +5417,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["hiking trails", "wildlife habitat", "prairie restoration", "interpretive center"],
       },
     ],
-    restaurants: [
-      {
-        name: "Koji Osakaya",
-        cuisine: "Japanese",
-        vibe: "Reliable Japanese restaurant near Murrayhill Marketplace — consistent sushi and lunch bento boxes",
-      },
-      {
-        name: "Mazatlan Mexican Restaurant",
-        cuisine: "Mexican",
-        vibe: "Family-run, big portions, neighborhood staple on SW Scholls Ferry Rd",
-      },
-      {
-        name: "Oswaldo's Chophouse",
-        cuisine: "Steakhouse",
-        vibe: "A step up from the usual suburban options — good for a date night within the neighborhood",
-      },
-    ],
-    coffee: [
-      { name: "Dutch Bros Coffee (SW Scholls Ferry Rd)", vibe: "Drive-through coffee, perpetually busy, fast and consistent" },
-      { name: "Black Rock Coffee Bar", vibe: "Local Oregon chain with a drive-through, solid alternative to Dutch Bros" },
-    ],
-    bars: [
-      { name: "McMenamins Greenway Pub", vibe: "Closest McMenamins option — good rotating taps and a comfortable neighborhood vibe" },
-      { name: "Oswaldo's Chophouse bar", vibe: "Quieter bar scene, good for a weeknight drink after dinner" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "30–40 min by car via Hwy 217 N and I-5 or Barbur Blvd (add 15–20 in peak rush); no direct MAX access; TriMet bus lines connect to Beaverton TC with additional transfer time",
     faqs: [
@@ -7244,31 +5485,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["hiking trails", "wildlife habitat", "prairie restoration", "interpretive center"],
       },
     ],
-    restaurants: [
-      {
-        name: "New Seasons Market deli (Progress Ridge)",
-        cuisine: "Deli / prepared foods",
-        vibe: "The most-used dinner solution in the neighborhood — solid prepared food, good wine section, full grocery run in one stop",
-      },
-      {
-        name: "Hopworks Urban Brewery (Progress Ridge)",
-        cuisine: "Pub",
-        vibe: "Organic brewery with a solid food menu — family-friendly, big patio, neighborhood gathering spot",
-      },
-      {
-        name: "Bonefish Grill",
-        cuisine: "Seafood",
-        vibe: "Date night option in the Towncenter — consistent quality, slightly more formal than the pub next door",
-      },
-    ],
-    coffee: [
-      { name: "Dutch Bros Coffee (SW Roy Rogers Rd)", vibe: "Drive-through staple, fast and consistent, always a line at 8am" },
-      { name: "Starbucks (Progress Ridge Towncenter)", vibe: "Walk-in, comfortable, fills up with remote workers on weekdays" },
-    ],
-    bars: [
-      { name: "Hopworks Urban Brewery (Progress Ridge)", vibe: "The main neighborhood bar — family-friendly before 8pm, more of a bar scene after" },
-      { name: "Regal Progress Ridge ScreenX & 4DX bar lounge", vibe: "Pre-movie drinks, convenient, nothing remarkable" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "35–45 min by car via Hwy 217 N and I-5 (longer in peak rush); no direct MAX access; Bridgeport Village area is 10 min south via Roy Rogers Rd for additional retail and services",
     faqs: [
@@ -7334,31 +5553,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["paved walking and biking trail", "creek views", "connects to regional trail network"],
       },
     ],
-    restaurants: [
-      {
-        name: "Taqueria Los Primos",
-        cuisine: "Mexican",
-        vibe: "Authentic tacos on TV Highway, cheap and fast, a genuine neighborhood staple",
-      },
-      {
-        name: "Aloha Grill",
-        cuisine: "American",
-        vibe: "Local diner energy, breakfast all day, the kind of place where the staff knows the regulars",
-      },
-      {
-        name: "Pho Hung",
-        cuisine: "Vietnamese",
-        vibe: "Long-running pho restaurant off TV Highway — reliable bowls, quick service",
-      },
-    ],
-    coffee: [
-      { name: "Dutch Bros Coffee (TV Hwy)", vibe: "Drive-through, fast, the most-used coffee stop in the corridor" },
-      { name: "Black Rock Coffee Bar (Aloha)", vibe: "Oregon chain with a drive-through — solid espresso, slightly quieter than Dutch Bros" },
-    ],
-    bars: [
-      { name: "Reedville Cafe", vibe: "Classic tavern on TV Highway — pool table, cheap beer, regulars at the bar, no pretense" },
-      { name: "Round Table Pizza", vibe: "Beer-and-pizza situation, family-friendly, functional for a low-key evening out" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown:
       "30–40 min by car via US-26 E; 45–55 min by MAX Blue Line from Elmonica, Hawthorn Farm, or Quatama stations to Portland; TV Highway bus line also connects to Beaverton TC",
     faqs: [
@@ -7425,43 +5622,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["Willamette River access", "walking paths", "picnic areas"],
       },
     ],
-    restaurants: [
-      {
-        name: "La Cabaña Mexican Restaurant",
-        cuisine: "Mexican",
-        vibe: "Family-run, Portland Ave location, neighborhood staple for sit-down Mexican",
-      },
-      {
-        name: "Taqueria Los Gorditos",
-        cuisine: "Mexican",
-        vibe: "Counter-service tacos, fast and filling, local crowd",
-      },
-      {
-        name: "Denny's",
-        cuisine: "Diner",
-        vibe: "McLoughlin Blvd location, open late, exactly what you expect",
-      },
-    ],
-    coffee: [
-      {
-        name: "Dutch Bros Coffee",
-        vibe: "Drive-through on McLoughlin, fast and consistent, always a line in the morning",
-      },
-      {
-        name: "Starbucks",
-        vibe: "Portland Ave location, standard stop before the I-205 on-ramp",
-      },
-    ],
-    bars: [
-      {
-        name: "The River Tap",
-        vibe: "Local bar near the river, cold beer, no agenda",
-      },
-      {
-        name: "Gladstone Tavern",
-        vibe: "Old-school dive, pool table, regulars who've been coming for years",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "30–40 min by car via I-205 or McLoughlin Blvd, 50+ min by TriMet bus",
     faqs: [
       {
@@ -7527,43 +5690,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["small plaza", "seating", "community gathering space"],
       },
     ],
-    restaurants: [
-      {
-        name: "Nicoletta's Table",
-        cuisine: "Italian",
-        vibe: "Boones Ferry Rd neighborhood Italian, reliable weeknight dinner, good wine list",
-      },
-      {
-        name: "Thai Orchid",
-        cuisine: "Thai",
-        vibe: "Long-running Thai spot in Lake Grove, consistent, lunch specials draw the office crowd from Kruse Way",
-      },
-      {
-        name: "Lake Grove Pub",
-        cuisine: "American",
-        vibe: "Casual bar and grill on Boones Ferry, game nights, neighborhood regulars",
-      },
-    ],
-    coffee: [
-      {
-        name: "Starbucks",
-        vibe: "Boones Ferry location, standard morning stop, drive-through gets long",
-      },
-      {
-        name: "Dutch Bros Coffee",
-        vibe: "Drive-through on Boones Ferry, faster than Starbucks, younger crowd",
-      },
-    ],
-    bars: [
-      {
-        name: "Lake Grove Pub",
-        vibe: "The neighborhood watering hole on Boones Ferry — sports on TV, unpretentious",
-      },
-      {
-        name: "Gustav's Pub & Grill",
-        vibe: "German-American pub near the I-5 corridor, extensive tap list, loud on game days",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25–35 min by car via I-5 or Hwy 43, 45+ min by TriMet bus",
     faqs: [
       {
@@ -7629,43 +5758,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open lawn", "neighborhood park"],
       },
     ],
-    restaurants: [
-      {
-        name: "Oak Grove Diner",
-        cuisine: "Diner",
-        vibe: "Breakfast and lunch staple on McLoughlin, counter seating, honest diner food",
-      },
-      {
-        name: "Casa Naranja",
-        cuisine: "Mexican",
-        vibe: "Mexican restaurant on McLoughlin, family-run, reliable lunch and dinner",
-      },
-      {
-        name: "Burgerville",
-        cuisine: "Burgers",
-        vibe: "McLoughlin location, local chain with seasonal menus, quick stop on the way home",
-      },
-    ],
-    coffee: [
-      {
-        name: "Dutch Bros Coffee",
-        vibe: "McLoughlin drive-through, efficient, always busy before 9 am",
-      },
-      {
-        name: "Starbucks",
-        vibe: "McLoughlin location, standard commuter stop",
-      },
-    ],
-    bars: [
-      {
-        name: "The Raven",
-        vibe: "Neighborhood bar in Oak Grove, no-frills, local regulars",
-      },
-      {
-        name: "Oak Grove Inn",
-        vibe: "Long-running dive on McLoughlin, pool table, cash-friendly",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25–35 min by car via McLoughlin Blvd or I-205, 45+ min by TriMet bus",
     faqs: [
       {
@@ -7731,43 +5826,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["paved trail", "cycling", "running", "river corridor access"],
       },
     ],
-    restaurants: [
-      {
-        name: "Elmer's Restaurant",
-        cuisine: "American",
-        vibe: "McLoughlin Blvd breakfast and brunch institution, family-friendly, been there for years",
-      },
-      {
-        name: "Casa Naranja",
-        cuisine: "Mexican",
-        vibe: "Nearby Oak Grove location, family-run Mexican, solid option on McLoughlin",
-      },
-      {
-        name: "Burgerville",
-        cuisine: "Burgers",
-        vibe: "Quick stop on McLoughlin, local chain, better than the national alternatives",
-      },
-    ],
-    coffee: [
-      {
-        name: "Dutch Bros Coffee",
-        vibe: "McLoughlin drive-through, standard south metro morning stop",
-      },
-      {
-        name: "Starbucks",
-        vibe: "Nearby Oak Grove location on McLoughlin, consistent morning option",
-      },
-    ],
-    bars: [
-      {
-        name: "Oak Grove Inn",
-        vibe: "Closest bar, old-school McLoughlin dive, unpretentious",
-      },
-      {
-        name: "The Raven",
-        vibe: "Neighborhood bar in nearby Oak Grove, local crowd, cold beer",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "30–40 min by car via McLoughlin Blvd or I-205, 50+ min by TriMet",
     faqs: [
       {
@@ -7833,43 +5894,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["baseball diamond", "playground", "open lawn", "picnic tables"],
       },
     ],
-    restaurants: [
-      {
-        name: "Pastini",
-        cuisine: "Italian",
-        vibe: "Casual pasta on SW Canyon Rd, reliable weeknight dinner, family-friendly",
-      },
-      {
-        name: "Pho Van",
-        cuisine: "Vietnamese",
-        vibe: "Beaverton-area location nearby, bowl of pho on a cold evening, efficient and good",
-      },
-      {
-        name: "Gustav's Pub & Grill",
-        cuisine: "German-American",
-        vibe: "Nearby in the Beaverton-Hillsdale area, large tap list, solid pub food",
-      },
-    ],
-    coffee: [
-      {
-        name: "Starbucks",
-        vibe: "SW Canyon Rd location, commuter stop before the 26 on-ramp",
-      },
-      {
-        name: "Dutch Bros Coffee",
-        vibe: "Nearby on SW Canyon, drive-through, morning line is consistent",
-      },
-    ],
-    bars: [
-      {
-        name: "The Original Dinerant",
-        vibe: "Hillside area option, cocktails and diner food, accessible from the hill",
-      },
-      {
-        name: "Stanich's",
-        vibe: "SW Scholls Ferry area institution, historic burger bar, been open since 1949",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "15–25 min by car via Hwy 26 or SW Canyon Rd, 30 min on TriMet bus line 54",
     faqs: [
       {
@@ -7934,43 +5961,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["peaceful grounds", "viewpoint", "historic site"],
       },
     ],
-    restaurants: [
-      {
-        name: "The Skyline Restaurant",
-        cuisine: "American",
-        vibe: "The ridge diner — longtime Skyline Blvd institution, breakfast and lunch, no frills",
-      },
-      {
-        name: "Cornell Farm",
-        cuisine: "Farm market",
-        vibe: "Not a restaurant but the closest thing to a local stop — produce, plants, seasonal goods on Cornell Rd",
-      },
-      {
-        name: "Helvetia Tavern",
-        cuisine: "Burgers",
-        vibe: "A short drive north on Helvetia Rd, legendary 1930s burger bar in the farmland, cash only, worth the trip",
-      },
-    ],
-    coffee: [
-      {
-        name: "Skyline Restaurant",
-        vibe: "Coffee with your eggs on the ridge — the only reliable option without driving down the hill",
-      },
-      {
-        name: "Starbucks (NW 23rd)",
-        vibe: "Down the hill 15 minutes, standard option after the drive in",
-      },
-    ],
-    bars: [
-      {
-        name: "Helvetia Tavern",
-        vibe: "The genuine article — cash-only burger and beer bar that has been on Helvetia Rd since 1933, worth the drive",
-      },
-      {
-        name: "Besaw's",
-        vibe: "NW 23rd option down the hill, upscale-casual, good cocktail program",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25–40 min by car via Hwy 30 or Cornell Rd to NW 23rd, no meaningful transit option",
     faqs: [
       {
@@ -8034,19 +6027,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["3.1-mile paved trail", "restored wetland habitat", "native salmon runs", "bird watching", "cycling"],
       },
     ],
-    restaurants: [
-      { name: "Kitchen Table Cafe – Salmon Creek", cuisine: "American", vibe: "Breakfast and lunch focused — pancakes, omelets, burgers; a reliable neighborhood anchor at NE 134th St" },
-      { name: "El Tapatio Salmon Creek", cuisine: "Mexican", vibe: "Family Mexican restaurant, casual and consistent, popular with the surrounding residential crowd" },
-      { name: "Billygan's Roadhouse", cuisine: "American", vibe: "Laid-back bar and grill, peanut shells on the floor, families and regulars, the kind of place you go after a soccer game" },
-    ],
-    coffee: [
-      { name: "Starbucks – NE 139th & 20th", vibe: "Drive-through speed for commuters heading south on I-5; consistently busy mornings" },
-      { name: "Black Rock Coffee Bar", vibe: "Regional Pacific Northwest chain, reliable espresso and drive-through window, faster than the Starbucks lines" },
-    ],
-    bars: [
-      { name: "Hudson's Bar and Grill", vibe: "Located inside the Heathman Lodge — Northwest farm-to-table menu, local ingredients, adult crowd, far less casual than Billygan's" },
-      { name: "Billygan's Roadhouse", vibe: "The neighborhood bar you actually end up at — cold beer, burgers, no pretense" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "35–45 min to Portland in decent traffic via I-5; 55–75 min during peak hours crossing the Interstate Bridge; no practical transit option",
     faqs: [
       {
@@ -8106,18 +6089,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["paved trail", "wetlands", "wildlife viewing", "cycling"],
       },
     ],
-    restaurants: [
-      { name: "Farrar's Bistro", cuisine: "American", vibe: "Neighborhood bistro at 12514 NW 36th Ave — elevated comfort food, patio dining, handcrafted cocktails, live music on weekends; been here since 2007" },
-      { name: "Mahoney's Public House", cuisine: "Pub", vibe: "Family-owned neighborhood pub at NW Lakeshore Ave — casual handhelds, solid craft beer lineup, the place locals walk to from the surrounding streets" },
-    ],
-    coffee: [
-      { name: "Hearth Coffee", vibe: "Local shop at 3602 NW 119th St — breakfast sandwiches and burritos alongside espresso; Pacific Northwest feel, friendly baristas" },
-      { name: "Deep Roots Felida Coffee House", vibe: "Pastries from Bleu Door Bakery, a range of espresso drinks, neighborhood regulars who treat it like a second living room" },
-    ],
-    bars: [
-      { name: "Mahoney's Public House", vibe: "The after-work bar for Felida — craft taps, nothing pretentious, neighborhood crowd" },
-      { name: "Farrar's Bistro", vibe: "Doubles as a bar on weekends — cocktail-forward, patio crowd, more of a date-night spot than a dive" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20–25 min to Portland via I-5 in off-peak; 45–60 min during rush hour crossing the Interstate Bridge; no transit option",
     faqs: [
       {
@@ -8181,19 +6155,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["youth sports fields", "softball diamonds", "community events hub"],
       },
     ],
-    restaurants: [
-      { name: "Frontier Public House", cuisine: "American", vibe: "Family-oriented spot at 4909 NE Hazel Dell Ave — handcrafted cocktails, local beers, PNW wines, full menu" },
-      { name: "Margarita Factory – Hazel Dell", cuisine: "Mexican", vibe: "Locally owned, best happy hour reputation in the corridor, strong margarita selection, consistently full tables" },
-      { name: "Carol's Corner Cafe", cuisine: "Diner", vibe: "Classic diner-style breakfast and lunch — the kind of regular-customer place that doesn't change much and doesn't need to" },
-    ],
-    coffee: [
-      { name: "Dutch Bros – NE Hazel Dell Ave", vibe: "Drive-through speed, enthusiastic staff, the default quick-stop for most of the neighborhood on the way to I-5" },
-      { name: "Starbucks – Fred Meyer Hazel Dell", vibe: "Inside Fred Meyer at 7720 NE Highway 99 — convenient for grocery runs, not a destination" },
-    ],
-    bars: [
-      { name: "Frontier Public House", vibe: "Doubles as the neighborhood bar — local tap list, sports on TV, approachable prices" },
-      { name: "Billy Blues Bar and Grill", vibe: "Weekly jam nights, live music, the main entertainment anchor for the area's regular crowd" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "30–40 min to Portland via I-5 in normal traffic; 50–70 min at peak crossings; C-TRAN bus routes available but limited for Portland commuters",
     faqs: [
       {
@@ -8257,19 +6221,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["wooded neighborhood park", "near Vancouver Mall and I-205"],
       },
     ],
-    restaurants: [
-      { name: "Kitchen Table Cafe – Orchards", cuisine: "American", vibe: "Breakfast and lunch at 11500 NE 76th St — dependable pancakes and lunch plates, busy weekend mornings" },
-      { name: "Orchards Tap", cuisine: "American", vibe: "Bar and grill at 10514 NE Fourth Plain Blvd — karaoke seven nights a week, pool tables, pinball, Taco Tuesdays; a genuine neighborhood gathering point" },
-      { name: "Margarita Factory", cuisine: "Mexican", vibe: "Local Mexican on Mill Plain — handcrafted dishes and margaritas, solid happy hour, consistently popular" },
-    ],
-    coffee: [
-      { name: "Brewed Awakenings Coffee Roasters", vibe: "Local Vancouver roaster at 6500 NE 117th Ave — drive-through and patio, roasts their own beans, early hours for commuters" },
-      { name: "Dutch Bros – Fourth Plain corridor", vibe: "Multiple locations in the Fourth Plain corridor; fast drive-through, standard Pacific Northwest chain experience" },
-    ],
-    bars: [
-      { name: "Orchards Tap", vibe: "The neighborhood bar — pool, karaoke, games, cold beer; the spot locals default to when they want a no-fuss weeknight" },
-      { name: "Fourth Plain Bar & Grill", vibe: "Older-school tavern on the Fourth Plain corridor, longtime regulars, no surprises" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "25–35 min to Portland via I-205 in normal traffic; 40–60 min during peak bridge crossings; Vancouver Mall area C-TRAN routes available but slow for Portland commuters",
     faqs: [
       {
@@ -8329,19 +6283,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["5 acres", "playground", "paved walkways", "basketball court", "picnic tables", "leash-friendly"],
       },
     ],
-    restaurants: [
-      { name: "Little Italy's Trattoria", cuisine: "Italian", vibe: "Authentic Italian since 1995, a reliable anchor for the neighborhood — antipasti, fresh pasta, outdoor seating, happy hour" },
-      { name: "Café Yumm!", cuisine: "Northwest / Bowls", vibe: "Cascade Park Plaza location — healthy bowls with local and sustainable ingredients, quick and consistent for lunch" },
-      { name: "TJ's Cascade Bar & Grill", cuisine: "American", vibe: "Neighborhood bar and grill at 15000 SE Mill Plain Blvd — 19 taps, full menu, live music, karaoke; the area's social anchor" },
-    ],
-    coffee: [
-      { name: "Larson's Bakery, Deli and Coffee Bar", vibe: "A Cascade Park institution — from-scratch Danish pastries and family recipes, sandwich counter, coffee bar; the kind of place that's been there 30 years because it earned it" },
-      { name: "Dutch Bros – Mill Plain corridor", vibe: "Drive-through standard for the morning I-205 run; fast and consistent" },
-    ],
-    bars: [
-      { name: "TJ's Cascade Bar & Grill", vibe: "Nineteen taps, pool tables, live music and karaoke on weekends; the legitimate neighborhood bar for East Vancouver" },
-      { name: "Little Italy's Trattoria", vibe: "Happy hour bar side — Italian wines and cocktails, patio, lower-key than the main dining room crowd" },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20–30 min to Portland via I-205 in normal traffic; 40–55 min during peak bridge crossings; Portland International Airport 15 min; no practical transit connection to Portland",
     faqs: [
       {
@@ -8407,43 +6351,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["playground", "open lawn", "walking path"],
       },
     ],
-    restaurants: [
-      {
-        name: "Bull Mountain Bar & Grill",
-        cuisine: "American",
-        vibe: "Scratch-made pub food on SW Pacific Hwy — the neighborhood's own bar, 13727 SW Pacific Hwy",
-      },
-      {
-        name: "Gambino's Italian Cafe",
-        cuisine: "Italian",
-        vibe: "Family-run Italian spot down on 99W, reliable for a weeknight dinner",
-      },
-      {
-        name: "Pacific Breeze",
-        cuisine: "Thai/Vietnamese",
-        vibe: "Thai and Vietnamese on SW Durham Rd, casual and fast, local favorite",
-      },
-    ],
-    coffee: [
-      {
-        name: "Symposium Coffee",
-        vibe: "Stumptown beans and Steven Smith tea at SW Main St in downtown Tigard — the go-to on the way down the hill",
-      },
-      {
-        name: "Well & Good Cafe",
-        vibe: "Light, plant-forward cafe near the Tigard commercial district — a short drive from the hill",
-      },
-    ],
-    bars: [
-      {
-        name: "Bull Mountain Bar & Grill",
-        vibe: "Neighborhood sports bar atmosphere, pool tables, the social hub for the hill",
-      },
-      {
-        name: "Prime Tap House",
-        vibe: "Craft beers on tap near the 99W corridor, casual after-work stop",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "30–40 min by car via I-5 or Hwy 99W (45+ in rush hour); limited bus service to Tigard Transit Center",
     faqs: [
       {
@@ -8504,43 +6414,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["lake", "fishing", "picnic shelters", "playground", "walking trails"],
       },
     ],
-    restaurants: [
-      {
-        name: "Pacific Breeze",
-        cuisine: "Thai/Vietnamese",
-        vibe: "Thai and Vietnamese on SW Durham Rd — the closest solid sit-down option to King City",
-      },
-      {
-        name: "Thirsty Lion",
-        cuisine: "Gastropub",
-        vibe: "Popular gastropub at the Bridgeport Village center, short drive east on Durham Rd",
-      },
-      {
-        name: "Shari's",
-        cuisine: "Diner",
-        vibe: "Classic diner breakfast and lunch near the 99W corridor — reliable and unpretentious",
-      },
-    ],
-    coffee: [
-      {
-        name: "Symposium Coffee",
-        vibe: "SW Main St in Tigard, a short drive north — the best independent coffee option in the immediate area",
-      },
-      {
-        name: "Dutch Bros Coffee",
-        vibe: "Drive-through on 99W, fast and functional for the morning commute",
-      },
-    ],
-    bars: [
-      {
-        name: "Thirsty Lion",
-        vibe: "Bridgeport Village gastropub — solid beer selection, sports on TV, family-friendly",
-      },
-      {
-        name: "Bull Mountain Bar & Grill",
-        vibe: "Down-the-road neighborhood bar in Tigard, easy drive from King City",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "35–45 min by car via I-5 north from Tualatin, or Hwy 99W; TriMet bus routes connect to Tigard Transit Center",
     faqs: [
       {
@@ -8602,39 +6478,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["disc golf", "basketball courts", "cycling routes", "Koll Center Wetlands access", "playground"],
       },
     ],
-    restaurants: [
-      {
-        name: "Happy Fortune",
-        cuisine: "Chinese",
-        vibe: "Chinese food and sports bar hybrid on SW Barbur Blvd — longtime neighborhood spot, 10420 SW Barbur",
-      },
-      {
-        name: "Thai Cuisine on Barbur",
-        cuisine: "Thai",
-        vibe: "Casual Thai at 9065 SW Barbur Blvd — dependable lunch and dinner",
-      },
-      {
-        name: "Muchas Gracias",
-        cuisine: "Mexican",
-        vibe: "24-hour Mexican drive-through at 8981 SW Barbur — late-night standby",
-      },
-    ],
-    coffee: [
-      {
-        name: "Starbucks",
-        vibe: "Washington Square area location — functional and accessible, the main corporate option in the immediate area",
-      },
-      {
-        name: "Black Rock Coffee Bar",
-        vibe: "Drive-through espresso on the 99W/Barbur corridor — fast for the morning commute",
-      },
-    ],
-    bars: [
-      {
-        name: "Happy Fortune",
-        vibe: "The sports bar side of the house — pool tables, game day crowds, neighborhood regulars",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20–30 min by car via SW Barbur Blvd; 35–45 min on TriMet Line 12 or 44",
     faqs: [
       {
@@ -8696,43 +6542,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["community center", "fitness facilities", "classes and programs"],
       },
     ],
-    restaurants: [
-      {
-        name: "Marco's Cafe",
-        cuisine: "American",
-        vibe: "Multnomah Village institution since 1983, serious breakfast and espresso bar — a short walk for Portland-side residents",
-      },
-      {
-        name: "Old Market Pub & Brewery",
-        cuisine: "Pub",
-        vibe: "Craft beers on tap and pub food in Multnomah Village, been part of the neighborhood fabric since 1994",
-      },
-      {
-        name: "Broder Söder",
-        cuisine: "Scandinavian",
-        vibe: "Nordic brunch spot in SW Portland — Danish pancake balls, smörgås, genuinely good",
-      },
-    ],
-    coffee: [
-      {
-        name: "Marco's Cafe",
-        vibe: "Full espresso bar inside the Multnomah Village dining institution — doubles as the neighborhood's best coffee stop",
-      },
-      {
-        name: "Black Rock Coffee Bar",
-        vibe: "Drive-through on nearby SW Barbur Blvd for fast morning coffee on the commute",
-      },
-    ],
-    bars: [
-      {
-        name: "Old Market Pub & Brewery",
-        vibe: "Neighborhood brewery with a loyal local crowd, over a dozen beers on tap, no pretense",
-      },
-      {
-        name: "Garden Home Dugout",
-        vibe: "Sports bar directly on SW Garden Home Rd — neighborhood regulars, game day staple",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20–25 min by car via SW Barbur Blvd (30–40 in rush hour); TriMet Line 12 or 45 connect to downtown",
     faqs: [
       {
@@ -8793,43 +6605,9 @@ export const neighborhoods: NeighborhoodData[] = [
         amenities: ["forested trails", "creek access", "footbridges", "quiet off-leash walking"],
       },
     ],
-    restaurants: [
-      {
-        name: "Tryon Creek Bar and Grill",
-        cuisine: "American",
-        vibe: "Neighborhood sports bar at 8610 SW Terwilliger — burgers, taco Tuesday, pool tables, local crowd",
-      },
-      {
-        name: "Market of Choice",
-        cuisine: "Deli/Grocery",
-        vibe: "Full-service grocery with deli, pizza oven, and salad bar at SW Terwilliger and Taylors Ferry — the daily anchor",
-      },
-      {
-        name: "Salvador Molly's",
-        cuisine: "Eclectic",
-        vibe: "Colorful, eclectic menu on SW Multnomah Blvd — a short drive but a neighborhood favorite for dinner",
-      },
-    ],
-    coffee: [
-      {
-        name: "JoLa Cafe",
-        vibe: "Coffee, bar, and kitchen at 5915 SW Corbett — serious espresso, brunch, and a neighborhood feel worth the short drive",
-      },
-      {
-        name: "Market of Choice",
-        vibe: "Espresso counter inside the grocery — the quick-hit morning coffee stop",
-      },
-    ],
-    bars: [
-      {
-        name: "Tryon Creek Bar and Grill",
-        vibe: "The neighborhood's living room — pool tables, TVs, burger and brew specials, no pretense",
-      },
-      {
-        name: "The Muddy Rudder Public House",
-        vibe: "A short drive toward Multnomah Village — pub atmosphere, good tap list",
-      },
-    ],
+    restaurants: [],
+    coffee: [],
+    bars: [],
     commuteToDowntown: "20–30 min by car via SW Barbur or SW Terwilliger (35+ in rush hour); TriMet Line 12 on Barbur Blvd",
     faqs: [
       {
