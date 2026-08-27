@@ -106,7 +106,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Is Mt. Scott-Arleta walkable?",
-        a: "Yes — the Walk Score is 77. SE Foster is the walkable heart, where you can handle coffee, groceries, a meal, and a pint on foot. The flat, gridded residential streets are easy to bike, and the Mt. Scott Community Center puts a public pool and gym within walking distance for much of the neighborhood.",
+        a: "Yes. SE Foster is the walkable heart, where you can handle coffee, groceries, a meal, and a pint on foot. The flat, gridded residential streets are easy to bike, and the Mt. Scott Community Center puts a public pool and gym within walking distance for much of the neighborhood.",
       },
       {
         q: "What kinds of homes are in Mt. Scott-Arleta?",
@@ -246,7 +246,7 @@ export const neighborhoods: NeighborhoodData[] = [
     faqs: [
       {
         q: "Is Buckman walkable?",
-        a: "Very. Walk Score typically 88–92 depending on the block. Grocery, coffee, restaurants, the library — nearly everything within 10–15 minutes on foot. The Hawthorne Bridge is 8 minutes by bike to downtown. If you're used to driving everywhere, Buckman will genuinely change your daily routine.",
+        a: "Very — it's one of the most walkable neighborhoods in Portland, though it varies block to block. Grocery, coffee, restaurants, the library — nearly everything within 10–15 minutes on foot. The Hawthorne Bridge is 8 minutes by bike to downtown. If you're used to driving everywhere, Buckman will genuinely change your daily routine.",
       },
       {
         q: "What's Ladd's Addition?",
@@ -474,7 +474,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Reed College sits at the southeastern edge of Eastmoreland, and Crystal Springs Rhododendron Garden runs right next to the campus. In May the rhododendrons bloom hard — it draws visitors from across the city. The residential streets around SE Crystal Springs Blvd and SE Bybee have some of the largest, best-maintained houses in inner SE Portland: Tudor Revivals, Colonial Revivals, and large Craftsmans from the 1920s through 1940s on wide lots.",
       "This is a quiet prestige neighborhood. No commercial strip to walk to, limited transit, almost no foot traffic. You drive or bike down to SE Woodstock or SE Division for coffee and food. The Eastmoreland Golf Course is a public course — a good amenity if you play. Duniway Elementary and Cleveland High School serve the area. The housing stock is the draw, not the walkability.",
-      "Walk Score is around 58, no easy MAX access, and the bus to downtown takes 35 minutes. If you're comparing to Buckman or Irvington on urban convenience, Eastmoreland loses. If you're comparing on lot size, house quality, and quiet, it wins. The buyers who are happiest here know they're trading convenience for space.",
+      "Daily errands mean a car or a bike, there's no easy MAX access, and the bus to downtown takes about 35 minutes. If you're comparing to Buckman or Irvington on urban convenience, Eastmoreland loses. If you're comparing on lot size, house quality, and quiet, it wins. The buyers who are happiest here know they're trading convenience for space.",
     ],
     personality: "SE Portland's quietest prestige neighborhood — big houses, no foot traffic, Reed College next door",
     mapEmbedSrc:
@@ -577,7 +577,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Is Laurelhurst walkable?",
-        a: "Somewhat — Walk Score of 76. The neighborhood itself is residential, and the park is the main destination on foot. For restaurants, coffee, and errands, you're mostly biking or driving to SE 28th Ave or NE 28th Ave. Not as walkable as Buckman or the Pearl, but better than Eastmoreland.",
+        a: "Somewhat. The neighborhood itself is residential, and the park is the main destination on foot. For restaurants, coffee, and errands, you're mostly biking or driving to SE 28th Ave or NE 28th Ave. Not as walkable as Buckman or the Pearl, but better than Eastmoreland.",
       },
     ],
     testimonials: [],
@@ -1815,7 +1815,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How are the schools in Lents?",
-        a: "Below the Portland average on most metrics. Lents Elementary and Lane Middle School both rate around 4 out of 10 on GreatSchools. David Douglas High School is the attendance-area high school — it's a large school with career technical programs, rated around a 5. Families with school-age kids typically evaluate PPS option schools and charter options seriously before buying.",
+        a: "Below the Portland average on most metrics. Lents Elementary and Lane Middle School both rate below the district average. David Douglas High School is the attendance-area high school — a large school with career technical programs. Families with school-age kids typically evaluate PPS option schools and charter options seriously before buying.",
       },
     ],
     testimonials: [],
@@ -2440,7 +2440,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Is Overlook walkable?",
-        a: "Moderately. Walk Score around 62 — there's no dense commercial strip within the neighborhood. The N Interstate Avenue corridor is accessible and has some services, but it's not the same as living on N Mississippi or N Alberta. For most errands you're driving or biking to the commercial corridors nearby.",
+        a: "Moderately — there's no dense commercial strip within the neighborhood. The N Interstate Avenue corridor is accessible and has some services, but it's not the same as living on N Mississippi or N Alberta. For most errands you're driving or biking to the commercial corridors nearby.",
       },
     ],
     testimonials: [],
@@ -2626,7 +2626,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "Do I need a car to live in University Park?",
-        a: "Realistically, yes. Walk Score is around 45. There's no MAX station nearby. Grocery, restaurants, most services — you're driving or biking. The N Willamette Boulevard bike path is excellent for recreational riding and for commuting downtown if you have the time for a 35-minute bike ride. For anything else, you're in a car.",
+        a: "Realistically, yes. There's no MAX station nearby. Grocery, restaurants, most services — you're driving or biking. The N Willamette Boulevard bike path is excellent for recreational riding and for commuting downtown if you have the time for a 35-minute bike ride. For anything else, you're in a car.",
       },
       {
         q: "How are the schools in University Park?",
@@ -2690,7 +2690,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How walkable is Boise-Eliot?",
-        a: "Very. Walk Score around 82. N Mississippi and N Williams have dense independent restaurant and retail coverage. The N Williams bike boulevard is one of the better-designed bike corridors in Portland — protected stretches, consistent infrastructure. The Interstate MAX is a short ride for downtown trips. This is one of the most genuinely walkable neighborhoods in North Portland.",
+        a: "Very. N Mississippi and N Williams have dense independent restaurant and retail coverage. The N Williams bike boulevard is one of the better-designed bike corridors in Portland — protected stretches, consistent infrastructure. The Interstate MAX is a short ride for downtown trips. This is one of the most genuinely walkable neighborhoods in North Portland.",
       },
       {
         q: "How much does a home cost in Boise-Eliot?",
@@ -3728,7 +3728,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "Clackamas & East County",
     description: [
       "Park Ave Station in downtown Milwaukie is the southern terminus of the MAX Orange Line, which means Milwaukie has genuine light rail access to Portland — not a bus connection, not a park-and-ride at the edge of a freeway, but a station in the city's downtown core. The ride to the South Park Blocks or PSU takes about 20–25 minutes. The Springwater Corridor trail also connects Milwaukie directly to Portland by bike, running along the Willamette from Sellwood south. These two facts — MAX access and the Springwater Corridor — differentiate Milwaukie from every other Clackamas County suburb and make it the most transit-and-bike-accessible community south of Portland proper.",
-      "The housing stock is a mix of 1940s–1960s working-class bungalows and ranches, with more recent infill development near the downtown core as the MAX line matured. North Clackamas School District covers Milwaukie — it's a well-regarded district, notably better than Portland Public Schools in overall rankings, serving a mix of Milwaukie, Happy Valley, and surrounding communities. Downtown Milwaukie has developed incrementally: Wy'East Pizza is the anchor of the Main Street scene, The Railyard food cart pod operates seasonally, and there's a small but real cluster of independent businesses. The demographic is younger buyers and families who want Portland-adjacent living at a price that's 20–30% below comparable inner SE neighborhoods.",
+      "The housing stock is a mix of 1940s–1960s working-class bungalows and ranches, with more recent infill development near the downtown core as the MAX line matured. North Clackamas School District covers Milwaukie — it's a well-regarded district, notably better than Portland Public Schools in overall rankings, serving a mix of Milwaukie, Happy Valley, and surrounding communities. Downtown Milwaukie has developed incrementally: Wy'East Pizza is the anchor of the Main Street scene, The Railyard food cart pod operates seasonally, and there's a small but real cluster of independent businesses. The demographic is younger buyers and families who want Portland-adjacent living at a price below comparable inner SE neighborhoods.",
       "The trade-off that buyers need to acknowledge: Milwaukie is not inner SE Portland, even if it's adjacent to it and connected by trail and rail. The commercial infrastructure is still developing. McLoughlin Boulevard is not a pleasant street to be near. Some blocks have industrial or light-commercial uses that won't change. But for buyers who specifically want the Springwater connection and the MAX, who want North Clackamas schools instead of Portland Public, and who want to buy at a Clackamas County price instead of an inner-SE one, the calculation is clear and a lot of buyers are making it.",
     ],
     personality: "Clackamas County's most transit-connected suburb — MAX on one end, the Springwater on the other",
@@ -4883,7 +4883,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What are the financial benefits of Raleigh Hills vs. SW Portland?",
-        a: "The two main ones are no Portland city income tax (1% for residents) and lower property tax rates. Over a few years, those savings add up meaningfully. Beaverton School District also tends to outperform Portland Public Schools, which is a non-financial benefit that buyers with children weight heavily.",
+        a: "The two main ones are no Portland-area local income taxes and lower property tax rates. Over a few years, those savings add up meaningfully. Beaverton School District also tends to outperform Portland Public Schools, which is a non-financial benefit that buyers with children weight heavily.",
       },
       {
         q: "What schools serve Raleigh Hills?",
@@ -6005,7 +6005,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "SW Washington",
     description: [
       "Salmon Creek is North Vancouver's most recognizable address — the name belongs to both the community and the actual creek that winds through it, flanked by the Salmon Creek Greenway Trail, a paved multi-use path running 3.1 miles along the water through wetlands and forest. Legacy Salmon Creek Medical Center (2211 NE 139th St) anchors the area as a major employer and trauma resource for all of Clark County, opened in 2005 and offering full inpatient and emergency services. The housing stock runs from 1990s ranches and colonials through 2010s planned subdivisions, mostly on standard suburban lots with some larger parcels toward the creek corridor.",
-      "Schools here are among the strongest in Vancouver Public Schools. Skyview High School, opened in 1997, carries a B+ Niche grade and a 7/10 GreatSchools rating, with a 95% graduation rate and a competitive SMT magnet program. Salmon Creek Elementary consistently ranks in the top 20% of Washington elementary schools. The pull toward North Vancouver from Portland-area families is partly about schools and partly about the Washington state income tax situation — there is none, and families doing the long-term math often land here.",
+      "Schools here are among the strongest in Vancouver Public Schools. Skyview High School, opened in 1997, rates well across the major school-rating services and runs a competitive science, math and technology magnet program. Salmon Creek Elementary rates above average for the state. The pull toward North Vancouver from Portland-area families is partly about schools and partly about the Washington state income tax situation — there is none, and families doing the long-term math often land here.",
       "The trade-off is the I-5 bridge. Commuting south to Portland means joining the 130,000+ vehicles a day that cross the Interstate Bridge, which dates to 1917 northbound and 1958 southbound, lifts for river traffic, and backs up badly during morning and evening peaks. Thirty-five to forty-five minutes to Portland in decent conditions becomes over an hour when traffic spreads. That is the real cost of Salmon Creek's otherwise excellent positioning, and buyers should factor it in honestly before deciding the no-income-tax calculation works in their favor.",
     ],
     personality: "Clark County's most sought-after zip code — schools, hospitals, and greenway trails, with an I-5 commute cost",
@@ -6042,7 +6042,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "How are the schools in Salmon Creek?",
-        a: "They are among the strongest in Vancouver Public Schools. Salmon Creek Elementary ranks in the top 20% of Washington elementary schools. Skyview High School has a B+ Niche grade, a 95% graduation rate, and a competitive Science, Math, and Technology magnet program. These ratings are meaningfully better than schools in the Hazel Dell and Orchards areas and a primary reason families specifically seek out North Vancouver.",
+        a: "They are among the strongest in Vancouver Public Schools. Salmon Creek Elementary rates above average for the state. Skyview High School also rates well and runs a competitive Science, Math, and Technology magnet program. Both come out meaningfully better than schools in the Hazel Dell and Orchards areas and a primary reason families specifically seek out North Vancouver.",
       },
       {
         q: "What is Legacy Salmon Creek Medical Center?",
@@ -6067,7 +6067,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "SW Washington",
     description: [
       "Felida occupies the northwest corner of Vancouver — north of the Columbia River, west of I-5, and largely east of the ridge that drops toward the Lewis River lowlands. It has the most rural-feeling character of any community in the Vancouver metro while still sitting 20–25 minutes from Portland via I-5. Lots commonly run a quarter acre to a full acre, with custom homes and estate-style subdivisions scattered alongside older farmhouses. Some properties retain horse facilities or agricultural outbuildings. The Felida Village commercial node at NW 36th Ave and NW 119th St provides a small-town center without being a full shopping district.",
-      "Schools draw from Vancouver Public Schools, with Felida Elementary as the standout — ranked in the top quartile of Washington elementary schools, with 58% math proficiency and 69% reading proficiency, well above state averages. Students feed to McLoughlin Middle School and Hudson's Bay High School, which is where the academic picture becomes more mixed. Buyers with older children or a multi-decade view on school quality should research the full pipeline. The Felida community has consistently high owner-occupancy and long-tenured residents.",
+      "Schools draw from Vancouver Public Schools, with Felida Elementary as the standout — it rates above state averages on proficiency measures. Students feed to McLoughlin Middle School and Hudson's Bay High School, which is where the academic picture becomes more mixed. Buyers with older children or a multi-decade view on school quality should research the full pipeline. The Felida community has consistently high owner-occupancy and long-tenured residents.",
       "The practical trade-offs are real. There is no meaningful transit. Every errand requires a car. The Felida corridor can back up on NW 36th Ave during evening hours as traffic filters from I-5. Higher median prices reflect lot size and land, not necessarily newer construction or premium finishes. Buyers expecting Portland-level walkability or a 20-minute bridge crossing will need to recalibrate. What Felida offers instead is space, quiet, and a western-facing hillside feel that is genuinely hard to find this close to a major metro.",
     ],
     personality: "Northwest Vancouver's closest thing to acreage living — large lots, quiet roads, and a small commercial village, all within 25 minutes of Portland",
@@ -6129,7 +6129,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "SW Washington",
     description: [
       "Hazel Dell runs along NE Highway 99 (the old Pacific Highway) north of downtown Vancouver, a corridor that has been commercial for decades and shows it. Strip malls, chain restaurants, a Fred Meyer, a Target, and a Home Depot bracket the residential streets that branch off the main road. The housing is mostly 1950s–1980s single-family ranches and bungalows on large lots with mature trees, mixed with apartment complexes at the arterial edges. It is not a neighborhood people move to for aesthetics. They move here because it is the most affordable entry point in North Vancouver, and because I-5 access from NE Hazel Dell Ave is immediate.",
-      "Vancouver Public Schools serves the area — Hazel Dell Elementary (K–5), Jason Lee Middle School, and Hudson's Bay High School. Of the three tiers, the elementary tends to be rated above average locally; Hudson's Bay High School has GreatSchools scores in the low range and academic proficiency well below state averages, though its graduation rate runs above the state average. Families with school-age children who are prioritizing academic rankings should compare Hazel Dell's pipeline to Salmon Creek or Felida before committing.",
+      "Vancouver Public Schools serves the area — Hazel Dell Elementary (K–5), Jason Lee Middle School, and Hudson's Bay High School. Of the three tiers, the elementary tends to be rated above average locally; Hudson's Bay High School rates below state averages on academic proficiency, though its graduation rate holds up better. Families with school-age children who are prioritizing academic rankings should compare Hazel Dell's pipeline to Salmon Creek or Felida before committing.",
       "Hazel Dell's genuine advantage is price and access. You can find houses here that would cost meaningfully more in Salmon Creek. The Parade of Bands, held annually since 1964 on Armed Forces Day, is a legitimate community tradition that draws a serious crowd. Luke Jensen Sports Park is a well-maintained hub for youth sports. For buyers who want to own a house in Clark County without Washington state income tax liability and are willing to take an older home on a busy corridor, Hazel Dell closes the deal.",
     ],
     personality: "North Vancouver's most affordable entry point — older housing, highway corridor, no pretense, quick I-5 access",
@@ -6195,7 +6195,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "SW Washington",
     description: [
       "Orchards takes its name from the commercial orchards that covered this part of East Vancouver until suburban development rolled through in the 1960s and accelerated through the 1990s. The housing stock is a legible record of that timeline — 1960s ranches on the western edges, 1970s–1980s colonials filling in the middle, newer infill developments toward the east. The area sits between NE Fourth Plain Blvd to the north and SR-500 and Highway 14 to the south, with NE Mill Plain Blvd serving as the main east-west corridor. Orchards Community Park, 33 acres with forested picnic areas and a rose garden, is one of the better neighborhood parks in East Vancouver.",
-      "Evergreen School District serves the area. Orchards Elementary has struggled on standardized testing — proficiency rates well below district and state averages — and sits near the bottom of the district's elementary school rankings. The Evergreen District overall runs a mixed picture: Mountain View High School carries an A- Niche grade and a 7/10 GreatSchools rating with a 92% graduation rate, which is meaningfully better than the district's lower-performing schools. Buyers with school-age children should verify boundaries — which school specifically serves their address — rather than evaluating the district as a single unit.",
+      "Evergreen School District serves the area. Orchards Elementary has struggled on standardized testing — proficiency rates well below district and state averages — and sits near the bottom of the district's elementary school rankings. The Evergreen District overall runs a mixed picture: Mountain View High School rates well across the major school-rating services, meaningfully better than the district's lower-performing schools. Buyers with school-age children should verify boundaries — which school specifically serves their address — rather than evaluating the district as a single unit.",
       "The price point is East Vancouver's main competitive advantage. Prices here get buyers into established suburban housing that would cost meaningfully more in North Vancouver. The I-205 commute to Portland runs 25–35 minutes in normal traffic, and Vancouver Mall is minutes away for daily errands. The honest trade-off: the area is car-dependent, transit is minimal, and the Highway 14 / SR-500 edges are noisier and more industrial-adjacent than the interior residential streets.",
     ],
     personality: "East Vancouver's family-practical neighborhood — older housing, fair prices, I-205 access, and a park system that punches above its weight",
@@ -6232,7 +6232,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What are the schools like in Orchards?",
-        a: "Mixed. Orchards Elementary has below-average proficiency scores and ranks near the bottom of the Evergreen District — this is a fact worth knowing. Shahala Middle School is middle-of-the-road. Mountain View High School is genuinely strong — A- on Niche, 7/10 GreatSchools, 92% graduation rate. If you have a high schooler or are buying long-term, the pathway improves significantly by upper grades. Verify your parcel's boundary assignments before purchase.",
+        a: "Mixed. Orchards Elementary has below-average proficiency scores and ranks near the bottom of the Evergreen District — this is a fact worth knowing. Shahala Middle School is middle-of-the-road. Mountain View High School is genuinely strong. If you have a high schooler or are buying long-term, the pathway improves significantly by upper grades. Verify your parcel's boundary assignments before purchase.",
       },
       {
         q: "Is Orchards growing?",
@@ -6261,7 +6261,7 @@ export const neighborhoods: NeighborhoodData[] = [
     region: "SW Washington",
     description: [
       "Cascade Park is East Vancouver's most established and accessible community for Portland commuters. Centered roughly at SE 164th Ave and Mill Plain Blvd, it has the infrastructure of a complete neighborhood: the Cascade Park Community Library (a well-designed 25,000-square-foot branch with a signature sloped-wood ceiling reading room), the Cascade Athletic Club, and a Mill Plain Blvd commercial strip that covers groceries, dining, and daily services without driving to the sprawl further east. The housing stock is 1970s–1990s single-family suburban on standard lots — mature trees, established landscaping, the look of a neighborhood that has been lived-in for thirty years because it has.",
-      "Evergreen Public Schools serves the area, with Crestline Elementary (PK–5), Cascade Middle School (6–8), and Mountain View High School (9–12) covering the K–12 pipeline. Crestline and Cascade Middle run below district and state averages on proficiency measures. Mountain View High School is the positive outlier in the district — A- Niche grade, 7/10 GreatSchools, 92% graduation rate, above-average science performance. The arc from elementary to high school improves noticeably, which buyers with young children should factor into long-term planning.",
+      "Evergreen Public Schools serves the area, with Crestline Elementary (PK–5), Cascade Middle School (6–8), and Mountain View High School (9–12) covering the K–12 pipeline. Crestline and Cascade Middle run below district and state averages on proficiency measures. Mountain View High School is the positive outlier in the district, with above-average science performance. The arc from elementary to high school improves noticeably, which buyers with young children should factor into long-term planning.",
       "I-205 access is the neighborhood's strongest geographic asset. From Cascade Park, the Glenn Jackson Bridge crossing to Portland takes 20–30 minutes in normal conditions — better than the I-5 corridor for most of the day. The bridge still backs up during morning and evening rush, and there is no useful transit connection for Portland workers. The price premium over Orchards is modest, which buyers tend to attribute to the library, the established feel, and slightly better proximity to the freeway.",
     ],
     personality: "East Vancouver's most complete neighborhood — a real library, a real commercial strip, and the best I-205 position in Clark County",
@@ -6298,7 +6298,7 @@ export const neighborhoods: NeighborhoodData[] = [
       },
       {
         q: "What are the schools like in Cascade Park?",
-        a: "Crestline Elementary and Cascade Middle School are below district and state averages on proficiency measures — this is documented and worth knowing before purchase. Mountain View High School, where students end up, is meaningfully stronger: A- on Niche, 7/10 GreatSchools rating, 92% graduation rate, with above-average science scores. The K–8 pipeline is a real consideration for families with young children. The high school pipeline is competitive.",
+        a: "Crestline Elementary and Cascade Middle School are below district and state averages on proficiency measures — this is documented and worth knowing before purchase. Mountain View High School, where students end up, is meaningfully stronger, with above-average science scores. The K–8 pipeline is a real consideration for families with young children. The high school pipeline is competitive.",
       },
       {
         q: "Is Cascade Park convenient to Portland International Airport?",
@@ -6324,7 +6324,7 @@ export const neighborhoods: NeighborhoodData[] = [
     description: [
       "Bull Mountain sits above Tigard on a ridge between Highway 99W and Scholls Ferry Road, and on a clear day you can see Mt. Hood from the upper streets. The neighborhood is unincorporated Washington County — it has resisted annexation into Tigard for decades — which means no city income tax, Washington County property taxes rather than Tigard's, and land use decisions that go through the county rather than city hall. That distinction matters at closing and it matters at tax time.",
       "Most of the housing was built between the mid-1990s and the early 2010s: larger single-family homes on cul-de-sacs, many with territorial or mountain views, served by Tigard-Tualatin School District. Alberta Rider Elementary, Mary Woodward Elementary, and Twality Middle School are the primary feeder schools. Tigard High School, recently remodeled and offering the International Baccalaureate program, is the high school for the area. SW Beef Bend Road and SW Bull Mountain Road are the main routes down to 99W — they narrow at the bottom and back up during morning rush hour.",
-      "The tradeoff for the views and the square footage is car dependence. There is no walkable commercial core on the hill — groceries, coffee, and everything else require a drive down. Walk Scores on most Bull Mountain streets are in the single digits. Transit is minimal. If one person in the household works from home and the other commutes, the commute itself is 30–40 minutes to downtown Portland via I-5 on a normal day; longer during Tigard and Tualatin rush-hour slowdowns on 99W.",
+      "The tradeoff for the views and the square footage is car dependence. There is no walkable commercial core on the hill — groceries, coffee, and everything else require a drive down. Almost nothing on the hill is reachable on foot, and transit is minimal. If one person in the household works from home and the other commutes, the commute itself is 30–40 minutes to downtown Portland via I-5 on a normal day; longer during Tigard and Tualatin rush-hour slowdowns on 99W.",
     ],
     personality: "Washington County's most coveted hilltop address — views, space, and no city taxes",
     mapEmbedSrc: "https://maps.google.com/maps?q=Bull+Mountain+Tigard+OR&output=embed&z=14",
