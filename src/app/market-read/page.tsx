@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 const FORM_ID = "be9tK3J2ZrtgKu3KTxYZ";
 
 export const metadata: Metadata = {
-  title: "The Portland Market Read | The Lindley Team at Movement Mortgage",
+  title: "The Portland Market Read",
   description:
     "A once-a-month read on what Portland's housing numbers did, where they came from, and how the metro figure compares to the neighborhoods underneath it.",
   alternates: { canonical: "https://thelindleyteam.com/market-read" },
