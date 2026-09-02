@@ -38,7 +38,7 @@ Each form submits via webhook to GHL. Every form captures UTM parameters from th
 ```
 # Movement easyApp — one link per loan officer (live values in src/app/apply/page.tsx):
 David Chandler: https://easyapp.movement.com/apply/create_profile?userid=10107026
-Bri Lindley:    https://easyapp.movement.com/apply/login?userid=10115700
+Bri Lindley:    https://easyapp.movement.com/apply/create_profile?userid=10115700
 # apply-click tracking still works via /api/lead (formType "apply-click") → wh-apply-click.
 ```
 **GHL tracking:** Fire a webhook on click (not form submission) that creates/updates a contact with tag `clicked-apply` and the UTM data. This lets you see who clicked but didn't complete the application.
