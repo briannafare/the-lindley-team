@@ -33,7 +33,7 @@ temptation to slip.
 Both David and Bri have their own secure Movement application link. Same portal, routed to that loan officer.
 
 - **David's application:** `https://easyapp.movement.com/apply/create_profile?userid=10107026`
-- **Bri's application:** `https://easyapp.movement.com/apply/login?userid=10115700`
+- **Bri's application:** `https://easyapp.movement.com/apply/create_profile?userid=10115700`
 
 **What June tells people about it (plain facts only):**
 - It runs through **Movement Mortgage** and it's **secure**.
