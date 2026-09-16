@@ -27,8 +27,8 @@ export default function TammiPage() {
             A message from Tammi
           </h1>
           <p className="mt-6 text-[0.95rem] text-ink-mid leading-relaxed max-w-[540px]">
-            Tammi started this team in 2004. She recorded two minutes for the people
-            she helped into a house, and it&apos;s better coming from her.
+            Tammi started this team in 2004. She wanted to tell you about the changes
+            herself, so here she is. It&apos;s two minutes.
           </p>
 
           <div className="mt-8 mx-auto w-full max-w-[400px] aspect-[9/16] rounded-[1.25rem] overflow-hidden border border-border bg-ink shadow-[0_24px_70px_rgba(0,0,0,0.08)]">
