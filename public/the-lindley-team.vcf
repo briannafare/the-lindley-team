@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Lindley Team;The;;;
+FN:The Lindley Team
+ORG:The Lindley Team at Movement Mortgage
+TEL;TYPE=WORK,VOICE:+19717541771
+EMAIL;TYPE=WORK,INTERNET:davidandbri@movement.com
+URL:https://thelindleyteam.com
+ADR;TYPE=WORK:;;10135 SE Sunnyside Rd, Suite 125;Clackamas;OR;97015;USA
+NOTE:Movement Mortgage, LLC. NMLS #39179. Equal Housing Lender.
+END:VCARD

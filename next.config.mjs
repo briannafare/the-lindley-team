@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    // The /tammi page's save-contact button. Served as a vCard so phones open it in Contacts.
+    return [{ source: "/the-lindley-team.vcf", headers: [{ key: "Content-Type", value: "text/vcard; charset=utf-8" }, { key: "Content-Disposition", value: 'attachment; filename="The Lindley Team.vcf"' }] }];
+  },
   async redirects() {
     return [
       { source: "/parkrose-neighborhood-copy", destination: "/neighborhoods", permanent: true },
