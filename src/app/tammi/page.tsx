@@ -31,7 +31,7 @@ export default function TammiPage() {
               <span className="font-semibold">Save our new contact info.</span>{" "}
               <span className="hidden sm:inline">Same phone number, new email.</span>
             </p>
-            <a href="/the-lindley-team.vcf" download="The Lindley Team.vcf" className={BTN + " shrink-0 !py-3 !px-5 text-[0.95rem]"}>
+            <a href="/the-lindley-team.vcf" download="The ChandlerLindley Team.vcf" className={BTN + " shrink-0 !py-3 !px-5 text-[0.95rem]"}>
               Add to contacts
             </a>
           </div>
@@ -44,7 +44,7 @@ export default function TammiPage() {
             Tammi started this team in 2004. She wanted to tell you about the changes
             herself, so here she is. It&apos;s two minutes.
           </p>
-          <a href="/the-lindley-team.vcf" download="The Lindley Team.vcf" className={BTN + " mt-6"}>
+          <a href="/the-lindley-team.vcf" download="The ChandlerLindley Team.vcf" className={BTN + " mt-6"}>
             Add our new contact info
           </a>
           <p className="mt-2 text-[0.85rem] text-ink-mid">One tap. Same phone number, new email.</p>
@@ -64,11 +64,11 @@ export default function TammiPage() {
               Save our new contact info
             </h2>
             <p className="mt-3 text-[0.95rem] text-ink-mid leading-relaxed">
-              The Lindley Team is now at Movement Mortgage. Same phone number, new
-              email. One tap adds both to your contacts.
+              The Lindley Team is now The ChandlerLindley Team at Movement Mortgage.
+              Same phone number, new email. One tap adds both to your contacts.
             </p>
-            <a href="/the-lindley-team.vcf" download="The Lindley Team.vcf" className={BTN + " mt-6"}>
-              Add The Lindley Team to your contacts
+            <a href="/the-lindley-team.vcf" download="The ChandlerLindley Team.vcf" className={BTN + " mt-6"}>
+              Add The ChandlerLindley Team to your contacts
             </a>
             <ul className="mt-6 space-y-2 text-[0.95rem]">
               <li>
