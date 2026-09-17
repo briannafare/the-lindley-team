@@ -6,6 +6,9 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Postcard QR. The card encodes thelindleyteam.com/go/tammi so the phone shows our domain;
+      // this hop goes through the GHL QR counter, which then lands on /tammi with postcard UTMs.
+      { source: "/go/tammi", destination: "https://links.eighty5labs.com/qr/71jlFc42oh0i", permanent: false },
       { source: "/parkrose-neighborhood-copy", destination: "/neighborhoods", permanent: true },
       { source: "/parkrose-neighborhood-2", destination: "/neighborhoods", permanent: true },
       { source: "/kerns-neighborhood", destination: "/neighborhoods", permanent: true },
