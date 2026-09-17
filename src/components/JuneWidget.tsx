@@ -11,6 +11,7 @@
 // so it's fine to ship them client-side.
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const GHL_VOICE = {
   agentId: "6a5fc3d5d0c5f9597a206aa0", // "Voice Assistant - 1" (Lindley sub-account)
@@ -313,6 +314,9 @@ function Capture({ mode }: { mode: "call" | "text" | "message" }) {
 
 // ── the widget shell ─────────────────────────────────────────────────────────
 export default function JuneWidget() {
+  // The postcard landing page has its own fixed save-contact bar bottom-right; June was sitting on top of it.
+  const pathname = usePathname();
+  const hidden = pathname?.startsWith("/tammi") ?? false;
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<View>("choose");
   // Stay out of the way on first paint — only surface once the visitor has
@@ -333,6 +337,8 @@ export default function JuneWidget() {
   }, []);
 
   const openWidget = () => { setView("choose"); setOpen(true); };
+
+  if (hidden) return null;
 
   return (
     <div className="fixed bottom-4 right-4 z-[70] font-grotesk sm:bottom-6 sm:right-6">
