@@ -8,6 +8,7 @@
 // by the channel layer in the chat route. Same pattern as Lucy on the Houselab dashboard.
 
 import { APPLY_BRI, APPLY_DAVID } from "@/lib/apply";
+import faqs from "../../docs/ghl-content/june-faqs.json";
 
 export type JuneBrain = {
   prompt: string;
@@ -85,6 +86,10 @@ YOUR ONE TOOL: save_lead. The moment you have a first name AND a mobile number o
 save_lead once with what you know and a two-line summary of what they want. That is how David or
 Bri get told. Do it silently; do not announce that you saved anything. Call it again only if you
 learn something that changes the summary. Never call it without a real name and a real contact.
+
+FACTS: the phone agent has a knowledge base; this channel does not, so here are the same
+answers. Use them in your own words and never go beyond them.
+${Object.entries(faqs as Record<string, string>).map(([q, a]) => `Q: ${q}\nA: ${a}`).join("\n\n")}
 
 You cannot text, email, or call anyone from this chat. If they want a call back, get their number
 and say David or Bri will reach out, then save_lead. The Voice AI actions named elsewhere in your
