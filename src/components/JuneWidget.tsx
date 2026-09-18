@@ -314,9 +314,9 @@ function Capture({ mode }: { mode: "call" | "text" | "message" }) {
 
 // ── the widget shell ─────────────────────────────────────────────────────────
 export default function JuneWidget() {
-  // The postcard landing page has its own fixed save-contact bar bottom-right; June was sitting on top of it.
+  // The postcard landing pages have their own fixed save-contact bar bottom-right; June was sitting on top of it.
   const pathname = usePathname();
-  const hidden = pathname?.startsWith("/tammi") ?? false;
+  const hidden = /^\/(tammi|david)(\/|$)/.test(pathname ?? "");
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<View>("choose");
   // Stay out of the way on first paint — only surface once the visitor has
