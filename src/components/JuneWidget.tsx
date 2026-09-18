@@ -84,8 +84,6 @@ function VoiceCall() {
     setStatus("connecting");
     setErrMsg("");
     try {
-      await navigator.mediaDevices.getUserMedia({ audio: true }); // prompt mic (mobile needs the gesture)
-
       const sessionId = uuid4();
       const payload = {
         contactId: rand("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", 20),
@@ -105,15 +103,20 @@ function VoiceCall() {
         },
       };
 
-      const res = await fetch(GHL_VOICE.tokenUrl + GHL_VOICE.agentId, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "*/*" },
-        body: JSON.stringify(payload),
-      });
+      // Mic permission, the GHL token, and the LiveKit bundle all at once instead of one after
+      // another: that was most of the "Connecting…" wait.
+      const [, res, { Room, RoomEvent, Track }] = await Promise.all([
+        navigator.mediaDevices.getUserMedia({ audio: true }), // prompt mic (mobile needs the gesture)
+        fetch(GHL_VOICE.tokenUrl + GHL_VOICE.agentId, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "*/*" },
+          body: JSON.stringify(payload),
+        }),
+        import("livekit-client"),
+      ]);
       if (!res.ok) throw new Error(`Couldn't reach June (${res.status}). Try again in a moment.`);
       const { accessToken } = await res.json();
 
-      const { Room, RoomEvent, Track } = await import("livekit-client");
       const room = new Room({
         adaptiveStream: true,
         dynacast: true,
@@ -174,6 +177,7 @@ function VoiceCall() {
     setMuted(next);
   }, [muted]);
 
+  useEffect(() => { import("livekit-client").catch(() => {}); }, []); // warm the bundle before the tap
   useEffect(() => () => { endCall(); }, [endCall]); // tear down on unmount
 
   const live = status === "live";
