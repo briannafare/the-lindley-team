@@ -274,9 +274,21 @@ function TextChat() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: next.slice(1) }), // the opener is hers, not a model turn
       });
-      if (!res.ok) throw new Error(res.status === 429 ? "June's got a few people at once. Give it a second and try again." : "June couldn't answer just now. Try again, or call 971-754-1771.");
-      const { reply } = (await res.json()) as { reply: string };
-      setTurns((t) => [...t, { role: "assistant", content: reply }]);
+      if (!res.ok || !res.body) throw new Error(res.status === 429 ? "June's got a few people at once. Give it a second and try again." : "June couldn't answer just now. Try again, or call 971-754-1771.");
+      // Her words stream in as plain text; show them as they arrive.
+      setBusy(false);
+      setTurns((t) => [...t, { role: "assistant", content: "" }]);
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let got = "";
+      for (;;) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        got += decoder.decode(value, { stream: true });
+        const snapshot = got;
+        setTurns((t) => [...t.slice(0, -1), { role: "assistant", content: snapshot }]);
+      }
+      if (!got.trim()) throw new Error("June couldn't answer just now. Try again, or call 971-754-1771.");
     } catch (e) {
       setErr(e instanceof Error ? e.message : "Something went wrong.");
       setTurns(turns); // put the draft back where it was

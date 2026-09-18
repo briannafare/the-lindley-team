@@ -3,13 +3,17 @@ import { NextResponse } from "next/server";
 import { juneBrain, CHAT_CHANNEL } from "@/lib/june";
 
 // Typed chat with June. The widget sends the whole conversation each turn; we run June's live GHL
-// prompt plus the chat channel layer through Claude and return one reply. Non-streaming on purpose:
-// replies are one to three sentences, and a plain JSON response keeps the one tool loop trivial.
-// ponytail: switch to client.messages.stream if replies ever grow past a few sentences.
+// prompt plus the chat channel layer through Claude and stream her words back as plain text, so the
+// first words land in a second or two instead of after the whole reply is written.
+//
+// Model: Sonnet 5, because a website chat is judged on how fast the first sentence appears and
+// Opus measured six to sixteen seconds per turn here (2026-09-17). Sonnet holds the compliance
+// rules in the prompt just as well for one-to-three-sentence replies. One line to change.
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
+const MODEL = "claude-sonnet-5";
 const MAX_TURNS = 40;
 const MAX_CHARS = 2000;
 
@@ -74,58 +78,65 @@ export async function POST(req: Request) {
   const brain = await juneBrain();
   const client = new Anthropic();
   const origin = new URL(req.url).origin;
-
   const messages: Anthropic.MessageParam[] = turns.map((t) => ({ role: t.role, content: t.content }));
-  let reply = "";
-  let saved = false;
+  const encoder = new TextEncoder();
 
-  try {
-    // At most three rounds: reply, or tool call then reply. June is told to save silently.
-    for (let round = 0; round < 3; round++) {
-      const res = await client.messages.create({
-        model: "claude-opus-5",
-        max_tokens: 600,
-        output_config: { effort: "low" },
-        system: [{ type: "text", text: brain.prompt + CHAT_CHANNEL, cache_control: { type: "ephemeral" } }],
-        tools: [SAVE_LEAD],
-        messages,
-      });
+  const stream = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      let wroteAnything = false;
+      const write = (s: string) => { if (s) { wroteAnything = true; controller.enqueue(encoder.encode(s)); } };
+      try {
+        // At most three rounds: reply, or tool call then reply. June is told to save silently.
+        // Text streams out as it is written; text beside a tool call (often the link) is kept and
+        // the next round's text follows it.
+        for (let round = 0; round < 3; round++) {
+          const s = client.messages.stream({
+            model: MODEL,
+            max_tokens: 600,
+            output_config: { effort: "low" },
+            system: [{ type: "text", text: brain.prompt + CHAT_CHANNEL, cache_control: { type: "ephemeral" } }],
+            tools: [SAVE_LEAD],
+            messages,
+          });
+          s.on("text", (delta) => write(delta));
+          const res = await s.finalMessage();
 
-      const text = res.content.filter((b): b is Anthropic.TextBlock => b.type === "text").map((b) => b.text).join("").trim();
-      const toolUses = res.content.filter((b): b is Anthropic.ToolUseBlock => b.type === "tool_use");
+          const toolUses = res.content.filter((b): b is Anthropic.ToolUseBlock => b.type === "tool_use");
+          if (res.stop_reason === "refusal") {
+            if (!wroteAnything) write("That one's really a David or Bri question. Want me to have one of them reach out?");
+            break;
+          }
+          if (!toolUses.length) break;
 
-      if (res.stop_reason === "refusal") {
-        reply = "That one's really a David or Bri question. Want me to have one of them reach out?";
-        break;
-      }
-      if (!toolUses.length) {
-        reply = [reply, text].filter(Boolean).join("\n\n");
-        break;
-      }
-
-      messages.push({ role: "assistant", content: res.content });
-      const results: Anthropic.ToolResultBlockParam[] = [];
-      for (const tu of toolUses) {
-        let ok = false;
-        try {
-          ok = tu.name === "save_lead" && (await saveLead(origin, tu.input as Record<string, unknown>, turns));
-        } catch (e) {
-          console.error("[june] save_lead failed:", e);
+          messages.push({ role: "assistant", content: res.content });
+          const results: Anthropic.ToolResultBlockParam[] = [];
+          for (const tu of toolUses) {
+            let ok = false;
+            try {
+              ok = tu.name === "save_lead" && (await saveLead(origin, tu.input as Record<string, unknown>, turns));
+            } catch (e) {
+              console.error("[june] save_lead failed:", e);
+            }
+            results.push({ type: "tool_result", tool_use_id: tu.id, content: ok ? "saved" : "could not save; carry on, do not mention it" });
+          }
+          messages.push({ role: "user", content: results });
+          if (wroteAnything) write("\n\n");
         }
-        saved = saved || ok;
-        results.push({ type: "tool_result", tool_use_id: tu.id, content: ok ? "saved" : "could not save; carry on, do not mention it" });
+        if (!wroteAnything) write("Sorry, I lost my train of thought. Say that once more?");
+      } catch (e) {
+        console.error("[june] chat error:", e);
+        if (!wroteAnything) {
+          write(e instanceof Anthropic.RateLimitError
+            ? "June's got a few people at once. Give it a second and try again."
+            : "June couldn't answer just now. Try again, or call 971-754-1771.");
+        }
+      } finally {
+        controller.close();
       }
-      messages.push({ role: "user", content: results });
-      if (text) reply = [reply, text].filter(Boolean).join("\n\n"); // text written beside the tool call (often the link) must survive the next round
-    }
-  } catch (e) {
-    if (e instanceof Anthropic.RateLimitError) {
-      return NextResponse.json({ error: "busy" }, { status: 429 });
-    }
-    console.error("[june] chat error:", e);
-    return NextResponse.json({ error: "chat failed" }, { status: 502 });
-  }
+    },
+  });
 
-  if (!reply) reply = "Sorry, I lost my train of thought. Say that once more?";
-  return NextResponse.json({ reply, saved, source: brain.source });
+  return new Response(stream, {
+    headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store", "X-June-Source": brain.source },
+  });
 }
