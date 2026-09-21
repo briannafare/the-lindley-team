@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import VideoMessagePage from "@/components/VideoMessagePage";
 
 // Landing page for David's postcard QR code (his past clients). Not a search page, so noindex.
-// VIDEO_ID: David's YouTube video. Placeholder until Bri sends the link.
-const VIDEO_ID = "REPLACE_WITH_DAVID_VIDEO_ID";
+// VIDEO_ID: David's YouTube Short (youtube.com/shorts/XthCBRCMuIM).
+const VIDEO_ID = "XthCBRCMuIM";
 
 export const metadata: Metadata = {
   title: "A message from David",
