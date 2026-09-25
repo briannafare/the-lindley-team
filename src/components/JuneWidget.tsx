@@ -1,7 +1,8 @@
 "use client";
 
 // ── June — The Lindley Team's website assistant ──────────────────────────────
-// Custom-branded voice-or-chat widget. "Talk to June" is the REAL GHL Voice AI
+// Custom-branded voice-or-chat widget. "Chat with June" is typed chat that runs June's
+// live GHL prompt through /api/june/chat (see src/lib/june.ts). "Talk to June" is the REAL GHL Voice AI
 // agent ("Voice Assistant - 1") talking live in-browser: GHL runs Voice AI on
 // Retell over LiveKit and hands the browser a LiveKit token from a public
 // endpoint, so the same agent GHL ships answers on the page, in our own UI.
@@ -12,6 +13,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { JUNE_WELCOME } from "@/lib/june";
 
 const GHL_VOICE = {
   agentId: "6a5fc3d5d0c5f9597a206aa0", // "Voice Assistant - 1" (Lindley sub-account)
@@ -55,7 +57,7 @@ const I = {
   ),
 };
 
-type View = "choose" | "voice" | "call" | "text" | "message";
+type View = "choose" | "voice" | "chat" | "call" | "text" | "message";
 
 // ── the live voice call (GHL Voice AI over LiveKit) ──────────────────────────
 type VoiceStatus = "idle" | "connecting" | "live" | "ended" | "error";
@@ -82,8 +84,6 @@ function VoiceCall() {
     setStatus("connecting");
     setErrMsg("");
     try {
-      await navigator.mediaDevices.getUserMedia({ audio: true }); // prompt mic (mobile needs the gesture)
-
       const sessionId = uuid4();
       const payload = {
         contactId: rand("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", 20),
@@ -103,15 +103,20 @@ function VoiceCall() {
         },
       };
 
-      const res = await fetch(GHL_VOICE.tokenUrl + GHL_VOICE.agentId, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "*/*" },
-        body: JSON.stringify(payload),
-      });
+      // Mic permission, the GHL token, and the LiveKit bundle all at once instead of one after
+      // another: that was most of the "Connecting…" wait.
+      const [, res, { Room, RoomEvent, Track }] = await Promise.all([
+        navigator.mediaDevices.getUserMedia({ audio: true }), // prompt mic (mobile needs the gesture)
+        fetch(GHL_VOICE.tokenUrl + GHL_VOICE.agentId, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "*/*" },
+          body: JSON.stringify(payload),
+        }),
+        import("livekit-client"),
+      ]);
       if (!res.ok) throw new Error(`Couldn't reach June (${res.status}). Try again in a moment.`);
       const { accessToken } = await res.json();
 
-      const { Room, RoomEvent, Track } = await import("livekit-client");
       const room = new Room({
         adaptiveStream: true,
         dynacast: true,
@@ -172,6 +177,7 @@ function VoiceCall() {
     setMuted(next);
   }, [muted]);
 
+  useEffect(() => { import("livekit-client").catch(() => {}); }, []); // warm the bundle before the tap
   useEffect(() => () => { endCall(); }, [endCall]); // tear down on unmount
 
   const live = status === "live";
@@ -228,8 +234,119 @@ function VoiceCall() {
       </div>
 
       <p className="mt-5 text-[12.5px] text-ink-light">
-        Rather type? Use <span className="font-semibold text-cobalt">Send a message</span> or have June call you.
+        Rather type? Go back and pick <span className="font-semibold text-cobalt">Chat with June</span>.
       </p>
+    </div>
+  );
+}
+
+// ── typed chat (June's live GHL prompt, run through /api/june/chat) ───────────
+type ChatTurn = { role: "user" | "assistant"; content: string };
+
+function linkify(text: string) {
+  // June pastes one plain URL on its own line; make it tappable, leave everything else as text.
+  const parts = text.split(/(https?:\/\/[^\s]+)/g);
+  return parts.map((part, i) =>
+    /^https?:\/\//.test(part)
+      ? <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="break-all font-semibold text-cobalt underline">{part.replace(/^https?:\/\//, "").replace(/\/$/, "")}</a>
+      : <span key={i}>{part}</span>,
+  );
+}
+
+function TextChat() {
+  const [turns, setTurns] = useState<ChatTurn[]>([{ role: "assistant", content: JUNE_WELCOME }]);
+  const [draft, setDraft] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const endRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => { endRef.current?.scrollIntoView({ block: "end" }); }, [turns, busy]);
+  useEffect(() => { inputRef.current?.focus(); }, []);
+
+  async function send() {
+    const content = draft.trim();
+    if (!content || busy) return;
+    const next: ChatTurn[] = [...turns, { role: "user", content }];
+    setTurns(next);
+    setDraft("");
+    setBusy(true);
+    setErr("");
+    try {
+      const res = await fetch("/api/june/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: next.slice(1) }), // the opener is hers, not a model turn
+      });
+      if (!res.ok || !res.body) throw new Error(res.status === 429 ? "June's got a few people at once. Give it a second and try again." : "June couldn't answer just now. Try again, or call 971-754-1771.");
+      // Her words stream in as plain text; show them as they arrive.
+      setBusy(false);
+      setTurns((t) => [...t, { role: "assistant", content: "" }]);
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let got = "";
+      for (;;) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        got += decoder.decode(value, { stream: true });
+        const snapshot = got;
+        setTurns((t) => [...t.slice(0, -1), { role: "assistant", content: snapshot }]);
+      }
+      if (!got.trim()) throw new Error("June couldn't answer just now. Try again, or call 971-754-1771.");
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Something went wrong.");
+      setTurns(turns); // put the draft back where it was
+      setDraft(content);
+    } finally {
+      setBusy(false);
+      inputRef.current?.focus();
+    }
+  }
+
+  return (
+    <div className="flex h-full min-h-[340px] flex-col">
+      <div className="flex-1 space-y-2.5 overflow-y-auto pb-2" aria-live="polite">
+        {turns.map((t, i) => (
+          <div key={i} className={`flex ${t.role === "user" ? "justify-end" : "justify-start"}`}>
+            <div
+              className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-[14px] leading-relaxed ${
+                t.role === "user" ? "rounded-br-md bg-orange text-paper" : "rounded-bl-md bg-shell text-ink"
+              }`}
+            >
+              {t.role === "assistant" ? linkify(t.content) : t.content}
+            </div>
+          </div>
+        ))}
+        {busy && (
+          <div className="flex justify-start">
+            <div className="rounded-2xl rounded-bl-md bg-shell px-3.5 py-2.5 text-[13px] text-ink-light">June is typing…</div>
+          </div>
+        )}
+        {err && <p className="px-1 text-[12.5px] text-orange">{err}</p>}
+        <div ref={endRef} />
+      </div>
+      <form
+        className="flex flex-none items-end gap-2 border-t border-border pt-2.5"
+        onSubmit={(e) => { e.preventDefault(); send(); }}
+      >
+        <textarea
+          ref={inputRef}
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } }}
+          rows={1}
+          placeholder="Type to June…"
+          aria-label="Message June"
+          className="max-h-28 min-h-[44px] flex-1 resize-none rounded-xl border border-border bg-shell px-3 py-2.5 text-sm text-ink outline-none placeholder:text-ink-light focus:border-orange focus:bg-paper"
+        />
+        <button
+          type="submit"
+          disabled={busy || !draft.trim()}
+          className="h-11 flex-none rounded-xl bg-orange px-4 font-grotesk text-sm font-semibold text-paper transition-colors hover:brightness-95 disabled:opacity-50"
+        >
+          Send
+        </button>
+      </form>
     </div>
   );
 }
@@ -391,7 +508,7 @@ export default function JuneWidget() {
           </div>
 
           {/* body */}
-          <div className="flex-1 overflow-y-auto px-4 py-4">
+          <div className={`flex-1 overflow-y-auto px-4 py-4 ${view === "chat" ? "flex flex-col" : ""}`}>
             {view === "choose" && (
               <>
                 <p className="mx-0.5 mb-4 font-serif text-[19px] leading-snug text-ink">
@@ -400,18 +517,20 @@ export default function JuneWidget() {
 
                 <div className="mb-2 mx-0.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink-light">Chat with me now</div>
                 <div className="flex flex-col gap-2.5">
+                  <ChoiceCard tone="chat" title="Chat with June" sub="Type, she answers right here" icon={I.chat(21)} onClick={() => setView("chat")} />
                   <ChoiceCard tone="voice" title="Talk to June" sub="Live voice, hands-free" icon={I.mic(21)} onClick={() => setView("voice")} />
-                  <ChoiceCard tone="chat" title="Send a message" sub="Type it out, we&rsquo;ll reply" icon={I.chat(21)} onClick={() => setView("message")} />
                 </div>
 
-                <div className="mb-2 mt-5 mx-0.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink-light">Or have me reach out</div>
+                <div className="mb-2 mt-5 mx-0.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-ink-light">Or have David or Bri reach out</div>
                 <div className="flex gap-2.5">
                   <ReachButton title="Call me" icon={I.phone()} tone="call" onClick={() => setView("call")} />
                   <ReachButton title="Text me" icon={I.sms()} tone="text" onClick={() => setView("text")} />
+                  <ReachButton title="Message" icon={I.chat(18)} tone="text" onClick={() => setView("message")} />
                 </div>
               </>
             )}
             {view === "voice" && <VoiceCall />}
+            {view === "chat" && <TextChat />}
             {view === "call" && <Capture mode="call" />}
             {view === "text" && <Capture mode="text" />}
             {view === "message" && <Capture mode="message" />}
