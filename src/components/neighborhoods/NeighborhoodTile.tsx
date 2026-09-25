@@ -2,11 +2,6 @@ import Link from "next/link";
 import { NeighborhoodData } from "@/lib/neighborhoods";
 import { pickTileStyle, Poster, PORTRA } from "./tileStyle";
 
-function formatPrice(n: number): string {
-  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(2)}M`;
-  return `$${(n / 1_000).toFixed(0)}k`;
-}
-
 /**
  * Index-grid card. Mixed editorial vocabulary (see tileStyle): a real photo
  * (color Portra or B&W Tri-X) when one exists, otherwise a designed poster.
@@ -51,7 +46,6 @@ export default function NeighborhoodTile({
         <span>
           {n.city}, {n.state}
         </span>
-        <span className="font-medium text-ink-mid">{formatPrice(n.medianHomePrice)}</span>
       </div>
     </Link>
   );

@@ -115,7 +115,6 @@ export default function ExploreNeighborhoods() {
             )}
             <div className="flex justify-between mt-2.5 font-body text-[13px] text-ink-light">
               <span>{t.city}, {t.state}</span>
-              <span>Walk {t.walkScore}</span>
             </div>
           </Link>
         ))}

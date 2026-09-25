@@ -19,15 +19,6 @@ const REGION_ORDER = [
   "SW Washington",
 ];
 
-type PriceFilter = "All prices" | "Under $500k" | "$500k–$750k" | "$750k+";
-
-const PRICE_FILTERS: { label: PriceFilter; test: (price: number) => boolean }[] = [
-  { label: "All prices", test: () => true },
-  { label: "Under $500k", test: (p) => p < 500_000 },
-  { label: "$500k–$750k", test: (p) => p >= 500_000 && p <= 750_000 },
-  { label: "$750k+", test: (p) => p > 750_000 },
-];
-
 function chipClass(active: boolean): string {
   return [
     "inline-flex items-center gap-1.5 px-4 py-2 rounded-full border text-[0.72rem] font-bold tracking-[0.04em] uppercase transition-colors",
@@ -44,7 +35,6 @@ export default function NeighborhoodBrowser({
 }) {
   const [query, setQuery] = useState("");
   const [region, setRegion] = useState<string>("All");
-  const [price, setPrice] = useState<PriceFilter>("All prices");
 
   const regions = useMemo(() => {
     const present = new Set<string>(neighborhoods.map((n) => n.region));
@@ -63,14 +53,12 @@ export default function NeighborhoodBrowser({
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    const priceTest = PRICE_FILTERS.find((f) => f.label === price)?.test ?? (() => true);
     return neighborhoods.filter((n) => {
       if (region !== "All" && n.region !== region) return false;
-      if (!priceTest(n.medianHomePrice)) return false;
       if (q && !n.name.toLowerCase().includes(q) && !n.city.toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [neighborhoods, query, region, price]);
+  }, [neighborhoods, query, region]);
 
   const grouped = useMemo(() => {
     const byRegion = new Map<string, NeighborhoodData[]>();
@@ -104,20 +92,6 @@ export default function NeighborhoodBrowser({
                 placeholder="Search by name or city…"
                 className="w-full rounded-full border border-border bg-white px-5 py-3 text-[0.85rem] text-ink placeholder:text-ink-light focus:outline-none focus:border-ink transition-colors"
               />
-            </div>
-
-            <div className="flex flex-wrap gap-2 lg:justify-end">
-              {PRICE_FILTERS.map((f) => (
-                <button
-                  key={f.label}
-                  type="button"
-                  aria-pressed={price === f.label}
-                  onClick={() => setPrice(f.label)}
-                  className={chipClass(price === f.label)}
-                >
-                  {f.label}
-                </button>
-              ))}
             </div>
           </div>
 
