@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import type { LeadFormType } from "@/lib/ghl";
+import { trackLead } from "@/lib/metaPixel";
 
 // When someone asks for a call, the alert has to say when they want it. Booking a
 // real slot at /contact#schedule is still the better path; this is for the people
@@ -57,6 +58,7 @@ export default function ContactForm({
         }),
       });
       if (!res.ok) throw new Error(String(res.status));
+      trackLead();
       setState("sent");
     } catch {
       setState("error");

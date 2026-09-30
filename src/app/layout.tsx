@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import JuneWidget from "@/components/JuneWidget";
 import ScrollActiveController from "@/components/ScrollActiveController";
+import MetaPixel from "@/components/MetaPixel";
 
 // Serif display + italic swash accent (the "Museum of Art" move)
 const fraunces = Fraunces({
@@ -152,6 +153,8 @@ export default function RootLayout({
         {/* On touch devices, plays hover-driven motion (e.g. B&W→color) as
             elements scroll through center — see components marked data-scroll-active. */}
         <ScrollActiveController />
+        {/* Meta pixel ("TLT Pixel") for website-visitor retargeting audiences. */}
+        <MetaPixel />
       </body>
     </html>
   );

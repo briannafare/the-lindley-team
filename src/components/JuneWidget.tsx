@@ -12,6 +12,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { trackLead } from "@/lib/metaPixel";
 
 const GHL_VOICE = {
   agentId: "6a5fc3d5d0c5f9597a206aa0", // "Voice Assistant - 1" (Lindley sub-account)
@@ -262,6 +263,7 @@ function Capture({ mode }: { mode: "call" | "text" | "message" }) {
           source: "thelindleyteam.com · June widget",
         }),
       });
+      if (res.ok) trackLead();
       setState(res.ok ? "done" : "error");
     } catch {
       setState("error");
