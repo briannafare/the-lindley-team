@@ -21,6 +21,8 @@ export default function MetaPixel() {
 
   if (!META_PIXEL_ID) return null;
 
+  // No <noscript> image fallback: Next.js preloads <img> tags found in <noscript>,
+  // which would record a second PageView for every visitor.
   return (
     <>
       <Script id="meta-pixel" strategy="afterInteractive">
@@ -31,16 +33,6 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','${META_PIXEL_ID}');fbq('track','PageView');`}
       </Script>
-      <noscript>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          height="1"
-          width="1"
-          style={{ display: "none" }}
-          alt=""
-          src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
-        />
-      </noscript>
     </>
   );
 }
