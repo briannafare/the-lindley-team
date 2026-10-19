@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: service.seo.title,
   description: service.seo.description,
   keywords: service.seo.keywords,
+  alternates: { canonical: "/services/divorce-lending" },
 };
 
 export default function ServicePage() {
