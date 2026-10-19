@@ -57,6 +57,17 @@ const ORG_LD = {
   url: SITE_URL,
   telephone: "+1-971-754-1771",
   email: "brianna.lindley@movement.com",
+  // NMLS ids exactly as the footer prints them: Movement Mortgage, LLC #39179,
+  // David Chandler #265974, Brianna Lindley #1367416.
+  identifier: [
+    { "@type": "PropertyValue", propertyID: "NMLS", value: "39179", name: "Movement Mortgage, LLC" },
+    { "@type": "PropertyValue", propertyID: "NMLS", value: "265974", name: "David Chandler" },
+    { "@type": "PropertyValue", propertyID: "NMLS", value: "1367416", name: "Brianna Lindley" },
+  ],
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    name: "Certified Divorce Lending Professional (CDLP)",
+  },
   parentOrganization: {
     "@type": "Organization",
     name: "Movement Mortgage, LLC",
@@ -84,6 +95,10 @@ const ORG_LD = {
       name: "Bri Lindley",
       jobTitle: "Mortgage Loan Officer, CDLP",
       identifier: "NMLS #1367416",
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        name: "Certified Divorce Lending Professional (CDLP)",
+      },
     },
     {
       "@type": "Person",
