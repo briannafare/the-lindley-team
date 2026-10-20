@@ -30,7 +30,7 @@ The new Next.js build already reflected the merge structurally; this pass fixed 
 - Avoid: "broker," "we shop hundreds of lenders," "difference between a broker and a bank," hard day-count promises.
 
 ## 3. Voice
-Casual, direct, confident, low-pressure. Dry humor OK. Neighborhood-first ("start with the block, not the rate"). Short, specific, non-cliché. No jargon without a plain-English unpack.
+Casual, direct, confident, low-pressure. Dry humor OK. Short, specific, non-cliché. No jargon without a plain-English unpack.
 
 ## 4. People & facts (verified)
 - **Bri Lindley** — Senior Loan Officer, CDLP, NMLS #1367416, licensed **OR & WA**, grew up in Portland.

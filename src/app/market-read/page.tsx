@@ -19,9 +19,32 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+// Article schema. Dates are the page's real git history (first commit and last edit to
+// this file), not invented. Bump MARKET_READ_MODIFIED each time a monthly issue/page update ships.
+// Data source line: the page itself says the figures come from RMLS's monthly Portland sales report.
+const MARKET_READ_PUBLISHED = "2026-09-01";
+const MARKET_READ_MODIFIED = "2026-09-01";
+const MARKET_READ_LD = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "The Portland Market Read",
+  description: metadata.description,
+  datePublished: MARKET_READ_PUBLISHED,
+  dateModified: MARKET_READ_MODIFIED,
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://thelindleyteam.com/market-read" },
+  author: { "@type": "Organization", name: "The Lindley Team", "@id": "https://thelindleyteam.com/#lindleyteam" },
+  publisher: { "@type": "Organization", name: "The Lindley Team", "@id": "https://thelindleyteam.com/#lindleyteam" },
+  isBasedOn: { "@type": "Dataset", name: "RMLS monthly Portland sales figures", publisher: { "@type": "Organization", name: "RMLS" } },
+  citation: "Data source: RMLS monthly Portland sales figures.",
+};
+
 export default function MarketReadPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(MARKET_READ_LD) }}
+      />
       <Nav />
       <main className="bg-paper pt-[clamp(24px,5vh,56px)] pb-[clamp(56px,8vw,120px)]">
         <div className="max-w-[720px] mx-auto px-5 lg:px-[54px]">

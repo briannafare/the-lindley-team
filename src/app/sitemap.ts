@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { neighborhoods } from "@/lib/neighborhoods";
 import { CALCULATOR_TOOLS } from "@/lib/calculator-tools";
+import { getAiPages } from "@/lib/ai-search-pages";
 import { client } from "@/sanity/lib/client";
 import { sitemapQuery } from "@/sanity/lib/queries";
 
@@ -56,12 +57,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: s.priority,
   }));
 
+  // Pages with copy from content/ai-search carry their real "last updated" date.
+  const aiPages = getAiPages();
+  const aiUpdated = (path: string) => aiPages.find((p) => p.path === path)?.updated;
+
   const serviceRoutes = SERVICE_SLUGS.map((slug) => ({
     url: `${BASE}/services/${slug}`,
-    lastModified: now,
+    lastModified: aiUpdated(`/services/${slug}`) ? new Date(aiUpdated(`/services/${slug}`)!) : now,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
+
+  const compareRoutes = aiPages
+    .filter((p) => p.kind === "compare")
+    .map((p) => ({
+      url: `${BASE}${p.path}`,
+      lastModified: new Date(p.updated),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
 
   const neighborhoodRoutes = neighborhoods.map((n) => ({
     url: `${BASE}/neighborhoods/${n.slug}`,
@@ -84,5 +98,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...calculatorRoutes, ...neighborhoodRoutes, ...blogRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...compareRoutes, ...calculatorRoutes, ...neighborhoodRoutes, ...blogRoutes];
 }

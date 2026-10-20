@@ -100,7 +100,7 @@ export default function Hero() {
                 className="group/rev flex items-center gap-2 hover:text-orange transition-colors"
               >
                 <span className="text-orange" aria-hidden>★★★★★</span>
-                <span className="font-semibold text-ink group-hover/rev:text-orange transition-colors">156</span>
+                <span className="font-semibold text-ink group-hover/rev:text-orange transition-colors">210</span>
                 <span className="underline decoration-ink/20 underline-offset-4 group-hover/rev:decoration-orange transition-colors">
                   five-star Google reviews
                 </span>

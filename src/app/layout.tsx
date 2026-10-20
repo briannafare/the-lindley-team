@@ -24,7 +24,7 @@ const inter = Inter({
 const SITE_URL = "https://thelindleyteam.com";
 const SITE_TITLE = "The Lindley Team at Movement Mortgage — David & Bri · Portland";
 const SITE_DESC =
-  "Portland mortgages with straight answers: David Chandler & Bri Lindley of The Lindley Team at Movement Mortgage. 35 years combined, 156 five-star reviews. Licensed in OR & WA. NMLS 265974 / 1367416.";
+  "Portland mortgages with straight answers: David Chandler & Bri Lindley of The Lindley Team at Movement Mortgage. 35 years combined, 210 five-star reviews. Licensed in OR & WA. NMLS 265974 / 1367416.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -57,6 +57,19 @@ const ORG_LD = {
   url: SITE_URL,
   telephone: "+1-971-754-1771",
   email: "brianna.lindley@movement.com",
+  // NMLS ids exactly as the footer prints them: Movement Mortgage, LLC #39179,
+  // David Chandler #265974, Brianna Lindley #1367416.
+  identifier: [
+    { "@type": "PropertyValue", propertyID: "NMLS", value: "39179", name: "Movement Mortgage, LLC" },
+    { "@type": "PropertyValue", propertyID: "NMLS", value: "265974", name: "David Chandler" },
+    { "@type": "PropertyValue", propertyID: "NMLS", value: "1367416", name: "Brianna Lindley" },
+  ],
+  // 210 Google reviews, Lindley Team and Chandler Team combined; 5.0 average (Bri, 2026-10-19).
+  aggregateRating: { "@type": "AggregateRating", ratingValue: 5, reviewCount: 210, bestRating: 5 },
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    name: "Certified Divorce Lending Professional (CDLP)",
+  },
   parentOrganization: {
     "@type": "Organization",
     name: "Movement Mortgage, LLC",
@@ -84,6 +97,10 @@ const ORG_LD = {
       name: "Bri Lindley",
       jobTitle: "Mortgage Loan Officer, CDLP",
       identifier: "NMLS #1367416",
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        name: "Certified Divorce Lending Professional (CDLP)",
+      },
     },
     {
       "@type": "Person",

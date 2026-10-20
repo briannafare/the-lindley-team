@@ -55,9 +55,13 @@ function ServiceSchema({ service }: { service: ServiceData }) {
 export default function ServicePageLayout({
   service,
   calculator,
+  afterHero,
+  beforeCta,
 }: {
   service: ServiceData;
   calculator?: React.ReactNode;
+  afterHero?: React.ReactNode;
+  beforeCta?: React.ReactNode;
 }) {
   return (
     <>
@@ -119,6 +123,8 @@ export default function ServicePageLayout({
           </div>
         </div>
       </section>
+
+      {afterHero}
 
       {/* Overview */}
       <section className="py-16 border-t border-border">
@@ -309,6 +315,8 @@ export default function ServicePageLayout({
           </div>
         </div>
       </section>
+
+      {beforeCta}
 
       {/* CTA */}
       <section className="py-20 bg-yellow text-center">
