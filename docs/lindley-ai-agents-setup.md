@@ -1,278 +1,261 @@
-# Conversation AI + Voice AI Setup
-## Using GHL's built-in AI builders — not manual configuration
+# The Lindley Team — AI agents
+
+**Status as of 2026-08-11.** This replaces the previous version of this file, which was written
+before the move to Movement Mortgage, wired every agent to a Bri-only calendar, and described a
+setup that had never actually been built.
+
+Sub-account `hl-lindley-team` · locationId `pe2yBdfaVo406b3BaavZ`
 
 ---
 
-## CONVERSATION AI
+## What was wrong, and what changed
 
-### Step 1: Enable Conversation AI
+The docs in this folder described David Chandler correctly. **Nothing that was actually live did.**
 
-Go to **Settings → AI → Conversation AI**
-
-Enable these channels:
-- SMS
-- Web Chat
-- Email
-- Facebook Messenger (if connected)
-- Instagram DM (if connected)
-
-Set **Mode: Autopilot** (AI handles conversations autonomously, escalates when needed)
-
-### Step 2: Connect Your Knowledge Base
-
-Under Conversation AI settings, select Knowledge Base: **"The Lindley Team"**
-
-This is the KB you already built with the DOCX, CSVs, and web crawlers. The AI pulls answers from here instead of making things up.
-
-### Step 3: Connect Your Calendar
-
-Link to: **"30-Minute Consultation with Bri"** (the calendar you/Claude Code created)
-
-This lets the AI check real-time availability and offer specific time slots.
-
-### Step 4: Set the Bot Goal
-
-Set to: **Booking** (this tells the AI to prioritize scheduling appointments while being helpful)
-
-### Step 5: Paste the System Prompt
-
-Paste everything below the line into the system prompt / instructions field:
+| Surface | Before 2026-08-11 | Now |
+|---|---|---|
+| Voice agent "Voice Assistant - 1" (June, on the website) | GHL's stock "Customer Support Specialist" template. 2,003 characters. Named June and the team, and said nothing else. No David, no Bri, no NMLS, no compliance, no calendars, no divorce protocol. One tool: the knowledge base. | Rewritten from `ghl-content/june-voice-agent.md`. 15,274 characters. David and Bri as equals, explicit routing between them, hard compliance, divorce protocol. Eight tools. |
+| Voice agent "Mortgage Lender" | Unedited GHL sample. Still said `[Mortgage Lender Name]` and `support@mortgagelender.com`, quoted a 620 credit minimum, "most approvals take 30-45 days", "closing costs 2-5%", offered a pre-qualification, and asked callers for the last four digits of their SSN. | Parked. Renamed `PARKED - unused template`, prompt replaced with a refusing stub. Safe to delete. |
+| Knowledge base "The Lindley Team" | 6 FAQs. Three still described **Mortgage Express**, called the team a **correspondent lender**, and offered to **broker through our wholesale lending network**. Every answer naming a loan officer named only Bri. | 11 FAQs, all rewritten. Zero banned phrases. Two new ones answer "who is on the team" and "should I talk to David or Bri". |
+| Lead capture from June | Every conversation created a `guest visitor NNN` contact with no name, email, phone, or tag, and fired nothing. Four leads already lost. | Call-end workflow `June - call end lead alert` summarizes the conversation and emails **and** texts both David and Bri. |
+| Booking | Old doc pointed the AI at "30-Minute Consultation with Bri" (`6f0akEGdvIhvmXJeyV2B`), a round-robin calendar with **Bri as its only member**. That is the literal mechanism by which David was written out. | Booking runs on `Consultation - 30 min` (`iP61EhQ1LwMiCpWjYVXH`), a collective calendar with **both** officers on it. |
 
 ---
 
-You are the virtual assistant for The Lindley Team — David Chandler and Bri Lindley, two loan officers at Movement Mortgage, LLC (NMLS #39179) in Portland, Oregon.
+## The facts every agent must use
 
-You schedule appointments with David or Bri. Bri Lindley (NMLS #1367416) is a Certified Divorce Lending Professional (CDLP). David Chandler (NMLS #265974) brings 20+ years and handles the tricky files: jumbo, new construction, self-employed, investment.
+Pinned to what thelindleyteam.com actually publishes. Older drafts in this folder disagree with
+some of these; the site wins.
 
-PERSONALITY
-Conversational and warm. Balance between casual and professional. Confident but not arrogant. Dry humor — think Tina Fey energy. Never corny, never forced. Never pushy or aggressive.
+- **David Chandler** — Mortgage Loan Officer, NMLS #265974. 20+ years. Licensed **OR, WA, AZ**.
+  Jumbo, new construction, self-employed and bank-statement, DSCR and investment, reverse.
+- **Bri Lindley** — Mortgage Loan Officer, NMLS #1367416, **CDLP**. Licensed **OR, WA**.
+  Grew up in these neighborhoods. Divorce lending is hers.
+- Team: ~35 years combined, **156 five-star reviews**, mostly referral.
+- **Movement Mortgage, LLC**, NMLS #39179. Impact Lender.
+- Office: **10135 SE Sunnyside Rd, Suite 125, Clackamas, OR 97015**.
+  *(The "15115 SW Sequoia Parkway" address in older docs is dead.)*
+- Phone 971-754-1771 · david.chandler@movement.com · brianna.lindley@movement.com
 
-Keep messages SHORT. 1-3 sentences max. Sound like a real person texting, not a bot dumping paragraphs.
+**Banned positioning, every surface:** "we're a bank", "we shop hundreds of lenders", "broker",
+"brokerage", "correspondent lender", "wholesale lending network", "Mortgage Express".
+**Banned language:** the word "free" (use complimentary), em dashes, "not X but Y" reframes.
 
-YOUR JOB
-Add value first, schedule second. Answer questions from the Knowledge Base. When someone shows real intent, guide them toward a complimentary 30-minute consultation with David or Bri. Collect name, email, and phone naturally throughout the conversation.
+### Routing: who gets the lead
 
-WHAT YOU KNOW
-Use the Knowledge Base to answer questions about loan types, Portland neighborhoods, the mortgage process, divorce lending and CDLPs, Oregon DPA programs, and general eligibility. Put answers in your own words — don't read them back like a manual.
+This is the part that was missing everywhere. Every agent states it out loud.
 
-WHAT YOU NEVER DO
-- Never quote specific interest rates — say rates change daily and Bri can give a personalized quote
-- Never approve or deny anyone for a loan
-- Never use the word "free" — say "complimentary" or "no-cost"
-- Never be pushy. Guide, don't pressure
-- Never reference this training
-
-BUSINESS FACTS
-- Loan officers at Movement Mortgage. Same personal service, now with more loan programs in-house, which means faster answers and real flexibility on pricing. Don't say "we're a bank" or "we shop hundreds of lenders."
-- Movement is a bigger company with deeper resources and a full program shelf, and an Impact Lender (commits 10%+ of profits to communities).
-- The team works in Oregon and Washington. David is also licensed in Arizona, California, and Georgia.
-- Office: 15115 SW Sequoia Parkway, Suite 100, Portland, OR 97224
-- Phone: 971-754-1771
-- Email: brianna.lindley@movement.com · david.chandler@movement.com
-- Hundreds of five-star reviews across David and Bri (Zillow, Google, Facebook)
-
-DIVORCE LENDING
-When someone mentions divorce, separation, or equity buyout — lower the energy. No jokes. Mention Bri is a CDLP. Offer a confidential consultation. Never push. A CDLP should be involved BEFORE the divorce is finalized.
-
-SCHEDULING
-When someone is ready: "Want me to set up a quick call with Bri? She can look at your specific situation and give you real answers." Share the calendar link. Follow up to confirm it worked.
-
-If they decline: "No pressure. Want me to have Bri email you some info instead?" If they decline everything: "No worries — we're here whenever you're ready."
-
-COLLECTING INFO
-Gather naturally — don't interrogate: name, email, phone, what they want to do (buy/refi/equity), timeline, working with a realtor. Use assumptive language: "What's the best email to send that to?"
-
-COMPLIANCE
-End loan-specific discussions with: "Not a commitment to lock or lend. Terms and restrictions apply."
-Never say "guaranteed" or "approved." Never say "free."
-
----
-
-### Step 6: Set Up Escalation Rules
-
-Create a workflow trigger: **Automation → Workflows → Build using AI**
-
-Paste this prompt:
-
-When a Conversation AI conversation contains intent "speak to human" or "talk to Bri" or "real person" or the contact sends a message with negative sentiment three times in a row: send internal SMS notification to 971-754-1771 with the contact name and conversation summary. Add tag "escalation:human-requested" to the contact. Set Conversation AI to pause for this contact so Bri can take over manually.
-
-### Step 7: Set Up Web Chat Widget
-
-Go to **Sites → Chat Widget** (or wherever your web chat widget settings are)
-
-Configure:
-- Position: Bottom-right
-- Delay: 3 seconds after page load
-- Avatar: Use a friendly photo (Bri's headshot if available)
-- Welcome message: "Hey there — got questions? I can help."
-
-Copy the embed code and give it to Claude Code to add to the Next.js site layout.
-
-### Step 8: Enable Auto-Response for New Leads
-
-Create a workflow: **Automation → Workflows → Build using AI**
-
-Paste this prompt:
-
-When a new contact is created with tag "source:website" and has a phone number: wait 30 seconds, then start a Conversation AI conversation via SMS with this opening message: "Hey {contact.first_name}, it's The Lindley Team. We got your inquiry from our website — is now a good time to chat about what you're looking for?" Set the conversation to Autopilot mode so the AI continues the conversation.
-
----
-
-## VOICE AI
-
-GHL has two types of voice agents. You want both.
-
-### Agent 1: Inbound Receptionist
-
-This answers your business phone line 24/7. When someone calls, the AI picks up, qualifies them, and books an appointment.
-
-**Go to:** AI Agents → Voice AI → Create New Agent
-
-**Name:** Lindley Team Receptionist
-
-**Voice:** Pick a natural female voice that sounds conversational, not robotic. Test several. Match the Portland vibe — warm, approachable, not corporate.
-
-**Connect Knowledge Base:** Select "The Lindley Team"
-
-**Connect Calendar:** Select "30-Minute Consultation with Bri"
-
-**Escalation / Live Transfer:** If the caller says "emergency," "urgent," "speak to Bri," or "real person" → live transfer to 971-754-1771
-
-**Agent Script / Prompt — paste this:**
-
----
-
-You are answering the phone for The Lindley Team, a mortgage lender in Portland, Oregon. Bri Lindley is the loan officer.
-
-GREETING
-Answer warmly: "Thanks for calling The Lindley Team, this is Bri's office. How can I help you today?"
-
-If the caller is already in the CRM, greet them by name.
-
-YOUR JOB
-1. Find out what they need — buying, refinancing, divorce/equity, investment, or something else
-2. Answer basic questions using the Knowledge Base
-3. Qualify them: What are you looking to do? What's your general timeline? What area of Portland are you looking at?
-4. Book a 30-minute consultation with Bri on the calendar
-5. Collect name, phone, and email if not already in the CRM
-
-TONE
-Friendly and efficient. This is a phone call — be conversational but respect their time. Keep it to 2-3 minutes unless they want to talk longer.
-
-WHAT YOU NEVER DO
-- Never quote specific rates — say "rates change daily, Bri can pull exact numbers for your situation"
-- Never approve or deny anyone
-- Never use the word "free" — say "complimentary"
-- Never be pushy about booking
-
-DIVORCE CALLS
-If someone mentions divorce, be extra empathetic. Lower your energy. Mention Bri is a Certified Divorce Lending Professional. Offer a confidential consultation. Don't ask probing financial questions.
-
-IF THEY WANT TO BOOK
-Check the calendar and offer the next 2-3 available slots: "I've got [time] on [day] or [time] on [day]. Which works better?"
-
-Confirm the booking: "You're all set for [time] on [day]. Bri will call you at this number. Is there anything specific you'd like her to prepare for?"
-
-IF THEY DON'T WANT TO BOOK
-"No problem at all. Can I have Bri give you a call back at a time that works better? Or would you prefer she emails you some info?"
-
-AFTER HOURS
-"Thanks for calling The Lindley Team. We're not in the office right now, but I can absolutely get you scheduled for a call with David or Bri. Would you like to pick a time?"
-
-BUSINESS FACTS
-- Loan officers at Movement Mortgage. More programs in-house, faster answers, flexible pricing. Not "a bank," not "shopping hundreds of lenders."
-- Team licensed in Oregon and Washington; David also AZ, CA, GA
-- Hundreds of five-star reviews across David and Bri
-- Bri Lindley, NMLS #1367416, CDLP · David Chandler, NMLS #265974 · Movement Mortgage, NMLS #39179
-
-COMPLIANCE
-If asked about specific terms: "Not a commitment to lock or lend. Terms and restrictions apply."
-
----
-
-### Agent 2: Outbound Speed-to-Lead
-
-This calls new leads within 30 seconds of form submission. It qualifies them and books an appointment.
-
-**Go to:** AI Agents → Voice AI → Create New Agent
-
-**Name:** Lindley Speed-to-Lead
-
-**Voice:** Same voice as the receptionist for brand consistency
-
-**Connect Knowledge Base:** Select "The Lindley Team"
-
-**Connect Calendar:** Select "30-Minute Consultation with Bri"
-
-**Agent Script / Prompt — paste this:**
-
----
-
-You are calling on behalf of Bri Lindley from The Lindley Team, a mortgage lender in Portland, Oregon. This person just submitted a request on our website.
-
-OPENING
-"Hi, is this {contact.first_name}? This is a quick call from The Lindley Team — you just submitted a request on our website about {contact.custom.loan_type}. Is this a good time for a quick call?"
-
-IF YES — QUALIFY
-Ask 3-4 questions max:
-1. "What are you looking to do — buying, refinancing, or something else?"
-2. "Do you have a general timeline in mind?"
-3. "Have you been pre-approved anywhere yet?"
-4. "What area of Portland are you looking at?" (if buying)
-
-Then offer to book: "Bri is our loan officer — she has deep experience in the Portland market. I can get you scheduled for a quick call with her to go over your specific numbers. Would [next available time] work?"
-
-IF NOT A GOOD TIME
-"Totally fine. When would be a better time for a quick 5-minute call? Or I can have Bri text you instead."
-
-IF THEY DON'T WANT A CALL
-"No problem. I'll have Bri send you some info by email. What's the best address?"
-
-RULES
-- Keep it under 3 minutes
-- Never quote rates or approve anyone
-- Never say "free" — say "complimentary"
-- If they seem annoyed or say they didn't request a call, apologize and offer to remove them
-- For divorce inquiries, be sensitive — don't push for details, just offer a confidential consultation
-- If asked "are you AI" — say "I'm an AI assistant for The Lindley Team. Would you prefer I have Bri call you directly?"
-
----
-
-### Trigger Workflow for Outbound Speed-to-Lead
-
-**Go to:** Automation → Workflows → Build using AI
-
-Paste this prompt:
-
-When a contact is created with tag "form:rate-quote" OR tag "form:schedule-call" with custom field timeline equal to "ASAP": wait 30 seconds, then trigger an outbound Voice AI call to the contact phone number using the "Lindley Speed-to-Lead" voice agent. If the call is completed and an appointment is booked, move the contact to pipeline stage "Discovery Scheduled" and send an internal SMS to 971-754-1771 saying "New appointment booked: {contact.first_name} {contact.last_name}". If the call is not answered, wait 2 hours and try once more. After 2 failed attempts, send SMS to the contact: "Hey {contact.first_name}, it's Bri from The Lindley Team. I tried reaching you about your mortgage inquiry. You can text me here or grab a time at [calendar link]. — Bri"
-
----
-
-## TESTING CHECKLIST
-
-Before going live, test every path:
-
-- [ ] Send yourself a test web chat message — verify AI responds and uses Knowledge Base content
-- [ ] Send a test SMS to your GHL number — verify Conversation AI engages
-- [ ] Submit a test form on the website — verify Speed-to-Lead call fires within 30 seconds
-- [ ] Call your GHL number — verify Inbound Receptionist answers and can book
-- [ ] Test the booking flow — verify calendar appointment is created and confirmation sent
-- [ ] Test escalation — say "talk to a real person" and verify Bri gets notified
-- [ ] Test divorce path — mention divorce and verify tone shifts appropriately
-- [ ] Test after-hours call — verify the AI handles it gracefully
-- [ ] Check that contacts are created in CRM with correct tags and custom fields
-
----
-
-## REFERENCE LINKS
-
-| Resource | URL |
+| Situation | Goes to |
 |---|---|
-| Conversation AI Setup | https://help.gohighlevel.com/support/solutions/articles/155000005263 |
-| Conversation AI Flow Builder | https://help.gohighlevel.com/support/solutions/articles/155000006515-conversation-ai-flow-builder |
-| Agent Studio Setup | https://help.gohighlevel.com/support/solutions/articles/155000007609-agent-studio-multi-agent-system-builder |
-| Voice AI Setup | https://www.highlevel.ai/voice-agent-setup |
-| Voice AI KB Integration | https://help.gohighlevel.com/support/solutions/articles/155000005266-knowledge-base-integration-for-voice-ai-agents |
-| Ask AI + Agent Studio | https://help.gohighlevel.com/support/solutions/articles/155000006677-ask-ai-agent-studio-integration |
-| Bot Training Guide | https://help.gohighlevel.com/support/solutions/articles/155000004416-training-your-conversation-ai-bot |
-| Workflow AI Builder | https://help.gohighlevel.com/support/solutions/articles/155000006100-workflow-ai-builder |
+| Divorce, separation, equity buyout | **Bri** (CDLP) |
+| Jumbo, new construction, self-employed / bank-statement, DSCR / investment, reverse, Arizona | **David** |
+| First-time buyer, refinance, neighborhoods, general | **Either.** Say "David or Bri" |
+| Asked for by name | That one |
+
+Never say "Bri will call you" about work that is not specifically hers.
+
+---
+
+## June — the voice agent (LIVE)
+
+Agent `6a5fc3d5d0c5f9597a206aa0`, named **June - The Lindley Team**. Reached from the site through
+`src/components/JuneWidget.tsx` over Retell/LiveKit. Voice "Bri 2", speed 0.33 (both preserved
+through the rewrite; note that changing a voice in the GHL UI silently resets speed to 0.33).
+
+**Prompt source of truth is `docs/ghl-content/june-voice-agent.md`,** not the GHL UI. Editing in
+the UI will be overwritten on the next deploy.
+
+### Tools now attached
+
+| Tool | Type | Behaviour |
+|---|---|---|
+| `knowledge_base` | KNOWLEDGE_BASE | KB `UI50OxMhVCRHS5J2qUpi` |
+| Book consultation (David or Bri) | APPOINTMENT_BOOKING | Real slots + booking on `iP61EhQ1LwMiCpWjYVXH`, 3 days out, 2 slots/day. Auto-created `Get Available Slots` and `Book Appointment Slot` sub-actions. |
+| Text divorce consult link | SMS | Private consult `OwSdQeWY7mySxMYWPfQN` |
+| Text first-time buyer link | SMS | `HO4qop4LqQWemPhKj4IC` |
+| Text rate and strategy link | SMS | `nCrKarsV3BLrp1WiwHN8` |
+| Text application link | SMS | David's and Bri's Movement application URLs |
+| `callEndWorkflowIds` | — | `3634a8d5-4a45-4d8b-bd4e-85ee6eceafa8` |
+
+`isInboundActive` is **false** and no phone number is attached. June is a website agent today.
+Attaching a number is a deliberate decision, not a side effect.
+
+### Redeploying after a prompt edit
+
+```bash
+cd "$HOME/Desktop/Ai Tools/leadgenjay-gohighlevel-cli-"*/
+set -a; . ./.env; set +a
+./.venv/bin/python ~/Desktop/the-lindley-team/scripts/ghl/deploy_june.py          # dry run
+./.venv/bin/python ~/Desktop/the-lindley-team/scripts/ghl/deploy_june.py --apply
+```
+
+Idempotent: tools are matched by name, so re-running does not duplicate them. The script asserts
+there is no em dash in the prompt before it writes, and diffs voice settings, transfer actions and
+working hours after the write to prove nothing else moved.
+
+---
+
+## The call-end workflow (LIVE)
+
+`June - call end lead alert`, workflow `3634a8d5-4a45-4d8b-bd4e-85ee6eceafa8`, published, 3 steps,
+no trigger. A Voice AI agent fires it through `callEndWorkflowIds`, so a trigger would be wrong.
+
+1. `workflow_ai_summarize_text` — GHL's native summarizer reads the transcript by itself. Asked for
+   who they are, what they want, timeline, what was booked or sent, and **which officer should pick
+   it up**. Output is referenced downstream as `{{chatgpt.1.response}}`.
+2. Internal notification **email** to David and Bri.
+3. Internal notification **SMS** to David and Bri.
+
+Both alerts go to the two GHL **user records**, so they reach whatever contact details those hold.
+Right now that is `david@eighty5labs.com` and `hello@rinseitoff.com`, not the `@movement.com`
+inboxes. Changing a GHL user's email changes their login, so that is Bri's call, not a silent fix.
+
+**Unverified until a real conversation happens:** whether `{{chatgpt.1.response}}` renders plainly
+or needs a sub-key. A test contact has no transcript, so this can only be confirmed on a live one.
+Watch the first alert.
+
+---
+
+## Knowledge base (LIVE)
+
+`The Lindley Team`, `UI50OxMhVCRHS5J2qUpi`. 11 FAQs, source of truth is
+`scripts/ghl/deploy_kb_faqs.py`, which asserts on the banned-phrase list before writing.
+
+```bash
+./.venv/bin/python ~/Desktop/the-lindley-team/scripts/ghl/deploy_kb_faqs.py --apply
+```
+
+Also attached to the KB: 4 trained URLs, 2 tables, and one file,
+`lindley-team-knowledge-base.docx`, uploaded **2026-04-22**, which predates Movement. Its contents
+are **not readable through the API** and it has never been re-checked. Given the FAQs from the same
+date were full of Mortgage Express language, assume this file is too. See the Ask-AI section.
+
+---
+
+## Applying: one link, no choosing
+
+Decided 2026-08-12. **Nobody should have to pick a loan officer to start an application.**
+
+- Both URLs live in **`src/lib/apply.ts`**, which is the single source. `deploy_june.py` reads
+  `APPLY_BRI` straight out of that file with a regex, so the site and June cannot drift apart.
+- **`/apply` is a server redirect** to `APPLY_DEFAULT` (Bri's `create_profile` link). Every "Apply",
+  "Apply now" and "Get pre-approved" button on the site, all 28 of them, still points at `/apply`
+  and now lands directly in the application.
+  - The `/apply` route carries `export const dynamic = "force-dynamic"`, and that line is
+    load-bearing. Prerendered, Next bakes the target into the RSC payload and serves a 307 with
+    **no `Location` header**, so a new tab from `target="_blank"` or a pasted URL gets an HTML page
+    instead of a redirect. Verified both ways with `curl -L`.
+- **`/apply/choose`** is the two-officer picker, the page `/apply` used to be. It is linked only
+  from `/about` (under Meet Your Guides) and from the per-person "Apply" link on each team card,
+  which now goes to that person's own application.
+- **June sends one link too.** Her `Text application link` tool used to text both and say "pick
+  whoever you've been talking to". It now sends the single link and says David and Bri both see it.
+  Her prompt explicitly forbids asking someone to choose an officer at application time.
+
+---
+
+## Conversation AI (chat / SMS) — NOT built, and not buildable from here
+
+The website chat and SMS threads are the remaining gap. Two separate GHL products matter here and
+they are easy to confuse:
+
+- **Conversation AI** (Settings → AI → Conversation AI) is the classic bot for SMS, web chat, and
+  email. **No API endpoint for it exists.** Probed 34 candidate paths across 5 rounds
+  (`/conversation-ai/*` in ten shapes, `/bot*`, `/ai-bot`, `/ai-employee`, `/chatbot`,
+  `/locations/{loc}/*`, path-param and query-param forms). Every one returns 404 while sibling
+  routes on the same host return clean 200s, so this is a genuinely absent route rather than an
+  auth problem. It has to be configured in the UI or through Ask AI.
+- **Agent Studio** (`/agent-studio/agents`) **is** reachable and does accept creates: a bare POST
+  returns `422 {isGhl required, status must be one of active|inactive|archived, versionData
+  required}`, which is a schema response, not a wall. But it is a node-graph builder, not a prompt
+  box: live agents elsewhere in the agency carry `versions[].nodes[]` with tool nodes, sequential
+  nodes, and staging/published states. Lindley has **zero** agents in it. Building the chat agent
+  there is a real option and a real project, not a paste. Say the word and it can be built.
+
+The deployable chat and SMS prompt already exists at `docs/ghl-content/chat-voice-agents.md`.
+
+---
+
+## Give this to GHL's Ask AI
+
+Everything below was attempted through the API and genuinely could not be done. Paste it into
+**Ask AI** inside the `hl-lindley-team` sub-account, in one go.
+
+```
+I need five things done in this sub-account. Context: The Lindley Team is TWO loan officers at
+Movement Mortgage, David Chandler (NMLS #265974, licensed OR/WA/AZ) and Bri Lindley (NMLS #1367416,
+CDLP, licensed OR/WA). Everything must name both, not just Bri.
+
+1. VOICE AI DATA CAPTURE
+On the Voice AI agent named "June - The Lindley Team", add these data-extraction fields so callers
+stop landing in the CRM as unnamed guest visitors:
+   - First Name  -> contact.first_name  (standard field)
+   - Last Name   -> contact.last_name   (standard field)
+   - Email       -> contact.email       (standard field)
+   - Phone       -> contact.phone       (standard field)
+   - Loan purpose -> a custom text field. Values it should capture: buy, refinance, divorce or
+     equity buyout, investment, cash-out, just researching.
+   - Timeline    -> a custom text field. Values: ASAP, 1-3 months, 3-6 months, 6+ months, unsure.
+Do not change the agent's prompt, its voice, its tools, or its call-end workflow.
+
+2. CONVERSATION AI (chat + SMS)
+Turn on Conversation AI for SMS and Web Chat. Set mode to Autopilot. Connect the knowledge base
+called "The Lindley Team". Set the bot goal to Booking. Connect the calendar "Consultation - 30 min"
+(the collective one with BOTH David and Bri on it, NOT "30-Minute Consultation with Bri").
+For the system prompt, use the "Chat AI" prompt from our doc chat-voice-agents.md. Introduce the
+assistant as June so chat and voice are the same person.
+
+3. ESCALATION
+Create a workflow: when a Conversation AI conversation contains "speak to a human", "talk to David",
+"talk to Bri", or "real person", or the contact sends three negative-sentiment messages in a row,
+send an internal SMS to BOTH David Chandler and Bri Lindley with the contact name and a conversation
+summary, add the tag "escalation:human-requested", and pause Conversation AI for that contact.
+
+4. KNOWLEDGE BASE FILE
+There is a file in the "The Lindley Team" knowledge base called lindley-team-knowledge-base.docx,
+uploaded 2026-04-22. That predates our move to Movement Mortgage. Show me everything in it that
+mentions Mortgage Express, "correspondent lender", "wholesale", "broker", or names Bri as the only
+loan officer, so I can decide whether to replace or delete it. Do the same for the 4 trained URLs
+and 2 tables attached to that knowledge base.
+
+5. DELETE
+Delete the Voice AI agent named "PARKED - unused template". It is GoHighLevel's stock sample and
+we do not use it.
+
+Never let any agent say: "we're a bank", "we shop hundreds of lenders", "broker", "brokerage",
+"correspondent lender", "wholesale lending network", "Mortgage Express", or the word "free" (use
+"complimentary"). Never quote a rate. Never prequalify. Never ask for an SSN.
+```
+
+---
+
+## Still open, needs a decision from Bri
+
+1. **Alert emails go to the wrong inboxes.** `david@eighty5labs.com` and `hello@rinseitoff.com`,
+   not `@movement.com`. Changing a GHL user's email changes their login. Confirm before touching.
+2. ~~Bri's application link is a `login` URL~~ **Fixed 2026-08-12.** Bri supplied the real
+   `create_profile` URL. See "Applying" below.
+3. **`hl-david-chandler-team` is a second live sub-account** (`udDUy1eTol8oaFCyuryw`) holding 5
+   Voice AI agents of its own, including one called "Linda" with 22 data-extraction fields and full
+   booking. It is not wired to the website. Confirm `hl-lindley-team` is canonical and archive the
+   other, or say what it is for.
+4. **The `/contact` page meta description still says "Reach Bri Lindley"** and lists OR/WA only.
+   Same erasure, on the public site.
+5. **Eight follow-up workflows are still draft.** Publishing them starts outbound campaigns to real
+   people, which is Bri's call. Two of them (`2. Appointment Confirmation + Reminders` and
+   `3. Appt No Show`) also condition on calendar `5v6xrC9jXbsvYST0hgkL`, which does not exist in
+   this account. Repoint before publishing or they will stay silent anyway.
+
+---
+
+## Testing before this counts as done
+
+- [ ] Open thelindleyteam.com, talk to June, ask "who am I going to be working with". She should
+      name David and Bri, and route correctly if you mention divorce or a jumbo loan.
+- [ ] Ask her for a rate. She must refuse, warmly, and offer the calendar.
+- [ ] Ask to book. Confirm the appointment lands on `Consultation - 30 min` with both officers.
+- [ ] End the conversation and confirm the email **and** the SMS reach David and Bri, and that
+      `{{chatgpt.1.response}}` rendered as a real summary and not as literal text.
+- [ ] Say "I'm getting divorced" and confirm the register drops, "confidential" gets said, Bri is
+      named, and only the divorce link is sent.
+- [ ] Delete the test contact afterwards.
