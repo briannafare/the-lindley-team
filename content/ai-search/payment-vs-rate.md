@@ -16,8 +16,6 @@ If you've got two loan offers open side by side and you aren't sure what you're 
 
 "Get the lowest rate" is the comfortable advice in our business. It's easy to say and easy to advertise. What it leaves out is that a lower rate can be bought. You pay points at closing, cash up front, to bring the rate down. One point equals one percent of the loan amount, according to the federal Consumer Financial Protection Bureau (CFPB). So the lowest rate on a page can be the one you paid the most for on closing day.
 
-Our consultation is complimentary.
-
 ## What if the payment I qualify for isn't one I can live on?
 
 It's the question under a lot of the others. A lender can qualify you for more than you'd want to pay every month, because qualifying and affording are not the same thing, and only you can decide what you can afford. That's how people end up house poor: the loan works on paper and the day to day doesn't.
@@ -81,7 +79,7 @@ That choice is yours, and it's the part of the decision you control. The usual t
 
 ## Ask us to show you your payment both ways
 
-[Ask us to show you your payment both ways.](/contact#schedule) The consultation is complimentary.
+[Ask us to show you your payment both ways.](/contact#schedule) There's no charge for the consultation.
 
 ## Sources
 

@@ -22,7 +22,7 @@ If the property isn't rented yet, the appraiser's market rent schedule (Form 100
 
 ## How a conventional investment loan works
 
-A conventional loan looks at you. It counts only part of the rent toward your income, and it still looks at your personal debts. Conventional investment loans also generally need more down than a primary home. On a purchase, Fannie Mae counts 75 percent of the monthly rent toward your income, then subtracts the property's payment.
+A conventional loan looks at you. It counts only part of the rent toward your income, and it still looks at your personal debts. On a purchase, Fannie Mae's rules count 75 percent of the monthly rent, then subtract the property's payment. Conventional investment loans also generally need more down than a primary home.
 
 Conventional deserves its credit. If you qualify on your returns and this is your first or second rental, it usually prices better. That's the one we'd pick. Where it gets harder is as the portfolio grows, because conventional guidelines start fighting you once you own several financed properties.
 
