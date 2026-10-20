@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/check-neighborhood-facts.mjs && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:facts": "node scripts/check-neighborhood-facts.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
