@@ -179,7 +179,7 @@ export default function FirstTimeBuyerPage() {
                 Start with a free call
               </Btn>
               <span className="block mt-4 font-body text-[13px] tracking-[0.06em] uppercase text-paper/60">
-                The Lindley Team · David &amp; Bri · OR &amp; WA
+                The Lindley Team · David &amp; Bri · OR, WA &amp; AZ
               </span>
             </div>
           </div>
