@@ -1072,7 +1072,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Beaumont+Wilshire+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Beaumont+Wilshire+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Beaumont+Wilshire+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 74,
     bikeScore: 82,
     transitScore: 54,
@@ -1190,7 +1190,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Alameda+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Alameda+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Alameda+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 68,
     bikeScore: 72,
     transitScore: 48,
@@ -1307,7 +1307,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Rose+City+Park+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Rose+City+Park+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Rose+City+Park+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 72,
     bikeScore: 80,
     transitScore: 64,
@@ -1424,7 +1424,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Hollywood+District+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Hollywood+District+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Hollywood+District+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 85,
     bikeScore: 82,
     transitScore: 78,
@@ -1541,7 +1541,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Sabin+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Sabin+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Sabin+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 83,
     bikeScore: 90,
     transitScore: 68,
@@ -1659,7 +1659,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Cully+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Cully+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Cully+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 63,
     bikeScore: 78,
     transitScore: 57,
@@ -1783,7 +1783,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Sunnyside+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Sunnyside+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Sunnyside+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 92,
     bikeScore: 97,
     transitScore: 68,
@@ -1877,7 +1877,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Richmond+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Richmond+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Richmond+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 88,
     bikeScore: 95,
     transitScore: 64,
@@ -1971,7 +1971,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Mount+Tabor+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Mount+Tabor+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Mount+Tabor+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 78,
     bikeScore: 85,
     transitScore: 58,
@@ -2061,7 +2061,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Montavilla+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Montavilla+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Montavilla+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 72,
     bikeScore: 80,
     transitScore: 55,
@@ -2151,7 +2151,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Foster-Powell+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Foster-Powell+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Foster-Powell+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 75,
     bikeScore: 82,
     transitScore: 58,
@@ -2245,7 +2245,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Brooklyn+Neighborhood+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Brooklyn+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Brooklyn+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 66,
     bikeScore: 88,
     transitScore: 52,
@@ -2335,7 +2335,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Concordia+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Concordia+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Concordia+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 72,
     bikeScore: 87,
     transitScore: 53,
@@ -2456,7 +2456,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Creston-Kenilworth+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Creston-Kenilworth+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Creston-Kenilworth+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 68,
     bikeScore: 80,
     transitScore: 55,
@@ -2600,7 +2600,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Lents+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Lents+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Lents+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 60,
     bikeScore: 73,
     transitScore: 58,
@@ -2750,7 +2750,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Reed+Neighborhood+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Reed+Neighborhood+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Reed+Neighborhood+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 70,
     bikeScore: 84,
     transitScore: 55,
@@ -2907,7 +2907,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Brentwood-Darlington+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Brentwood-Darlington+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Brentwood-Darlington+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 49,
     bikeScore: 58,
     transitScore: 40,
@@ -3063,7 +3063,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Multnomah+Village+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Multnomah+Village+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Multnomah+Village+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 62,
     bikeScore: 55,
     transitScore: 35,
@@ -3193,7 +3193,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Hillsdale+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Hillsdale+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Hillsdale+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 65,
     bikeScore: 48,
     transitScore: 38,
@@ -3321,7 +3321,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Nob+Hill+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Nob+Hill+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Nob+Hill+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 92,
     bikeScore: 72,
     transitScore: 68,
@@ -3448,7 +3448,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Slabtown+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Slabtown+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Slabtown+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 94,
     bikeScore: 88,
     transitScore: 82,
@@ -3574,7 +3574,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Goose+Hollow+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Goose+Hollow+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Goose+Hollow+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 88,
     bikeScore: 78,
     transitScore: 80,
@@ -3702,7 +3702,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Overlook+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Overlook+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Overlook+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 62,
     bikeScore: 68,
     transitScore: 65,
@@ -3792,7 +3792,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Piedmont+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Piedmont+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Piedmont+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 55,
     bikeScore: 68,
     transitScore: 52,
@@ -3882,7 +3882,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Portsmouth+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Portsmouth+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Portsmouth+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 58,
     bikeScore: 62,
     transitScore: 48,
@@ -3973,7 +3973,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=University+Park+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=University+Park+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=University+Park+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 45,
     bikeScore: 64,
     transitScore: 40,
@@ -4064,7 +4064,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Boise+Eliot+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Boise+Eliot+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Boise+Eliot+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 82,
     bikeScore: 90,
     transitScore: 65,
@@ -4155,7 +4155,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Humboldt+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Humboldt+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Humboldt+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 68,
     bikeScore: 85,
     transitScore: 60,
@@ -4245,7 +4245,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Arbor+Lodge+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Arbor+Lodge+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Arbor+Lodge+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 70,
     bikeScore: 72,
     transitScore: 68,
@@ -4336,7 +4336,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Intel town, MAX access, more house for less",
     mapEmbedSrc: "https://maps.google.com/maps?q=Beaverton+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Beaverton+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Beaverton+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 52,
     bikeScore: 58,
     transitScore: 48,
@@ -4499,7 +4499,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Silicon Forest city with a real downtown",
     mapEmbedSrc: "https://maps.google.com/maps?q=Hillsboro+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Hillsboro+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Hillsboro+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 42,
     bikeScore: 52,
     transitScore: 40,
@@ -4667,7 +4667,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "South metro crossroads, honest suburban trade-off",
     mapEmbedSrc: "https://maps.google.com/maps?q=Tigard+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Tigard+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Tigard+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 39,
     bikeScore: 44,
     transitScore: 35,
@@ -4836,7 +4836,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Built-from-scratch lakefront downtown, south metro freeway access",
     mapEmbedSrc: "https://maps.google.com/maps?q=Tualatin+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Tualatin+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Tualatin+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 33,
     bikeScore: 38,
     transitScore: 28,
@@ -4992,7 +4992,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Top-rated schools, new subdivisions, and a 99W commute that's the honest price of admission",
     mapEmbedSrc: "https://maps.google.com/maps?q=Sherwood+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Sherwood+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Sherwood+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 31,
     bikeScore: 28,
     transitScore: 22,
@@ -5111,7 +5111,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "WES commuter rail, I-5 access, and one of the county's better school districts — minus the nightlife",
     mapEmbedSrc: "https://maps.google.com/maps?q=Wilsonville+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Wilsonville+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Wilsonville+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 33,
     bikeScore: 37,
     transitScore: 30,
@@ -5229,7 +5229,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Washington County's most affordable city, anchored by a university, 25 miles from Portland",
     mapEmbedSrc: "https://maps.google.com/maps?q=Forest+Grove+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Forest+Grove+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Forest+Grove+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 48,
     bikeScore: 53,
     transitScore: 27,
@@ -5348,7 +5348,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Washington County's most affordable city for single-family houses, ten minutes from Hillsboro's job corridor",
     mapEmbedSrc: "https://maps.google.com/maps?q=Cornelius+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Cornelius+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Cornelius+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 38,
     bikeScore: 42,
     transitScore: 28,
@@ -5465,7 +5465,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Oregon's premier suburb — the lake is members-only, the schools are the best in the state",
     mapEmbedSrc: "https://maps.google.com/maps?q=Lake+Oswego+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Lake+Oswego+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Lake+Oswego+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 58,
     bikeScore: 44,
     transitScore: 34,
@@ -5577,7 +5577,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "The Lake Oswego alternative — same school district quality, more accessible entry price, harder terrain",
     mapEmbedSrc: "https://maps.google.com/maps?q=West+Linn+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=West+Linn+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=West+Linn+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 31,
     bikeScore: 28,
     transitScore: 25,
@@ -5684,7 +5684,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "The end of the Oregon Trail — real history, real affordability, real municipal elevator",
     mapEmbedSrc: "https://maps.google.com/maps?q=Oregon+City+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Oregon+City+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Oregon+City+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 47,
     bikeScore: 38,
     transitScore: 35,
@@ -5787,7 +5787,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Clackamas County's most transit-connected suburb — MAX on one end, the Springwater on the other",
     mapEmbedSrc: "https://maps.google.com/maps?q=Milwaukie+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Milwaukie+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Milwaukie+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 56,
     bikeScore: 72,
     transitScore: 52,
@@ -5891,7 +5891,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Fast-growing foothills suburb — new construction, Mt. Hood views, no transit, good schools",
     mapEmbedSrc: "https://maps.google.com/maps?q=Happy+Valley+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Happy+Valley+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Happy+Valley+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 22,
     bikeScore: 20,
     transitScore: 18,
@@ -5995,7 +5995,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Genuine small city at the edge of the metro — the ferry is real, the farms are real, the commute is real",
     mapEmbedSrc: "https://maps.google.com/maps?q=Canby+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Canby+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Canby+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 38,
     bikeScore: 40,
     transitScore: 15,
@@ -6105,7 +6105,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Wine country access plus a real small-city downtown — best for remote workers who want Willamette Valley life without full rural isolation",
     mapEmbedSrc: "https://maps.google.com/maps?q=Newberg+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Newberg+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Newberg+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 52,
     bikeScore: 44,
     transitScore: 18,
@@ -6230,7 +6230,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "The most self-sufficient small city in the Willamette Valley — wine country address, real employment base, and a downtown worth walking",
     mapEmbedSrc: "https://maps.google.com/maps?q=McMinnville+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=McMinnville+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=McMinnville+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 58,
     bikeScore: 54,
     transitScore: 20,
@@ -6355,7 +6355,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "The heart of Oregon wine country, for buyers who want the landscape as their actual life rather than a weekend destination",
     mapEmbedSrc: "https://maps.google.com/maps?q=Dundee+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Dundee+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Dundee+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 28,
     bikeScore: 22,
     transitScore: 8,
@@ -6477,7 +6477,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Oregon wine country's quietest address — a four-block main street with serious wine credibility and rural land at prices the Dundee Hills don't offer",
     mapEmbedSrc: "https://maps.google.com/maps?q=Carlton+OR&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Carlton+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Carlton+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 32,
     bikeScore: 28,
     transitScore: 5,
@@ -6601,7 +6601,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Oregon's commuter city that happens to be in Washington",
     mapEmbedSrc: "https://maps.google.com/maps?q=Vancouver+WA&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Vancouver+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 42,
     bikeScore: 55,
     transitScore: 38,
@@ -6724,7 +6724,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "The school district that makes people do the bridge commute math twice",
     mapEmbedSrc: "https://maps.google.com/maps?q=Camas+WA&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Camas+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Camas+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 38,
     bikeScore: 44,
     transitScore: 18,
@@ -6841,7 +6841,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Columbia Gorge access at prices that don't yet reflect the view",
     mapEmbedSrc: "https://maps.google.com/maps?q=Washougal+WA&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Washougal+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Washougal+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 28,
     bikeScore: 32,
     transitScore: 12,
@@ -6948,7 +6948,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Rural adjacency, genuine land, and a commute that demands honest evaluation",
     mapEmbedSrc: "https://maps.google.com/maps?q=Battle+Ground+WA&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Battle+Ground+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Battle+Ground+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 22,
     bikeScore: 28,
     transitScore: 8,
@@ -7065,7 +7065,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Washington's fastest-growing small city, building itself in real time next to a world-class wildlife refuge",
     mapEmbedSrc: "https://maps.google.com/maps?q=Ridgefield+WA&output=embed&z=13",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Ridgefield+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Ridgefield+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 18,
     bikeScore: 24,
     transitScore: 10,
@@ -7178,7 +7178,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Forest+Heights+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Forest+Heights+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Forest+Heights+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 18,
     bikeScore: 14,
     transitScore: 22,
@@ -7341,7 +7341,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Beaverton-Hillsdale+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Beaverton-Hillsdale+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Beaverton-Hillsdale+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 52,
     bikeScore: 38,
     transitScore: 44,
@@ -7512,7 +7512,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Raleigh+Hills+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Raleigh+Hills+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Raleigh+Hills+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 42,
     bikeScore: 32,
     transitScore: 35,
@@ -7684,7 +7684,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Cedar+Mill+Beaverton+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Cedar+Mill+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Cedar+Mill+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 48,
     bikeScore: 42,
     transitScore: 38,
@@ -7855,7 +7855,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Cedar+Hills+Beaverton+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Cedar+Hills+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Cedar+Hills+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 54,
     bikeScore: 48,
     transitScore: 58,
@@ -8032,7 +8032,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Bethany+Beaverton+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Bethany+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Bethany+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 32,
     bikeScore: 28,
     transitScore: 24,
@@ -8204,7 +8204,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Planned walkability that actually works, built around the MAX",
     mapEmbedSrc: "https://maps.google.com/maps?q=Orenco+Station+Hillsboro+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Orenco+Station+Hillsboro+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Orenco+Station+Hillsboro+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 68,
     bikeScore: 72,
     transitScore: 55,
@@ -8318,7 +8318,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Employment corridor with real transit access and affordable condo entry points",
     mapEmbedSrc: "https://maps.google.com/maps?q=Tanasbourne+Hillsboro+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Tanasbourne+Hillsboro+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Tanasbourne+Hillsboro+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 62,
     bikeScore: 58,
     transitScore: 52,
@@ -8428,7 +8428,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Classic 1990s SW Beaverton — quiet, family-oriented, fully suburban",
     mapEmbedSrc: "https://maps.google.com/maps?q=Murrayhill+Beaverton+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Murrayhill+Beaverton+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Murrayhill+Beaverton+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 42,
     bikeScore: 38,
     transitScore: 28,
@@ -8542,7 +8542,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Newest and most complete of SW Beaverton's planned communities",
     mapEmbedSrc: "https://maps.google.com/maps?q=Progress+Ridge+Beaverton+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Progress+Ridge+Beaverton+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Progress+Ridge+Beaverton+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 52,
     bikeScore: 42,
     transitScore: 22,
@@ -8656,7 +8656,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Washington County's most affordable first-time buyer market — more house, fewer amenities",
     mapEmbedSrc: "https://maps.google.com/maps?q=Aloha+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Aloha+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Aloha+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 38,
     bikeScore: 44,
     transitScore: 45,
@@ -8771,7 +8771,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Gladstone+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Gladstone+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Gladstone+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 42,
     bikeScore: 38,
     transitScore: 28,
@@ -8889,7 +8889,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Lake+Grove+Lake+Oswego+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Lake+Grove+Lake+Oswego+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Lake+Grove+Lake+Oswego+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 52,
     bikeScore: 44,
     transitScore: 35,
@@ -9007,7 +9007,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Oak+Grove+Milwaukie+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Oak+Grove+Milwaukie+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Oak+Grove+Milwaukie+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 38,
     bikeScore: 42,
     transitScore: 32,
@@ -9125,7 +9125,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Jennings+Lodge+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Jennings+Lodge+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Jennings+Lodge+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 28,
     bikeScore: 30,
     transitScore: 22,
@@ -9243,7 +9243,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=West+Haven-Sylvan+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=West+Haven-Sylvan+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=West+Haven-Sylvan+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 32,
     bikeScore: 28,
     transitScore: 38,
@@ -9361,7 +9361,7 @@ export const neighborhoods: NeighborhoodData[] = [
     mapEmbedSrc:
       "https://maps.google.com/maps?q=Skyline+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Skyline+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Skyline+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 8,
     bikeScore: 12,
     transitScore: 10,
@@ -9480,7 +9480,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     personality: "Clark County's most sought-after zip code — schools, hospitals, and greenway trails, with an I-5 commute cost",
     mapEmbedSrc: "https://maps.google.com/maps?q=Salmon+Creek+Vancouver+WA&output=embed&z=14",
-    directionsSrc: "https://maps.google.com/maps?saddr=Salmon+Creek+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+    directionsSrc: "https://maps.google.com/maps?saddr=Salmon+Creek+Vancouver+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 32,
     bikeScore: 42,
     transitScore: 28,
@@ -9568,7 +9568,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     personality: "Northwest Vancouver's closest thing to acreage living — large lots, quiet roads, and a small commercial village, all within 25 minutes of Portland",
     mapEmbedSrc: "https://maps.google.com/maps?q=Felida+Vancouver+WA&output=embed&z=14",
-    directionsSrc: "https://maps.google.com/maps?saddr=Felida+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+    directionsSrc: "https://maps.google.com/maps?saddr=Felida+Vancouver+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 14,
     bikeScore: 22,
     transitScore: 10,
@@ -9655,7 +9655,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     personality: "North Vancouver's most affordable entry point — older housing, highway corridor, no pretense, quick I-5 access",
     mapEmbedSrc: "https://maps.google.com/maps?q=Hazel+Dell+Vancouver+WA&output=embed&z=14",
-    directionsSrc: "https://maps.google.com/maps?saddr=Hazel+Dell+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+    directionsSrc: "https://maps.google.com/maps?saddr=Hazel+Dell+Vancouver+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 52,
     bikeScore: 38,
     transitScore: 34,
@@ -9747,7 +9747,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     personality: "East Vancouver's family-practical neighborhood — older housing, fair prices, I-205 access, and a park system that punches above its weight",
     mapEmbedSrc: "https://maps.google.com/maps?q=Orchards+Vancouver+WA&output=embed&z=14",
-    directionsSrc: "https://maps.google.com/maps?saddr=Orchards+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+    directionsSrc: "https://maps.google.com/maps?saddr=Orchards+Vancouver+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 38,
     bikeScore: 34,
     transitScore: 26,
@@ -9839,7 +9839,7 @@ export const neighborhoods: NeighborhoodData[] = [
     ],
     personality: "East Vancouver's most complete neighborhood — a real library, a real commercial strip, and the best I-205 position in Clark County",
     mapEmbedSrc: "https://maps.google.com/maps?q=Cascade+Park+Vancouver+WA&output=embed&z=14",
-    directionsSrc: "https://maps.google.com/maps?saddr=Cascade+Park+Vancouver+WA&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+    directionsSrc: "https://maps.google.com/maps?saddr=Cascade+Park+Vancouver+WA&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 44,
     bikeScore: 40,
     transitScore: 30,
@@ -9928,7 +9928,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Washington County's most coveted hilltop address — views, space, and no city taxes",
     mapEmbedSrc: "https://maps.google.com/maps?q=Bull+Mountain+Tigard+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Bull+Mountain+Tigard+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Bull+Mountain+Tigard+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 12,
     bikeScore: 18,
     transitScore: 14,
@@ -10046,7 +10046,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Affordable, quiet, and underrated — Washington County's best value at the south end",
     mapEmbedSrc: "https://maps.google.com/maps?q=King+City+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=King+City+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=King+City+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 22,
     bikeScore: 28,
     transitScore: 20,
@@ -10159,7 +10159,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Portland address, Washington County rules — more house per dollar than SW Portland proper",
     mapEmbedSrc: "https://maps.google.com/maps?q=Metzger+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Metzger+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Metzger+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 52,
     bikeScore: 44,
     transitScore: 38,
@@ -10269,7 +10269,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Old trees, mid-century houses, and a jurisdictional split that buyers need to understand",
     mapEmbedSrc: "https://maps.google.com/maps?q=Garden+Home+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=Garden+Home+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=Garden+Home+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 58,
     bikeScore: 50,
     transitScore: 35,
@@ -10383,7 +10383,7 @@ export const neighborhoods: NeighborhoodData[] = [
     personality: "Tryon Creek at the back door — SW Portland's best argument for staying out of the city proper",
     mapEmbedSrc: "https://maps.google.com/maps?q=South+Burlingame+Portland+OR&output=embed&z=14",
     directionsSrc:
-      "https://maps.google.com/maps?saddr=South+Burlingame+Portland+OR&daddr=15115+SW+Sequoia+Pkwy+Suite+100+Portland+OR+97224&output=embed",
+      "https://maps.google.com/maps?saddr=South+Burlingame+Portland+OR&daddr=10135+SE+Sunnyside+Rd+Suite+125+Clackamas+OR+97015&output=embed",
     walkScore: 42,
     bikeScore: 36,
     transitScore: 32,

@@ -9,7 +9,7 @@ export const BASE = "https://thelindleyteam.com";
 
 // Same wording the site footer carries.
 export const COMPLIANCE =
-  "The Lindley Team at Movement Mortgage, LLC. Movement Mortgage, LLC is an Equal Housing Lender. NMLS ID #39179 (www.nmlsconsumeraccess.org). David Chandler NMLS #265974 · Brianna Lindley NMLS #1367416. Interest rates and products are subject to change without notice and may not be available at the time of loan commitment or rate lock. This is not a commitment to lend; terms and conditions apply; not all applicants will qualify. Licensed in OR & WA.";
+  "The Lindley Team at Movement Mortgage, LLC. Movement Mortgage, LLC is an Equal Housing Lender. NMLS ID #39179 (www.nmlsconsumeraccess.org). David Chandler NMLS #265974 · Brianna Lindley NMLS #1367416. Interest rates and products are subject to change without notice and may not be available at the time of loan commitment or rate lock. This is not a commitment to lend; terms and conditions apply; not all applicants will qualify. Licensed in OR, WA & AZ.";
 
 type PostRow = { title: string; slug: string; excerpt?: string };
 
@@ -110,7 +110,7 @@ export function findMd(kind: string, slug: string): string | null {
 const HEAD = [
   "# The Lindley Team at Movement Mortgage",
   "",
-  "> Portland-area mortgage team (David Chandler and Bri Lindley) at Movement Mortgage, licensed in Oregon and Washington. Home purchase, refinance, divorce lending, self-employed (bank statement) and investor (DSCR) loans.",
+  "> Portland-area mortgage team (David Chandler and Bri Lindley) at Movement Mortgage, licensed in Oregon, Washington and Arizona. Home purchase, refinance, divorce lending, self-employed (bank statement) and investor (DSCR) loans.",
   "",
   `Service, comparison, neighborhood and calculator pages are also available as clean markdown at the same URL with .md added (for example ${BASE}/services/divorce-lending.md).`,
   "",

@@ -42,7 +42,7 @@ export const services: ServiceData[] = [
     tag: "Most Popular",
     seo: {
       title: "Portland Purchase Mortgage Loans | The Lindley Team",
-      description: "Get pre-approved for a Portland home purchase with The Lindley Team at Movement Mortgage. Licensed in OR & WA. NMLS #1367416 / #265974.",
+      description: "Get pre-approved for a Portland home purchase with The Lindley Team at Movement Mortgage. Licensed in OR, WA & AZ. NMLS #1367416 / #265974.",
       keywords: ["Portland mortgage", "Oregon home loan", "Portland home purchase", "first time home buyer Portland", "mortgage lender Portland OR"],
       aeoQuestion: "How do I get a mortgage to buy a home in Portland Oregon?",
     },
@@ -100,7 +100,7 @@ export const services: ServiceData[] = [
     icon: "square",
     seo: {
       title: "Portland Mortgage Refinance | The Lindley Team",
-      description: "Should you refinance your Portland mortgage? We'll run the numbers and tell you honestly — no refi that doesn't pay for itself. Movement Mortgage programs, licensed OR & WA. NMLS #1367416.",
+      description: "Should you refinance your Portland mortgage? We'll run the numbers and tell you honestly — no refi that doesn't pay for itself. Movement Mortgage programs, licensed OR, WA & AZ. NMLS #1367416 / #265974.",
       keywords: ["Portland refinance", "Oregon mortgage refinance", "refinance rates Portland", "should I refinance my mortgage", "Portland refi"],
       aeoQuestion: "When should I refinance my mortgage in Oregon?",
     },
@@ -481,7 +481,7 @@ export const services: ServiceData[] = [
     tag: "Most Common",
     seo: {
       title: "Conventional Home Loans Portland Oregon | 3% Down | The Lindley Team",
-      description: "Conventional mortgage loans in Portland with as little as 3% down. We'll show you conventional vs. FHA side by side. Licensed OR & WA. NMLS #1367416 / #265974.",
+      description: "Conventional mortgage loans in Portland with as little as 3% down. We'll show you conventional vs. FHA side by side. Licensed OR, WA & AZ. NMLS #1367416 / #265974.",
       keywords: ["conventional loan Portland", "conventional mortgage Oregon", "3 percent down conventional", "conventional vs FHA Oregon", "Fannie Mae loan Portland"],
       aeoQuestion: "What is a conventional loan and how much do I need down in Oregon?",
     },
