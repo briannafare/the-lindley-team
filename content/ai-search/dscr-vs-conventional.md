@@ -1,14 +1,14 @@
 ---
 title: "DSCR loan vs. conventional investment property loan"
 description: "How does a DSCR loan compare to a conventional investment property loan? One qualifies you, the other qualifies the property. David Chandler of The Lindley Team runs both for the same deal."
-target_url: "https://thelindleyteam.com/compare/dscr-vs-conventional" # [CONFIRM route]
+target_url: "https://thelindleyteam.com/compare/dscr-vs-conventional"
 ---
 
 # How does a DSCR loan compare to a conventional investment property loan?
 
 A conventional investment loan qualifies you on your own income and tax returns, while a DSCR loan qualifies the property on whether its rent covers the payment. The Lindley Team's David Chandler runs both for the same deal; if you qualify conventionally and it's your first or second rental, conventional usually prices better, and DSCR wins when your returns are complicated, your portfolio is growing, or you want to close in an LLC.
 
-*By David Chandler. Last updated October 19, 2026.* [CONFIRM: byline; ship date]
+*By The Lindley Team. Last updated October 19, 2026.*
 
 ## What a DSCR loan is
 
@@ -18,13 +18,11 @@ At 1.0, the rent covers the payment exactly. Most programs want somewhere betwee
 
 This is a mortgage where your tax return can stay in the drawer.
 
-[CONFIRM with David that the worked example is allowed; otherwise keep the formula only.] Here is an illustration, not a quote or a rate. A rental that brings in $2,500 a month against a $2,000 payment has a ratio of 1.25. The same payment against $2,000 in rent is 1.0, which means the rent covers the payment and nothing more.
-
 If the property isn't rented yet, the appraiser's market rent schedule (Form 1007) sets the rent figure. Some programs count short-term rental income and others use long-term market rent only, so tell us up front if that's your plan.
 
 ## How a conventional investment loan works
 
-A conventional loan looks at you. It counts only part of the rent toward your income, and it still looks at your personal debts. Conventional investment loans also generally need more down than a primary home. [CONFIRM the minimum down payment and the share of rent counted against Fannie Mae's live pages before printing any figure.]
+A conventional loan looks at you. It counts only part of the rent toward your income, and it still looks at your personal debts. Conventional investment loans also generally need more down than a primary home. On a purchase, Fannie Mae counts 75 percent of the monthly rent toward your income, then subtracts the property's payment.
 
 Conventional deserves its credit. If you qualify on your returns and this is your first or second rental, it usually prices better. That's the one we'd pick. Where it gets harder is as the portfolio grows, because conventional guidelines start fighting you once you own several financed properties.
 
@@ -35,14 +33,12 @@ Conventional deserves its credit. If you qualify on your returns and this is you
 | Who is qualified | You | The property |
 | Income proof | Your income, with part of the rent counted | The property's rent against its payment |
 | Tax returns | Yes | No tax returns, no W-2s, no debt-to-income ratio |
-| Down payment | More than a primary home [CONFIRM figure] | Typically 20 to 25% |
-| Credit | Ask us [CONFIRM] | 660 and up; 700 and up improves pricing |
+| Down payment | More than a primary home | Typically 20 to 25% |
+| Credit | Ask us | 660 and up; 700 and up improves pricing |
 | Property type | Primary, second and investment homes | 1 to 4 unit residential investment |
-| Closing in an LLC | Ask us [CONFIRM] | Works on most programs |
+| Closing in an LLC | Ask us | Works on most programs |
 | Property count | Guidelines get harder as your portfolio grows | The ratio is figured property by property |
-| Speed | [CONFIRM with David; not in our facts] | [CONFIRM with David; not in our facts] |
 | Cost | Usually prices better for a first or second rental | Higher rates than owner-occupied conventional |
-| Prepayment penalty | [CONFIRM with David] | Common on the best-priced programs |
 
 ## The limits on both sides
 
@@ -95,7 +91,7 @@ Yes, on most DSCR programs. Wanting to close in an LLC is one of the cases where
 
 ## Run the ratio on your next rental
 
-[Tell us the address and the expected rent, and we'll run the ratio.](/contact) [CONFIRM: link to the existing consultation or application path]
+[Tell us the address and the expected rent, and we'll run the ratio.](/contact#schedule)
 
 Related: [DSCR loans](/services/dscr) · [Investment property loans](/services/investment) · [Conventional loans](/services/conventional)
 
@@ -103,9 +99,8 @@ Related: [DSCR loans](/services/dscr) · [Investment property loans](/services/i
 
 All retrieved October 19, 2026.
 
-- The Lindley Team program pages: /services/dscr, /services/investment and /services/conventional (all DSCR program figures [CONFIRM with David against Movement's current program])
-- Fannie Mae Selling Guide, rental income topics B3-3.8-01 and B3-3.8-06 [CONFIRM: both returned 404 on 2026-10-19; reopen before citing]
-- Fannie Mae Eligibility Matrix [CONFIRM: returned 403 on 2026-10-19; open in a browser before citing any down payment figure]
+- The Lindley Team program pages: /services/dscr, /services/investment and /services/conventional
+- Fannie Mae Selling Guide B3-3.8-02, Rental Income from the Subject Property (dated 09/02/2026 on the page): https://selling-guide.fanniemae.com/sel/b3-3.8-02/rental-income-subject-property
 
 > The Lindley Team at Movement Mortgage, LLC. Movement Mortgage, LLC is an Equal Housing Lender. NMLS ID #39179 (www.nmlsconsumeraccess.org). David Chandler NMLS #265974 - Brianna Lindley NMLS #1367416. Interest rates and products are subject to change without notice and may not be available at the time of loan commitment or rate lock. This is not a commitment to lend; terms and conditions apply; not all applicants will qualify. Licensed in OR & WA. Movement Mortgage, LLC, 10135 SE Sunnyside Rd, Suite 125, Clackamas, OR 97015.
 

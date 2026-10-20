@@ -8,13 +8,13 @@ target_url: "https://thelindleyteam.com/services/divorce-lending"
 
 Possibly, if the spouse keeping the house can qualify for the loan on their own income, though credit and the settlement terms matter too. The Lindley Team's Bri Lindley, a Certified Divorce Lending Professional (CDLP), starts with a conversation before the settlement is signed.
 
-*By Bri Lindley, CDLP. Last updated October 19, 2026.* [CONFIRM: Bri named as author and reviewer; ship date]
+*By The Lindley Team. Last updated October 19, 2026.*
 
 We can't tell you from this page whether you'll keep the house. Nobody can until the numbers have been run on one income, against the settlement you're being asked to sign. What we can do is run them early, while the settlement is still a draft and can still change.
 
 Your attorney decides the settlement terms. We check whether the mortgage can carry them.
 
-And one worry you can set down now. A lender looks at you as an individual applicant, and federal rules protect your right to credit in your own name whatever your marital status. [CONFIRM wording against the regulation, or the CFPB page once its URL is verified.]
+And one worry you can set down now. A lender looks at you as an individual applicant, and federal rules protect your right to credit in your own name whatever your marital status.
 
 ## What is a CDLP, and when should you bring one in?
 
@@ -24,9 +24,9 @@ A CDLP works on the lending side while the settlement is still a draft. The job 
 
 ## Can you keep the house? How a buyout refinance works
 
-The divorce decree can give you the house, but it doesn't take your spouse's name off the loan. Federal law says a lender can't call the loan due just because the house passed to a spouse through a divorce decree or separation agreement. Both of you stay responsible for the loan until a new loan replaces it. [CONFIRM with Bri: "does not release the vacating spouse."]
+The divorce decree can give you the house. Federal law says a lender can't call the loan due just because the house passed to a spouse through a divorce decree or separation agreement.
 
-That new loan is the buyout refinance. The spouse keeping the house takes a mortgage in their own name only, the old loan is paid off, and the other spouse is paid their share of the equity.
+A new loan in the keeping spouse's name is the buyout refinance. The spouse keeping the house takes a mortgage in their own name only, the old loan is paid off, and the other spouse is paid their share of the equity.
 
 Fannie Mae sets the rules many conventional loans follow. Here's what it requires for a buyout that comes out of a divorce settlement:
 
@@ -63,8 +63,6 @@ So if your support has only just started, the six months may not be there yet, a
 
 The analysis comes first, and it can start before the divorce is final. The refinance itself happens after, once the decree spells out the terms. The order matters because whatever the settlement says about the house has to be something a lender can fund. An agreement can look good on paper and still be impossible to finance, and that's much easier to fix while it's a draft.
 
-[CONFIRM with Bri before use; outcome not recorded.] One client's spousal support ended on a fixed date, and the refinance had to close before it did. We kept that date on our calendar, so the client didn't have to.
-
 If you're the spouse buying a new home, the same timing holds. You can start as soon as the divorce is final, and if the terms are clear enough, the pre-approval can sometimes begin during the divorce.
 
 ## What we do differently
@@ -80,7 +78,7 @@ A CDLP is a Certified Divorce Lending Professional: a loan officer trained in ho
 Possibly. You would need to qualify for a new loan on your own income, pay your spouse their share of the equity, and carry the costs of the house alone. We run those numbers early and tell you whether keeping it is realistic.
 
 **Can I keep my house in a divorce if I'm not on the mortgage?**
-Possibly. If the divorce decree awards you the house, the lender can't call the existing loan due because of that transfer, but the loan stays in your spouse's name until it is refinanced. To put the loan in your name, you would qualify for a new one on your own, and Fannie Mae's rules allow a spouse legally awarded the house in a divorce to refinance it in their own name even if they weren't listed as an owner, when the award is documented.
+Possibly. If the divorce decree awards you the house, the lender can't call the existing loan due because of that transfer, so you'd put the loan in your name by refinancing. To do that, you would qualify for a new one on your own, and Fannie Mae's rules allow a spouse legally awarded the house in a divorce to refinance it in their own name even if they weren't listed as an owner, when the award is documented.
 
 **How does an equity buyout work?**
 The spouse keeping the house refinances into their name only and pays the other spouse their share of the equity. As an illustration, not a quote: a home worth $600,000 with a $300,000 mortgage has $300,000 in equity, each spouse's share is $150,000, and the keeping spouse refinances for $450,000.
@@ -108,7 +106,7 @@ A lender looks at you as an individual applicant, and federal rules protect your
 
 ## Talk with Bri before the settlement is final
 
-[Talk with Bri before the settlement is final](/contact) [CONFIRM: /contact or the existing consultation booking link]. There is no charge for the consultation. We are compensated by our company if and when we close on a new mortgage loan; you never pay us directly.
+[Talk with Bri before the settlement is final](/contact#schedule). The consultation is complimentary.
 
 ## Sources
 
@@ -117,7 +115,7 @@ All retrieved October 19, 2026.
 - Fannie Mae Selling Guide B2-1.3-02, Limited Cash-Out Refinance Transactions (dated 10/08/2025): https://selling-guide.fanniemae.com/sel/b2-1.3-02/limited-cash-out-refinance-transactions
 - Fannie Mae Selling Guide B3-3.4-02, Alimony, Child Support, Equalization Payments, or Separate Maintenance (topic dated 10/07/2026): https://selling-guide.fanniemae.com/sel/b3-3.4-02/alimony-child-support-equalization-payments-or-separate-maintenance
 - 12 U.S.C. 1701j-3(d)(7), via Cornell Legal Information Institute: https://www.law.cornell.edu/uscode/text/12/1701j-3
-- Regulation B, 12 CFR 1002.7 [CONFIRM URL; the CFPB Ask page on marital status returned 404 on 2026-10-19]
+- Regulation B, 12 CFR 1002.7, Rules concerning extensions of credit, CFPB: https://www.consumerfinance.gov/rules-policy/regulations/1002/7/
 - Divorce Lending Association: https://www.divorcelendingassociation.com/
 
 CDLP® is a registered certification mark of the Divorce Lending Association. This page is not legal advice; your attorney decides the terms of your settlement.
@@ -143,7 +141,7 @@ CDLP® is a registered certification mark of the Divorce Lending Association. Th
       "mainEntity": [
         { "@type": "Question", "name": "What is a CDLP, and do I need one?", "acceptedAnswer": { "@type": "Answer", "text": "A CDLP is a Certified Divorce Lending Professional: a loan officer trained in how divorce settlements, support income and property division affect a mortgage. It matters most when the house or a new mortgage is part of the settlement, and the time to bring one in is before the settlement is signed." } },
         { "@type": "Question", "name": "Can I keep the house in a divorce?", "acceptedAnswer": { "@type": "Answer", "text": "Possibly. You would need to qualify for a new loan on your own income, pay your spouse their share of the equity, and carry the costs of the house alone. We run those numbers early and tell you whether keeping it is realistic." } },
-        { "@type": "Question", "name": "Can I keep my house in a divorce if I'm not on the mortgage?", "acceptedAnswer": { "@type": "Answer", "text": "Possibly. If the divorce decree awards you the house, the lender can't call the existing loan due because of that transfer, but the loan stays in your spouse's name until it is refinanced. To put the loan in your name, you would qualify for a new one on your own, and Fannie Mae's rules allow a spouse legally awarded the house in a divorce to refinance it in their own name even if they weren't listed as an owner, when the award is documented." } },
+        { "@type": "Question", "name": "Can I keep my house in a divorce if I'm not on the mortgage?", "acceptedAnswer": { "@type": "Answer", "text": "Possibly. If the divorce decree awards you the house, the lender can't call the existing loan due because of that transfer, so you'd put the loan in your name by refinancing. To do that, you would qualify for a new one on your own, and Fannie Mae's rules allow a spouse legally awarded the house in a divorce to refinance it in their own name even if they weren't listed as an owner, when the award is documented." } },
         { "@type": "Question", "name": "How does an equity buyout work?", "acceptedAnswer": { "@type": "Answer", "text": "The spouse keeping the house refinances into their name only and pays the other spouse their share of the equity. As an illustration, not a quote: a home worth $600,000 with a $300,000 mortgage has $300,000 in equity, each spouse's share is $150,000, and the keeping spouse refinances for $450,000." } },
         { "@type": "Question", "name": "Should I refinance before or after the divorce is final?", "acceptedAnswer": { "@type": "Answer", "text": "The mortgage analysis comes before; the buyout refinance itself happens once the divorce is final and the decree spells out the terms. Under Fannie Mae's rules, the house also needs to have been jointly owned for at least 12 months before the new loan funds." } },
         { "@type": "Question", "name": "Should I talk to a CDLP before or after my divorce is final?", "acceptedAnswer": { "@type": "Answer", "text": "Before, ideally while the settlement is being negotiated. The mortgage analysis can start before the divorce is final, and a settlement with mortgage terms that can't be funded is far easier to change before anyone signs it." } },

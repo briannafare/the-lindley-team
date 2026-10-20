@@ -3,7 +3,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { BASE, type AiPage } from "@/lib/ai-search-pages";
 
-function JsonLd({ data }: { data: unknown }) {
+export function JsonLd({ data }: { data: unknown }) {
   return (
     <script
       type="application/ld+json"
@@ -13,7 +13,7 @@ function JsonLd({ data }: { data: unknown }) {
 }
 
 // Everything in the schema comes from text that is visible on the page.
-function schemaFor(p: AiPage) {
+export function schemaFor(p: AiPage, opts: { articleOnly?: boolean } = {}) {
   const url = `${BASE}${p.path}`;
   const graph: Record<string, unknown>[] = [
     {
@@ -23,7 +23,11 @@ function schemaFor(p: AiPage) {
       datePublished: p.updated,
       dateModified: p.updated,
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
-      author: p.authors.map((name) => ({ "@type": "Person", name })),
+      author: p.authors.map((name) =>
+        name.startsWith("The Lindley Team")
+          ? { "@type": "Organization", name: "The Lindley Team at Movement Mortgage", "@id": `${BASE}/#lindleyteam` }
+          : { "@type": "Person", name }
+      ),
       publisher: { "@type": "Organization", name: "The Lindley Team at Movement Mortgage", "@id": `${BASE}/#lindleyteam` },
     },
     {
@@ -35,6 +39,7 @@ function schemaFor(p: AiPage) {
       ],
     },
   ];
+  if (opts.articleOnly) return { "@context": "https://schema.org", "@graph": graph };
   if (p.kind === "service") {
     graph.push({
       "@type": "Service",
@@ -62,14 +67,14 @@ function schemaFor(p: AiPage) {
 }
 
 // Open items stay visible on the page so nobody ships one by accident.
-function flagConfirms(html: string) {
+export function flagConfirms(html: string) {
   return html.replace(
     /\[CONFIRM[^\]]*\]/g,
     (m) => `<mark class="bg-yellow/60 text-ink px-1 rounded">${m}</mark>`
   );
 }
 
-const PROSE = [
+export const PROSE = [
   "[&_p]:mb-6 [&_p]:text-ink-mid [&_p]:leading-[1.8] [&_p]:text-[1.05rem]",
   "[&_h2]:font-display [&_h2]:text-[clamp(1.5rem,3vw,2rem)] [&_h2]:font-extrabold [&_h2]:leading-tight [&_h2]:text-ink [&_h2]:mt-14 [&_h2]:mb-4",
   "[&_h3]:font-display [&_h3]:text-[1.15rem] [&_h3]:font-bold [&_h3]:text-ink [&_h3]:mt-10 [&_h3]:mb-3",

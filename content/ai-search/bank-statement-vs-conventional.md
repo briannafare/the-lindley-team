@@ -1,14 +1,14 @@
 ---
 title: "Bank statement loan vs. conventional loan if you're self-employed"
 description: "Is a bank statement loan better than a conventional loan if you're self-employed? It depends on what your tax returns show. David Chandler of The Lindley Team compares both."
-target_url: "https://thelindleyteam.com/compare/bank-statement-vs-conventional" # [CONFIRM route; alternative /services/bank-statement/vs-conventional]
+target_url: "https://thelindleyteam.com/compare/bank-statement-vs-conventional"
 ---
 
 # Is a bank statement loan better than a conventional loan if you're self-employed?
 
 It depends on what your tax returns show: if they support the home you want, a conventional loan usually costs less, and if write-offs shrink your income on paper, a bank statement loan qualifies you on your deposits instead. The Lindley Team, led here by David Chandler, runs both side by side so you see the mortgage payment both ways before you pick.
 
-*By David Chandler. Last updated October 19, 2026.* [CONFIRM: byline; ship date]
+*By The Lindley Team. Last updated October 19, 2026.*
 
 Your accountant did exactly what you asked. The write-offs came off the top, your taxable income came out small, and that was the right call for your taxes. The trouble is that a lender reads the same return.
 
@@ -26,9 +26,9 @@ We can't tell you which loan you'll qualify for until we've seen your deposits a
 
 ## How each loan reads your income
 
-**Conventional.** Lenders generally look for a two-year history of self-employment earnings on your tax returns. With less than two years, you may still qualify if your most recent signed personal and business returns show a full 12 months of self-employment income from your current business, and your file shows you earned at least as much before in the same or a similar line of work (Fannie Mae Selling Guide). [CONFIRM topic number B3-3.5-01 and URL in a browser.]
+**Conventional.** Lenders generally look for a two-year history of self-employment earnings on your tax returns. With less than two years, you may still qualify if your most recent signed personal and business returns show a full 12 months of self-employment income from your current business, and your file shows you earned at least as much before in the same or a similar line of work (Fannie Mae Selling Guide).
 
-**Bank statement.** The program reviews 12 to 24 months of business or personal bank statements and averages the deposits over that time, so a slow winter and a busy summer even out. Big one-time transfers need an explanation. Most programs look for two or more years of self-employment. [CONFIRM every bank statement figure on this page with David against Movement's current program.]
+**Bank statement.** The program reviews 12 to 24 months of business or personal bank statements and averages the deposits over that time, so a slow winter and a busy summer even out. Big one-time transfers need an explanation. Most programs look for two or more years of self-employment.
 
 Conventional deserves its credit here. If your returns support the house, it's usually the cheaper loan and it takes a smaller down payment. If it fits, that's the one we'd pick.
 
@@ -40,7 +40,7 @@ Conventional deserves its credit here. If your returns support the house, it's u
 | Self-employment history | Generally two years; less can work with 12 months on your latest returns and prior income in the same field | Typically two or more years |
 | Typical down payment | 3% for first-time buyers, 5% standard | Typically 10 to 20% |
 | Credit | 620 and up; best pricing at 740 and up | 660 and up for most programs |
-| Mortgage insurance | Required under 20% down; you can ask to cancel once the loan balance reaches 80% of the home's original value with a good payment history, and it ends automatically at 78% | Ask us [CONFIRM with David] |
+| Mortgage insurance | Required under 20% down; you can ask to cancel once the loan balance reaches 80% of the home's original value with a good payment history, and it ends automatically at 78% | Ask us |
 | Reserves (savings left after closing) | Ask us | A few months of payments |
 | What write-offs do | Lower the income you qualify on | The program reads deposits instead of taxable income |
 | Who it fits | Returns that support the price you want | Returns that show far less than the business brings in |
@@ -97,7 +97,7 @@ It can be. The real comparison is a bank statement loan against not qualifying a
 
 ## See both, side by side
 
-[We'll look at your deposits and show you both, side by side.](/contact) [CONFIRM: link to the existing application or consultation path]
+[We'll look at your deposits and show you both, side by side.](/contact#schedule)
 
 Related: [Bank statement loans](/services/bank-statement) · [Conventional loans](/services/conventional)
 
@@ -105,7 +105,7 @@ Related: [Bank statement loans](/services/bank-statement) · [Conventional loans
 
 All retrieved October 19, 2026.
 
-- Fannie Mae Selling Guide, Underwriting Factors and Documentation for a Self-Employed Borrower (page displayed topic B3-3.5-01, dated 12/13/2023): https://selling-guide.fanniemae.com/sel/b3-3.2-01/underwriting-factors-and-documentation-self-employed-borrower [CONFIRM topic number and URL]
+- Fannie Mae Selling Guide, Underwriting Factors and Documentation for a Self-Employed Borrower B3-3.5-01 (dated 12/13/2023 on the page): https://selling-guide.fanniemae.com/sel/b3-3.5-01/underwriting-factors-and-documentation-self-employed-borrower
 - 12 CFR 1026.43(c), Ability to repay, CFPB: https://www.consumerfinance.gov/rules-policy/regulations/1026/43/
 - CFPB, "What is private mortgage insurance?" (last reviewed August 28, 2023): https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/
 - CFPB Compliance Bulletin 2015-03, Private Mortgage Insurance Cancellation and Termination: https://files-prod.consumerfinance.gov/f/documents/201508_cfpb_compliance-bulletin_private-mortgage-insurance-cancellation-and-te_jpbfQUl.pdf

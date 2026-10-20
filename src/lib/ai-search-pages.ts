@@ -28,6 +28,8 @@ export type AiPage = {
   updated: string; // ISO date from the visible "Last updated" line
   bodyMd: string; // markdown without frontmatter, h1 and schema block
   html: string;
+  topHtml: string; // body before the FAQ section
+  afterFaqHtml: string; // body after the FAQ section (call to action, sources, compliance)
   faqs: { q: string; a: string }[];
   confirmCount: number;
 };
@@ -86,6 +88,17 @@ export function getAiPages(): AiPage[] {
     const updated = (by && parseDate(by[2])) || "2026-10-19";
     marked.setOptions({ gfm: true });
     const html = marked.parse(body, { async: false }) as string;
+    const faqAt = body.indexOf("## Frequently asked questions");
+    let top = body;
+    let after = "";
+    if (faqAt >= 0) {
+      top = body.slice(0, faqAt);
+      const rest = body.slice(faqAt + 5);
+      const nx = rest.search(/\n## /);
+      after = nx >= 0 ? rest.slice(nx + 1) : "";
+    }
+    const topHtml = marked.parse(top, { async: false }) as string;
+    const afterFaqHtml = after ? (marked.parse(after, { async: false }) as string) : "";
     return {
       kind: p.kind,
       slug: p.slug,
@@ -97,6 +110,8 @@ export function getAiPages(): AiPage[] {
       updated,
       bodyMd: body,
       html,
+      topHtml,
+      afterFaqHtml,
       faqs: parseFaqs(body),
       confirmCount: (body.match(/\[CONFIRM/g) || []).length,
     };

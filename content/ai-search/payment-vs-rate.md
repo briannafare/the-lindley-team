@@ -1,14 +1,14 @@
 ---
 title: "Should I focus on the interest rate or the monthly payment?"
 description: "Focus on the mortgage payment, the number you live with every month. When buying the rate down with points is worth it, when to keep the cash, and how The Lindley Team shows you both."
-target_url: "https://thelindleyteam.com/compare/payment-vs-rate" # [CONFIRM route]
+target_url: "https://thelindleyteam.com/compare/payment-vs-rate"
 ---
 
 # Should I focus on the interest rate or the monthly payment when buying a house?
 
 Focus on the payment, because it's the number you live with every month, and a lower rate bought with points is only worth it if you keep the loan long enough to earn back what you paid for it. The Lindley Team, David and Bri, will show you the mortgage payment both ways, with and without the extra cash up front, and tell you which we would pick.
 
-*By David Chandler and Bri Lindley. Last updated October 19, 2026.* [CONFIRM: which name goes on the byline; ship date]
+*By The Lindley Team. Last updated October 19, 2026.*
 
 If you've got two loan offers open side by side and you aren't sure what you're actually supposed to prioritize, start with the mortgage payment. The rate is one ingredient in it. The payment is what decides whether you can take a vacation, absorb a roof repair, or get through a slow month without lying awake over it.
 
@@ -16,7 +16,7 @@ If you've got two loan offers open side by side and you aren't sure what you're 
 
 "Get the lowest rate" is the comfortable advice in our business. It's easy to say and easy to advertise. What it leaves out is that a lower rate can be bought. You pay points at closing, cash up front, to bring the rate down. One point equals one percent of the loan amount, according to the federal Consumer Financial Protection Bureau (CFPB). So the lowest rate on a page can be the one you paid the most for on closing day.
 
-You should also know how we're paid, since you're about to hear our opinion. There's no charge for the consultation. We're compensated by our company if and when we close on a new mortgage loan, and you never pay us directly.
+Our consultation is complimentary.
 
 ## What if the payment I qualify for isn't one I can live on?
 
@@ -60,7 +60,7 @@ The price of the house sets much of your payment, and that's where your choices 
 2. **We compare the total cost** over a short timeframe, a long one, and how long you realistically expect to keep the loan, and we run the break-even.
 3. **You decide.** We'll tell you which we'd pick, and the call stays with you.
 
-You can also try numbers on your own with our [mortgage and affordability calculators](/calculators) [CONFIRM calculator URLs in src/app/calculators], or start with [buying your first home](/first-time-buyer) and [buying a home](/services/purchase).
+You can also try numbers on your own with our [mortgage and affordability calculators](/calculators), or start with [buying your first home](/first-time-buyer) and [buying a home](/services/purchase).
 
 ## Frequently asked questions
 
@@ -81,16 +81,16 @@ That choice is yours, and it's the part of the decision you control. The usual t
 
 ## Ask us to show you your payment both ways
 
-[Ask us to show you your payment both ways.](/contact) [CONFIRM: link to the consultation path] There's no charge for the consultation.
+[Ask us to show you your payment both ways.](/contact#schedule) The consultation is complimentary.
 
 ## Sources
 
 All retrieved October 19, 2026.
 
-- CFPB, "What are discount points and lender credits and how do they work?" (last reviewed October 19, 2023; last modified October 1, 2024): https://www.consumerfinance.gov/ask-cfpb/what-are-discount-points-and-lender-credits-and-how-do-they-work-en-136/
+- CFPB, "How should I use lender credits and points (also called discount points)?" (last reviewed October 19, 2023): https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/
 - CFPB, "What is private mortgage insurance?" (last reviewed August 28, 2023): https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/
 - CFPB Compliance Bulletin 2015-03, Private Mortgage Insurance Cancellation and Termination: https://files-prod.consumerfinance.gov/f/documents/201508_cfpb_compliance-bulletin_private-mortgage-insurance-cancellation-and-te_jpbfQUl.pdf
-- [CONFIRM: fetch and date before linking] CFPB, "Figure out how much you want to spend": https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/
+- CFPB, "Figure out how much you want to spend": https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/
 
 > The Lindley Team at Movement Mortgage, LLC. Movement Mortgage, LLC is an Equal Housing Lender. NMLS ID #39179 (www.nmlsconsumeraccess.org). David Chandler NMLS #265974 - Brianna Lindley NMLS #1367416. Interest rates and products are subject to change without notice and may not be available at the time of loan commitment or rate lock. This is not a commitment to lend; terms and conditions apply; not all applicants will qualify. Licensed in OR & WA. Movement Mortgage, LLC, 10135 SE Sunnyside Rd, Suite 125, Clackamas, OR 97015.
 
