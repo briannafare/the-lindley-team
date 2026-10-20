@@ -1,6 +1,6 @@
 import { findMd } from "@/lib/llms";
 
-// Served at /services/<slug>.md, /neighborhoods/<slug>.md, /calculators/<slug>.md via rewrites in next.config.mjs.
+// Served at /services/<slug>.md, /compare/<slug>.md, /neighborhoods/<slug>.md, /calculators/<slug>.md via rewrites in next.config.mjs.
 export async function GET(
   _req: Request,
   { params }: { params: { kind: string; slug: string } }

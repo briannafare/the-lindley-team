@@ -1,6 +1,7 @@
 import { services, type ServiceData } from "@/lib/services";
 import { neighborhoods, type NeighborhoodData } from "@/lib/neighborhoods";
 import { CALCULATOR_TOOLS, type CalculatorTool } from "@/lib/calculator-tools";
+import { getAiPages, aiPageMd } from "@/lib/ai-search-pages";
 import { client } from "@/sanity/lib/client";
 import { postsQuery } from "@/sanity/lib/queries";
 
@@ -88,6 +89,9 @@ export function calculatorMd(c: CalculatorTool): string {
 }
 
 export function findMd(kind: string, slug: string): string | null {
+  const ai = getAiPages().find((p) => p.slug === slug && (kind === "compare" || kind === "services"));
+  if (ai && ((kind === "compare" && ai.kind === "compare") || (kind === "services" && ai.kind === "service")))
+    return aiPageMd(ai);
   if (kind === "services") {
     const s = services.find((x) => x.slug === slug);
     return s ? serviceMd(s) : null;
@@ -108,7 +112,7 @@ const HEAD = [
   "",
   "> Portland-area mortgage team (David Chandler and Bri Lindley) at Movement Mortgage, licensed in Oregon and Washington. Home purchase, refinance, divorce lending, self-employed (bank statement) and investor (DSCR) loans.",
   "",
-  `Service, neighborhood and calculator pages are also available as clean markdown at the same URL with .md added (for example ${BASE}/services/divorce-lending.md).`,
+  `Service, comparison, neighborhood and calculator pages are also available as clean markdown at the same URL with .md added (for example ${BASE}/services/divorce-lending.md).`,
   "",
 ];
 
@@ -116,8 +120,13 @@ export async function buildLlmsTxt(): Promise<string> {
   const posts = await getPosts();
   const out = [...HEAD];
   out.push("## Services");
-  for (const s of services)
-    out.push(`- [${s.name}](${BASE}/services/${s.slug}): ${one(s.seo.description)}`);
+  for (const s of services) {
+    const ai = getAiPages().find((p) => p.kind === "service" && p.slug === s.slug);
+    out.push(`- [${s.name}](${BASE}/services/${s.slug}): ${one(ai ? ai.description : s.seo.description)}`);
+  }
+  out.push("", "## Comparisons");
+  for (const p of getAiPages().filter((x) => x.kind === "compare"))
+    out.push(`- [${p.h1}](${BASE}${p.path}): ${one(p.description)}`);
   out.push("", "## Calculators");
   out.push(`- [All calculators](${BASE}/calculators): Mortgage calculators and tools.`);
   for (const c of CALCULATOR_TOOLS)
@@ -141,7 +150,12 @@ export async function buildLlmsTxt(): Promise<string> {
 export async function buildLlmsFull(): Promise<string> {
   const parts = [HEAD.join("\n"), "Blog post bodies are not included here; see the blog index.", ""];
   parts.push("# Services\n");
-  for (const s of services) parts.push(serviceMd(s), "---\n");
+  for (const s of services) {
+    const ai = getAiPages().find((p) => p.kind === "service" && p.slug === s.slug);
+    parts.push(ai ? aiPageMd(ai) : serviceMd(s), "---\n");
+  }
+  parts.push("# Comparisons\n");
+  for (const p of getAiPages().filter((x) => x.kind === "compare")) parts.push(aiPageMd(p), "---\n");
   parts.push("# Calculators\n");
   for (const c of CALCULATOR_TOOLS) parts.push(calculatorMd(c), "---\n");
   parts.push("# Neighborhoods\n");
