@@ -45,8 +45,8 @@ export default function Mission() {
           <span className="mission-script font-script font-normal text-orange text-[1.35em] inline-block">
             the right financing
           </span>{" "}
-          for your life — not just the lowest rate on a spreadsheet. Access to
-          a wide range of mortgage products — funded in-house or brokered when it benefits you — across Oregon and Washington.
+          for your life, not just the lowest rate on a spreadsheet. Movement Mortgage
+          underwrites and funds your loan in-house, with a wide range of programs across Oregon, Washington and Arizona.
         </p>
       </div>
     </section>

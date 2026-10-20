@@ -1,7 +1,30 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // The .md routes and llms files read content/ai-search at request time; make sure it ships with them.
+  experimental: {
+    outputFileTracingIncludes: {
+      "/md/[kind]/[slug]": ["./content/ai-search/**/*"],
+      "/llms.txt": ["./content/ai-search/**/*"],
+      "/llms-full.txt": ["./content/ai-search/**/*"],
+      "/sitemap.xml": ["./content/ai-search/**/*"],
+    },
+  },
+  async headers() {
+    // The /tammi page's save-contact button. Served as a vCard so phones open it in Contacts.
+    return [{ source: "/the-lindley-team.vcf", headers: [{ key: "Content-Type", value: "text/vcard; charset=utf-8" }, { key: "Content-Disposition", value: 'attachment; filename="The ChandlerLindley Team.vcf"' }] }];
+  },
+  // Clean markdown copies of key pages (see src/app/md). Same URL plus .md.
+  async rewrites() {
+    return [
+      { source: "/:kind(services|compare|neighborhoods|calculators)/:slug.md", destination: "/md/:kind/:slug" },
+    ];
+  },
   async redirects() {
     return [
+      // Postcard QR. The card encodes thelindleyteam.com/go/tammi so the phone shows our domain;
+      // this hop goes through the GHL QR counter, which then lands on /tammi with postcard UTMs.
+      { source: "/go/tammi", destination: "https://links.eighty5labs.com/qr/71jlFc42oh0i", permanent: false },
+      { source: "/go/david", destination: "https://links.eighty5labs.com/qr/9k330QguOQgW", permanent: false },
       { source: "/parkrose-neighborhood-copy", destination: "/neighborhoods", permanent: true },
       { source: "/parkrose-neighborhood-2", destination: "/neighborhoods", permanent: true },
       { source: "/kerns-neighborhood", destination: "/neighborhoods", permanent: true },

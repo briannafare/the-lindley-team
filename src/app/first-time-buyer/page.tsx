@@ -7,7 +7,7 @@ import Btn from "@/components/Btn";
 export const metadata: Metadata = {
   title: "First-Time Home Buyer in Portland | The Lindley Team at Movement Mortgage",
   description:
-    "Buying your first home in Portland? David & Bri at Movement Mortgage walk you through down payment, credit, and Oregon assistance programs — no jargon, no pressure. Licensed OR & WA. NMLS #1367416 / #265974.",
+    "Buying your first home in Portland? David & Bri at Movement Mortgage walk you through down payment, credit, and Oregon assistance programs — no jargon, no pressure. Licensed OR, WA & AZ. NMLS #1367416 / #265974.",
   alternates: { canonical: "/first-time-buyer" },
 };
 
@@ -179,7 +179,7 @@ export default function FirstTimeBuyerPage() {
                 Start with a free call
               </Btn>
               <span className="block mt-4 font-body text-[13px] tracking-[0.06em] uppercase text-paper/60">
-                The Lindley Team · David &amp; Bri · OR &amp; WA
+                The Lindley Team · David &amp; Bri · OR, WA &amp; AZ
               </span>
             </div>
           </div>

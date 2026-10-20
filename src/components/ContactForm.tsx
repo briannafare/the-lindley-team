@@ -30,7 +30,7 @@ export default function ContactForm({
   const [state, setState] = useState<State>("idle");
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", bestTime: "" });
   const [smsConsent, setSmsConsent] = useState(false);
-  const [company, setCompany] = useState(""); // honeypot
+  const [hpX, setHpX] = useState(""); // honeypot — name must stay meaningless, see api/lead/route.ts
   const renderedAt = useRef(Date.now());
 
   const set =
@@ -52,7 +52,7 @@ export default function ContactForm({
           source,
           smsConsent,
           consentTimestamp: new Date().toISOString(),
-          company,
+          hp_x: hpX,
           renderedAt: renderedAt.current,
         }),
       });
@@ -124,15 +124,15 @@ export default function ContactForm({
       </div>
       {/* Honeypot: off-screen and hidden from assistive tech. Only bots fill it. */}
       <div aria-hidden className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
-        <label htmlFor="contact-company">Company</label>
+        <label htmlFor="contact-hp-x">Leave this field empty</label>
         <input
-          id="contact-company"
-          name="company"
+          id="contact-hp-x"
+          name="hp_x"
           type="text"
           tabIndex={-1}
           autoComplete="off"
-          value={company}
-          onChange={(e) => setCompany(e.target.value)}
+          value={hpX}
+          onChange={(e) => setHpX(e.target.value)}
         />
       </div>
       <label className="flex items-start gap-3 rounded-xl bg-bg-alt/70 p-4 text-[0.76rem] text-ink-mid leading-relaxed cursor-pointer">

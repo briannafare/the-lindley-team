@@ -31,10 +31,22 @@ const VALID: LeadFormType[] = [
 // Returning ok:true on a reject keeps the bot from learning it was caught.
 const MIN_FILL_MS = 3000;
 
+// Never name the honeypot after a real form field. It used to be `company`, with a
+// <label>Company</label> attached — browser and password-manager autofill recognise that
+// and fill it on a real person's behalf, so genuine leads were classified as bots and
+// dropped while the page said "sent". That cost Social Revolution live leads before it was
+// caught on 2026-09-11. Every rejection below is logged so a silent drop stays impossible.
 function looksAutomated(body: Record<string, unknown>): boolean {
-  if (String(body.company ?? "").trim()) return true; // honeypot — hidden from humans
+  const who = String(body.email ?? body.phone ?? "unknown");
+  if (String(body.hp_x ?? "").trim()) {
+    console.warn(`[lead] rejected: honeypot filled (${who})`);
+    return true;
+  }
   const rendered = Number(body.renderedAt);
-  if (Number.isFinite(rendered) && Date.now() - rendered < MIN_FILL_MS) return true;
+  if (Number.isFinite(rendered) && Date.now() - rendered < MIN_FILL_MS) {
+    console.warn(`[lead] rejected: submitted in under ${MIN_FILL_MS}ms (${who})`);
+    return true;
+  }
   return false;
 }
 
@@ -67,7 +79,7 @@ export async function POST(req: Request) {
   }
 
   const clean = { ...body };
-  delete clean.company; // honeypot + timing stamp are ours, not GHL's
+  delete clean.hp_x; // honeypot + timing stamp are ours, not GHL's
   delete clean.renderedAt;
   const payload = {
     ...clean,
