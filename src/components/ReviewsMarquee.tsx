@@ -8,7 +8,7 @@ const ITEMS = [
   "35 years of Portland mortgages",
   "You get David or Bri — every time",
   "CDLP® divorce lending specialists",
-  "Licensed in Oregon & Washington",
+  "Licensed in Oregon, Washington & Arizona",
   "thelindleyteam.com",
 ];
 

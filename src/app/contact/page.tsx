@@ -7,7 +7,7 @@ import BookingCalendar from "@/components/BookingCalendar";
 export const metadata: Metadata = {
   title: "Contact The Lindley Team | Portland Mortgage | NMLS #1367416",
   description:
-    "Reach Bri Lindley at The Lindley Team. Call, email, or schedule a time to talk — no sales pressure, no scripts. Portland mortgage lender licensed in OR & WA.",
+    "Reach Bri Lindley at The Lindley Team. Call, email, or schedule a time to talk — no sales pressure, no scripts. Portland mortgage lender licensed in OR, WA & AZ.",
 };
 
 export default function ContactPage() {
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   },
                   {
                     label: "Licensed In",
-                    display: "Oregon & Washington",
+                    display: "Oregon, Washington & Arizona",
                     href: null,
                     isLink: false,
                   },
