@@ -6,11 +6,10 @@
 // Every pattern below is lifted from a pitch that actually arrived. Keep it that way: add a
 // pattern when a new pitch gets through, never on a hunch.
 //
-// Never match a bare "VA". A VA loan is one of the most common things a borrower asks about.
+// Never match a bare "VA" or "VAs" ("do you do VAs?" is a borrower asking about VA loans). A VA loan is one of the most common things a borrower asks about.
 const PITCH: RegExp[] = [
   /virtual assistants?/i,
   /\btrained VAs?\b/,
-  /\bVAs\b/,
   /reply yes\b/i,
   /stop to opt out/i,
   /tried emailing you/i,

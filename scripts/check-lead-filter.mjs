@@ -18,6 +18,7 @@ const borrowers = [
   "Would you be so kind as to remove me from your USPS mailing list? Thank you.",
   "We offer on a house this weekend and need a pre-approval letter. Here is the listing: https://www.zillow.com/homedetails/123",
   "My assistant will send over the pay stubs. Reply when you can.",
+  "Do you do VAs and FHAs? My husband is active duty.",
   "",
 ];
 
