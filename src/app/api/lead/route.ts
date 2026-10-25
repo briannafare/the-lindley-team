@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { LEAD_TAGS, type LeadFormType } from "@/lib/ghl";
+import { looksLikePitch } from "@/lib/lead-filter";
 
 // ── Lead intake → GHL webhook fan-out ───────────────────────────────────────
 // Every website form POSTs here with { formType, ...fields }. We forward to the
@@ -59,6 +60,14 @@ export async function POST(req: Request) {
   }
 
   if (looksAutomated(body)) return NextResponse.json({ ok: true });
+
+  // A vendor pitch never reaches GHL, so it makes no contact, no opportunity and no team alert.
+  // It answers 422 rather than ok:true on purpose: the form then shows "Couldn't send — please
+  // call", so a real person caught by mistake knows to pick up the phone instead of waiting.
+  if (looksLikePitch(body.message)) {
+    console.warn(`[lead] rejected: sales pitch (${String(body.email ?? body.phone ?? "unknown")})`);
+    return NextResponse.json({ ok: false, error: "not accepted" }, { status: 422 });
+  }
 
   const formType = (VALID as string[]).includes(String(body.formType))
     ? (body.formType as LeadFormType)
