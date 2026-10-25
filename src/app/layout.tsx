@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import JuneWidget from "@/components/JuneWidget";
 import ScrollActiveController from "@/components/ScrollActiveController";
+import { Analytics } from "@vercel/analytics/next";
 
 // Serif display + italic swash accent (the "Museum of Art" move)
 const fraunces = Fraunces({
@@ -24,7 +25,7 @@ const inter = Inter({
 const SITE_URL = "https://thelindleyteam.com";
 const SITE_TITLE = "The Lindley Team at Movement Mortgage — David & Bri · Portland";
 const SITE_DESC =
-  "Portland mortgages with straight answers: David Chandler & Bri Lindley of The Lindley Team at Movement Mortgage. 35 years combined, 156 five-star reviews. Licensed in OR & WA. NMLS 265974 / 1367416.";
+  "Portland mortgages with straight answers: David Chandler & Bri Lindley of The Lindley Team at Movement Mortgage. 35 years combined, 210 five-star reviews. Licensed in OR, WA & AZ. NMLS 265974 / 1367416.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -48,15 +49,28 @@ export const metadata: Metadata = {
   },
 };
 
-// Site-wide business + people structured data (LocalBusiness/MortgageBroker + Persons)
+// Site-wide business + people structured data (FinancialService + Persons; Movement is a direct lender, not a broker)
 const ORG_LD = {
   "@context": "https://schema.org",
-  "@type": ["FinancialService", "MortgageBroker"],
+  "@type": "FinancialService",
   "@id": `${SITE_URL}/#lindleyteam`,
   name: "The Lindley Team at Movement Mortgage",
   url: SITE_URL,
   telephone: "+1-971-754-1771",
   email: "brianna.lindley@movement.com",
+  // NMLS ids exactly as the footer prints them: Movement Mortgage, LLC #39179,
+  // David Chandler #265974, Brianna Lindley #1367416.
+  identifier: [
+    { "@type": "PropertyValue", propertyID: "NMLS", value: "39179", name: "Movement Mortgage, LLC" },
+    { "@type": "PropertyValue", propertyID: "NMLS", value: "265974", name: "David Chandler" },
+    { "@type": "PropertyValue", propertyID: "NMLS", value: "1367416", name: "Brianna Lindley" },
+  ],
+  // 210 Google reviews, Lindley Team and Chandler Team combined; 5.0 average (Bri, 2026-10-19).
+  aggregateRating: { "@type": "AggregateRating", ratingValue: 5, reviewCount: 210, bestRating: 5 },
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    name: "Certified Divorce Lending Professional (CDLP)",
+  },
   parentOrganization: {
     "@type": "Organization",
     name: "Movement Mortgage, LLC",
@@ -84,6 +98,10 @@ const ORG_LD = {
       name: "Bri Lindley",
       jobTitle: "Mortgage Loan Officer, CDLP",
       identifier: "NMLS #1367416",
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        name: "Certified Divorce Lending Professional (CDLP)",
+      },
     },
     {
       "@type": "Person",
@@ -152,6 +170,7 @@ export default function RootLayout({
         {/* On touch devices, plays hover-driven motion (e.g. B&W→color) as
             elements scroll through center — see components marked data-scroll-active. */}
         <ScrollActiveController />
+        <Analytics />
       </body>
     </html>
   );

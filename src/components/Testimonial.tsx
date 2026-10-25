@@ -60,7 +60,7 @@ export default function Testimonial() {
               rel="noopener noreferrer"
               className="inline-block mt-6 font-body text-[14px] font-medium text-ink underline decoration-ink/20 underline-offset-4 hover:text-orange hover:decoration-orange transition-colors"
             >
-              Read all 156 on Google →
+              Read all 210 on Google →
             </a>
           </div>
         </div>

@@ -4,11 +4,11 @@ import { GOOGLE_REVIEWS } from "@/lib/links";
 // Lindley Team equity (reviews, tenure, licensing, CDLP®), alternating
 // orange ★ / cobalt ✣ marks per the Afterglow palette.
 const ITEMS = [
-  "156 five-star Google reviews",
+  "210 five-star Google reviews",
   "35 years of Portland mortgages",
   "You get David or Bri — every time",
   "CDLP® divorce lending specialists",
-  "Licensed in Oregon & Washington",
+  "Licensed in Oregon, Washington & Arizona",
   "thelindleyteam.com",
 ];
 
@@ -36,7 +36,7 @@ export default function ReviewsMarquee() {
       href={GOOGLE_REVIEWS}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="The Lindley Team — 156 five-star Google reviews. Read them on Google."
+      aria-label="The Lindley Team — 210 five-star Google reviews. Read them on Google."
       className="group block border-y border-ink mt-[clamp(40px,6vw,88px)] py-[clamp(12px,1.4vw,18px)] overflow-hidden bg-paper hover:bg-ink hover:text-paper transition-colors duration-300"
     >
       <div className="flex w-max animate-marquee motion-reduce:animate-none font-grotesk font-bold uppercase tracking-[0.08em] text-[clamp(13px,1.2vw,17px)]">
