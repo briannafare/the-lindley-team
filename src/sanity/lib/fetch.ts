@@ -4,10 +4,13 @@ import type { QueryParams } from 'next-sanity'
 import { client, draftClient } from '@/sanity/lib/client'
 
 /**
- * Thin fetch wrapper. Published reads are cached indefinitely and busted
- * on-demand by the /api/revalidate webhook via cache tags. Draft reads are
- * always uncached.
+ * Thin fetch wrapper. Published reads are cached and busted on-demand by the
+ * /api/revalidate webhook via cache tags, with a 10-minute time-based backstop:
+ * on 2026-11-07 two auto-published posts were live at their own URLs but missing
+ * from /blog for 10 days, because the index was cached forever and no webhook
+ * fired. Draft reads are always uncached.
  */
+const BACKSTOP_SECONDS = 600
 export async function sanityFetch<T>({
   query,
   params = {},
@@ -30,6 +33,6 @@ export async function sanityFetch<T>({
   }
 
   return client.fetch<T>(query, params, {
-    next: { revalidate: false, tags },
+    next: { revalidate: BACKSTOP_SECONDS, tags },
   })
 }
